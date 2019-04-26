@@ -14,3 +14,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+
+exports.onCreateWebpackConfig = ({ stage, getConfig, actions: { replaceWebpackConfig } }) => {
+  const config = getConfig();
+
+  if (stage.startsWith("develop") && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "react-dom": "@hot-loader/react-dom",
+    };
+  }
+
+  if (stage === "build-javascript") {
+    const app = typeof config.entry.app === "string" ? [config.entry.app] : config.entry.app;
+
+    config.entry.app = ["@babel/polyfill", ...app];
+    replaceWebpackConfig(config);
+  }
+};
