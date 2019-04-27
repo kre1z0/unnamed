@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Tooltip } from "react-leaflet";
 
-export const CountryTooltip = styled(Tooltip)`
+export const CountryTooltip = styled(props => <Tooltip {...props} />)`
   display: flex;
   border: none;
   align-items: center;
@@ -19,6 +19,6 @@ export const Flag = styled.img`
   width: auto;
   max-height: 26px;
   height: auto;
-  padding-right: 6px;
+  margin-right: 6px;
+  box-shadow: 0 0 6px 0 rgba(10, 18, 33, 0.2);
 `;
-
