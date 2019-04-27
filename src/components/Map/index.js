@@ -63,47 +63,51 @@ export class Map extends Component {
     const { lat, lng, zoom, selectedCountry, hoveredCountry } = this.state;
     const position = [lat, lng];
 
-    return (
-      <LeafletMap
-        ref={this.onMapRef}
-        onClick={this.onMap}
-        onMouseOver={this.onMap}
-        worldCopyJump={true}
-        center={position}
-        zoom={zoom}
-        minZoom={4}
-        maxZoom={44}
-        zoomControl={false}
-      >
-        <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
-        {countryPolygons.map(country => {
-          const {
-            name,
-            code,
-            geoJSON: { coordinates },
-          } = country;
+    if (typeof window !== "undefined") {
+      return (
+        <LeafletMap
+          ref={this.onMapRef}
+          onClick={this.onMap}
+          onMouseOver={this.onMap}
+          worldCopyJump={true}
+          center={position}
+          zoom={zoom}
+          minZoom={4}
+          maxZoom={44}
+          zoomControl={false}
+        >
+          <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
+          {countryPolygons.map(country => {
+            const {
+              name,
+              code,
+              geoJSON: { coordinates },
+            } = country;
 
-          const isSelected = Boolean(selectedCountry && selectedCountry.alpha2Code === code);
-          const isHovered = Boolean(hoveredCountry && hoveredCountry.alpha2Code === code);
+            const isSelected = Boolean(selectedCountry && selectedCountry.alpha2Code === code);
+            const isHovered = Boolean(hoveredCountry && hoveredCountry.alpha2Code === code);
 
-          return (
-            <CountryPolygon
-              key={code}
-              flag={hoveredCountry && hoveredCountry.flag}
-              name={name}
-              isSelected={isSelected}
-              isHovered={isHovered}
-              coordinates={coordinates}
-              onCountry={e => this.onCountry(e, country)}
-            />
-          );
-        })}
-        <LeftPanel
-          isOpen={selectedCountry !== null}
-          onClosePanel={() => this.setState({ selectedCountry: null })}
-          {...selectedCountry}
-        />
-      </LeafletMap>
-    );
+            return (
+              <CountryPolygon
+                key={code}
+                flag={hoveredCountry && hoveredCountry.flag}
+                name={name}
+                isSelected={isSelected}
+                isHovered={isHovered}
+                coordinates={coordinates}
+                onCountry={e => this.onCountry(e, country)}
+              />
+            );
+          })}
+          <LeftPanel
+            isOpen={selectedCountry !== null}
+            onClosePanel={() => this.setState({ selectedCountry: null })}
+            {...selectedCountry}
+          />
+        </LeafletMap>
+      );
+    } else {
+      return null;
+    }
   }
 }

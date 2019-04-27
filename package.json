@@ -29,6 +29,7 @@
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-netlify-cms": "^3.0.15",
     "gatsby-plugin-react-helmet": "^3.0.4",
+    "gatsby-plugin-react-leaflet": "^2.0.4",
     "gatsby-plugin-sharp": "^2.0.5",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-svgr": "^2.0.1",
