@@ -4,7 +4,7 @@ import find from "lodash/find";
 // https://react-leaflet.js.org/docs/en/context.html
 import { TileLayer, Polygon } from "react-leaflet";
 
-import { LeafletMap } from "./styled";
+import { LeafletMap, CountryTooltip, Flag } from "./styled";
 import { LeftPanel } from "../../components/LeftPanel";
 import countryPolygons from "../../assets/data/countryPolygons";
 import { fetchAllCountries } from "../../api/restcountries.eu";
@@ -31,9 +31,10 @@ export class Map extends Component {
     const info = find(countries, { alpha2Code: code });
 
     if (e.originalEvent.type === "mouseover") {
-      if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
-        this.setState({ hoveredCountry: info });
-      }
+      // if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
+      //   this.setState({ hoveredCountry: info });
+      // }
+      this.setState({ hoveredCountry: info });
     } else {
       if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
         this.setState({ selectedCountry: info });
@@ -74,6 +75,7 @@ export class Map extends Component {
         <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
         {countryPolygons.map(country => {
           const {
+            name,
             code,
             geoJSON: { coordinates },
           } = country;
@@ -85,11 +87,16 @@ export class Map extends Component {
             <Polygon
               key={code}
               positions={coordinates}
-              color={isSelected ? "#90c53d" : isHovered ? " blue" : "transparent"}
+              color={isSelected ? "#90c53d" : isHovered ? "rgba(0,170,255,0.8)" : "transparent"}
               weight={1}
               onMouseOver={e => this.onCountry(e, country)}
               onClick={e => this.onCountry(e, country)}
-            />
+            >
+              <CountryTooltip sticky>
+                <Flag src={hoveredCountry && hoveredCountry.flag} />
+                {name}
+              </CountryTooltip>
+            </Polygon>
           );
         })}
         <LeftPanel
