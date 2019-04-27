@@ -7,11 +7,17 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "@hot-loader/react-dom": "^16.8.4",
+    "@material-ui/core": "^4.0.0-alpha.8",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
     "gatsby": "2.3.5",
+    "leaflet": "^1.4.0",
     "lodash": "^4.17.11",
     "netlify-cms": "^2.6.1",
+    "numeral": "^2.0.6",
     "react": "^16.8.0",
     "react-helmet": "^5.2.0",
+    "react-leaflet": "^2.2.1",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
@@ -48,6 +54,7 @@
     "clean": "rimraf .cache public",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public -b",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"

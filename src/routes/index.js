@@ -1,1 +1,1 @@
-export default [{ name: "javascript" }, { name: "css" }];
+export default [{ name: "test1" }, { name: "test2" }];

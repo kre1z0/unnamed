@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { GlobalStyle } from "../styles/global";
-import { Navbar } from "../components/Navbar";
+// import { Navbar } from "../components/Navbar";
 import { Main } from "../components/Semantic/Main";
 
 class Layout extends Component {
@@ -9,11 +9,13 @@ class Layout extends Component {
     const { children } = this.props;
 
     return (
-      <div>
-        <GlobalStyle />
-        <Navbar />
-        <Main>{children}</Main>
-      </div>
+      <>
+        <GlobalStyle fullHeight />
+        {/*<Navbar />*/}
+        <Main fullWidth fullHeight>
+          {children}
+        </Main>
+      </>
     );
   }
 }
