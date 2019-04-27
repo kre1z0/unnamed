@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import find from "lodash/find";
+import throttle from "lodash/throttle";
 // https://leafletjs.com/reference-1.4.0.html
 // https://react-leaflet.js.org/docs/en/context.html
-import { TileLayer, Polygon } from "react-leaflet";
+import { TileLayer } from "react-leaflet";
 
-import { LeafletMap, CountryTooltip, Flag } from "./styled";
+import { LeafletMap } from "./styled";
+import { CountryPolygon } from "../../components/CountryPolygon";
 import { LeftPanel } from "../../components/LeftPanel";
 import countryPolygons from "../../assets/data/countryPolygons";
 import { fetchAllCountries } from "../../api/restcountries.eu";
 
 export class Map extends Component {
+  constructor(props) {
+    super(props);
+    this.onCountry = throttle(this.onCountry, 50);
+  }
   state = {
     lat: 51.505,
     lng: 14,
@@ -31,9 +37,6 @@ export class Map extends Component {
     const info = find(countries, { alpha2Code: code });
 
     if (e.originalEvent.type === "mouseover") {
-      // if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
-      //   this.setState({ hoveredCountry: info });
-      // }
       this.setState({ hoveredCountry: info });
     } else {
       if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
@@ -80,23 +83,19 @@ export class Map extends Component {
             geoJSON: { coordinates },
           } = country;
 
-          const isSelected = selectedCountry && selectedCountry.alpha2Code === code;
-          const isHovered = hoveredCountry && hoveredCountry.alpha2Code === code;
+          const isSelected = Boolean(selectedCountry && selectedCountry.alpha2Code === code);
+          const isHovered = Boolean(hoveredCountry && hoveredCountry.alpha2Code === code);
 
           return (
-            <Polygon
+            <CountryPolygon
               key={code}
-              positions={coordinates}
-              color={isSelected ? "#90c53d" : isHovered ? "rgba(0,170,255,0.8)" : "transparent"}
-              weight={1}
-              onMouseOver={e => this.onCountry(e, country)}
-              onClick={e => this.onCountry(e, country)}
-            >
-              <CountryTooltip sticky>
-                <Flag src={hoveredCountry && hoveredCountry.flag} />
-                {name}
-              </CountryTooltip>
-            </Polygon>
+              flag={hoveredCountry && hoveredCountry.flag}
+              name={name}
+              isSelected={isSelected}
+              isHovered={isHovered}
+              coordinates={coordinates}
+              onCountry={e => this.onCountry(e, country)}
+            />
           );
         })}
         <LeftPanel
