@@ -1,0 +1,7 @@
+backend:
+  name: test-repo
+  repo: kre1z0/unknown
+  branch: master
+
+media_folder: static/img
+public_folder: /img
