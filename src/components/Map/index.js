@@ -66,7 +66,7 @@ export class Map extends Component {
     if (typeof window !== "undefined") {
       return (
         <LeafletMap
-          ref={this.onMapRef}
+          onMapRef={this.onMapRef}
           onClick={this.onMap}
           onMouseOver={this.onMap}
           worldCopyJump={true}
