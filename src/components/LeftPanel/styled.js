@@ -1,13 +1,20 @@
+import React from "react";
 import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
+import { Swiper } from "../../components/Swiper";
 
-export const LeftPanelContainer = styled.div`
+export const LeftPanelContainer = styled(props => <Swiper {...props} />).attrs(
+  ({ deltaX, transition }) => ({
+    style: {
+      left: `-${deltaX}px`,
+      transition: transition ? "left 400ms ease" : "none",
+    },
+  }),
+)`
   width: 400px;
-  left: ${({ isOpen }) => (isOpen ? 0 : `-400px`)};
   padding: 80px 15px 15px 15px;
   box-shadow: 0 0 12px 0 rgba(10, 18, 33, 0.1);
   cursor: default;
-  transition: left 400ms ease;
   z-index: 999;
   position: absolute;
   top: 0;

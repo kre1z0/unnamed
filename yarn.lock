@@ -12097,6 +12097,13 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
+react-swipeable@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-5.2.0.tgz#a748fd963fe0ebe728e2a5787cb7d7a13929425e"
+  integrity sha512-hufLqGbdhV27gJ5HI/D2bHSFvGYSOUA2rnDIdWVFMDkAbuDrnWQo1z0qy+ti3VeFe1D6RmVD0r/4yA1bNSHO8w==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-textarea-autosize@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-7.1.0.tgz#3132cb77e65d94417558d37c0bfe415a5afd3445"

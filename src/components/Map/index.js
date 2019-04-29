@@ -99,11 +99,7 @@ export class Map extends Component {
               />
             );
           })}
-          <LeftPanel
-            isOpen={selectedCountry !== null}
-            onClosePanel={() => this.setState({ selectedCountry: null })}
-            {...selectedCountry}
-          />
+          <LeftPanel {...selectedCountry} />
         </LeafletMap>
       );
     } else {
