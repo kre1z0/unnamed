@@ -8,6 +8,7 @@ export const CountryTooltip = styled(props => <Tooltip {...props} />)`
   align-items: center;
   font-weight: 600;
   height: 34px;
+  visibility: ${({ isHovered }) => (isHovered ? "visibility" : "hidden")};
   &.leaflet-tooltip-left {
     margin-left: -14px;
   }
