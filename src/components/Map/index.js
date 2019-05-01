@@ -63,6 +63,8 @@ export class Map extends Component {
 
   onClosePanel = () => this.setState({ selectedCountry: null, hoveredCountry: null });
 
+  onMouseOutPolygon = () => this.setState({ hoveredCountry: null });
+
   render() {
     const { lat, lng, zoom, selectedCountry, hoveredCountry } = this.state;
     const position = [lat, lng];
@@ -102,6 +104,7 @@ export class Map extends Component {
                 isHovered={isHovered}
                 coordinates={coordinates}
                 onCountry={e => this.onCountry(e, country)}
+                onMouseOutPolygon={this.onMouseOutPolygon}
               />
             );
           })}

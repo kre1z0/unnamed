@@ -10,7 +10,7 @@ export class CountryPolygon extends Component {
   }
 
   render() {
-    const { name, coordinates, isSelected, flag, isHovered, onCountry } = this.props;
+    const { name, coordinates, isSelected, flag, isHovered, onCountry, onMouseOutPolygon } = this.props;
 
     return (
       <Polygon
@@ -18,6 +18,7 @@ export class CountryPolygon extends Component {
         color={isSelected ? "#90c53d" : isHovered ? "rgba(0,170,255,0.8)" : "transparent"}
         weight={1}
         onMouseOver={onCountry}
+        onMouseOut={onMouseOutPolygon}
         onClick={onCountry}
       >
         <CountryTooltip isHovered={isHovered} sticky>
