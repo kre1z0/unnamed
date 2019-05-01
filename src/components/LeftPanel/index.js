@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import L from "leaflet";
-import numeral from "numeral";
-import CloseIcon from "@material-ui/icons/Close";
 
 import { rateLimit } from "../../utils/number";
-import { Field } from "../../components/Field";
-import { LeftPanelContainer, Flag, CloseBtn } from "./styled";
+import { Content } from "./Content";
+import { LeftPanelContainer } from "./styled";
 
 export class LeftPanel extends Component {
   state = {
@@ -27,8 +25,18 @@ export class LeftPanel extends Component {
   };
 
   onSwiped = ({ deltaX }) => {
+    const { onClosePanel } = this.props;
+
     if (deltaX >= 200) {
-      this.setState({ deltaX: 400, transition: true });
+      this.setState(
+        {
+          deltaX: 400,
+          transition: true,
+        },
+        () => {
+          onClosePanel();
+        },
+      );
     } else {
       this.setState({ deltaX: 0, transition: true });
     }
@@ -37,16 +45,31 @@ export class LeftPanel extends Component {
   componentDidUpdate({ alpha2Code: prevAlpha2Code }, prevState) {
     const { alpha2Code } = this.props;
 
-    if (prevAlpha2Code !== alpha2Code) {
+    const countyIsChanged = prevAlpha2Code !== alpha2Code;
+
+    if (countyIsChanged && alpha2Code) {
       this.setState({ deltaX: 0, transition: true });
+    } else if (countyIsChanged && !alpha2Code) {
+      this.setState({ deltaX: 400, transition: true });
     }
   }
 
-  onClosePanel = () => this.setState({ deltaX: 400, transition: true });
+  onClosePanel = () => {
+    const { onClosePanel } = this.props;
+
+    this.setState(
+      {
+        deltaX: 400,
+        transition: true,
+      },
+      () => {
+        onClosePanel();
+      },
+    );
+  };
 
   render() {
     const { deltaX, transition } = this.state;
-    const { name, flag, population, capital } = this.props;
 
     return (
       <LeftPanelContainer
@@ -56,20 +79,7 @@ export class LeftPanel extends Component {
         onSwiping={this.onSwiping}
         onRef={this.onRef}
       >
-        <Flag src={flag} />
-        <CloseBtn onClick={this.onClosePanel}>
-          <CloseIcon />
-        </CloseBtn>
-        <h1>{name}</h1>
-        <Field
-          name="population"
-          value={numeral(population)
-            .format("0,0[.]")
-            .replace(/,/g, " ")}
-        />
-        <Field name="capital" value={capital} />
-        <Field />
-        <Field />
+        <Content onClosePanel={this.onClosePanel} {...this.props} />
       </LeftPanelContainer>
     );
   }

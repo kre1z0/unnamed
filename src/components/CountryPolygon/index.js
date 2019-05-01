@@ -20,10 +20,12 @@ export class CountryPolygon extends Component {
         onMouseOver={onCountry}
         onClick={onCountry}
       >
-        <CountryTooltip sticky>
-          <Flag src={flag} />
-          {name}
-        </CountryTooltip>
+        {isHovered && (
+          <CountryTooltip sticky>
+            <Flag src={flag} />
+            {name}
+          </CountryTooltip>
+        )}
       </Polygon>
     );
   }

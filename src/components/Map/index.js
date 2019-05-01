@@ -38,7 +38,9 @@ export class Map extends Component {
 
     if (e.originalEvent.type === "mouseover") {
       this.setState({ hoveredCountry: info });
-    } else {
+    } else if (e.originalEvent.type === "mouseout") {
+      this.setState({ hoveredCountry: null });
+    } else if (e.originalEvent.type === "click") {
       if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
         this.setState({ selectedCountry: info });
       }
@@ -59,6 +61,8 @@ export class Map extends Component {
     }
   };
 
+  onClosePanel = () => this.setState({ selectedCountry: null, hoveredCountry: null });
+
   render() {
     const { lat, lng, zoom, selectedCountry, hoveredCountry } = this.state;
     const position = [lat, lng];
@@ -68,7 +72,6 @@ export class Map extends Component {
         <LeafletMap
           onMapRef={this.onMapRef}
           onClick={this.onMap}
-          onMouseOver={this.onMap}
           worldCopyJump={true}
           center={position}
           zoom={zoom}
@@ -90,7 +93,10 @@ export class Map extends Component {
             return (
               <CountryPolygon
                 key={code}
-                flag={hoveredCountry && hoveredCountry.flag}
+                flag={
+                  (hoveredCountry && hoveredCountry.flag) ||
+                  (selectedCountry && selectedCountry.flag)
+                }
                 name={name}
                 isSelected={isSelected}
                 isHovered={isHovered}
@@ -99,7 +105,7 @@ export class Map extends Component {
               />
             );
           })}
-          <LeftPanel {...selectedCountry} />
+          <LeftPanel onClosePanel={this.onClosePanel} {...selectedCountry} />
         </LeafletMap>
       );
     } else {
