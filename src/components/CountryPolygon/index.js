@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+
 import { Polygon } from "react-leaflet";
 import { CountryTooltip, Flag } from "./styled";
+import color from "../../styles/colors";
 
 export class CountryPolygon extends Component {
   shouldComponentUpdate({ isSelected: nextIsSelected, isHovered: nextiIsHovered }, nextState) {
@@ -10,12 +12,20 @@ export class CountryPolygon extends Component {
   }
 
   render() {
-    const { name, coordinates, isSelected, flag, isHovered, onCountry, onMouseOutPolygon } = this.props;
+    const {
+      name,
+      coordinates,
+      isSelected,
+      flag,
+      isHovered,
+      onCountry,
+      onMouseOutPolygon,
+    } = this.props;
 
     return (
       <Polygon
         positions={coordinates}
-        color={isSelected ? "#90c53d" : isHovered ? "rgba(0,170,255,0.8)" : "transparent"}
+        color={isSelected ? color.green : isHovered ? "rgba(0,170,255,0.8)" : "transparent"}
         weight={1}
         onMouseOver={onCountry}
         onMouseOut={onMouseOutPolygon}

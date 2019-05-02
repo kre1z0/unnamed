@@ -1,20 +1,56 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "gatsby";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIconUI from "@material-ui/icons/Close";
 
-import { containerWidth } from "../../styles/breakpoints";
+import { Row } from "../../components/NoSemantic/Row";
+
+export const navbarHeight = "64px";
+
+const fixed = css`
+  background-color: #fff;
+  box-shadow: 0 8px 8px 0 rgba(10, 18, 33, 0.05);
+`;
 
 export const Nav = styled.nav`
   pointer-events: none;
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 44px;
+  height: ${navbarHeight};
   display: flex;
+  align-items: center;
   width: 100%;
-  max-width: ${containerWidth};
   margin: 0 auto;
+  transition: all 200ms ease;
+  ${({ sticky }) => sticky && fixed}
+`;
+
+export const Container = styled(Row)`
+  display: flex;
+`;
+
+export const GoBackBtn = styled(IconButton)`
+  && {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;
+
+export const CloseIcon = styled(CloseIconUI).attrs(({ color }) => ({
+  style: {
+    fill: `${color}`,
+  },
+}))`
+  && {
+    width: 1.2em;
+    height: 1.2em;
+  }
 `;
 
 export const Home = styled(Link)`
@@ -36,6 +72,7 @@ export const Li = styled.li`
   display: flex;
   align-items: center;
   padding-right: 15px;
+  margin: 0;
   &:last-of-type {
     padding-right: 0;
   }

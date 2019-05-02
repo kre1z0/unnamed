@@ -18,9 +18,9 @@ export const CountryTooltip = styled(props => <Tooltip {...props} />)`
 `;
 
 export const Flag = styled.img`
+  max-width: none;
   width: auto;
-  max-height: 26px;
-  height: auto;
+  height: 26px;
   margin-right: 6px;
   box-shadow: 0 0 6px 0 rgba(10, 18, 33, 0.2);
 `;

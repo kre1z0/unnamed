@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   img {
     outline: none;
+    max-width: 100%;
+    height: auto;
   }
   * {
     box-sizing: border-box;

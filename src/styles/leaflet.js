@@ -567,7 +567,7 @@ const leaflet = css`
     padding: 6px;
     background-color: #fff;
     border: 1px solid #fff;
-    border-radius: 3px;
+    border-radius: 2px;
     color: #222;
     white-space: nowrap;
     -webkit-user-select: none;

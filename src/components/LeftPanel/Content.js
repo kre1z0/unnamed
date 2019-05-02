@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import numeral from "numeral";
 import CloseIcon from "@material-ui/icons/Close";
 
 import { CloseBtn, Flag } from "./styled";
@@ -13,7 +12,7 @@ export class Content extends Component {
   }
 
   render() {
-    const { onClosePanel, name, flag, population, capital } = this.props;
+    const { onClosePanel, name, flag } = this.props;
 
     return (
       <>
@@ -22,15 +21,10 @@ export class Content extends Component {
           <CloseIcon />
         </CloseBtn>
         <h1>{name}</h1>
-        <Field
-          name="population"
-          value={numeral(population)
-            .format("0,0[.]")
-            .replace(/,/g, " ")}
-        />
-        <Field name="capital" value={capital} />
-        <Field />
-        <Field />
+        <Field name="name 1" value="value 1" />
+        <Field name="name 2" value="value 2" />
+        <Field name="name 3" value="value 3" />
+        <Field name="name 4" value="value 4" />
       </>
     );
   }
