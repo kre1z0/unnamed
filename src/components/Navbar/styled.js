@@ -42,9 +42,9 @@ export const GoBackBtn = styled(IconButton)`
   }
 `;
 
-export const CloseIcon = styled(CloseIconUI).attrs(({ color }) => ({
+export const CloseIcon = styled(CloseIconUI).attrs(({ fill }) => ({
   style: {
-    fill: `${color}`,
+    fill,
   },
 }))`
   && {

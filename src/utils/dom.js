@@ -16,3 +16,6 @@ export const getElementWidthAndHeight = element => {
     height,
   };
 };
+
+export const isReactElement = Element =>
+  typeof Element === "object" && Element !== null && !!Element.$$typeof;

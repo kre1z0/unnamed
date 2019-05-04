@@ -5,6 +5,7 @@ export const Header = styled.header.attrs(({ image }) => ({
     backgroundImage: `url(${image})`,
   },
 }))`
+  margin: 0 -15px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -38,9 +39,36 @@ export const Title = styled.h1`
   margin: 15px 0 10px 0;
 `;
 
+export const Country = styled.div`
+  z-index: 1;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  padding: 4px 6px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.64);
+  line-height: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+`;
+
+export const Flag = styled.img`
+  width: auto;
+  height: 20px;
+  box-shadow: 0 6px 6px 0 rgba(255, 255, 255, 0.2);
+  margin-right: 6px;
+`;
+
 export const Category = styled.div`
+  font-weight: 600;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.64);
+  &:first-child {
+    margin-right: 4px;
+  }
 `;
 
 export const Ingredients = styled.div`
@@ -49,6 +77,7 @@ export const Ingredients = styled.div`
 `;
 
 export const Ingredient = styled.div`
+  border-radius: 1px;
   font-weight: 600;
   padding: 4px 8px;
   color: #fff;
@@ -88,8 +117,12 @@ export const Ingredient = styled.div`
   }
 `;
 
+export const FigureStep = styled.figure`
+  margin: 0;
+`;
+
 export const Step = styled.h1`
-  margin-top: 1.4em;
+  margin-top: 2.8em;
   position: relative;
   &:before {
     position: absolute;
@@ -100,4 +133,30 @@ export const Step = styled.h1`
     font-size: 2em;
     color: rgba(38, 44, 55, 0.14);
   }
+`;
+
+export const Footer = styled.footer`
+  font-weight: 600;
+  margin-top: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 0;
+  background-color: rgba(38, 44, 55, 0.14);
+  width: 100%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.64);
+  background-image: url(https://i.pinimg.com/originals/d3/32/37/d332372e0f554f8ec6ae134df55d0671.png),
+    url(https://i.pinimg.com/originals/d3/32/37/d332372e0f554f8ec6ae134df55d0671.png);
+  background-size: 40px;
+  background-repeat: repeat-x;
+  background-position: top, bottom;
+`;
+
+export const CatImg = styled.img`
+  border-radius: 4px;
+  width: auto;
+  height: 80px;
+  margin-right: 14px;
+  opacity: 0.6;
 `;

@@ -33,7 +33,7 @@ export class Navbar extends PureComponent {
         <Container>
           {isLongread ? (
             <GoBackBtn onClick={() => navigate("/")}>
-              <CloseIcon color={sticky ? color.dark : "rgba(255, 255, 255, 0.5)"} />
+              <CloseIcon fill={sticky ? color.dark : "rgba(255, 255, 255, 0.5)"} />
             </GoBackBtn>
           ) : (
             <>

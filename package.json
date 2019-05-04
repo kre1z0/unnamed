@@ -14,6 +14,7 @@
     "leaflet": "^1.4.0",
     "lodash": "^4.17.11",
     "netlify-cms": "^2.6.1",
+    "netlify-cms-widget-country-select": "^1.0.6",
     "react": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-leaflet": "^2.2.1",

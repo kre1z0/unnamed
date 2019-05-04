@@ -80,3 +80,4 @@ module.exports = {
     "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 };
+0;
