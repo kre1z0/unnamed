@@ -20,20 +20,20 @@ import {
 } from "../styles/recipe";
 
 export const Recipe = ({
+  country,
   name,
   image,
   category,
   ingredients,
   content,
   steps,
-  country,
-  catImg,
-  bonAppetit,
+  catImg = "https://cs.pikabu.ru/images/big_size_comm/2013-10_5/13825363169036.png",
+  bonAppetit = "Смачного!",
 }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
-  console.info("--> steps ggwp 4444", steps, country);
+  console.info("--> recipe country ggwp 4444", country);
   return (
-    <React.Fragment>
+    <>
       <Row>
         <Header image={image}>
           <Country>
@@ -56,74 +56,22 @@ export const Recipe = ({
           </Ingredients>
         )}
         <Body content={content} />
-        <h2>Ингредиенты</h2>
-        <p>
-          <em>Для бульона:</em>
-        </p>
-        <ul>
-          <li>вода — 1,5–2 л.;</li>
-          <li>свинина или говядина на кости — 400 г.</li>
-        </ul>
-        <p>
-          <em>Для зажарки:</em>
-        </p>
-        <ul>
-          <li>свёкла — 2 шт. (небольшие);</li>
-          <li>морковь — 1 шт.;</li>
-          <li>лук — 3 шт. (средние);</li>
-          <li>томатная паста — 2 ст. л.;</li>
-          <li>подсолнечное масло — 4–5 ст. л.;</li>
-          <li>лимонная кислота — щепотка.</li>
-        </ul>
-        <p>
-          <em>Для борща:</em>
-        </p>
-        <ul>
-          <li>капуста белокочанная свежая — 300 г;</li>
-          <li>картофель — 4 шт. (средние);</li>
-          <li>соль, лавровый лист, зелень — по вкусу.</li>
-        </ul>
-        <p>
-          <em>Для подачи:</em>
-        </p>
-        <ul>
-          <li>сметана — 1 ст. л. (в каждую тарелку);</li>
-          <li>зелень.</li>
-        </ul>
-        <FigureStep>
-          <Step aria-label="Шаг 1">Варим бульон</Step>
-          <img
-            src="https://cdn.lifehacker.ru/wp-content/uploads/2014/12/shutterstock_233452513-630x420.jpg"
-            alt=""
-          />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos facilis hic
-            iusto nam officia qui ratione rerum sequi. Architecto distinctio enim praesentium rem
-            sunt temporibus veniam voluptate voluptates. Cupiditate.
-          </p>
-        </FigureStep>
-        <FigureStep>
-          <Step aria-label="Шаг 2">Варим бульон</Step>
-          <img
-            src="https://cdn.lifehacker.ru/wp-content/uploads/2014/12/shutterstock_233452513-630x420.jpg"
-            alt=""
-          />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos facilis hic
-            iusto nam officia qui ratione rerum sequi. Architecto distinctio enim praesentium rem
-            sunt temporibus veniam voluptate voluptates. Cupiditate.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos facilis hic
-            iusto nam officia qui ratione rerum sequi. Architecto distinctio enim praesentium rem
-            sunt temporibus veniam voluptate voluptates. Cupiditate.
-          </p>
-        </FigureStep>
+        {steps &&
+          steps.map(({ title, step }, index) => {
+            const StepContent = isReactElement(step) ? Content : HTMLContent;
+
+            return (
+              <FigureStep key={`${title}-${index + 1}`}>
+                {title && <Step aria-label={`Шаг ${index + 1}`}>{title}</Step>}
+                <StepContent content={step} />
+              </FigureStep>
+            );
+          })}
       </Row>
       <Footer>
         <CatImg src={catImg} alt="cat" />
         <em>{bonAppetit}</em>
       </Footer>
-    </React.Fragment>
+    </>
   );
 };

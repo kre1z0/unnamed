@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CloseIcon from "@material-ui/icons/Close";
 
+import { Close } from "../../components/Icons/Close";
 import { CloseBtn, Flag } from "./styled";
 import { Field } from "../Field";
 
@@ -18,7 +18,7 @@ export class Content extends Component {
       <>
         <Flag src={flag} />
         <CloseBtn onClick={onClosePanel}>
-          <CloseIcon />
+          <Close />
         </CloseBtn>
         <h1>{name}</h1>
         <Field name="name 1" value="value 1" />

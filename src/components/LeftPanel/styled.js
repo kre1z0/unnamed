@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import IconButton from "@material-ui/core/IconButton";
+
+import { IconButton } from "../../components/Buttons/IconButton";
 import { Swiper } from "../../components/Swiper";
 
 export const LeftPanelContainer = styled(props => <Swiper {...props} />).attrs(
@@ -33,9 +34,7 @@ export const Flag = styled.img`
 `;
 
 export const CloseBtn = styled(IconButton)`
-  && {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
+  position: absolute;
+  top: 15px;
+  right: 15px;
 `;

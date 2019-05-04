@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { Normalize } from "styled-normalize";
 
+import StyleSheetManager from "../../cms/common/StyleSheetManager";
 import { Viewport, Container } from "../../styles/cms";
+import { GlobalStyle } from "../../styles/global";
 
 export class PreviewContainer extends Component {
   state = {
@@ -38,14 +41,18 @@ export class PreviewContainer extends Component {
     const { children, ...props } = this.props;
 
     return (
-      <>
-        <Viewport>
-          {width}x{height}
-        </Viewport>
-        <Container ref={this.onRef} {...props}>
-          {children}
-        </Container>
-      </>
+      <StyleSheetManager>
+        <div>
+          <Normalize />
+          <GlobalStyle />
+          <Viewport>
+            {width}x{height}
+          </Viewport>
+          <Container ref={this.onRef} {...props}>
+            {children}
+          </Container>
+        </div>
+      </StyleSheetManager>
     );
   }
 }

@@ -1,7 +1,7 @@
 import CMS from "netlify-cms";
-import { CountrySelectControl } from "netlify-cms-widget-country-select";
 
+import { CountrySelect } from "./Widgets/CountrySelect";
 import RecipePreview from "./preview-templates/RecipePreview";
 
-CMS.registerWidget("country-select", CountrySelectControl);
+CMS.registerWidget("country-select", CountrySelect);
 CMS.registerPreviewTemplate("recipes", RecipePreview);

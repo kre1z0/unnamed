@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIconUI from "@material-ui/icons/Close";
 
+import { Close } from "../../components/Icons/Close";
+import { IconButton } from "../../components/Buttons/IconButton";
 import { Row } from "../../components/NoSemantic/Row";
 
 export const navbarHeight = "64px";
@@ -33,24 +33,20 @@ export const Container = styled(Row)`
 `;
 
 export const GoBackBtn = styled(IconButton)`
-  && {
-    pointer-events: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
-export const CloseIcon = styled(CloseIconUI).attrs(({ fill }) => ({
+export const CloseIcon = styled(Close).attrs(({ fill }) => ({
   style: {
     fill,
   },
 }))`
-  && {
-    width: 1.2em;
-    height: 1.2em;
-  }
+  width: 1.2em;
+  height: 1.2em;
 `;
 
 export const Home = styled(Link)`

@@ -21,13 +21,15 @@ collections:
       - label: "Категория"
         name: "category"
         widget: "select"
+        default: "Первые блюда"
         options: ["Первые блюда", "Салаты", "Вторые блюда", "десерты"]
       - {label: "Ингредиенты", name: "ingredients", widget: "list"}
       - {label: "Рецепт", name: "body", widget: "markdown"}
       - label: "Шаги"
         name: "steps"
-        widget: "object"
+        widget: "list"
         required: false
+        default: [null]
         fields:
           - {label: "Заголовок", name: "title", widget: "string", required: false,  default: ""}
           - {label: "Шаг", name: "step", widget: "markdown", required: false,  default: ""}

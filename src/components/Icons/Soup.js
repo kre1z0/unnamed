@@ -1,8 +1,9 @@
 import React from "react";
-import SvgIcon from "@material-ui/core/SvgIcon";
 
-export const Soup = () => (
-  <SvgIcon viewBox="0 0 35.235 35.235">
+import { SvgIcon } from '../../components/SvgIcon';
+
+export const Soup = props => (
+  <SvgIcon viewBox="0 0 35.235 35.235" {...props}>
     <path
       d="M26.776,12.687H19.25c0.68,0,1.233-0.553,1.233-1.234s-0.554-1.23-1.233-1.23h-3.078c-0.68,0-1.232,0.549-1.232,1.23
 			s0.553,1.234,1.232,1.234H8.645c-2.094,0-3.828,1.877-4.165,3.875h26.464C30.605,14.563,28.871,12.687,26.776,12.687z"
