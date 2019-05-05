@@ -33,7 +33,7 @@ export const Recipe = ({
 }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
   const country = countries.find(item => item.name === countryName);
-  console.info("--> recipe country ggwp 4444", country);
+
   return (
     <>
       <Row>
