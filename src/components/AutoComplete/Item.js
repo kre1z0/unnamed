@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 import { Icon, Item as ItemUI, Text } from "./styled";
 
-const AutoCompleteItem = React.forwardRef(({ icon, name, isHighlighted, ...props }, ref) => {
-  return (
-    <ItemUI ref={ref} isHighlighted={isHighlighted} {...props}>
-      {icon && <Icon src={icon} alt="icon" />}
-      <Text>{name}</Text>
-    </ItemUI>
-  );
-});
-
 export class Item extends Component {
   shouldComponentUpdate({ isHighlighted: nextIsHighlighted }, nextState) {
     const { isHighlighted } = this.props;
@@ -18,6 +9,13 @@ export class Item extends Component {
   }
 
   render() {
-    return <AutoCompleteItem {...this.props} />;
+    const { icon, name, isHighlighted, ...props } = this.props;
+
+    return (
+      <ItemUI isHighlighted={isHighlighted} {...props}>
+        {icon && <Icon src={icon} alt="icon" />}
+        <Text>{name}</Text>
+      </ItemUI>
+    );
   }
 }
