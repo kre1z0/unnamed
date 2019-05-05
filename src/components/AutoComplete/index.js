@@ -18,7 +18,7 @@ export const AutoComplete = props => {
         getItemValue={item => item.name}
         shouldItemRender={matchStateToTerm}
         sortItems={sortStates}
-        renderInput={props => <Input {...props} />}
+        renderInput={inputProps => <Input {...inputProps} />}
         renderItem={({ name, icon }, isHighlighted) => (
           <Item name={name} key={name} icon={icon} isHighlighted={isHighlighted} />
         )}

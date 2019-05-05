@@ -16,6 +16,7 @@ export class Map extends Component {
     super(props);
     this.onCountry = throttle(this.onCountry, 50);
   }
+
   state = {
     lat: 51.505,
     lng: 14,

@@ -6,7 +6,6 @@ import { AutoComplete } from "../AutoComplete";
 export class CountryAutoComplete extends Component {
   state = {
     countries: [],
-    value: "",
   };
 
   componentDidMount() {
@@ -23,29 +22,9 @@ export class CountryAutoComplete extends Component {
       .catch(({ response }) => console.error(response));
   }
 
-  onSelect = value => {
-    const { onSelect } = this.props;
-
-    this.setState(
-      {
-        value,
-      },
-      () => {
-        onSelect && onSelect(value);
-      },
-    );
-  };
-
   render() {
-    const { countries, value } = this.state;
+    const { countries } = this.state;
 
-    return (
-      <AutoComplete
-        items={countries}
-        value={value}
-        onChange={e => this.setState({ value: e.target.value })}
-        onSelect={value => this.onSelect(value)}
-      />
-    );
+    return <AutoComplete items={countries} {...this.props} />;
   }
 }

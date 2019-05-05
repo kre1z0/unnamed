@@ -9,7 +9,7 @@ const isHighlightedStyle = css`
 `;
 
 export const AutocompleteContainer = styled.div`
-  z-index: 99999999;
+  z-index: 4;
   position: relative;
   width: ${width};
   > div:first-of-type {
@@ -45,6 +45,7 @@ export const Input = styled(InputUI)`
 `;
 
 export const SelectedIcon = styled(Icon)`
+  z-index: 4;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

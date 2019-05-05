@@ -22,7 +22,7 @@ collections:
         name: "category"
         widget: "select"
         default: "Первые блюда"
-        options: ["Первые блюда", "Салаты", "Вторые блюда", "десерты"]
+        options: ["Первые блюда", "Салаты", "Вторые блюда", "Десерты"]
       - {label: "Ингредиенты", name: "ingredients", widget: "list"}
       - {label: "Рецепт", name: "body", widget: "markdown"}
       - label: "Шаги"
