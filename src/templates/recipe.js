@@ -1,5 +1,8 @@
 import React from "react";
 
+import catUA from "../assets/cats/ua.png";
+import patternUA from "../assets/patterns/ua.png";
+import countries from "../assets/data/countries";
 import { Content, HTMLContent } from "../cms/common/Content";
 import { isReactElement } from "../utils/dom";
 import { Soup } from "../components/Icons/Soup";
@@ -20,25 +23,24 @@ import {
 } from "../styles/recipe";
 
 export const Recipe = ({
-  country,
+  country: countryName,
   name,
   image,
   category,
   ingredients,
   content,
   steps,
-  catImg = "https://cs.pikabu.ru/images/big_size_comm/2013-10_5/13825363169036.png",
-  bonAppetit = "Смачного!",
 }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
+  const country = countries.find(item => item.name === countryName);
   console.info("--> recipe country ggwp 4444", country);
   return (
     <>
       <Row>
         <Header image={image}>
           <Country>
-            <Flag src="https://restcountries.eu/data/ukr.svg" />
-            Украина
+            {country && <Flag src={country.flag} alt="flag" />}
+            {country && country.name}
           </Country>
           <HeaderContent>
             <hr />
@@ -68,9 +70,9 @@ export const Recipe = ({
             );
           })}
       </Row>
-      <Footer>
-        <CatImg src={catImg} alt="cat" />
-        <em>{bonAppetit}</em>
+      <Footer image={(country && country.pattern) || patternUA}>
+        <CatImg src={(country && country.catImg) || catUA} alt="cat" />
+        <em>{`${(country && country.bonAppetit) || "Смачного"}!`}</em>
       </Footer>
     </>
   );

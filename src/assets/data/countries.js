@@ -1,5 +1,10 @@
+import catUA from "../cats/ua.png";
+import patternUA from "../patterns/ua.png";
+
 export default [
   {
+    latlng: [-6, 35],
+    flag: "https://restcountries.eu/data/tza.svg",
     code: "TZ",
     name: "United Republic of Tanzania",
     geoJSON: {
@@ -76,6 +81,8 @@ export default [
     },
   },
   {
+    latlng: [10, 49],
+    flag: "https://restcountries.eu/data/som.svg",
     code: "SO",
     name: "Somalia",
     geoJSON: {
@@ -133,6 +140,8 @@ export default [
     },
   },
   {
+    latlng: [1, 38],
+    flag: "https://restcountries.eu/data/ken.svg",
     code: "KE",
     name: "Kenya",
     geoJSON: {
@@ -180,6 +189,8 @@ export default [
     },
   },
   {
+    latlng: [8, 38],
+    flag: "https://restcountries.eu/data/eth.svg",
     code: "ET",
     name: "Ethiopia",
     geoJSON: {
@@ -252,6 +263,8 @@ export default [
     },
   },
   {
+    latlng: [1, 32],
+    flag: "https://restcountries.eu/data/uga.svg",
     code: "UG",
     name: "Uganda",
     geoJSON: {
@@ -292,6 +305,8 @@ export default [
     },
   },
   {
+    latlng: [15, 30],
+    flag: "https://restcountries.eu/data/sdn.svg",
     code: "SD",
     name: "Sudan",
     geoJSON: {
@@ -380,6 +395,8 @@ export default [
     },
   },
   {
+    latlng: [60, -95],
+    flag: "https://restcountries.eu/data/can.svg",
     code: "CA",
     name: "Canada",
     geoJSON: {
@@ -1389,6 +1406,8 @@ export default [
     },
   },
   {
+    latlng: [38, -97],
+    flag: "https://restcountries.eu/data/usa.svg",
     code: "US",
     name: "United States",
     geoJSON: {
@@ -1900,6 +1919,8 @@ export default [
     },
   },
   {
+    latlng: [23, -102],
+    flag: "https://restcountries.eu/data/mex.svg",
     code: "MX",
     name: "Mexico",
     geoJSON: {
@@ -2081,6 +2102,8 @@ export default [
     },
   },
   {
+    latlng: [24.25, -76],
+    flag: "https://restcountries.eu/data/bhs.svg",
     code: "BS",
     name: "Bahamas",
     geoJSON: {
@@ -2132,6 +2155,8 @@ export default [
     },
   },
   {
+    latlng: [11, -61],
+    flag: "https://restcountries.eu/data/tto.svg",
     code: "TT",
     name: "Trinidad and Tobago",
     geoJSON: {
@@ -2168,6 +2193,8 @@ export default [
     },
   },
   {
+    latlng: [12.11666666, -61.66666666],
+    flag: "https://restcountries.eu/data/grd.svg",
     code: "GD",
     name: "Grenada",
     geoJSON: {
@@ -2185,6 +2212,8 @@ export default [
     },
   },
   {
+    latlng: [13.25, -61.2],
+    flag: "https://restcountries.eu/data/vct.svg",
     code: "VC",
     name: "St. Vincent and the Grenadines",
     geoJSON: {
@@ -2202,6 +2231,8 @@ export default [
     },
   },
   {
+    latlng: [13.16666666, -59.53333333],
+    flag: "https://restcountries.eu/data/brb.svg",
     code: "BB",
     name: "Barbados",
     geoJSON: {
@@ -2219,6 +2250,8 @@ export default [
     },
   },
   {
+    latlng: [13.88333333, -60.96666666],
+    flag: "https://restcountries.eu/data/lca.svg",
     code: "LC",
     name: "St. Lucia",
     geoJSON: {
@@ -2236,6 +2269,8 @@ export default [
     },
   },
   {
+    latlng: [14.666667, -61],
+    flag: "https://restcountries.eu/data/mtq.svg",
     code: "MQ",
     name: "Martinique",
     geoJSON: {
@@ -2254,6 +2289,8 @@ export default [
     },
   },
   {
+    latlng: [15.41666666, -61.33333333],
+    flag: "https://restcountries.eu/data/dma.svg",
     code: "DM",
     name: "Dominica",
     geoJSON: {
@@ -2272,6 +2309,8 @@ export default [
     },
   },
   {
+    latlng: [16.25, -61.583333],
+    flag: "https://restcountries.eu/data/glp.svg",
     code: "GP",
     name: "Guadeloupe",
     geoJSON: {
@@ -2293,6 +2332,8 @@ export default [
     },
   },
   {
+    latlng: [17.05, -61.8],
+    flag: "https://restcountries.eu/data/atg.svg",
     code: "AG",
     name: "Antigua and Barbuda",
     geoJSON: {
@@ -2321,6 +2362,8 @@ export default [
     },
   },
   {
+    latlng: [17.33333333, -62.75],
+    flag: "https://restcountries.eu/data/kna.svg",
     code: "KN",
     name: "St. Kitts and Nevis",
     geoJSON: {
@@ -2339,6 +2382,8 @@ export default [
     },
   },
   {
+    latlng: [-34, -64],
+    flag: "https://restcountries.eu/data/arg.svg",
     code: "AR",
     name: "Argentina",
     geoJSON: {
@@ -2473,6 +2518,8 @@ export default [
     },
   },
   {
+    latlng: [-30, -71],
+    flag: "https://restcountries.eu/data/chl.svg",
     code: "CL",
     name: "Chile",
     geoJSON: {
@@ -2599,6 +2646,8 @@ export default [
     },
   },
   {
+    latlng: [-51.75, -59],
+    flag: "https://restcountries.eu/data/flk.svg",
     code: "FK",
     name: "Falkland Islands",
     geoJSON: {
@@ -2620,6 +2669,8 @@ export default [
     },
   },
   {
+    latlng: [7.5, 134.5],
+    flag: "https://restcountries.eu/data/plw.svg",
     code: "PW",
     name: "Palau",
     geoJSON: {
@@ -2641,6 +2692,8 @@ export default [
     },
   },
   {
+    latlng: [-20.28333333, 57.55],
+    flag: "https://restcountries.eu/data/mus.svg",
     code: "MU",
     name: "Mauritius",
     geoJSON: {
@@ -2659,6 +2712,8 @@ export default [
     },
   },
   {
+    latlng: [-12.16666666, 44.25],
+    flag: "https://restcountries.eu/data/com.svg",
     code: "KM",
     name: "Comoros",
     geoJSON: {
@@ -2678,6 +2733,8 @@ export default [
     },
   },
   {
+    latlng: [1, 7],
+    flag: "https://restcountries.eu/data/stp.svg",
     code: "ST",
     name: "Sao Tome and Principe",
     geoJSON: {
@@ -2705,6 +2762,8 @@ export default [
     },
   },
   {
+    latlng: [2, 10],
+    flag: "https://restcountries.eu/data/gnq.svg",
     code: "GQ",
     name: "Equatorial Guinea",
     geoJSON: {
@@ -2737,6 +2796,8 @@ export default [
     },
   },
   {
+    latlng: [16, -24],
+    flag: "https://restcountries.eu/data/cpv.svg",
     code: "CV",
     name: "Cape Verde",
     geoJSON: {
@@ -2763,6 +2824,8 @@ export default [
     },
   },
   {
+    latlng: [35, 105],
+    flag: "https://restcountries.eu/data/chn.svg",
     code: "CN",
     name: "China",
     geoJSON: {
@@ -3017,6 +3080,8 @@ export default [
     },
   },
   {
+    latlng: [65, -18],
+    flag: "https://restcountries.eu/data/isl.svg",
     code: "IS",
     name: "Iceland",
     geoJSON: {
@@ -3048,6 +3113,8 @@ export default [
     },
   },
   {
+    latlng: [21.5, -80],
+    flag: "https://restcountries.eu/data/cub.svg",
     code: "CU",
     name: "Cuba",
     geoJSON: {
@@ -3101,6 +3168,8 @@ export default [
     },
   },
   {
+    latlng: [18.25, -77.5],
+    flag: "https://restcountries.eu/data/jam.svg",
     code: "JM",
     name: "Jamaica",
     geoJSON: {
@@ -3123,6 +3192,8 @@ export default [
     },
   },
   {
+    latlng: [18.25, -66.5],
+    flag: "https://restcountries.eu/data/pri.svg",
     code: "PR",
     name: "Puerto Rico",
     geoJSON: {
@@ -3143,6 +3214,8 @@ export default [
     },
   },
   {
+    latlng: [-23, -58],
+    flag: "https://restcountries.eu/data/pry.svg",
     code: "PY",
     name: "Paraguay",
     geoJSON: {
@@ -3187,6 +3260,8 @@ export default [
     },
   },
   {
+    latlng: [-2, -77.5],
+    flag: "https://restcountries.eu/data/ecu.svg",
     code: "EC",
     name: "Ecuador",
     geoJSON: {
@@ -3231,6 +3306,8 @@ export default [
     },
   },
   {
+    latlng: [4, -53],
+    flag: "https://restcountries.eu/data/guf.svg",
     code: "GF",
     name: "French Guiana",
     geoJSON: {
@@ -3261,6 +3338,8 @@ export default [
     },
   },
   {
+    latlng: [4, -56],
+    flag: "https://restcountries.eu/data/sur.svg",
     code: "SR",
     name: "Suriname",
     geoJSON: {
@@ -3298,6 +3377,8 @@ export default [
     },
   },
   {
+    latlng: [5, -59],
+    flag: "https://restcountries.eu/data/guy.svg",
     code: "GY",
     name: "Guyana",
     geoJSON: {
@@ -3349,6 +3430,8 @@ export default [
     },
   },
   {
+    latlng: [8, -66],
+    flag: "https://restcountries.eu/data/ven.svg",
     code: "VE",
     name: "Venezuela",
     geoJSON: {
@@ -3465,6 +3548,8 @@ export default [
     },
   },
   {
+    latlng: [17.25, -88.75],
+    flag: "https://restcountries.eu/data/blz.svg",
     code: "BZ",
     name: "Belize",
     geoJSON: {
@@ -3496,6 +3581,8 @@ export default [
     },
   },
   {
+    latlng: [15.5, -90.25],
+    flag: "https://restcountries.eu/data/gtm.svg",
     code: "GT",
     name: "Guatemala",
     geoJSON: {
@@ -3542,6 +3629,8 @@ export default [
     },
   },
   {
+    latlng: [13.83333333, -88.91666666],
+    flag: "https://restcountries.eu/data/slv.svg",
     code: "SV",
     name: "El Salvador",
     geoJSON: {
@@ -3573,6 +3662,8 @@ export default [
     },
   },
   {
+    latlng: [15, -86.5],
+    flag: "https://restcountries.eu/data/hnd.svg",
     code: "HN",
     name: "Honduras",
     geoJSON: {
@@ -3641,6 +3732,8 @@ export default [
     },
   },
   {
+    latlng: [13, -85],
+    flag: "https://restcountries.eu/data/nic.svg",
     code: "NI",
     name: "Nicaragua",
     geoJSON: {
@@ -3704,6 +3797,8 @@ export default [
     },
   },
   {
+    latlng: [10, -84],
+    flag: "https://restcountries.eu/data/cri.svg",
     code: "CR",
     name: "Costa Rica",
     geoJSON: {
@@ -3751,6 +3846,8 @@ export default [
     },
   },
   {
+    latlng: [9, -80],
+    flag: "https://restcountries.eu/data/pan.svg",
     code: "PA",
     name: "Panama",
     geoJSON: {
@@ -3814,6 +3911,8 @@ export default [
     },
   },
   {
+    latlng: [4, -72],
+    flag: "https://restcountries.eu/data/col.svg",
     code: "CO",
     name: "Colombia",
     geoJSON: {
@@ -3925,6 +4024,8 @@ export default [
     },
   },
   {
+    latlng: [-10, -76],
+    flag: "https://restcountries.eu/data/per.svg",
     code: "PE",
     name: "Peru",
     geoJSON: {
@@ -4012,6 +4113,8 @@ export default [
     },
   },
   {
+    latlng: [-17, -65],
+    flag: "https://restcountries.eu/data/bol.svg",
     code: "BO",
     name: "Bolivia",
     geoJSON: {
@@ -4083,6 +4186,8 @@ export default [
     },
   },
   {
+    latlng: [-10, -55],
+    flag: "https://restcountries.eu/data/bra.svg",
     code: "BR",
     name: "Brazil",
     geoJSON: {
@@ -4297,6 +4402,8 @@ export default [
     },
   },
   {
+    latlng: [-33, -56],
+    flag: "https://restcountries.eu/data/ury.svg",
     code: "UY",
     name: "Uruguay",
     geoJSON: {
@@ -4329,6 +4436,8 @@ export default [
     },
   },
   {
+    latlng: [19, -72.41666666],
+    flag: "https://restcountries.eu/data/hti.svg",
     code: "HT",
     name: "Haiti",
     geoJSON: {
@@ -4361,6 +4470,8 @@ export default [
     },
   },
   {
+    latlng: [19, -70.66666666],
+    flag: "https://restcountries.eu/data/dom.svg",
     code: "DO",
     name: "Dominican Republic",
     geoJSON: {
@@ -4398,6 +4509,8 @@ export default [
     },
   },
   {
+    latlng: [35, 33],
+    flag: "https://restcountries.eu/data/cyp.svg",
     code: "CY",
     name: "Cyprus",
     geoJSON: {
@@ -4432,6 +4545,8 @@ export default [
     },
   },
   {
+    latlng: [-5, 120],
+    flag: "https://restcountries.eu/data/idn.svg",
     code: "ID",
     name: "Indonesia",
     geoJSON: {
@@ -4716,6 +4831,8 @@ export default [
     },
   },
   {
+    latlng: [27, 30],
+    flag: "https://restcountries.eu/data/egy.svg",
     code: "EG",
     name: "Egypt",
     geoJSON: {
@@ -4769,6 +4886,8 @@ export default [
     },
   },
   {
+    latlng: [25, 45],
+    flag: "https://restcountries.eu/data/sau.svg",
     code: "SA",
     name: "Saudi Arabia",
     geoJSON: {
@@ -4856,6 +4975,8 @@ export default [
     },
   },
   {
+    latlng: [25, 17],
+    flag: "https://restcountries.eu/data/lby.svg",
     code: "LY",
     name: "Libya",
     geoJSON: {
@@ -4923,6 +5044,8 @@ export default [
     },
   },
   {
+    latlng: [15, 48],
+    flag: "https://restcountries.eu/data/yem.svg",
     code: "YE",
     name: "Yemen",
     geoJSON: {
@@ -4978,6 +5101,8 @@ export default [
     },
   },
   {
+    latlng: [36, 138],
+    flag: "https://restcountries.eu/data/jpn.svg",
     code: "JP",
     name: "Japan",
     geoJSON: {
@@ -5058,6 +5183,8 @@ export default [
     },
   },
   {
+    latlng: [15, 39],
+    flag: "https://restcountries.eu/data/eri.svg",
     code: "ER",
     name: "Eritrea",
     geoJSON: {
@@ -5097,6 +5224,8 @@ export default [
     },
   },
   {
+    latlng: [11.5, 43],
+    flag: "https://restcountries.eu/data/dji.svg",
     code: "DJ",
     name: "Djibouti",
     geoJSON: {
@@ -5123,6 +5252,8 @@ export default [
     },
   },
   {
+    latlng: [49.75, 15.5],
+    flag: "https://restcountries.eu/data/cze.svg",
     code: "CZ",
     name: "Czech Republic",
     geoJSON: {
@@ -5169,6 +5300,8 @@ export default [
     },
   },
   {
+    latlng: [48.66666666, 19.5],
+    flag: "https://restcountries.eu/data/svk.svg",
     code: "SK",
     name: "Slovakia",
     geoJSON: {
@@ -5213,6 +5346,8 @@ export default [
     },
   },
   {
+    latlng: [64, 26],
+    flag: "https://restcountries.eu/data/fin.svg",
     code: "FI",
     name: "Finland",
     geoJSON: {
@@ -5262,6 +5397,8 @@ export default [
     },
   },
   {
+    latlng: [46.11666666, 14.81666666],
+    flag: "https://restcountries.eu/data/svn.svg",
     code: "SI",
     name: "Slovenia",
     geoJSON: {
@@ -5291,6 +5428,8 @@ export default [
     },
   },
   {
+    latlng: [4.5, 114.66666666],
+    flag: "https://restcountries.eu/data/brn.svg",
     code: "BN",
     name: "Brunei Darussalam",
     geoJSON: {
@@ -5310,6 +5449,8 @@ export default [
     },
   },
   {
+    latlng: [2.5, 112.5],
+    flag: "https://restcountries.eu/data/mys.svg",
     code: "MY",
     name: "Malaysia",
     geoJSON: {
@@ -5385,6 +5526,8 @@ export default [
     },
   },
   {
+    latlng: [13, 122],
+    flag: "https://restcountries.eu/data/phl.svg",
     code: "PH",
     name: "Philippines",
     geoJSON: {
@@ -5518,8 +5661,10 @@ export default [
     },
   },
   {
+    latlng: [60, 100],
+    flag: "https://restcountries.eu/data/rus.svg",
     code: "RU",
-    name: "Russia",
+    name: "Россия",
     geoJSON: {
       type: "Polygon",
       coordinates: [
@@ -6137,6 +6282,8 @@ export default [
     },
   },
   {
+    latlng: [42, 43.5],
+    flag: "https://restcountries.eu/data/geo.svg",
     code: "GE",
     name: "Georgia",
     geoJSON: {
@@ -6172,6 +6319,8 @@ export default [
     },
   },
   {
+    latlng: [40.5, 47.5],
+    flag: "https://restcountries.eu/data/aze.svg",
     code: "AZ",
     name: "Azerbaijan",
     geoJSON: {
@@ -6230,6 +6379,8 @@ export default [
     },
   },
   {
+    latlng: [54, -2],
+    flag: "https://restcountries.eu/data/gbr.svg",
     code: "GB",
     name: "United Kingdom",
     geoJSON: {
@@ -6295,6 +6446,8 @@ export default [
     },
   },
   {
+    latlng: [56, 10],
+    flag: "https://restcountries.eu/data/dnk.svg",
     code: "DK",
     name: "Denmark",
     geoJSON: {
@@ -6332,6 +6485,8 @@ export default [
     },
   },
   {
+    latlng: [46, 2],
+    flag: "https://restcountries.eu/data/fra.svg",
     code: "FR",
     name: "France",
     geoJSON: {
@@ -6400,6 +6555,8 @@ export default [
     },
   },
   {
+    latlng: [42.83333333, 12.83333333],
+    flag: "https://restcountries.eu/data/ita.svg",
     code: "IT",
     name: "Italy",
     geoJSON: {
@@ -6502,6 +6659,8 @@ export default [
     },
   },
   {
+    latlng: [62, 10],
+    flag: "https://restcountries.eu/data/nor.svg",
     code: "NO",
     name: "Norway",
     geoJSON: {
@@ -6607,6 +6766,8 @@ export default [
     },
   },
   {
+    latlng: [23.5, 121],
+    flag: "https://restcountries.eu/data/twn.svg",
     code: "TW",
     name: "Taiwan",
     geoJSON: {
@@ -6627,6 +6788,8 @@ export default [
     },
   },
   {
+    latlng: [7, 81],
+    flag: "https://restcountries.eu/data/lka.svg",
     code: "LK",
     name: "Sri Lanka",
     geoJSON: {
@@ -6648,6 +6811,8 @@ export default [
     },
   },
   {
+    latlng: [-27, 133],
+    flag: "https://restcountries.eu/data/aus.svg",
     code: "AU",
     name: "Australia",
     geoJSON: {
@@ -6902,6 +7067,8 @@ export default [
     },
   },
   {
+    latlng: [-41, 174],
+    flag: "https://restcountries.eu/data/nzl.svg",
     code: "NZ",
     name: "New Zealand",
     geoJSON: {
@@ -6981,6 +7148,8 @@ export default [
     },
   },
   {
+    latlng: [-8, 159],
+    flag: "https://restcountries.eu/data/slb.svg",
     code: "SB",
     name: "Solomon Islands",
     geoJSON: {
@@ -7050,6 +7219,8 @@ export default [
     },
   },
   {
+    latlng: [-6, 147],
+    flag: "https://restcountries.eu/data/png.svg",
     code: "PG",
     name: "Papua New Guinea",
     geoJSON: {
@@ -7135,6 +7306,8 @@ export default [
     },
   },
   {
+    latlng: [-18, 175],
+    flag: "https://restcountries.eu/data/fji.svg",
     code: "FJ",
     name: "Fiji",
     geoJSON: {
@@ -7165,6 +7338,8 @@ export default [
     },
   },
   {
+    latlng: [-21.5, 165.5],
+    flag: "https://restcountries.eu/data/ncl.svg",
     code: "NC",
     name: "New Caledonia",
     geoJSON: {
@@ -7189,6 +7364,8 @@ export default [
     },
   },
   {
+    latlng: [-74.65, 4.48],
+    flag: "https://restcountries.eu/data/ata.svg",
     code: "AQ",
     name: "Antarctica",
     geoJSON: {
@@ -7876,6 +8053,8 @@ export default [
     },
   },
   {
+    latlng: [53, -8],
+    flag: "https://restcountries.eu/data/irl.svg",
     code: "IE",
     name: "Ireland",
     geoJSON: {
@@ -7900,6 +8079,8 @@ export default [
     },
   },
   {
+    latlng: [40, -4],
+    flag: "https://restcountries.eu/data/esp.svg",
     code: "ES",
     name: "Spain",
     geoJSON: {
@@ -7962,6 +8143,8 @@ export default [
     },
   },
   {
+    latlng: [39.5, -8],
+    flag: "https://restcountries.eu/data/prt.svg",
     code: "PT",
     name: "Portugal",
     geoJSON: {
@@ -8006,6 +8189,8 @@ export default [
     },
   },
   {
+    latlng: [52.5, 5.75],
+    flag: "https://restcountries.eu/data/nld.svg",
     code: "NL",
     name: "Netherlands",
     geoJSON: {
@@ -8031,6 +8216,8 @@ export default [
     },
   },
   {
+    latlng: [50.83333333, 4],
+    flag: "https://restcountries.eu/data/bel.svg",
     code: "BE",
     name: "Belgium",
     geoJSON: {
@@ -8057,6 +8244,8 @@ export default [
     },
   },
   {
+    latlng: [49.75, 6.16666666],
+    flag: "https://restcountries.eu/data/lux.svg",
     code: "LU",
     name: "Luxembourg",
     geoJSON: {
@@ -8075,6 +8264,8 @@ export default [
     },
   },
   {
+    latlng: [47, 8],
+    flag: "https://restcountries.eu/data/che.svg",
     code: "CH",
     name: "Switzerland",
     geoJSON: {
@@ -8110,6 +8301,8 @@ export default [
     },
   },
   {
+    latlng: [45.16666666, 15.5],
+    flag: "https://restcountries.eu/data/hrv.svg",
     code: "HR",
     name: "Croatia",
     geoJSON: {
@@ -8163,6 +8356,8 @@ export default [
     },
   },
   {
+    latlng: [44, 18],
+    flag: "https://restcountries.eu/data/bih.svg",
     code: "BA",
     name: "Bosnia and Herzegovina",
     geoJSON: {
@@ -8196,6 +8391,8 @@ export default [
     },
   },
   {
+    latlng: [41, 20],
+    flag: "https://restcountries.eu/data/alb.svg",
     code: "AL",
     name: "Albania",
     geoJSON: {
@@ -8229,6 +8426,8 @@ export default [
     },
   },
   {
+    latlng: [39, 35],
+    flag: "https://restcountries.eu/data/tur.svg",
     code: "TR",
     name: "Turkey",
     geoJSON: {
@@ -8309,6 +8508,8 @@ export default [
     },
   },
   {
+    latlng: [39, 22],
+    flag: "https://restcountries.eu/data/grc.svg",
     code: "GR",
     name: "Greece",
     geoJSON: {
@@ -8376,6 +8577,8 @@ export default [
     },
   },
   {
+    latlng: [41.83333333, 22],
+    flag: "https://restcountries.eu/data/mkd.svg",
     code: "MK",
     name: "Macedonia",
     geoJSON: {
@@ -8403,6 +8606,8 @@ export default [
     },
   },
   {
+    latlng: [43, 25],
+    flag: "https://restcountries.eu/data/bgr.svg",
     code: "BG",
     name: "Bulgaria",
     geoJSON: {
@@ -8442,6 +8647,8 @@ export default [
     },
   },
   {
+    latlng: [44, 21],
+    flag: "https://restcountries.eu/data/srb.svg",
     code: "RS",
     name: "Serbia",
     geoJSON: {
@@ -8514,6 +8721,8 @@ export default [
     },
   },
   {
+    latlng: [51, 9],
+    flag: "https://restcountries.eu/data/deu.svg",
     code: "DE",
     name: "Germany",
     geoJSON: {
@@ -8587,6 +8796,8 @@ export default [
     },
   },
   {
+    latlng: [59, 26],
+    flag: "https://restcountries.eu/data/est.svg",
     code: "EE",
     name: "Estonia",
     geoJSON: {
@@ -8615,6 +8826,8 @@ export default [
     },
   },
   {
+    latlng: [57, 25],
+    flag: "https://restcountries.eu/data/lva.svg",
     code: "LV",
     name: "Latvia",
     geoJSON: {
@@ -8648,6 +8861,8 @@ export default [
     },
   },
   {
+    latlng: [56, 24],
+    flag: "https://restcountries.eu/data/ltu.svg",
     code: "LT",
     name: "Lithuania",
     geoJSON: {
@@ -8678,6 +8893,8 @@ export default [
     },
   },
   {
+    latlng: [46, 25],
+    flag: "https://restcountries.eu/data/rou.svg",
     code: "RO",
     name: "Romania",
     geoJSON: {
@@ -8733,6 +8950,8 @@ export default [
     },
   },
   {
+    latlng: [47, 29],
+    flag: "https://restcountries.eu/data/mda.svg",
     code: "MD",
     name: "Republic of Moldova",
     geoJSON: {
@@ -8771,6 +8990,8 @@ export default [
     },
   },
   {
+    latlng: [47, 20],
+    flag: "https://restcountries.eu/data/hun.svg",
     code: "HU",
     name: "Hungary",
     geoJSON: {
@@ -8813,6 +9034,8 @@ export default [
     },
   },
   {
+    latlng: [47.33333333, 13.33333333],
+    flag: "https://restcountries.eu/data/aut.svg",
     code: "AT",
     name: "Austria",
     geoJSON: {
@@ -8861,6 +9084,8 @@ export default [
     },
   },
   {
+    latlng: [52, 20],
+    flag: "https://restcountries.eu/data/pol.svg",
     code: "PL",
     name: "Poland",
     geoJSON: {
@@ -8917,8 +9142,13 @@ export default [
     },
   },
   {
+    pattern: patternUA,
+    catImg: catUA,
+    bonAppetit: "Смачного",
+    latlng: [49, 32],
+    flag: "https://restcountries.eu/data/ukr.svg",
     code: "UA",
-    name: "Ukraine",
+    name: "Украина",
     geoJSON: {
       type: "Polygon",
       coordinates: [
@@ -9026,6 +9256,8 @@ export default [
     },
   },
   {
+    latlng: [53, 28],
+    flag: "https://restcountries.eu/data/blr.svg",
     code: "BY",
     name: "Belarus",
     geoJSON: {
@@ -9081,6 +9313,8 @@ export default [
     },
   },
   {
+    latlng: [62, 15],
+    flag: "https://restcountries.eu/data/swe.svg",
     code: "SE",
     name: "Sweden",
     geoJSON: {
@@ -9132,6 +9366,8 @@ export default [
     },
   },
   {
+    latlng: [40, 45],
+    flag: "https://restcountries.eu/data/arm.svg",
     code: "AM",
     name: "Armenia",
     geoJSON: {
@@ -9164,6 +9400,8 @@ export default [
     },
   },
   {
+    latlng: [35, 38],
+    flag: "https://restcountries.eu/data/syr.svg",
     code: "SY",
     name: "Syria",
     geoJSON: {
@@ -9201,6 +9439,8 @@ export default [
     },
   },
   {
+    latlng: [32, 53],
+    flag: "https://restcountries.eu/data/irn.svg",
     code: "IR",
     name: "Iran",
     geoJSON: {
@@ -9287,6 +9527,8 @@ export default [
     },
   },
   {
+    latlng: [40, 60],
+    flag: "https://restcountries.eu/data/tkm.svg",
     code: "TM",
     name: "Turkmenistan",
     geoJSON: {
@@ -9352,6 +9594,8 @@ export default [
     },
   },
   {
+    latlng: [41, 64],
+    flag: "https://restcountries.eu/data/uzb.svg",
     code: "UZ",
     name: "Uzbekistan",
     geoJSON: {
@@ -9426,6 +9670,8 @@ export default [
     },
   },
   {
+    latlng: [41, 75],
+    flag: "https://restcountries.eu/data/kgz.svg",
     code: "KG",
     name: "Kyrgyzstan",
     geoJSON: {
@@ -9472,6 +9718,8 @@ export default [
     },
   },
   {
+    latlng: [39, 71],
+    flag: "https://restcountries.eu/data/tjk.svg",
     code: "TJ",
     name: "Tajikistan",
     geoJSON: {
@@ -9524,6 +9772,8 @@ export default [
     },
   },
   {
+    latlng: [33, 65],
+    flag: "https://restcountries.eu/data/afg.svg",
     code: "AF",
     name: "Afghanistan",
     geoJSON: {
@@ -9604,6 +9854,8 @@ export default [
     },
   },
   {
+    latlng: [30, 70],
+    flag: "https://restcountries.eu/data/pak.svg",
     code: "PK",
     name: "Pakistan",
     geoJSON: {
@@ -9681,6 +9933,8 @@ export default [
     },
   },
   {
+    latlng: [28, 84],
+    flag: "https://restcountries.eu/data/npl.svg",
     code: "NP",
     name: "Nepal",
     geoJSON: {
@@ -9715,6 +9969,8 @@ export default [
     },
   },
   {
+    latlng: [27.5, 90.5],
+    flag: "https://restcountries.eu/data/btn.svg",
     code: "BT",
     name: "Bhutan",
     geoJSON: {
@@ -9739,6 +9995,8 @@ export default [
     },
   },
   {
+    latlng: [24, 90],
+    flag: "https://restcountries.eu/data/bgd.svg",
     code: "BD",
     name: "Bangladesh",
     geoJSON: {
@@ -9786,6 +10044,8 @@ export default [
     },
   },
   {
+    latlng: [20, 77],
+    flag: "https://restcountries.eu/data/ind.svg",
     code: "IN",
     name: "India",
     geoJSON: {
@@ -9933,6 +10193,8 @@ export default [
     },
   },
   {
+    latlng: [46, 105],
+    flag: "https://restcountries.eu/data/mng.svg",
     code: "MN",
     name: "Mongolia",
     geoJSON: {
@@ -10019,6 +10281,8 @@ export default [
     },
   },
   {
+    latlng: [37, 127.5],
+    flag: "https://restcountries.eu/data/kor.svg",
     code: "KR",
     name: "Korea, Republic of",
     geoJSON: {
@@ -10049,6 +10313,8 @@ export default [
     },
   },
   {
+    latlng: [40, 127],
+    flag: "https://restcountries.eu/data/prk.svg",
     code: "KP",
     name: "Korea, Democratic People's Republic of",
     geoJSON: {
@@ -10103,6 +10369,8 @@ export default [
     },
   },
   {
+    latlng: [16.16666666, 107.83333333],
+    flag: "https://restcountries.eu/data/vnm.svg",
     code: "VN",
     name: "Vietnam",
     geoJSON: {
@@ -10158,6 +10426,8 @@ export default [
     },
   },
   {
+    latlng: [22, 98],
+    flag: "https://restcountries.eu/data/mmr.svg",
     code: "MM",
     name: "Burma",
     geoJSON: {
@@ -10239,6 +10509,8 @@ export default [
     },
   },
   {
+    latlng: [18, 105],
+    flag: "https://restcountries.eu/data/lao.svg",
     code: "LA",
     name: "Lao People's Democratic Republic",
     geoJSON: {
@@ -10287,6 +10559,8 @@ export default [
     },
   },
   {
+    latlng: [15, 100],
+    flag: "https://restcountries.eu/data/tha.svg",
     code: "TH",
     name: "Thailand",
     geoJSON: {
@@ -10362,6 +10636,8 @@ export default [
     },
   },
   {
+    latlng: [13, 105],
+    flag: "https://restcountries.eu/data/khm.svg",
     code: "KH",
     name: "Cambodia",
     geoJSON: {
@@ -10390,6 +10666,8 @@ export default [
     },
   },
   {
+    latlng: [-16, 167],
+    flag: "https://restcountries.eu/data/vut.svg",
     code: "VU",
     name: "Vanuatu",
     geoJSON: {
@@ -10415,6 +10693,8 @@ export default [
     },
   },
   {
+    latlng: [21, 57],
+    flag: "https://restcountries.eu/data/omn.svg",
     code: "OM",
     name: "Oman",
     geoJSON: {
@@ -10475,6 +10755,8 @@ export default [
     },
   },
   {
+    latlng: [33, 44],
+    flag: "https://restcountries.eu/data/irq.svg",
     code: "IQ",
     name: "Iraq",
     geoJSON: {
@@ -10516,6 +10798,8 @@ export default [
     },
   },
   {
+    latlng: [29.5, 45.75],
+    flag: "https://restcountries.eu/data/kwt.svg",
     code: "KW",
     name: "Kuwait",
     geoJSON: {
@@ -10536,6 +10820,8 @@ export default [
     },
   },
   {
+    latlng: [25.5, 51.25],
+    flag: "https://restcountries.eu/data/qat.svg",
     code: "QA",
     name: "Qatar",
     geoJSON: {
@@ -10556,6 +10842,8 @@ export default [
     },
   },
   {
+    latlng: [24, 54],
+    flag: "https://restcountries.eu/data/are.svg",
     code: "AE",
     name: "United Arab Emirates",
     geoJSON: {
@@ -10589,6 +10877,8 @@ export default [
     },
   },
   {
+    latlng: [31, 36],
+    flag: "https://restcountries.eu/data/jor.svg",
     code: "JO",
     name: "Jordan",
     geoJSON: {
@@ -10619,6 +10909,8 @@ export default [
     },
   },
   {
+    latlng: [28, 3],
+    flag: "https://restcountries.eu/data/dza.svg",
     code: "DZ",
     name: "Algeria",
     geoJSON: {
@@ -10691,6 +10983,8 @@ export default [
     },
   },
   {
+    latlng: [34, 9],
+    flag: "https://restcountries.eu/data/tun.svg",
     code: "TN",
     name: "Tunisia",
     geoJSON: {
@@ -10733,6 +11027,8 @@ export default [
     },
   },
   {
+    latlng: [13.46666666, -16.56666666],
+    flag: "https://restcountries.eu/data/gmb.svg",
     code: "GM",
     name: "Gambia",
     geoJSON: {
@@ -10760,6 +11056,8 @@ export default [
     },
   },
   {
+    latlng: [-20, 47],
+    flag: "https://restcountries.eu/data/mdg.svg",
     code: "MG",
     name: "Madagascar",
     geoJSON: {
@@ -10820,6 +11118,8 @@ export default [
     },
   },
   {
+    latlng: [33.83333333, 35.83333333],
+    flag: "https://restcountries.eu/data/lbn.svg",
     code: "LB",
     name: "Lebanon",
     geoJSON: {
@@ -10841,6 +11141,8 @@ export default [
     },
   },
   {
+    latlng: [31.5, 34.75],
+    flag: "https://restcountries.eu/data/isr.svg",
     code: "IL",
     name: "Israel",
     geoJSON: {
@@ -10872,6 +11174,8 @@ export default [
     },
   },
   {
+    latlng: [-3.5, 30],
+    flag: "https://restcountries.eu/data/bdi.svg",
     code: "BI",
     name: "Burundi",
     geoJSON: {
@@ -10900,6 +11204,8 @@ export default [
     },
   },
   {
+    latlng: [-2, 30],
+    flag: "https://restcountries.eu/data/rwa.svg",
     code: "RW",
     name: "Rwanda",
     geoJSON: {
@@ -10924,6 +11230,8 @@ export default [
     },
   },
   {
+    latlng: [-12.5, 18.5],
+    flag: "https://restcountries.eu/data/ago.svg",
     code: "AO",
     name: "Angola",
     geoJSON: {
@@ -11012,6 +11320,8 @@ export default [
     },
   },
   {
+    latlng: [-26.5, 31.5],
+    flag: "https://restcountries.eu/data/swz.svg",
     code: "SZ",
     name: "Swaziland",
     geoJSON: {
@@ -11034,6 +11344,8 @@ export default [
     },
   },
   {
+    latlng: [-18.25, 35],
+    flag: "https://restcountries.eu/data/moz.svg",
     code: "MZ",
     name: "Mozambique",
     geoJSON: {
@@ -11124,6 +11436,8 @@ export default [
     },
   },
   {
+    latlng: [-13.5, 34],
+    flag: "https://restcountries.eu/data/mwi.svg",
     code: "MW",
     name: "Malawi",
     geoJSON: {
@@ -11171,6 +11485,8 @@ export default [
     },
   },
   {
+    latlng: [-15, 30],
+    flag: "https://restcountries.eu/data/zmb.svg",
     code: "ZM",
     name: "Zambia",
     geoJSON: {
@@ -11246,6 +11562,8 @@ export default [
     },
   },
   {
+    latlng: [-1, 11.75],
+    flag: "https://restcountries.eu/data/gab.svg",
     code: "GA",
     name: "Gabon",
     geoJSON: {
@@ -11288,6 +11606,8 @@ export default [
     },
   },
   {
+    latlng: [-1, 15],
+    flag: "https://restcountries.eu/data/cog.svg",
     code: "CG",
     name: "Congo",
     geoJSON: {
@@ -11348,6 +11668,8 @@ export default [
     },
   },
   {
+    latlng: [0, 25],
+    flag: "https://restcountries.eu/data/cod.svg",
     code: "CD",
     name: "Democratic Republic of the Congo",
     geoJSON: {
@@ -11489,6 +11811,8 @@ export default [
     },
   },
   {
+    latlng: [7, 21],
+    flag: "https://restcountries.eu/data/caf.svg",
     code: "CF",
     name: "Central African Republic",
     geoJSON: {
@@ -11562,6 +11886,8 @@ export default [
     },
   },
   {
+    latlng: [15, 19],
+    flag: "https://restcountries.eu/data/tcd.svg",
     code: "TD",
     name: "Chad",
     geoJSON: {
@@ -11631,6 +11957,8 @@ export default [
     },
   },
   {
+    latlng: [13, -2],
+    flag: "https://restcountries.eu/data/bfa.svg",
     code: "BF",
     name: "Burkina Faso",
     geoJSON: {
@@ -11681,6 +12009,8 @@ export default [
     },
   },
   {
+    latlng: [8.5, -11.5],
+    flag: "https://restcountries.eu/data/sle.svg",
     code: "SL",
     name: "Sierra Leone",
     geoJSON: {
@@ -11714,6 +12044,8 @@ export default [
     },
   },
   {
+    latlng: [6.5, -9.5],
+    flag: "https://restcountries.eu/data/lbr.svg",
     code: "LR",
     name: "Liberia",
     geoJSON: {
@@ -11752,6 +12084,8 @@ export default [
     },
   },
   {
+    latlng: [12, -15],
+    flag: "https://restcountries.eu/data/gnb.svg",
     code: "GW",
     name: "Guinea-Bissau",
     geoJSON: {
@@ -11782,6 +12116,8 @@ export default [
     },
   },
   {
+    latlng: [11, -10],
+    flag: "https://restcountries.eu/data/gin.svg",
     code: "GN",
     name: "Guinea",
     geoJSON: {
@@ -11863,6 +12199,8 @@ export default [
     },
   },
   {
+    latlng: [8, -5],
+    flag: "https://restcountries.eu/data/civ.svg",
     code: "CI",
     name: "Cote d'Ivoire",
     geoJSON: {
@@ -11920,6 +12258,8 @@ export default [
     },
   },
   {
+    latlng: [8, -2],
+    flag: "https://restcountries.eu/data/gha.svg",
     code: "GH",
     name: "Ghana",
     geoJSON: {
@@ -11956,6 +12296,8 @@ export default [
     },
   },
   {
+    latlng: [8, 1.16666666],
+    flag: "https://restcountries.eu/data/tgo.svg",
     code: "TG",
     name: "Togo",
     geoJSON: {
@@ -11986,6 +12328,8 @@ export default [
     },
   },
   {
+    latlng: [6, 12],
+    flag: "https://restcountries.eu/data/cmr.svg",
     code: "CM",
     name: "Cameroon",
     geoJSON: {
@@ -12058,6 +12402,8 @@ export default [
     },
   },
   {
+    latlng: [10, 8],
+    flag: "https://restcountries.eu/data/nga.svg",
     code: "NG",
     name: "Nigeria",
     geoJSON: {
@@ -12127,6 +12473,8 @@ export default [
     },
   },
   {
+    latlng: [16, 8],
+    flag: "https://restcountries.eu/data/ner.svg",
     code: "NE",
     name: "Niger",
     geoJSON: {
@@ -12196,6 +12544,8 @@ export default [
     },
   },
   {
+    latlng: [9.5, 2.25],
+    flag: "https://restcountries.eu/data/ben.svg",
     code: "BJ",
     name: "Benin",
     geoJSON: {
@@ -12232,6 +12582,8 @@ export default [
     },
   },
   {
+    latlng: [32, -5],
+    flag: "https://restcountries.eu/data/mar.svg",
     code: "MA",
     name: "Morocco",
     geoJSON: {
@@ -12278,6 +12630,8 @@ export default [
     },
   },
   {
+    latlng: [24.5, -13],
+    flag: "https://restcountries.eu/data/esh.svg",
     code: "EH",
     name: "Western Sahara",
     geoJSON: {
@@ -12312,6 +12666,8 @@ export default [
     },
   },
   {
+    latlng: [20, -12],
+    flag: "https://restcountries.eu/data/mrt.svg",
     code: "MR",
     name: "Mauritania",
     geoJSON: {
@@ -12362,6 +12718,8 @@ export default [
     },
   },
   {
+    latlng: [17, -4],
+    flag: "https://restcountries.eu/data/mli.svg",
     code: "ML",
     name: "Mali",
     geoJSON: {
@@ -12449,6 +12807,8 @@ export default [
     },
   },
   {
+    latlng: [14, -14],
+    flag: "https://restcountries.eu/data/sen.svg",
     code: "SN",
     name: "Senegal",
     geoJSON: {
@@ -12504,6 +12864,8 @@ export default [
     },
   },
   {
+    latlng: [-22, 17],
+    flag: "https://restcountries.eu/data/nam.svg",
     code: "NA",
     name: "Namibia",
     geoJSON: {
@@ -12559,6 +12921,8 @@ export default [
     },
   },
   {
+    latlng: [-22, 24],
+    flag: "https://restcountries.eu/data/bwa.svg",
     code: "BW",
     name: "Botswana",
     geoJSON: {
@@ -12610,6 +12974,8 @@ export default [
     },
   },
   {
+    latlng: [-20, 30],
+    flag: "https://restcountries.eu/data/zwe.svg",
     code: "ZW",
     name: "Zimbabwe",
     geoJSON: {
@@ -12658,6 +13024,8 @@ export default [
     },
   },
   {
+    latlng: [-29, 24],
+    flag: "https://restcountries.eu/data/zaf.svg",
     code: "ZA",
     name: "South Africa",
     geoJSON: {
@@ -12751,6 +13119,8 @@ export default [
     },
   },
   {
+    latlng: [-29.5, 28.5],
+    flag: "https://restcountries.eu/data/lso.svg",
     code: "LS",
     name: "Lesotho",
     geoJSON: {
@@ -12774,6 +13144,8 @@ export default [
     },
   },
   {
+    latlng: [-8.83333333, 125.91666666],
+    flag: "https://restcountries.eu/data/tls.svg",
     code: "TL",
     name: "Timor-Leste",
     geoJSON: {
@@ -12795,6 +13167,8 @@ export default [
     },
   },
   {
+    latlng: [48, 68],
+    flag: "https://restcountries.eu/data/kaz.svg",
     code: "KZ",
     name: "Kazakhstan",
     geoJSON: {
@@ -12924,6 +13298,8 @@ export default [
     },
   },
   {
+    latlng: [-21.15, 55.5],
+    flag: "https://restcountries.eu/data/reu.svg",
     code: "RE",
     name: "Reunion",
     geoJSON: {

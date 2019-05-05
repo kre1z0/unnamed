@@ -5,10 +5,10 @@ import { CloseBtn, Flag } from "./styled";
 import { Field } from "../Field";
 
 export class Content extends Component {
-  shouldComponentUpdate({ alpha2Code: nextAlpha2Code }, nextState) {
-    const { alpha2Code } = this.props;
+  shouldComponentUpdate({ code: nextcode }, nextState) {
+    const { code } = this.props;
 
-    return Boolean(alpha2Code !== nextAlpha2Code && nextAlpha2Code);
+    return Boolean(code !== nextcode && nextcode);
   }
 
   render() {

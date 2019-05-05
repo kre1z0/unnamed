@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: github
   repo: kre1z0/unnamed
   branch: master
 
@@ -15,7 +15,7 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "recipes"}
-      - {label: "Страна", name: "country", widget: "country-select"}
+      - {label: "Страна", name: "country", widget: "country-select", default: "Украина"}
       - {label: "Имя рецепта", name: "name", widget: "string"}
       - {label: "Изображение для шапки", name: "image", widget: "image"}
       - label: "Категория"

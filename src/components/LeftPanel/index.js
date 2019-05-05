@@ -11,11 +11,11 @@ export class LeftPanel extends Component {
     transition: false,
   };
 
-  shouldComponentUpdate({ alpha2Code: nextAlpha2Code }, { deltaX: nextDeltaX }) {
+  shouldComponentUpdate({ code: nextcode }, { deltaX: nextDeltaX }) {
     const { deltaX } = this.state;
-    const { alpha2Code } = this.props;
+    const { code } = this.props;
 
-    return deltaX !== nextDeltaX || alpha2Code !== nextAlpha2Code;
+    return deltaX !== nextDeltaX || code !== nextcode;
   }
 
   onRef = ref => ref && L.DomEvent.disableClickPropagation(ref);
@@ -42,14 +42,14 @@ export class LeftPanel extends Component {
     }
   };
 
-  componentDidUpdate({ alpha2Code: prevAlpha2Code }, prevState) {
-    const { alpha2Code } = this.props;
+  componentDidUpdate({ code: prevcode }, prevState) {
+    const { code } = this.props;
 
-    const countyIsChanged = prevAlpha2Code !== alpha2Code;
+    const countyIsChanged = prevcode !== code;
 
-    if (countyIsChanged && alpha2Code) {
+    if (countyIsChanged && code) {
       this.setState({ deltaX: 0, transition: true });
-    } else if (countyIsChanged && !alpha2Code) {
+    } else if (countyIsChanged && !code) {
       this.setState({ deltaX: 400, transition: true });
     }
   }

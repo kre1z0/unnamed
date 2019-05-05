@@ -135,7 +135,11 @@ export const Step = styled.h1`
   }
 `;
 
-export const Footer = styled.footer`
+export const Footer = styled.footer.attrs(({ image }) => ({
+  style: {
+    backgroundImage: `url(${image}), url(${image})`,
+  },
+}))`
   font-weight: 600;
   margin-top: 84px;
   display: flex;
@@ -146,8 +150,6 @@ export const Footer = styled.footer`
   width: 100%;
   text-align: center;
   color: rgba(0, 0, 0, 0.64);
-  background-image: url(https://i.pinimg.com/originals/d3/32/37/d332372e0f554f8ec6ae134df55d0671.png),
-    url(https://i.pinimg.com/originals/d3/32/37/d332372e0f554f8ec6ae134df55d0671.png);
   background-size: 40px;
   background-repeat: repeat-x;
   background-position: top, bottom;

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import find from "lodash/find";
 import throttle from "lodash/throttle";
 // https://leafletjs.com/reference-1.4.0.html
 // https://react-leaflet.js.org/docs/en/context.html
@@ -8,8 +7,7 @@ import { TileLayer } from "react-leaflet";
 import { LeafletMap } from "./styled";
 import { CountryPolygon } from "../../components/CountryPolygon";
 import { LeftPanel } from "../../components/LeftPanel";
-import countryPolygons from "../../assets/data/countryPolygons";
-import { fetchAllCountries } from "../../api/restcountries.eu";
+import countryPolygons from "../../assets/data/countries";
 
 export class Map extends Component {
   constructor(props) {
@@ -26,24 +24,17 @@ export class Map extends Component {
     hoveredCountry: null,
   };
 
-  componentDidMount() {
-    fetchAllCountries()
-      .then(({ data }) => this.setState({ countries: data }))
-      .catch(({ response }) => console.error(response));
-  }
-
   onCountry = (e, country) => {
-    const { countries, selectedCountry } = this.state;
+    const { selectedCountry } = this.state;
     const { code } = country;
-    const info = find(countries, { alpha2Code: code });
 
     if (e.originalEvent.type === "mouseover") {
-      this.setState({ hoveredCountry: info });
+      this.setState({ hoveredCountry: country });
     } else if (e.originalEvent.type === "mouseout") {
       this.setState({ hoveredCountry: null });
     } else if (e.originalEvent.type === "click") {
-      if (selectedCountry === null || (selectedCountry && selectedCountry.alpha2Code !== code)) {
-        this.setState({ selectedCountry: info });
+      if (selectedCountry === null || (selectedCountry && selectedCountry.code !== code)) {
+        this.setState({ selectedCountry: country });
       }
     }
   };
@@ -87,19 +78,17 @@ export class Map extends Component {
             const {
               name,
               code,
+              flag,
               geoJSON: { coordinates },
             } = country;
 
-            const isSelected = Boolean(selectedCountry && selectedCountry.alpha2Code === code);
-            const isHovered = Boolean(hoveredCountry && hoveredCountry.alpha2Code === code);
+            const isSelected = Boolean(selectedCountry && selectedCountry.code === code);
+            const isHovered = Boolean(hoveredCountry && hoveredCountry.code === code);
 
             return (
               <CountryPolygon
                 key={code}
-                flag={
-                  (hoveredCountry && hoveredCountry.flag) ||
-                  (selectedCountry && selectedCountry.flag)
-                }
+                flag={flag}
                 name={name}
                 isSelected={isSelected}
                 isHovered={isHovered}

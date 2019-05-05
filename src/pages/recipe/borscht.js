@@ -22,8 +22,6 @@ const Borscht = () => {
           "лавровый лист",
         ]}
         category="Первые блюда"
-        catImg="https://cs.pikabu.ru/images/big_size_comm/2013-10_5/13825363169036.png"
-        bonAppetit="Смачного!"
       />
     </>
   );
