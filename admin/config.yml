@@ -1,7 +1,35 @@
 backend:
-  name: test-repo
-  repo: kre1z0/unknown
+  name: github
+  repo: kre1z0/unnamed
   branch: master
 
 media_folder: static/img
 public_folder: /img
+
+collections:
+  - name: "recipes"
+    label: "Рецепты"
+    widget: "string"
+    folder: "src/data/recipes"
+    identifier_field: "name"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "recipes"}
+      - {label: "Страна", name: "country", widget: "country-select", default: "Украина"}
+      - {label: "Имя рецепта", name: "name", widget: "string"}
+      - {label: "Изображение для шапки", name: "image", widget: "image"}
+      - label: "Категория"
+        name: "category"
+        widget: "select"
+        default: "Первые блюда"
+        options: ["Первые блюда", "Салаты", "Вторые блюда", "Десерты"]
+      - {label: "Ингредиенты", name: "ingredients", widget: "list"}
+      - {label: "Рецепт", name: "body", widget: "markdown"}
+      - label: "Шаги"
+        name: "steps"
+        widget: "list"
+        required: false
+        default: [null]
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string", required: false,  default: ""}
+          - {label: "Шаг", name: "step", widget: "markdown", required: false,  default: ""}

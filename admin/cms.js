@@ -1103,9 +1103,11607 @@ _netlifyIdentityWidget.default.init();
 
 /***/ }),
 /* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var netlify_cms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var netlify_cms__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(netlify_cms__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Widgets_CountrySelect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _Widgets_CountrySelect_CountrySelectPreview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90);
+/* harmony import */ var _preview_templates_RecipePreview__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(91);
+
+
+
+
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget("country-select", _Widgets_CountrySelect__WEBPACK_IMPORTED_MODULE_1__["default"], _Widgets_CountrySelect_CountrySelectPreview__WEBPACK_IMPORTED_MODULE_2__["default"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerPreviewTemplate("recipes", _preview_templates_RecipePreview__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CountrySelect; });
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_CountryAutoComplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+
+
+
+
+var CountrySelect =
+/*#__PURE__*/
+function (_Component) {
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(CountrySelect, _Component);
+
+  function CountrySelect() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CountrySelect.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        _onChange = _this$props.onChange,
+        forID = _this$props.forID,
+        classNameWrapper = _this$props.classNameWrapper,
+        value = _this$props.value;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CountryAutoComplete__WEBPACK_IMPORTED_MODULE_2__["CountryAutoComplete"], {
+      onSelect: function onSelect(value) {
+        return _onChange(value);
+      },
+      value: value || "",
+      onChange: function onChange(e) {
+        return _onChange(e.target.value);
+      },
+      inputProps: {
+        id: forID,
+        className: classNameWrapper
+      }
+    });
+  };
+
+  return CountrySelect;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports) {
 
-// import CMS from "netlify-cms";
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+module.exports = _inheritsLoose;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__(10);
+} else {}
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.6
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var k=__webpack_require__(11),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.concurrent_mode"):60111,y=n?Symbol.for("react.forward_ref"):60112,z=n?Symbol.for("react.suspense"):60113,aa=n?Symbol.for("react.memo"):
+60115,ba=n?Symbol.for("react.lazy"):60116,A="function"===typeof Symbol&&Symbol.iterator;function ca(a,b,d,c,e,g,h,f){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var l=[d,c,e,g,h,f],m=0;a=Error(b.replace(/%s/g,function(){return l[m++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
+function B(a){for(var b=arguments.length-1,d="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=0;c<b;c++)d+="&args[]="+encodeURIComponent(arguments[c+1]);ca(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",d)}var C={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},D={};
+function E(a,b,d){this.props=a;this.context=b;this.refs=D;this.updater=d||C}E.prototype.isReactComponent={};E.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?B("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};E.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function F(){}F.prototype=E.prototype;function G(a,b,d){this.props=a;this.context=b;this.refs=D;this.updater=d||C}var H=G.prototype=new F;
+H.constructor=G;k(H,E.prototype);H.isPureReactComponent=!0;var I={current:null},J={current:null},K=Object.prototype.hasOwnProperty,L={key:!0,ref:!0,__self:!0,__source:!0};
+function M(a,b,d){var c=void 0,e={},g=null,h=null;if(null!=b)for(c in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(g=""+b.key),b)K.call(b,c)&&!L.hasOwnProperty(c)&&(e[c]=b[c]);var f=arguments.length-2;if(1===f)e.children=d;else if(1<f){for(var l=Array(f),m=0;m<f;m++)l[m]=arguments[m+2];e.children=l}if(a&&a.defaultProps)for(c in f=a.defaultProps,f)void 0===e[c]&&(e[c]=f[c]);return{$$typeof:p,type:a,key:g,ref:h,props:e,_owner:J.current}}
+function da(a,b){return{$$typeof:p,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function N(a){return"object"===typeof a&&null!==a&&a.$$typeof===p}function escape(a){var b={"=":"=0",":":"=2"};return"$"+(""+a).replace(/[=:]/g,function(a){return b[a]})}var O=/\/+/g,P=[];function Q(a,b,d,c){if(P.length){var e=P.pop();e.result=a;e.keyPrefix=b;e.func=d;e.context=c;e.count=0;return e}return{result:a,keyPrefix:b,func:d,context:c,count:0}}
+function R(a){a.result=null;a.keyPrefix=null;a.func=null;a.context=null;a.count=0;10>P.length&&P.push(a)}
+function S(a,b,d,c){var e=typeof a;if("undefined"===e||"boolean"===e)a=null;var g=!1;if(null===a)g=!0;else switch(e){case "string":case "number":g=!0;break;case "object":switch(a.$$typeof){case p:case q:g=!0}}if(g)return d(c,a,""===b?"."+T(a,0):b),1;g=0;b=""===b?".":b+":";if(Array.isArray(a))for(var h=0;h<a.length;h++){e=a[h];var f=b+T(e,h);g+=S(e,f,d,c)}else if(null===a||"object"!==typeof a?f=null:(f=A&&a[A]||a["@@iterator"],f="function"===typeof f?f:null),"function"===typeof f)for(a=f.call(a),h=
+0;!(e=a.next()).done;)e=e.value,f=b+T(e,h++),g+=S(e,f,d,c);else"object"===e&&(d=""+a,B("31","[object Object]"===d?"object with keys {"+Object.keys(a).join(", ")+"}":d,""));return g}function U(a,b,d){return null==a?0:S(a,"",b,d)}function T(a,b){return"object"===typeof a&&null!==a&&null!=a.key?escape(a.key):b.toString(36)}function ea(a,b){a.func.call(a.context,b,a.count++)}
+function fa(a,b,d){var c=a.result,e=a.keyPrefix;a=a.func.call(a.context,b,a.count++);Array.isArray(a)?V(a,c,d,function(a){return a}):null!=a&&(N(a)&&(a=da(a,e+(!a.key||b&&b.key===a.key?"":(""+a.key).replace(O,"$&/")+"/")+d)),c.push(a))}function V(a,b,d,c,e){var g="";null!=d&&(g=(""+d).replace(O,"$&/")+"/");b=Q(b,g,c,e);U(a,fa,b);R(b)}function W(){var a=I.current;null===a?B("321"):void 0;return a}
+var X={Children:{map:function(a,b,d){if(null==a)return a;var c=[];V(a,c,null,b,d);return c},forEach:function(a,b,d){if(null==a)return a;b=Q(null,null,b,d);U(a,ea,b);R(b)},count:function(a){return U(a,function(){return null},null)},toArray:function(a){var b=[];V(a,b,null,function(a){return a});return b},only:function(a){N(a)?void 0:B("143");return a}},createRef:function(){return{current:null}},Component:E,PureComponent:G,createContext:function(a,b){void 0===b&&(b=null);a={$$typeof:w,_calculateChangedBits:b,
+_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.Provider={$$typeof:v,_context:a};return a.Consumer=a},forwardRef:function(a){return{$$typeof:y,render:a}},lazy:function(a){return{$$typeof:ba,_ctor:a,_status:-1,_result:null}},memo:function(a,b){return{$$typeof:aa,type:a,compare:void 0===b?null:b}},useCallback:function(a,b){return W().useCallback(a,b)},useContext:function(a,b){return W().useContext(a,b)},useEffect:function(a,b){return W().useEffect(a,b)},useImperativeHandle:function(a,
+b,d){return W().useImperativeHandle(a,b,d)},useDebugValue:function(){},useLayoutEffect:function(a,b){return W().useLayoutEffect(a,b)},useMemo:function(a,b){return W().useMemo(a,b)},useReducer:function(a,b,d){return W().useReducer(a,b,d)},useRef:function(a){return W().useRef(a)},useState:function(a){return W().useState(a)},Fragment:r,StrictMode:t,Suspense:z,createElement:M,cloneElement:function(a,b,d){null===a||void 0===a?B("267",a):void 0;var c=void 0,e=k({},a.props),g=a.key,h=a.ref,f=a._owner;if(null!=
+b){void 0!==b.ref&&(h=b.ref,f=J.current);void 0!==b.key&&(g=""+b.key);var l=void 0;a.type&&a.type.defaultProps&&(l=a.type.defaultProps);for(c in b)K.call(b,c)&&!L.hasOwnProperty(c)&&(e[c]=void 0===b[c]&&void 0!==l?l[c]:b[c])}c=arguments.length-2;if(1===c)e.children=d;else if(1<c){l=Array(c);for(var m=0;m<c;m++)l[m]=arguments[m+2];e.children=l}return{$$typeof:p,type:a.type,key:g,ref:h,props:e,_owner:f}},createFactory:function(a){var b=M.bind(null,a);b.type=a;return b},isValidElement:N,version:"16.8.6",
+unstable_ConcurrentMode:x,unstable_Profiler:u,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentDispatcher:I,ReactCurrentOwner:J,assign:k}},Y={default:X},Z=Y&&X||Y;module.exports=Z.default||Z;
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryAutoComplete", function() { return CountryAutoComplete; });
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _AutoComplete__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(52);
+/* harmony import */ var _assets_data_countries__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(87);
+
+
+
+
+
+var countries = _assets_data_countries__WEBPACK_IMPORTED_MODULE_4__["default"].map(function (_ref) {
+  var flag = _ref.flag,
+      name = _ref.name;
+  return {
+    icon: flag,
+    name: name
+  };
+});
+var CountryAutoComplete = function CountryAutoComplete(props) {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_AutoComplete__WEBPACK_IMPORTED_MODULE_3__["AutoComplete"], Object.assign({
+    items: countries
+  }, props));
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(14);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(35) });
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(15);
+var core = __webpack_require__(16);
+var hide = __webpack_require__(17);
+var redefine = __webpack_require__(27);
+var ctx = __webpack_require__(33);
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE];
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE] || (exports[PROTOTYPE] = {});
+  var key, own, out, exp;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    // export native or passed
+    out = (own ? target : source)[key];
+    // bind timers to global for call from export context
+    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // extend global
+    if (target) redefine(target, key, out, type & $export.U);
+    // export
+    if (exports[key] != out) hide(exports, key, exp);
+    if (IS_PROTO && expProto[key] != out) expProto[key] = out;
+  }
+};
+global.core = core;
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.6.5' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(18);
+var createDesc = __webpack_require__(26);
+module.exports = __webpack_require__(22) ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__(19);
+var IE8_DOM_DEFINE = __webpack_require__(21);
+var toPrimitive = __webpack_require__(25);
+var dP = Object.defineProperty;
+
+exports.f = __webpack_require__(22) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(20);
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__(22) && !__webpack_require__(23)(function () {
+  return Object.defineProperty(__webpack_require__(24)('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__(23)(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(20);
+var document = __webpack_require__(15).document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__(20);
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(15);
+var hide = __webpack_require__(17);
+var has = __webpack_require__(28);
+var SRC = __webpack_require__(29)('src');
+var $toString = __webpack_require__(30);
+var TO_STRING = 'toString';
+var TPL = ('' + $toString).split(TO_STRING);
+
+__webpack_require__(16).inspectSource = function (it) {
+  return $toString.call(it);
+};
+
+(module.exports = function (O, key, val, safe) {
+  var isFunction = typeof val == 'function';
+  if (isFunction) has(val, 'name') || hide(val, 'name', key);
+  if (O[key] === val) return;
+  if (isFunction) has(val, SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
+  if (O === global) {
+    O[key] = val;
+  } else if (!safe) {
+    delete O[key];
+    hide(O, key, val);
+  } else if (O[key]) {
+    O[key] = val;
+  } else {
+    hide(O, key, val);
+  }
+// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
+})(Function.prototype, TO_STRING, function toString() {
+  return typeof this == 'function' && this[SRC] || $toString.call(this);
+});
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(31)('native-function-to-string', Function.toString);
+
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(16);
+var global = __webpack_require__(15);
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__(32) ? 'pure' : 'global',
+  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+});
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports) {
+
+module.exports = false;
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(34);
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.2.1 Object.assign(target, source, ...)
+var getKeys = __webpack_require__(36);
+var gOPS = __webpack_require__(48);
+var pIE = __webpack_require__(49);
+var toObject = __webpack_require__(50);
+var IObject = __webpack_require__(39);
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || __webpack_require__(23)(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = gOPS.f;
+  var isEnum = pIE.f;
+  while (aLen > index) {
+    var S = IObject(arguments[index++]);
+    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
+  } return T;
+} : $assign;
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__(37);
+var enumBugKeys = __webpack_require__(47);
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__(28);
+var toIObject = __webpack_require__(38);
+var arrayIndexOf = __webpack_require__(42)(false);
+var IE_PROTO = __webpack_require__(46)('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__(39);
+var defined = __webpack_require__(41);
+module.exports = function (it) {
+  return IObject(defined(it));
+};
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__(40);
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__(38);
+var toLength = __webpack_require__(43);
+var toAbsoluteIndex = __webpack_require__(45);
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(44);
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(44);
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var shared = __webpack_require__(31)('keys');
+var uid = __webpack_require__(29);
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__(41);
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(18).f;
+var FProto = Function.prototype;
+var nameRE = /^\s*function ([^ (]*)/;
+var NAME = 'name';
+
+// 19.2.4.2 name
+NAME in FProto || __webpack_require__(22) && dP(FProto, NAME, {
+  configurable: true,
+  get: function () {
+    try {
+      return ('' + this).match(nameRE)[1];
+    } catch (e) {
+      return '';
+    }
+  }
+});
+
+
+/***/ }),
+/* 52 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AutoComplete", function() { return AutoComplete; });
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(53);
+/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_autocomplete__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(60);
+/* harmony import */ var react_autocomplete__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_autocomplete__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(72);
+/* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(73);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(75);
+
+
+
+ // https://github.com/reactjs/react-autocomplete
+
+
+
+
+
+var AutoComplete = function AutoComplete(props) {
+  var items = props.items,
+      value = props.value;
+  var selectedItem = items.find(function (item) {
+    return item.name === value;
+  });
+  var selectedItemIcon = selectedItem && selectedItem.icon;
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_7__["AutocompleteContainer"], null, selectedItemIcon && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_7__["SelectedIcon"], {
+    src: selectedItemIcon,
+    alt: "icon"
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_autocomplete__WEBPACK_IMPORTED_MODULE_4___default.a, Object.assign({
+    getItemValue: function getItemValue(item) {
+      return item.name;
+    },
+    shouldItemRender: _utils_sort__WEBPACK_IMPORTED_MODULE_5__["matchStateToTerm"],
+    sortItems: _utils_sort__WEBPACK_IMPORTED_MODULE_5__["sortStates"],
+    renderInput: function renderInput(inputProps) {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_7__["Input"], inputProps);
+    },
+    renderItem: function renderItem(_ref, isHighlighted) {
+      var name = _ref.name,
+          icon = _ref.icon;
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+        key: name
+      }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Item__WEBPACK_IMPORTED_MODULE_6__["Item"], {
+        name: name,
+        icon: icon,
+        isHighlighted: isHighlighted
+      }));
+    }
+  }, props)));
+};
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
+var $export = __webpack_require__(14);
+var $find = __webpack_require__(54)(5);
+var KEY = 'find';
+var forced = true;
+// Shouldn't skip holes
+if (KEY in []) Array(1)[KEY](function () { forced = false; });
+$export($export.P + $export.F * forced, 'Array', {
+  find: function find(callbackfn /* , that = undefined */) {
+    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+  }
+});
+__webpack_require__(59)(KEY);
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 0 -> Array#forEach
+// 1 -> Array#map
+// 2 -> Array#filter
+// 3 -> Array#some
+// 4 -> Array#every
+// 5 -> Array#find
+// 6 -> Array#findIndex
+var ctx = __webpack_require__(33);
+var IObject = __webpack_require__(39);
+var toObject = __webpack_require__(50);
+var toLength = __webpack_require__(43);
+var asc = __webpack_require__(55);
+module.exports = function (TYPE, $create) {
+  var IS_MAP = TYPE == 1;
+  var IS_FILTER = TYPE == 2;
+  var IS_SOME = TYPE == 3;
+  var IS_EVERY = TYPE == 4;
+  var IS_FIND_INDEX = TYPE == 6;
+  var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
+  var create = $create || asc;
+  return function ($this, callbackfn, that) {
+    var O = toObject($this);
+    var self = IObject(O);
+    var f = ctx(callbackfn, that, 3);
+    var length = toLength(self.length);
+    var index = 0;
+    var result = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
+    var val, res;
+    for (;length > index; index++) if (NO_HOLES || index in self) {
+      val = self[index];
+      res = f(val, index, O);
+      if (TYPE) {
+        if (IS_MAP) result[index] = res;   // map
+        else if (res) switch (TYPE) {
+          case 3: return true;             // some
+          case 5: return val;              // find
+          case 6: return index;            // findIndex
+          case 2: result.push(val);        // filter
+        } else if (IS_EVERY) return false; // every
+      }
+    }
+    return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
+  };
+};
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
+var speciesConstructor = __webpack_require__(56);
+
+module.exports = function (original, length) {
+  return new (speciesConstructor(original))(length);
+};
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(20);
+var isArray = __webpack_require__(57);
+var SPECIES = __webpack_require__(58)('species');
+
+module.exports = function (original) {
+  var C;
+  if (isArray(original)) {
+    C = original.constructor;
+    // cross-realm fallback
+    if (typeof C == 'function' && (C === Array || isArray(C.prototype))) C = undefined;
+    if (isObject(C)) {
+      C = C[SPECIES];
+      if (C === null) C = undefined;
+    }
+  } return C === undefined ? Array : C;
+};
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.2.2 IsArray(argument)
+var cof = __webpack_require__(40);
+module.exports = Array.isArray || function isArray(arg) {
+  return cof(arg) == 'Array';
+};
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(31)('wks');
+var uid = __webpack_require__(29);
+var Symbol = __webpack_require__(15).Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 22.1.3.31 Array.prototype[@@unscopables]
+var UNSCOPABLES = __webpack_require__(58)('unscopables');
+var ArrayProto = Array.prototype;
+if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__(17)(ArrayProto, UNSCOPABLES, {});
+module.exports = function (key) {
+  ArrayProto[UNSCOPABLES][key] = true;
+};
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(9);
+var PropTypes = __webpack_require__(62);
+
+var _require = __webpack_require__(65),
+    findDOMNode = _require.findDOMNode;
+
+var scrollIntoView = __webpack_require__(69);
+
+var IMPERATIVE_API = ['blur', 'checkValidity', 'click', 'focus', 'select', 'setCustomValidity', 'setSelectionRange', 'setRangeText'];
+
+function getScrollOffset() {
+  return {
+    x: window.pageXOffset !== undefined ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft,
+    y: window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+  };
+}
+
+var Autocomplete = function (_React$Component) {
+  _inherits(Autocomplete, _React$Component);
+
+  function Autocomplete(props) {
+    _classCallCheck(this, Autocomplete);
+
+    var _this = _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).call(this, props));
+
+    _this.state = {
+      isOpen: false,
+      highlightedIndex: null
+    };
+    _this._debugStates = [];
+    _this.ensureHighlightedIndex = _this.ensureHighlightedIndex.bind(_this);
+    _this.exposeAPI = _this.exposeAPI.bind(_this);
+    _this.handleInputFocus = _this.handleInputFocus.bind(_this);
+    _this.handleInputBlur = _this.handleInputBlur.bind(_this);
+    _this.handleChange = _this.handleChange.bind(_this);
+    _this.handleKeyDown = _this.handleKeyDown.bind(_this);
+    _this.handleInputClick = _this.handleInputClick.bind(_this);
+    _this.maybeAutoCompleteText = _this.maybeAutoCompleteText.bind(_this);
+    return _this;
+  }
+
+  _createClass(Autocomplete, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      // this.refs is frozen, so we need to assign a new object to it
+      this.refs = {};
+      this._ignoreBlur = false;
+      this._ignoreFocus = false;
+      this._scrollOffset = null;
+      this._scrollTimer = null;
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      clearTimeout(this._scrollTimer);
+      this._scrollTimer = null;
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.state.highlightedIndex !== null) {
+        this.setState(this.ensureHighlightedIndex);
+      }
+      if (nextProps.autoHighlight && (this.props.value !== nextProps.value || this.state.highlightedIndex === null)) {
+        this.setState(this.maybeAutoCompleteText);
+      }
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.isOpen()) {
+        this.setMenuPositions();
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (this.state.isOpen && !prevState.isOpen || 'open' in this.props && this.props.open && !prevProps.open) this.setMenuPositions();
+
+      this.maybeScrollItemIntoView();
+      if (prevState.isOpen !== this.state.isOpen) {
+        this.props.onMenuVisibilityChange(this.state.isOpen);
+      }
+    }
+  }, {
+    key: 'exposeAPI',
+    value: function exposeAPI(el) {
+      var _this2 = this;
+
+      this.refs.input = el;
+      IMPERATIVE_API.forEach(function (ev) {
+        return _this2[ev] = el && el[ev] && el[ev].bind(el);
+      });
+    }
+  }, {
+    key: 'maybeScrollItemIntoView',
+    value: function maybeScrollItemIntoView() {
+      if (this.isOpen() && this.state.highlightedIndex !== null) {
+        var itemNode = this.refs['item-' + this.state.highlightedIndex];
+        var menuNode = this.refs.menu;
+        scrollIntoView(findDOMNode(itemNode), findDOMNode(menuNode), { onlyScrollIfNeeded: true });
+      }
+    }
+  }, {
+    key: 'handleKeyDown',
+    value: function handleKeyDown(event) {
+      if (Autocomplete.keyDownHandlers[event.key]) Autocomplete.keyDownHandlers[event.key].call(this, event);else if (!this.isOpen()) {
+        this.setState({
+          isOpen: true
+        });
+      }
+    }
+  }, {
+    key: 'handleChange',
+    value: function handleChange(event) {
+      this.props.onChange(event, event.target.value);
+    }
+  }, {
+    key: 'getFilteredItems',
+    value: function getFilteredItems(props) {
+      var items = props.items;
+
+      if (props.shouldItemRender) {
+        items = items.filter(function (item) {
+          return props.shouldItemRender(item, props.value);
+        });
+      }
+
+      if (props.sortItems) {
+        items.sort(function (a, b) {
+          return props.sortItems(a, b, props.value);
+        });
+      }
+
+      return items;
+    }
+  }, {
+    key: 'maybeAutoCompleteText',
+    value: function maybeAutoCompleteText(state, props) {
+      var highlightedIndex = state.highlightedIndex;
+      var value = props.value,
+          getItemValue = props.getItemValue;
+
+      var index = highlightedIndex === null ? 0 : highlightedIndex;
+      var items = this.getFilteredItems(props);
+      for (var i = 0; i < items.length; i++) {
+        if (props.isItemSelectable(items[index])) break;
+        index = (index + 1) % items.length;
+      }
+      var matchedItem = items[index] && props.isItemSelectable(items[index]) ? items[index] : null;
+      if (value !== '' && matchedItem) {
+        var itemValue = getItemValue(matchedItem);
+        var itemValueDoesMatch = itemValue.toLowerCase().indexOf(value.toLowerCase()) === 0;
+        if (itemValueDoesMatch) {
+          return { highlightedIndex: index };
+        }
+      }
+      return { highlightedIndex: null };
+    }
+  }, {
+    key: 'ensureHighlightedIndex',
+    value: function ensureHighlightedIndex(state, props) {
+      if (state.highlightedIndex >= this.getFilteredItems(props).length) {
+        return { highlightedIndex: null };
+      }
+    }
+  }, {
+    key: 'setMenuPositions',
+    value: function setMenuPositions() {
+      var node = this.refs.input;
+      var rect = node.getBoundingClientRect();
+      var computedStyle = global.window.getComputedStyle(node);
+      var marginBottom = parseInt(computedStyle.marginBottom, 10) || 0;
+      var marginLeft = parseInt(computedStyle.marginLeft, 10) || 0;
+      var marginRight = parseInt(computedStyle.marginRight, 10) || 0;
+      this.setState({
+        menuTop: rect.bottom + marginBottom,
+        menuLeft: rect.left + marginLeft,
+        menuWidth: rect.width + marginLeft + marginRight
+      });
+    }
+  }, {
+    key: 'highlightItemFromMouse',
+    value: function highlightItemFromMouse(index) {
+      this.setState({ highlightedIndex: index });
+    }
+  }, {
+    key: 'selectItemFromMouse',
+    value: function selectItemFromMouse(item) {
+      var _this3 = this;
+
+      var value = this.props.getItemValue(item);
+      // The menu will de-render before a mouseLeave event
+      // happens. Clear the flag to release control over focus
+      this.setIgnoreBlur(false);
+      this.setState({
+        isOpen: false,
+        highlightedIndex: null
+      }, function () {
+        _this3.props.onSelect(value, item);
+      });
+    }
+  }, {
+    key: 'setIgnoreBlur',
+    value: function setIgnoreBlur(ignore) {
+      this._ignoreBlur = ignore;
+    }
+  }, {
+    key: 'renderMenu',
+    value: function renderMenu() {
+      var _this4 = this;
+
+      var items = this.getFilteredItems(this.props).map(function (item, index) {
+        var element = _this4.props.renderItem(item, _this4.state.highlightedIndex === index, { cursor: 'default' });
+        return React.cloneElement(element, {
+          onMouseEnter: _this4.props.isItemSelectable(item) ? function () {
+            return _this4.highlightItemFromMouse(index);
+          } : null,
+          onClick: _this4.props.isItemSelectable(item) ? function () {
+            return _this4.selectItemFromMouse(item);
+          } : null,
+          ref: function ref(e) {
+            return _this4.refs['item-' + index] = e;
+          }
+        });
+      });
+      var style = {
+        left: this.state.menuLeft,
+        top: this.state.menuTop,
+        minWidth: this.state.menuWidth
+      };
+      var menu = this.props.renderMenu(items, this.props.value, style);
+      return React.cloneElement(menu, {
+        ref: function ref(e) {
+          return _this4.refs.menu = e;
+        },
+        // Ignore blur to prevent menu from de-rendering before we can process click
+        onTouchStart: function onTouchStart() {
+          return _this4.setIgnoreBlur(true);
+        },
+        onMouseEnter: function onMouseEnter() {
+          return _this4.setIgnoreBlur(true);
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this4.setIgnoreBlur(false);
+        }
+      });
+    }
+  }, {
+    key: 'handleInputBlur',
+    value: function handleInputBlur(event) {
+      var _this5 = this;
+
+      if (this._ignoreBlur) {
+        this._ignoreFocus = true;
+        this._scrollOffset = getScrollOffset();
+        this.refs.input.focus();
+        return;
+      }
+      var setStateCallback = void 0;
+      var highlightedIndex = this.state.highlightedIndex;
+
+      if (this.props.selectOnBlur && highlightedIndex !== null) {
+        var items = this.getFilteredItems(this.props);
+        var item = items[highlightedIndex];
+        var value = this.props.getItemValue(item);
+        setStateCallback = function setStateCallback() {
+          return _this5.props.onSelect(value, item);
+        };
+      }
+      this.setState({
+        isOpen: false,
+        highlightedIndex: null
+      }, setStateCallback);
+      var onBlur = this.props.inputProps.onBlur;
+
+      if (onBlur) {
+        onBlur(event);
+      }
+    }
+  }, {
+    key: 'handleInputFocus',
+    value: function handleInputFocus(event) {
+      var _this6 = this;
+
+      if (this._ignoreFocus) {
+        this._ignoreFocus = false;
+        var _scrollOffset = this._scrollOffset,
+            x = _scrollOffset.x,
+            y = _scrollOffset.y;
+
+        this._scrollOffset = null;
+        // Focus will cause the browser to scroll the <input> into view.
+        // This can cause the mouse coords to change, which in turn
+        // could cause a new highlight to happen, cancelling the click
+        // event (when selecting with the mouse)
+        window.scrollTo(x, y);
+        // Some browsers wait until all focus event handlers have been
+        // processed before scrolling the <input> into view, so let's
+        // scroll again on the next tick to ensure we're back to where
+        // the user was before focus was lost. We could do the deferred
+        // scroll only, but that causes a jarring split second jump in
+        // some browsers that scroll before the focus event handlers
+        // are triggered.
+        clearTimeout(this._scrollTimer);
+        this._scrollTimer = setTimeout(function () {
+          _this6._scrollTimer = null;
+          window.scrollTo(x, y);
+        }, 0);
+        return;
+      }
+      this.setState({ isOpen: true });
+      var onFocus = this.props.inputProps.onFocus;
+
+      if (onFocus) {
+        onFocus(event);
+      }
+    }
+  }, {
+    key: 'isInputFocused',
+    value: function isInputFocused() {
+      var el = this.refs.input;
+      return el.ownerDocument && el === el.ownerDocument.activeElement;
+    }
+  }, {
+    key: 'handleInputClick',
+    value: function handleInputClick() {
+      // Input will not be focused if it's disabled
+      if (this.isInputFocused() && !this.isOpen()) this.setState({ isOpen: true });
+    }
+  }, {
+    key: 'composeEventHandlers',
+    value: function composeEventHandlers(internal, external) {
+      return external ? function (e) {
+        internal(e);external(e);
+      } : internal;
+    }
+  }, {
+    key: 'isOpen',
+    value: function isOpen() {
+      return 'open' in this.props ? this.props.open : this.state.isOpen;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      if (this.props.debug) {
+        // you don't like it, you love it
+        this._debugStates.push({
+          id: this._debugStates.length,
+          state: this.state
+        });
+      }
+
+      var inputProps = this.props.inputProps;
+
+      var open = this.isOpen();
+      return React.createElement(
+        'div',
+        _extends({ style: _extends({}, this.props.wrapperStyle) }, this.props.wrapperProps),
+        this.props.renderInput(_extends({}, inputProps, {
+          role: 'combobox',
+          'aria-autocomplete': 'list',
+          'aria-expanded': open,
+          autoComplete: 'off',
+          ref: this.exposeAPI,
+          onFocus: this.handleInputFocus,
+          onBlur: this.handleInputBlur,
+          onChange: this.handleChange,
+          onKeyDown: this.composeEventHandlers(this.handleKeyDown, inputProps.onKeyDown),
+          onClick: this.composeEventHandlers(this.handleInputClick, inputProps.onClick),
+          value: this.props.value
+        })),
+        open && this.renderMenu(),
+        this.props.debug && React.createElement(
+          'pre',
+          { style: { marginLeft: 300 } },
+          JSON.stringify(this._debugStates.slice(Math.max(0, this._debugStates.length - 5), this._debugStates.length), null, 2)
+        )
+      );
+    }
+  }]);
+
+  return Autocomplete;
+}(React.Component);
+
+Autocomplete.propTypes = {
+  /**
+   * The items to display in the dropdown menu
+   */
+  items: PropTypes.array.isRequired,
+  /**
+   * The value to display in the input field
+   */
+  value: PropTypes.any,
+  /**
+   * Arguments: `event: Event, value: String`
+   *
+   * Invoked every time the user changes the input's value.
+   */
+  onChange: PropTypes.func,
+  /**
+   * Arguments: `value: String, item: Any`
+   *
+   * Invoked when the user selects an item from the dropdown menu.
+   */
+  onSelect: PropTypes.func,
+  /**
+   * Arguments: `item: Any, value: String`
+   *
+   * Invoked for each entry in `items` and its return value is used to
+   * determine whether or not it should be displayed in the dropdown menu.
+   * By default all items are always rendered.
+   */
+  shouldItemRender: PropTypes.func,
+  /**
+   * Arguments: `item: Any`
+   *
+   * Invoked when attempting to select an item. The return value is used to
+   * determine whether the item should be selectable or not.
+   * By default all items are selectable.
+   */
+  isItemSelectable: PropTypes.func,
+  /**
+   * Arguments: `itemA: Any, itemB: Any, value: String`
+   *
+   * The function which is used to sort `items` before display.
+   */
+  sortItems: PropTypes.func,
+  /**
+   * Arguments: `item: Any`
+   *
+   * Used to read the display value from each entry in `items`.
+   */
+  getItemValue: PropTypes.func.isRequired,
+  /**
+   * Arguments: `item: Any, isHighlighted: Boolean, styles: Object`
+   *
+   * Invoked for each entry in `items` that also passes `shouldItemRender` to
+   * generate the render tree for each item in the dropdown menu. `styles` is
+   * an optional set of styles that can be applied to improve the look/feel
+   * of the items in the dropdown menu.
+   */
+  renderItem: PropTypes.func.isRequired,
+  /**
+   * Arguments: `items: Array<Any>, value: String, styles: Object`
+   *
+   * Invoked to generate the render tree for the dropdown menu. Ensure the
+   * returned tree includes every entry in `items` or else the highlight order
+   * and keyboard navigation logic will break. `styles` will contain
+   * { top, left, minWidth } which are the coordinates of the top-left corner
+   * and the width of the dropdown menu.
+   */
+  renderMenu: PropTypes.func,
+  /**
+   * Styles that are applied to the dropdown menu in the default `renderMenu`
+   * implementation. If you override `renderMenu` and you want to use
+   * `menuStyle` you must manually apply them (`this.props.menuStyle`).
+   */
+  menuStyle: PropTypes.object,
+  /**
+   * Arguments: `props: Object`
+   *
+   * Invoked to generate the input element. The `props` argument is the result
+   * of merging `props.inputProps` with a selection of props that are required
+   * both for functionality and accessibility. At the very least you need to
+   * apply `props.ref` and all `props.on<event>` event handlers. Failing to do
+   * this will cause `Autocomplete` to behave unexpectedly.
+   */
+  renderInput: PropTypes.func,
+  /**
+   * Props passed to `props.renderInput`. By default these props will be
+   * applied to the `<input />` element rendered by `Autocomplete`, unless you
+   * have specified a custom value for `props.renderInput`. Any properties
+   * supported by `HTMLInputElement` can be specified, apart from the
+   * following which are set by `Autocomplete`: value, autoComplete, role,
+   * aria-autocomplete. `inputProps` is commonly used for (but not limited to)
+   * placeholder, event handlers (onFocus, onBlur, etc.), autoFocus, etc..
+   */
+  inputProps: PropTypes.object,
+  /**
+   * Props that are applied to the element which wraps the `<input />` and
+   * dropdown menu elements rendered by `Autocomplete`.
+   */
+  wrapperProps: PropTypes.object,
+  /**
+   * This is a shorthand for `wrapperProps={{ style: <your styles> }}`.
+   * Note that `wrapperStyle` is applied before `wrapperProps`, so the latter
+   * will win if it contains a `style` entry.
+   */
+  wrapperStyle: PropTypes.object,
+  /**
+   * Whether or not to automatically highlight the top match in the dropdown
+   * menu.
+   */
+  autoHighlight: PropTypes.bool,
+  /**
+   * Whether or not to automatically select the highlighted item when the
+   * `<input>` loses focus.
+   */
+  selectOnBlur: PropTypes.bool,
+  /**
+   * Arguments: `isOpen: Boolean`
+   *
+   * Invoked every time the dropdown menu's visibility changes (i.e. every
+   * time it is displayed/hidden).
+   */
+  onMenuVisibilityChange: PropTypes.func,
+  /**
+   * Used to override the internal logic which displays/hides the dropdown
+   * menu. This is useful if you want to force a certain state based on your
+   * UX/business logic. Use it together with `onMenuVisibilityChange` for
+   * fine-grained control over the dropdown menu dynamics.
+   */
+  open: PropTypes.bool,
+  debug: PropTypes.bool
+};
+Autocomplete.defaultProps = {
+  value: '',
+  wrapperProps: {},
+  wrapperStyle: {
+    display: 'inline-block'
+  },
+  inputProps: {},
+  renderInput: function renderInput(props) {
+    return React.createElement('input', props);
+  },
+  onChange: function onChange() {},
+  onSelect: function onSelect() {},
+  isItemSelectable: function isItemSelectable() {
+    return true;
+  },
+  renderMenu: function renderMenu(items, value, style) {
+    return React.createElement('div', { style: _extends({}, style, this.menuStyle), children: items });
+  },
+
+  menuStyle: {
+    borderRadius: '3px',
+    boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
+    background: 'rgba(255, 255, 255, 0.9)',
+    padding: '2px 0',
+    fontSize: '90%',
+    position: 'fixed',
+    overflow: 'auto',
+    maxHeight: '50%' },
+  autoHighlight: true,
+  selectOnBlur: false,
+  onMenuVisibilityChange: function onMenuVisibilityChange() {}
+};
+Autocomplete.keyDownHandlers = {
+  ArrowDown: function ArrowDown(event) {
+    event.preventDefault();
+    var items = this.getFilteredItems(this.props);
+    if (!items.length) return;
+    var highlightedIndex = this.state.highlightedIndex;
+
+    var index = highlightedIndex === null ? -1 : highlightedIndex;
+    for (var i = 0; i < items.length; i++) {
+      var p = (index + i + 1) % items.length;
+      if (this.props.isItemSelectable(items[p])) {
+        index = p;
+        break;
+      }
+    }
+    if (index > -1 && index !== highlightedIndex) {
+      this.setState({
+        highlightedIndex: index,
+        isOpen: true
+      });
+    }
+  },
+  ArrowUp: function ArrowUp(event) {
+    event.preventDefault();
+    var items = this.getFilteredItems(this.props);
+    if (!items.length) return;
+    var highlightedIndex = this.state.highlightedIndex;
+
+    var index = highlightedIndex === null ? items.length : highlightedIndex;
+    for (var i = 0; i < items.length; i++) {
+      var p = (index - (1 + i) + items.length) % items.length;
+      if (this.props.isItemSelectable(items[p])) {
+        index = p;
+        break;
+      }
+    }
+    if (index !== items.length) {
+      this.setState({
+        highlightedIndex: index,
+        isOpen: true
+      });
+    }
+  },
+  Enter: function Enter(event) {
+    var _this7 = this;
+
+    // Key code 229 is used for selecting items from character selectors (Pinyin, Kana, etc)
+    if (event.keyCode !== 13) return;
+    // In case the user is currently hovering over the menu
+    this.setIgnoreBlur(false);
+    if (!this.isOpen()) {
+      // menu is closed so there is no selection to accept -> do nothing
+      return;
+    } else if (this.state.highlightedIndex == null) {
+      // input has focus but no menu item is selected + enter is hit -> close the menu, highlight whatever's in input
+      this.setState({
+        isOpen: false
+      }, function () {
+        _this7.refs.input.select();
+      });
+    } else {
+      // text entered + menu item has been highlighted + enter is hit -> update value to that of selected menu item, close the menu
+      event.preventDefault();
+      var item = this.getFilteredItems(this.props)[this.state.highlightedIndex];
+      var value = this.props.getItemValue(item);
+      this.setState({
+        isOpen: false,
+        highlightedIndex: null
+      }, function () {
+        //this.refs.input.focus() // TODO: file issue
+        _this7.refs.input.setSelectionRange(value.length, value.length);
+        _this7.props.onSelect(value, item);
+      });
+    }
+  },
+  Escape: function Escape() {
+    // In case the user is currently hovering over the menu
+    this.setIgnoreBlur(false);
+    this.setState({
+      highlightedIndex: null,
+      isOpen: false
+    });
+  },
+  Tab: function Tab() {
+    // In case the user is currently hovering over the menu
+    this.setIgnoreBlur(false);
+  }
+};
+
+
+module.exports = Autocomplete;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(61)))
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, ReactIs; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(63)();
+}
+
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = __webpack_require__(64);
+
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
+
+module.exports = function() {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret) {
+      // It is still safe when called from React.
+      return;
+    }
+    var err = new Error(
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+    err.name = 'Invariant Violation';
+    throw err;
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    elementType: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim,
+
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction
+  };
+
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (false) {}
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (true) {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(66);
+} else {}
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.6
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/*
+ Modernizr 3.0.0pre (Custom Build) | MIT
+*/
+var aa=__webpack_require__(9),n=__webpack_require__(11),r=__webpack_require__(67);function ba(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var l=[c,d,e,f,g,h],k=0;a=Error(b.replace(/%s/g,function(){return l[k++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
+function x(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);ba(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}aa?void 0:x("227");function ca(a,b,c,d,e,f,g,h,l){var k=Array.prototype.slice.call(arguments,3);try{b.apply(c,k)}catch(m){this.onError(m)}}
+var da=!1,ea=null,fa=!1,ha=null,ia={onError:function(a){da=!0;ea=a}};function ja(a,b,c,d,e,f,g,h,l){da=!1;ea=null;ca.apply(ia,arguments)}function ka(a,b,c,d,e,f,g,h,l){ja.apply(this,arguments);if(da){if(da){var k=ea;da=!1;ea=null}else x("198"),k=void 0;fa||(fa=!0,ha=k)}}var la=null,ma={};
+function na(){if(la)for(var a in ma){var b=ma[a],c=la.indexOf(a);-1<c?void 0:x("96",a);if(!oa[c]){b.extractEvents?void 0:x("97",a);oa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;pa.hasOwnProperty(h)?x("99",h):void 0;pa[h]=f;var l=f.phasedRegistrationNames;if(l){for(e in l)l.hasOwnProperty(e)&&qa(l[e],g,h);e=!0}else f.registrationName?(qa(f.registrationName,g,h),e=!0):e=!1;e?void 0:x("98",d,a)}}}}
+function qa(a,b,c){ra[a]?x("100",a):void 0;ra[a]=b;sa[a]=b.eventTypes[c].dependencies}var oa=[],pa={},ra={},sa={},ta=null,ua=null,va=null;function wa(a,b,c){var d=a.type||"unknown-event";a.currentTarget=va(c);ka(d,b,void 0,a);a.currentTarget=null}function xa(a,b){null==b?x("30"):void 0;if(null==a)return b;if(Array.isArray(a)){if(Array.isArray(b))return a.push.apply(a,b),a;a.push(b);return a}return Array.isArray(b)?[a].concat(b):[a,b]}
+function ya(a,b,c){Array.isArray(a)?a.forEach(b,c):a&&b.call(c,a)}var za=null;function Aa(a){if(a){var b=a._dispatchListeners,c=a._dispatchInstances;if(Array.isArray(b))for(var d=0;d<b.length&&!a.isPropagationStopped();d++)wa(a,b[d],c[d]);else b&&wa(a,b,c);a._dispatchListeners=null;a._dispatchInstances=null;a.isPersistent()||a.constructor.release(a)}}
+var Ba={injectEventPluginOrder:function(a){la?x("101"):void 0;la=Array.prototype.slice.call(a);na()},injectEventPluginsByName:function(a){var b=!1,c;for(c in a)if(a.hasOwnProperty(c)){var d=a[c];ma.hasOwnProperty(c)&&ma[c]===d||(ma[c]?x("102",c):void 0,ma[c]=d,b=!0)}b&&na()}};
+function Ca(a,b){var c=a.stateNode;if(!c)return null;var d=ta(c);if(!d)return null;c=d[b];a:switch(b){case "onClick":case "onClickCapture":case "onDoubleClick":case "onDoubleClickCapture":case "onMouseDown":case "onMouseDownCapture":case "onMouseMove":case "onMouseMoveCapture":case "onMouseUp":case "onMouseUpCapture":(d=!d.disabled)||(a=a.type,d=!("button"===a||"input"===a||"select"===a||"textarea"===a));a=!d;break a;default:a=!1}if(a)return null;c&&"function"!==typeof c?x("231",b,typeof c):void 0;
+return c}function Da(a){null!==a&&(za=xa(za,a));a=za;za=null;if(a&&(ya(a,Aa),za?x("95"):void 0,fa))throw a=ha,fa=!1,ha=null,a;}var Ea=Math.random().toString(36).slice(2),Fa="__reactInternalInstance$"+Ea,Ga="__reactEventHandlers$"+Ea;function Ha(a){if(a[Fa])return a[Fa];for(;!a[Fa];)if(a.parentNode)a=a.parentNode;else return null;a=a[Fa];return 5===a.tag||6===a.tag?a:null}function Ia(a){a=a[Fa];return!a||5!==a.tag&&6!==a.tag?null:a}
+function Ja(a){if(5===a.tag||6===a.tag)return a.stateNode;x("33")}function Ka(a){return a[Ga]||null}function La(a){do a=a.return;while(a&&5!==a.tag);return a?a:null}function Ma(a,b,c){if(b=Ca(a,c.dispatchConfig.phasedRegistrationNames[b]))c._dispatchListeners=xa(c._dispatchListeners,b),c._dispatchInstances=xa(c._dispatchInstances,a)}
+function Na(a){if(a&&a.dispatchConfig.phasedRegistrationNames){for(var b=a._targetInst,c=[];b;)c.push(b),b=La(b);for(b=c.length;0<b--;)Ma(c[b],"captured",a);for(b=0;b<c.length;b++)Ma(c[b],"bubbled",a)}}function Oa(a,b,c){a&&c&&c.dispatchConfig.registrationName&&(b=Ca(a,c.dispatchConfig.registrationName))&&(c._dispatchListeners=xa(c._dispatchListeners,b),c._dispatchInstances=xa(c._dispatchInstances,a))}function Pa(a){a&&a.dispatchConfig.registrationName&&Oa(a._targetInst,null,a)}
+function Qa(a){ya(a,Na)}var Ra=!("undefined"===typeof window||!window.document||!window.document.createElement);function Sa(a,b){var c={};c[a.toLowerCase()]=b.toLowerCase();c["Webkit"+a]="webkit"+b;c["Moz"+a]="moz"+b;return c}var Ta={animationend:Sa("Animation","AnimationEnd"),animationiteration:Sa("Animation","AnimationIteration"),animationstart:Sa("Animation","AnimationStart"),transitionend:Sa("Transition","TransitionEnd")},Ua={},Va={};
+Ra&&(Va=document.createElement("div").style,"AnimationEvent"in window||(delete Ta.animationend.animation,delete Ta.animationiteration.animation,delete Ta.animationstart.animation),"TransitionEvent"in window||delete Ta.transitionend.transition);function Wa(a){if(Ua[a])return Ua[a];if(!Ta[a])return a;var b=Ta[a],c;for(c in b)if(b.hasOwnProperty(c)&&c in Va)return Ua[a]=b[c];return a}
+var Xa=Wa("animationend"),Ya=Wa("animationiteration"),Za=Wa("animationstart"),$a=Wa("transitionend"),ab="abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(" "),bb=null,cb=null,db=null;
+function eb(){if(db)return db;var a,b=cb,c=b.length,d,e="value"in bb?bb.value:bb.textContent,f=e.length;for(a=0;a<c&&b[a]===e[a];a++);var g=c-a;for(d=1;d<=g&&b[c-d]===e[f-d];d++);return db=e.slice(a,1<d?1-d:void 0)}function fb(){return!0}function gb(){return!1}
+function y(a,b,c,d){this.dispatchConfig=a;this._targetInst=b;this.nativeEvent=c;a=this.constructor.Interface;for(var e in a)a.hasOwnProperty(e)&&((b=a[e])?this[e]=b(c):"target"===e?this.target=d:this[e]=c[e]);this.isDefaultPrevented=(null!=c.defaultPrevented?c.defaultPrevented:!1===c.returnValue)?fb:gb;this.isPropagationStopped=gb;return this}
+n(y.prototype,{preventDefault:function(){this.defaultPrevented=!0;var a=this.nativeEvent;a&&(a.preventDefault?a.preventDefault():"unknown"!==typeof a.returnValue&&(a.returnValue=!1),this.isDefaultPrevented=fb)},stopPropagation:function(){var a=this.nativeEvent;a&&(a.stopPropagation?a.stopPropagation():"unknown"!==typeof a.cancelBubble&&(a.cancelBubble=!0),this.isPropagationStopped=fb)},persist:function(){this.isPersistent=fb},isPersistent:gb,destructor:function(){var a=this.constructor.Interface,
+b;for(b in a)this[b]=null;this.nativeEvent=this._targetInst=this.dispatchConfig=null;this.isPropagationStopped=this.isDefaultPrevented=gb;this._dispatchInstances=this._dispatchListeners=null}});y.Interface={type:null,target:null,currentTarget:function(){return null},eventPhase:null,bubbles:null,cancelable:null,timeStamp:function(a){return a.timeStamp||Date.now()},defaultPrevented:null,isTrusted:null};
+y.extend=function(a){function b(){}function c(){return d.apply(this,arguments)}var d=this;b.prototype=d.prototype;var e=new b;n(e,c.prototype);c.prototype=e;c.prototype.constructor=c;c.Interface=n({},d.Interface,a);c.extend=d.extend;hb(c);return c};hb(y);function ib(a,b,c,d){if(this.eventPool.length){var e=this.eventPool.pop();this.call(e,a,b,c,d);return e}return new this(a,b,c,d)}function jb(a){a instanceof this?void 0:x("279");a.destructor();10>this.eventPool.length&&this.eventPool.push(a)}
+function hb(a){a.eventPool=[];a.getPooled=ib;a.release=jb}var kb=y.extend({data:null}),lb=y.extend({data:null}),mb=[9,13,27,32],nb=Ra&&"CompositionEvent"in window,ob=null;Ra&&"documentMode"in document&&(ob=document.documentMode);
+var pb=Ra&&"TextEvent"in window&&!ob,qb=Ra&&(!nb||ob&&8<ob&&11>=ob),rb=String.fromCharCode(32),sb={beforeInput:{phasedRegistrationNames:{bubbled:"onBeforeInput",captured:"onBeforeInputCapture"},dependencies:["compositionend","keypress","textInput","paste"]},compositionEnd:{phasedRegistrationNames:{bubbled:"onCompositionEnd",captured:"onCompositionEndCapture"},dependencies:"blur compositionend keydown keypress keyup mousedown".split(" ")},compositionStart:{phasedRegistrationNames:{bubbled:"onCompositionStart",
+captured:"onCompositionStartCapture"},dependencies:"blur compositionstart keydown keypress keyup mousedown".split(" ")},compositionUpdate:{phasedRegistrationNames:{bubbled:"onCompositionUpdate",captured:"onCompositionUpdateCapture"},dependencies:"blur compositionupdate keydown keypress keyup mousedown".split(" ")}},tb=!1;
+function ub(a,b){switch(a){case "keyup":return-1!==mb.indexOf(b.keyCode);case "keydown":return 229!==b.keyCode;case "keypress":case "mousedown":case "blur":return!0;default:return!1}}function vb(a){a=a.detail;return"object"===typeof a&&"data"in a?a.data:null}var wb=!1;function xb(a,b){switch(a){case "compositionend":return vb(b);case "keypress":if(32!==b.which)return null;tb=!0;return rb;case "textInput":return a=b.data,a===rb&&tb?null:a;default:return null}}
+function yb(a,b){if(wb)return"compositionend"===a||!nb&&ub(a,b)?(a=eb(),db=cb=bb=null,wb=!1,a):null;switch(a){case "paste":return null;case "keypress":if(!(b.ctrlKey||b.altKey||b.metaKey)||b.ctrlKey&&b.altKey){if(b.char&&1<b.char.length)return b.char;if(b.which)return String.fromCharCode(b.which)}return null;case "compositionend":return qb&&"ko"!==b.locale?null:b.data;default:return null}}
+var zb={eventTypes:sb,extractEvents:function(a,b,c,d){var e=void 0;var f=void 0;if(nb)b:{switch(a){case "compositionstart":e=sb.compositionStart;break b;case "compositionend":e=sb.compositionEnd;break b;case "compositionupdate":e=sb.compositionUpdate;break b}e=void 0}else wb?ub(a,c)&&(e=sb.compositionEnd):"keydown"===a&&229===c.keyCode&&(e=sb.compositionStart);e?(qb&&"ko"!==c.locale&&(wb||e!==sb.compositionStart?e===sb.compositionEnd&&wb&&(f=eb()):(bb=d,cb="value"in bb?bb.value:bb.textContent,wb=
+!0)),e=kb.getPooled(e,b,c,d),f?e.data=f:(f=vb(c),null!==f&&(e.data=f)),Qa(e),f=e):f=null;(a=pb?xb(a,c):yb(a,c))?(b=lb.getPooled(sb.beforeInput,b,c,d),b.data=a,Qa(b)):b=null;return null===f?b:null===b?f:[f,b]}},Ab=null,Bb=null,Cb=null;function Db(a){if(a=ua(a)){"function"!==typeof Ab?x("280"):void 0;var b=ta(a.stateNode);Ab(a.stateNode,a.type,b)}}function Eb(a){Bb?Cb?Cb.push(a):Cb=[a]:Bb=a}function Fb(){if(Bb){var a=Bb,b=Cb;Cb=Bb=null;Db(a);if(b)for(a=0;a<b.length;a++)Db(b[a])}}
+function Gb(a,b){return a(b)}function Hb(a,b,c){return a(b,c)}function Ib(){}var Jb=!1;function Kb(a,b){if(Jb)return a(b);Jb=!0;try{return Gb(a,b)}finally{if(Jb=!1,null!==Bb||null!==Cb)Ib(),Fb()}}var Lb={color:!0,date:!0,datetime:!0,"datetime-local":!0,email:!0,month:!0,number:!0,password:!0,range:!0,search:!0,tel:!0,text:!0,time:!0,url:!0,week:!0};function Mb(a){var b=a&&a.nodeName&&a.nodeName.toLowerCase();return"input"===b?!!Lb[a.type]:"textarea"===b?!0:!1}
+function Nb(a){a=a.target||a.srcElement||window;a.correspondingUseElement&&(a=a.correspondingUseElement);return 3===a.nodeType?a.parentNode:a}function Ob(a){if(!Ra)return!1;a="on"+a;var b=a in document;b||(b=document.createElement("div"),b.setAttribute(a,"return;"),b="function"===typeof b[a]);return b}function Pb(a){var b=a.type;return(a=a.nodeName)&&"input"===a.toLowerCase()&&("checkbox"===b||"radio"===b)}
+function Qb(a){var b=Pb(a)?"checked":"value",c=Object.getOwnPropertyDescriptor(a.constructor.prototype,b),d=""+a[b];if(!a.hasOwnProperty(b)&&"undefined"!==typeof c&&"function"===typeof c.get&&"function"===typeof c.set){var e=c.get,f=c.set;Object.defineProperty(a,b,{configurable:!0,get:function(){return e.call(this)},set:function(a){d=""+a;f.call(this,a)}});Object.defineProperty(a,b,{enumerable:c.enumerable});return{getValue:function(){return d},setValue:function(a){d=""+a},stopTracking:function(){a._valueTracker=
+null;delete a[b]}}}}function Rb(a){a._valueTracker||(a._valueTracker=Qb(a))}function Sb(a){if(!a)return!1;var b=a._valueTracker;if(!b)return!0;var c=b.getValue();var d="";a&&(d=Pb(a)?a.checked?"true":"false":a.value);a=d;return a!==c?(b.setValue(a),!0):!1}var Tb=aa.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;Tb.hasOwnProperty("ReactCurrentDispatcher")||(Tb.ReactCurrentDispatcher={current:null});
+var Ub=/^(.*)[\\\/]/,z="function"===typeof Symbol&&Symbol.for,Vb=z?Symbol.for("react.element"):60103,Wb=z?Symbol.for("react.portal"):60106,Xb=z?Symbol.for("react.fragment"):60107,Yb=z?Symbol.for("react.strict_mode"):60108,Zb=z?Symbol.for("react.profiler"):60114,$b=z?Symbol.for("react.provider"):60109,ac=z?Symbol.for("react.context"):60110,bc=z?Symbol.for("react.concurrent_mode"):60111,cc=z?Symbol.for("react.forward_ref"):60112,dc=z?Symbol.for("react.suspense"):60113,ec=z?Symbol.for("react.memo"):
+60115,fc=z?Symbol.for("react.lazy"):60116,gc="function"===typeof Symbol&&Symbol.iterator;function hc(a){if(null===a||"object"!==typeof a)return null;a=gc&&a[gc]||a["@@iterator"];return"function"===typeof a?a:null}
+function ic(a){if(null==a)return null;if("function"===typeof a)return a.displayName||a.name||null;if("string"===typeof a)return a;switch(a){case bc:return"ConcurrentMode";case Xb:return"Fragment";case Wb:return"Portal";case Zb:return"Profiler";case Yb:return"StrictMode";case dc:return"Suspense"}if("object"===typeof a)switch(a.$$typeof){case ac:return"Context.Consumer";case $b:return"Context.Provider";case cc:var b=a.render;b=b.displayName||b.name||"";return a.displayName||(""!==b?"ForwardRef("+b+
+")":"ForwardRef");case ec:return ic(a.type);case fc:if(a=1===a._status?a._result:null)return ic(a)}return null}function jc(a){var b="";do{a:switch(a.tag){case 3:case 4:case 6:case 7:case 10:case 9:var c="";break a;default:var d=a._debugOwner,e=a._debugSource,f=ic(a.type);c=null;d&&(c=ic(d.type));d=f;f="";e?f=" (at "+e.fileName.replace(Ub,"")+":"+e.lineNumber+")":c&&(f=" (created by "+c+")");c="\n    in "+(d||"Unknown")+f}b+=c;a=a.return}while(a);return b}
+var kc=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,lc=Object.prototype.hasOwnProperty,mc={},nc={};
+function oc(a){if(lc.call(nc,a))return!0;if(lc.call(mc,a))return!1;if(kc.test(a))return nc[a]=!0;mc[a]=!0;return!1}function pc(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
+function qc(a,b,c,d){if(null===b||"undefined"===typeof b||pc(a,b,c,d))return!0;if(d)return!1;if(null!==c)switch(c.type){case 3:return!b;case 4:return!1===b;case 5:return isNaN(b);case 6:return isNaN(b)||1>b}return!1}function C(a,b,c,d,e){this.acceptsBooleans=2===b||3===b||4===b;this.attributeName=d;this.attributeNamespace=e;this.mustUseProperty=c;this.propertyName=a;this.type=b}var D={};
+"children dangerouslySetInnerHTML defaultValue defaultChecked innerHTML suppressContentEditableWarning suppressHydrationWarning style".split(" ").forEach(function(a){D[a]=new C(a,0,!1,a,null)});[["acceptCharset","accept-charset"],["className","class"],["htmlFor","for"],["httpEquiv","http-equiv"]].forEach(function(a){var b=a[0];D[b]=new C(b,1,!1,a[1],null)});["contentEditable","draggable","spellCheck","value"].forEach(function(a){D[a]=new C(a,2,!1,a.toLowerCase(),null)});
+["autoReverse","externalResourcesRequired","focusable","preserveAlpha"].forEach(function(a){D[a]=new C(a,2,!1,a,null)});"allowFullScreen async autoFocus autoPlay controls default defer disabled formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope".split(" ").forEach(function(a){D[a]=new C(a,3,!1,a.toLowerCase(),null)});["checked","multiple","muted","selected"].forEach(function(a){D[a]=new C(a,3,!0,a,null)});
+["capture","download"].forEach(function(a){D[a]=new C(a,4,!1,a,null)});["cols","rows","size","span"].forEach(function(a){D[a]=new C(a,6,!1,a,null)});["rowSpan","start"].forEach(function(a){D[a]=new C(a,5,!1,a.toLowerCase(),null)});var rc=/[\-:]([a-z])/g;function sc(a){return a[1].toUpperCase()}
+"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height".split(" ").forEach(function(a){var b=a.replace(rc,
+sc);D[b]=new C(b,1,!1,a,null)});"xlink:actuate xlink:arcrole xlink:href xlink:role xlink:show xlink:title xlink:type".split(" ").forEach(function(a){var b=a.replace(rc,sc);D[b]=new C(b,1,!1,a,"http://www.w3.org/1999/xlink")});["xml:base","xml:lang","xml:space"].forEach(function(a){var b=a.replace(rc,sc);D[b]=new C(b,1,!1,a,"http://www.w3.org/XML/1998/namespace")});["tabIndex","crossOrigin"].forEach(function(a){D[a]=new C(a,1,!1,a.toLowerCase(),null)});
+function tc(a,b,c,d){var e=D.hasOwnProperty(b)?D[b]:null;var f=null!==e?0===e.type:d?!1:!(2<b.length)||"o"!==b[0]&&"O"!==b[0]||"n"!==b[1]&&"N"!==b[1]?!1:!0;f||(qc(b,c,e,d)&&(c=null),d||null===e?oc(b)&&(null===c?a.removeAttribute(b):a.setAttribute(b,""+c)):e.mustUseProperty?a[e.propertyName]=null===c?3===e.type?!1:"":c:(b=e.attributeName,d=e.attributeNamespace,null===c?a.removeAttribute(b):(e=e.type,c=3===e||4===e&&!0===c?"":""+c,d?a.setAttributeNS(d,b,c):a.setAttribute(b,c))))}
+function uc(a){switch(typeof a){case "boolean":case "number":case "object":case "string":case "undefined":return a;default:return""}}function vc(a,b){var c=b.checked;return n({},b,{defaultChecked:void 0,defaultValue:void 0,value:void 0,checked:null!=c?c:a._wrapperState.initialChecked})}
+function wc(a,b){var c=null==b.defaultValue?"":b.defaultValue,d=null!=b.checked?b.checked:b.defaultChecked;c=uc(null!=b.value?b.value:c);a._wrapperState={initialChecked:d,initialValue:c,controlled:"checkbox"===b.type||"radio"===b.type?null!=b.checked:null!=b.value}}function xc(a,b){b=b.checked;null!=b&&tc(a,"checked",b,!1)}
+function yc(a,b){xc(a,b);var c=uc(b.value),d=b.type;if(null!=c)if("number"===d){if(0===c&&""===a.value||a.value!=c)a.value=""+c}else a.value!==""+c&&(a.value=""+c);else if("submit"===d||"reset"===d){a.removeAttribute("value");return}b.hasOwnProperty("value")?zc(a,b.type,c):b.hasOwnProperty("defaultValue")&&zc(a,b.type,uc(b.defaultValue));null==b.checked&&null!=b.defaultChecked&&(a.defaultChecked=!!b.defaultChecked)}
+function Ac(a,b,c){if(b.hasOwnProperty("value")||b.hasOwnProperty("defaultValue")){var d=b.type;if(!("submit"!==d&&"reset"!==d||void 0!==b.value&&null!==b.value))return;b=""+a._wrapperState.initialValue;c||b===a.value||(a.value=b);a.defaultValue=b}c=a.name;""!==c&&(a.name="");a.defaultChecked=!a.defaultChecked;a.defaultChecked=!!a._wrapperState.initialChecked;""!==c&&(a.name=c)}
+function zc(a,b,c){if("number"!==b||a.ownerDocument.activeElement!==a)null==c?a.defaultValue=""+a._wrapperState.initialValue:a.defaultValue!==""+c&&(a.defaultValue=""+c)}var Bc={change:{phasedRegistrationNames:{bubbled:"onChange",captured:"onChangeCapture"},dependencies:"blur change click focus input keydown keyup selectionchange".split(" ")}};function Cc(a,b,c){a=y.getPooled(Bc.change,a,b,c);a.type="change";Eb(c);Qa(a);return a}var Dc=null,Ec=null;function Fc(a){Da(a)}
+function Gc(a){var b=Ja(a);if(Sb(b))return a}function Hc(a,b){if("change"===a)return b}var Ic=!1;Ra&&(Ic=Ob("input")&&(!document.documentMode||9<document.documentMode));function Jc(){Dc&&(Dc.detachEvent("onpropertychange",Kc),Ec=Dc=null)}function Kc(a){"value"===a.propertyName&&Gc(Ec)&&(a=Cc(Ec,a,Nb(a)),Kb(Fc,a))}function Lc(a,b,c){"focus"===a?(Jc(),Dc=b,Ec=c,Dc.attachEvent("onpropertychange",Kc)):"blur"===a&&Jc()}function Mc(a){if("selectionchange"===a||"keyup"===a||"keydown"===a)return Gc(Ec)}
+function Nc(a,b){if("click"===a)return Gc(b)}function Oc(a,b){if("input"===a||"change"===a)return Gc(b)}
+var Pc={eventTypes:Bc,_isInputEventSupported:Ic,extractEvents:function(a,b,c,d){var e=b?Ja(b):window,f=void 0,g=void 0,h=e.nodeName&&e.nodeName.toLowerCase();"select"===h||"input"===h&&"file"===e.type?f=Hc:Mb(e)?Ic?f=Oc:(f=Mc,g=Lc):(h=e.nodeName)&&"input"===h.toLowerCase()&&("checkbox"===e.type||"radio"===e.type)&&(f=Nc);if(f&&(f=f(a,b)))return Cc(f,c,d);g&&g(a,e,b);"blur"===a&&(a=e._wrapperState)&&a.controlled&&"number"===e.type&&zc(e,"number",e.value)}},Qc=y.extend({view:null,detail:null}),Rc={Alt:"altKey",
+Control:"ctrlKey",Meta:"metaKey",Shift:"shiftKey"};function Sc(a){var b=this.nativeEvent;return b.getModifierState?b.getModifierState(a):(a=Rc[a])?!!b[a]:!1}function Tc(){return Sc}
+var Uc=0,Vc=0,Wc=!1,Xc=!1,Yc=Qc.extend({screenX:null,screenY:null,clientX:null,clientY:null,pageX:null,pageY:null,ctrlKey:null,shiftKey:null,altKey:null,metaKey:null,getModifierState:Tc,button:null,buttons:null,relatedTarget:function(a){return a.relatedTarget||(a.fromElement===a.srcElement?a.toElement:a.fromElement)},movementX:function(a){if("movementX"in a)return a.movementX;var b=Uc;Uc=a.screenX;return Wc?"mousemove"===a.type?a.screenX-b:0:(Wc=!0,0)},movementY:function(a){if("movementY"in a)return a.movementY;
+var b=Vc;Vc=a.screenY;return Xc?"mousemove"===a.type?a.screenY-b:0:(Xc=!0,0)}}),Zc=Yc.extend({pointerId:null,width:null,height:null,pressure:null,tangentialPressure:null,tiltX:null,tiltY:null,twist:null,pointerType:null,isPrimary:null}),$c={mouseEnter:{registrationName:"onMouseEnter",dependencies:["mouseout","mouseover"]},mouseLeave:{registrationName:"onMouseLeave",dependencies:["mouseout","mouseover"]},pointerEnter:{registrationName:"onPointerEnter",dependencies:["pointerout","pointerover"]},pointerLeave:{registrationName:"onPointerLeave",
+dependencies:["pointerout","pointerover"]}},ad={eventTypes:$c,extractEvents:function(a,b,c,d){var e="mouseover"===a||"pointerover"===a,f="mouseout"===a||"pointerout"===a;if(e&&(c.relatedTarget||c.fromElement)||!f&&!e)return null;e=d.window===d?d:(e=d.ownerDocument)?e.defaultView||e.parentWindow:window;f?(f=b,b=(b=c.relatedTarget||c.toElement)?Ha(b):null):f=null;if(f===b)return null;var g=void 0,h=void 0,l=void 0,k=void 0;if("mouseout"===a||"mouseover"===a)g=Yc,h=$c.mouseLeave,l=$c.mouseEnter,k="mouse";
+else if("pointerout"===a||"pointerover"===a)g=Zc,h=$c.pointerLeave,l=$c.pointerEnter,k="pointer";var m=null==f?e:Ja(f);e=null==b?e:Ja(b);a=g.getPooled(h,f,c,d);a.type=k+"leave";a.target=m;a.relatedTarget=e;c=g.getPooled(l,b,c,d);c.type=k+"enter";c.target=e;c.relatedTarget=m;d=b;if(f&&d)a:{b=f;e=d;k=0;for(g=b;g;g=La(g))k++;g=0;for(l=e;l;l=La(l))g++;for(;0<k-g;)b=La(b),k--;for(;0<g-k;)e=La(e),g--;for(;k--;){if(b===e||b===e.alternate)break a;b=La(b);e=La(e)}b=null}else b=null;e=b;for(b=[];f&&f!==e;){k=
+f.alternate;if(null!==k&&k===e)break;b.push(f);f=La(f)}for(f=[];d&&d!==e;){k=d.alternate;if(null!==k&&k===e)break;f.push(d);d=La(d)}for(d=0;d<b.length;d++)Oa(b[d],"bubbled",a);for(d=f.length;0<d--;)Oa(f[d],"captured",c);return[a,c]}};function bd(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var cd=Object.prototype.hasOwnProperty;
+function dd(a,b){if(bd(a,b))return!0;if("object"!==typeof a||null===a||"object"!==typeof b||null===b)return!1;var c=Object.keys(a),d=Object.keys(b);if(c.length!==d.length)return!1;for(d=0;d<c.length;d++)if(!cd.call(b,c[d])||!bd(a[c[d]],b[c[d]]))return!1;return!0}function ed(a){var b=a;if(a.alternate)for(;b.return;)b=b.return;else{if(0!==(b.effectTag&2))return 1;for(;b.return;)if(b=b.return,0!==(b.effectTag&2))return 1}return 3===b.tag?2:3}function fd(a){2!==ed(a)?x("188"):void 0}
+function gd(a){var b=a.alternate;if(!b)return b=ed(a),3===b?x("188"):void 0,1===b?null:a;for(var c=a,d=b;;){var e=c.return,f=e?e.alternate:null;if(!e||!f)break;if(e.child===f.child){for(var g=e.child;g;){if(g===c)return fd(e),a;if(g===d)return fd(e),b;g=g.sibling}x("188")}if(c.return!==d.return)c=e,d=f;else{g=!1;for(var h=e.child;h;){if(h===c){g=!0;c=e;d=f;break}if(h===d){g=!0;d=e;c=f;break}h=h.sibling}if(!g){for(h=f.child;h;){if(h===c){g=!0;c=f;d=e;break}if(h===d){g=!0;d=f;c=e;break}h=h.sibling}g?
+void 0:x("189")}}c.alternate!==d?x("190"):void 0}3!==c.tag?x("188"):void 0;return c.stateNode.current===c?a:b}function hd(a){a=gd(a);if(!a)return null;for(var b=a;;){if(5===b.tag||6===b.tag)return b;if(b.child)b.child.return=b,b=b.child;else{if(b===a)break;for(;!b.sibling;){if(!b.return||b.return===a)return null;b=b.return}b.sibling.return=b.return;b=b.sibling}}return null}
+var id=y.extend({animationName:null,elapsedTime:null,pseudoElement:null}),jd=y.extend({clipboardData:function(a){return"clipboardData"in a?a.clipboardData:window.clipboardData}}),kd=Qc.extend({relatedTarget:null});function ld(a){var b=a.keyCode;"charCode"in a?(a=a.charCode,0===a&&13===b&&(a=13)):a=b;10===a&&(a=13);return 32<=a||13===a?a:0}
+var md={Esc:"Escape",Spacebar:" ",Left:"ArrowLeft",Up:"ArrowUp",Right:"ArrowRight",Down:"ArrowDown",Del:"Delete",Win:"OS",Menu:"ContextMenu",Apps:"ContextMenu",Scroll:"ScrollLock",MozPrintableKey:"Unidentified"},nd={8:"Backspace",9:"Tab",12:"Clear",13:"Enter",16:"Shift",17:"Control",18:"Alt",19:"Pause",20:"CapsLock",27:"Escape",32:" ",33:"PageUp",34:"PageDown",35:"End",36:"Home",37:"ArrowLeft",38:"ArrowUp",39:"ArrowRight",40:"ArrowDown",45:"Insert",46:"Delete",112:"F1",113:"F2",114:"F3",115:"F4",
+116:"F5",117:"F6",118:"F7",119:"F8",120:"F9",121:"F10",122:"F11",123:"F12",144:"NumLock",145:"ScrollLock",224:"Meta"},od=Qc.extend({key:function(a){if(a.key){var b=md[a.key]||a.key;if("Unidentified"!==b)return b}return"keypress"===a.type?(a=ld(a),13===a?"Enter":String.fromCharCode(a)):"keydown"===a.type||"keyup"===a.type?nd[a.keyCode]||"Unidentified":""},location:null,ctrlKey:null,shiftKey:null,altKey:null,metaKey:null,repeat:null,locale:null,getModifierState:Tc,charCode:function(a){return"keypress"===
+a.type?ld(a):0},keyCode:function(a){return"keydown"===a.type||"keyup"===a.type?a.keyCode:0},which:function(a){return"keypress"===a.type?ld(a):"keydown"===a.type||"keyup"===a.type?a.keyCode:0}}),pd=Yc.extend({dataTransfer:null}),qd=Qc.extend({touches:null,targetTouches:null,changedTouches:null,altKey:null,metaKey:null,ctrlKey:null,shiftKey:null,getModifierState:Tc}),rd=y.extend({propertyName:null,elapsedTime:null,pseudoElement:null}),sd=Yc.extend({deltaX:function(a){return"deltaX"in a?a.deltaX:"wheelDeltaX"in
+a?-a.wheelDeltaX:0},deltaY:function(a){return"deltaY"in a?a.deltaY:"wheelDeltaY"in a?-a.wheelDeltaY:"wheelDelta"in a?-a.wheelDelta:0},deltaZ:null,deltaMode:null}),td=[["abort","abort"],[Xa,"animationEnd"],[Ya,"animationIteration"],[Za,"animationStart"],["canplay","canPlay"],["canplaythrough","canPlayThrough"],["drag","drag"],["dragenter","dragEnter"],["dragexit","dragExit"],["dragleave","dragLeave"],["dragover","dragOver"],["durationchange","durationChange"],["emptied","emptied"],["encrypted","encrypted"],
+["ended","ended"],["error","error"],["gotpointercapture","gotPointerCapture"],["load","load"],["loadeddata","loadedData"],["loadedmetadata","loadedMetadata"],["loadstart","loadStart"],["lostpointercapture","lostPointerCapture"],["mousemove","mouseMove"],["mouseout","mouseOut"],["mouseover","mouseOver"],["playing","playing"],["pointermove","pointerMove"],["pointerout","pointerOut"],["pointerover","pointerOver"],["progress","progress"],["scroll","scroll"],["seeking","seeking"],["stalled","stalled"],
+["suspend","suspend"],["timeupdate","timeUpdate"],["toggle","toggle"],["touchmove","touchMove"],[$a,"transitionEnd"],["waiting","waiting"],["wheel","wheel"]],ud={},vd={};function wd(a,b){var c=a[0];a=a[1];var d="on"+(a[0].toUpperCase()+a.slice(1));b={phasedRegistrationNames:{bubbled:d,captured:d+"Capture"},dependencies:[c],isInteractive:b};ud[a]=b;vd[c]=b}
+[["blur","blur"],["cancel","cancel"],["click","click"],["close","close"],["contextmenu","contextMenu"],["copy","copy"],["cut","cut"],["auxclick","auxClick"],["dblclick","doubleClick"],["dragend","dragEnd"],["dragstart","dragStart"],["drop","drop"],["focus","focus"],["input","input"],["invalid","invalid"],["keydown","keyDown"],["keypress","keyPress"],["keyup","keyUp"],["mousedown","mouseDown"],["mouseup","mouseUp"],["paste","paste"],["pause","pause"],["play","play"],["pointercancel","pointerCancel"],
+["pointerdown","pointerDown"],["pointerup","pointerUp"],["ratechange","rateChange"],["reset","reset"],["seeked","seeked"],["submit","submit"],["touchcancel","touchCancel"],["touchend","touchEnd"],["touchstart","touchStart"],["volumechange","volumeChange"]].forEach(function(a){wd(a,!0)});td.forEach(function(a){wd(a,!1)});
+var xd={eventTypes:ud,isInteractiveTopLevelEventType:function(a){a=vd[a];return void 0!==a&&!0===a.isInteractive},extractEvents:function(a,b,c,d){var e=vd[a];if(!e)return null;switch(a){case "keypress":if(0===ld(c))return null;case "keydown":case "keyup":a=od;break;case "blur":case "focus":a=kd;break;case "click":if(2===c.button)return null;case "auxclick":case "dblclick":case "mousedown":case "mousemove":case "mouseup":case "mouseout":case "mouseover":case "contextmenu":a=Yc;break;case "drag":case "dragend":case "dragenter":case "dragexit":case "dragleave":case "dragover":case "dragstart":case "drop":a=
+pd;break;case "touchcancel":case "touchend":case "touchmove":case "touchstart":a=qd;break;case Xa:case Ya:case Za:a=id;break;case $a:a=rd;break;case "scroll":a=Qc;break;case "wheel":a=sd;break;case "copy":case "cut":case "paste":a=jd;break;case "gotpointercapture":case "lostpointercapture":case "pointercancel":case "pointerdown":case "pointermove":case "pointerout":case "pointerover":case "pointerup":a=Zc;break;default:a=y}b=a.getPooled(e,b,c,d);Qa(b);return b}},yd=xd.isInteractiveTopLevelEventType,
+zd=[];function Ad(a){var b=a.targetInst,c=b;do{if(!c){a.ancestors.push(c);break}var d;for(d=c;d.return;)d=d.return;d=3!==d.tag?null:d.stateNode.containerInfo;if(!d)break;a.ancestors.push(c);c=Ha(d)}while(c);for(c=0;c<a.ancestors.length;c++){b=a.ancestors[c];var e=Nb(a.nativeEvent);d=a.topLevelType;for(var f=a.nativeEvent,g=null,h=0;h<oa.length;h++){var l=oa[h];l&&(l=l.extractEvents(d,b,f,e))&&(g=xa(g,l))}Da(g)}}var Bd=!0;
+function E(a,b){if(!b)return null;var c=(yd(a)?Cd:Dd).bind(null,a);b.addEventListener(a,c,!1)}function Ed(a,b){if(!b)return null;var c=(yd(a)?Cd:Dd).bind(null,a);b.addEventListener(a,c,!0)}function Cd(a,b){Hb(Dd,a,b)}
+function Dd(a,b){if(Bd){var c=Nb(b);c=Ha(c);null===c||"number"!==typeof c.tag||2===ed(c)||(c=null);if(zd.length){var d=zd.pop();d.topLevelType=a;d.nativeEvent=b;d.targetInst=c;a=d}else a={topLevelType:a,nativeEvent:b,targetInst:c,ancestors:[]};try{Kb(Ad,a)}finally{a.topLevelType=null,a.nativeEvent=null,a.targetInst=null,a.ancestors.length=0,10>zd.length&&zd.push(a)}}}var Fd={},Gd=0,Hd="_reactListenersID"+(""+Math.random()).slice(2);
+function Id(a){Object.prototype.hasOwnProperty.call(a,Hd)||(a[Hd]=Gd++,Fd[a[Hd]]={});return Fd[a[Hd]]}function Jd(a){a=a||("undefined"!==typeof document?document:void 0);if("undefined"===typeof a)return null;try{return a.activeElement||a.body}catch(b){return a.body}}function Kd(a){for(;a&&a.firstChild;)a=a.firstChild;return a}
+function Ld(a,b){var c=Kd(a);a=0;for(var d;c;){if(3===c.nodeType){d=a+c.textContent.length;if(a<=b&&d>=b)return{node:c,offset:b-a};a=d}a:{for(;c;){if(c.nextSibling){c=c.nextSibling;break a}c=c.parentNode}c=void 0}c=Kd(c)}}function Md(a,b){return a&&b?a===b?!0:a&&3===a.nodeType?!1:b&&3===b.nodeType?Md(a,b.parentNode):"contains"in a?a.contains(b):a.compareDocumentPosition?!!(a.compareDocumentPosition(b)&16):!1:!1}
+function Nd(){for(var a=window,b=Jd();b instanceof a.HTMLIFrameElement;){try{var c="string"===typeof b.contentWindow.location.href}catch(d){c=!1}if(c)a=b.contentWindow;else break;b=Jd(a.document)}return b}function Od(a){var b=a&&a.nodeName&&a.nodeName.toLowerCase();return b&&("input"===b&&("text"===a.type||"search"===a.type||"tel"===a.type||"url"===a.type||"password"===a.type)||"textarea"===b||"true"===a.contentEditable)}
+function Pd(){var a=Nd();if(Od(a)){if("selectionStart"in a)var b={start:a.selectionStart,end:a.selectionEnd};else a:{b=(b=a.ownerDocument)&&b.defaultView||window;var c=b.getSelection&&b.getSelection();if(c&&0!==c.rangeCount){b=c.anchorNode;var d=c.anchorOffset,e=c.focusNode;c=c.focusOffset;try{b.nodeType,e.nodeType}catch(A){b=null;break a}var f=0,g=-1,h=-1,l=0,k=0,m=a,p=null;b:for(;;){for(var t;;){m!==b||0!==d&&3!==m.nodeType||(g=f+d);m!==e||0!==c&&3!==m.nodeType||(h=f+c);3===m.nodeType&&(f+=m.nodeValue.length);
+if(null===(t=m.firstChild))break;p=m;m=t}for(;;){if(m===a)break b;p===b&&++l===d&&(g=f);p===e&&++k===c&&(h=f);if(null!==(t=m.nextSibling))break;m=p;p=m.parentNode}m=t}b=-1===g||-1===h?null:{start:g,end:h}}else b=null}b=b||{start:0,end:0}}else b=null;return{focusedElem:a,selectionRange:b}}
+function Qd(a){var b=Nd(),c=a.focusedElem,d=a.selectionRange;if(b!==c&&c&&c.ownerDocument&&Md(c.ownerDocument.documentElement,c)){if(null!==d&&Od(c))if(b=d.start,a=d.end,void 0===a&&(a=b),"selectionStart"in c)c.selectionStart=b,c.selectionEnd=Math.min(a,c.value.length);else if(a=(b=c.ownerDocument||document)&&b.defaultView||window,a.getSelection){a=a.getSelection();var e=c.textContent.length,f=Math.min(d.start,e);d=void 0===d.end?f:Math.min(d.end,e);!a.extend&&f>d&&(e=d,d=f,f=e);e=Ld(c,f);var g=Ld(c,
+d);e&&g&&(1!==a.rangeCount||a.anchorNode!==e.node||a.anchorOffset!==e.offset||a.focusNode!==g.node||a.focusOffset!==g.offset)&&(b=b.createRange(),b.setStart(e.node,e.offset),a.removeAllRanges(),f>d?(a.addRange(b),a.extend(g.node,g.offset)):(b.setEnd(g.node,g.offset),a.addRange(b)))}b=[];for(a=c;a=a.parentNode;)1===a.nodeType&&b.push({element:a,left:a.scrollLeft,top:a.scrollTop});"function"===typeof c.focus&&c.focus();for(c=0;c<b.length;c++)a=b[c],a.element.scrollLeft=a.left,a.element.scrollTop=a.top}}
+var Rd=Ra&&"documentMode"in document&&11>=document.documentMode,Sd={select:{phasedRegistrationNames:{bubbled:"onSelect",captured:"onSelectCapture"},dependencies:"blur contextmenu dragend focus keydown keyup mousedown mouseup selectionchange".split(" ")}},Td=null,Ud=null,Vd=null,Wd=!1;
+function Xd(a,b){var c=b.window===b?b.document:9===b.nodeType?b:b.ownerDocument;if(Wd||null==Td||Td!==Jd(c))return null;c=Td;"selectionStart"in c&&Od(c)?c={start:c.selectionStart,end:c.selectionEnd}:(c=(c.ownerDocument&&c.ownerDocument.defaultView||window).getSelection(),c={anchorNode:c.anchorNode,anchorOffset:c.anchorOffset,focusNode:c.focusNode,focusOffset:c.focusOffset});return Vd&&dd(Vd,c)?null:(Vd=c,a=y.getPooled(Sd.select,Ud,a,b),a.type="select",a.target=Td,Qa(a),a)}
+var Yd={eventTypes:Sd,extractEvents:function(a,b,c,d){var e=d.window===d?d.document:9===d.nodeType?d:d.ownerDocument,f;if(!(f=!e)){a:{e=Id(e);f=sa.onSelect;for(var g=0;g<f.length;g++){var h=f[g];if(!e.hasOwnProperty(h)||!e[h]){e=!1;break a}}e=!0}f=!e}if(f)return null;e=b?Ja(b):window;switch(a){case "focus":if(Mb(e)||"true"===e.contentEditable)Td=e,Ud=b,Vd=null;break;case "blur":Vd=Ud=Td=null;break;case "mousedown":Wd=!0;break;case "contextmenu":case "mouseup":case "dragend":return Wd=!1,Xd(c,d);case "selectionchange":if(Rd)break;
+case "keydown":case "keyup":return Xd(c,d)}return null}};Ba.injectEventPluginOrder("ResponderEventPlugin SimpleEventPlugin EnterLeaveEventPlugin ChangeEventPlugin SelectEventPlugin BeforeInputEventPlugin".split(" "));ta=Ka;ua=Ia;va=Ja;Ba.injectEventPluginsByName({SimpleEventPlugin:xd,EnterLeaveEventPlugin:ad,ChangeEventPlugin:Pc,SelectEventPlugin:Yd,BeforeInputEventPlugin:zb});function Zd(a){var b="";aa.Children.forEach(a,function(a){null!=a&&(b+=a)});return b}
+function $d(a,b){a=n({children:void 0},b);if(b=Zd(b.children))a.children=b;return a}function ae(a,b,c,d){a=a.options;if(b){b={};for(var e=0;e<c.length;e++)b["$"+c[e]]=!0;for(c=0;c<a.length;c++)e=b.hasOwnProperty("$"+a[c].value),a[c].selected!==e&&(a[c].selected=e),e&&d&&(a[c].defaultSelected=!0)}else{c=""+uc(c);b=null;for(e=0;e<a.length;e++){if(a[e].value===c){a[e].selected=!0;d&&(a[e].defaultSelected=!0);return}null!==b||a[e].disabled||(b=a[e])}null!==b&&(b.selected=!0)}}
+function be(a,b){null!=b.dangerouslySetInnerHTML?x("91"):void 0;return n({},b,{value:void 0,defaultValue:void 0,children:""+a._wrapperState.initialValue})}function ce(a,b){var c=b.value;null==c&&(c=b.defaultValue,b=b.children,null!=b&&(null!=c?x("92"):void 0,Array.isArray(b)&&(1>=b.length?void 0:x("93"),b=b[0]),c=b),null==c&&(c=""));a._wrapperState={initialValue:uc(c)}}
+function de(a,b){var c=uc(b.value),d=uc(b.defaultValue);null!=c&&(c=""+c,c!==a.value&&(a.value=c),null==b.defaultValue&&a.defaultValue!==c&&(a.defaultValue=c));null!=d&&(a.defaultValue=""+d)}function ee(a){var b=a.textContent;b===a._wrapperState.initialValue&&(a.value=b)}var fe={html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"};
+function ge(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}function he(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ge(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}
+var ie=void 0,je=function(a){return"undefined"!==typeof MSApp&&MSApp.execUnsafeLocalFunction?function(b,c,d,e){MSApp.execUnsafeLocalFunction(function(){return a(b,c,d,e)})}:a}(function(a,b){if(a.namespaceURI!==fe.svg||"innerHTML"in a)a.innerHTML=b;else{ie=ie||document.createElement("div");ie.innerHTML="<svg>"+b+"</svg>";for(b=ie.firstChild;a.firstChild;)a.removeChild(a.firstChild);for(;b.firstChild;)a.appendChild(b.firstChild)}});
+function ke(a,b){if(b){var c=a.firstChild;if(c&&c===a.lastChild&&3===c.nodeType){c.nodeValue=b;return}}a.textContent=b}
+var le={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPositive:!0,flexShrink:!0,flexNegative:!0,flexOrder:!0,gridArea:!0,gridRow:!0,gridRowEnd:!0,gridRowSpan:!0,gridRowStart:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnSpan:!0,gridColumnStart:!0,fontWeight:!0,lineClamp:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,tabSize:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,
+floodOpacity:!0,stopOpacity:!0,strokeDasharray:!0,strokeDashoffset:!0,strokeMiterlimit:!0,strokeOpacity:!0,strokeWidth:!0},me=["Webkit","ms","Moz","O"];Object.keys(le).forEach(function(a){me.forEach(function(b){b=b+a.charAt(0).toUpperCase()+a.substring(1);le[b]=le[a]})});function ne(a,b,c){return null==b||"boolean"===typeof b||""===b?"":c||"number"!==typeof b||0===b||le.hasOwnProperty(a)&&le[a]?(""+b).trim():b+"px"}
+function oe(a,b){a=a.style;for(var c in b)if(b.hasOwnProperty(c)){var d=0===c.indexOf("--"),e=ne(c,b[c],d);"float"===c&&(c="cssFloat");d?a.setProperty(c,e):a[c]=e}}var pe=n({menuitem:!0},{area:!0,base:!0,br:!0,col:!0,embed:!0,hr:!0,img:!0,input:!0,keygen:!0,link:!0,meta:!0,param:!0,source:!0,track:!0,wbr:!0});
+function qe(a,b){b&&(pe[a]&&(null!=b.children||null!=b.dangerouslySetInnerHTML?x("137",a,""):void 0),null!=b.dangerouslySetInnerHTML&&(null!=b.children?x("60"):void 0,"object"===typeof b.dangerouslySetInnerHTML&&"__html"in b.dangerouslySetInnerHTML?void 0:x("61")),null!=b.style&&"object"!==typeof b.style?x("62",""):void 0)}
+function re(a,b){if(-1===a.indexOf("-"))return"string"===typeof b.is;switch(a){case "annotation-xml":case "color-profile":case "font-face":case "font-face-src":case "font-face-uri":case "font-face-format":case "font-face-name":case "missing-glyph":return!1;default:return!0}}
+function se(a,b){a=9===a.nodeType||11===a.nodeType?a:a.ownerDocument;var c=Id(a);b=sa[b];for(var d=0;d<b.length;d++){var e=b[d];if(!c.hasOwnProperty(e)||!c[e]){switch(e){case "scroll":Ed("scroll",a);break;case "focus":case "blur":Ed("focus",a);Ed("blur",a);c.blur=!0;c.focus=!0;break;case "cancel":case "close":Ob(e)&&Ed(e,a);break;case "invalid":case "submit":case "reset":break;default:-1===ab.indexOf(e)&&E(e,a)}c[e]=!0}}}function te(){}var ue=null,ve=null;
+function we(a,b){switch(a){case "button":case "input":case "select":case "textarea":return!!b.autoFocus}return!1}function xe(a,b){return"textarea"===a||"option"===a||"noscript"===a||"string"===typeof b.children||"number"===typeof b.children||"object"===typeof b.dangerouslySetInnerHTML&&null!==b.dangerouslySetInnerHTML&&null!=b.dangerouslySetInnerHTML.__html}
+var ye="function"===typeof setTimeout?setTimeout:void 0,ze="function"===typeof clearTimeout?clearTimeout:void 0,Ae=r.unstable_scheduleCallback,Be=r.unstable_cancelCallback;
+function Ce(a,b,c,d,e){a[Ga]=e;"input"===c&&"radio"===e.type&&null!=e.name&&xc(a,e);re(c,d);d=re(c,e);for(var f=0;f<b.length;f+=2){var g=b[f],h=b[f+1];"style"===g?oe(a,h):"dangerouslySetInnerHTML"===g?je(a,h):"children"===g?ke(a,h):tc(a,g,h,d)}switch(c){case "input":yc(a,e);break;case "textarea":de(a,e);break;case "select":b=a._wrapperState.wasMultiple,a._wrapperState.wasMultiple=!!e.multiple,c=e.value,null!=c?ae(a,!!e.multiple,c,!1):b!==!!e.multiple&&(null!=e.defaultValue?ae(a,!!e.multiple,e.defaultValue,
+!0):ae(a,!!e.multiple,e.multiple?[]:"",!1))}}function De(a){for(a=a.nextSibling;a&&1!==a.nodeType&&3!==a.nodeType;)a=a.nextSibling;return a}function Ee(a){for(a=a.firstChild;a&&1!==a.nodeType&&3!==a.nodeType;)a=a.nextSibling;return a}new Set;var Fe=[],Ge=-1;function F(a){0>Ge||(a.current=Fe[Ge],Fe[Ge]=null,Ge--)}function G(a,b){Ge++;Fe[Ge]=a.current;a.current=b}var He={},H={current:He},I={current:!1},Ie=He;
+function Je(a,b){var c=a.type.contextTypes;if(!c)return He;var d=a.stateNode;if(d&&d.__reactInternalMemoizedUnmaskedChildContext===b)return d.__reactInternalMemoizedMaskedChildContext;var e={},f;for(f in c)e[f]=b[f];d&&(a=a.stateNode,a.__reactInternalMemoizedUnmaskedChildContext=b,a.__reactInternalMemoizedMaskedChildContext=e);return e}function J(a){a=a.childContextTypes;return null!==a&&void 0!==a}function Ke(a){F(I,a);F(H,a)}function Le(a){F(I,a);F(H,a)}
+function Me(a,b,c){H.current!==He?x("168"):void 0;G(H,b,a);G(I,c,a)}function Ne(a,b,c){var d=a.stateNode;a=b.childContextTypes;if("function"!==typeof d.getChildContext)return c;d=d.getChildContext();for(var e in d)e in a?void 0:x("108",ic(b)||"Unknown",e);return n({},c,d)}function Oe(a){var b=a.stateNode;b=b&&b.__reactInternalMemoizedMergedChildContext||He;Ie=H.current;G(H,b,a);G(I,I.current,a);return!0}
+function Pe(a,b,c){var d=a.stateNode;d?void 0:x("169");c?(b=Ne(a,b,Ie),d.__reactInternalMemoizedMergedChildContext=b,F(I,a),F(H,a),G(H,b,a)):F(I,a);G(I,c,a)}var Qe=null,Re=null;function Se(a){return function(b){try{return a(b)}catch(c){}}}
+function Te(a){if("undefined"===typeof __REACT_DEVTOOLS_GLOBAL_HOOK__)return!1;var b=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(b.isDisabled||!b.supportsFiber)return!0;try{var c=b.inject(a);Qe=Se(function(a){return b.onCommitFiberRoot(c,a)});Re=Se(function(a){return b.onCommitFiberUnmount(c,a)})}catch(d){}return!0}
+function Ue(a,b,c,d){this.tag=a;this.key=c;this.sibling=this.child=this.return=this.stateNode=this.type=this.elementType=null;this.index=0;this.ref=null;this.pendingProps=b;this.contextDependencies=this.memoizedState=this.updateQueue=this.memoizedProps=null;this.mode=d;this.effectTag=0;this.lastEffect=this.firstEffect=this.nextEffect=null;this.childExpirationTime=this.expirationTime=0;this.alternate=null}function K(a,b,c,d){return new Ue(a,b,c,d)}
+function Ve(a){a=a.prototype;return!(!a||!a.isReactComponent)}function We(a){if("function"===typeof a)return Ve(a)?1:0;if(void 0!==a&&null!==a){a=a.$$typeof;if(a===cc)return 11;if(a===ec)return 14}return 2}
+function Xe(a,b){var c=a.alternate;null===c?(c=K(a.tag,b,a.key,a.mode),c.elementType=a.elementType,c.type=a.type,c.stateNode=a.stateNode,c.alternate=a,a.alternate=c):(c.pendingProps=b,c.effectTag=0,c.nextEffect=null,c.firstEffect=null,c.lastEffect=null);c.childExpirationTime=a.childExpirationTime;c.expirationTime=a.expirationTime;c.child=a.child;c.memoizedProps=a.memoizedProps;c.memoizedState=a.memoizedState;c.updateQueue=a.updateQueue;c.contextDependencies=a.contextDependencies;c.sibling=a.sibling;
+c.index=a.index;c.ref=a.ref;return c}
+function Ye(a,b,c,d,e,f){var g=2;d=a;if("function"===typeof a)Ve(a)&&(g=1);else if("string"===typeof a)g=5;else a:switch(a){case Xb:return Ze(c.children,e,f,b);case bc:return $e(c,e|3,f,b);case Yb:return $e(c,e|2,f,b);case Zb:return a=K(12,c,b,e|4),a.elementType=Zb,a.type=Zb,a.expirationTime=f,a;case dc:return a=K(13,c,b,e),a.elementType=dc,a.type=dc,a.expirationTime=f,a;default:if("object"===typeof a&&null!==a)switch(a.$$typeof){case $b:g=10;break a;case ac:g=9;break a;case cc:g=11;break a;case ec:g=
+14;break a;case fc:g=16;d=null;break a}x("130",null==a?a:typeof a,"")}b=K(g,c,b,e);b.elementType=a;b.type=d;b.expirationTime=f;return b}function Ze(a,b,c,d){a=K(7,a,d,b);a.expirationTime=c;return a}function $e(a,b,c,d){a=K(8,a,d,b);b=0===(b&1)?Yb:bc;a.elementType=b;a.type=b;a.expirationTime=c;return a}function af(a,b,c){a=K(6,a,null,b);a.expirationTime=c;return a}
+function bf(a,b,c){b=K(4,null!==a.children?a.children:[],a.key,b);b.expirationTime=c;b.stateNode={containerInfo:a.containerInfo,pendingChildren:null,implementation:a.implementation};return b}function cf(a,b){a.didError=!1;var c=a.earliestPendingTime;0===c?a.earliestPendingTime=a.latestPendingTime=b:c<b?a.earliestPendingTime=b:a.latestPendingTime>b&&(a.latestPendingTime=b);df(b,a)}
+function ef(a,b){a.didError=!1;if(0===b)a.earliestPendingTime=0,a.latestPendingTime=0,a.earliestSuspendedTime=0,a.latestSuspendedTime=0,a.latestPingedTime=0;else{b<a.latestPingedTime&&(a.latestPingedTime=0);var c=a.latestPendingTime;0!==c&&(c>b?a.earliestPendingTime=a.latestPendingTime=0:a.earliestPendingTime>b&&(a.earliestPendingTime=a.latestPendingTime));c=a.earliestSuspendedTime;0===c?cf(a,b):b<a.latestSuspendedTime?(a.earliestSuspendedTime=0,a.latestSuspendedTime=0,a.latestPingedTime=0,cf(a,b)):
+b>c&&cf(a,b)}df(0,a)}function ff(a,b){a.didError=!1;a.latestPingedTime>=b&&(a.latestPingedTime=0);var c=a.earliestPendingTime,d=a.latestPendingTime;c===b?a.earliestPendingTime=d===b?a.latestPendingTime=0:d:d===b&&(a.latestPendingTime=c);c=a.earliestSuspendedTime;d=a.latestSuspendedTime;0===c?a.earliestSuspendedTime=a.latestSuspendedTime=b:c<b?a.earliestSuspendedTime=b:d>b&&(a.latestSuspendedTime=b);df(b,a)}
+function gf(a,b){var c=a.earliestPendingTime;a=a.earliestSuspendedTime;c>b&&(b=c);a>b&&(b=a);return b}function df(a,b){var c=b.earliestSuspendedTime,d=b.latestSuspendedTime,e=b.earliestPendingTime,f=b.latestPingedTime;e=0!==e?e:f;0===e&&(0===a||d<a)&&(e=d);a=e;0!==a&&c>a&&(a=c);b.nextExpirationTimeToWorkOn=e;b.expirationTime=a}function L(a,b){if(a&&a.defaultProps){b=n({},b);a=a.defaultProps;for(var c in a)void 0===b[c]&&(b[c]=a[c])}return b}
+function hf(a){var b=a._result;switch(a._status){case 1:return b;case 2:throw b;case 0:throw b;default:a._status=0;b=a._ctor;b=b();b.then(function(b){0===a._status&&(b=b.default,a._status=1,a._result=b)},function(b){0===a._status&&(a._status=2,a._result=b)});switch(a._status){case 1:return a._result;case 2:throw a._result;}a._result=b;throw b;}}var jf=(new aa.Component).refs;
+function kf(a,b,c,d){b=a.memoizedState;c=c(d,b);c=null===c||void 0===c?b:n({},b,c);a.memoizedState=c;d=a.updateQueue;null!==d&&0===a.expirationTime&&(d.baseState=c)}
+var tf={isMounted:function(a){return(a=a._reactInternalFiber)?2===ed(a):!1},enqueueSetState:function(a,b,c){a=a._reactInternalFiber;var d=lf();d=mf(d,a);var e=nf(d);e.payload=b;void 0!==c&&null!==c&&(e.callback=c);of();pf(a,e);qf(a,d)},enqueueReplaceState:function(a,b,c){a=a._reactInternalFiber;var d=lf();d=mf(d,a);var e=nf(d);e.tag=rf;e.payload=b;void 0!==c&&null!==c&&(e.callback=c);of();pf(a,e);qf(a,d)},enqueueForceUpdate:function(a,b){a=a._reactInternalFiber;var c=lf();c=mf(c,a);var d=nf(c);d.tag=
+sf;void 0!==b&&null!==b&&(d.callback=b);of();pf(a,d);qf(a,c)}};function uf(a,b,c,d,e,f,g){a=a.stateNode;return"function"===typeof a.shouldComponentUpdate?a.shouldComponentUpdate(d,f,g):b.prototype&&b.prototype.isPureReactComponent?!dd(c,d)||!dd(e,f):!0}
+function vf(a,b,c){var d=!1,e=He;var f=b.contextType;"object"===typeof f&&null!==f?f=M(f):(e=J(b)?Ie:H.current,d=b.contextTypes,f=(d=null!==d&&void 0!==d)?Je(a,e):He);b=new b(c,f);a.memoizedState=null!==b.state&&void 0!==b.state?b.state:null;b.updater=tf;a.stateNode=b;b._reactInternalFiber=a;d&&(a=a.stateNode,a.__reactInternalMemoizedUnmaskedChildContext=e,a.__reactInternalMemoizedMaskedChildContext=f);return b}
+function wf(a,b,c,d){a=b.state;"function"===typeof b.componentWillReceiveProps&&b.componentWillReceiveProps(c,d);"function"===typeof b.UNSAFE_componentWillReceiveProps&&b.UNSAFE_componentWillReceiveProps(c,d);b.state!==a&&tf.enqueueReplaceState(b,b.state,null)}
+function xf(a,b,c,d){var e=a.stateNode;e.props=c;e.state=a.memoizedState;e.refs=jf;var f=b.contextType;"object"===typeof f&&null!==f?e.context=M(f):(f=J(b)?Ie:H.current,e.context=Je(a,f));f=a.updateQueue;null!==f&&(yf(a,f,c,e,d),e.state=a.memoizedState);f=b.getDerivedStateFromProps;"function"===typeof f&&(kf(a,b,f,c),e.state=a.memoizedState);"function"===typeof b.getDerivedStateFromProps||"function"===typeof e.getSnapshotBeforeUpdate||"function"!==typeof e.UNSAFE_componentWillMount&&"function"!==
+typeof e.componentWillMount||(b=e.state,"function"===typeof e.componentWillMount&&e.componentWillMount(),"function"===typeof e.UNSAFE_componentWillMount&&e.UNSAFE_componentWillMount(),b!==e.state&&tf.enqueueReplaceState(e,e.state,null),f=a.updateQueue,null!==f&&(yf(a,f,c,e,d),e.state=a.memoizedState));"function"===typeof e.componentDidMount&&(a.effectTag|=4)}var zf=Array.isArray;
+function Af(a,b,c){a=c.ref;if(null!==a&&"function"!==typeof a&&"object"!==typeof a){if(c._owner){c=c._owner;var d=void 0;c&&(1!==c.tag?x("309"):void 0,d=c.stateNode);d?void 0:x("147",a);var e=""+a;if(null!==b&&null!==b.ref&&"function"===typeof b.ref&&b.ref._stringRef===e)return b.ref;b=function(a){var b=d.refs;b===jf&&(b=d.refs={});null===a?delete b[e]:b[e]=a};b._stringRef=e;return b}"string"!==typeof a?x("284"):void 0;c._owner?void 0:x("290",a)}return a}
+function Bf(a,b){"textarea"!==a.type&&x("31","[object Object]"===Object.prototype.toString.call(b)?"object with keys {"+Object.keys(b).join(", ")+"}":b,"")}
+function Cf(a){function b(b,c){if(a){var d=b.lastEffect;null!==d?(d.nextEffect=c,b.lastEffect=c):b.firstEffect=b.lastEffect=c;c.nextEffect=null;c.effectTag=8}}function c(c,d){if(!a)return null;for(;null!==d;)b(c,d),d=d.sibling;return null}function d(a,b){for(a=new Map;null!==b;)null!==b.key?a.set(b.key,b):a.set(b.index,b),b=b.sibling;return a}function e(a,b,c){a=Xe(a,b,c);a.index=0;a.sibling=null;return a}function f(b,c,d){b.index=d;if(!a)return c;d=b.alternate;if(null!==d)return d=d.index,d<c?(b.effectTag=
+2,c):d;b.effectTag=2;return c}function g(b){a&&null===b.alternate&&(b.effectTag=2);return b}function h(a,b,c,d){if(null===b||6!==b.tag)return b=af(c,a.mode,d),b.return=a,b;b=e(b,c,d);b.return=a;return b}function l(a,b,c,d){if(null!==b&&b.elementType===c.type)return d=e(b,c.props,d),d.ref=Af(a,b,c),d.return=a,d;d=Ye(c.type,c.key,c.props,null,a.mode,d);d.ref=Af(a,b,c);d.return=a;return d}function k(a,b,c,d){if(null===b||4!==b.tag||b.stateNode.containerInfo!==c.containerInfo||b.stateNode.implementation!==
+c.implementation)return b=bf(c,a.mode,d),b.return=a,b;b=e(b,c.children||[],d);b.return=a;return b}function m(a,b,c,d,f){if(null===b||7!==b.tag)return b=Ze(c,a.mode,d,f),b.return=a,b;b=e(b,c,d);b.return=a;return b}function p(a,b,c){if("string"===typeof b||"number"===typeof b)return b=af(""+b,a.mode,c),b.return=a,b;if("object"===typeof b&&null!==b){switch(b.$$typeof){case Vb:return c=Ye(b.type,b.key,b.props,null,a.mode,c),c.ref=Af(a,null,b),c.return=a,c;case Wb:return b=bf(b,a.mode,c),b.return=a,b}if(zf(b)||
+hc(b))return b=Ze(b,a.mode,c,null),b.return=a,b;Bf(a,b)}return null}function t(a,b,c,d){var e=null!==b?b.key:null;if("string"===typeof c||"number"===typeof c)return null!==e?null:h(a,b,""+c,d);if("object"===typeof c&&null!==c){switch(c.$$typeof){case Vb:return c.key===e?c.type===Xb?m(a,b,c.props.children,d,e):l(a,b,c,d):null;case Wb:return c.key===e?k(a,b,c,d):null}if(zf(c)||hc(c))return null!==e?null:m(a,b,c,d,null);Bf(a,c)}return null}function A(a,b,c,d,e){if("string"===typeof d||"number"===typeof d)return a=
+a.get(c)||null,h(b,a,""+d,e);if("object"===typeof d&&null!==d){switch(d.$$typeof){case Vb:return a=a.get(null===d.key?c:d.key)||null,d.type===Xb?m(b,a,d.props.children,e,d.key):l(b,a,d,e);case Wb:return a=a.get(null===d.key?c:d.key)||null,k(b,a,d,e)}if(zf(d)||hc(d))return a=a.get(c)||null,m(b,a,d,e,null);Bf(b,d)}return null}function v(e,g,h,k){for(var l=null,m=null,q=g,u=g=0,B=null;null!==q&&u<h.length;u++){q.index>u?(B=q,q=null):B=q.sibling;var w=t(e,q,h[u],k);if(null===w){null===q&&(q=B);break}a&&
+q&&null===w.alternate&&b(e,q);g=f(w,g,u);null===m?l=w:m.sibling=w;m=w;q=B}if(u===h.length)return c(e,q),l;if(null===q){for(;u<h.length;u++)if(q=p(e,h[u],k))g=f(q,g,u),null===m?l=q:m.sibling=q,m=q;return l}for(q=d(e,q);u<h.length;u++)if(B=A(q,e,u,h[u],k))a&&null!==B.alternate&&q.delete(null===B.key?u:B.key),g=f(B,g,u),null===m?l=B:m.sibling=B,m=B;a&&q.forEach(function(a){return b(e,a)});return l}function R(e,g,h,k){var l=hc(h);"function"!==typeof l?x("150"):void 0;h=l.call(h);null==h?x("151"):void 0;
+for(var m=l=null,q=g,u=g=0,B=null,w=h.next();null!==q&&!w.done;u++,w=h.next()){q.index>u?(B=q,q=null):B=q.sibling;var v=t(e,q,w.value,k);if(null===v){q||(q=B);break}a&&q&&null===v.alternate&&b(e,q);g=f(v,g,u);null===m?l=v:m.sibling=v;m=v;q=B}if(w.done)return c(e,q),l;if(null===q){for(;!w.done;u++,w=h.next())w=p(e,w.value,k),null!==w&&(g=f(w,g,u),null===m?l=w:m.sibling=w,m=w);return l}for(q=d(e,q);!w.done;u++,w=h.next())w=A(q,e,u,w.value,k),null!==w&&(a&&null!==w.alternate&&q.delete(null===w.key?u:
+w.key),g=f(w,g,u),null===m?l=w:m.sibling=w,m=w);a&&q.forEach(function(a){return b(e,a)});return l}return function(a,d,f,h){var k="object"===typeof f&&null!==f&&f.type===Xb&&null===f.key;k&&(f=f.props.children);var l="object"===typeof f&&null!==f;if(l)switch(f.$$typeof){case Vb:a:{l=f.key;for(k=d;null!==k;){if(k.key===l)if(7===k.tag?f.type===Xb:k.elementType===f.type){c(a,k.sibling);d=e(k,f.type===Xb?f.props.children:f.props,h);d.ref=Af(a,k,f);d.return=a;a=d;break a}else{c(a,k);break}else b(a,k);k=
+k.sibling}f.type===Xb?(d=Ze(f.props.children,a.mode,h,f.key),d.return=a,a=d):(h=Ye(f.type,f.key,f.props,null,a.mode,h),h.ref=Af(a,d,f),h.return=a,a=h)}return g(a);case Wb:a:{for(k=f.key;null!==d;){if(d.key===k)if(4===d.tag&&d.stateNode.containerInfo===f.containerInfo&&d.stateNode.implementation===f.implementation){c(a,d.sibling);d=e(d,f.children||[],h);d.return=a;a=d;break a}else{c(a,d);break}else b(a,d);d=d.sibling}d=bf(f,a.mode,h);d.return=a;a=d}return g(a)}if("string"===typeof f||"number"===typeof f)return f=
+""+f,null!==d&&6===d.tag?(c(a,d.sibling),d=e(d,f,h),d.return=a,a=d):(c(a,d),d=af(f,a.mode,h),d.return=a,a=d),g(a);if(zf(f))return v(a,d,f,h);if(hc(f))return R(a,d,f,h);l&&Bf(a,f);if("undefined"===typeof f&&!k)switch(a.tag){case 1:case 0:h=a.type,x("152",h.displayName||h.name||"Component")}return c(a,d)}}var Df=Cf(!0),Ef=Cf(!1),Ff={},N={current:Ff},Gf={current:Ff},Hf={current:Ff};function If(a){a===Ff?x("174"):void 0;return a}
+function Jf(a,b){G(Hf,b,a);G(Gf,a,a);G(N,Ff,a);var c=b.nodeType;switch(c){case 9:case 11:b=(b=b.documentElement)?b.namespaceURI:he(null,"");break;default:c=8===c?b.parentNode:b,b=c.namespaceURI||null,c=c.tagName,b=he(b,c)}F(N,a);G(N,b,a)}function Kf(a){F(N,a);F(Gf,a);F(Hf,a)}function Lf(a){If(Hf.current);var b=If(N.current);var c=he(b,a.type);b!==c&&(G(Gf,a,a),G(N,c,a))}function Mf(a){Gf.current===a&&(F(N,a),F(Gf,a))}
+var Nf=0,Of=2,Pf=4,Qf=8,Rf=16,Sf=32,Tf=64,Uf=128,Vf=Tb.ReactCurrentDispatcher,Wf=0,Xf=null,O=null,P=null,Yf=null,Q=null,Zf=null,$f=0,ag=null,bg=0,cg=!1,dg=null,eg=0;function fg(){x("321")}function gg(a,b){if(null===b)return!1;for(var c=0;c<b.length&&c<a.length;c++)if(!bd(a[c],b[c]))return!1;return!0}
+function hg(a,b,c,d,e,f){Wf=f;Xf=b;P=null!==a?a.memoizedState:null;Vf.current=null===P?ig:jg;b=c(d,e);if(cg){do cg=!1,eg+=1,P=null!==a?a.memoizedState:null,Zf=Yf,ag=Q=O=null,Vf.current=jg,b=c(d,e);while(cg);dg=null;eg=0}Vf.current=kg;a=Xf;a.memoizedState=Yf;a.expirationTime=$f;a.updateQueue=ag;a.effectTag|=bg;a=null!==O&&null!==O.next;Wf=0;Zf=Q=Yf=P=O=Xf=null;$f=0;ag=null;bg=0;a?x("300"):void 0;return b}function lg(){Vf.current=kg;Wf=0;Zf=Q=Yf=P=O=Xf=null;$f=0;ag=null;bg=0;cg=!1;dg=null;eg=0}
+function mg(){var a={memoizedState:null,baseState:null,queue:null,baseUpdate:null,next:null};null===Q?Yf=Q=a:Q=Q.next=a;return Q}function ng(){if(null!==Zf)Q=Zf,Zf=Q.next,O=P,P=null!==O?O.next:null;else{null===P?x("310"):void 0;O=P;var a={memoizedState:O.memoizedState,baseState:O.baseState,queue:O.queue,baseUpdate:O.baseUpdate,next:null};Q=null===Q?Yf=a:Q.next=a;P=O.next}return Q}function og(a,b){return"function"===typeof b?b(a):b}
+function pg(a){var b=ng(),c=b.queue;null===c?x("311"):void 0;c.lastRenderedReducer=a;if(0<eg){var d=c.dispatch;if(null!==dg){var e=dg.get(c);if(void 0!==e){dg.delete(c);var f=b.memoizedState;do f=a(f,e.action),e=e.next;while(null!==e);bd(f,b.memoizedState)||(qg=!0);b.memoizedState=f;b.baseUpdate===c.last&&(b.baseState=f);c.lastRenderedState=f;return[f,d]}}return[b.memoizedState,d]}d=c.last;var g=b.baseUpdate;f=b.baseState;null!==g?(null!==d&&(d.next=null),d=g.next):d=null!==d?d.next:null;if(null!==
+d){var h=e=null,l=d,k=!1;do{var m=l.expirationTime;m<Wf?(k||(k=!0,h=g,e=f),m>$f&&($f=m)):f=l.eagerReducer===a?l.eagerState:a(f,l.action);g=l;l=l.next}while(null!==l&&l!==d);k||(h=g,e=f);bd(f,b.memoizedState)||(qg=!0);b.memoizedState=f;b.baseUpdate=h;b.baseState=e;c.lastRenderedState=f}return[b.memoizedState,c.dispatch]}
+function rg(a,b,c,d){a={tag:a,create:b,destroy:c,deps:d,next:null};null===ag?(ag={lastEffect:null},ag.lastEffect=a.next=a):(b=ag.lastEffect,null===b?ag.lastEffect=a.next=a:(c=b.next,b.next=a,a.next=c,ag.lastEffect=a));return a}function sg(a,b,c,d){var e=mg();bg|=a;e.memoizedState=rg(b,c,void 0,void 0===d?null:d)}
+function tg(a,b,c,d){var e=ng();d=void 0===d?null:d;var f=void 0;if(null!==O){var g=O.memoizedState;f=g.destroy;if(null!==d&&gg(d,g.deps)){rg(Nf,c,f,d);return}}bg|=a;e.memoizedState=rg(b,c,f,d)}function ug(a,b){if("function"===typeof b)return a=a(),b(a),function(){b(null)};if(null!==b&&void 0!==b)return a=a(),b.current=a,function(){b.current=null}}function vg(){}
+function wg(a,b,c){25>eg?void 0:x("301");var d=a.alternate;if(a===Xf||null!==d&&d===Xf)if(cg=!0,a={expirationTime:Wf,action:c,eagerReducer:null,eagerState:null,next:null},null===dg&&(dg=new Map),c=dg.get(b),void 0===c)dg.set(b,a);else{for(b=c;null!==b.next;)b=b.next;b.next=a}else{of();var e=lf();e=mf(e,a);var f={expirationTime:e,action:c,eagerReducer:null,eagerState:null,next:null},g=b.last;if(null===g)f.next=f;else{var h=g.next;null!==h&&(f.next=h);g.next=f}b.last=f;if(0===a.expirationTime&&(null===
+d||0===d.expirationTime)&&(d=b.lastRenderedReducer,null!==d))try{var l=b.lastRenderedState,k=d(l,c);f.eagerReducer=d;f.eagerState=k;if(bd(k,l))return}catch(m){}finally{}qf(a,e)}}
+var kg={readContext:M,useCallback:fg,useContext:fg,useEffect:fg,useImperativeHandle:fg,useLayoutEffect:fg,useMemo:fg,useReducer:fg,useRef:fg,useState:fg,useDebugValue:fg},ig={readContext:M,useCallback:function(a,b){mg().memoizedState=[a,void 0===b?null:b];return a},useContext:M,useEffect:function(a,b){return sg(516,Uf|Tf,a,b)},useImperativeHandle:function(a,b,c){c=null!==c&&void 0!==c?c.concat([a]):null;return sg(4,Pf|Sf,ug.bind(null,b,a),c)},useLayoutEffect:function(a,b){return sg(4,Pf|Sf,a,b)},
+useMemo:function(a,b){var c=mg();b=void 0===b?null:b;a=a();c.memoizedState=[a,b];return a},useReducer:function(a,b,c){var d=mg();b=void 0!==c?c(b):b;d.memoizedState=d.baseState=b;a=d.queue={last:null,dispatch:null,lastRenderedReducer:a,lastRenderedState:b};a=a.dispatch=wg.bind(null,Xf,a);return[d.memoizedState,a]},useRef:function(a){var b=mg();a={current:a};return b.memoizedState=a},useState:function(a){var b=mg();"function"===typeof a&&(a=a());b.memoizedState=b.baseState=a;a=b.queue={last:null,dispatch:null,
+lastRenderedReducer:og,lastRenderedState:a};a=a.dispatch=wg.bind(null,Xf,a);return[b.memoizedState,a]},useDebugValue:vg},jg={readContext:M,useCallback:function(a,b){var c=ng();b=void 0===b?null:b;var d=c.memoizedState;if(null!==d&&null!==b&&gg(b,d[1]))return d[0];c.memoizedState=[a,b];return a},useContext:M,useEffect:function(a,b){return tg(516,Uf|Tf,a,b)},useImperativeHandle:function(a,b,c){c=null!==c&&void 0!==c?c.concat([a]):null;return tg(4,Pf|Sf,ug.bind(null,b,a),c)},useLayoutEffect:function(a,
+b){return tg(4,Pf|Sf,a,b)},useMemo:function(a,b){var c=ng();b=void 0===b?null:b;var d=c.memoizedState;if(null!==d&&null!==b&&gg(b,d[1]))return d[0];a=a();c.memoizedState=[a,b];return a},useReducer:pg,useRef:function(){return ng().memoizedState},useState:function(a){return pg(og,a)},useDebugValue:vg},xg=null,yg=null,zg=!1;
+function Ag(a,b){var c=K(5,null,null,0);c.elementType="DELETED";c.type="DELETED";c.stateNode=b;c.return=a;c.effectTag=8;null!==a.lastEffect?(a.lastEffect.nextEffect=c,a.lastEffect=c):a.firstEffect=a.lastEffect=c}function Bg(a,b){switch(a.tag){case 5:var c=a.type;b=1!==b.nodeType||c.toLowerCase()!==b.nodeName.toLowerCase()?null:b;return null!==b?(a.stateNode=b,!0):!1;case 6:return b=""===a.pendingProps||3!==b.nodeType?null:b,null!==b?(a.stateNode=b,!0):!1;case 13:return!1;default:return!1}}
+function Cg(a){if(zg){var b=yg;if(b){var c=b;if(!Bg(a,b)){b=De(c);if(!b||!Bg(a,b)){a.effectTag|=2;zg=!1;xg=a;return}Ag(xg,c)}xg=a;yg=Ee(b)}else a.effectTag|=2,zg=!1,xg=a}}function Dg(a){for(a=a.return;null!==a&&5!==a.tag&&3!==a.tag&&18!==a.tag;)a=a.return;xg=a}function Eg(a){if(a!==xg)return!1;if(!zg)return Dg(a),zg=!0,!1;var b=a.type;if(5!==a.tag||"head"!==b&&"body"!==b&&!xe(b,a.memoizedProps))for(b=yg;b;)Ag(a,b),b=De(b);Dg(a);yg=xg?De(a.stateNode):null;return!0}function Fg(){yg=xg=null;zg=!1}
+var Gg=Tb.ReactCurrentOwner,qg=!1;function S(a,b,c,d){b.child=null===a?Ef(b,null,c,d):Df(b,a.child,c,d)}function Hg(a,b,c,d,e){c=c.render;var f=b.ref;Ig(b,e);d=hg(a,b,c,d,f,e);if(null!==a&&!qg)return b.updateQueue=a.updateQueue,b.effectTag&=-517,a.expirationTime<=e&&(a.expirationTime=0),Jg(a,b,e);b.effectTag|=1;S(a,b,d,e);return b.child}
+function Kg(a,b,c,d,e,f){if(null===a){var g=c.type;if("function"===typeof g&&!Ve(g)&&void 0===g.defaultProps&&null===c.compare&&void 0===c.defaultProps)return b.tag=15,b.type=g,Lg(a,b,g,d,e,f);a=Ye(c.type,null,d,null,b.mode,f);a.ref=b.ref;a.return=b;return b.child=a}g=a.child;if(e<f&&(e=g.memoizedProps,c=c.compare,c=null!==c?c:dd,c(e,d)&&a.ref===b.ref))return Jg(a,b,f);b.effectTag|=1;a=Xe(g,d,f);a.ref=b.ref;a.return=b;return b.child=a}
+function Lg(a,b,c,d,e,f){return null!==a&&dd(a.memoizedProps,d)&&a.ref===b.ref&&(qg=!1,e<f)?Jg(a,b,f):Mg(a,b,c,d,f)}function Ng(a,b){var c=b.ref;if(null===a&&null!==c||null!==a&&a.ref!==c)b.effectTag|=128}function Mg(a,b,c,d,e){var f=J(c)?Ie:H.current;f=Je(b,f);Ig(b,e);c=hg(a,b,c,d,f,e);if(null!==a&&!qg)return b.updateQueue=a.updateQueue,b.effectTag&=-517,a.expirationTime<=e&&(a.expirationTime=0),Jg(a,b,e);b.effectTag|=1;S(a,b,c,e);return b.child}
+function Og(a,b,c,d,e){if(J(c)){var f=!0;Oe(b)}else f=!1;Ig(b,e);if(null===b.stateNode)null!==a&&(a.alternate=null,b.alternate=null,b.effectTag|=2),vf(b,c,d,e),xf(b,c,d,e),d=!0;else if(null===a){var g=b.stateNode,h=b.memoizedProps;g.props=h;var l=g.context,k=c.contextType;"object"===typeof k&&null!==k?k=M(k):(k=J(c)?Ie:H.current,k=Je(b,k));var m=c.getDerivedStateFromProps,p="function"===typeof m||"function"===typeof g.getSnapshotBeforeUpdate;p||"function"!==typeof g.UNSAFE_componentWillReceiveProps&&
+"function"!==typeof g.componentWillReceiveProps||(h!==d||l!==k)&&wf(b,g,d,k);Pg=!1;var t=b.memoizedState;l=g.state=t;var A=b.updateQueue;null!==A&&(yf(b,A,d,g,e),l=b.memoizedState);h!==d||t!==l||I.current||Pg?("function"===typeof m&&(kf(b,c,m,d),l=b.memoizedState),(h=Pg||uf(b,c,h,d,t,l,k))?(p||"function"!==typeof g.UNSAFE_componentWillMount&&"function"!==typeof g.componentWillMount||("function"===typeof g.componentWillMount&&g.componentWillMount(),"function"===typeof g.UNSAFE_componentWillMount&&
+g.UNSAFE_componentWillMount()),"function"===typeof g.componentDidMount&&(b.effectTag|=4)):("function"===typeof g.componentDidMount&&(b.effectTag|=4),b.memoizedProps=d,b.memoizedState=l),g.props=d,g.state=l,g.context=k,d=h):("function"===typeof g.componentDidMount&&(b.effectTag|=4),d=!1)}else g=b.stateNode,h=b.memoizedProps,g.props=b.type===b.elementType?h:L(b.type,h),l=g.context,k=c.contextType,"object"===typeof k&&null!==k?k=M(k):(k=J(c)?Ie:H.current,k=Je(b,k)),m=c.getDerivedStateFromProps,(p="function"===
+typeof m||"function"===typeof g.getSnapshotBeforeUpdate)||"function"!==typeof g.UNSAFE_componentWillReceiveProps&&"function"!==typeof g.componentWillReceiveProps||(h!==d||l!==k)&&wf(b,g,d,k),Pg=!1,l=b.memoizedState,t=g.state=l,A=b.updateQueue,null!==A&&(yf(b,A,d,g,e),t=b.memoizedState),h!==d||l!==t||I.current||Pg?("function"===typeof m&&(kf(b,c,m,d),t=b.memoizedState),(m=Pg||uf(b,c,h,d,l,t,k))?(p||"function"!==typeof g.UNSAFE_componentWillUpdate&&"function"!==typeof g.componentWillUpdate||("function"===
+typeof g.componentWillUpdate&&g.componentWillUpdate(d,t,k),"function"===typeof g.UNSAFE_componentWillUpdate&&g.UNSAFE_componentWillUpdate(d,t,k)),"function"===typeof g.componentDidUpdate&&(b.effectTag|=4),"function"===typeof g.getSnapshotBeforeUpdate&&(b.effectTag|=256)):("function"!==typeof g.componentDidUpdate||h===a.memoizedProps&&l===a.memoizedState||(b.effectTag|=4),"function"!==typeof g.getSnapshotBeforeUpdate||h===a.memoizedProps&&l===a.memoizedState||(b.effectTag|=256),b.memoizedProps=d,b.memoizedState=
+t),g.props=d,g.state=t,g.context=k,d=m):("function"!==typeof g.componentDidUpdate||h===a.memoizedProps&&l===a.memoizedState||(b.effectTag|=4),"function"!==typeof g.getSnapshotBeforeUpdate||h===a.memoizedProps&&l===a.memoizedState||(b.effectTag|=256),d=!1);return Qg(a,b,c,d,f,e)}
+function Qg(a,b,c,d,e,f){Ng(a,b);var g=0!==(b.effectTag&64);if(!d&&!g)return e&&Pe(b,c,!1),Jg(a,b,f);d=b.stateNode;Gg.current=b;var h=g&&"function"!==typeof c.getDerivedStateFromError?null:d.render();b.effectTag|=1;null!==a&&g?(b.child=Df(b,a.child,null,f),b.child=Df(b,null,h,f)):S(a,b,h,f);b.memoizedState=d.state;e&&Pe(b,c,!0);return b.child}function Rg(a){var b=a.stateNode;b.pendingContext?Me(a,b.pendingContext,b.pendingContext!==b.context):b.context&&Me(a,b.context,!1);Jf(a,b.containerInfo)}
+function Sg(a,b,c){var d=b.mode,e=b.pendingProps,f=b.memoizedState;if(0===(b.effectTag&64)){f=null;var g=!1}else f={timedOutAt:null!==f?f.timedOutAt:0},g=!0,b.effectTag&=-65;if(null===a)if(g){var h=e.fallback;a=Ze(null,d,0,null);0===(b.mode&1)&&(a.child=null!==b.memoizedState?b.child.child:b.child);d=Ze(h,d,c,null);a.sibling=d;c=a;c.return=d.return=b}else c=d=Ef(b,null,e.children,c);else null!==a.memoizedState?(d=a.child,h=d.sibling,g?(c=e.fallback,e=Xe(d,d.pendingProps,0),0===(b.mode&1)&&(g=null!==
+b.memoizedState?b.child.child:b.child,g!==d.child&&(e.child=g)),d=e.sibling=Xe(h,c,h.expirationTime),c=e,e.childExpirationTime=0,c.return=d.return=b):c=d=Df(b,d.child,e.children,c)):(h=a.child,g?(g=e.fallback,e=Ze(null,d,0,null),e.child=h,0===(b.mode&1)&&(e.child=null!==b.memoizedState?b.child.child:b.child),d=e.sibling=Ze(g,d,c,null),d.effectTag|=2,c=e,e.childExpirationTime=0,c.return=d.return=b):d=c=Df(b,h,e.children,c)),b.stateNode=a.stateNode;b.memoizedState=f;b.child=c;return d}
+function Jg(a,b,c){null!==a&&(b.contextDependencies=a.contextDependencies);if(b.childExpirationTime<c)return null;null!==a&&b.child!==a.child?x("153"):void 0;if(null!==b.child){a=b.child;c=Xe(a,a.pendingProps,a.expirationTime);b.child=c;for(c.return=b;null!==a.sibling;)a=a.sibling,c=c.sibling=Xe(a,a.pendingProps,a.expirationTime),c.return=b;c.sibling=null}return b.child}
+function Tg(a,b,c){var d=b.expirationTime;if(null!==a)if(a.memoizedProps!==b.pendingProps||I.current)qg=!0;else{if(d<c){qg=!1;switch(b.tag){case 3:Rg(b);Fg();break;case 5:Lf(b);break;case 1:J(b.type)&&Oe(b);break;case 4:Jf(b,b.stateNode.containerInfo);break;case 10:Ug(b,b.memoizedProps.value);break;case 13:if(null!==b.memoizedState){d=b.child.childExpirationTime;if(0!==d&&d>=c)return Sg(a,b,c);b=Jg(a,b,c);return null!==b?b.sibling:null}}return Jg(a,b,c)}}else qg=!1;b.expirationTime=0;switch(b.tag){case 2:d=
+b.elementType;null!==a&&(a.alternate=null,b.alternate=null,b.effectTag|=2);a=b.pendingProps;var e=Je(b,H.current);Ig(b,c);e=hg(null,b,d,a,e,c);b.effectTag|=1;if("object"===typeof e&&null!==e&&"function"===typeof e.render&&void 0===e.$$typeof){b.tag=1;lg();if(J(d)){var f=!0;Oe(b)}else f=!1;b.memoizedState=null!==e.state&&void 0!==e.state?e.state:null;var g=d.getDerivedStateFromProps;"function"===typeof g&&kf(b,d,g,a);e.updater=tf;b.stateNode=e;e._reactInternalFiber=b;xf(b,d,a,c);b=Qg(null,b,d,!0,f,
+c)}else b.tag=0,S(null,b,e,c),b=b.child;return b;case 16:e=b.elementType;null!==a&&(a.alternate=null,b.alternate=null,b.effectTag|=2);f=b.pendingProps;a=hf(e);b.type=a;e=b.tag=We(a);f=L(a,f);g=void 0;switch(e){case 0:g=Mg(null,b,a,f,c);break;case 1:g=Og(null,b,a,f,c);break;case 11:g=Hg(null,b,a,f,c);break;case 14:g=Kg(null,b,a,L(a.type,f),d,c);break;default:x("306",a,"")}return g;case 0:return d=b.type,e=b.pendingProps,e=b.elementType===d?e:L(d,e),Mg(a,b,d,e,c);case 1:return d=b.type,e=b.pendingProps,
+e=b.elementType===d?e:L(d,e),Og(a,b,d,e,c);case 3:Rg(b);d=b.updateQueue;null===d?x("282"):void 0;e=b.memoizedState;e=null!==e?e.element:null;yf(b,d,b.pendingProps,null,c);d=b.memoizedState.element;if(d===e)Fg(),b=Jg(a,b,c);else{e=b.stateNode;if(e=(null===a||null===a.child)&&e.hydrate)yg=Ee(b.stateNode.containerInfo),xg=b,e=zg=!0;e?(b.effectTag|=2,b.child=Ef(b,null,d,c)):(S(a,b,d,c),Fg());b=b.child}return b;case 5:return Lf(b),null===a&&Cg(b),d=b.type,e=b.pendingProps,f=null!==a?a.memoizedProps:null,
+g=e.children,xe(d,e)?g=null:null!==f&&xe(d,f)&&(b.effectTag|=16),Ng(a,b),1!==c&&b.mode&1&&e.hidden?(b.expirationTime=b.childExpirationTime=1,b=null):(S(a,b,g,c),b=b.child),b;case 6:return null===a&&Cg(b),null;case 13:return Sg(a,b,c);case 4:return Jf(b,b.stateNode.containerInfo),d=b.pendingProps,null===a?b.child=Df(b,null,d,c):S(a,b,d,c),b.child;case 11:return d=b.type,e=b.pendingProps,e=b.elementType===d?e:L(d,e),Hg(a,b,d,e,c);case 7:return S(a,b,b.pendingProps,c),b.child;case 8:return S(a,b,b.pendingProps.children,
+c),b.child;case 12:return S(a,b,b.pendingProps.children,c),b.child;case 10:a:{d=b.type._context;e=b.pendingProps;g=b.memoizedProps;f=e.value;Ug(b,f);if(null!==g){var h=g.value;f=bd(h,f)?0:("function"===typeof d._calculateChangedBits?d._calculateChangedBits(h,f):1073741823)|0;if(0===f){if(g.children===e.children&&!I.current){b=Jg(a,b,c);break a}}else for(h=b.child,null!==h&&(h.return=b);null!==h;){var l=h.contextDependencies;if(null!==l){g=h.child;for(var k=l.first;null!==k;){if(k.context===d&&0!==
+(k.observedBits&f)){1===h.tag&&(k=nf(c),k.tag=sf,pf(h,k));h.expirationTime<c&&(h.expirationTime=c);k=h.alternate;null!==k&&k.expirationTime<c&&(k.expirationTime=c);k=c;for(var m=h.return;null!==m;){var p=m.alternate;if(m.childExpirationTime<k)m.childExpirationTime=k,null!==p&&p.childExpirationTime<k&&(p.childExpirationTime=k);else if(null!==p&&p.childExpirationTime<k)p.childExpirationTime=k;else break;m=m.return}l.expirationTime<c&&(l.expirationTime=c);break}k=k.next}}else g=10===h.tag?h.type===b.type?
+null:h.child:h.child;if(null!==g)g.return=h;else for(g=h;null!==g;){if(g===b){g=null;break}h=g.sibling;if(null!==h){h.return=g.return;g=h;break}g=g.return}h=g}}S(a,b,e.children,c);b=b.child}return b;case 9:return e=b.type,f=b.pendingProps,d=f.children,Ig(b,c),e=M(e,f.unstable_observedBits),d=d(e),b.effectTag|=1,S(a,b,d,c),b.child;case 14:return e=b.type,f=L(e,b.pendingProps),f=L(e.type,f),Kg(a,b,e,f,d,c);case 15:return Lg(a,b,b.type,b.pendingProps,d,c);case 17:return d=b.type,e=b.pendingProps,e=b.elementType===
+d?e:L(d,e),null!==a&&(a.alternate=null,b.alternate=null,b.effectTag|=2),b.tag=1,J(d)?(a=!0,Oe(b)):a=!1,Ig(b,c),vf(b,d,e,c),xf(b,d,e,c),Qg(null,b,d,!0,a,c)}x("156")}var Vg={current:null},Wg=null,Xg=null,Yg=null;function Ug(a,b){var c=a.type._context;G(Vg,c._currentValue,a);c._currentValue=b}function Zg(a){var b=Vg.current;F(Vg,a);a.type._context._currentValue=b}function Ig(a,b){Wg=a;Yg=Xg=null;var c=a.contextDependencies;null!==c&&c.expirationTime>=b&&(qg=!0);a.contextDependencies=null}
+function M(a,b){if(Yg!==a&&!1!==b&&0!==b){if("number"!==typeof b||1073741823===b)Yg=a,b=1073741823;b={context:a,observedBits:b,next:null};null===Xg?(null===Wg?x("308"):void 0,Xg=b,Wg.contextDependencies={first:b,expirationTime:0}):Xg=Xg.next=b}return a._currentValue}var $g=0,rf=1,sf=2,ah=3,Pg=!1;function bh(a){return{baseState:a,firstUpdate:null,lastUpdate:null,firstCapturedUpdate:null,lastCapturedUpdate:null,firstEffect:null,lastEffect:null,firstCapturedEffect:null,lastCapturedEffect:null}}
+function ch(a){return{baseState:a.baseState,firstUpdate:a.firstUpdate,lastUpdate:a.lastUpdate,firstCapturedUpdate:null,lastCapturedUpdate:null,firstEffect:null,lastEffect:null,firstCapturedEffect:null,lastCapturedEffect:null}}function nf(a){return{expirationTime:a,tag:$g,payload:null,callback:null,next:null,nextEffect:null}}function dh(a,b){null===a.lastUpdate?a.firstUpdate=a.lastUpdate=b:(a.lastUpdate.next=b,a.lastUpdate=b)}
+function pf(a,b){var c=a.alternate;if(null===c){var d=a.updateQueue;var e=null;null===d&&(d=a.updateQueue=bh(a.memoizedState))}else d=a.updateQueue,e=c.updateQueue,null===d?null===e?(d=a.updateQueue=bh(a.memoizedState),e=c.updateQueue=bh(c.memoizedState)):d=a.updateQueue=ch(e):null===e&&(e=c.updateQueue=ch(d));null===e||d===e?dh(d,b):null===d.lastUpdate||null===e.lastUpdate?(dh(d,b),dh(e,b)):(dh(d,b),e.lastUpdate=b)}
+function eh(a,b){var c=a.updateQueue;c=null===c?a.updateQueue=bh(a.memoizedState):fh(a,c);null===c.lastCapturedUpdate?c.firstCapturedUpdate=c.lastCapturedUpdate=b:(c.lastCapturedUpdate.next=b,c.lastCapturedUpdate=b)}function fh(a,b){var c=a.alternate;null!==c&&b===c.updateQueue&&(b=a.updateQueue=ch(b));return b}
+function gh(a,b,c,d,e,f){switch(c.tag){case rf:return a=c.payload,"function"===typeof a?a.call(f,d,e):a;case ah:a.effectTag=a.effectTag&-2049|64;case $g:a=c.payload;e="function"===typeof a?a.call(f,d,e):a;if(null===e||void 0===e)break;return n({},d,e);case sf:Pg=!0}return d}
+function yf(a,b,c,d,e){Pg=!1;b=fh(a,b);for(var f=b.baseState,g=null,h=0,l=b.firstUpdate,k=f;null!==l;){var m=l.expirationTime;m<e?(null===g&&(g=l,f=k),h<m&&(h=m)):(k=gh(a,b,l,k,c,d),null!==l.callback&&(a.effectTag|=32,l.nextEffect=null,null===b.lastEffect?b.firstEffect=b.lastEffect=l:(b.lastEffect.nextEffect=l,b.lastEffect=l)));l=l.next}m=null;for(l=b.firstCapturedUpdate;null!==l;){var p=l.expirationTime;p<e?(null===m&&(m=l,null===g&&(f=k)),h<p&&(h=p)):(k=gh(a,b,l,k,c,d),null!==l.callback&&(a.effectTag|=
+32,l.nextEffect=null,null===b.lastCapturedEffect?b.firstCapturedEffect=b.lastCapturedEffect=l:(b.lastCapturedEffect.nextEffect=l,b.lastCapturedEffect=l)));l=l.next}null===g&&(b.lastUpdate=null);null===m?b.lastCapturedUpdate=null:a.effectTag|=32;null===g&&null===m&&(f=k);b.baseState=f;b.firstUpdate=g;b.firstCapturedUpdate=m;a.expirationTime=h;a.memoizedState=k}
+function hh(a,b,c){null!==b.firstCapturedUpdate&&(null!==b.lastUpdate&&(b.lastUpdate.next=b.firstCapturedUpdate,b.lastUpdate=b.lastCapturedUpdate),b.firstCapturedUpdate=b.lastCapturedUpdate=null);ih(b.firstEffect,c);b.firstEffect=b.lastEffect=null;ih(b.firstCapturedEffect,c);b.firstCapturedEffect=b.lastCapturedEffect=null}function ih(a,b){for(;null!==a;){var c=a.callback;if(null!==c){a.callback=null;var d=b;"function"!==typeof c?x("191",c):void 0;c.call(d)}a=a.nextEffect}}
+function jh(a,b){return{value:a,source:b,stack:jc(b)}}function kh(a){a.effectTag|=4}var lh=void 0,mh=void 0,nh=void 0,oh=void 0;lh=function(a,b){for(var c=b.child;null!==c;){if(5===c.tag||6===c.tag)a.appendChild(c.stateNode);else if(4!==c.tag&&null!==c.child){c.child.return=c;c=c.child;continue}if(c===b)break;for(;null===c.sibling;){if(null===c.return||c.return===b)return;c=c.return}c.sibling.return=c.return;c=c.sibling}};mh=function(){};
+nh=function(a,b,c,d,e){var f=a.memoizedProps;if(f!==d){var g=b.stateNode;If(N.current);a=null;switch(c){case "input":f=vc(g,f);d=vc(g,d);a=[];break;case "option":f=$d(g,f);d=$d(g,d);a=[];break;case "select":f=n({},f,{value:void 0});d=n({},d,{value:void 0});a=[];break;case "textarea":f=be(g,f);d=be(g,d);a=[];break;default:"function"!==typeof f.onClick&&"function"===typeof d.onClick&&(g.onclick=te)}qe(c,d);g=c=void 0;var h=null;for(c in f)if(!d.hasOwnProperty(c)&&f.hasOwnProperty(c)&&null!=f[c])if("style"===
+c){var l=f[c];for(g in l)l.hasOwnProperty(g)&&(h||(h={}),h[g]="")}else"dangerouslySetInnerHTML"!==c&&"children"!==c&&"suppressContentEditableWarning"!==c&&"suppressHydrationWarning"!==c&&"autoFocus"!==c&&(ra.hasOwnProperty(c)?a||(a=[]):(a=a||[]).push(c,null));for(c in d){var k=d[c];l=null!=f?f[c]:void 0;if(d.hasOwnProperty(c)&&k!==l&&(null!=k||null!=l))if("style"===c)if(l){for(g in l)!l.hasOwnProperty(g)||k&&k.hasOwnProperty(g)||(h||(h={}),h[g]="");for(g in k)k.hasOwnProperty(g)&&l[g]!==k[g]&&(h||
+(h={}),h[g]=k[g])}else h||(a||(a=[]),a.push(c,h)),h=k;else"dangerouslySetInnerHTML"===c?(k=k?k.__html:void 0,l=l?l.__html:void 0,null!=k&&l!==k&&(a=a||[]).push(c,""+k)):"children"===c?l===k||"string"!==typeof k&&"number"!==typeof k||(a=a||[]).push(c,""+k):"suppressContentEditableWarning"!==c&&"suppressHydrationWarning"!==c&&(ra.hasOwnProperty(c)?(null!=k&&se(e,c),a||l===k||(a=[])):(a=a||[]).push(c,k))}h&&(a=a||[]).push("style",h);e=a;(b.updateQueue=e)&&kh(b)}};oh=function(a,b,c,d){c!==d&&kh(b)};
+var ph="function"===typeof WeakSet?WeakSet:Set;function qh(a,b){var c=b.source,d=b.stack;null===d&&null!==c&&(d=jc(c));null!==c&&ic(c.type);b=b.value;null!==a&&1===a.tag&&ic(a.type);try{console.error(b)}catch(e){setTimeout(function(){throw e;})}}function rh(a){var b=a.ref;if(null!==b)if("function"===typeof b)try{b(null)}catch(c){sh(a,c)}else b.current=null}
+function th(a,b,c){c=c.updateQueue;c=null!==c?c.lastEffect:null;if(null!==c){var d=c=c.next;do{if((d.tag&a)!==Nf){var e=d.destroy;d.destroy=void 0;void 0!==e&&e()}(d.tag&b)!==Nf&&(e=d.create,d.destroy=e());d=d.next}while(d!==c)}}
+function uh(a,b){for(var c=a;;){if(5===c.tag){var d=c.stateNode;if(b)d.style.display="none";else{d=c.stateNode;var e=c.memoizedProps.style;e=void 0!==e&&null!==e&&e.hasOwnProperty("display")?e.display:null;d.style.display=ne("display",e)}}else if(6===c.tag)c.stateNode.nodeValue=b?"":c.memoizedProps;else if(13===c.tag&&null!==c.memoizedState){d=c.child.sibling;d.return=c;c=d;continue}else if(null!==c.child){c.child.return=c;c=c.child;continue}if(c===a)break;for(;null===c.sibling;){if(null===c.return||
+c.return===a)return;c=c.return}c.sibling.return=c.return;c=c.sibling}}
+function vh(a){"function"===typeof Re&&Re(a);switch(a.tag){case 0:case 11:case 14:case 15:var b=a.updateQueue;if(null!==b&&(b=b.lastEffect,null!==b)){var c=b=b.next;do{var d=c.destroy;if(void 0!==d){var e=a;try{d()}catch(f){sh(e,f)}}c=c.next}while(c!==b)}break;case 1:rh(a);b=a.stateNode;if("function"===typeof b.componentWillUnmount)try{b.props=a.memoizedProps,b.state=a.memoizedState,b.componentWillUnmount()}catch(f){sh(a,f)}break;case 5:rh(a);break;case 4:wh(a)}}
+function xh(a){return 5===a.tag||3===a.tag||4===a.tag}
+function yh(a){a:{for(var b=a.return;null!==b;){if(xh(b)){var c=b;break a}b=b.return}x("160");c=void 0}var d=b=void 0;switch(c.tag){case 5:b=c.stateNode;d=!1;break;case 3:b=c.stateNode.containerInfo;d=!0;break;case 4:b=c.stateNode.containerInfo;d=!0;break;default:x("161")}c.effectTag&16&&(ke(b,""),c.effectTag&=-17);a:b:for(c=a;;){for(;null===c.sibling;){if(null===c.return||xh(c.return)){c=null;break a}c=c.return}c.sibling.return=c.return;for(c=c.sibling;5!==c.tag&&6!==c.tag&&18!==c.tag;){if(c.effectTag&
+2)continue b;if(null===c.child||4===c.tag)continue b;else c.child.return=c,c=c.child}if(!(c.effectTag&2)){c=c.stateNode;break a}}for(var e=a;;){if(5===e.tag||6===e.tag)if(c)if(d){var f=b,g=e.stateNode,h=c;8===f.nodeType?f.parentNode.insertBefore(g,h):f.insertBefore(g,h)}else b.insertBefore(e.stateNode,c);else d?(g=b,h=e.stateNode,8===g.nodeType?(f=g.parentNode,f.insertBefore(h,g)):(f=g,f.appendChild(h)),g=g._reactRootContainer,null!==g&&void 0!==g||null!==f.onclick||(f.onclick=te)):b.appendChild(e.stateNode);
+else if(4!==e.tag&&null!==e.child){e.child.return=e;e=e.child;continue}if(e===a)break;for(;null===e.sibling;){if(null===e.return||e.return===a)return;e=e.return}e.sibling.return=e.return;e=e.sibling}}
+function wh(a){for(var b=a,c=!1,d=void 0,e=void 0;;){if(!c){c=b.return;a:for(;;){null===c?x("160"):void 0;switch(c.tag){case 5:d=c.stateNode;e=!1;break a;case 3:d=c.stateNode.containerInfo;e=!0;break a;case 4:d=c.stateNode.containerInfo;e=!0;break a}c=c.return}c=!0}if(5===b.tag||6===b.tag){a:for(var f=b,g=f;;)if(vh(g),null!==g.child&&4!==g.tag)g.child.return=g,g=g.child;else{if(g===f)break;for(;null===g.sibling;){if(null===g.return||g.return===f)break a;g=g.return}g.sibling.return=g.return;g=g.sibling}e?
+(f=d,g=b.stateNode,8===f.nodeType?f.parentNode.removeChild(g):f.removeChild(g)):d.removeChild(b.stateNode)}else if(4===b.tag){if(null!==b.child){d=b.stateNode.containerInfo;e=!0;b.child.return=b;b=b.child;continue}}else if(vh(b),null!==b.child){b.child.return=b;b=b.child;continue}if(b===a)break;for(;null===b.sibling;){if(null===b.return||b.return===a)return;b=b.return;4===b.tag&&(c=!1)}b.sibling.return=b.return;b=b.sibling}}
+function zh(a,b){switch(b.tag){case 0:case 11:case 14:case 15:th(Pf,Qf,b);break;case 1:break;case 5:var c=b.stateNode;if(null!=c){var d=b.memoizedProps;a=null!==a?a.memoizedProps:d;var e=b.type,f=b.updateQueue;b.updateQueue=null;null!==f&&Ce(c,f,e,a,d,b)}break;case 6:null===b.stateNode?x("162"):void 0;b.stateNode.nodeValue=b.memoizedProps;break;case 3:break;case 12:break;case 13:c=b.memoizedState;d=void 0;a=b;null===c?d=!1:(d=!0,a=b.child,0===c.timedOutAt&&(c.timedOutAt=lf()));null!==a&&uh(a,d);c=
+b.updateQueue;if(null!==c){b.updateQueue=null;var g=b.stateNode;null===g&&(g=b.stateNode=new ph);c.forEach(function(a){var c=Ah.bind(null,b,a);g.has(a)||(g.add(a),a.then(c,c))})}break;case 17:break;default:x("163")}}var Bh="function"===typeof WeakMap?WeakMap:Map;function Ch(a,b,c){c=nf(c);c.tag=ah;c.payload={element:null};var d=b.value;c.callback=function(){Dh(d);qh(a,b)};return c}
+function Eh(a,b,c){c=nf(c);c.tag=ah;var d=a.type.getDerivedStateFromError;if("function"===typeof d){var e=b.value;c.payload=function(){return d(e)}}var f=a.stateNode;null!==f&&"function"===typeof f.componentDidCatch&&(c.callback=function(){"function"!==typeof d&&(null===Fh?Fh=new Set([this]):Fh.add(this));var c=b.value,e=b.stack;qh(a,b);this.componentDidCatch(c,{componentStack:null!==e?e:""})});return c}
+function Gh(a){switch(a.tag){case 1:J(a.type)&&Ke(a);var b=a.effectTag;return b&2048?(a.effectTag=b&-2049|64,a):null;case 3:return Kf(a),Le(a),b=a.effectTag,0!==(b&64)?x("285"):void 0,a.effectTag=b&-2049|64,a;case 5:return Mf(a),null;case 13:return b=a.effectTag,b&2048?(a.effectTag=b&-2049|64,a):null;case 18:return null;case 4:return Kf(a),null;case 10:return Zg(a),null;default:return null}}
+var Hh=Tb.ReactCurrentDispatcher,Ih=Tb.ReactCurrentOwner,Jh=1073741822,Kh=!1,T=null,Lh=null,U=0,Mh=-1,Nh=!1,V=null,Oh=!1,Ph=null,Qh=null,Rh=null,Fh=null;function Sh(){if(null!==T)for(var a=T.return;null!==a;){var b=a;switch(b.tag){case 1:var c=b.type.childContextTypes;null!==c&&void 0!==c&&Ke(b);break;case 3:Kf(b);Le(b);break;case 5:Mf(b);break;case 4:Kf(b);break;case 10:Zg(b)}a=a.return}Lh=null;U=0;Mh=-1;Nh=!1;T=null}
+function Th(){for(;null!==V;){var a=V.effectTag;a&16&&ke(V.stateNode,"");if(a&128){var b=V.alternate;null!==b&&(b=b.ref,null!==b&&("function"===typeof b?b(null):b.current=null))}switch(a&14){case 2:yh(V);V.effectTag&=-3;break;case 6:yh(V);V.effectTag&=-3;zh(V.alternate,V);break;case 4:zh(V.alternate,V);break;case 8:a=V,wh(a),a.return=null,a.child=null,a.memoizedState=null,a.updateQueue=null,a=a.alternate,null!==a&&(a.return=null,a.child=null,a.memoizedState=null,a.updateQueue=null)}V=V.nextEffect}}
+function Uh(){for(;null!==V;){if(V.effectTag&256)a:{var a=V.alternate,b=V;switch(b.tag){case 0:case 11:case 15:th(Of,Nf,b);break a;case 1:if(b.effectTag&256&&null!==a){var c=a.memoizedProps,d=a.memoizedState;a=b.stateNode;b=a.getSnapshotBeforeUpdate(b.elementType===b.type?c:L(b.type,c),d);a.__reactInternalSnapshotBeforeUpdate=b}break a;case 3:case 5:case 6:case 4:case 17:break a;default:x("163")}}V=V.nextEffect}}
+function Vh(a,b){for(;null!==V;){var c=V.effectTag;if(c&36){var d=V.alternate,e=V,f=b;switch(e.tag){case 0:case 11:case 15:th(Rf,Sf,e);break;case 1:var g=e.stateNode;if(e.effectTag&4)if(null===d)g.componentDidMount();else{var h=e.elementType===e.type?d.memoizedProps:L(e.type,d.memoizedProps);g.componentDidUpdate(h,d.memoizedState,g.__reactInternalSnapshotBeforeUpdate)}d=e.updateQueue;null!==d&&hh(e,d,g,f);break;case 3:d=e.updateQueue;if(null!==d){g=null;if(null!==e.child)switch(e.child.tag){case 5:g=
+e.child.stateNode;break;case 1:g=e.child.stateNode}hh(e,d,g,f)}break;case 5:f=e.stateNode;null===d&&e.effectTag&4&&we(e.type,e.memoizedProps)&&f.focus();break;case 6:break;case 4:break;case 12:break;case 13:break;case 17:break;default:x("163")}}c&128&&(e=V.ref,null!==e&&(f=V.stateNode,"function"===typeof e?e(f):e.current=f));c&512&&(Ph=a);V=V.nextEffect}}
+function Wh(a,b){Rh=Qh=Ph=null;var c=W;W=!0;do{if(b.effectTag&512){var d=!1,e=void 0;try{var f=b;th(Uf,Nf,f);th(Nf,Tf,f)}catch(g){d=!0,e=g}d&&sh(b,e)}b=b.nextEffect}while(null!==b);W=c;c=a.expirationTime;0!==c&&Xh(a,c);X||W||Yh(1073741823,!1)}function of(){null!==Qh&&Be(Qh);null!==Rh&&Rh()}
+function Zh(a,b){Oh=Kh=!0;a.current===b?x("177"):void 0;var c=a.pendingCommitExpirationTime;0===c?x("261"):void 0;a.pendingCommitExpirationTime=0;var d=b.expirationTime,e=b.childExpirationTime;ef(a,e>d?e:d);Ih.current=null;d=void 0;1<b.effectTag?null!==b.lastEffect?(b.lastEffect.nextEffect=b,d=b.firstEffect):d=b:d=b.firstEffect;ue=Bd;ve=Pd();Bd=!1;for(V=d;null!==V;){e=!1;var f=void 0;try{Uh()}catch(h){e=!0,f=h}e&&(null===V?x("178"):void 0,sh(V,f),null!==V&&(V=V.nextEffect))}for(V=d;null!==V;){e=!1;
+f=void 0;try{Th()}catch(h){e=!0,f=h}e&&(null===V?x("178"):void 0,sh(V,f),null!==V&&(V=V.nextEffect))}Qd(ve);ve=null;Bd=!!ue;ue=null;a.current=b;for(V=d;null!==V;){e=!1;f=void 0;try{Vh(a,c)}catch(h){e=!0,f=h}e&&(null===V?x("178"):void 0,sh(V,f),null!==V&&(V=V.nextEffect))}if(null!==d&&null!==Ph){var g=Wh.bind(null,a,d);Qh=r.unstable_runWithPriority(r.unstable_NormalPriority,function(){return Ae(g)});Rh=g}Kh=Oh=!1;"function"===typeof Qe&&Qe(b.stateNode);c=b.expirationTime;b=b.childExpirationTime;b=
+b>c?b:c;0===b&&(Fh=null);$h(a,b)}
+function ai(a){for(;;){var b=a.alternate,c=a.return,d=a.sibling;if(0===(a.effectTag&1024)){T=a;a:{var e=b;b=a;var f=U;var g=b.pendingProps;switch(b.tag){case 2:break;case 16:break;case 15:case 0:break;case 1:J(b.type)&&Ke(b);break;case 3:Kf(b);Le(b);g=b.stateNode;g.pendingContext&&(g.context=g.pendingContext,g.pendingContext=null);if(null===e||null===e.child)Eg(b),b.effectTag&=-3;mh(b);break;case 5:Mf(b);var h=If(Hf.current);f=b.type;if(null!==e&&null!=b.stateNode)nh(e,b,f,g,h),e.ref!==b.ref&&(b.effectTag|=
+128);else if(g){var l=If(N.current);if(Eg(b)){g=b;e=g.stateNode;var k=g.type,m=g.memoizedProps,p=h;e[Fa]=g;e[Ga]=m;f=void 0;h=k;switch(h){case "iframe":case "object":E("load",e);break;case "video":case "audio":for(k=0;k<ab.length;k++)E(ab[k],e);break;case "source":E("error",e);break;case "img":case "image":case "link":E("error",e);E("load",e);break;case "form":E("reset",e);E("submit",e);break;case "details":E("toggle",e);break;case "input":wc(e,m);E("invalid",e);se(p,"onChange");break;case "select":e._wrapperState=
+{wasMultiple:!!m.multiple};E("invalid",e);se(p,"onChange");break;case "textarea":ce(e,m),E("invalid",e),se(p,"onChange")}qe(h,m);k=null;for(f in m)m.hasOwnProperty(f)&&(l=m[f],"children"===f?"string"===typeof l?e.textContent!==l&&(k=["children",l]):"number"===typeof l&&e.textContent!==""+l&&(k=["children",""+l]):ra.hasOwnProperty(f)&&null!=l&&se(p,f));switch(h){case "input":Rb(e);Ac(e,m,!0);break;case "textarea":Rb(e);ee(e,m);break;case "select":case "option":break;default:"function"===typeof m.onClick&&
+(e.onclick=te)}f=k;g.updateQueue=f;g=null!==f?!0:!1;g&&kh(b)}else{m=b;p=f;e=g;k=9===h.nodeType?h:h.ownerDocument;l===fe.html&&(l=ge(p));l===fe.html?"script"===p?(e=k.createElement("div"),e.innerHTML="<script>\x3c/script>",k=e.removeChild(e.firstChild)):"string"===typeof e.is?k=k.createElement(p,{is:e.is}):(k=k.createElement(p),"select"===p&&(p=k,e.multiple?p.multiple=!0:e.size&&(p.size=e.size))):k=k.createElementNS(l,p);e=k;e[Fa]=m;e[Ga]=g;lh(e,b,!1,!1);p=e;k=f;m=g;var t=h,A=re(k,m);switch(k){case "iframe":case "object":E("load",
+p);h=m;break;case "video":case "audio":for(h=0;h<ab.length;h++)E(ab[h],p);h=m;break;case "source":E("error",p);h=m;break;case "img":case "image":case "link":E("error",p);E("load",p);h=m;break;case "form":E("reset",p);E("submit",p);h=m;break;case "details":E("toggle",p);h=m;break;case "input":wc(p,m);h=vc(p,m);E("invalid",p);se(t,"onChange");break;case "option":h=$d(p,m);break;case "select":p._wrapperState={wasMultiple:!!m.multiple};h=n({},m,{value:void 0});E("invalid",p);se(t,"onChange");break;case "textarea":ce(p,
+m);h=be(p,m);E("invalid",p);se(t,"onChange");break;default:h=m}qe(k,h);l=void 0;var v=k,R=p,u=h;for(l in u)if(u.hasOwnProperty(l)){var q=u[l];"style"===l?oe(R,q):"dangerouslySetInnerHTML"===l?(q=q?q.__html:void 0,null!=q&&je(R,q)):"children"===l?"string"===typeof q?("textarea"!==v||""!==q)&&ke(R,q):"number"===typeof q&&ke(R,""+q):"suppressContentEditableWarning"!==l&&"suppressHydrationWarning"!==l&&"autoFocus"!==l&&(ra.hasOwnProperty(l)?null!=q&&se(t,l):null!=q&&tc(R,l,q,A))}switch(k){case "input":Rb(p);
+Ac(p,m,!1);break;case "textarea":Rb(p);ee(p,m);break;case "option":null!=m.value&&p.setAttribute("value",""+uc(m.value));break;case "select":h=p;h.multiple=!!m.multiple;p=m.value;null!=p?ae(h,!!m.multiple,p,!1):null!=m.defaultValue&&ae(h,!!m.multiple,m.defaultValue,!0);break;default:"function"===typeof h.onClick&&(p.onclick=te)}(g=we(f,g))&&kh(b);b.stateNode=e}null!==b.ref&&(b.effectTag|=128)}else null===b.stateNode?x("166"):void 0;break;case 6:e&&null!=b.stateNode?oh(e,b,e.memoizedProps,g):("string"!==
+typeof g&&(null===b.stateNode?x("166"):void 0),e=If(Hf.current),If(N.current),Eg(b)?(g=b,f=g.stateNode,e=g.memoizedProps,f[Fa]=g,(g=f.nodeValue!==e)&&kh(b)):(f=b,g=(9===e.nodeType?e:e.ownerDocument).createTextNode(g),g[Fa]=b,f.stateNode=g));break;case 11:break;case 13:g=b.memoizedState;if(0!==(b.effectTag&64)){b.expirationTime=f;T=b;break a}g=null!==g;f=null!==e&&null!==e.memoizedState;null!==e&&!g&&f&&(e=e.child.sibling,null!==e&&(h=b.firstEffect,null!==h?(b.firstEffect=e,e.nextEffect=h):(b.firstEffect=
+b.lastEffect=e,e.nextEffect=null),e.effectTag=8));if(g||f)b.effectTag|=4;break;case 7:break;case 8:break;case 12:break;case 4:Kf(b);mh(b);break;case 10:Zg(b);break;case 9:break;case 14:break;case 17:J(b.type)&&Ke(b);break;case 18:break;default:x("156")}T=null}b=a;if(1===U||1!==b.childExpirationTime){g=0;for(f=b.child;null!==f;)e=f.expirationTime,h=f.childExpirationTime,e>g&&(g=e),h>g&&(g=h),f=f.sibling;b.childExpirationTime=g}if(null!==T)return T;null!==c&&0===(c.effectTag&1024)&&(null===c.firstEffect&&
+(c.firstEffect=a.firstEffect),null!==a.lastEffect&&(null!==c.lastEffect&&(c.lastEffect.nextEffect=a.firstEffect),c.lastEffect=a.lastEffect),1<a.effectTag&&(null!==c.lastEffect?c.lastEffect.nextEffect=a:c.firstEffect=a,c.lastEffect=a))}else{a=Gh(a,U);if(null!==a)return a.effectTag&=1023,a;null!==c&&(c.firstEffect=c.lastEffect=null,c.effectTag|=1024)}if(null!==d)return d;if(null!==c)a=c;else break}return null}
+function bi(a){var b=Tg(a.alternate,a,U);a.memoizedProps=a.pendingProps;null===b&&(b=ai(a));Ih.current=null;return b}
+function ci(a,b){Kh?x("243"):void 0;of();Kh=!0;var c=Hh.current;Hh.current=kg;var d=a.nextExpirationTimeToWorkOn;if(d!==U||a!==Lh||null===T)Sh(),Lh=a,U=d,T=Xe(Lh.current,null,U),a.pendingCommitExpirationTime=0;var e=!1;do{try{if(b)for(;null!==T&&!di();)T=bi(T);else for(;null!==T;)T=bi(T)}catch(u){if(Yg=Xg=Wg=null,lg(),null===T)e=!0,Dh(u);else{null===T?x("271"):void 0;var f=T,g=f.return;if(null===g)e=!0,Dh(u);else{a:{var h=a,l=g,k=f,m=u;g=U;k.effectTag|=1024;k.firstEffect=k.lastEffect=null;if(null!==
+m&&"object"===typeof m&&"function"===typeof m.then){var p=m;m=l;var t=-1,A=-1;do{if(13===m.tag){var v=m.alternate;if(null!==v&&(v=v.memoizedState,null!==v)){A=10*(1073741822-v.timedOutAt);break}v=m.pendingProps.maxDuration;if("number"===typeof v)if(0>=v)t=0;else if(-1===t||v<t)t=v}m=m.return}while(null!==m);m=l;do{if(v=13===m.tag)v=void 0===m.memoizedProps.fallback?!1:null===m.memoizedState;if(v){l=m.updateQueue;null===l?(l=new Set,l.add(p),m.updateQueue=l):l.add(p);if(0===(m.mode&1)){m.effectTag|=
+64;k.effectTag&=-1957;1===k.tag&&(null===k.alternate?k.tag=17:(g=nf(1073741823),g.tag=sf,pf(k,g)));k.expirationTime=1073741823;break a}k=h;l=g;var R=k.pingCache;null===R?(R=k.pingCache=new Bh,v=new Set,R.set(p,v)):(v=R.get(p),void 0===v&&(v=new Set,R.set(p,v)));v.has(l)||(v.add(l),k=ei.bind(null,k,p,l),p.then(k,k));-1===t?h=1073741823:(-1===A&&(A=10*(1073741822-gf(h,g))-5E3),h=A+t);0<=h&&Mh<h&&(Mh=h);m.effectTag|=2048;m.expirationTime=g;break a}m=m.return}while(null!==m);m=Error((ic(k.type)||"A React component")+
+" suspended while rendering, but no fallback UI was specified.\n\nAdd a <Suspense fallback=...> component higher in the tree to provide a loading indicator or placeholder to display."+jc(k))}Nh=!0;m=jh(m,k);h=l;do{switch(h.tag){case 3:h.effectTag|=2048;h.expirationTime=g;g=Ch(h,m,g);eh(h,g);break a;case 1:if(t=m,A=h.type,k=h.stateNode,0===(h.effectTag&64)&&("function"===typeof A.getDerivedStateFromError||null!==k&&"function"===typeof k.componentDidCatch&&(null===Fh||!Fh.has(k)))){h.effectTag|=2048;
+h.expirationTime=g;g=Eh(h,t,g);eh(h,g);break a}}h=h.return}while(null!==h)}T=ai(f);continue}}}break}while(1);Kh=!1;Hh.current=c;Yg=Xg=Wg=null;lg();if(e)Lh=null,a.finishedWork=null;else if(null!==T)a.finishedWork=null;else{c=a.current.alternate;null===c?x("281"):void 0;Lh=null;if(Nh){e=a.latestPendingTime;f=a.latestSuspendedTime;g=a.latestPingedTime;if(0!==e&&e<d||0!==f&&f<d||0!==g&&g<d){ff(a,d);fi(a,c,d,a.expirationTime,-1);return}if(!a.didError&&b){a.didError=!0;d=a.nextExpirationTimeToWorkOn=d;
+b=a.expirationTime=1073741823;fi(a,c,d,b,-1);return}}b&&-1!==Mh?(ff(a,d),b=10*(1073741822-gf(a,d)),b<Mh&&(Mh=b),b=10*(1073741822-lf()),b=Mh-b,fi(a,c,d,a.expirationTime,0>b?0:b)):(a.pendingCommitExpirationTime=d,a.finishedWork=c)}}
+function sh(a,b){for(var c=a.return;null!==c;){switch(c.tag){case 1:var d=c.stateNode;if("function"===typeof c.type.getDerivedStateFromError||"function"===typeof d.componentDidCatch&&(null===Fh||!Fh.has(d))){a=jh(b,a);a=Eh(c,a,1073741823);pf(c,a);qf(c,1073741823);return}break;case 3:a=jh(b,a);a=Ch(c,a,1073741823);pf(c,a);qf(c,1073741823);return}c=c.return}3===a.tag&&(c=jh(b,a),c=Ch(a,c,1073741823),pf(a,c),qf(a,1073741823))}
+function mf(a,b){var c=r.unstable_getCurrentPriorityLevel(),d=void 0;if(0===(b.mode&1))d=1073741823;else if(Kh&&!Oh)d=U;else{switch(c){case r.unstable_ImmediatePriority:d=1073741823;break;case r.unstable_UserBlockingPriority:d=1073741822-10*(((1073741822-a+15)/10|0)+1);break;case r.unstable_NormalPriority:d=1073741822-25*(((1073741822-a+500)/25|0)+1);break;case r.unstable_LowPriority:case r.unstable_IdlePriority:d=1;break;default:x("313")}null!==Lh&&d===U&&--d}c===r.unstable_UserBlockingPriority&&
+(0===gi||d<gi)&&(gi=d);return d}function ei(a,b,c){var d=a.pingCache;null!==d&&d.delete(b);if(null!==Lh&&U===c)Lh=null;else if(b=a.earliestSuspendedTime,d=a.latestSuspendedTime,0!==b&&c<=b&&c>=d){a.didError=!1;b=a.latestPingedTime;if(0===b||b>c)a.latestPingedTime=c;df(c,a);c=a.expirationTime;0!==c&&Xh(a,c)}}function Ah(a,b){var c=a.stateNode;null!==c&&c.delete(b);b=lf();b=mf(b,a);a=hi(a,b);null!==a&&(cf(a,b),b=a.expirationTime,0!==b&&Xh(a,b))}
+function hi(a,b){a.expirationTime<b&&(a.expirationTime=b);var c=a.alternate;null!==c&&c.expirationTime<b&&(c.expirationTime=b);var d=a.return,e=null;if(null===d&&3===a.tag)e=a.stateNode;else for(;null!==d;){c=d.alternate;d.childExpirationTime<b&&(d.childExpirationTime=b);null!==c&&c.childExpirationTime<b&&(c.childExpirationTime=b);if(null===d.return&&3===d.tag){e=d.stateNode;break}d=d.return}return e}
+function qf(a,b){a=hi(a,b);null!==a&&(!Kh&&0!==U&&b>U&&Sh(),cf(a,b),Kh&&!Oh&&Lh===a||Xh(a,a.expirationTime),ii>ji&&(ii=0,x("185")))}function ki(a,b,c,d,e){return r.unstable_runWithPriority(r.unstable_ImmediatePriority,function(){return a(b,c,d,e)})}var li=null,Y=null,mi=0,ni=void 0,W=!1,oi=null,Z=0,gi=0,pi=!1,qi=null,X=!1,ri=!1,si=null,ti=r.unstable_now(),ui=1073741822-(ti/10|0),vi=ui,ji=50,ii=0,wi=null;function xi(){ui=1073741822-((r.unstable_now()-ti)/10|0)}
+function yi(a,b){if(0!==mi){if(b<mi)return;null!==ni&&r.unstable_cancelCallback(ni)}mi=b;a=r.unstable_now()-ti;ni=r.unstable_scheduleCallback(zi,{timeout:10*(1073741822-b)-a})}function fi(a,b,c,d,e){a.expirationTime=d;0!==e||di()?0<e&&(a.timeoutHandle=ye(Ai.bind(null,a,b,c),e)):(a.pendingCommitExpirationTime=c,a.finishedWork=b)}function Ai(a,b,c){a.pendingCommitExpirationTime=c;a.finishedWork=b;xi();vi=ui;Bi(a,c)}function $h(a,b){a.expirationTime=b;a.finishedWork=null}
+function lf(){if(W)return vi;Ci();if(0===Z||1===Z)xi(),vi=ui;return vi}function Xh(a,b){null===a.nextScheduledRoot?(a.expirationTime=b,null===Y?(li=Y=a,a.nextScheduledRoot=a):(Y=Y.nextScheduledRoot=a,Y.nextScheduledRoot=li)):b>a.expirationTime&&(a.expirationTime=b);W||(X?ri&&(oi=a,Z=1073741823,Di(a,1073741823,!1)):1073741823===b?Yh(1073741823,!1):yi(a,b))}
+function Ci(){var a=0,b=null;if(null!==Y)for(var c=Y,d=li;null!==d;){var e=d.expirationTime;if(0===e){null===c||null===Y?x("244"):void 0;if(d===d.nextScheduledRoot){li=Y=d.nextScheduledRoot=null;break}else if(d===li)li=e=d.nextScheduledRoot,Y.nextScheduledRoot=e,d.nextScheduledRoot=null;else if(d===Y){Y=c;Y.nextScheduledRoot=li;d.nextScheduledRoot=null;break}else c.nextScheduledRoot=d.nextScheduledRoot,d.nextScheduledRoot=null;d=c.nextScheduledRoot}else{e>a&&(a=e,b=d);if(d===Y)break;if(1073741823===
+a)break;c=d;d=d.nextScheduledRoot}}oi=b;Z=a}var Ei=!1;function di(){return Ei?!0:r.unstable_shouldYield()?Ei=!0:!1}function zi(){try{if(!di()&&null!==li){xi();var a=li;do{var b=a.expirationTime;0!==b&&ui<=b&&(a.nextExpirationTimeToWorkOn=ui);a=a.nextScheduledRoot}while(a!==li)}Yh(0,!0)}finally{Ei=!1}}
+function Yh(a,b){Ci();if(b)for(xi(),vi=ui;null!==oi&&0!==Z&&a<=Z&&!(Ei&&ui>Z);)Di(oi,Z,ui>Z),Ci(),xi(),vi=ui;else for(;null!==oi&&0!==Z&&a<=Z;)Di(oi,Z,!1),Ci();b&&(mi=0,ni=null);0!==Z&&yi(oi,Z);ii=0;wi=null;if(null!==si)for(a=si,si=null,b=0;b<a.length;b++){var c=a[b];try{c._onComplete()}catch(d){pi||(pi=!0,qi=d)}}if(pi)throw a=qi,qi=null,pi=!1,a;}function Bi(a,b){W?x("253"):void 0;oi=a;Z=b;Di(a,b,!1);Yh(1073741823,!1)}
+function Di(a,b,c){W?x("245"):void 0;W=!0;if(c){var d=a.finishedWork;null!==d?Fi(a,d,b):(a.finishedWork=null,d=a.timeoutHandle,-1!==d&&(a.timeoutHandle=-1,ze(d)),ci(a,c),d=a.finishedWork,null!==d&&(di()?a.finishedWork=d:Fi(a,d,b)))}else d=a.finishedWork,null!==d?Fi(a,d,b):(a.finishedWork=null,d=a.timeoutHandle,-1!==d&&(a.timeoutHandle=-1,ze(d)),ci(a,c),d=a.finishedWork,null!==d&&Fi(a,d,b));W=!1}
+function Fi(a,b,c){var d=a.firstBatch;if(null!==d&&d._expirationTime>=c&&(null===si?si=[d]:si.push(d),d._defer)){a.finishedWork=b;a.expirationTime=0;return}a.finishedWork=null;a===wi?ii++:(wi=a,ii=0);r.unstable_runWithPriority(r.unstable_ImmediatePriority,function(){Zh(a,b)})}function Dh(a){null===oi?x("246"):void 0;oi.expirationTime=0;pi||(pi=!0,qi=a)}function Gi(a,b){var c=X;X=!0;try{return a(b)}finally{(X=c)||W||Yh(1073741823,!1)}}
+function Hi(a,b){if(X&&!ri){ri=!0;try{return a(b)}finally{ri=!1}}return a(b)}function Ii(a,b,c){X||W||0===gi||(Yh(gi,!1),gi=0);var d=X;X=!0;try{return r.unstable_runWithPriority(r.unstable_UserBlockingPriority,function(){return a(b,c)})}finally{(X=d)||W||Yh(1073741823,!1)}}
+function Ji(a,b,c,d,e){var f=b.current;a:if(c){c=c._reactInternalFiber;b:{2===ed(c)&&1===c.tag?void 0:x("170");var g=c;do{switch(g.tag){case 3:g=g.stateNode.context;break b;case 1:if(J(g.type)){g=g.stateNode.__reactInternalMemoizedMergedChildContext;break b}}g=g.return}while(null!==g);x("171");g=void 0}if(1===c.tag){var h=c.type;if(J(h)){c=Ne(c,h,g);break a}}c=g}else c=He;null===b.context?b.context=c:b.pendingContext=c;b=e;e=nf(d);e.payload={element:a};b=void 0===b?null:b;null!==b&&(e.callback=b);
+of();pf(f,e);qf(f,d);return d}function Ki(a,b,c,d){var e=b.current,f=lf();e=mf(f,e);return Ji(a,b,c,e,d)}function Li(a){a=a.current;if(!a.child)return null;switch(a.child.tag){case 5:return a.child.stateNode;default:return a.child.stateNode}}function Mi(a,b,c){var d=3<arguments.length&&void 0!==arguments[3]?arguments[3]:null;return{$$typeof:Wb,key:null==d?null:""+d,children:a,containerInfo:b,implementation:c}}
+Ab=function(a,b,c){switch(b){case "input":yc(a,c);b=c.name;if("radio"===c.type&&null!=b){for(c=a;c.parentNode;)c=c.parentNode;c=c.querySelectorAll("input[name="+JSON.stringify(""+b)+'][type="radio"]');for(b=0;b<c.length;b++){var d=c[b];if(d!==a&&d.form===a.form){var e=Ka(d);e?void 0:x("90");Sb(d);yc(d,e)}}}break;case "textarea":de(a,c);break;case "select":b=c.value,null!=b&&ae(a,!!c.multiple,b,!1)}};
+function Ni(a){var b=1073741822-25*(((1073741822-lf()+500)/25|0)+1);b>=Jh&&(b=Jh-1);this._expirationTime=Jh=b;this._root=a;this._callbacks=this._next=null;this._hasChildren=this._didComplete=!1;this._children=null;this._defer=!0}Ni.prototype.render=function(a){this._defer?void 0:x("250");this._hasChildren=!0;this._children=a;var b=this._root._internalRoot,c=this._expirationTime,d=new Oi;Ji(a,b,null,c,d._onCommit);return d};
+Ni.prototype.then=function(a){if(this._didComplete)a();else{var b=this._callbacks;null===b&&(b=this._callbacks=[]);b.push(a)}};
+Ni.prototype.commit=function(){var a=this._root._internalRoot,b=a.firstBatch;this._defer&&null!==b?void 0:x("251");if(this._hasChildren){var c=this._expirationTime;if(b!==this){this._hasChildren&&(c=this._expirationTime=b._expirationTime,this.render(this._children));for(var d=null,e=b;e!==this;)d=e,e=e._next;null===d?x("251"):void 0;d._next=e._next;this._next=b;a.firstBatch=this}this._defer=!1;Bi(a,c);b=this._next;this._next=null;b=a.firstBatch=b;null!==b&&b._hasChildren&&b.render(b._children)}else this._next=
+null,this._defer=!1};Ni.prototype._onComplete=function(){if(!this._didComplete){this._didComplete=!0;var a=this._callbacks;if(null!==a)for(var b=0;b<a.length;b++)(0,a[b])()}};function Oi(){this._callbacks=null;this._didCommit=!1;this._onCommit=this._onCommit.bind(this)}Oi.prototype.then=function(a){if(this._didCommit)a();else{var b=this._callbacks;null===b&&(b=this._callbacks=[]);b.push(a)}};
+Oi.prototype._onCommit=function(){if(!this._didCommit){this._didCommit=!0;var a=this._callbacks;if(null!==a)for(var b=0;b<a.length;b++){var c=a[b];"function"!==typeof c?x("191",c):void 0;c()}}};
+function Pi(a,b,c){b=K(3,null,null,b?3:0);a={current:b,containerInfo:a,pendingChildren:null,pingCache:null,earliestPendingTime:0,latestPendingTime:0,earliestSuspendedTime:0,latestSuspendedTime:0,latestPingedTime:0,didError:!1,pendingCommitExpirationTime:0,finishedWork:null,timeoutHandle:-1,context:null,pendingContext:null,hydrate:c,nextExpirationTimeToWorkOn:0,expirationTime:0,firstBatch:null,nextScheduledRoot:null};this._internalRoot=b.stateNode=a}
+Pi.prototype.render=function(a,b){var c=this._internalRoot,d=new Oi;b=void 0===b?null:b;null!==b&&d.then(b);Ki(a,c,null,d._onCommit);return d};Pi.prototype.unmount=function(a){var b=this._internalRoot,c=new Oi;a=void 0===a?null:a;null!==a&&c.then(a);Ki(null,b,null,c._onCommit);return c};Pi.prototype.legacy_renderSubtreeIntoContainer=function(a,b,c){var d=this._internalRoot,e=new Oi;c=void 0===c?null:c;null!==c&&e.then(c);Ki(b,d,a,e._onCommit);return e};
+Pi.prototype.createBatch=function(){var a=new Ni(this),b=a._expirationTime,c=this._internalRoot,d=c.firstBatch;if(null===d)c.firstBatch=a,a._next=null;else{for(c=null;null!==d&&d._expirationTime>=b;)c=d,d=d._next;a._next=d;null!==c&&(c._next=a)}return a};function Qi(a){return!(!a||1!==a.nodeType&&9!==a.nodeType&&11!==a.nodeType&&(8!==a.nodeType||" react-mount-point-unstable "!==a.nodeValue))}Gb=Gi;Hb=Ii;Ib=function(){W||0===gi||(Yh(gi,!1),gi=0)};
+function Ri(a,b){b||(b=a?9===a.nodeType?a.documentElement:a.firstChild:null,b=!(!b||1!==b.nodeType||!b.hasAttribute("data-reactroot")));if(!b)for(var c;c=a.lastChild;)a.removeChild(c);return new Pi(a,!1,b)}
+function Si(a,b,c,d,e){var f=c._reactRootContainer;if(f){if("function"===typeof e){var g=e;e=function(){var a=Li(f._internalRoot);g.call(a)}}null!=a?f.legacy_renderSubtreeIntoContainer(a,b,e):f.render(b,e)}else{f=c._reactRootContainer=Ri(c,d);if("function"===typeof e){var h=e;e=function(){var a=Li(f._internalRoot);h.call(a)}}Hi(function(){null!=a?f.legacy_renderSubtreeIntoContainer(a,b,e):f.render(b,e)})}return Li(f._internalRoot)}
+function Ti(a,b){var c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;Qi(b)?void 0:x("200");return Mi(a,b,null,c)}
+var Vi={createPortal:Ti,findDOMNode:function(a){if(null==a)return null;if(1===a.nodeType)return a;var b=a._reactInternalFiber;void 0===b&&("function"===typeof a.render?x("188"):x("268",Object.keys(a)));a=hd(b);a=null===a?null:a.stateNode;return a},hydrate:function(a,b,c){Qi(b)?void 0:x("200");return Si(null,a,b,!0,c)},render:function(a,b,c){Qi(b)?void 0:x("200");return Si(null,a,b,!1,c)},unstable_renderSubtreeIntoContainer:function(a,b,c,d){Qi(c)?void 0:x("200");null==a||void 0===a._reactInternalFiber?
+x("38"):void 0;return Si(a,b,c,!1,d)},unmountComponentAtNode:function(a){Qi(a)?void 0:x("40");return a._reactRootContainer?(Hi(function(){Si(null,null,a,!1,function(){a._reactRootContainer=null})}),!0):!1},unstable_createPortal:function(){return Ti.apply(void 0,arguments)},unstable_batchedUpdates:Gi,unstable_interactiveUpdates:Ii,flushSync:function(a,b){W?x("187"):void 0;var c=X;X=!0;try{return ki(a,b)}finally{X=c,Yh(1073741823,!1)}},unstable_createRoot:Ui,unstable_flushControlled:function(a){var b=
+X;X=!0;try{ki(a)}finally{(X=b)||W||Yh(1073741823,!1)}},__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{Events:[Ia,Ja,Ka,Ba.injectEventPluginsByName,pa,Qa,function(a){ya(a,Pa)},Eb,Fb,Dd,Da]}};function Ui(a,b){Qi(a)?void 0:x("299","unstable_createRoot");return new Pi(a,!0,null!=b&&!0===b.hydrate)}
+(function(a){var b=a.findFiberByHostInstance;return Te(n({},a,{overrideProps:null,currentDispatcherRef:Tb.ReactCurrentDispatcher,findHostInstanceByFiber:function(a){a=hd(a);return null===a?null:a.stateNode},findFiberByHostInstance:function(a){return b?b(a):null}}))})({findFiberByHostInstance:Ha,bundleType:0,version:"16.8.6",rendererPackageName:"react-dom"});var Wi={default:Vi},Xi=Wi&&Vi||Wi;module.exports=Xi.default||Xi;
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__(68);
+} else {}
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/** @license React v0.13.6
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+Object.defineProperty(exports,"__esModule",{value:!0});var d=null,e=!1,g=3,k=-1,l=-1,m=!1,n=!1;function p(){if(!m){var a=d.expirationTime;n?q():n=!0;r(t,a)}}
+function u(){var a=d,b=d.next;if(d===b)d=null;else{var c=d.previous;d=c.next=b;b.previous=c}a.next=a.previous=null;c=a.callback;b=a.expirationTime;a=a.priorityLevel;var f=g,Q=l;g=a;l=b;try{var h=c()}finally{g=f,l=Q}if("function"===typeof h)if(h={callback:h,priorityLevel:a,expirationTime:b,next:null,previous:null},null===d)d=h.next=h.previous=h;else{c=null;a=d;do{if(a.expirationTime>=b){c=a;break}a=a.next}while(a!==d);null===c?c=d:c===d&&(d=h,p());b=c.previous;b.next=c.previous=h;h.next=c;h.previous=
+b}}function v(){if(-1===k&&null!==d&&1===d.priorityLevel){m=!0;try{do u();while(null!==d&&1===d.priorityLevel)}finally{m=!1,null!==d?p():n=!1}}}function t(a){m=!0;var b=e;e=a;try{if(a)for(;null!==d;){var c=exports.unstable_now();if(d.expirationTime<=c){do u();while(null!==d&&d.expirationTime<=c)}else break}else if(null!==d){do u();while(null!==d&&!w())}}finally{m=!1,e=b,null!==d?p():n=!1,v()}}
+var x=Date,y="function"===typeof setTimeout?setTimeout:void 0,z="function"===typeof clearTimeout?clearTimeout:void 0,A="function"===typeof requestAnimationFrame?requestAnimationFrame:void 0,B="function"===typeof cancelAnimationFrame?cancelAnimationFrame:void 0,C,D;function E(a){C=A(function(b){z(D);a(b)});D=y(function(){B(C);a(exports.unstable_now())},100)}
+if("object"===typeof performance&&"function"===typeof performance.now){var F=performance;exports.unstable_now=function(){return F.now()}}else exports.unstable_now=function(){return x.now()};var r,q,w,G=null;"undefined"!==typeof window?G=window:"undefined"!==typeof global&&(G=global);
+if(G&&G._schedMock){var H=G._schedMock;r=H[0];q=H[1];w=H[2];exports.unstable_now=H[3]}else if("undefined"===typeof window||"function"!==typeof MessageChannel){var I=null,J=function(a){if(null!==I)try{I(a)}finally{I=null}};r=function(a){null!==I?setTimeout(r,0,a):(I=a,setTimeout(J,0,!1))};q=function(){I=null};w=function(){return!1}}else{"undefined"!==typeof console&&("function"!==typeof A&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills"),
+"function"!==typeof B&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills"));var K=null,L=!1,M=-1,N=!1,O=!1,P=0,R=33,S=33;w=function(){return P<=exports.unstable_now()};var T=new MessageChannel,U=T.port2;T.port1.onmessage=function(){L=!1;var a=K,b=M;K=null;M=-1;var c=exports.unstable_now(),f=!1;if(0>=P-c)if(-1!==b&&b<=c)f=!0;else{N||(N=!0,E(V));K=a;M=b;return}if(null!==a){O=!0;try{a(f)}finally{O=!1}}};
+var V=function(a){if(null!==K){E(V);var b=a-P+S;b<S&&R<S?(8>b&&(b=8),S=b<R?R:b):R=b;P=a+S;L||(L=!0,U.postMessage(void 0))}else N=!1};r=function(a,b){K=a;M=b;O||0>b?U.postMessage(void 0):N||(N=!0,E(V))};q=function(){K=null;L=!1;M=-1}}exports.unstable_ImmediatePriority=1;exports.unstable_UserBlockingPriority=2;exports.unstable_NormalPriority=3;exports.unstable_IdlePriority=5;exports.unstable_LowPriority=4;
+exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3}var c=g,f=k;g=a;k=exports.unstable_now();try{return b()}finally{g=c,k=f,v()}};exports.unstable_next=function(a){switch(g){case 1:case 2:case 3:var b=3;break;default:b=g}var c=g,f=k;g=b;k=exports.unstable_now();try{return a()}finally{g=c,k=f,v()}};
+exports.unstable_scheduleCallback=function(a,b){var c=-1!==k?k:exports.unstable_now();if("object"===typeof b&&null!==b&&"number"===typeof b.timeout)b=c+b.timeout;else switch(g){case 1:b=c+-1;break;case 2:b=c+250;break;case 5:b=c+1073741823;break;case 4:b=c+1E4;break;default:b=c+5E3}a={callback:a,priorityLevel:g,expirationTime:b,next:null,previous:null};if(null===d)d=a.next=a.previous=a,p();else{c=null;var f=d;do{if(f.expirationTime>b){c=f;break}f=f.next}while(f!==d);null===c?c=d:c===d&&(d=a,p());
+b=c.previous;b.next=c.previous=a;a.next=c;a.previous=b}return a};exports.unstable_cancelCallback=function(a){var b=a.next;if(null!==b){if(b===a)d=null;else{a===d&&(d=b);var c=a.previous;c.next=b;b.previous=c}a.next=a.previous=null}};exports.unstable_wrapCallback=function(a){var b=g;return function(){var c=g,f=k;g=b;k=exports.unstable_now();try{return a.apply(this,arguments)}finally{g=c,k=f,v()}}};exports.unstable_getCurrentPriorityLevel=function(){return g};
+exports.unstable_shouldYield=function(){return!e&&(null!==d&&d.expirationTime<l||w())};exports.unstable_continueExecution=function(){null!==d&&p()};exports.unstable_pauseExecution=function(){};exports.unstable_getFirstCallbackNode=function(){return d};
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(61)))
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(70);
+
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var util = __webpack_require__(71);
+
+function scrollIntoView(elem, container, config) {
+  config = config || {};
+  // document 归一化到 window
+  if (container.nodeType === 9) {
+    container = util.getWindow(container);
+  }
+
+  var allowHorizontalScroll = config.allowHorizontalScroll;
+  var onlyScrollIfNeeded = config.onlyScrollIfNeeded;
+  var alignWithTop = config.alignWithTop;
+  var alignWithLeft = config.alignWithLeft;
+
+  allowHorizontalScroll = allowHorizontalScroll === undefined ? true : allowHorizontalScroll;
+
+  var isWin = util.isWindow(container);
+  var elemOffset = util.offset(elem);
+  var eh = util.outerHeight(elem);
+  var ew = util.outerWidth(elem);
+  var containerOffset, ch, cw, containerScroll,
+    diffTop, diffBottom, win,
+    winScroll, ww, wh;
+
+  if (isWin) {
+    win = container;
+    wh = util.height(win);
+    ww = util.width(win);
+    winScroll = {
+      left: util.scrollLeft(win),
+      top: util.scrollTop(win)
+    };
+    // elem 相对 container 可视视窗的距离
+    diffTop = {
+      left: elemOffset.left - winScroll.left,
+      top: elemOffset.top - winScroll.top
+    };
+    diffBottom = {
+      left: elemOffset.left + ew - (winScroll.left + ww),
+      top: elemOffset.top + eh - (winScroll.top + wh)
+    };
+    containerScroll = winScroll;
+  } else {
+    containerOffset = util.offset(container);
+    ch = container.clientHeight;
+    cw = container.clientWidth;
+    containerScroll = {
+      left: container.scrollLeft,
+      top: container.scrollTop
+    };
+    // elem 相对 container 可视视窗的距离
+    // 注意边框, offset 是边框到根节点
+    diffTop = {
+      left: elemOffset.left - (containerOffset.left +
+      (parseFloat(util.css(container, 'borderLeftWidth')) || 0)),
+      top: elemOffset.top - (containerOffset.top +
+      (parseFloat(util.css(container, 'borderTopWidth')) || 0))
+    };
+    diffBottom = {
+      left: elemOffset.left + ew -
+      (containerOffset.left + cw +
+      (parseFloat(util.css(container, 'borderRightWidth')) || 0)),
+      top: elemOffset.top + eh -
+      (containerOffset.top + ch +
+      (parseFloat(util.css(container, 'borderBottomWidth')) || 0))
+    };
+  }
+
+  if (diffTop.top < 0 || diffBottom.top > 0) {
+    // 强制向上
+    if (alignWithTop === true) {
+      util.scrollTop(container, containerScroll.top + diffTop.top);
+    } else if (alignWithTop === false) {
+      util.scrollTop(container, containerScroll.top + diffBottom.top);
+    } else {
+      // 自动调整
+      if (diffTop.top < 0) {
+        util.scrollTop(container, containerScroll.top + diffTop.top);
+      } else {
+        util.scrollTop(container, containerScroll.top + diffBottom.top);
+      }
+    }
+  } else {
+    if (!onlyScrollIfNeeded) {
+      alignWithTop = alignWithTop === undefined ? true : !!alignWithTop;
+      if (alignWithTop) {
+        util.scrollTop(container, containerScroll.top + diffTop.top);
+      } else {
+        util.scrollTop(container, containerScroll.top + diffBottom.top);
+      }
+    }
+  }
+
+  if (allowHorizontalScroll) {
+    if (diffTop.left < 0 || diffBottom.left > 0) {
+      // 强制向上
+      if (alignWithLeft === true) {
+        util.scrollLeft(container, containerScroll.left + diffTop.left);
+      } else if (alignWithLeft === false) {
+        util.scrollLeft(container, containerScroll.left + diffBottom.left);
+      } else {
+        // 自动调整
+        if (diffTop.left < 0) {
+          util.scrollLeft(container, containerScroll.left + diffTop.left);
+        } else {
+          util.scrollLeft(container, containerScroll.left + diffBottom.left);
+        }
+      }
+    } else {
+      if (!onlyScrollIfNeeded) {
+        alignWithLeft = alignWithLeft === undefined ? true : !!alignWithLeft;
+        if (alignWithLeft) {
+          util.scrollLeft(container, containerScroll.left + diffTop.left);
+        } else {
+          util.scrollLeft(container, containerScroll.left + diffBottom.left);
+        }
+      }
+    }
+  }
+}
+
+module.exports = scrollIntoView;
+
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports) {
+
+var RE_NUM = /[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source;
+
+function getClientPosition(elem) {
+  var box, x, y;
+  var doc = elem.ownerDocument;
+  var body = doc.body;
+  var docElem = doc && doc.documentElement;
+  // 根据 GBS 最新数据，A-Grade Browsers 都已支持 getBoundingClientRect 方法，不用再考虑传统的实现方式
+  box = elem.getBoundingClientRect();
+
+  // 注：jQuery 还考虑减去 docElem.clientLeft/clientTop
+  // 但测试发现，这样反而会导致当 html 和 body 有边距/边框样式时，获取的值不正确
+  // 此外，ie6 会忽略 html 的 margin 值，幸运地是没有谁会去设置 html 的 margin
+
+  x = box.left;
+  y = box.top;
+
+  // In IE, most of the time, 2 extra pixels are added to the top and left
+  // due to the implicit 2-pixel inset border.  In IE6/7 quirks mode and
+  // IE6 standards mode, this border can be overridden by setting the
+  // document element's border to zero -- thus, we cannot rely on the
+  // offset always being 2 pixels.
+
+  // In quirks mode, the offset can be determined by querying the body's
+  // clientLeft/clientTop, but in standards mode, it is found by querying
+  // the document element's clientLeft/clientTop.  Since we already called
+  // getClientBoundingRect we have already forced a reflow, so it is not
+  // too expensive just to query them all.
+
+  // ie 下应该减去窗口的边框吧，毕竟默认 absolute 都是相对窗口定位的
+  // 窗口边框标准是设 documentElement ,quirks 时设置 body
+  // 最好禁止在 body 和 html 上边框 ，但 ie < 9 html 默认有 2px ，减去
+  // 但是非 ie 不可能设置窗口边框，body html 也不是窗口 ,ie 可以通过 html,body 设置
+  // 标准 ie 下 docElem.clientTop 就是 border-top
+  // ie7 html 即窗口边框改变不了。永远为 2
+  // 但标准 firefox/chrome/ie9 下 docElem.clientTop 是窗口边框，即使设了 border-top 也为 0
+
+  x -= docElem.clientLeft || body.clientLeft || 0;
+  y -= docElem.clientTop || body.clientTop || 0;
+
+  return {left: x, top: y};
+}
+
+function getScroll(w, top) {
+  var ret = w['page' + (top ? 'Y' : 'X') + 'Offset'];
+  var method = 'scroll' + (top ? 'Top' : 'Left');
+  if (typeof ret !== 'number') {
+    var d = w.document;
+    //ie6,7,8 standard mode
+    ret = d.documentElement[method];
+    if (typeof ret !== 'number') {
+      //quirks mode
+      ret = d.body[method];
+    }
+  }
+  return ret;
+}
+
+function getScrollLeft(w) {
+  return getScroll(w);
+}
+
+function getScrollTop(w) {
+  return getScroll(w, true);
+}
+
+function getOffset(el) {
+  var pos = getClientPosition(el);
+  var doc = el.ownerDocument;
+  var w = doc.defaultView || doc.parentWindow;
+  pos.left += getScrollLeft(w);
+  pos.top += getScrollTop(w);
+  return pos;
+}
+function _getComputedStyle(elem, name, computedStyle) {
+  var val = '';
+  var d = elem.ownerDocument;
+
+  // https://github.com/kissyteam/kissy/issues/61
+  if ((computedStyle = (computedStyle || d.defaultView.getComputedStyle(elem, null)))) {
+    val = computedStyle.getPropertyValue(name) || computedStyle[name];
+  }
+
+  return val;
+}
+
+var _RE_NUM_NO_PX = new RegExp('^(' + RE_NUM + ')(?!px)[a-z%]+$', 'i');
+var RE_POS = /^(top|right|bottom|left)$/,
+  CURRENT_STYLE = 'currentStyle',
+  RUNTIME_STYLE = 'runtimeStyle',
+  LEFT = 'left',
+  PX = 'px';
+
+function _getComputedStyleIE(elem, name) {
+  // currentStyle maybe null
+  // http://msdn.microsoft.com/en-us/library/ms535231.aspx
+  var ret = elem[CURRENT_STYLE] && elem[CURRENT_STYLE][name];
+
+  // 当 width/height 设置为百分比时，通过 pixelLeft 方式转换的 width/height 值
+  // 一开始就处理了! CUSTOM_STYLE.height,CUSTOM_STYLE.width ,cssHook 解决@2011-08-19
+  // 在 ie 下不对，需要直接用 offset 方式
+  // borderWidth 等值也有问题，但考虑到 borderWidth 设为百分比的概率很小，这里就不考虑了
+
+  // From the awesome hack by Dean Edwards
+  // http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291
+  // If we're not dealing with a regular pixel number
+  // but a number that has a weird ending, we need to convert it to pixels
+  // exclude left right for relativity
+  if (_RE_NUM_NO_PX.test(ret) && !RE_POS.test(name)) {
+    // Remember the original values
+    var style = elem.style,
+      left = style[LEFT],
+      rsLeft = elem[RUNTIME_STYLE][LEFT];
+
+    // prevent flashing of content
+    elem[RUNTIME_STYLE][LEFT] = elem[CURRENT_STYLE][LEFT];
+
+    // Put in the new values to get a computed value out
+    style[LEFT] = name === 'fontSize' ? '1em' : (ret || 0);
+    ret = style.pixelLeft + PX;
+
+    // Revert the changed values
+    style[LEFT] = left;
+
+    elem[RUNTIME_STYLE][LEFT] = rsLeft;
+  }
+  return ret === '' ? 'auto' : ret;
+}
+
+var getComputedStyleX;
+if (typeof window !== 'undefined') {
+  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
+}
+
+// 设置 elem 相对 elem.ownerDocument 的坐标
+function setOffset(elem, offset) {
+  // set position first, in-case top/left are set even on static elem
+  if (css(elem, 'position') === 'static') {
+    elem.style.position = 'relative';
+  }
+
+  var old = getOffset(elem),
+    ret = {},
+    current, key;
+
+  for (key in offset) {
+    current = parseFloat(css(elem, key)) || 0;
+    ret[key] = current + offset[key] - old[key];
+  }
+  css(elem, ret);
+}
+
+function each(arr, fn) {
+  for (var i = 0; i < arr.length; i++) {
+    fn(arr[i]);
+  }
+}
+
+function isBorderBoxFn(elem) {
+  return getComputedStyleX(elem, 'boxSizing') === 'border-box';
+}
+
+var BOX_MODELS = ['margin', 'border', 'padding'],
+  CONTENT_INDEX = -1,
+  PADDING_INDEX = 2,
+  BORDER_INDEX = 1,
+  MARGIN_INDEX = 0;
+
+function swap(elem, options, callback) {
+  var old = {},
+    style = elem.style,
+    name;
+
+  // Remember the old values, and insert the new ones
+  for (name in options) {
+    old[name] = style[name];
+    style[name] = options[name];
+  }
+
+  callback.call(elem);
+
+  // Revert the old values
+  for (name in options) {
+    style[name] = old[name];
+  }
+}
+
+function getPBMWidth(elem, props, which) {
+  var value = 0, prop, j, i;
+  for (j = 0; j < props.length; j++) {
+    prop = props[j];
+    if (prop) {
+      for (i = 0; i < which.length; i++) {
+        var cssProp;
+        if (prop === 'border') {
+          cssProp = prop + which[i] + 'Width';
+        } else {
+          cssProp = prop + which[i];
+        }
+        value += parseFloat(getComputedStyleX(elem, cssProp)) || 0;
+      }
+    }
+  }
+  return value;
+}
+
+/**
+ * A crude way of determining if an object is a window
+ * @member util
+ */
+function isWindow(obj) {
+  // must use == for ie8
+  /*jshint eqeqeq:false*/
+  return obj != null && obj == obj.window;
+}
+
+var domUtils = {};
+
+each(['Width', 'Height'], function (name) {
+  domUtils['doc' + name] = function (refWin) {
+    var d = refWin.document;
+    return Math.max(
+      //firefox chrome documentElement.scrollHeight< body.scrollHeight
+      //ie standard mode : documentElement.scrollHeight> body.scrollHeight
+      d.documentElement['scroll' + name],
+      //quirks : documentElement.scrollHeight 最大等于可视窗口多一点？
+      d.body['scroll' + name],
+      domUtils['viewport' + name](d));
+  };
+
+  domUtils['viewport' + name] = function (win) {
+    // pc browser includes scrollbar in window.innerWidth
+    var prop = 'client' + name,
+      doc = win.document,
+      body = doc.body,
+      documentElement = doc.documentElement,
+      documentElementProp = documentElement[prop];
+    // 标准模式取 documentElement
+    // backcompat 取 body
+    return doc.compatMode === 'CSS1Compat' && documentElementProp ||
+      body && body[prop] || documentElementProp;
+  };
+});
+
+/*
+ 得到元素的大小信息
+ @param elem
+ @param name
+ @param {String} [extra]  'padding' : (css width) + padding
+ 'border' : (css width) + padding + border
+ 'margin' : (css width) + padding + border + margin
+ */
+function getWH(elem, name, extra) {
+  if (isWindow(elem)) {
+    return name === 'width' ? domUtils.viewportWidth(elem) : domUtils.viewportHeight(elem);
+  } else if (elem.nodeType === 9) {
+    return name === 'width' ? domUtils.docWidth(elem) : domUtils.docHeight(elem);
+  }
+  var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'],
+    borderBoxValue = name === 'width' ? elem.offsetWidth : elem.offsetHeight;
+  var computedStyle = getComputedStyleX(elem);
+  var isBorderBox = isBorderBoxFn(elem, computedStyle);
+  var cssBoxValue = 0;
+  if (borderBoxValue == null || borderBoxValue <= 0) {
+    borderBoxValue = undefined;
+    // Fall back to computed then un computed css if necessary
+    cssBoxValue = getComputedStyleX(elem, name);
+    if (cssBoxValue == null || (Number(cssBoxValue)) < 0) {
+      cssBoxValue = elem.style[name] || 0;
+    }
+    // Normalize '', auto, and prepare for extra
+    cssBoxValue = parseFloat(cssBoxValue) || 0;
+  }
+  if (extra === undefined) {
+    extra = isBorderBox ? BORDER_INDEX : CONTENT_INDEX;
+  }
+  var borderBoxValueOrIsBorderBox = borderBoxValue !== undefined || isBorderBox;
+  var val = borderBoxValue || cssBoxValue;
+  if (extra === CONTENT_INDEX) {
+    if (borderBoxValueOrIsBorderBox) {
+      return val - getPBMWidth(elem, ['border', 'padding'],
+          which, computedStyle);
+    } else {
+      return cssBoxValue;
+    }
+  } else if (borderBoxValueOrIsBorderBox) {
+    return val + (extra === BORDER_INDEX ? 0 :
+        (extra === PADDING_INDEX ?
+          -getPBMWidth(elem, ['border'], which, computedStyle) :
+          getPBMWidth(elem, ['margin'], which, computedStyle)));
+  } else {
+    return cssBoxValue + getPBMWidth(elem, BOX_MODELS.slice(extra),
+        which, computedStyle);
+  }
+}
+
+var cssShow = {position: 'absolute', visibility: 'hidden', display: 'block'};
+
+// fix #119 : https://github.com/kissyteam/kissy/issues/119
+function getWHIgnoreDisplay(elem) {
+  var val, args = arguments;
+  // in case elem is window
+  // elem.offsetWidth === undefined
+  if (elem.offsetWidth !== 0) {
+    val = getWH.apply(undefined, args);
+  } else {
+    swap(elem, cssShow, function () {
+      val = getWH.apply(undefined, args);
+    });
+  }
+  return val;
+}
+
+each(['width', 'height'], function (name) {
+  var first = name.charAt(0).toUpperCase() + name.slice(1);
+  domUtils['outer' + first] = function (el, includeMargin) {
+    return el && getWHIgnoreDisplay(el, name, includeMargin ? MARGIN_INDEX : BORDER_INDEX);
+  };
+  var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'];
+
+  domUtils[name] = function (elem, val) {
+    if (val !== undefined) {
+      if (elem) {
+        var computedStyle = getComputedStyleX(elem);
+        var isBorderBox = isBorderBoxFn(elem);
+        if (isBorderBox) {
+          val += getPBMWidth(elem, ['padding', 'border'], which, computedStyle);
+        }
+        return css(elem, name, val);
+      }
+      return;
+    }
+    return elem && getWHIgnoreDisplay(elem, name, CONTENT_INDEX);
+  };
+});
+
+function css(el, name, value) {
+  if (typeof name === 'object') {
+    for (var i in name) {
+      css(el, i, name[i]);
+    }
+    return;
+  }
+  if (typeof value !== 'undefined') {
+    if (typeof value === 'number') {
+      value = value + 'px';
+    }
+    el.style[name] = value;
+  } else {
+    return getComputedStyleX(el, name);
+  }
+}
+
+function mix(to, from) {
+  for (var i in from) {
+    to[i] = from[i];
+  }
+  return to;
+}
+
+var utils = module.exports = {
+  getWindow: function (node) {
+    var doc = node.ownerDocument || node;
+    return doc.defaultView || doc.parentWindow;
+  },
+  offset: function (el, value) {
+    if (typeof value !== 'undefined') {
+      setOffset(el, value);
+    } else {
+      return getOffset(el);
+    }
+  },
+  isWindow: isWindow,
+  each: each,
+  css: css,
+  clone: function (obj) {
+    var ret = {};
+    for (var i in obj) {
+      ret[i] = obj[i];
+    }
+    var overflow = obj.overflow;
+    if (overflow) {
+      for (i in obj) {
+        ret.overflow[i] = obj.overflow[i];
+      }
+    }
+    return ret;
+  },
+  mix: mix,
+  scrollLeft: function (w, v) {
+    if (isWindow(w)) {
+      if (v === undefined) {
+        return getScrollLeft(w);
+      } else {
+        window.scrollTo(v, getScrollTop(w));
+      }
+    } else {
+      if (v === undefined) {
+        return w.scrollLeft;
+      } else {
+        w.scrollLeft = v;
+      }
+    }
+  },
+  scrollTop: function (w, v) {
+    if (isWindow(w)) {
+      if (v === undefined) {
+        return getScrollTop(w);
+      } else {
+        window.scrollTo(getScrollLeft(w), v);
+      }
+    } else {
+      if (v === undefined) {
+        return w.scrollTop;
+      } else {
+        w.scrollTop = v;
+      }
+    }
+  },
+  merge: function () {
+    var ret = {};
+    for (var i = 0; i < arguments.length; i++) {
+      utils.mix(ret, arguments[i]);
+    }
+    return ret;
+  },
+  viewportWidth: 0,
+  viewportHeight: 0
+};
+
+mix(utils, domUtils);
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matchStateToTerm", function() { return matchStateToTerm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sortStates", function() { return sortStates; });
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(51);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_0__);
+
+function matchStateToTerm(state, value) {
+  return state.name.toLowerCase().indexOf(value.toLowerCase()) !== -1;
+}
+function sortStates(a, b, value) {
+  var aLower = a.name.toLowerCase();
+  var bLower = b.name.toLowerCase();
+  var valueLower = value.toLowerCase();
+  var queryPosA = aLower.indexOf(valueLower);
+  var queryPosB = bLower.indexOf(valueLower);
+
+  if (queryPosA !== queryPosB) {
+    return queryPosA - queryPosB;
+  }
+
+  return aLower < bLower ? -1 : 1;
+}
+
+/***/ }),
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Item", function() { return Item; });
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(74);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(75);
+
+
+
+
+
+
+var Item =
+/*#__PURE__*/
+function (_Component) {
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_3___default()(Item, _Component);
+
+  function Item() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Item.prototype;
+
+  _proto.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
+    var nextIsHighlighted = _ref.isHighlighted;
+    var isHighlighted = this.props.isHighlighted;
+    return isHighlighted !== nextIsHighlighted;
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        icon = _this$props.icon,
+        name = _this$props.name,
+        isHighlighted = _this$props.isHighlighted,
+        props = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2___default()(_this$props, ["icon", "name", "isHighlighted"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_5__["Item"], Object.assign({
+      isHighlighted: isHighlighted
+    }, props), icon && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
+      src: icon,
+      alt: "icon"
+    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_5__["Text"], null, name));
+  };
+
+  return Item;
+}(react__WEBPACK_IMPORTED_MODULE_4__["Component"]);
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports) {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutPropertiesLoose;
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AutocompleteContainer", function() { return AutocompleteContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Item", function() { return Item; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Text", function() { return Text; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Icon", function() { return Icon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectedIcon", function() { return SelectedIcon; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+/* harmony import */ var _Input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(86);
+
+
+var width = "200px";
+var isHighlightedStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["background-color:rgba(200,200,200,0.4);"]);
+var AutocompleteContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "sc-16ttqp6-0"
+})(["z-index:4;position:relative;width:", ";> div:first-of-type{width:100%;}"], width);
+var Item = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "sc-16ttqp6-1"
+})(["width:", ";font-weight:600;display:flex;align-items:center;cursor:pointer;height:24px;padding:4px;", ""], width, function (_ref) {
+  var isHighlighted = _ref.isHighlighted;
+  return isHighlighted && isHighlightedStyle;
+});
+var Text = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.withConfig({
+  componentId: "sc-16ttqp6-2"
+})(["white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"]);
+var Icon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  componentId: "sc-16ttqp6-3"
+})(["width:24px;height:auto;margin-right:4px;"]);
+var Input = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_Input__WEBPACK_IMPORTED_MODULE_1__["Input"]).withConfig({
+  componentId: "sc-16ttqp6-4"
+})(["padding-left:32px;"]);
+var SelectedIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(Icon).withConfig({
+  componentId: "sc-16ttqp6-5"
+})(["z-index:4;position:absolute;top:50%;transform:translateY(-50%);left:4px;"]);
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createGlobalStyle", function() { return createGlobalStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "css", function() { return css; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isStyledComponent", function() { return isStyledComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframes", function() { return keyframes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerStyleSheet", function() { return ServerStyleSheet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetConsumer", function() { return StyleSheetConsumer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetContext", function() { return StyleSheetContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetManager", function() { return StyleSheetManager; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeConsumer", function() { return ThemeConsumer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeContext", function() { return ThemeContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeProvider", function() { return ThemeProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withTheme", function() { return withTheme; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS", function() { return __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS; });
+/* harmony import */ var stylis_stylis_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(78);
+/* harmony import */ var stylis_stylis_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(stylis_stylis_min__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(79);
+/* harmony import */ var stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(80);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(81);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var memoize_one__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(83);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(62);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(65);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(84);
+
+
+
+
+
+
+
+
+
+
+// 
+
+var interleave = (function (strings, interpolations) {
+  var result = [strings[0]];
+
+  for (var i = 0, len = interpolations.length; i < len; i += 1) {
+    result.push(interpolations[i], strings[i + 1]);
+  }
+
+  return result;
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var inherits = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+var objectWithoutProperties = function (obj, keys) {
+  var target = {};
+
+  for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;
+    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+    target[i] = obj[i];
+  }
+
+  return target;
+};
+
+var possibleConstructorReturn = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+};
+
+// 
+var isPlainObject = (function (x) {
+  return (typeof x === 'undefined' ? 'undefined' : _typeof(x)) === 'object' && x.constructor === Object;
+});
+
+// 
+var EMPTY_ARRAY = Object.freeze([]);
+var EMPTY_OBJECT = Object.freeze({});
+
+// 
+function isFunction(test) {
+  return typeof test === 'function';
+}
+
+// 
+
+function getComponentName(target) {
+  return ( false) || target.displayName || target.name || 'Component';
+}
+
+// 
+function isStatelessFunction(test) {
+  return typeof test === 'function' && !(test.prototype && test.prototype.isReactComponent);
+}
+
+// 
+function isStyledComponent(target) {
+  return target && typeof target.styledComponentId === 'string';
+}
+
+// 
+
+var SC_ATTR = typeof process !== 'undefined' && {}.SC_ATTR || 'data-styled';
+
+var SC_VERSION_ATTR = 'data-styled-version';
+
+var SC_STREAM_ATTR = 'data-styled-streamed';
+
+var IS_BROWSER = typeof window !== 'undefined' && 'HTMLElement' in window;
+
+var DISABLE_SPEEDY = typeof SC_DISABLE_SPEEDY === 'boolean' && SC_DISABLE_SPEEDY || "production" !== 'production';
+
+// Shared empty execution context when generating static styles
+var STATIC_EXECUTION_CONTEXT = {};
+
+// 
+
+
+/**
+ * Parse errors.md and turn it into a simple hash of code: message
+ */
+var ERRORS =  false ? undefined : {};
+
+/**
+ * super basic version of sprintf
+ */
+function format() {
+  var a = arguments.length <= 0 ? undefined : arguments[0];
+  var b = [];
+
+  for (var c = 1, len = arguments.length; c < len; c += 1) {
+    b.push(arguments.length <= c ? undefined : arguments[c]);
+  }
+
+  b.forEach(function (d) {
+    a = a.replace(/%[a-z]/, d);
+  });
+
+  return a;
+}
+
+/**
+ * Create an error file out of errors.md for development and a simple web link to the full errors
+ * in production mode.
+ */
+
+var StyledComponentsError = function (_Error) {
+  inherits(StyledComponentsError, _Error);
+
+  function StyledComponentsError(code) {
+    classCallCheck(this, StyledComponentsError);
+
+    for (var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      interpolations[_key - 1] = arguments[_key];
+    }
+
+    if (true) {
+      var _this = possibleConstructorReturn(this, _Error.call(this, 'An error occurred. See https://github.com/styled-components/styled-components/blob/master/packages/styled-components/src/utils/errors.md#' + code + ' for more information. ' + (interpolations ? 'Additional arguments: ' + interpolations.join(', ') : '')));
+    } else { var _this; }
+    return possibleConstructorReturn(_this);
+  }
+
+  return StyledComponentsError;
+}(Error);
+
+// 
+var SC_COMPONENT_ID = /^[^\S\n]*?\/\* sc-component-id:\s*(\S+)\s+\*\//gm;
+
+var extractComps = (function (maybeCSS) {
+  var css = '' + (maybeCSS || ''); // Definitely a string, and a clone
+  var existingComponents = [];
+  css.replace(SC_COMPONENT_ID, function (match, componentId, matchIndex) {
+    existingComponents.push({ componentId: componentId, matchIndex: matchIndex });
+    return match;
+  });
+  return existingComponents.map(function (_ref, i) {
+    var componentId = _ref.componentId,
+        matchIndex = _ref.matchIndex;
+
+    var nextComp = existingComponents[i + 1];
+    var cssFromDOM = nextComp ? css.slice(matchIndex, nextComp.matchIndex) : css.slice(matchIndex);
+    return { componentId: componentId, cssFromDOM: cssFromDOM };
+  });
+});
+
+// 
+
+var COMMENT_REGEX = /^\s*\/\/.*$/gm;
+
+// NOTE: This stylis instance is only used to split rules from SSR'd style tags
+var stylisSplitter = new stylis_stylis_min__WEBPACK_IMPORTED_MODULE_0___default.a({
+  global: false,
+  cascade: true,
+  keyframe: false,
+  prefix: false,
+  compress: false,
+  semicolon: true
+});
+
+var stylis = new stylis_stylis_min__WEBPACK_IMPORTED_MODULE_0___default.a({
+  global: false,
+  cascade: true,
+  keyframe: false,
+  prefix: true,
+  compress: false,
+  semicolon: false // NOTE: This means "autocomplete missing semicolons"
+});
+
+// Wrap `insertRulePlugin to build a list of rules,
+// and then make our own plugin to return the rules. This
+// makes it easier to hook into the existing SSR architecture
+
+var parsingRules = [];
+
+// eslint-disable-next-line consistent-return
+var returnRulesPlugin = function returnRulesPlugin(context) {
+  if (context === -2) {
+    var parsedRules = parsingRules;
+    parsingRules = [];
+    return parsedRules;
+  }
+};
+
+var parseRulesPlugin = stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_1___default()(function (rule) {
+  parsingRules.push(rule);
+});
+
+var _componentId = void 0;
+var _selector = void 0;
+var _selectorRegexp = void 0;
+
+var selfReferenceReplacer = function selfReferenceReplacer(match, offset, string) {
+  if (
+  // the first self-ref is always untouched
+  offset > 0 &&
+  // there should be at least two self-refs to do a replacement (.b > .b)
+  string.slice(0, offset).indexOf(_selector) !== -1 &&
+  // no consecutive self refs (.b.b); that is a precedence boost and treated differently
+  string.slice(offset - _selector.length, offset) !== _selector) {
+    return '.' + _componentId;
+  }
+
+  return match;
+};
+
+/**
+ * When writing a style like
+ *
+ * & + & {
+ *   color: red;
+ * }
+ *
+ * The second ampersand should be a reference to the static component class. stylis
+ * has no knowledge of static class so we have to intelligently replace the base selector.
+ */
+var selfReferenceReplacementPlugin = function selfReferenceReplacementPlugin(context, _, selectors) {
+  if (context === 2 && selectors.length && selectors[0].lastIndexOf(_selector) > 0) {
+    // eslint-disable-next-line no-param-reassign
+    selectors[0] = selectors[0].replace(_selectorRegexp, selfReferenceReplacer);
+  }
+};
+
+stylis.use([selfReferenceReplacementPlugin, parseRulesPlugin, returnRulesPlugin]);
+stylisSplitter.use([parseRulesPlugin, returnRulesPlugin]);
+
+var splitByRules = function splitByRules(css) {
+  return stylisSplitter('', css);
+};
+
+function stringifyRules(rules, selector, prefix) {
+  var componentId = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '&';
+
+  var flatCSS = rules.join('').replace(COMMENT_REGEX, ''); // replace JS comments
+
+  var cssStr = selector && prefix ? prefix + ' ' + selector + ' { ' + flatCSS + ' }' : flatCSS;
+
+  // stylis has no concept of state to be passed to plugins
+  // but since JS is single=threaded, we can rely on that to ensure
+  // these properties stay in sync with the current stylis run
+  _componentId = componentId;
+  _selector = selector;
+  _selectorRegexp = new RegExp('\\' + _selector + '\\b', 'g');
+
+  return stylis(prefix || !selector ? '' : selector, cssStr);
+}
+
+// 
+/* eslint-disable camelcase, no-undef */
+
+var getNonce = (function () {
+  return  true ? __webpack_require__.nc : undefined;
+});
+
+// 
+/* These are helpers for the StyleTags to keep track of the injected
+ * rule names for each (component) ID that they're keeping track of.
+ * They're crucial for detecting whether a name has already been
+ * injected.
+ * (This excludes rehydrated names) */
+
+/* adds a new ID:name pairing to a names dictionary */
+var addNameForId = function addNameForId(names, id, name) {
+  if (name) {
+    // eslint-disable-next-line no-param-reassign
+    var namesForId = names[id] || (names[id] = Object.create(null));
+    namesForId[name] = true;
+  }
+};
+
+/* resets an ID entirely by overwriting it in the dictionary */
+var resetIdNames = function resetIdNames(names, id) {
+  // eslint-disable-next-line no-param-reassign
+  names[id] = Object.create(null);
+};
+
+/* factory for a names dictionary checking the existance of an ID:name pairing */
+var hasNameForId = function hasNameForId(names) {
+  return function (id, name) {
+    return names[id] !== undefined && names[id][name];
+  };
+};
+
+/* stringifies names for the html/element output */
+var stringifyNames = function stringifyNames(names) {
+  var str = '';
+  // eslint-disable-next-line guard-for-in
+  for (var id in names) {
+    str += Object.keys(names[id]).join(' ') + ' ';
+  }
+  return str.trim();
+};
+
+/* clones the nested names dictionary */
+var cloneNames = function cloneNames(names) {
+  var clone = Object.create(null);
+  // eslint-disable-next-line guard-for-in
+  for (var id in names) {
+    clone[id] = _extends({}, names[id]);
+  }
+  return clone;
+};
+
+// 
+
+/* These are helpers that deal with the insertRule (aka speedy) API
+ * They are used in the StyleTags and specifically the speedy tag
+ */
+
+/* retrieve a sheet for a given style tag */
+var sheetForTag = function sheetForTag(tag) {
+  // $FlowFixMe
+  if (tag.sheet) return tag.sheet;
+
+  /* Firefox quirk requires us to step through all stylesheets to find one owned by the given tag */
+  var size = document.styleSheets.length;
+  for (var i = 0; i < size; i += 1) {
+    var sheet = document.styleSheets[i];
+    // $FlowFixMe
+    if (sheet.ownerNode === tag) return sheet;
+  }
+
+  /* we should always be able to find a tag */
+  throw new StyledComponentsError(10);
+};
+
+/* insert a rule safely and return whether it was actually injected */
+var safeInsertRule = function safeInsertRule(sheet, cssRule, index) {
+  /* abort early if cssRule string is falsy */
+  if (!cssRule) return false;
+
+  var maxIndex = sheet.cssRules.length;
+
+  try {
+    /* use insertRule and cap passed index with maxIndex (no of cssRules) */
+    sheet.insertRule(cssRule, index <= maxIndex ? index : maxIndex);
+  } catch (err) {
+    /* any error indicates an invalid rule */
+    return false;
+  }
+
+  return true;
+};
+
+/* deletes `size` rules starting from `removalIndex` */
+var deleteRules = function deleteRules(sheet, removalIndex, size) {
+  var lowerBound = removalIndex - size;
+  for (var i = removalIndex; i > lowerBound; i -= 1) {
+    sheet.deleteRule(i);
+  }
+};
+
+// 
+
+/* this marker separates component styles and is important for rehydration */
+var makeTextMarker = function makeTextMarker(id) {
+  return '\n/* sc-component-id: ' + id + ' */\n';
+};
+
+/* add up all numbers in array up until and including the index */
+var addUpUntilIndex = function addUpUntilIndex(sizes, index) {
+  var totalUpToIndex = 0;
+  for (var i = 0; i <= index; i += 1) {
+    totalUpToIndex += sizes[i];
+  }
+
+  return totalUpToIndex;
+};
+
+/* create a new style tag after lastEl */
+var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
+  var el = document.createElement('style');
+  el.setAttribute(SC_ATTR, '');
+  el.setAttribute(SC_VERSION_ATTR, "4.2.0");
+
+  var nonce = getNonce();
+  if (nonce) {
+    el.setAttribute('nonce', nonce);
+  }
+
+  /* Work around insertRule quirk in EdgeHTML */
+  el.appendChild(document.createTextNode(''));
+
+  if (target && !tagEl) {
+    /* Append to target when no previous element was passed */
+    target.appendChild(el);
+  } else {
+    if (!tagEl || !target || !tagEl.parentNode) {
+      throw new StyledComponentsError(6);
+    }
+
+    /* Insert new style tag after the previous one */
+    tagEl.parentNode.insertBefore(el, insertBefore ? tagEl : tagEl.nextSibling);
+  }
+
+  return el;
+};
+
+/* takes a css factory function and outputs an html styled tag factory */
+var wrapAsHtmlTag = function wrapAsHtmlTag(css, names) {
+  return function (additionalAttrs) {
+    var nonce = getNonce();
+    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.2.0" + '"', additionalAttrs];
+
+    var htmlAttr = attrs.filter(Boolean).join(' ');
+    return '<style ' + htmlAttr + '>' + css() + '</style>';
+  };
+};
+
+/* takes a css factory function and outputs an element factory */
+var wrapAsElement = function wrapAsElement(css, names) {
+  return function () {
+    var _props;
+
+    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.2.0", _props);
+
+    var nonce = getNonce();
+    if (nonce) {
+      // $FlowFixMe
+      props.nonce = nonce;
+    }
+
+    // eslint-disable-next-line react/no-danger
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement('style', _extends({}, props, { dangerouslySetInnerHTML: { __html: css() } }));
+  };
+};
+
+var getIdsFromMarkersFactory = function getIdsFromMarkersFactory(markers) {
+  return function () {
+    return Object.keys(markers);
+  };
+};
+
+/* speedy tags utilise insertRule */
+var makeSpeedyTag = function makeSpeedyTag(el, getImportRuleTag) {
+  var names = Object.create(null);
+  var markers = Object.create(null);
+  var sizes = [];
+
+  var extractImport = getImportRuleTag !== undefined;
+  /* indicates whether getImportRuleTag was called */
+  var usedImportRuleTag = false;
+
+  var insertMarker = function insertMarker(id) {
+    var prev = markers[id];
+    if (prev !== undefined) {
+      return prev;
+    }
+
+    markers[id] = sizes.length;
+    sizes.push(0);
+    resetIdNames(names, id);
+
+    return markers[id];
+  };
+
+  var insertRules = function insertRules(id, cssRules, name) {
+    var marker = insertMarker(id);
+    var sheet = sheetForTag(el);
+    var insertIndex = addUpUntilIndex(sizes, marker);
+
+    var injectedRules = 0;
+    var importRules = [];
+    var cssRulesSize = cssRules.length;
+
+    for (var i = 0; i < cssRulesSize; i += 1) {
+      var cssRule = cssRules[i];
+      var mayHaveImport = extractImport; /* @import rules are reordered to appear first */
+      if (mayHaveImport && cssRule.indexOf('@import') !== -1) {
+        importRules.push(cssRule);
+      } else if (safeInsertRule(sheet, cssRule, insertIndex + injectedRules)) {
+        mayHaveImport = false;
+        injectedRules += 1;
+      }
+    }
+
+    if (extractImport && importRules.length > 0) {
+      usedImportRuleTag = true;
+      // $FlowFixMe
+      getImportRuleTag().insertRules(id + '-import', importRules);
+    }
+
+    sizes[marker] += injectedRules; /* add up no of injected rules */
+    addNameForId(names, id, name);
+  };
+
+  var removeRules = function removeRules(id) {
+    var marker = markers[id];
+    if (marker === undefined) return;
+
+    var size = sizes[marker];
+    var sheet = sheetForTag(el);
+    var removalIndex = addUpUntilIndex(sizes, marker) - 1;
+    deleteRules(sheet, removalIndex, size);
+    sizes[marker] = 0;
+    resetIdNames(names, id);
+
+    if (extractImport && usedImportRuleTag) {
+      // $FlowFixMe
+      getImportRuleTag().removeRules(id + '-import');
+    }
+  };
+
+  var css = function css() {
+    var _sheetForTag = sheetForTag(el),
+        cssRules = _sheetForTag.cssRules;
+
+    var str = '';
+
+    // eslint-disable-next-line guard-for-in
+    for (var id in markers) {
+      str += makeTextMarker(id);
+      var marker = markers[id];
+      var end = addUpUntilIndex(sizes, marker);
+      var size = sizes[marker];
+      for (var i = end - size; i < end; i += 1) {
+        var rule = cssRules[i];
+        if (rule !== undefined) {
+          str += rule.cssText;
+        }
+      }
+    }
+
+    return str;
+  };
+
+  return {
+    clone: function clone() {
+      throw new StyledComponentsError(5);
+    },
+
+    css: css,
+    getIds: getIdsFromMarkersFactory(markers),
+    hasNameForId: hasNameForId(names),
+    insertMarker: insertMarker,
+    insertRules: insertRules,
+    removeRules: removeRules,
+    sealed: false,
+    styleTag: el,
+    toElement: wrapAsElement(css, names),
+    toHTML: wrapAsHtmlTag(css, names)
+  };
+};
+
+var makeTextNode = function makeTextNode(id) {
+  return document.createTextNode(makeTextMarker(id));
+};
+
+var makeBrowserTag = function makeBrowserTag(el, getImportRuleTag) {
+  var names = Object.create(null);
+  var markers = Object.create(null);
+
+  var extractImport = getImportRuleTag !== undefined;
+
+  /* indicates whether getImportRuleTag was called */
+  var usedImportRuleTag = false;
+
+  var insertMarker = function insertMarker(id) {
+    var prev = markers[id];
+    if (prev !== undefined) {
+      return prev;
+    }
+
+    markers[id] = makeTextNode(id);
+    el.appendChild(markers[id]);
+    names[id] = Object.create(null);
+
+    return markers[id];
+  };
+
+  var insertRules = function insertRules(id, cssRules, name) {
+    var marker = insertMarker(id);
+    var importRules = [];
+    var cssRulesSize = cssRules.length;
+
+    for (var i = 0; i < cssRulesSize; i += 1) {
+      var rule = cssRules[i];
+      var mayHaveImport = extractImport;
+      if (mayHaveImport && rule.indexOf('@import') !== -1) {
+        importRules.push(rule);
+      } else {
+        mayHaveImport = false;
+        var separator = i === cssRulesSize - 1 ? '' : ' ';
+        marker.appendData('' + rule + separator);
+      }
+    }
+
+    addNameForId(names, id, name);
+
+    if (extractImport && importRules.length > 0) {
+      usedImportRuleTag = true;
+      // $FlowFixMe
+      getImportRuleTag().insertRules(id + '-import', importRules);
+    }
+  };
+
+  var removeRules = function removeRules(id) {
+    var marker = markers[id];
+    if (marker === undefined) return;
+
+    /* create new empty text node and replace the current one */
+    var newMarker = makeTextNode(id);
+    el.replaceChild(newMarker, marker);
+    markers[id] = newMarker;
+    resetIdNames(names, id);
+
+    if (extractImport && usedImportRuleTag) {
+      // $FlowFixMe
+      getImportRuleTag().removeRules(id + '-import');
+    }
+  };
+
+  var css = function css() {
+    var str = '';
+
+    // eslint-disable-next-line guard-for-in
+    for (var id in markers) {
+      str += markers[id].data;
+    }
+
+    return str;
+  };
+
+  return {
+    clone: function clone() {
+      throw new StyledComponentsError(5);
+    },
+
+    css: css,
+    getIds: getIdsFromMarkersFactory(markers),
+    hasNameForId: hasNameForId(names),
+    insertMarker: insertMarker,
+    insertRules: insertRules,
+    removeRules: removeRules,
+    sealed: false,
+    styleTag: el,
+    toElement: wrapAsElement(css, names),
+    toHTML: wrapAsHtmlTag(css, names)
+  };
+};
+
+var makeServerTag = function makeServerTag(namesArg, markersArg) {
+  var names = namesArg === undefined ? Object.create(null) : namesArg;
+  var markers = markersArg === undefined ? Object.create(null) : markersArg;
+
+  var insertMarker = function insertMarker(id) {
+    var prev = markers[id];
+    if (prev !== undefined) {
+      return prev;
+    }
+
+    return markers[id] = [''];
+  };
+
+  var insertRules = function insertRules(id, cssRules, name) {
+    var marker = insertMarker(id);
+    marker[0] += cssRules.join(' ');
+    addNameForId(names, id, name);
+  };
+
+  var removeRules = function removeRules(id) {
+    var marker = markers[id];
+    if (marker === undefined) return;
+    marker[0] = '';
+    resetIdNames(names, id);
+  };
+
+  var css = function css() {
+    var str = '';
+    // eslint-disable-next-line guard-for-in
+    for (var id in markers) {
+      var cssForId = markers[id][0];
+      if (cssForId) {
+        str += makeTextMarker(id) + cssForId;
+      }
+    }
+    return str;
+  };
+
+  var clone = function clone() {
+    var namesClone = cloneNames(names);
+    var markersClone = Object.create(null);
+
+    // eslint-disable-next-line guard-for-in
+    for (var id in markers) {
+      markersClone[id] = [markers[id][0]];
+    }
+
+    return makeServerTag(namesClone, markersClone);
+  };
+
+  var tag = {
+    clone: clone,
+    css: css,
+    getIds: getIdsFromMarkersFactory(markers),
+    hasNameForId: hasNameForId(names),
+    insertMarker: insertMarker,
+    insertRules: insertRules,
+    removeRules: removeRules,
+    sealed: false,
+    styleTag: null,
+    toElement: wrapAsElement(css, names),
+    toHTML: wrapAsHtmlTag(css, names)
+  };
+
+  return tag;
+};
+
+var makeTag = function makeTag(target, tagEl, forceServer, insertBefore, getImportRuleTag) {
+  if (IS_BROWSER && !forceServer) {
+    var el = makeStyleTag(target, tagEl, insertBefore);
+
+    if (DISABLE_SPEEDY) {
+      return makeBrowserTag(el, getImportRuleTag);
+    } else {
+      return makeSpeedyTag(el, getImportRuleTag);
+    }
+  }
+
+  return makeServerTag();
+};
+
+var rehydrate = function rehydrate(tag, els, extracted) {
+  /* add all extracted components to the new tag */
+  for (var i = 0, len = extracted.length; i < len; i += 1) {
+    var _extracted$i = extracted[i],
+        componentId = _extracted$i.componentId,
+        cssFromDOM = _extracted$i.cssFromDOM;
+
+    var cssRules = splitByRules(cssFromDOM);
+    tag.insertRules(componentId, cssRules);
+  }
+
+  /* remove old HTMLStyleElements, since they have been rehydrated */
+  for (var _i = 0, _len = els.length; _i < _len; _i += 1) {
+    var el = els[_i];
+    if (el.parentNode) {
+      el.parentNode.removeChild(el);
+    }
+  }
+};
+
+// 
+
+var SPLIT_REGEX = /\s+/;
+
+/* determine the maximum number of components before tags are sharded */
+var MAX_SIZE = void 0;
+if (IS_BROWSER) {
+  /* in speedy mode we can keep a lot more rules in a sheet before a slowdown can be expected */
+  MAX_SIZE = DISABLE_SPEEDY ? 40 : 1000;
+} else {
+  /* for servers we do not need to shard at all */
+  MAX_SIZE = -1;
+}
+
+var sheetRunningId = 0;
+var master = void 0;
+
+var StyleSheet = function () {
+
+  /* a map from ids to tags */
+
+  /* deferred rules for a given id */
+
+  /* this is used for not reinjecting rules via hasNameForId() */
+
+  /* when rules for an id are removed using remove() we have to ignore rehydratedNames for it */
+
+  /* a list of tags belonging to this StyleSheet */
+
+  /* a tag for import rules */
+
+  /* current capacity until a new tag must be created */
+
+  /* children (aka clones) of this StyleSheet inheriting all and future injections */
+
+  function StyleSheet() {
+    var _this = this;
+
+    var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : IS_BROWSER ? document.head : null;
+    var forceServer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    classCallCheck(this, StyleSheet);
+
+    this.getImportRuleTag = function () {
+      var importRuleTag = _this.importRuleTag;
+
+      if (importRuleTag !== undefined) {
+        return importRuleTag;
+      }
+
+      var firstTag = _this.tags[0];
+      var insertBefore = true;
+
+      return _this.importRuleTag = makeTag(_this.target, firstTag ? firstTag.styleTag : null, _this.forceServer, insertBefore);
+    };
+
+    sheetRunningId += 1;
+    this.id = sheetRunningId;
+    this.forceServer = forceServer;
+    this.target = forceServer ? null : target;
+    this.tagMap = {};
+    this.deferred = {};
+    this.rehydratedNames = {};
+    this.ignoreRehydratedNames = {};
+    this.tags = [];
+    this.capacity = 1;
+    this.clones = [];
+  }
+
+  /* rehydrate all SSR'd style tags */
+
+
+  StyleSheet.prototype.rehydrate = function rehydrate$$1() {
+    if (!IS_BROWSER || this.forceServer) return this;
+
+    var els = [];
+    var extracted = [];
+    var isStreamed = false;
+
+    /* retrieve all of our SSR style elements from the DOM */
+    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.2.0" + '"]');
+
+    var nodesSize = nodes.length;
+
+    /* abort rehydration if no previous style tags were found */
+    if (!nodesSize) return this;
+
+    for (var i = 0; i < nodesSize; i += 1) {
+      var el = nodes[i];
+
+      /* check if style tag is a streamed tag */
+      if (!isStreamed) isStreamed = !!el.getAttribute(SC_STREAM_ATTR);
+
+      /* retrieve all component names */
+      var elNames = (el.getAttribute(SC_ATTR) || '').trim().split(SPLIT_REGEX);
+      var elNamesSize = elNames.length;
+      for (var j = 0, name; j < elNamesSize; j += 1) {
+        name = elNames[j];
+        /* add rehydrated name to sheet to avoid re-adding styles */
+        this.rehydratedNames[name] = true;
+      }
+
+      /* extract all components and their CSS */
+      extracted.push.apply(extracted, extractComps(el.textContent));
+
+      /* store original HTMLStyleElement */
+      els.push(el);
+    }
+
+    /* abort rehydration if nothing was extracted */
+    var extractedSize = extracted.length;
+    if (!extractedSize) return this;
+
+    /* create a tag to be used for rehydration */
+    var tag = this.makeTag(null);
+
+    rehydrate(tag, els, extracted);
+
+    /* reset capacity and adjust MAX_SIZE by the initial size of the rehydration */
+    this.capacity = Math.max(1, MAX_SIZE - extractedSize);
+    this.tags.push(tag);
+
+    /* retrieve all component ids */
+    for (var _j = 0; _j < extractedSize; _j += 1) {
+      this.tagMap[extracted[_j].componentId] = tag;
+    }
+
+    return this;
+  };
+
+  /* retrieve a "master" instance of StyleSheet which is typically used when no other is available
+   * The master StyleSheet is targeted by createGlobalStyle, keyframes, and components outside of any
+    * StyleSheetManager's context */
+
+
+  /* reset the internal "master" instance */
+  StyleSheet.reset = function reset() {
+    var forceServer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+    master = new StyleSheet(undefined, forceServer).rehydrate();
+  };
+
+  /* adds "children" to the StyleSheet that inherit all of the parents' rules
+   * while their own rules do not affect the parent */
+
+
+  StyleSheet.prototype.clone = function clone() {
+    var sheet = new StyleSheet(this.target, this.forceServer);
+
+    /* add to clone array */
+    this.clones.push(sheet);
+
+    /* clone all tags */
+    sheet.tags = this.tags.map(function (tag) {
+      var ids = tag.getIds();
+      var newTag = tag.clone();
+
+      /* reconstruct tagMap */
+      for (var i = 0; i < ids.length; i += 1) {
+        sheet.tagMap[ids[i]] = newTag;
+      }
+
+      return newTag;
+    });
+
+    /* clone other maps */
+    sheet.rehydratedNames = _extends({}, this.rehydratedNames);
+    sheet.deferred = _extends({}, this.deferred);
+
+    return sheet;
+  };
+
+  /* force StyleSheet to create a new tag on the next injection */
+
+
+  StyleSheet.prototype.sealAllTags = function sealAllTags() {
+    this.capacity = 1;
+
+    this.tags.forEach(function (tag) {
+      // eslint-disable-next-line no-param-reassign
+      tag.sealed = true;
+    });
+  };
+
+  StyleSheet.prototype.makeTag = function makeTag$$1(tag) {
+    var lastEl = tag ? tag.styleTag : null;
+    var insertBefore = false;
+
+    return makeTag(this.target, lastEl, this.forceServer, insertBefore, this.getImportRuleTag);
+  };
+
+  /* get a tag for a given componentId, assign the componentId to one, or shard */
+  StyleSheet.prototype.getTagForId = function getTagForId(id) {
+    /* simply return a tag, when the componentId was already assigned one */
+    var prev = this.tagMap[id];
+    if (prev !== undefined && !prev.sealed) {
+      return prev;
+    }
+
+    var tag = this.tags[this.tags.length - 1];
+
+    /* shard (create a new tag) if the tag is exhausted (See MAX_SIZE) */
+    this.capacity -= 1;
+
+    if (this.capacity === 0) {
+      this.capacity = MAX_SIZE;
+      tag = this.makeTag(tag);
+      this.tags.push(tag);
+    }
+
+    return this.tagMap[id] = tag;
+  };
+
+  /* mainly for createGlobalStyle to check for its id */
+
+
+  StyleSheet.prototype.hasId = function hasId(id) {
+    return this.tagMap[id] !== undefined;
+  };
+
+  /* caching layer checking id+name to already have a corresponding tag and injected rules */
+
+
+  StyleSheet.prototype.hasNameForId = function hasNameForId(id, name) {
+    /* exception for rehydrated names which are checked separately */
+    if (this.ignoreRehydratedNames[id] === undefined && this.rehydratedNames[name]) {
+      return true;
+    }
+
+    var tag = this.tagMap[id];
+    return tag !== undefined && tag.hasNameForId(id, name);
+  };
+
+  /* registers a componentId and registers it on its tag */
+
+
+  StyleSheet.prototype.deferredInject = function deferredInject(id, cssRules) {
+    /* don't inject when the id is already registered */
+    if (this.tagMap[id] !== undefined) return;
+
+    var clones = this.clones;
+
+    for (var i = 0; i < clones.length; i += 1) {
+      clones[i].deferredInject(id, cssRules);
+    }
+
+    this.getTagForId(id).insertMarker(id);
+    this.deferred[id] = cssRules;
+  };
+
+  /* injects rules for a given id with a name that will need to be cached */
+
+
+  StyleSheet.prototype.inject = function inject(id, cssRules, name) {
+    var clones = this.clones;
+
+
+    for (var i = 0; i < clones.length; i += 1) {
+      clones[i].inject(id, cssRules, name);
+    }
+
+    var tag = this.getTagForId(id);
+
+    /* add deferred rules for component */
+    if (this.deferred[id] !== undefined) {
+      // Combine passed cssRules with previously deferred CSS rules
+      // NOTE: We cannot mutate the deferred array itself as all clones
+      // do the same (see clones[i].inject)
+      var rules = this.deferred[id].concat(cssRules);
+      tag.insertRules(id, rules, name);
+
+      this.deferred[id] = undefined;
+    } else {
+      tag.insertRules(id, cssRules, name);
+    }
+  };
+
+  /* removes all rules for a given id, which doesn't remove its marker but resets it */
+
+
+  StyleSheet.prototype.remove = function remove(id) {
+    var tag = this.tagMap[id];
+    if (tag === undefined) return;
+
+    var clones = this.clones;
+
+    for (var i = 0; i < clones.length; i += 1) {
+      clones[i].remove(id);
+    }
+
+    /* remove all rules from the tag */
+    tag.removeRules(id);
+
+    /* ignore possible rehydrated names */
+    this.ignoreRehydratedNames[id] = true;
+
+    /* delete possible deferred rules */
+    this.deferred[id] = undefined;
+  };
+
+  StyleSheet.prototype.toHTML = function toHTML() {
+    return this.tags.map(function (tag) {
+      return tag.toHTML();
+    }).join('');
+  };
+
+  StyleSheet.prototype.toReactElements = function toReactElements() {
+    var id = this.id;
+
+
+    return this.tags.map(function (tag, i) {
+      var key = 'sc-' + id + '-' + i;
+      return Object(react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"])(tag.toElement(), { key: key });
+    });
+  };
+
+  createClass(StyleSheet, null, [{
+    key: 'master',
+    get: function get$$1() {
+      return master || (master = new StyleSheet().rehydrate());
+    }
+
+    /* NOTE: This is just for backwards-compatibility with jest-styled-components */
+
+  }, {
+    key: 'instance',
+    get: function get$$1() {
+      return StyleSheet.master;
+    }
+  }]);
+  return StyleSheet;
+}();
+
+// 
+
+var Keyframes = function () {
+  function Keyframes(name, rules) {
+    var _this = this;
+
+    classCallCheck(this, Keyframes);
+
+    this.inject = function (styleSheet) {
+      if (!styleSheet.hasNameForId(_this.id, _this.name)) {
+        styleSheet.inject(_this.id, _this.rules, _this.name);
+      }
+    };
+
+    this.toString = function () {
+      throw new StyledComponentsError(12, String(_this.name));
+    };
+
+    this.name = name;
+    this.rules = rules;
+
+    this.id = 'sc-keyframes-' + name;
+  }
+
+  Keyframes.prototype.getName = function getName() {
+    return this.name;
+  };
+
+  return Keyframes;
+}();
+
+// 
+
+/**
+ * inlined version of
+ * https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/core/hyphenateStyleName.js
+ */
+
+var uppercasePattern = /([A-Z])/g;
+var msPattern = /^ms-/;
+
+/**
+ * Hyphenates a camelcased CSS property name, for example:
+ *
+ *   > hyphenateStyleName('backgroundColor')
+ *   < "background-color"
+ *   > hyphenateStyleName('MozTransition')
+ *   < "-moz-transition"
+ *   > hyphenateStyleName('msTransition')
+ *   < "-ms-transition"
+ *
+ * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+ * is converted to `-ms-`.
+ *
+ * @param {string} string
+ * @return {string}
+ */
+function hyphenateStyleName(string) {
+  return string.replace(uppercasePattern, '-$1').toLowerCase().replace(msPattern, '-ms-');
+}
+
+// 
+
+// Taken from https://github.com/facebook/react/blob/b87aabdfe1b7461e7331abb3601d9e6bb27544bc/packages/react-dom/src/shared/dangerousStyleValue.js
+function addUnitIfNeeded(name, value) {
+  // https://github.com/amilajack/eslint-plugin-flowtype-errors/issues/133
+  // $FlowFixMe
+  if (value == null || typeof value === 'boolean' || value === '') {
+    return '';
+  }
+
+  if (typeof value === 'number' && value !== 0 && !(name in _emotion_unitless__WEBPACK_IMPORTED_MODULE_3__["default"])) {
+    return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
+  }
+
+  return String(value).trim();
+}
+
+// 
+
+/**
+ * It's falsish not falsy because 0 is allowed.
+ */
+var isFalsish = function isFalsish(chunk) {
+  return chunk === undefined || chunk === null || chunk === false || chunk === '';
+};
+
+var objToCss = function objToCss(obj, prevKey) {
+  var css = Object.keys(obj).filter(function (key) {
+    return !isFalsish(obj[key]);
+  }).map(function (key) {
+    if (isPlainObject(obj[key])) return objToCss(obj[key], key);
+    return hyphenateStyleName(key) + ': ' + addUnitIfNeeded(key, obj[key]) + ';';
+  }).join(' ');
+  return prevKey ? prevKey + ' {\n  ' + css + '\n}' : css;
+};
+
+function flatten(chunk, executionContext, styleSheet) {
+  if (Array.isArray(chunk)) {
+    var ruleSet = [];
+
+    for (var i = 0, len = chunk.length, result; i < len; i += 1) {
+      result = flatten(chunk[i], executionContext, styleSheet);
+
+      if (result === null) continue;else if (Array.isArray(result)) ruleSet.push.apply(ruleSet, result);else ruleSet.push(result);
+    }
+
+    return ruleSet;
+  }
+
+  if (isFalsish(chunk)) {
+    return null;
+  }
+
+  /* Handle other components */
+  if (isStyledComponent(chunk)) {
+    return '.' + chunk.styledComponentId;
+  }
+
+  /* Either execute or defer the function */
+  if (isFunction(chunk)) {
+    if (isStatelessFunction(chunk) && executionContext) {
+      var _result = chunk(executionContext);
+
+      if (false) {}
+
+      return flatten(_result, executionContext, styleSheet);
+    } else return chunk;
+  }
+
+  if (chunk instanceof Keyframes) {
+    if (styleSheet) {
+      chunk.inject(styleSheet);
+      return chunk.getName();
+    } else return chunk;
+  }
+
+  /* Handle objects */
+  return isPlainObject(chunk) ? objToCss(chunk) : chunk.toString();
+}
+
+// 
+
+function css(styles) {
+  for (var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    interpolations[_key - 1] = arguments[_key];
+  }
+
+  if (isFunction(styles) || isPlainObject(styles)) {
+    // $FlowFixMe
+    return flatten(interleave(EMPTY_ARRAY, [styles].concat(interpolations)));
+  }
+
+  // $FlowFixMe
+  return flatten(interleave(styles, interpolations));
+}
+
+// 
+
+function constructWithOptions(componentConstructor, tag) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : EMPTY_OBJECT;
+
+  if (!Object(react_is__WEBPACK_IMPORTED_MODULE_4__["isValidElementType"])(tag)) {
+    throw new StyledComponentsError(1, String(tag));
+  }
+
+  /* This is callable directly as a template function */
+  // $FlowFixMe: Not typed to avoid destructuring arguments
+  var templateFunction = function templateFunction() {
+    return componentConstructor(tag, options, css.apply(undefined, arguments));
+  };
+
+  /* If config methods are called, wrap up a new template function and merge options */
+  templateFunction.withConfig = function (config) {
+    return constructWithOptions(componentConstructor, tag, _extends({}, options, config));
+  };
+
+  /* Modify/inject new props at runtime */
+  templateFunction.attrs = function (attrs) {
+    return constructWithOptions(componentConstructor, tag, _extends({}, options, {
+      attrs: Array.prototype.concat(options.attrs, attrs).filter(Boolean)
+    }));
+  };
+
+  return templateFunction;
+}
+
+// 
+// Source: https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
+function murmurhash(c) {
+  for (var e = c.length | 0, a = e | 0, d = 0, b; e >= 4;) {
+    b = c.charCodeAt(d) & 255 | (c.charCodeAt(++d) & 255) << 8 | (c.charCodeAt(++d) & 255) << 16 | (c.charCodeAt(++d) & 255) << 24, b = 1540483477 * (b & 65535) + ((1540483477 * (b >>> 16) & 65535) << 16), b ^= b >>> 24, b = 1540483477 * (b & 65535) + ((1540483477 * (b >>> 16) & 65535) << 16), a = 1540483477 * (a & 65535) + ((1540483477 * (a >>> 16) & 65535) << 16) ^ b, e -= 4, ++d;
+  }
+  switch (e) {
+    case 3:
+      a ^= (c.charCodeAt(d + 2) & 255) << 16;
+    case 2:
+      a ^= (c.charCodeAt(d + 1) & 255) << 8;
+    case 1:
+      a ^= c.charCodeAt(d) & 255, a = 1540483477 * (a & 65535) + ((1540483477 * (a >>> 16) & 65535) << 16);
+  }
+  a ^= a >>> 13;
+  a = 1540483477 * (a & 65535) + ((1540483477 * (a >>> 16) & 65535) << 16);
+  return (a ^ a >>> 15) >>> 0;
+}
+
+// 
+/* eslint-disable no-bitwise */
+
+/* This is the "capacity" of our alphabet i.e. 2x26 for all letters plus their capitalised
+ * counterparts */
+var charsLength = 52;
+
+/* start at 75 for 'a' until 'z' (25) and then start at 65 for capitalised letters */
+var getAlphabeticChar = function getAlphabeticChar(code) {
+  return String.fromCharCode(code + (code > 25 ? 39 : 97));
+};
+
+/* input a number, usually a hash and convert it to base-52 */
+function generateAlphabeticName(code) {
+  var name = '';
+  var x = void 0;
+
+  /* get a char and divide by alphabet-length */
+  for (x = code; x > charsLength; x = Math.floor(x / charsLength)) {
+    name = getAlphabeticChar(x % charsLength) + name;
+  }
+
+  return getAlphabeticChar(x % charsLength) + name;
+}
+
+// 
+
+function hasFunctionObjectKey(obj) {
+  // eslint-disable-next-line guard-for-in, no-restricted-syntax
+  for (var key in obj) {
+    if (isFunction(obj[key])) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function isStaticRules(rules, attrs) {
+  for (var i = 0; i < rules.length; i += 1) {
+    var rule = rules[i];
+
+    // recursive case
+    if (Array.isArray(rule) && !isStaticRules(rule, attrs)) {
+      return false;
+    } else if (isFunction(rule) && !isStyledComponent(rule)) {
+      // functions are allowed to be static if they're just being
+      // used to get the classname of a nested styled component
+      return false;
+    }
+  }
+
+  if (attrs.some(function (x) {
+    return isFunction(x) || hasFunctionObjectKey(x);
+  })) return false;
+
+  return true;
+}
+
+// 
+
+var isHMREnabled =  false && false;
+
+/* combines hashStr (murmurhash) and nameGenerator for convenience */
+var hasher = function hasher(str) {
+  return generateAlphabeticName(murmurhash(str));
+};
+
+/*
+ ComponentStyle is all the CSS-specific stuff, not
+ the React-specific stuff.
+ */
+
+var ComponentStyle = function () {
+  function ComponentStyle(rules, attrs, componentId) {
+    classCallCheck(this, ComponentStyle);
+
+    this.rules = rules;
+    this.isStatic = !isHMREnabled && isStaticRules(rules, attrs);
+    this.componentId = componentId;
+
+    if (!StyleSheet.master.hasId(componentId)) {
+      StyleSheet.master.deferredInject(componentId, []);
+    }
+  }
+
+  /*
+     * Flattens a rule set into valid CSS
+     * Hashes it, wraps the whole chunk in a .hash1234 {}
+     * Returns the hash to be injected on render()
+     * */
+
+
+  ComponentStyle.prototype.generateAndInjectStyles = function generateAndInjectStyles(executionContext, styleSheet) {
+    var isStatic = this.isStatic,
+        componentId = this.componentId,
+        lastClassName = this.lastClassName;
+
+    if (IS_BROWSER && isStatic && typeof lastClassName === 'string' && styleSheet.hasNameForId(componentId, lastClassName)) {
+      return lastClassName;
+    }
+
+    var flatCSS = flatten(this.rules, executionContext, styleSheet);
+    var name = hasher(this.componentId + flatCSS.join(''));
+    if (!styleSheet.hasNameForId(componentId, name)) {
+      styleSheet.inject(this.componentId, stringifyRules(flatCSS, '.' + name, undefined, componentId), name);
+    }
+
+    this.lastClassName = name;
+    return name;
+  };
+
+  ComponentStyle.generateName = function generateName(str) {
+    return hasher(str);
+  };
+
+  return ComponentStyle;
+}();
+
+// 
+
+var LIMIT = 200;
+
+var createWarnTooManyClasses = (function (displayName) {
+  var generatedClasses = {};
+  var warningSeen = false;
+
+  return function (className) {
+    if (!warningSeen) {
+      generatedClasses[className] = true;
+      if (Object.keys(generatedClasses).length >= LIMIT) {
+        // Unable to find latestRule in test environment.
+        /* eslint-disable no-console, prefer-template */
+        console.warn('Over ' + LIMIT + ' classes were generated for component ' + displayName + '. \n' + 'Consider using the attrs method, together with a style object for frequently changed styles.\n' + 'Example:\n' + '  const Component = styled.div.attrs({\n' + '    style: ({ background }) => ({\n' + '      background,\n' + '    }),\n' + '  })`width: 100%;`\n\n' + '  <Component />');
+        warningSeen = true;
+        generatedClasses = {};
+      }
+    }
+  };
+});
+
+// 
+
+var determineTheme = (function (props, fallbackTheme) {
+  var defaultProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : EMPTY_OBJECT;
+
+  // Props should take precedence over ThemeProvider, which should take precedence over
+  // defaultProps, but React automatically puts defaultProps on props.
+
+  /* eslint-disable react/prop-types, flowtype-errors/show-errors */
+  var isDefaultTheme = defaultProps ? props.theme === defaultProps.theme : false;
+  var theme = props.theme && !isDefaultTheme ? props.theme : fallbackTheme || defaultProps.theme;
+  /* eslint-enable */
+
+  return theme;
+});
+
+// 
+var escapeRegex = /[[\].#*$><+~=|^:(),"'`-]+/g;
+var dashesAtEnds = /(^-|-$)/g;
+
+/**
+ * TODO: Explore using CSS.escape when it becomes more available
+ * in evergreen browsers.
+ */
+function escape(str) {
+  return str
+  // Replace all possible CSS selectors
+  .replace(escapeRegex, '-')
+
+  // Remove extraneous hyphens at the start and end
+  .replace(dashesAtEnds, '');
+}
+
+// 
+
+function isTag(target) {
+  return typeof target === 'string' && ( false ? undefined : true);
+}
+
+// 
+
+function generateDisplayName(target) {
+  // $FlowFixMe
+  return isTag(target) ? 'styled.' + target : 'Styled(' + getComponentName(target) + ')';
+}
+
+var _TYPE_STATICS;
+
+var REACT_STATICS = {
+  childContextTypes: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDerivedStateFromProps: true,
+  propTypes: true,
+  type: true
+};
+
+var KNOWN_STATICS = {
+  name: true,
+  length: true,
+  prototype: true,
+  caller: true,
+  callee: true,
+  arguments: true,
+  arity: true
+};
+
+var TYPE_STATICS = (_TYPE_STATICS = {}, _TYPE_STATICS[react_is__WEBPACK_IMPORTED_MODULE_4__["ForwardRef"]] = {
+  $$typeof: true,
+  render: true
+}, _TYPE_STATICS);
+
+var defineProperty$1 = Object.defineProperty,
+    getOwnPropertyNames = Object.getOwnPropertyNames,
+    _Object$getOwnPropert = Object.getOwnPropertySymbols,
+    getOwnPropertySymbols = _Object$getOwnPropert === undefined ? function () {
+  return [];
+} : _Object$getOwnPropert,
+    getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor,
+    getPrototypeOf = Object.getPrototypeOf,
+    objectPrototype = Object.prototype;
+var arrayPrototype = Array.prototype;
+
+
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+  if (typeof sourceComponent !== 'string') {
+    // don't hoist over string (html) components
+
+    var inheritedComponent = getPrototypeOf(sourceComponent);
+
+    if (inheritedComponent && inheritedComponent !== objectPrototype) {
+      hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+    }
+
+    var keys = arrayPrototype.concat(getOwnPropertyNames(sourceComponent),
+    // $FlowFixMe
+    getOwnPropertySymbols(sourceComponent));
+
+    var targetStatics = TYPE_STATICS[targetComponent.$$typeof] || REACT_STATICS;
+
+    var sourceStatics = TYPE_STATICS[sourceComponent.$$typeof] || REACT_STATICS;
+
+    var i = keys.length;
+    var descriptor = void 0;
+    var key = void 0;
+
+    // eslint-disable-next-line no-plusplus
+    while (i--) {
+      key = keys[i];
+
+      if (
+      // $FlowFixMe
+      !KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) &&
+      // $FlowFixMe
+      !(targetStatics && targetStatics[key])) {
+        descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+
+        if (descriptor) {
+          try {
+            // Avoid failures from read-only properties
+            defineProperty$1(targetComponent, key, descriptor);
+          } catch (e) {
+            /* fail silently */
+          }
+        }
+      }
+    }
+
+    return targetComponent;
+  }
+
+  return targetComponent;
+}
+
+// 
+function isDerivedReactComponent(fn) {
+  return !!(fn && fn.prototype && fn.prototype.isReactComponent);
+}
+
+// 
+// Helper to call a given function, only once
+var once = (function (cb) {
+  var called = false;
+
+  return function () {
+    if (!called) {
+      called = true;
+      cb.apply(undefined, arguments);
+    }
+  };
+});
+
+// 
+
+var ThemeContext = Object(react__WEBPACK_IMPORTED_MODULE_2__["createContext"])();
+
+var ThemeConsumer = ThemeContext.Consumer;
+
+/**
+ * Provide a theme to an entire react component tree via context
+ */
+
+var ThemeProvider = function (_Component) {
+  inherits(ThemeProvider, _Component);
+
+  function ThemeProvider(props) {
+    classCallCheck(this, ThemeProvider);
+
+    var _this = possibleConstructorReturn(this, _Component.call(this, props));
+
+    _this.getContext = Object(memoize_one__WEBPACK_IMPORTED_MODULE_5__["default"])(_this.getContext.bind(_this));
+    _this.renderInner = _this.renderInner.bind(_this);
+    return _this;
+  }
+
+  ThemeProvider.prototype.render = function render() {
+    if (!this.props.children) return null;
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      ThemeContext.Consumer,
+      null,
+      this.renderInner
+    );
+  };
+
+  ThemeProvider.prototype.renderInner = function renderInner(outerTheme) {
+    var context = this.getContext(this.props.theme, outerTheme);
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      ThemeContext.Provider,
+      { value: context },
+      react__WEBPACK_IMPORTED_MODULE_2___default.a.Children.only(this.props.children)
+    );
+  };
+
+  /**
+   * Get the theme from the props, supporting both (outerTheme) => {}
+   * as well as object notation
+   */
+
+
+  ThemeProvider.prototype.getTheme = function getTheme(theme, outerTheme) {
+    if (isFunction(theme)) {
+      var mergedTheme = theme(outerTheme);
+
+      if (false) {}
+
+      return mergedTheme;
+    }
+
+    if (theme === null || Array.isArray(theme) || (typeof theme === 'undefined' ? 'undefined' : _typeof(theme)) !== 'object') {
+      throw new StyledComponentsError(8);
+    }
+
+    return _extends({}, outerTheme, theme);
+  };
+
+  ThemeProvider.prototype.getContext = function getContext(theme, outerTheme) {
+    return this.getTheme(theme, outerTheme);
+  };
+
+  return ThemeProvider;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
+
+// 
+
+var CLOSING_TAG_R = /^\s*<\/[a-z]/i;
+
+var ServerStyleSheet = function () {
+  function ServerStyleSheet() {
+    classCallCheck(this, ServerStyleSheet);
+
+    /* The master sheet might be reset, so keep a reference here */
+    this.masterSheet = StyleSheet.master;
+    this.instance = this.masterSheet.clone();
+    this.sealed = false;
+  }
+
+  /**
+   * Mark the ServerStyleSheet as being fully emitted and manually GC it from the
+   * StyleSheet singleton.
+   */
+
+
+  ServerStyleSheet.prototype.seal = function seal() {
+    if (!this.sealed) {
+      /* Remove sealed StyleSheets from the master sheet */
+      var index = this.masterSheet.clones.indexOf(this.instance);
+      this.masterSheet.clones.splice(index, 1);
+      this.sealed = true;
+    }
+  };
+
+  ServerStyleSheet.prototype.collectStyles = function collectStyles(children) {
+    if (this.sealed) {
+      throw new StyledComponentsError(2);
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      StyleSheetManager,
+      { sheet: this.instance },
+      children
+    );
+  };
+
+  ServerStyleSheet.prototype.getStyleTags = function getStyleTags() {
+    this.seal();
+    return this.instance.toHTML();
+  };
+
+  ServerStyleSheet.prototype.getStyleElement = function getStyleElement() {
+    this.seal();
+    return this.instance.toReactElements();
+  };
+
+  ServerStyleSheet.prototype.interleaveWithNodeStream = function interleaveWithNodeStream(readableStream) {
+    var _this = this;
+
+    {
+      throw new StyledComponentsError(3);
+    }
+
+    /* the tag index keeps track of which tags have already been emitted */
+    var instance = this.instance;
+
+    var instanceTagIndex = 0;
+
+    var streamAttr = SC_STREAM_ATTR + '="true"';
+
+    var transformer = new stream.Transform({
+      transform: function appendStyleChunks(chunk, /* encoding */_, callback) {
+        var tags = instance.tags;
+
+        var html = '';
+
+        /* retrieve html for each new style tag */
+        for (; instanceTagIndex < tags.length; instanceTagIndex += 1) {
+          var tag = tags[instanceTagIndex];
+          html += tag.toHTML(streamAttr);
+        }
+
+        /* force our StyleSheets to emit entirely new tags */
+        instance.sealAllTags();
+
+        var renderedHtml = chunk.toString();
+
+        /* prepend style html to chunk, unless the start of the chunk is a closing tag in which case append right after that */
+        if (CLOSING_TAG_R.test(renderedHtml)) {
+          var endOfClosingTag = renderedHtml.indexOf('>');
+
+          this.push(renderedHtml.slice(0, endOfClosingTag + 1) + html + renderedHtml.slice(endOfClosingTag + 1));
+        } else this.push(html + renderedHtml);
+
+        callback();
+      }
+    });
+
+    readableStream.on('end', function () {
+      return _this.seal();
+    });
+
+    readableStream.on('error', function (err) {
+      _this.seal();
+
+      // forward the error to the transform stream
+      transformer.emit('error', err);
+    });
+
+    return readableStream.pipe(transformer);
+  };
+
+  return ServerStyleSheet;
+}();
+
+// 
+
+var StyleSheetContext = Object(react__WEBPACK_IMPORTED_MODULE_2__["createContext"])();
+var StyleSheetConsumer = StyleSheetContext.Consumer;
+
+var StyleSheetManager = function (_Component) {
+  inherits(StyleSheetManager, _Component);
+
+  function StyleSheetManager(props) {
+    classCallCheck(this, StyleSheetManager);
+
+    var _this = possibleConstructorReturn(this, _Component.call(this, props));
+
+    _this.getContext = Object(memoize_one__WEBPACK_IMPORTED_MODULE_5__["default"])(_this.getContext);
+    return _this;
+  }
+
+  StyleSheetManager.prototype.getContext = function getContext(sheet, target) {
+    if (sheet) {
+      return sheet;
+    } else if (target) {
+      return new StyleSheet(target);
+    } else {
+      throw new StyledComponentsError(4);
+    }
+  };
+
+  StyleSheetManager.prototype.render = function render() {
+    var _props = this.props,
+        children = _props.children,
+        sheet = _props.sheet,
+        target = _props.target;
+
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      StyleSheetContext.Provider,
+      { value: this.getContext(sheet, target) },
+       false ? undefined : children
+    );
+  };
+
+  return StyleSheetManager;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
+ false ? undefined : void 0;
+
+// 
+
+var didWarnAboutClassNameUsage = new Set();
+
+var classNameUsageCheckInjector = (function (target) {
+  var elementClassName = '';
+
+  var targetCDM = target.componentDidMount;
+
+  // eslint-disable-next-line no-param-reassign
+  target.componentDidMount = function componentDidMount() {
+    if (typeof targetCDM === 'function') {
+      targetCDM.call(this);
+    }
+
+    var forwardTarget = this.props.forwardedComponent.target;
+
+    if (target.props && target.props.suppressClassNameWarning || target.attrs && target.attrs.suppressClassNameWarning || didWarnAboutClassNameUsage.has(forwardTarget)) {
+      return;
+    }
+
+    didWarnAboutClassNameUsage.add(forwardTarget);
+
+    var classNames = elementClassName.replace(/\s+/g, ' ').trim().split(' ');
+    // eslint-disable-next-line react/no-find-dom-node
+    var node = react_dom__WEBPACK_IMPORTED_MODULE_7___default.a.findDOMNode(this);
+    var selector = classNames.map(function (s) {
+      return '.' + s;
+    }).join('');
+
+    if (node && node.nodeType === 1 && !classNames.every(function (className) {
+      return node.classList && node.classList.contains(className);
+    }) && !node.querySelector(selector)) {
+      // eslint-disable-next-line no-console
+      console.warn('It looks like you\'ve wrapped styled() around your React component (' + getComponentName(forwardTarget) + '), but the className prop is not being passed down to a child. No styles will be rendered unless className is composed within your React component.');
+    }
+  };
+
+  var prevRenderInner = target.renderInner;
+
+  // eslint-disable-next-line no-param-reassign
+  target.renderInner = function renderInner() {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var element = prevRenderInner.apply(this, args);
+
+    elementClassName = element.props.className;
+
+    return element;
+  };
+});
+
+// 
+
+var identifiers = {};
+
+/* We depend on components having unique IDs */
+function generateId(_ComponentStyle, _displayName, parentComponentId) {
+  var displayName = typeof _displayName !== 'string' ? 'sc' : escape(_displayName);
+
+  /**
+   * This ensures uniqueness if two components happen to share
+   * the same displayName.
+   */
+  var nr = (identifiers[displayName] || 0) + 1;
+  identifiers[displayName] = nr;
+
+  var componentId = displayName + '-' + _ComponentStyle.generateName(displayName + nr);
+
+  return parentComponentId ? parentComponentId + '-' + componentId : componentId;
+}
+
+// $FlowFixMe
+
+var StyledComponent = function (_Component) {
+  inherits(StyledComponent, _Component);
+
+  function StyledComponent() {
+    classCallCheck(this, StyledComponent);
+
+    var _this = possibleConstructorReturn(this, _Component.call(this));
+
+    _this.attrs = {};
+
+    _this.renderOuter = _this.renderOuter.bind(_this);
+    _this.renderInner = _this.renderInner.bind(_this);
+
+    if (false) {}
+
+    if (false) {}
+    return _this;
+  }
+
+  StyledComponent.prototype.render = function render() {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      StyleSheetConsumer,
+      null,
+      this.renderOuter
+    );
+  };
+
+  StyledComponent.prototype.renderOuter = function renderOuter() {
+    var styleSheet = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : StyleSheet.master;
+
+    this.styleSheet = styleSheet;
+
+    // No need to subscribe a static component to theme changes, it won't change anything
+    if (this.props.forwardedComponent.componentStyle.isStatic) return this.renderInner();
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      ThemeConsumer,
+      null,
+      this.renderInner
+    );
+  };
+
+  StyledComponent.prototype.renderInner = function renderInner(theme) {
+    var _props$forwardedCompo = this.props.forwardedComponent,
+        componentStyle = _props$forwardedCompo.componentStyle,
+        defaultProps = _props$forwardedCompo.defaultProps,
+        displayName = _props$forwardedCompo.displayName,
+        foldedComponentIds = _props$forwardedCompo.foldedComponentIds,
+        styledComponentId = _props$forwardedCompo.styledComponentId,
+        target = _props$forwardedCompo.target;
+
+
+    var generatedClassName = void 0;
+    if (componentStyle.isStatic) {
+      generatedClassName = this.generateAndInjectStyles(EMPTY_OBJECT, this.props);
+    } else if (theme !== undefined) {
+      generatedClassName = this.generateAndInjectStyles(determineTheme(this.props, theme, defaultProps), this.props);
+    } else {
+      generatedClassName = this.generateAndInjectStyles(this.props.theme || EMPTY_OBJECT, this.props);
+    }
+
+    var elementToBeCreated = this.props.as || this.attrs.as || target;
+    var isTargetTag = isTag(elementToBeCreated);
+
+    var propsForElement = {};
+    var computedProps = _extends({}, this.attrs, this.props);
+
+    var key = void 0;
+    // eslint-disable-next-line guard-for-in
+    for (key in computedProps) {
+      if (false) {}
+
+      if (key === 'forwardedComponent' || key === 'as' || key === 'suppressClassNameWarning') {
+        continue;
+      } else if (key === 'forwardedRef') propsForElement.ref = computedProps[key];else if (!isTargetTag || Object(_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_8__["default"])(key)) {
+        // Don't pass through non HTML tags through to HTML elements
+        propsForElement[key] = computedProps[key];
+      }
+    }
+
+    if (this.props.style && this.attrs.style) {
+      propsForElement.style = _extends({}, this.attrs.style, this.props.style);
+    }
+
+    propsForElement.className = Array.prototype.concat(foldedComponentIds, this.props.className, styledComponentId, this.attrs.className, generatedClassName).filter(Boolean).join(' ');
+
+    return Object(react__WEBPACK_IMPORTED_MODULE_2__["createElement"])(elementToBeCreated, propsForElement);
+  };
+
+  StyledComponent.prototype.buildExecutionContext = function buildExecutionContext(theme, props, attrs) {
+    var _this2 = this;
+
+    var context = _extends({}, props, { theme: theme });
+
+    if (!attrs.length) return context;
+
+    this.attrs = {};
+
+    attrs.forEach(function (attrDef) {
+      var resolvedAttrDef = attrDef;
+      var attrDefWasFn = false;
+      var attr = void 0;
+      var key = void 0;
+
+      if (isFunction(resolvedAttrDef)) {
+        // $FlowFixMe
+        resolvedAttrDef = resolvedAttrDef(context);
+        attrDefWasFn = true;
+      }
+
+      /* eslint-disable guard-for-in */
+      // $FlowFixMe
+      for (key in resolvedAttrDef) {
+        attr = resolvedAttrDef[key];
+
+        if (!attrDefWasFn) {
+          if (isFunction(attr) && !isDerivedReactComponent(attr) && !isStyledComponent(attr)) {
+            if (false) {}
+
+            attr = attr(context);
+
+            if (false) {}
+          }
+        }
+
+        _this2.attrs[key] = attr;
+        context[key] = attr;
+      }
+      /* eslint-enable */
+    });
+
+    return context;
+  };
+
+  StyledComponent.prototype.generateAndInjectStyles = function generateAndInjectStyles(theme, props) {
+    var _props$forwardedCompo2 = props.forwardedComponent,
+        attrs = _props$forwardedCompo2.attrs,
+        componentStyle = _props$forwardedCompo2.componentStyle,
+        warnTooManyClasses = _props$forwardedCompo2.warnTooManyClasses;
+
+    // statically styled-components don't need to build an execution context object,
+    // and shouldn't be increasing the number of class names
+
+    if (componentStyle.isStatic && !attrs.length) {
+      return componentStyle.generateAndInjectStyles(EMPTY_OBJECT, this.styleSheet);
+    }
+
+    var className = componentStyle.generateAndInjectStyles(this.buildExecutionContext(theme, props, attrs), this.styleSheet);
+
+    if (false) {}
+
+    return className;
+  };
+
+  return StyledComponent;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
+
+function createStyledComponent(target, options, rules) {
+  var isTargetStyledComp = isStyledComponent(target);
+  var isClass = !isTag(target);
+
+  var _options$displayName = options.displayName,
+      displayName = _options$displayName === undefined ? generateDisplayName(target) : _options$displayName,
+      _options$componentId = options.componentId,
+      componentId = _options$componentId === undefined ? generateId(ComponentStyle, options.displayName, options.parentComponentId) : _options$componentId,
+      _options$ParentCompon = options.ParentComponent,
+      ParentComponent = _options$ParentCompon === undefined ? StyledComponent : _options$ParentCompon,
+      _options$attrs = options.attrs,
+      attrs = _options$attrs === undefined ? EMPTY_ARRAY : _options$attrs;
+
+
+  var styledComponentId = options.displayName && options.componentId ? escape(options.displayName) + '-' + options.componentId : options.componentId || componentId;
+
+  // fold the underlying StyledComponent attrs up (implicit extend)
+  var finalAttrs =
+  // $FlowFixMe
+  isTargetStyledComp && target.attrs ? Array.prototype.concat(target.attrs, attrs).filter(Boolean) : attrs;
+
+  var componentStyle = new ComponentStyle(isTargetStyledComp ? // fold the underlying StyledComponent rules up (implicit extend)
+  // $FlowFixMe
+  target.componentStyle.rules.concat(rules) : rules, finalAttrs, styledComponentId);
+
+  /**
+   * forwardRef creates a new interim component, which we'll take advantage of
+   * instead of extending ParentComponent to create _another_ interim class
+   */
+  var WrappedStyledComponent = react__WEBPACK_IMPORTED_MODULE_2___default.a.forwardRef(function (props, ref) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ParentComponent, _extends({}, props, { forwardedComponent: WrappedStyledComponent, forwardedRef: ref }));
+  });
+
+  // $FlowFixMe
+  WrappedStyledComponent.attrs = finalAttrs;
+  // $FlowFixMe
+  WrappedStyledComponent.componentStyle = componentStyle;
+  WrappedStyledComponent.displayName = displayName;
+
+  // $FlowFixMe
+  WrappedStyledComponent.foldedComponentIds = isTargetStyledComp ? // $FlowFixMe
+  Array.prototype.concat(target.foldedComponentIds, target.styledComponentId) : EMPTY_ARRAY;
+
+  // $FlowFixMe
+  WrappedStyledComponent.styledComponentId = styledComponentId;
+
+  // fold the underlying StyledComponent target up since we folded the styles
+  // $FlowFixMe
+  WrappedStyledComponent.target = isTargetStyledComp ? target.target : target;
+
+  // $FlowFixMe
+  WrappedStyledComponent.withComponent = function withComponent(tag) {
+    var previousComponentId = options.componentId,
+        optionsToCopy = objectWithoutProperties(options, ['componentId']);
+
+
+    var newComponentId = previousComponentId && previousComponentId + '-' + (isTag(tag) ? tag : escape(getComponentName(tag)));
+
+    var newOptions = _extends({}, optionsToCopy, {
+      attrs: finalAttrs,
+      componentId: newComponentId,
+      ParentComponent: ParentComponent
+    });
+
+    return createStyledComponent(tag, newOptions, rules);
+  };
+
+  if (false) {}
+
+  // $FlowFixMe
+  WrappedStyledComponent.toString = function () {
+    return '.' + WrappedStyledComponent.styledComponentId;
+  };
+
+  if (isClass) {
+    hoistNonReactStatics(WrappedStyledComponent, target, {
+      // all SC-specific things should not be hoisted
+      attrs: true,
+      componentStyle: true,
+      displayName: true,
+      foldedComponentIds: true,
+      styledComponentId: true,
+      target: true,
+      withComponent: true
+    });
+  }
+
+  return WrappedStyledComponent;
+}
+
+// 
+// Thanks to ReactDOMFactories for this handy list!
+
+var domElements = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'marquee', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr',
+
+// SVG
+'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'marker', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'];
+
+// 
+
+var styled = function styled(tag) {
+  return constructWithOptions(createStyledComponent, tag);
+};
+
+// Shorthands for all valid HTML Elements
+domElements.forEach(function (domElement) {
+  styled[domElement] = styled(domElement);
+});
+
+// 
+
+var GlobalStyle = function () {
+  function GlobalStyle(rules, componentId) {
+    classCallCheck(this, GlobalStyle);
+
+    this.rules = rules;
+    this.componentId = componentId;
+    this.isStatic = isStaticRules(rules, EMPTY_ARRAY);
+
+    if (!StyleSheet.master.hasId(componentId)) {
+      StyleSheet.master.deferredInject(componentId, []);
+    }
+  }
+
+  GlobalStyle.prototype.createStyles = function createStyles(executionContext, styleSheet) {
+    var flatCSS = flatten(this.rules, executionContext, styleSheet);
+    var css = stringifyRules(flatCSS, '');
+
+    styleSheet.inject(this.componentId, css);
+  };
+
+  GlobalStyle.prototype.removeStyles = function removeStyles(styleSheet) {
+    var componentId = this.componentId;
+
+    if (styleSheet.hasId(componentId)) {
+      styleSheet.remove(componentId);
+    }
+  };
+
+  // TODO: overwrite in-place instead of remove+create?
+
+
+  GlobalStyle.prototype.renderStyles = function renderStyles(executionContext, styleSheet) {
+    this.removeStyles(styleSheet);
+    this.createStyles(executionContext, styleSheet);
+  };
+
+  return GlobalStyle;
+}();
+
+// 
+
+// place our cache into shared context so it'll persist between HMRs
+if (IS_BROWSER) {
+  window.scCGSHMRCache = {};
+}
+
+function createGlobalStyle(strings) {
+  for (var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    interpolations[_key - 1] = arguments[_key];
+  }
+
+  var rules = css.apply(undefined, [strings].concat(interpolations));
+  var id = 'sc-global-' + murmurhash(JSON.stringify(rules));
+  var style = new GlobalStyle(rules, id);
+
+  var GlobalStyleComponent = function (_React$Component) {
+    inherits(GlobalStyleComponent, _React$Component);
+
+    function GlobalStyleComponent(props) {
+      classCallCheck(this, GlobalStyleComponent);
+
+      var _this = possibleConstructorReturn(this, _React$Component.call(this, props));
+
+      var _this$constructor = _this.constructor,
+          globalStyle = _this$constructor.globalStyle,
+          styledComponentId = _this$constructor.styledComponentId;
+
+
+      if (IS_BROWSER) {
+        window.scCGSHMRCache[styledComponentId] = (window.scCGSHMRCache[styledComponentId] || 0) + 1;
+      }
+
+      /**
+       * This fixes HMR compatibility. Don't ask me why, but this combination of
+       * caching the closure variables via statics and then persisting the statics in
+       * state works across HMR where no other combination did. ¯\_(ツ)_/¯
+       */
+      _this.state = {
+        globalStyle: globalStyle,
+        styledComponentId: styledComponentId
+      };
+      return _this;
+    }
+
+    GlobalStyleComponent.prototype.componentWillUnmount = function componentWillUnmount() {
+      if (window.scCGSHMRCache[this.state.styledComponentId]) {
+        window.scCGSHMRCache[this.state.styledComponentId] -= 1;
+      }
+      /**
+       * Depending on the order "render" is called this can cause the styles to be lost
+       * until the next render pass of the remaining instance, which may
+       * not be immediate.
+       */
+      if (window.scCGSHMRCache[this.state.styledComponentId] === 0) {
+        this.state.globalStyle.removeStyles(this.styleSheet);
+      }
+    };
+
+    GlobalStyleComponent.prototype.render = function render() {
+      var _this2 = this;
+
+      if (false) {}
+
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+        StyleSheetConsumer,
+        null,
+        function (styleSheet) {
+          _this2.styleSheet = styleSheet || StyleSheet.master;
+
+          var globalStyle = _this2.state.globalStyle;
+
+
+          if (globalStyle.isStatic) {
+            globalStyle.renderStyles(STATIC_EXECUTION_CONTEXT, _this2.styleSheet);
+
+            return null;
+          } else {
+            return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+              ThemeConsumer,
+              null,
+              function (theme) {
+                // $FlowFixMe
+                var defaultProps = _this2.constructor.defaultProps;
+
+
+                var context = _extends({}, _this2.props);
+
+                if (typeof theme !== 'undefined') {
+                  context.theme = determineTheme(_this2.props, theme, defaultProps);
+                }
+
+                globalStyle.renderStyles(context, _this2.styleSheet);
+
+                return null;
+              }
+            );
+          }
+        }
+      );
+    };
+
+    return GlobalStyleComponent;
+  }(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+  GlobalStyleComponent.globalStyle = style;
+  GlobalStyleComponent.styledComponentId = id;
+
+
+  return GlobalStyleComponent;
+}
+
+// 
+
+var replaceWhitespace = function replaceWhitespace(str) {
+  return str.replace(/\s|\\n/g, '');
+};
+
+function keyframes(strings) {
+  /* Warning if you've used keyframes on React Native */
+  if (false) {}
+
+  for (var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    interpolations[_key - 1] = arguments[_key];
+  }
+
+  var rules = css.apply(undefined, [strings].concat(interpolations));
+
+  var name = generateAlphabeticName(murmurhash(replaceWhitespace(JSON.stringify(rules))));
+
+  return new Keyframes(name, stringifyRules(rules, name, '@keyframes'));
+}
+
+// 
+
+var withTheme = (function (Component$$1) {
+  var WithTheme = react__WEBPACK_IMPORTED_MODULE_2___default.a.forwardRef(function (props, ref) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(
+      ThemeConsumer,
+      null,
+      function (theme) {
+        // $FlowFixMe
+        var defaultProps = Component$$1.defaultProps;
+
+        var themeProp = determineTheme(props, theme, defaultProps);
+
+        if (false) {}
+
+        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component$$1, _extends({}, props, { theme: themeProp, ref: ref }));
+      }
+    );
+  });
+
+  hoistNonReactStatics(WithTheme, Component$$1);
+
+  WithTheme.displayName = 'WithTheme(' + getComponentName(Component$$1) + ')';
+
+  return WithTheme;
+});
+
+// 
+
+/* eslint-disable */
+var __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = {
+  StyleSheet: StyleSheet
+};
+
+// 
+
+/* Warning if you've imported this file on React Native */
+if (false) {}
+
+/* Warning if there are several instances of styled-components */
+if (false) {}
+
+//
+
+/* harmony default export */ __webpack_exports__["default"] = (styled);
+
+//# sourceMappingURL=styled-components.browser.esm.js.map
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(77)))
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e){ true?module.exports=e(null):undefined}(function e(a){"use strict";var r=/^\0+/g,c=/[\0\r\f]/g,s=/: */g,t=/zoo|gra/,i=/([,: ])(transform)/g,f=/,+\s*(?![^(]*[)])/g,n=/ +\s*(?![^(]*[)])/g,l=/ *[\0] */g,o=/,\r+?/g,h=/([\t\r\n ])*\f?&/g,u=/:global\(((?:[^\(\)\[\]]*|\[.*\]|\([^\(\)]*\))*)\)/g,d=/\W+/g,b=/@(k\w+)\s*(\S*)\s*/,p=/::(place)/g,k=/:(read-only)/g,g=/\s+(?=[{\];=:>])/g,A=/([[}=:>])\s+/g,C=/(\{[^{]+?);(?=\})/g,w=/\s{2,}/g,v=/([^\(])(:+) */g,m=/[svh]\w+-[tblr]{2}/,x=/\(\s*(.*)\s*\)/g,$=/([\s\S]*?);/g,y=/-self|flex-/g,O=/[^]*?(:[rp][el]a[\w-]+)[^]*/,j=/stretch|:\s*\w+\-(?:conte|avail)/,z=/([^-])(image-set\()/,N="-webkit-",S="-moz-",F="-ms-",W=59,q=125,B=123,D=40,E=41,G=91,H=93,I=10,J=13,K=9,L=64,M=32,P=38,Q=45,R=95,T=42,U=44,V=58,X=39,Y=34,Z=47,_=62,ee=43,ae=126,re=0,ce=12,se=11,te=107,ie=109,fe=115,ne=112,le=111,oe=105,he=99,ue=100,de=112,be=1,pe=1,ke=0,ge=1,Ae=1,Ce=1,we=0,ve=0,me=0,xe=[],$e=[],ye=0,Oe=null,je=-2,ze=-1,Ne=0,Se=1,Fe=2,We=3,qe=0,Be=1,De="",Ee="",Ge="";function He(e,a,s,t,i){for(var f,n,o=0,h=0,u=0,d=0,g=0,A=0,C=0,w=0,m=0,$=0,y=0,O=0,j=0,z=0,R=0,we=0,$e=0,Oe=0,je=0,ze=s.length,Je=ze-1,Re="",Te="",Ue="",Ve="",Xe="",Ye="";R<ze;){if(C=s.charCodeAt(R),R===Je)if(h+d+u+o!==0){if(0!==h)C=h===Z?I:Z;d=u=o=0,ze++,Je++}if(h+d+u+o===0){if(R===Je){if(we>0)Te=Te.replace(c,"");if(Te.trim().length>0){switch(C){case M:case K:case W:case J:case I:break;default:Te+=s.charAt(R)}C=W}}if(1===$e)switch(C){case B:case q:case W:case Y:case X:case D:case E:case U:$e=0;case K:case J:case I:case M:break;default:for($e=0,je=R,g=C,R--,C=W;je<ze;)switch(s.charCodeAt(je++)){case I:case J:case W:++R,C=g,je=ze;break;case V:if(we>0)++R,C=g;case B:je=ze}}switch(C){case B:for(g=(Te=Te.trim()).charCodeAt(0),y=1,je=++R;R<ze;){switch(C=s.charCodeAt(R)){case B:y++;break;case q:y--;break;case Z:switch(A=s.charCodeAt(R+1)){case T:case Z:R=Qe(A,R,Je,s)}break;case G:C++;case D:C++;case Y:case X:for(;R++<Je&&s.charCodeAt(R)!==C;);}if(0===y)break;R++}if(Ue=s.substring(je,R),g===re)g=(Te=Te.replace(r,"").trim()).charCodeAt(0);switch(g){case L:if(we>0)Te=Te.replace(c,"");switch(A=Te.charCodeAt(1)){case ue:case ie:case fe:case Q:f=a;break;default:f=xe}if(je=(Ue=He(a,f,Ue,A,i+1)).length,me>0&&0===je)je=Te.length;if(ye>0)if(f=Ie(xe,Te,Oe),n=Pe(We,Ue,f,a,pe,be,je,A,i,t),Te=f.join(""),void 0!==n)if(0===(je=(Ue=n.trim()).length))A=0,Ue="";if(je>0)switch(A){case fe:Te=Te.replace(x,Me);case ue:case ie:case Q:Ue=Te+"{"+Ue+"}";break;case te:if(Ue=(Te=Te.replace(b,"$1 $2"+(Be>0?De:"")))+"{"+Ue+"}",1===Ae||2===Ae&&Le("@"+Ue,3))Ue="@"+N+Ue+"@"+Ue;else Ue="@"+Ue;break;default:if(Ue=Te+Ue,t===de)Ve+=Ue,Ue=""}else Ue="";break;default:Ue=He(a,Ie(a,Te,Oe),Ue,t,i+1)}Xe+=Ue,O=0,$e=0,z=0,we=0,Oe=0,j=0,Te="",Ue="",C=s.charCodeAt(++R);break;case q:case W:if((je=(Te=(we>0?Te.replace(c,""):Te).trim()).length)>1){if(0===z)if((g=Te.charCodeAt(0))===Q||g>96&&g<123)je=(Te=Te.replace(" ",":")).length;if(ye>0)if(void 0!==(n=Pe(Se,Te,a,e,pe,be,Ve.length,t,i,t)))if(0===(je=(Te=n.trim()).length))Te="\0\0";switch(g=Te.charCodeAt(0),A=Te.charCodeAt(1),g){case re:break;case L:if(A===oe||A===he){Ye+=Te+s.charAt(R);break}default:if(Te.charCodeAt(je-1)===V)break;Ve+=Ke(Te,g,A,Te.charCodeAt(2))}}O=0,$e=0,z=0,we=0,Oe=0,Te="",C=s.charCodeAt(++R)}}switch(C){case J:case I:if(h+d+u+o+ve===0)switch($){case E:case X:case Y:case L:case ae:case _:case T:case ee:case Z:case Q:case V:case U:case W:case B:case q:break;default:if(z>0)$e=1}if(h===Z)h=0;else if(ge+O===0&&t!==te&&Te.length>0)we=1,Te+="\0";if(ye*qe>0)Pe(Ne,Te,a,e,pe,be,Ve.length,t,i,t);be=1,pe++;break;case W:case q:if(h+d+u+o===0){be++;break}default:switch(be++,Re=s.charAt(R),C){case K:case M:if(d+o+h===0)switch(w){case U:case V:case K:case M:Re="";break;default:if(C!==M)Re=" "}break;case re:Re="\\0";break;case ce:Re="\\f";break;case se:Re="\\v";break;case P:if(d+h+o===0&&ge>0)Oe=1,we=1,Re="\f"+Re;break;case 108:if(d+h+o+ke===0&&z>0)switch(R-z){case 2:if(w===ne&&s.charCodeAt(R-3)===V)ke=w;case 8:if(m===le)ke=m}break;case V:if(d+h+o===0)z=R;break;case U:if(h+u+d+o===0)we=1,Re+="\r";break;case Y:case X:if(0===h)d=d===C?0:0===d?C:d;break;case G:if(d+h+u===0)o++;break;case H:if(d+h+u===0)o--;break;case E:if(d+h+o===0)u--;break;case D:if(d+h+o===0){if(0===O)switch(2*w+3*m){case 533:break;default:y=0,O=1}u++}break;case L:if(h+u+d+o+z+j===0)j=1;break;case T:case Z:if(d+o+u>0)break;switch(h){case 0:switch(2*C+3*s.charCodeAt(R+1)){case 235:h=Z;break;case 220:je=R,h=T}break;case T:if(C===Z&&w===T&&je+2!==R){if(33===s.charCodeAt(je+2))Ve+=s.substring(je,R+1);Re="",h=0}}}if(0===h){if(ge+d+o+j===0&&t!==te&&C!==W)switch(C){case U:case ae:case _:case ee:case E:case D:if(0===O){switch(w){case K:case M:case I:case J:Re+="\0";break;default:Re="\0"+Re+(C===U?"":"\0")}we=1}else switch(C){case D:if(z+7===R&&108===w)z=0;O=++y;break;case E:if(0==(O=--y))we=1,Re+="\0"}break;case K:case M:switch(w){case re:case B:case q:case W:case U:case ce:case K:case M:case I:case J:break;default:if(0===O)we=1,Re+="\0"}}if(Te+=Re,C!==M&&C!==K)$=C}}m=w,w=C,R++}if(je=Ve.length,me>0)if(0===je&&0===Xe.length&&0===a[0].length==false)if(t!==ie||1===a.length&&(ge>0?Ee:Ge)===a[0])je=a.join(",").length+2;if(je>0){if(f=0===ge&&t!==te?function(e){for(var a,r,s=0,t=e.length,i=Array(t);s<t;++s){for(var f=e[s].split(l),n="",o=0,h=0,u=0,d=0,b=f.length;o<b;++o){if(0===(h=(r=f[o]).length)&&b>1)continue;if(u=n.charCodeAt(n.length-1),d=r.charCodeAt(0),a="",0!==o)switch(u){case T:case ae:case _:case ee:case M:case D:break;default:a=" "}switch(d){case P:r=a+Ee;case ae:case _:case ee:case M:case E:case D:break;case G:r=a+r+Ee;break;case V:switch(2*r.charCodeAt(1)+3*r.charCodeAt(2)){case 530:if(Ce>0){r=a+r.substring(8,h-1);break}default:if(o<1||f[o-1].length<1)r=a+Ee+r}break;case U:a="";default:if(h>1&&r.indexOf(":")>0)r=a+r.replace(v,"$1"+Ee+"$2");else r=a+r+Ee}n+=r}i[s]=n.replace(c,"").trim()}return i}(a):a,ye>0)if(void 0!==(n=Pe(Fe,Ve,f,e,pe,be,je,t,i,t))&&0===(Ve=n).length)return Ye+Ve+Xe;if(Ve=f.join(",")+"{"+Ve+"}",Ae*ke!=0){if(2===Ae&&!Le(Ve,2))ke=0;switch(ke){case le:Ve=Ve.replace(k,":"+S+"$1")+Ve;break;case ne:Ve=Ve.replace(p,"::"+N+"input-$1")+Ve.replace(p,"::"+S+"$1")+Ve.replace(p,":"+F+"input-$1")+Ve}ke=0}}return Ye+Ve+Xe}function Ie(e,a,r){var c=a.trim().split(o),s=c,t=c.length,i=e.length;switch(i){case 0:case 1:for(var f=0,n=0===i?"":e[0]+" ";f<t;++f)s[f]=Je(n,s[f],r,i).trim();break;default:f=0;var l=0;for(s=[];f<t;++f)for(var h=0;h<i;++h)s[l++]=Je(e[h]+" ",c[f],r,i).trim()}return s}function Je(e,a,r,c){var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);switch(t){case P:switch(ge+c){case 0:case 1:if(0===e.trim().length)break;default:return s.replace(h,"$1"+e.trim())}break;case V:switch(s.charCodeAt(1)){case 103:if(Ce>0&&ge>0)return s.replace(u,"$1").replace(h,"$1"+Ge);break;default:return e.trim()+s.replace(h,"$1"+e.trim())}default:if(r*ge>0&&s.indexOf("\f")>0)return s.replace(h,(e.charCodeAt(0)===V?"":"$1")+e.trim())}return e+s}function Ke(e,a,r,c){var l,o=0,h=e+";",u=2*a+3*r+4*c;if(944===u)return function(e){var a=e.length,r=e.indexOf(":",9)+1,c=e.substring(0,r).trim(),s=e.substring(r,a-1).trim();switch(e.charCodeAt(9)*Be){case 0:break;case Q:if(110!==e.charCodeAt(10))break;default:for(var t=s.split((s="",f)),i=0,r=0,a=t.length;i<a;r=0,++i){for(var l=t[i],o=l.split(n);l=o[r];){var h=l.charCodeAt(0);if(1===Be&&(h>L&&h<90||h>96&&h<123||h===R||h===Q&&l.charCodeAt(1)!==Q))switch(isNaN(parseFloat(l))+(-1!==l.indexOf("("))){case 1:switch(l){case"infinite":case"alternate":case"backwards":case"running":case"normal":case"forwards":case"both":case"none":case"linear":case"ease":case"ease-in":case"ease-out":case"ease-in-out":case"paused":case"reverse":case"alternate-reverse":case"inherit":case"initial":case"unset":case"step-start":case"step-end":break;default:l+=De}}o[r++]=l}s+=(0===i?"":",")+o.join(" ")}}if(s=c+s+";",1===Ae||2===Ae&&Le(s,1))return N+s+s;return s}(h);else if(0===Ae||2===Ae&&!Le(h,1))return h;switch(u){case 1015:return 97===h.charCodeAt(10)?N+h+h:h;case 951:return 116===h.charCodeAt(3)?N+h+h:h;case 963:return 110===h.charCodeAt(5)?N+h+h:h;case 1009:if(100!==h.charCodeAt(4))break;case 969:case 942:return N+h+h;case 978:return N+h+S+h+h;case 1019:case 983:return N+h+S+h+F+h+h;case 883:if(h.charCodeAt(8)===Q)return N+h+h;if(h.indexOf("image-set(",11)>0)return h.replace(z,"$1"+N+"$2")+h;return h;case 932:if(h.charCodeAt(4)===Q)switch(h.charCodeAt(5)){case 103:return N+"box-"+h.replace("-grow","")+N+h+F+h.replace("grow","positive")+h;case 115:return N+h+F+h.replace("shrink","negative")+h;case 98:return N+h+F+h.replace("basis","preferred-size")+h}return N+h+F+h+h;case 964:return N+h+F+"flex-"+h+h;case 1023:if(99!==h.charCodeAt(8))break;return l=h.substring(h.indexOf(":",15)).replace("flex-","").replace("space-between","justify"),N+"box-pack"+l+N+h+F+"flex-pack"+l+h;case 1005:return t.test(h)?h.replace(s,":"+N)+h.replace(s,":"+S)+h:h;case 1e3:switch(o=(l=h.substring(13).trim()).indexOf("-")+1,l.charCodeAt(0)+l.charCodeAt(o)){case 226:l=h.replace(m,"tb");break;case 232:l=h.replace(m,"tb-rl");break;case 220:l=h.replace(m,"lr");break;default:return h}return N+h+F+l+h;case 1017:if(-1===h.indexOf("sticky",9))return h;case 975:switch(o=(h=e).length-10,u=(l=(33===h.charCodeAt(o)?h.substring(0,o):h).substring(e.indexOf(":",7)+1).trim()).charCodeAt(0)+(0|l.charCodeAt(7))){case 203:if(l.charCodeAt(8)<111)break;case 115:h=h.replace(l,N+l)+";"+h;break;case 207:case 102:h=h.replace(l,N+(u>102?"inline-":"")+"box")+";"+h.replace(l,N+l)+";"+h.replace(l,F+l+"box")+";"+h}return h+";";case 938:if(h.charCodeAt(5)===Q)switch(h.charCodeAt(6)){case 105:return l=h.replace("-items",""),N+h+N+"box-"+l+F+"flex-"+l+h;case 115:return N+h+F+"flex-item-"+h.replace(y,"")+h;default:return N+h+F+"flex-line-pack"+h.replace("align-content","").replace(y,"")+h}break;case 973:case 989:if(h.charCodeAt(3)!==Q||122===h.charCodeAt(4))break;case 931:case 953:if(true===j.test(e))if(115===(l=e.substring(e.indexOf(":")+1)).charCodeAt(0))return Ke(e.replace("stretch","fill-available"),a,r,c).replace(":fill-available",":stretch");else return h.replace(l,N+l)+h.replace(l,S+l.replace("fill-",""))+h;break;case 962:if(h=N+h+(102===h.charCodeAt(5)?F+h:"")+h,r+c===211&&105===h.charCodeAt(13)&&h.indexOf("transform",10)>0)return h.substring(0,h.indexOf(";",27)+1).replace(i,"$1"+N+"$2")+h}return h}function Le(e,a){var r=e.indexOf(1===a?":":"{"),c=e.substring(0,3!==a?r:10),s=e.substring(r+1,e.length-1);return Oe(2!==a?c:c.replace(O,"$1"),s,a)}function Me(e,a){var r=Ke(a,a.charCodeAt(0),a.charCodeAt(1),a.charCodeAt(2));return r!==a+";"?r.replace($," or ($1)").substring(4):"("+a+")"}function Pe(e,a,r,c,s,t,i,f,n,l){for(var o,h=0,u=a;h<ye;++h)switch(o=$e[h].call(Te,e,u,r,c,s,t,i,f,n,l)){case void 0:case false:case true:case null:break;default:u=o}if(u!==a)return u}function Qe(e,a,r,c){for(var s=a+1;s<r;++s)switch(c.charCodeAt(s)){case Z:if(e===T)if(c.charCodeAt(s-1)===T&&a+2!==s)return s+1;break;case I:if(e===Z)return s+1}return s}function Re(e){for(var a in e){var r=e[a];switch(a){case"keyframe":Be=0|r;break;case"global":Ce=0|r;break;case"cascade":ge=0|r;break;case"compress":we=0|r;break;case"semicolon":ve=0|r;break;case"preserve":me=0|r;break;case"prefix":if(Oe=null,!r)Ae=0;else if("function"!=typeof r)Ae=1;else Ae=2,Oe=r}}return Re}function Te(a,r){if(void 0!==this&&this.constructor===Te)return e(a);var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);if(Be>0)De=s.replace(d,t===G?"":"-");if(t=1,1===ge)Ge=s;else Ee=s;var i,f=[Ge];if(ye>0)if(void 0!==(i=Pe(ze,r,f,f,pe,be,0,0,0,0))&&"string"==typeof i)r=i;var n=He(xe,f,r,0,0);if(ye>0)if(void 0!==(i=Pe(je,n,f,f,pe,be,n.length,0,0,0))&&"string"!=typeof(n=i))t=0;return De="",Ge="",Ee="",ke=0,pe=1,be=1,we*t==0?n:n.replace(c,"").replace(g,"").replace(A,"$1").replace(C,"$1").replace(w," ")}if(Te.use=function e(a){switch(a){case void 0:case null:ye=$e.length=0;break;default:if("function"==typeof a)$e[ye++]=a;else if("object"==typeof a)for(var r=0,c=a.length;r<c;++r)e(a[r]);else qe=0|!!a}return e},Te.set=Re,void 0!==a)Re(a);return Te});
+//# sourceMappingURL=stylis.min.js.map
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (factory) {
+	 true ? (module['exports'] = factory()) :
+		undefined
+}(function () {
+
+	'use strict'
+
+	return function (insertRule) {
+		var delimiter = '/*|*/'
+		var needle = delimiter+'}'
+
+		function toSheet (block) {
+			if (block)
+				try {
+					insertRule(block + '}')
+				} catch (e) {}
+		}
+
+		return function ruleSheet (context, content, selectors, parents, line, column, length, ns, depth, at) {
+			switch (context) {
+				// property
+				case 1:
+					// @import
+					if (depth === 0 && content.charCodeAt(0) === 64)
+						return insertRule(content+';'), ''
+					break
+				// selector
+				case 2:
+					if (ns === 0)
+						return content + delimiter
+					break
+				// at-rule
+				case 3:
+					switch (ns) {
+						// @font-face, @page
+						case 102:
+						case 112:
+							return insertRule(selectors[0]+content), ''
+						default:
+							return content + (at === 0 ? delimiter : '')
+					}
+				case -2:
+					content.split(needle).forEach(toSheet)
+			}
+		}
+	}
+}))
+
+
+/***/ }),
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var unitlessKeys = {
+  animationIterationCount: 1,
+  borderImageOutset: 1,
+  borderImageSlice: 1,
+  borderImageWidth: 1,
+  boxFlex: 1,
+  boxFlexGroup: 1,
+  boxOrdinalGroup: 1,
+  columnCount: 1,
+  columns: 1,
+  flex: 1,
+  flexGrow: 1,
+  flexPositive: 1,
+  flexShrink: 1,
+  flexNegative: 1,
+  flexOrder: 1,
+  gridRow: 1,
+  gridRowEnd: 1,
+  gridRowSpan: 1,
+  gridRowStart: 1,
+  gridColumn: 1,
+  gridColumnEnd: 1,
+  gridColumnSpan: 1,
+  gridColumnStart: 1,
+  msGridRow: 1,
+  msGridRowSpan: 1,
+  msGridColumn: 1,
+  msGridColumnSpan: 1,
+  fontWeight: 1,
+  lineHeight: 1,
+  opacity: 1,
+  order: 1,
+  orphans: 1,
+  tabSize: 1,
+  widows: 1,
+  zIndex: 1,
+  zoom: 1,
+  WebkitLineClamp: 1,
+  // SVG-related properties
+  fillOpacity: 1,
+  floodOpacity: 1,
+  stopOpacity: 1,
+  strokeDasharray: 1,
+  strokeDashoffset: 1,
+  strokeMiterlimit: 1,
+  strokeOpacity: 1,
+  strokeWidth: 1
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__(82);
+} else {}
+
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.6
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+Object.defineProperty(exports,"__esModule",{value:!0});
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?Symbol.for("react.memo"):
+60115,r=b?Symbol.for("react.lazy"):60116;function t(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case h:return a;default:return u}}case r:case q:case d:return u}}}function v(a){return t(a)===m}exports.typeOf=t;exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;
+exports.Fragment=e;exports.Lazy=r;exports.Memo=q;exports.Portal=d;exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||"object"===typeof a&&null!==a&&(a.$$typeof===r||a.$$typeof===q||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n)};exports.isAsyncMode=function(a){return v(a)||t(a)===l};exports.isConcurrentMode=v;exports.isContextConsumer=function(a){return t(a)===k};
+exports.isContextProvider=function(a){return t(a)===h};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return t(a)===n};exports.isFragment=function(a){return t(a)===e};exports.isLazy=function(a){return t(a)===r};exports.isMemo=function(a){return t(a)===q};exports.isPortal=function(a){return t(a)===d};exports.isProfiler=function(a){return t(a)===g};exports.isStrictMode=function(a){return t(a)===f};
+exports.isSuspense=function(a){return t(a)===p};
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function areInputsEqual(newInputs, lastInputs) {
+  if (newInputs.length !== lastInputs.length) {
+    return false;
+  }
+
+  for (var i = 0; i < newInputs.length; i++) {
+    if (newInputs[i] !== lastInputs[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function index (resultFn, isEqual) {
+  if (isEqual === void 0) {
+    isEqual = areInputsEqual;
+  }
+
+  var lastThis;
+  var lastArgs = [];
+  var lastResult;
+  var calledOnce = false;
+
+  var result = function result() {
+    for (var _len = arguments.length, newArgs = new Array(_len), _key = 0; _key < _len; _key++) {
+      newArgs[_key] = arguments[_key];
+    }
+
+    if (calledOnce && lastThis === this && isEqual(newArgs, lastArgs)) {
+      return lastResult;
+    }
+
+    lastResult = resultFn.apply(this, newArgs);
+    calledOnce = true;
+    lastThis = this;
+    lastArgs = newArgs;
+    return lastResult;
+  };
+
+  return result;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85);
+
+
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|default|defer|dir|disabled|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|itemProp|itemScope|itemType|itemID|itemRef|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+
+var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__["default"])(function (prop) {
+  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
+  /* o */
+  && prop.charCodeAt(1) === 110
+  /* n */
+  && prop.charCodeAt(2) < 91;
+}
+/* Z+1 */
+);
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (memoize);
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].input.withConfig({
+  componentId: "sc-10xa6m0-0"
+})(["width:100%;border:1px solid rgb(223,223,227);height:30px;border-radius:2px;"]);
+
+/***/ }),
+/* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cats_ua_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(88);
+/* harmony import */ var _cats_ua_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cats_ua_png__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _patterns_ua_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(89);
+/* harmony import */ var _patterns_ua_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_patterns_ua_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony default export */ __webpack_exports__["default"] = ([{latlng:[-6,35],flag:"https://restcountries.eu/data/tza.svg",code:"TZ",name:"United Republic of Tanzania",geoJSON:{type:"Polygon",coordinates:[[[-1.6292983300000012,31.836019520000004],[-1.0273599600000016,31.86617088],[-1.0145485400000005,30.76985931],[-1.1346485599999963,30.41909981],[-1.6989295500000114,30.81615067],[-2.287238120000005,30.758319850000003],[-2.413829570000006,30.46966934],[-2.8076181399999887,30.52766037],[-3.0343086699999895,30.743009569999998],[-3.3593065700000015,30.75223923],[-3.5685775300000024,30.50554085],[-4.0901169800000154,30.11631966],[-4.452387330000004,29.75351906],[-4.451184269999987,29.660629269999998],[-4.917726990000012,29.594450000000002],[-5.052943229999992,29.77901077],[-5.484939100000001,29.75538063],[-5.909999850000005,29.94697571],[-6.08973407999999,29.722299580000005],[-6.476459029999994,29.91054535],[-6.470587249999992,30.13589478],[-6.9810290300000055,30.540420529999995],[-7.616716380000003,30.645729060000004],[-8.405588150000005,31.13756943],[-8.594569210000003,31.157751080000004],[-8.76203823,31.55636978],[-8.930336950000003,32.19187164],[-9.230602259999989,32.7593689],[-9.417140009999995,33.73971939],[-9.69367027,33.94083786],[-9.478154180000006,34.02822876],[-10.02622986,34.51029587],[-10.899988169999999,34.63737488],[-11.33744621,34.75453949],[-11.479566570000003,34.93619919],[-11.439140320000005,35.31240082],[-11.720918659999993,36.51406097],[-11.594536779999995,36.77513885],[-11.568752290000006,37.47129059],[-11.268776889999993,37.82764053],[-11.285188670000004,38.42757034],[-10.896866800000003,39.52099991],[-10.317086219999997,40.31658936],[-10.098392489999993,39.94960022000001],[-9.112361910000004,39.5357399],[-8.485498430000018,39.18651961999999],[-8.007800099999999,39.25202942],[-7.703898910000011,39.1946907],[-7.099997040000009,39.47000121999999],[-6.840000149999991,39.43999863],[-6.475656989999999,38.799770360000004],[-5.9089441299999805,38.74053955],[-4.676768300000002,39.20222092],[-3.6771166299999924,37.76689911],[-3.0969872499999997,37.69868851],[-1.05981839,34.07262039],[-1.5060282900000006,33.57941818],[-1.9579583400000076,33.25175095],[-2.3009080900000027,33.64719009],[-2.547109129999995,33.07672882],[-2.4304380399999945,32.95177841],[-2.4899466000000006,32.37308884],[-2.7145099600000013,31.92654991],[-2.3292067099999905,31.648010249999995],[-1.6292983300000012,31.836019520000004]]]}},{latlng:[10,49],flag:"https://restcountries.eu/data/som.svg",code:"SO",name:"Somalia",geoJSON:{type:"Polygon",coordinates:[[[10.926870350000002,42.77682877],[10.57258034,42.5587616],[10.021940229999991,42.92811966],[9.54047966000001,43.29698944],[9.183580399999988,43.67874908],[7.9968800500000015,46.948341369999994],[8.003000260000006,47.78942108],[5.001619819999994,44.96360016],[4.95755004999999,43.6608696],[4.252590180000008,42.76966858],[4.234129909999996,42.12860870000001],[3.9189119300000077,41.85508346999999],[2.784519910000012,40.98104857999999],[-0.8582894200000065,40.99300003],[-1.683249000000007,41.58512878],[-1.4464685900000074,41.81095123000001],[-0.9191597700000003,42.04156876],[0.29219999999999147,43.13597107],[1.0528299799999905,44.06814957],[2.0457599200000067,45.56399155],[2.8552899400000085,46.5647583],[4.219399929999997,47.74079132],[5.339109899999993,48.59455109],[6.804659839999997,49.452701569999995],[8.081729890000009,50.07091904000001],[9.19874001,50.55239105],[10.279720309999997,50.83417891999999],[10.640899659999999,51.04531097],[11.166509630000002,51.04153061],[11.74814987,51.13386917],[12.02464008,51.111198429999995],[12.021900180000003,50.73202133],[11.679570199999999,50.25878143],[11.578900340000017,49.72861862],[11.43033028,49.26776123],[11.375490189999997,48.37876892],[11.193070410000004,48.0215683],[11.127240180000003,47.52565002],[10.816550250000006,46.645401],[10.698019980000002,45.55693054],[10.442210200000005,44.61423111],[10.445529940000002,44.1178093],[10.864159579999992,43.66666031],[11.277720449999993,43.47064972],[11.46205044000001,43.14527893],[10.926870350000002,42.77682877]]]}},{latlng:[1,38],flag:"https://restcountries.eu/data/ken.svg",code:"KE",name:"Kenya",geoJSON:{type:"Polygon",coordinates:[[[2.784519910000012,40.98104857999999],[3.9189119300000077,41.85508346999999],[3.919090029999997,41.17179871],[4.25702,40.768478390000006],[3.838789939999996,39.85493851],[3.4220600099999885,39.559383389999994],[3.50074005000001,38.89250946],[3.616070030000008,38.67113875999999],[3.588510040000009,38.436969760000004],[3.5986049200000023,38.12091446],[4.447864060000011,36.85509491],[4.447864060000011,36.15908051],[4.776965619999994,35.81744766],[5.338232039999984,35.81744766],[5.506000040000003,35.29800797],[4.847122669999998,34.6201973],[4.249885079999989,34.00500107],[3.55559993,34.47912979],[3.0537400200000078,34.59606934],[1.905840040000001,35.03599167],[1.1769399599999983,34.67210007],[0.09499999999999409,33.98500061],[-0.31930988999999455,34.13623047],[-1.05981839,34.07262039],[-3.0969872499999997,37.69868851],[-3.6771166299999924,37.76689911],[-4.676768300000002,39.20222092],[-4.346524240000005,39.60488892000001],[-3.6811599699999973,39.80006027],[-3.2776789699999855,40.121189120000004],[-2.5730891199999935,40.26303864],[-2.4997866200000054,40.63785172000001],[-2.0825500499999907,40.88476944],[-1.683249000000007,41.58512878],[-0.8582894200000065,40.99300003],[2.784519910000012,40.98104857999999]]]}},{latlng:[8,38],flag:"https://restcountries.eu/data/eth.svg",code:"ET",name:"Ethiopia",geoJSON:{type:"Polygon",coordinates:[[[12.541119580000004,42.35702896],[12.542229649999992,42.35155869],[12.100000379999999,42],[11.631199839999997,41.66175842],[11.355110170000007,41.73958969000001],[11.050909999999998,41.755569460000004],[11.034199709999994,42.31414032],[11.105110169999998,42.55493164],[10.926870350000002,42.77682877],[10.57258034,42.5587616],[10.021940229999991,42.92811966],[9.54047966000001,43.29698944],[9.183580399999988,43.67874908],[7.9968800500000015,46.948341369999994],[8.003000260000006,47.78942108],[5.001619819999994,44.96360016],[4.95755004999999,43.6608696],[4.252590180000008,42.76966858],[4.234129909999996,42.12860870000001],[3.9189119300000077,41.85508346999999],[3.919090029999997,41.17179871],[4.25702,40.768478390000006],[3.838789939999996,39.85493851],[3.4220600099999885,39.559383389999994],[3.50074005000001,38.89250946],[3.616070030000008,38.67113875999999],[3.588510040000009,38.436969760000004],[3.5986049200000023,38.12091446],[4.447864060000011,36.85509491],[4.447864060000011,36.15908051],[4.776965619999994,35.81744766],[5.338232039999984,35.81744766],[5.506000040000003,35.29800797],[6.594220160000009,34.70701981],[6.826069830000003,34.25032043],[7.225949759999999,34.07509995],[7.713339809999991,33.56829071],[7.784969810000007,32.95418167],[8.354579929999995,33.2947998],[8.379159929999998,33.82550049],[8.684559820000004,33.9749794],[9.58358002,33.96162033],[10.630089760000013,34.2574501],[10.910169600000016,34.73115158],[11.318960189999993,34.83163071],[12.082859990000003,35.26049042],[12.578280450000003,35.86362839],[13.56332969999999,36.27022171],[14.422109599999986,36.42950821],[14.213100429999988,37.59376907],[14.959429740000006,37.90607071],[14.505470279999994,38.51295089999999],[14.740639689999997,39.09939957],[14.531550409999994,39.3406105],[14.519590379999997,40.02624893],[14.118639950000004,40.89659882],[13.773329729999999,41.15520096],[13.452090260000013,41.59856033],[12.865819929999999,42.00975037],[12.542229649999992,42.35155869],[12.541119580000004,42.35702896]]]}},{latlng:[1,32],flag:"https://restcountries.eu/data/uga.svg",code:"UG",name:"Uganda",geoJSON:{type:"Polygon",coordinates:[[[-1.0273599600000016,31.86617088],[-1.0145485400000005,30.76985931],[-1.1346485599999963,30.41909981],[-1.4433095500000057,29.821510309999997],[-1.3413000100000008,29.57946968],[-0.5873798700000032,29.58783913],[-0.2052999400000094,29.819499969999995],[0.5974000100000074,29.87578011],[1.0623199900000035,30.0861702],[1.5838099699999957,30.46850014],[1.8494000400000103,30.852680210000003],[2.204459909999989,31.17416954],[2.339889999999992,30.773319240000003],[3.5091700600000046,30.83385086],[3.7818999299999865,31.245559689999997],[3.558269979999997,31.881450650000005],[3.7923200099999885,32.68642044],[3.7899999600000016,33.38999939],[4.249885079999989,34.00500107],[3.55559993,34.47912979],[3.0537400200000078,34.59606934],[1.905840040000001,35.03599167],[1.1769399599999983,34.67210007],[0.09499999999999409,33.98500061],[0.3250100000000066,33.33184814],[0.08676999999999607,32.90610886],[-0.056139950000001555,32.27285004],[-0.6404199000000073,31.8151207],[-1.0273599600000016,31.86617088]]]}},{latlng:[15,30],flag:"https://restcountries.eu/data/sdn.svg",code:"SD",name:"Sudan",geoJSON:{type:"Polygon",coordinates:[[[3.7899999600000016,33.38999939],[3.7923200099999885,32.68642044],[3.558269979999997,31.881450650000005],[3.7818999299999865,31.245559689999997],[3.5091700600000046,30.83385086],[4.173699859999992,29.9534893],[4.600790020000015,29.716009140000004],[4.38926983000001,29.159080509999995],[4.455090049999988,28.69668007],[4.287159919999996,28.42900085],[4.408410070000005,27.97999001],[5.233960150000012,27.37424088],[5.550960059999997,27.213390349999997],[5.946710109999998,26.46594048],[6.546599859999989,26.2134304],[6.979300020000006,25.79664993],[7.500080109999995,25.12414932],[7.825089930000008,25.11491966],[8.22918034000001,24.567350390000005],[8.66631031000001,23.805820470000004],[8.954290389999992,23.459030149999997],[9.265060419999998,23.3947506],[9.68122005000001,23.55722046],[10.089249609999998,23.554290770000005],[10.714469910000009,22.97756004],[11.14239978999999,22.86417007],[11.384610179999996,22.8762207],[11.679360389999996,22.50868988],[12.260239600000004,22.497619630000003],[12.64605045000001,22.288009640000002],[12.58817959,21.93680954],[12.95545959000001,22.03759003],[13.372320180000003,22.29657936],[13.786479949999995,22.183290480000004],[14.093179699999999,22.512020110000005],[14.326820370000014,22.30351067],[14.944290159999994,22.5679493],[15.68072032999999,23.02458954],[15.610839840000006,23.886890409999996],[19.580469129999994,23.83765984],[20.000000000000004,23.85000038],[20.003040310000003,24.999999999999996],[22.000000000000007,24.999999999999996],[22.000000000000007,29.020000460000002],[22.000000000000007,32.90000153],[22.000000000000007,36.86623001],[21.01885033,37.1887207],[20.837440490000002,36.96940994],[19.80796051000001,37.11470032],[18.61408996999999,37.48178864],[18.36786079,37.86275864],[17.998300549999996,38.41007996],[17.427539830000004,37.90399933],[17.26313972,37.16746902],[16.956550599999986,36.85253143],[16.291860580000016,36.75389099],[14.822489739999991,36.3232193],[14.422109599999986,36.42950821],[13.56332969999999,36.27022171],[12.578280450000003,35.86362839],[12.082859990000003,35.26049042],[11.318960189999993,34.83163071],[10.910169600000016,34.73115158],[10.630089760000013,34.2574501],[9.58358002,33.96162033],[8.684559820000004,33.9749794],[8.379159929999998,33.82550049],[8.354579929999995,33.2947998],[7.784969810000007,32.95418167],[7.713339809999991,33.56829071],[7.225949759999999,34.07509995],[6.826069830000003,34.25032043],[6.594220160000009,34.70701981],[5.506000040000003,35.29800797],[4.847122669999998,34.6201973],[4.249885079999989,34.00500107],[3.7899999600000016,33.38999939]]]}},{latlng:[60,-95],flag:"https://restcountries.eu/data/can.svg",code:"CA",name:"Canada",geoJSON:{type:"Polygon",coordinates:[[[49.99826050000002,-125.28858948],[49.49976348999997,-124.77785492000001],[49.06631088000001,-123.7462616],[48.48614119999999,-123.31989288],[48.340000149999995,-123.83963012999999],[48.81691742000002,-125.53665924],[49.18969727,-125.84662628000001],[49.55722427,-126.77155303999999],[49.85649872,-126.95761108],[50.04547119,-128.02130127],[50.61689376999998,-128.41955566],[50.86000061,-128.3303833],[50.63100815000002,-127.24551391999998],[50.471763609999996,-126.61141204999998],[50.36053847999999,-125.63997649999999],[49.99826050000002,-125.28858948]],[[43.27000045999999,-79.00989531999998],[43.20238112999999,-79.36168670999999],[43.29719162000002,-79.76039124],[43.63920974999999,-79.46107482999999],[43.75743102999998,-79.15607452],[43.90317917,-78.45046997000001],[44.03931046000001,-77.60534668000001],[43.85015106,-77.16138458],[44.069480899999995,-76.88269043000001],[44.2080307,-76.56555176],[44.096309659999996,-76.37499999999999],[44.816448210000004,-75.31814575],[45.00048064999998,-74.86688995],[45.00738144000002,-73.34772491],[45.0082016,-71.50495148],[45.25500106999998,-71.40493774],[45.30524063000001,-71.08473206],[45.459999079999974,-70.65994263],[45.91500092000001,-70.30498505],[46.693069460000004,-69.99990845],[47.44778061000001,-69.2371521],[47.18500137,-68.90493774],[47.35485840000002,-68.23442841],[47.06636047000001,-67.79035187],[45.70280837999999,-67.79129791],[45.137531279999976,-67.13736725],[45.259311679999975,-66.0259552],[45.292041780000005,-64.42546082],[44.46511841,-66.16163635],[43.61867141999998,-66.12330627],[43.545230870000026,-65.3639679],[44.265529629999996,-64.24648285],[44.670139309999996,-63.25468826],[45.26525115999998,-61.03983306999999],[45.92039871000002,-59.80284119],[46.28263855000001,-60.44855498999999],[47.00793075999999,-60.51810455],[45.88376999,-61.52072144000001],[45.7390213,-63.17326736],[46.23849106000001,-64.47214508],[46.992969509999995,-64.79850769],[48.070850370000024,-65.11538696],[48.74248123000002,-64.17092896],[49.23278046000003,-65.0561676],[49.1330986,-66.5524292],[48.29999923999999,-68.64992523],[46.9860611,-70.25515747],[46.82170867999999,-71.10452271],[47.74488067999999,-69.95360565],[49.068359380000004,-68.51107788],[49.51155853,-67.23622131],[50.228969570000004,-66.39904785],[50.29819870000001,-65.36325073],[50.29098891999998,-63.86246489999999],[50.08045959000002,-61.723606110000006],[50.24277114999999,-60.033073429999995],[51.064300540000005,-58.77480316],[51.4197197,-57.12687302],[51.770698549999985,-56.409137730000005],[52.146640780000006,-55.68338013],[53.27035904000002,-55.756313320000004],[53.64749146000001,-56.15811157000001],[53.780319210000016,-56.93688965],[54.62649917999999,-57.33318329000001],[54.94549179000001,-57.97505569],[55.204071039999995,-59.56960296999999],[55.77547835999999,-60.46848297],[56.339450839999984,-61.79862975999999],[56.96744919000001,-61.396541600000006],[58.167079930000014,-62.50233841],[59.44260024999999,-63.80474854],[60.335578919999975,-64.58347321],[59.87070847,-65.24506378],[58.76731110000001,-66.20178223],[58.212059020000005,-67.64968109],[58.80105972000002,-68.37447357],[58.95735931,-69.28790283],[60.22124862999999,-69.62026978],[61.06140899999999,-69.59036255],[61.137168880000004,-71.37362671],[61.52534866,-71.67704773],[62.105068210000006,-72.90848541],[62.443801879999995,-73.8398056],[62.181110380000014,-74.66810608],[62.27840042000001,-75.69612122],[62.55052948000001,-77.41062163999999],[62.31964110999999,-78.10687256],[60.75788116,-77.77268982],[59.852611540000005,-77.33670044],[58.80458068999999,-78.51681519],[58.05208969000001,-77.30223083],[57.20262909000002,-76.62314606],[56.534229280000005,-76.54127502],[55.83740997000002,-77.0955658],[55.13645171999999,-78.22866058],[54.66772078999999,-79.82947540000002],[54.14144897000001,-79.12420654],[52.56208038,-78.60182190000002],[51.53393172999999,-79.14299774000001],[51.20841980000001,-79.91279602],[52.15787888000001,-81.40064240000001],[53.27703094000002,-82.12497710999999],[54.282268519999995,-82.43611145],[55.14831924,-82.27280426],[55.24488830999998,-83.36051941],[55.30260085999997,-85.01174927],[55.72383117999998,-86.07112121999998],[55.99914169000001,-87.32410431],[56.471618649999996,-88.03968810999999],[56.85171890000001,-89.0394516],[57.28467940999999,-90.89759827],[57.087089539999994,-92.29696655],[57.84571074999998,-92.76455688],[58.78211975,-93.21491241000001],[58.94881821,-94.68453979000002],[60.11021041999997,-94.62923431],[60.89865112,-94.24150085],[62.02468872,-93.15698242],[62.835079189999995,-91.93340301999999],[62.96020889,-90.76999664],[63.61016846,-90.70397949],[64.0327301,-89.91442108],[64.09896851000003,-88.48285675],[64.77562713999998,-87.32324219],[65.21296691999999,-87.03143311],[66.05625153,-86.06753539999998],[66.55832672,-85.76938629],[66.25730133000002,-84.73540497000002],[66.41153717,-83.34452820000001],[67.11077881,-81.38642119999999],[67.59716034000003,-81.25927734000001],[68.13253021,-81.96434784],[68.66567229999998,-81.22010803],[69.16201782000003,-81.28035736],[69.65825653000002,-82.62253571],[69.80538939999998,-84.10073090000002],[69.88211060000002,-85.52197266],[68.78456116000001,-85.57656097],[67.92146301,-86.30599213],[67.19872284000002,-87.35015106],[67.87338256999999,-88.31739807000001],[68.61508179,-88.01964569],[69.25872802999999,-89.21514893],[68.47499084000002,-90.55151367000002],[69.49765778,-90.54701996],[69.69996643,-92.40692139000001],[70.19129181000001,-91.51954651],[71.31868744,-92.8781662],[71.76014709000002,-93.88993834999998],[71.92053223,-95.20880127],[71.19481659000003,-96.39107513],[70.08975982999998,-96.47131348],[69.68570709,-95.30407715],[69.06903076000002,-94.23275757000002],[68.06382751000002,-94.68499755999999],[68.09069824,-95.48932648],[67.29338074,-96.1258316],[68.23938751000001,-96.11983489999999],[68.57864380000002,-97.66938782],[68.40393828999997,-98.55858612],[67.78164673000002,-98.44315338000001],[67.80565642999998,-99.90188599000001],[67.64688873,-101.45423889],[68.09774779999996,-103.22110748],[68.01799774,-104.33786774],[68.56121826,-105.34272765999998],[68.80000304999999,-106.14992523],[68.69999695000001,-106.94990540000002],[68.65392302999997,-108.16713715000002],[68.31163788,-108.81298828000001],[67.88735961999997,-107.79232788],[67.38143920999998,-108.88017273000001],[67.98104095,-109.9461441],[67.80612183000001,-110.79795074000002],[67.68814850000001,-113.49723816],[67.90261078,-115.30484772000001],[68.39890288999999,-113.89783478],[68.90590667999997,-115.24687195],[68.84150696000002,-116.22632599],[69.01127624999998,-117.60264587000002],[69.37786102000001,-119.94286346],[69.79778290000003,-121.47219849],[69.85552978999998,-122.68344116000002],[69.5637207,-123.06098938],[69.39968872,-124.28966522],[70.15840149000002,-124.4247818],[69.48058319000002,-125.7562561],[70.37721252,-127.44704437000001],[70.48384094,-128.13795471],[70.01286315999998,-128.36134338],[69.77926636,-129.10760498],[70.19368744,-129.79464722],[69.94451141000002,-131.43118286],[69.50534058,-132.92915344],[69.62743377999999,-134.41445923],[69.31511688,-135.6257019],[68.89804077,-136.50349426],[68.99002074999997,-137.5461731],[69.47102355999999,-139.12045288],[69.71199798999999,-140.9859314],[66.00003051999998,-140.99237061],[60.30638884999999,-140.99757385],[60.27682114000002,-140.01287842],[60.00000000000001,-139.03887939],[59.562110899999986,-138.34074402],[58.904998780000014,-137.45228577],[59.463890079999985,-136.47950745],[59.78778076,-135.47583008],[59.27056121999999,-134.94488525],[58.861110690000004,-134.27088928],[58.410278319999996,-133.3553772],[57.69289017000001,-132.73027039],[56.55212021,-131.7077179],[55.91582870000001,-130.00759888],[55.28499985,-129.97996521],[54.802780149999975,-130.53590393],[54.287570949999996,-130.51481628],[53.561588289999996,-129.30511475],[52.755378719999996,-129.12973022],[52.32960892,-127.85024261],[51.71583176000002,-127.99271393000001],[50.830608369999986,-127.43560791],[50.41656112999999,-125.62453460999998],[49.984558109999995,-124.91019440000001],[49.002536770000006,-122.97415161],[49.00000000000001,-122.8399353],[49.00000000000001,-120.00000000000001],[49.00000000000001,-117.03116608],[49.00000000000001,-116.04813385],[49.00000000000001,-113],[49.00000000000001,-110.04997252999999],[49.00000000000001,-107.04997253],[48.99985886000003,-104.04817200000001],[49.00000000000001,-100.64992523000001],[49.00070190000001,-97.22867584],[49.00000000000001,-95.15904236],[49.38425064000001,-95.15604401],[49.38904952999999,-94.81755066],[48.84000015000001,-94.63990784],[48.670738220000004,-94.32906342],[48.60926055999999,-93.63085174999999],[48.450000759999995,-92.60997009],[48.13999939,-91.63990784],[48.27000046000001,-90.82991027999998],[48.009998319999994,-89.59995269999999],[48.40547179999998,-89.19400024000001],[48.56249999999999,-88.62638092],[48.806320189999994,-88.40422821],[48.936691279999984,-88.17884064],[48.735088350000005,-87.24900817999999],[48.71106719999999,-86.55999756],[48.57727814000001,-86.32094574],[48.12686919999999,-86.08039856],[47.90948868,-85.81946564],[47.860080719999985,-84.86417389],[47.57569885000001,-85.04055023],[47.282199860000006,-84.64492035],[46.902320859999996,-84.81520081],[46.776821139999996,-84.39554596],[46.43960190000002,-84.60482025],[46.40877151,-84.3366394],[46.5557518,-84.14865112],[46.33427047999998,-83.95256805],[46.210151670000016,-83.20250702],[46.19963074,-82.44193268],[46.09754181000001,-81.6313324],[45.90380858999998,-80.73670959],[45.59012984999997,-80.41048431],[44.824588780000006,-79.76293945],[44.493919370000015,-80.08491516],[44.63164138999999,-80.89759827],[45.25004958999999,-81.40233612000002],[44.62018967000001,-81.27559662],[44.06464005000001,-81.75260162],[43.59006882,-81.7000885],[43.31084061000002,-81.78269196],[42.97999953999999,-82.42998504999998],[42.43000031,-82.89992523],[42.08000183,-83.11998749],[42.017021179999986,-82.57121277],[42.33552170000002,-81.82912445],[42.61518860000001,-81.39216614],[42.66073990000002,-81.09485626000001],[42.560081480000015,-80.5450592],[42.71567154000002,-80.27916718],[42.842029569999994,-79.79128265],[42.96500015000002,-78.91996765],[43.27000045999999,-79.00989531999998]],[[79.3015976,-105.49219513],[79.16535186999997,-103.52918243],[78.8004837,-100.82511139],[78.32476044,-100.06015778],[77.90753937000001,-99.67086029],[78.01898192999998,-101.3038559],[78.34320831,-102.94973755],[78.38034057999998,-105.17603302000002],[78.67742157000002,-104.21035767],[78.91835021999998,-105.41951751999999],[79.3015976,-105.49219513]],[[54.04000091999999,-132.70991516],[54.11999893,-131.75],[52.98461914000001,-132.04940796],[52.180419919999984,-131.17887878],[52.18236923000002,-131.57769775],[52.63970947000001,-132.18040466],[53.09999847,-132.54985046],[53.411479950000015,-133.05451965],[53.851081850000014,-133.23957825],[54.16999816999999,-133.17987061],[54.04000091999999,-132.70991516]],[[72.35218810999997,-78.77062225000002],[72.74960327,-77.82453918000002],[72.24368286000002,-75.6058197],[71.76715087999999,-74.22852325],[71.33084106,-74.09909058],[71.55693054,-72.24213409],[70.91999817,-71.1999054],[70.52503204,-68.7859726],[70.12194824000001,-67.91497803],[69.18608856,-66.96895599],[68.72020721000003,-68.80509949],[68.06716155999999,-66.44979095],[67.84754180999998,-64.86228943],[66.92845916999998,-63.42491531000001],[66.86212158000001,-61.85198975],[66.16024017,-62.16312408000001],[64.99868011000002,-63.9184227],[65.42604828,-65.14875793],[66.38804626000001,-66.72116089],[66.26274109,-68.01500702],[65.68978119,-68.14129639],[65.10845947000001,-67.08956146],[64.64842986999999,-65.73204041],[64.38275146000001,-65.32009125],[63.39291000000001,-64.66933441],[62.67419052,-65.01378632],[62.945079800000016,-66.27498627],[63.745681760000004,-68.78310394],[62.883949279999975,-67.36968994],[62.28005981,-66.32820129],[61.93090056999999,-66.16548157],[62.330131530000024,-68.87738037],[62.910709380000014,-71.02342224],[63.39783858999999,-72.2353363],[63.68001938000001,-71.88619232],[64.1939621,-73.37828064],[64.67907715000001,-74.83440399],[64.38910675,-74.81847382],[64.22953796,-77.70994568],[64.57292175,-78.55587006],[65.30917357999999,-77.89727783],[65.32698821999999,-76.01824188],[65.45475769000002,-73.95975494],[65.81176757999997,-74.29387665],[66.31057738999999,-73.94487],[67.28456116000002,-72.65107727],[67.72692870999998,-72.92597961],[68.06945038,-73.31156158],[68.55462646000002,-74.84322357],[68.89473724,-76.86904907],[69.14775848,-76.22862244],[69.76953124999999,-77.28733826],[69.82647705,-78.16852569999999],[70.16687774999998,-78.95717621000001],[69.87180328,-79.49241638],[69.74317169,-81.30538177],[69.96662903,-84.94468689],[70.26000214,-87.05999756],[70.41072845,-88.68168639999999],[70.76206207000003,-89.51342773],[71.21820068,-88.46770477],[71.22254944,-89.88810729999999],[72.23507689999998,-90.20513153],[73.12947083000002,-89.43657684],[73.53787231000003,-88.40815735],[73.80384064,-85.82606506000002],[73.15743256000003,-86.56208801],[72.53411102,-85.7743454],[73.34026337,-84.85007477000002],[73.7509613,-82.31551361],[72.71653748,-80.59998321999998],[72.06192780000002,-80.74885559000002],[72.35218810999997,-78.77062225000002]],[[65.10961150999997,-83.88262939000002],[64.76669312000001,-82.78748322],[64.45511627000002,-81.64191436999998],[63.979621890000004,-81.55337524],[64.05747986000002,-80.81728362999999],[63.72597121999999,-80.10344696],[63.41123961999999,-80.99091338999999],[63.65171050999999,-82.54706573],[64.10189056000002,-83.10874176],[63.56972884999999,-84.10039520000001],[63.05239868000001,-85.52334595],[63.63727950999997,-85.86673736999998],[63.54124832,-87.22197722999998],[64.03582001,-86.35268402],[64.82289886,-86.22483063],[65.73876953000003,-85.8838501],[65.65730286,-85.16120911],[65.21755219,-84.97576903999999],[65.37178802,-84.46398163],[65.10961150999997,-83.88262939000002]],[[51.31708908000002,-55.60017014],[50.68701171999999,-56.134025570000006],[49.81230927000001,-56.79585648],[50.15013123,-56.14309311000001],[49.935821529999984,-55.47144318],[49.58713149999999,-55.822383880000004],[49.313011169999996,-54.93510056000001],[49.55669022,-54.47372818],[49.249141689999995,-53.47651291],[48.516769409999995,-53.78600311],[48.687808990000015,-53.08615112],[48.15718078999999,-52.95859528],[47.535549160000016,-52.64810181],[46.6554985,-53.0691452],[46.6182785,-53.52144623],[46.807048800000004,-54.17892075],[47.62522125000002,-53.96183777],[47.752258299999994,-54.24046707],[46.88499831999999,-55.400745390000004],[46.9197197,-55.99744415],[47.38954925999999,-55.29118729],[47.63254928999999,-56.2507782],[47.57281113,-57.32522202],[47.60332869999998,-59.26597214],[47.89947127999999,-59.41949081],[48.251541140000015,-58.79655838],[48.52317809999998,-59.23162842],[49.12561034999999,-58.39178085],[50.71826935000002,-57.35865784],[51.28744124999999,-56.73864365],[51.632091520000024,-55.87096404999999],[51.58829116999999,-55.40694427],[51.31708908000002,-55.60017014]],[[78.80444336000001,-110.96359253],[78.60195923,-109.66314697],[78.40692138999997,-110.88126373],[78.40789795000002,-112.54201508],[78.55056,-112.52587891],[78.84999847,-111.5],[78.80444336000001,-110.96359253]],[[78.15296935999997,-111.26435851999999],[77.99633789000002,-109.85440063],[77.69702911,-110.18695068],[77.40923308999999,-112.05111693999999],[77.73220824999997,-113.53420258],[78.05106354,-112.72451782],[78.15296935999997,-111.26435851999999]],[[74.39230347,-88.15029906999999],[74.51557159000001,-89.76470184000001],[74.83773803999999,-92.42240143],[75.3868103,-92.76821135999998],[75.88263701999999,-92.88986206],[76.31923676,-93.8937912],[76.44139099000002,-95.96246338000002],[76.75108337000002,-97.12128448],[77.16136931999999,-96.74510193],[77.09789275999998,-94.6840744],[76.77629088999996,-93.57390594000002],[76.77851867999999,-91.60494995],[76.44957732999998,-90.74179077],[76.07401276000002,-90.96955109],[75.84776305999999,-89.82215881000002],[75.61015320000001,-89.18707275],[75.56620026000003,-87.83824158],[75.48243712999998,-86.37911987],[75.69918823,-84.78960419],[75.78431702,-82.75339507999999],[75.71396637,-81.1284256],[75.33683776999997,-80.05748749],[74.92311096,-79.83390808],[74.65731049,-80.45775604],[74.44245911,-81.94874573],[74.56404114000001,-83.22888184],[74.41002655000001,-86.09737396],[74.39230347,-88.15029906999999]],[[77.51999664000002,-93.8399353],[77.49134063999999,-94.29556274000001],[77.55510712000002,-96.16958618000001],[77.83466339,-96.43625641],[77.81999207,-94.42251587],[77.63435363999999,-93.72063446],[77.51999664000002,-93.8399353]],[[74.98000336000001,-93.61269379],[74.59234619,-94.1568222],[74.66687775000001,-95.60861206],[74.92764282,-96.82091522],[75.37780762,-96.28855896],[75.64720917,-94.85071564000002],[75.29650879000002,-93.97770691],[74.98000336000001,-93.61269379]],[[74.44892882999997,-121.53780365],[74.24134826999999,-120.10970306],[74.18576813000001,-117.55556488],[73.89607239000001,-116.58440399],[73.47518920999998,-115.51079559000001],[73.22292328,-116.76782989999998],[72.51999663999999,-119.21994019],[71.81999969,-120.45992279],[71.40000152999998,-120.45992279],[70.90164185,-123.09213257],[71.33999634,-123.61998749000001],[71.86868286000002,-125.92894745000001],[72.19451903999997,-125.5927124],[73.02256011999997,-124.80721283],[73.68000031000001,-123.94000244],[74.29274749999999,-124.91770172000001],[74.44892882999997,-121.53780365]],[[76.11653137,-122.85491180000001],[76.61467742999999,-121.38990783999999],[77.51222229,-119.10393524],[77.49832915999998,-117.57012177],[77.64528655999997,-116.19850158999999],[76.87696075,-116.33570099],[76.53002930000001,-117.10599518],[76.48116301999998,-118.04039001],[75.81999969,-120.05999756],[75.85829163,-121.92024231000002],[76.11653137,-122.85491180000001]],[[75.84552001999998,-107.81936645999998],[76.01281737999997,-106.9288559],[75.96939850000001,-105.88096619],[75.47950744999999,-105.70493317],[75.00527191000002,-106.31336212],[74.84999847,-109.69990539999999],[74.41696167000002,-112.22297667999999],[74.39427185000001,-113.74373627],[74.72029114000001,-113.87132263],[75.16249846999999,-111.79416656],[75.04342651,-116.31217957],[75.22219848999998,-117.71037292000001],[76.19902802,-116.34599304000001],[76.47886657999997,-115.40482330000002],[76.14134215999998,-112.59046936],[75.54918671000003,-110.81420135000002],[75.47321320000002,-109.06705474999998],[76.42981719999999,-110.49724579],[76.79416656,-109.58100891],[76.67832183999998,-108.54857635],[76.20168304,-108.21131897000001],[75.84552001999998,-107.81936645999998]],[[73.07601166000002,-106.52257538000002],[72.67259216,-105.40235137999998],[71.6984024,-104.77484131],[70.99297332999998,-104.46468353],[70.49775696,-102.78530884],[70.02432250999999,-100.9807663],[69.58447266000003,-101.08917999],[69.50402069,-102.73111725000001],[69.11962127999998,-102.0932312],[68.75282288,-102.43023682],[68.91000366,-104.2399826],[69.18000030999998,-105.95992279000001],[69.11921691999997,-107.12245178],[68.77999877999999,-109],[68.60446167000002,-111.96679688],[68.53553771999997,-113.31314086999998],[69.00743866,-113.85488128999998],[69.16821289,-116.10787964],[69.95999908,-117.3399353],[70.06655121000001,-116.67463684000002],[70.23729706,-115.13108825999998],[70.19236755,-113.72133635999998],[70.36637877999999,-112.41605376999999],[70.59999847,-114.34995270000002],[70.52044677999999,-116.48679352],[70.54055786,-117.9047699],[70.90920258000001,-118.43236542],[71.30918121000002,-116.11308289],[71.29519653,-117.6556015],[71.55859375000001,-119.40196228000002],[72.30785370000002,-118.56257629],[72.70594024999998,-117.86637114999999],[73.31459045,-115.18908691],[73.12145233,-114.16706085],[72.652771,-114.66629791],[72.95539855999999,-112.44094085999998],[72.45040131000002,-111.05031586],[72.96112823,-109.92034912],[72.63334656000002,-109.00652313],[71.65088653999999,-108.18824005],[72.06548308999997,-107.68595886],[73.08953094000002,-108.39633179],[73.23597717000001,-107.51638793999999],[73.07601166000002,-106.52257538000002]],[[72.70587921,-100.43834685999998],[73.36000060999997,-101.53995514],[73.84388732999999,-100.35634613],[73.63339233,-99.16376495],[73.76000213999998,-97.37989044],[73.47000122,-97.11998749],[72.99051666,-98.05358887000001],[72.55999756000001,-96.53995513999999],[71.66000366000002,-96.71994019],[71.27285003999997,-98.35958099],[71.35639191000001,-99.32276917000002],[71.73827362000002,-100.01472473],[72.51000213999998,-102.5],[72.83000183,-102.47995757999999],[72.70587921,-100.43834685999998]],[[69.12999725,-96.13990784],[68.74765777999998,-95.53026580999999],[68.39701080000002,-96.15207671999998],[68.69999695000001,-97.5],[68.59066772,-98.31438446],[69.04000092,-99.67998505],[69.34999847,-98.79997252999999],[69.78350829999998,-98.10079956],[69.5,-97.03995514],[69.31999969,-96.44000244],[69.12999725,-96.13990784]],[[73.59999847,-106.5999527],[73.63999939000001,-105.25989532],[73.41999816999999,-104.50000000000001],[72.76000213999998,-105.37989044],[73.45999907999999,-106.94000243999999],[73.59999847,-106.5999527]],[[76.72000122,-98.5],[76.25656127999999,-97.73548126000001],[75.74343872,-97.70439910999998],[74.99999999999999,-98.15994263],[74.89743805000002,-99.80869293],[75.05735778999998,-100.88355255000002],[75.64074706999999,-100.86290740999999],[75.56379700000001,-102.50205994],[76.33660126,-102.56546020999998],[76.30536652,-101.48963928000002],[76.64633942,-99.98342895999998],[76.58859253,-98.57694244],[76.72000122,-98.5]],[[80.60233307,-96.01639557],[80.90728760000003,-95.32340239999999],[80.97727203000001,-94.29837036],[81.20645905,-94.73540497000002],[81.25739288,-92.40973663],[80.72344971,-91.13285828],[80.50932312000002,-89.44990539999999],[80.31999969,-87.80999756],[79.66000366,-87.01992035],[79.33689880000001,-85.8143158],[79.03929901,-87.18756104],[78.28723144999998,-89.03533172999998],[78.21533203000001,-90.80428314],[78.34333038,-92.87660217],[78.75099181999998,-93.95106506],[79.11373138000002,-93.93572235],[79.38009643999999,-93.14516449000001],[79.37248230000002,-94.97399902],[79.70501709000003,-96.07608032],[80.15776825000002,-96.70971680000001],[80.60233307,-96.01639557]],[[74.13490295,-94.50366210999998],[74.09999846999999,-92.41996765],[73.85671997000001,-90.50972748],[72.66999816999999,-92.03995514],[72.77200317000002,-93.19628906],[72.02458191,-94.26904296999999],[72.06188201999997,-95.40985107000002],[72.94027710000002,-96.03364563],[73.43743896000001,-96.01822662],[73.86239624,-95.49578856999999],[74.13490295,-94.50366210999998]],[[81.89428711,-91.58692932000001],[82.08499907999999,-90.0999527],[82.11750792999999,-88.93223572],[82.27960967999998,-86.97019196],[82.65227508999999,-85.5],[82.59999847,-84.25989532],[82.31999969,-83.17998505],[82.86000060999997,-82.41996765],[83.01999664,-81.0999527],[83.13056182999999,-79.30664063],[83.17205810999998,-76.25],[83.06404114,-75.71871948],[83.23323822,-72.83143616],[83.16978454999999,-70.66565704],[83.10632323999998,-68.5],[83.02800751,-65.82731628],[82.90000152999998,-63.67998505],[82.62860106999997,-61.8499527],[82.36164856,-61.89384079],[81.92774963,-64.33396912],[81.72527313000002,-66.75341797],[81.50141143999997,-67.65751648],[81.50656891000001,-65.48026276],[80.90000153000001,-67.8399353],[80.61682891999997,-69.46962738],[79.80000304999999,-71.17998505],[79.63414763999998,-73.24279785],[79.43016052000002,-73.87989044],[79.32308959999999,-76.90769958],[79.19766235000002,-75.52922821],[79.01907348999998,-76.22045898],[78.52581024,-75.39341736000002],[78.18296050999999,-76.34347533999998],[77.89990997000001,-77.88846588],[77.5085907,-78.36264801],[77.20967865000001,-79.75941467],[76.98336029,-79.61960601999999],[77.02204132,-77.91088867],[76.77795409999999,-77.88909148999998],[76.17812347,-80.56118774],[76.45403290000003,-83.17436218],[76.29901123,-86.11179352],[76.41999816999999,-87.5999527],[76.47238922,-89.49064636],[76.95213318000002,-89.61608124],[77.17832947,-87.76728058],[77.90000153000001,-88.25989532],[77.97022247,-87.64992523],[77.53872681000004,-84.97629547],[78.18000030999998,-86.3399353],[78.37181091,-87.96190643],[78.75866699,-87.15197754],[78.99690247,-85.37864685],[79.34542846999999,-85.09487152],[79.73623657,-86.50730896],[80.25144958,-86.93173218],[80.20835876,-84.19841003000002],[80.09999847,-83.40868378],[80.4644165,-81.84818268],[80.58000183,-84.09995269999999],[80.51627350000001,-87.59892273],[80.85569,-89.36652374],[81.26000214,-90.1999054],[81.55310058999997,-91.36785888999998],[81.89428711,-91.58692932000001]],[[78.76580811,-96.75437927],[78.49972534000001,-94.99940491],[78.13835144000001,-95.27050780999998],[77.85059357,-97.30979156],[78.08286285,-98.12424468999998],[78.45809173999997,-98.55284119],[78.87194061000002,-98.63192749000001],[78.83200072999999,-97.33721924],[78.76580811,-96.75437927]],[[67.44425201000001,-75.21591187],[67.14885711999999,-75.86580657999998],[67.09873199,-76.98676300000001],[67.58808899000003,-77.23638153],[68.14855956999999,-76.81163025],[68.28720856000001,-75.89519501],[68.01036072,-75.11450195],[67.58202362,-75.10333252],[67.44425201000001,-75.21591187]],[[72.80290222000004,-79.77580261],[73.33318329000001,-80.87609862999999],[73.6931839,-80.83383942],[73.75971985000004,-80.35299682999998],[73.65193176000001,-78.06434631],[73.10268402000003,-76.3399353],[72.8263855,-76.25140381],[72.85554504,-77.31434631],[72.87665558,-78.39165497000002],[72.74220275999998,-79.48616028],[72.80290222000004,-79.77580261]],[[62.452800749999994,-83.99363708],[62.914089200000014,-83.25037384],[62.90457916000001,-81.87691497999998],[62.710800169999985,-81.89813995000002],[62.15922165000001,-83.06851195999998],[62.18230819999999,-83.77457428],[62.452800749999994,-83.99363708]],[[62.08556366,-80.31534576],[62.385601039999976,-79.92937469],[62.36370850000001,-79.52001953],[62.15867614999998,-79.26579285],[61.633079529999996,-79.65742493],[61.71810149999999,-80.09953308],[62.01649093999998,-80.36209106],[62.08556366,-80.31534576]],[[82.62796021000001,-46.76373672],[83.22515868999999,-43.40642548],[83.18018340999998,-39.89751434],[83.54904937999997,-38.62212372],[83.64512634,-35.08784866],[83.51966095,-27.10043716],[82.72669219999999,-20.845375060000002],[82.34165192,-22.691816330000005],[82.2976532,-26.51750374],[82.19999695000001,-31.899988169999997],[82.02153778,-31.39644814],[82.13178253000001,-27.856657030000004],[81.78697205000002,-24.844453809999997],[82.09317017000001,-22.90326881],[81.73448943999999,-22.071743010000002],[81.15270995999997,-23.16959381],[81.52462006,-20.62362289],[81.91245270000003,-15.768166540000001],[81.71884918000002,-12.77017975],[81.29154204999999,-12.20854855],[80.58003998,-16.28531837],[80.34999846999999,-16.84998131],[80.17707825000002,-20.04622841],[80.12911987,-17.73034286],[79.40000152999997,-18.899988169999997],[78.75128173999998,-19.70498276],[77.63858794999997,-19.67351532],[76.98564910999998,-18.47282791],[76.94434357,-20.03500748],[76.62795258000001,-21.679416659999998],[76.09808350000002,-19.83405113],[75.24838256999999,-19.59894562],[75.15585327000001,-20.66815376],[74.29560852,-19.3727951],[74.22382355000003,-21.59419632],[73.81713103999999,-20.43453979],[73.46436310000003,-20.76231766],[73.30954741999999,-22.172210689999996],[73.30663299999999,-23.56590652],[72.62928009000002,-22.31311035],[72.18408965999998,-22.29952049],[72.59787749999998,-24.27833176],[72.33020019999998,-24.79294777],[72.08016205000003,-23.442934039999997],[71.46897888000001,-22.13278389],[70.66368865999999,-21.753551480000002],[70.47100067000001,-23.53602219],[70.85649109000002,-24.30699348],[71.43093872,-25.543382639999997],[70.7522583,-25.20133018],[70.22646332,-26.36273384],[70.18401337,-23.727413179999996],[70.12946320000002,-22.34900856],[69.25879668999998,-25.029262540000005],[68.47045897999999,-27.74735069],[68.12503052000001,-30.673702239999997],[68.12078094,-31.77663422],[67.73547363,-32.8110199],[66.67974091000002,-34.20190811],[65.97889709,-36.35278702],[65.93768310999998,-37.04374313],[65.69213103999999,-38.37501144],[65.45848082999998,-39.81216812],[64.83997345,-40.66896057000001],[64.13902283,-40.68278885],[63.48246001999999,-41.18867874],[62.682331090000005,-42.8193512],[61.900928499999985,-42.41665268],[61.074039459999995,-42.86616898],[60.097721099999994,-43.37837601],[60.03675842000002,-44.7874527],[60.85327911000001,-46.26364136],[60.85842896,-48.26293944999999],[61.406810759999985,-49.233043669999994],[62.38336181999999,-49.900390630000004],[63.62691115999998,-51.6332283],[64.27841949,-52.1401329],[65.17669677999997,-52.27657318],[66.09957123,-53.66164398000001],[66.83650207999999,-53.30160141000001],[67.18898773000001,-53.969062810000004],[68.35758972000004,-52.98035431],[68.72958374000002,-51.47532272],[69.14781189,-51.0803566],[69.92910003999998,-50.87121201],[69.57492828,-52.01357651],[69.42616272,-52.557865140000004],[69.28362274,-53.45624542],[69.61003113,-54.68333816999999],[70.28932190000002,-54.74998856],[70.82131195,-54.35881041999999],[70.83575439000002,-53.43129349],[70.56977844,-51.3901329],[71.20484923999999,-53.10931778],[71.54718781,-54.004203800000006],[71.40653991999999,-55],[71.65444183,-55.83463287000001],[72.58625030999998,-54.718151090000006],[72.95861052999999,-55.3263092],[73.64977263999998,-56.120021820000005],[74.71025848000001,-57.32358551],[75.09860992,-58.59675217000001],[75.51727295000002,-58.58512878],[76.10237885,-61.26856232],[76.17520142000001,-63.39161301000001],[76.13485717999997,-66.06427002],[76.06140900000003,-68.50428772],[76.37975311,-69.66474152],[77.00856781,-71.40248108],[77.32312012000001,-68.77663422],[77.37595367,-66.76386261],[77.63594818000001,-71.04288483],[78.04418945000002,-73.29699707],[78.43270874,-73.15934753],[78.91387939000002,-69.37337494],[79.39436339999999,-65.71068573],[79.75814056000003,-65.32380676],[80.11721039000001,-68.0229187],[80.51582336000001,-67.15119934],[81.21395874000001,-63.689228060000005],[81.32109832999997,-62.23443222],[81.77041626,-62.65114594],[82.03363037000003,-60.28245162999999],[82.19074248999998,-57.207416529999996],[82.19962310999998,-54.13438034],[81.88832854999998,-53.0432663],[82.43882751000001,-50.39057922],[82.06481171,-48.00382996],[81.98594666,-46.599807739999996],[81.66069794,-44.52296066],[82.19979095,-46.90069199],[82.62796021000001,-46.76373672]],[[49.873039250000005,-64.51908875],[49.95718002,-64.17321777],[49.70640945,-62.85826111],[49.28855132999998,-61.83555603],[49.10506057999998,-61.806304929999996],[49.087169649999986,-62.293125149999995],[49.40068816999999,-63.589206700000005],[49.873039250000005,-64.51908875]],[[47.03601073999999,-64.01480103],[46.550010680000014,-63.6644783],[46.41587067,-62.93930054],[46.443138120000015,-62.01202774000001],[46.03339005000001,-62.50390244],[45.96818160999998,-62.87432861],[46.392650599999996,-64.14272308],[46.72747040000001,-64.39254761],[47.03601073999999,-64.01480103]]]}},{latlng:[38,-97],flag:"https://restcountries.eu/data/usa.svg",code:"US",name:"United States",geoJSON:{type:"Polygon",coordinates:[[[41.27000046000001,-72.29496765],[41.220649719999976,-72.87638092],[40.931102750000015,-73.70992279],[41.11948013,-72.24116516],[40.93000030999999,-71.94489288],[40.630001069999985,-73.34494019],[40.627998349999984,-73.981987],[40.75075149999999,-73.9522171],[40.47351073999997,-74.25659943],[40.42763138,-73.9623642],[39.709259030000005,-74.17830658],[38.93954085999999,-74.90597534],[39.19639969000001,-74.98040771],[39.248451230000015,-75.20000458],[39.498500820000004,-75.52797699],[38.959999079999996,-75.31989288],[38.781200410000004,-75.08345032],[38.40412140000001,-75.05667114],[38.01551055999999,-75.37741089],[37.21688843000001,-75.94013977],[37.25659942999999,-76.03122711],[37.93704987000002,-75.72203827],[38.31921387,-76.23282623],[39.15000152999998,-76.34995270000002],[38.71761322,-76.54272461],[38.08325958,-76.32923889],[38.23288345,-76.95992279],[37.91794586,-76.30152893],[36.96640015,-76.25871277],[36.89725876,-75.97180176],[36.551250460000006,-75.86804199],[35.550739289999996,-75.72746277],[34.80854034000002,-76.36313628999999],[34.51200866999999,-77.3975296],[33.92546843999999,-78.05490111999998],[33.86132813,-78.55429076999998],[33.49394989,-79.06066895],[33.158390049999994,-79.20353699],[32.509353640000015,-80.30121613000001],[32.03329849,-80.86487578999999],[31.440490720000007,-81.33619689999999],[30.72999001,-81.49041748],[30.035520549999998,-81.31360626],[29.180000310000004,-80.97995758],[28.472129820000003,-80.5355835],[28.040000920000008,-80.52993774],[26.879999159999993,-80.05649567],[26.205764770000016,-80.0880127],[25.816774369999997,-80.13150024],[25.20615958999998,-80.38093566999999],[25.07999992000001,-80.67998505],[25.201259609999983,-81.17211151],[25.63999939,-81.32991027999998],[25.870000840000007,-81.70992279],[26.729999540000005,-82.23998259999999],[27.495040889999984,-82.70513153],[27.886240009999984,-82.85518646],[28.549999240000002,-82.64992523],[29.100000379999997,-82.92998505],[29.93655968,-83.70948029],[30.09000015000001,-84.09995269999999],[29.636150359999995,-85.10871124000002],[29.68611907999999,-85.2878418],[30.152610780000018,-85.77304077],[30.39999961999999,-86.39992523],[30.27433014,-87.53031157999999],[30.38489914,-88.4177475],[30.315980910000004,-89.18047333],[30.17635917999999,-89.60491942999998],[29.89418982999999,-89.41365813999998],[29.488639830000004,-89.42998505],[29.291080469999986,-89.21763611],[29.159610750000013,-89.40817261],[29.30714034999999,-89.77919006],[29.11742973,-90.15457153],[29.148534769999998,-90.88014984],[29.677000050000004,-91.62675476],[29.55229949999999,-92.49898529],[29.78375053,-93.22626494999999],[29.71363068000001,-93.84835815],[29.479999539999987,-94.69000244000001],[28.738630289999996,-95.60018158000001],[28.307479860000004,-96.59394836000001],[27.829999920000017,-97.13990784000002],[27.37999915999999,-97.36998749],[26.690000529999992,-97.37989044],[26.209999080000003,-97.32991028],[25.870000840000007,-97.13990784000002],[25.84000015000002,-97.52993774],[26.059999470000008,-98.2399826],[26.37000084,-99.01992035],[26.840000150000005,-99.29997253],[27.54000092000001,-99.51992035],[28.110000610000014,-100.10997009],[28.696119309999983,-100.45578003],[29.3807106,-100.95755767999998],[29.77930069,-101.66230774000002],[29.760000229999985,-102.47995757999999],[28.969999309999988,-103.10997009000002],[29.270000460000023,-103.94000244],[29.57196045,-104.45697021],[30.121730799999987,-104.70574951],[30.644020080000004,-105.03733826],[31.083829879999993,-105.6315918],[31.399950029999996,-106.14286804],[31.754520420000002,-106.50754547000001],[31.754854199999986,-108.2399826],[31.34222031,-108.24194336],[31.34193992999998,-109.03494263],[31.334720610000005,-111.02350615999998],[32.03913879000001,-113.30488586000001],[32.52528,-114.81500244],[32.72082901000002,-114.72135925],[32.61238861000002,-115.99131775000001],[32.53533935999999,-117.12773132000001],[33.04622650000001,-117.29586029],[33.621234890000004,-117.94393921],[33.74090957999999,-118.41056824],[34.027782440000024,-118.51989746],[34.077999110000015,-119.08098602],[34.34847641000002,-119.43884277],[34.44710922,-120.36769103999998],[34.60855102999999,-120.62286377000001],[35.156860350000024,-120.7443161],[36.16152954,-121.71450806],[37.551761629999994,-122.54737854000001],[37.78339005000001,-122.51191710999998],[38.113708500000016,-122.95317840999999],[38.95166016000001,-123.72714233],[39.766990660000005,-123.86517333999998],[40.313201899999974,-124.39807129],[41.142021179999965,-124.17880249],[41.999641419999996,-124.21366881999998],[42.76599121,-124.53283691],[43.70838165,-124.14203644000001],[45.5234108,-123.89891815],[46.864749909999986,-124.07954407],[47.720169070000004,-124.39559174000001],[48.18443297999999,-124.68717957],[48.37971497000003,-124.56610106999999],[48.04000092000001,-123.11998749000001],[47.09600067000001,-122.58732604999999],[47.360000609999986,-122.3399353],[48.18000031,-122.5],[49.00000000000001,-122.8399353],[49.00000000000001,-120.00000000000001],[49.00000000000001,-117.03116608],[49.00000000000001,-116.04813385],[49.00000000000001,-113],[49.00000000000001,-110.04997252999999],[49.00000000000001,-107.04997253],[48.99985886000003,-104.04817200000001],[49.00000000000001,-100.64992523000001],[49.00070190000001,-97.22867584],[49.00000000000001,-95.15904236],[49.38425064000001,-95.15604401],[49.38904952999999,-94.81755066],[48.84000015000001,-94.63990784],[48.670738220000004,-94.32906342],[48.60926055999999,-93.63085174999999],[48.450000759999995,-92.60997009],[48.13999939,-91.63990784],[48.27000046000001,-90.82991027999998],[48.009998319999994,-89.59995269999999],[47.73500824000001,-90.42497253000002],[47.68000031,-90.61998749],[47.27999878,-91.32991028],[46.858421330000006,-92.00868225],[46.71168137000001,-92.01187133999998],[46.919998169999985,-91.00989532],[46.497055050000014,-90.33087158],[46.79362868999998,-89.31146239999998],[47.154781340000014,-88.82253264999999],[47.48590851000001,-87.93984984999999],[46.95856093999997,-88.26123047000002],[46.83103943,-87.69425964000001],[46.45000075999999,-86.9899826],[46.67266082999998,-86.10259247],[46.759998319999994,-85.11998749],[46.47999954,-84.90994262999999],[46.43960190000002,-84.60482025],[46.40877151,-84.3366394],[46.01020813,-83.8391571],[45.91999816999997,-84.71994019],[45.95002747,-84.94374084],[46.02999878,-85.53995514],[45.83000182999999,-86.31989288],[45.740001680000006,-86.99999999999999],[45.17393112,-87.53917694],[44.73331833000001,-87.98823547000002],[44.61503982999999,-87.85274506],[45.25933075000002,-87.11802673],[45.26287841999999,-86.96744537],[44.49335097999998,-87.48629761000001],[43.79650879,-87.71221924000001],[43.230518339999996,-87.9020462],[42.74087143,-87.77672577],[42.23411942,-87.79560852],[41.70851135000001,-87.52606964],[41.64617157000001,-87.09439086999998],[41.89442061999999,-86.62184142999999],[42.381690980000016,-86.21595764],[43.041408539999985,-86.18839264],[43.659999849999984,-86.51992035],[44.08422852000001,-86.47026825],[44.57477188,-86.20935059000001],[44.910598749999984,-85.95972443000001],[45.15000152999999,-85.55999756],[44.81459044999998,-85.46699524],[45.308261869999995,-85.29036713000002],[45.409999850000005,-85.06989288],[45.79000092,-84.92998505],[45.59000015000001,-84.07991027999998],[45.200000759999995,-83.33993529999998],[44.745719909999984,-83.25878906],[44.29000092000001,-83.3499527],[43.889999390000014,-83.89992523000001],[43.63830948000001,-83.84867859],[43.63000107,-83.64992523],[44.069999689999996,-83.02993774],[43.97000122,-82.65994263],[43.389999390000014,-82.47995758],[42.97999953999999,-82.42998504999998],[42.43000031,-82.89992523],[42.08000183,-83.11998749],[41.729999540000016,-83.41996765],[41.48711013999999,-82.84604645],[41.43590927000001,-82.34737396],[41.568931580000005,-81.62343597000002],[41.845508579999986,-81.03118896000001],[42.00437163999998,-80.45462036000002],[42.26961898999999,-79.76209259],[42.86671829,-78.90056609999999],[42.96500015000002,-78.91996765],[43.27000045999999,-79.00989531999998],[43.36999893000001,-78.06989288],[43.240001680000006,-77.5999527],[43.25999832000001,-76.92998505],[43.59000015000001,-76.17998505],[43.97914886,-76.23924255],[44.096309659999996,-76.37499999999999],[44.816448210000004,-75.31814575],[45.00048064999998,-74.86688995],[45.00738144000002,-73.34772491],[45.0082016,-71.50495148],[45.25500106999998,-71.40493774],[45.30524063000001,-71.08473206],[45.459999079999974,-70.65994263],[45.91500092000001,-70.30498505],[46.693069460000004,-69.99990845],[47.44778061000001,-69.2371521],[47.18500137,-68.90493774],[47.35485840000002,-68.23442841],[47.06636047000001,-67.79035187],[45.70280837999999,-67.79129791],[45.137531279999976,-67.13736725],[44.809700010000014,-66.96466064],[44.325199129999994,-68.03242493],[43.97999953999997,-69.05999756],[43.68405151,-70.11612701],[43.02999878000001,-70.69000244],[42.865299220000004,-70.81487274],[42.33499907999999,-70.8249054],[41.80500030999998,-70.49498749],[41.779998779999985,-70.07991028],[42.14500046000001,-70.18499756],[41.92282867,-69.88492584],[41.63716888,-69.96502686],[41.47499847000001,-70.63990784],[41.494449620000026,-71.12033081],[41.31999968999999,-71.85997009],[41.27000046000001,-72.29496765]],[[69.71199798999999,-140.9859314],[66.00003051999998,-140.99237061],[60.30638884999999,-140.99757385],[60.27682114000002,-140.01287842],[60.00000000000001,-139.03887939],[59.562110899999986,-138.34074402],[58.904998780000014,-137.45228577],[59.463890079999985,-136.47950745],[59.78778076,-135.47583008],[59.27056121999999,-134.94488525],[58.861110690000004,-134.27088928],[58.410278319999996,-133.3553772],[57.69289017000001,-132.73027039],[56.55212021,-131.7077179],[55.91582870000001,-130.00759888],[55.28499985,-129.97996521],[54.802780149999975,-130.53590393],[55.17889023000002,-131.08580017],[55.497779849999986,-131.96710205],[56.369998930000015,-132.25],[57.17889023,-133.53895569],[58.123058319999984,-134.07794189],[58.18769836000001,-135.03797913],[58.21221923999999,-136.6280365],[58.5,-137.79985046],[59.53778075999999,-139.86756897],[59.72750092000001,-140.82510376],[60.084438320000004,-142.57424927],[59.999168399999995,-143.95883179],[60.45861052999998,-145.92550659],[60.8846817,-147.114151],[60.67301941000001,-148.22418213],[59.9783287,-148.01806641],[59.91416931,-148.57077026],[59.70563888999999,-149.72770691],[59.368221280000014,-150.60806274],[59.15583037999998,-151.7162323],[59.74499893000001,-151.85931396],[60.725830079999994,-151.40962219],[61.03361129999999,-150.34690857],[61.284439090000006,-150.62107849],[60.72721863,-151.89567566],[60.0616684,-152.57817078],[59.35028075999999,-154.01916504],[58.864719390000005,-153.28744507],[58.146389010000014,-154.23234558],[57.72777938999999,-155.30749512],[57.42277908,-156.30812073000004],[56.97999954000001,-156.55595398],[56.463611600000014,-158.11715697999998],[55.994171139999985,-158.43312073],[55.56666946,-159.60321045],[55.64360808999997,-160.28962708],[55.36471939,-161.22299194],[55.024169920000006,-162.23756409],[54.68972014999999,-163.06922913],[54.40417099000001,-164.78549194],[54.57221985000002,-164.94206238000004],[55.039440160000005,-163.84820557],[55.34806060999999,-162.86999512],[55.89500046000002,-161.8039856],[56.00806046,-160.56358337],[56.41806030000001,-160.07055664],[57.01667022999998,-158.68421936],[57.21694183000001,-158.46101379],[57.56999969000002,-157.72277831999997],[58.328330989999984,-157.55006409],[58.91889191000001,-157.04158019999997],[58.615829469999994,-158.19468689],[58.78778075999998,-158.51719666000002],[58.424171450000024,-159.05857849000003],[58.93138884999997,-159.71166992],[58.57255936000003,-159.98112488],[59.07110977,-160.35516357],[58.67082977000001,-161.35496520999996],[58.671669010000016,-161.96885681],[59.26694107000001,-162.05487061000002],[59.63360977,-161.87411499],[59.98971938999999,-162.51806641],[59.79806136999999,-163.81814575],[60.26750183,-164.66200256],[60.50749969,-165.34623718],[61.07389069,-165.35083008000004],[61.49999999999999,-166.12129211],[62.07500075999999,-165.73431396000004],[62.633060459999996,-164.91896057000002],[63.14638901000001,-164.5625],[63.219440459999994,-163.75326538],[63.05944061,-163.06706238],[63.54193878000002,-162.26043701],[63.455829619999996,-161.53440857],[63.76610947000002,-160.77241516],[64.22277832,-160.95817566],[64.40277863,-161.51806641],[64.78861237000001,-160.77763367],[64.77722168000001,-161.39175415],[64.55944060999998,-162.45294189],[64.33860779,-162.75759888000002],[64.55917357999999,-163.54638672],[64.44693755999997,-164.96080017000003],[64.68666839999999,-166.42506409],[65.08889008,-166.84494019],[65.66999816999999,-168.11038208],[66.08833313,-166.7051239],[66.57666779,-164.47450256],[66.57666779,-163.65243529999998],[66.07721709999997,-163.7885437],[66.11611176000001,-161.67768859999998],[66.73555756000002,-162.48953246999997],[67.11638641000002,-163.71972656],[67.61634827000002,-164.43083191],[68.04277802000003,-165.39024353],[68.35888672,-166.76437378],[68.88305664,-166.20469666],[68.91554259999998,-164.43075562],[69.37110900999998,-163.16854858],[69.85806273999997,-162.93052673],[70.33332824999998,-161.90873718],[70.44767761,-160.93460083],[70.89167022999999,-159.03895569],[70.82472229000001,-158.11953735],[71.35778046,-156.58079529000003],[71.14778137000002,-155.06771851],[70.69638824000002,-154.34405518],[70.88999939000001,-153.89981078999998],[70.83000183000001,-152.20991515999998],[70.59999847,-152.26979065],[70.43000031000001,-150.73997497999997],[70.52999878,-149.71994019],[70.21402740000002,-147.61320496],[70.12000274999998,-145.68988037],[69.98999786000002,-144.91984558],[70.15249634000001,-143.58926392],[69.85193634000002,-142.07228088],[69.71199798999999,-140.9859314]],[[63.78250122,-171.73146057],[63.59222031000003,-171.11431885],[63.694999689999996,-170.49107361000003],[63.431110380000014,-169.68249512],[63.29750061,-168.68922424],[63.18861007999997,-168.77175902999997],[62.976940160000005,-169.52940368999998],[63.19443893,-170.29049683],[63.37583159999999,-170.67138672],[63.31777954,-171.55290222],[63.405830380000005,-171.79092407],[63.78250122,-171.73146057]],[[57.96900177000003,-153.22853088],[57.90145111000002,-152.56459045],[57.59107971,-152.14108276],[57.115840909999996,-153.00613403],[56.73468018,-154.00491333],[56.992748259999985,-154.51631165],[57.46118927000002,-154.67080687999996],[57.81658173,-153.76260376],[57.96900177000003,-153.22853088]],[[60.384170530000006,-166.46777343999997],[60.29360961999999,-165.67443848],[59.90999984999999,-165.57904053],[59.754440310000014,-166.19271851],[59.941390989999995,-166.84820556999998],[60.21305847000001,-167.4551239],[60.384170530000006,-166.46777343999997]],[[20.079750059999995,-155.40205383],[19.99301909999999,-155.22445679],[19.859100339999987,-155.06225586],[19.508710859999987,-154.80734253],[19.4532795,-154.83137512],[19.239719390000005,-155.22216796999996],[19.083480829999996,-155.54211426000003],[18.91618919,-155.68804931999998],[19.05938910999999,-155.93664551],[19.338880540000012,-155.90785217],[19.702939989999997,-156.07325745],[19.81422043,-156.02368164],[19.977289200000005,-155.84986877],[20.173950199999997,-155.91906738],[20.267210009999992,-155.86108398],[20.248699189999996,-155.78501892],[20.079750059999995,-155.40205383]],[[20.764039989999993,-155.99554443],[20.643970490000008,-156.07919312],[20.572410580000003,-156.41441344999998],[20.783000950000016,-156.58660889],[20.86429977,-156.7016449],[20.926759720000003,-156.71034241000004],[21.012489320000007,-156.61251831],[20.91744995,-156.25704956],[20.764039989999993,-155.99554443]],[[21.176839830000006,-156.75811768],[21.068729400000002,-156.78927612],[21.09777069,-157.32518004999997],[21.219579700000004,-157.25021362],[21.176839830000006,-156.75811768]],[[21.71696091,-158.02508545],[21.652719500000003,-157.94145203],[21.322170260000018,-157.65283203],[21.26441956,-157.70703125],[21.277290340000008,-157.77853394],[21.31244087000001,-158.12651061999998],[21.539190289999997,-158.25376892],[21.579120639999992,-158.29255676],[21.71696091,-158.02508545]],[[22.214939119999993,-159.36550903],[21.982000349999982,-159.34506226],[21.88298987999999,-159.46353148999998],[22.065330509999992,-159.80032349],[22.138200760000007,-159.74855042],[22.23617935,-159.59617615],[22.214939119999993,-159.36550903]]]}},{latlng:[23,-102],flag:"https://restcountries.eu/data/mex.svg",code:"MX",name:"Mexico",geoJSON:{type:"Polygon",coordinates:[[[25.870000840000007,-97.13990784000002],[24.992139820000006,-97.52796173],[24.272340769999992,-97.70294189],[22.932580949999988,-97.7759552],[22.44421959,-97.87226868],[21.898689270000002,-97.69902039],[21.411010740000005,-97.38887024000002],[20.63544082999999,-97.18932343],[19.89093971,-96.52557373],[19.320379260000006,-96.29209137],[18.828020099999993,-95.90087891],[18.562719349999984,-94.83902740000002],[18.144380569999985,-94.42569732999999],[18.423839570000005,-93.54862976],[18.524839399999998,-92.78603362999999],[18.70457077000001,-92.03734589000001],[18.876079559999983,-91.40788269],[19.284120560000012,-90.7718277],[19.867420199999994,-90.53356171000001],[20.707529069999985,-90.45136261000002],[20.99983978000001,-90.27851868],[21.26173019000001,-89.60131836],[21.49367904999999,-88.54377747],[21.458850859999984,-87.65835571],[21.543550489999994,-87.05187988],[21.331520079999997,-86.81192017],[20.849859240000004,-86.84587097],[20.25542068,-87.3832016],[19.64656067,-87.6210022],[19.47238922,-87.43667603],[19.040130619999992,-87.58652496000002],[18.25980949,-87.83713530999998],[18.516639710000018,-88.09061432],[18.499990459999978,-88.29995728],[18.486829760000006,-88.49010467999999],[17.88319015999999,-88.84831238000001],[18.00152016000001,-89.02984619],[17.955459590000014,-89.15084839],[17.80830956,-89.14306641],[17.81932068,-90.0679245],[17.817600249999995,-91.00141907],[17.254650119999997,-91.0022583],[17.25218963999999,-91.45391846],[16.91847038,-91.08165741],[16.68748092999998,-90.71176147],[16.47076988000001,-90.60082245],[16.410120009999996,-90.43881226],[16.06955909999999,-90.46447754],[16.066579820000012,-91.74788666],[15.251440050000012,-92.22924805000001],[15.06459044999999,-92.08710479999999],[14.830109600000004,-92.20314025999998],[14.538829800000007,-92.22768402000001],[15.61544037,-93.35940552],[15.940179819999994,-93.87518311],[16.20099068,-94.69165039],[16.128330230000007,-95.25013733],[15.752079960000014,-96.05329895],[15.653510089999996,-96.55731964000002],[15.917079929999995,-97.26351166],[16.107320790000017,-98.0129776],[16.566040040000008,-98.94769286999998],[16.706180570000004,-99.69736481],[17.171070100000005,-100.829422],[17.649019239999998,-101.66606140000002],[17.91609001000001,-101.91850280999999],[17.975749970000006,-102.47803496999998],[18.292299269999997,-103.5009613],[18.74856949,-103.91744231999999],[19.316129680000003,-104.99188994999999],[19.94676971000001,-105.49304199],[20.434110639999997,-105.73136901999999],[20.531709670000012,-105.39765167],[20.816890720000007,-105.50067139],[21.076290130000007,-105.27064514],[21.42210960000001,-105.26580810999998],[21.871149059999997,-105.60312653],[22.26907921,-105.69330596999998],[22.77375984,-106.02866364],[23.76778029999999,-106.90997314],[24.548919679999983,-107.9153595],[25.17233085999999,-108.40180968999998],[25.58060074000001,-109.26019286999998],[25.824890139999997,-109.44408417],[26.44294930000001,-109.29161071999998],[26.676170350000007,-109.80144500999998],[27.16210938000001,-110.39172363],[27.859870909999994,-110.64097595],[27.941259380000012,-111.17887877999999],[28.467950819999995,-111.75956726],[28.954399110000015,-112.22818756],[29.266830439999993,-112.27175903],[30.021099090000014,-112.80953979],[30.786880490000016,-113.16371154999999],[31.17098045000002,-113.14868164],[31.567609789999995,-113.87178039999999],[31.524049760000008,-114.20565033],[31.799539570000018,-114.77640533000002],[31.393489839999997,-114.9365921],[30.913610459999997,-114.77112579],[30.162689209999993,-114.67388916],[29.750419620000013,-114.33088684000002],[29.061620709999996,-113.58885193000002],[28.82616997,-113.42398071],[28.754779820000007,-113.27196503],[28.411289220000008,-113.13999939],[28.42518044000001,-112.96225739],[27.780210490000012,-112.76148224],[27.525810239999988,-112.45785522000001],[27.171739579999993,-112.24491882000001],[26.66282082,-111.61643219],[25.732589719999986,-111.28465270999999],[25.294609070000025,-110.98775482000002],[24.826000210000007,-110.70992279],[24.29858971,-110.65499878],[24.26553917000001,-110.17285156],[23.811180109999984,-109.77173615],[23.36466025999999,-109.40901184],[23.185590740000002,-109.43331146],[22.81826973,-109.85414124],[22.823070529999992,-110.03135681],[23.430969239999982,-110.29502868999998],[24.000949859999984,-110.94942474],[24.48443030999999,-111.67050171000001],[24.738420489999996,-112.18197632],[25.470140459999996,-112.14887238],[26.011989590000006,-112.30062103],[26.321960449999995,-112.77727509000002],[26.768190379999982,-113.46465301999999],[26.63945007,-113.59674072000001],[26.900049209999988,-113.84892273000001],[27.142089839999993,-114.4656601],[27.72273064,-115.05509185999999],[27.79820060999999,-114.98221588000001],[27.74148941,-114.57026672],[28.115009310000005,-114.19924163999998],[28.56611061,-114.16195679],[29.279470439999997,-114.93180846999999],[29.556360240000004,-115.51856995],[30.180799480000008,-115.88729858],[30.836460110000004,-116.25826263],[31.635730739999993,-116.72146606],[32.53533935999999,-117.12773132000001],[32.61238861000002,-115.99131775000001],[32.72082901000002,-114.72135925],[32.52528,-114.81500244],[32.03913879000001,-113.30488586000001],[31.334720610000005,-111.02350615999998],[31.34193992999998,-109.03494263],[31.34222031,-108.24194336],[31.754854199999986,-108.2399826],[31.754520420000002,-106.50754547000001],[31.399950029999996,-106.14286804],[31.083829879999993,-105.6315918],[30.644020080000004,-105.03733826],[30.121730799999987,-104.70574951],[29.57196045,-104.45697021],[29.270000460000023,-103.94000244],[28.969999309999988,-103.10997009000002],[29.760000229999985,-102.47995757999999],[29.77930069,-101.66230774000002],[29.3807106,-100.95755767999998],[28.696119309999983,-100.45578003],[28.110000610000014,-100.10997009],[27.54000092000001,-99.51992035],[26.840000150000005,-99.29997253],[26.37000084,-99.01992035],[26.059999470000008,-98.2399826],[25.84000015000002,-97.52993774],[25.870000840000007,-97.13990784000002]]]}},{latlng:[24.25,-76],flag:"https://restcountries.eu/data/bhs.svg",code:"BS",name:"Bahamas",geoJSON:{type:"Polygon",coordinates:[[[26.790000920000008,-78.97995758000002],[26.870000839999996,-78.50989532000001],[26.840000150000005,-77.8499527],[26.57999991999999,-77.81989288],[26.420000079999994,-78.90994263],[26.790000920000008,-78.97995758000002]],[[27.04000092000002,-77.78995514],[26.590000150000023,-76.99999999999999],[25.87918091000001,-77.17254638999998],[26.007350919999986,-77.35636139000002],[26.53000069000002,-77.33993530000001],[26.92515944999999,-77.78791046000002],[27.04000092000002,-77.78995514]],[[25.210300450000016,-78.19084167000001],[25.170000079999994,-77.88990783999999],[24.34000015000001,-77.53995514],[23.759750369999995,-77.53455353],[23.709999079999992,-77.77993774],[24.28614998000001,-78.03394318],[24.575639720000005,-78.40841675],[25.210300450000016,-78.19084167000001]],[[25.100000379999994,-77.54997252999999],[25.126417159999985,-77.31441498],[24.959999080000003,-77.25989532],[24.99514008,-77.49531555],[25.100000379999994,-77.54997252999999]],[[21.000000000000004,-73.71994019],[21.229999540000005,-73.4899826],[21.350000379999997,-72.9499054],[20.92000007999999,-73.13990784],[20.90834045,-73.65978241],[21.000000000000004,-73.71994019]]]}},{latlng:[11,-61],flag:"https://restcountries.eu/data/tto.svg",code:"TT",name:"Trinidad and Tobago",geoJSON:{type:"Polygon",coordinates:[[[10.76000023000001,-61.67998505],[10.890000340000007,-61.10496140000001],[10.854999539999989,-60.89497757],[10.109999659999996,-60.934993739999996],[10.000000000000002,-61.76997757000001],[10.090000149999993,-61.94996262],[10.364999769999999,-61.65994644],[10.76000023000001,-61.67998505]],[[11.303649900000003,-60.62714385999999],[11.324009900000002,-60.58170319],[11.33148956,-60.51945877],[11.263059619999998,-60.52743149],[11.24407958999999,-60.54525375],[11.191579819999998,-60.63713074],[11.170980450000002,-60.71359634],[11.148240089999996,-60.75773239000001],[11.144439699999987,-60.79124069],[11.155799869999994,-60.84399796],[11.184280400000011,-60.81676482999999],[11.213040349999993,-60.76308441],[11.259329800000001,-60.72385406],[11.280920030000006,-60.67376328],[11.303649900000003,-60.62714385999999]]]}},{latlng:[12.11666666,-61.66666666],flag:"https://restcountries.eu/data/grd.svg",code:"GD",name:"Grenada",geoJSON:{type:"Polygon",coordinates:[[[12.27499962000001,-61.69495392],[12.229999539999993,-61.52999878],[11.935000419999989,-61.64998627],[11.979999539999982,-61.864978789999995],[12.215000149999987,-61.764968870000004],[12.27499962000001,-61.69495392]]]}},{latlng:[13.25,-61.2],flag:"https://restcountries.eu/data/vct.svg",code:"VC",name:"St. Vincent and the Grenadines",geoJSON:{type:"Polygon",coordinates:[[[13.399999620000004,-61.224952699999996],[13.399999620000004,-61.07997131],[13.095000269999996,-61.10997009],[13.045000079999998,-61.25494766],[13.239999770000011,-61.329971310000005],[13.399999620000004,-61.224952699999996]]]}},{latlng:[13.16666666,-59.53333333],flag:"https://restcountries.eu/data/brb.svg",code:"BB",name:"Barbados",geoJSON:{type:"Polygon",coordinates:[[[13.350000379999999,-59.60496140000001],[13.109999660000001,-59.34500122],[12.98999977,-59.53494644],[13.074999809999987,-59.704971310000005],[13.350000379999999,-59.68499374],[13.350000379999999,-59.60496140000001]]]}},{latlng:[13.88333333,-60.96666666],flag:"https://restcountries.eu/data/lca.svg",code:"LC",name:"St. Lucia",geoJSON:{type:"Polygon",coordinates:[[[14.164999960000005,-61.00996017],[14.100000380000003,-60.84995270000001],[13.685000419999994,-60.89998626999999],[13.774999620000006,-61.09500122000001],[14.055000310000004,-61.06494521999999],[14.164999960000005,-61.00996017]]]}},{latlng:[14.666667,-61],flag:"https://restcountries.eu/data/mtq.svg",code:"MQ",name:"Martinique",geoJSON:{type:"Polygon",coordinates:[[[14.909999850000018,-61.17998504999999],[14.779999730000013,-60.8549614],[14.465000149999987,-60.789955140000004],[14.35499954,-60.86497879],[14.454999920000008,-61.11497879],[14.845000270000002,-61.25494766],[14.909999850000018,-61.17998504999999]]]}},{latlng:[15.41666666,-61.33333333],flag:"https://restcountries.eu/data/dma.svg",code:"DM",name:"Dominica",geoJSON:{type:"Polygon",coordinates:[[[15.649999620000004,-61.51496887],[15.645000460000004,-61.31995392],[15.564999579999993,-61.25],[15.244999890000013,-61.204971310000005],[15.194999689999996,-61.37500000000001],[15.524999620000012,-61.52999878],[15.649999620000004,-61.51496887]]]}},{latlng:[16.25,-61.583333],flag:"https://restcountries.eu/data/glp.svg",code:"GP",name:"Guadeloupe",geoJSON:{type:"Polygon",coordinates:[[[16.37121963999999,-61.77061844],[16.33366585000001,-61.62494277999999],[16.48999977,-61.55498505],[16.54999924000001,-61.449962619999994],[16.26499939,-61.15499878],[16.159999850000002,-61.47000121999999],[15.930000310000002,-61.69996262],[16.024999620000006,-61.80498505],[16.29000092,-61.83999252],[16.37121963999999,-61.77061844]]]}},{latlng:[17.05,-61.8],flag:"https://restcountries.eu/data/atg.svg",code:"AG",name:"Antigua and Barbuda",geoJSON:{type:"Polygon",coordinates:[[[17.11000061,-61.92497635000001],[17.18499947,-61.81995392],[17.090000150000016,-61.63496016999999],[16.985000610000007,-61.70497130999999],[16.985000610000007,-61.8699913],[17.11000061,-61.92497635000001]],[[17.582969669999997,-61.79993438999999],[17.61264992,-61.86922455],[17.709619520000004,-61.849494930000006],[17.74283027999999,-61.83624648999999],[17.716409679999998,-61.78576279],[17.675720209999994,-61.742599489999996],[17.62879943999999,-61.72431946],[17.56144904999998,-61.73457718000001],[17.582969669999997,-61.79993438999999]]]}},{latlng:[17.33333333,-62.75],flag:"https://restcountries.eu/data/kna.svg",code:"KN",name:"St. Kitts and Nevis",geoJSON:{type:"Polygon",coordinates:[[[17.419620509999994,-62.89397812],[17.479999539999984,-62.85997009],[17.39999962000001,-62.65994644],[17.26499939,-62.6049614],[17.229999539999998,-62.66996765],[17.30999947000002,-62.85997009],[17.419620509999994,-62.89397812]]]}},{latlng:[-34,-64],flag:"https://restcountries.eu/data/arg.svg",code:"AR",name:"Argentina",geoJSON:{type:"Polygon",coordinates:[[[-54.89677048000001,-66.95987701],[-55.25,-66.4499054],[-55.19996262000001,-65.5],[-54.699962619999994,-65.04997253],[-54.44996262,-66.4499054],[-53.8499527,-67.75],[-53.0999527,-68.25],[-52.63633347,-68.63393402],[-54.86945343,-68.633255],[-54.86997986,-67.56243896],[-54.89677048000001,-66.95987701]],[[-22.735902790000004,-67.10657501],[-22.986316680000005,-66.98522186],[-24.025278090000004,-67.32842255],[-24.518569949999996,-68.41756439],[-26.184995650000005,-68.38596344],[-26.506874080000006,-68.5947876],[-26.899326320000007,-68.2955246],[-27.521167759999994,-69.00119019],[-28.459093090000003,-69.65611267],[-29.36789894000001,-70.0135498],[-30.33632851,-69.91900635],[-31.36499023000001,-70.53501129],[-33.0912056,-70.07440186],[-33.273891449999994,-69.81472778],[-34.19353485,-69.81721497],[-35.16966629000001,-70.38796234],[-36.00509262,-70.36472321],[-36.65808487,-71.12177277],[-37.57678604000001,-71.11857605],[-38.55300903,-70.81461334],[-38.91600036999999,-71.41351318],[-39.80816269,-71.68070221],[-40.83228302,-71.91570282],[-42.05138397,-71.74671936],[-42.25485610999999,-72.14881897],[-43.40855026,-71.91538239],[-43.78758621000001,-71.46405029],[-44.20713806,-71.79354858],[-44.40753174000001,-71.3297348],[-44.784191129999996,-71.22277832],[-44.97364807,-71.6592865],[-45.56068802,-71.55200195],[-46.88485336,-71.91721344],[-47.738510129999995,-72.44729614],[-48.244182589999994,-72.33106995],[-48.87863158999999,-72.64814758],[-49.318450930000004,-73.41538239],[-50.37872696,-73.32794952],[-50.74139786,-72.97567749],[-50.67697525,-72.30990601],[-51.42590714,-72.32929993],[-52.00899505999999,-71.91478729],[-52.1427536,-69.49835205],[-52.2988739,-68.63407898],[-52.34995270000001,-68.14992523],[-51.77103424,-68.81554413],[-50.73246765,-69.13845062],[-50.26419067,-68.72864532],[-49.86964798,-67.81598663],[-48.69735336,-67.16609192],[-48.13325882000001,-65.98500061],[-47.2361412,-65.64095306],[-47.03384780999998,-66.59703064],[-46.30173492,-67.58046722],[-45.55183028999999,-67.29374695],[-45.03960419,-66.50992584],[-45.03672791,-65.56521606],[-44.501323700000015,-65.3287735],[-43.49538421999999,-65.18172455],[-42.87355042,-64.37876892],[-42.56314087,-63.458015440000004],[-42.043621060000014,-63.75590134],[-42.35896683000001,-64.30329132],[-42.05792618,-64.97846222],[-41.06433105,-65.11793518],[-40.80261612000001,-64.73201752],[-41.16680907999999,-63.77046585],[-41.02869415,-62.74576569],[-40.67687988,-62.14595032],[-40.172531129999996,-62.33048248],[-39.424064640000005,-62.12570571999999],[-38.82772827,-62.3359642],[-38.92840195000001,-61.23741531],[-38.72018051,-59.23182297],[-38.18385696,-57.74913024999999],[-36.901538849999994,-56.78826904],[-36.41309357,-56.73747635],[-35.97733307,-57.36231232],[-35.28797913,-57.22583008],[-34.43148422,-58.495403290000006],[-33.909397129999995,-58.42704773],[-33.263137820000004,-58.349597929999995],[-33.04058838000001,-58.13261795],[-32.04447937,-58.14241028000001],[-31.01654053,-57.87488556],[-30.21628761,-57.62506485],[-28.852745060000007,-56.29083633],[-27.881925579999997,-55.162242889999995],[-27.47472381999999,-54.49066544],[-26.923484799999997,-53.64868546000001],[-26.124876020000013,-53.62831116],[-25.547594070000006,-54.13003159000001],[-25.739246370000004,-54.6252594],[-26.621810909999994,-54.78878403],[-27.387825009999997,-55.695812229999994],[-27.548496249999992,-56.486679079999995],[-27.395868300000004,-57.60972214],[-27.123716349999995,-58.61815643],[-25.60366630999999,-57.633613589999996],[-25.162347789999995,-57.777214050000005],[-24.771448140000015,-58.80712891],[-24.032781599999986,-60.02896118000001],[-23.880714420000007,-60.84654617],[-22.249017719999998,-62.685005190000005],[-22.034976959999998,-62.84645081],[-21.993633270000004,-63.98679351999999],[-22.798082349999998,-64.37700653],[-22.075832370000004,-64.9648056],[-21.832292560000003,-66.27329254],[-22.735902790000004,-67.10657501]]]}},{latlng:[-30,-71],flag:"https://restcountries.eu/data/chl.svg",code:"CL",name:"Chile",geoJSON:{type:"Polygon",coordinates:[[[-54.86945343,-68.633255],[-52.63621139999999,-68.63407898],[-52.51826096,-69.34563446],[-52.93119812,-70.26743317],[-53.615798950000006,-70.59169006],[-54.07429123,-71.10772705],[-53.715385440000006,-72.43410492],[-53.04742050000001,-73.83805084],[-52.83743668,-74.66242218],[-53.95751953,-73.28511047],[-54.4950943,-72.2638092],[-55.05377579,-71.00567627],[-55.19842148,-69.95804596],[-55.49904633,-69.23200989],[-55.61180115,-68.14861298],[-55.30123901,-67.29100037],[-54.89677048000001,-66.95987701],[-54.86997986,-67.56243896],[-54.86945343,-68.633255]],[[-48.67371368,-75.60803223],[-50.37834549,-75.47973633],[-51.04334259,-74.97661591],[-51.62927628,-75.26000977],[-52.26274872,-74.94667816],[-52.83502579,-73.70275116],[-53.531353,-72.5579071],[-53.85638809,-71.42971039],[-53.83324432,-71.0062561],[-52.899150850000005,-70.84509277],[-52.5378952,-69.94271088],[-52.29191208,-69.46120453],[-52.2988739,-68.63407898],[-52.1427536,-69.49835205],[-52.00899505999999,-71.91478729],[-51.42590714,-72.32929993],[-50.67697525,-72.30990601],[-50.74139786,-72.97567749],[-50.37872696,-73.32794952],[-49.318450930000004,-73.41538239],[-48.87863158999999,-72.64814758],[-48.244182589999994,-72.33106995],[-47.738510129999995,-72.44729614],[-46.88485336,-71.91721344],[-45.56068802,-71.55200195],[-44.97364807,-71.6592865],[-44.784191129999996,-71.22277832],[-44.40753174000001,-71.3297348],[-44.20713806,-71.79354858],[-43.78758621000001,-71.46405029],[-43.40855026,-71.91538239],[-42.25485610999999,-72.14881897],[-42.05138397,-71.74671936],[-40.83228302,-71.91570282],[-39.80816269,-71.68070221],[-38.91600036999999,-71.41351318],[-38.55300903,-70.81461334],[-37.57678604000001,-71.11857605],[-36.65808487,-71.12177277],[-36.00509262,-70.36472321],[-35.16966629000001,-70.38796234],[-34.19353485,-69.81721497],[-33.273891449999994,-69.81472778],[-33.0912056,-70.07440186],[-31.36499023000001,-70.53501129],[-30.33632851,-69.91900635],[-29.36789894000001,-70.0135498],[-28.459093090000003,-69.65611267],[-27.521167759999994,-69.00119019],[-26.899326320000007,-68.2955246],[-26.506874080000006,-68.5947876],[-26.184995650000005,-68.38596344],[-24.518569949999996,-68.41756439],[-24.025278090000004,-67.32842255],[-22.986316680000005,-66.98522186],[-22.735902790000004,-67.10657501],[-22.87288857,-67.82807159],[-21.494337080000008,-68.21990967],[-20.37266159000001,-68.7571106],[-19.405069349999998,-68.44217682],[-18.98165703000001,-68.96677399],[-18.260103229999988,-69.10018158],[-17.580013280000006,-69.59036255],[-18.092674259999995,-69.85834503],[-18.34794235,-70.37255096],[-19.756469729999996,-70.1643219],[-21.39329147000001,-70.09113312],[-21.393310549999992,-70.09113312],[-23.628974909999997,-70.40390015],[-25.705924990000003,-70.72489166],[-27.64036179,-70.90505219],[-28.861419679999994,-71.48984528],[-30.09565544,-71.37002563],[-30.920618059999992,-71.66869354],[-32.418827060000005,-71.43839264],[-33.909118649999996,-71.86164856],[-35.508800509999986,-72.55307007],[-37.1237793,-73.16666412],[-37.15626144000001,-73.58796692],[-38.28281403,-73.50554657],[-39.2586441,-73.21759033],[-39.94219970999999,-73.67702484],[-41.7947998,-74.01793671],[-43.22488785,-74.33187866],[-43.365745540000006,-73.70124817],[-42.11750793000001,-73.3888092],[-42.38334274,-72.71775055],[-44.45494080000002,-73.24024963],[-44.10297394,-74.35166931],[-45.76395416,-74.69211578],[-46.64762877999999,-75.64440918],[-46.93922043,-74.12658691],[-47.71190643,-75.18270111],[-48.67371368,-75.60803223]]]}},{latlng:[-51.75,-59],flag:"https://restcountries.eu/data/flk.svg",code:"FK",name:"Falkland Islands",geoJSON:{type:"Polygon",coordinates:[[[-51.8499527,-61.199962619999994],[-51.25,-60.00000000000001],[-51.49999999999999,-59.14998627000001],[-51.0999527,-58.54997635],[-51.54997635,-57.75],[-51.89998626999999,-58.04997635],[-52.19996262,-59.39998626999999],[-51.8499527,-59.8499527],[-52.29997635,-60.69996262],[-51.8499527,-61.199962619999994]]]}},{latlng:[7.5,134.5],flag:"https://restcountries.eu/data/plw.svg",code:"PW",name:"Palau",geoJSON:{type:"Polygon",coordinates:[[[7.357999799999997,134.52000427],[7.435999870000011,134.48199463],[7.533999919999996,134.51400757],[7.592000009999988,134.55599976],[7.605999950000009,134.5980072],[7.735000130000009,134.63999939],[7.730500219999993,134.664505],[7.546000000000012,134.67199707],[7.335999970000015,134.59100342],[7.357999799999997,134.52000427]]]}},{latlng:[-20.28333333,57.55],flag:"https://restcountries.eu/data/mus.svg",code:"MU",name:"Mauritius",geoJSON:{type:"Polygon",coordinates:[[[-20.479991910000003,57.30500031],[-20.199993129999996,57.41334915],[-19.994989400000016,57.54999924],[-20.014999390000007,57.671329500000006],[-20.32997322,57.79000092],[-20.50521850999999,57.59000015],[-20.479991910000003,57.30500031]]]}},{latlng:[-12.16666666,44.25],flag:"https://restcountries.eu/data/com.svg",code:"KM",name:"Comoros",geoJSON:{type:"Polygon",coordinates:[[[-11.399988170000006,43.25999832000001],[-11.359986310000002,43.33000183],[-11.419996260000001,43.40999985],[-11.89499283000001,43.51499939],[-11.934994699999995,43.45000076],[-11.774988169999995,43.21500015000001],[-11.559994700000006,43.25111008],[-11.399988170000006,43.25999832000001]]]}},{latlng:[1,7],flag:"https://restcountries.eu/data/stp.svg",code:"ST",name:"Sao Tome and Principe",geoJSON:{type:"Polygon",coordinates:[[[0.3037399900000041,6.488150119999999],[0.4115399999999952,6.66039991],[0.3623049900000005,6.72692013],[0.230840000000012,6.75590992],[0.022284999999988155,6.52489519],[0.3037399900000041,6.488150119999999]],[[1.6732900099999992,7.36855984],[1.6983900100000113,7.40679979],[1.690119980000011,7.45403004],[1.6297800500000073,7.46337986],[1.5561599700000022,7.430049899999999],[1.5322400300000056,7.405729769999999],[1.6071499600000003,7.3244299900000005],[1.6732900099999992,7.36855984]]]}},{latlng:[2,10],flag:"https://restcountries.eu/data/gnq.svg",code:"GQ",name:"Equatorial Guinea",geoJSON:{type:"Polygon",coordinates:[[[3.7448999900000004,8.93010044],[3.6525099299999892,8.96131039],[3.404989959999999,8.81480026],[3.305370090000001,8.77760983],[3.2009201000000016,8.69336987],[3.2461700400000013,8.48295975],[3.3447999999999936,8.42385006],[3.4519701000000027,8.46310043],[3.5668299199999955,8.61997032],[3.6791501000000086,8.63560009],[3.7731199300000147,8.74991989],[3.7448999900000004,8.93010044]],[[1.0101100199999926,9.49287033],[1.1609400499999922,9.30564022],[2.2838599699999844,9.649180410000001],[2.261049990000009,11.27643013],[1.0576499699999962,11.28509045],[1.0679199700000073,9.83028984],[1.0101100199999926,9.49287033]]]}},{latlng:[16,-24],flag:"https://restcountries.eu/data/cpv.svg",code:"CV",name:"Cape Verde",geoJSON:{type:"Polygon",coordinates:[[[17.19000053,-25.00998878],[17.05261039999999,-24.929985050000003],[16.917499539999994,-25.212488170000004],[16.922079090000008,-25.317480089999997],[17.084669109999986,-25.369989399999998],[17.19000053,-25.00998878]],[[15.0616703,-23.79997635],[15.355420109999999,-23.779996870000005],[15.37500000000001,-23.699993130000003],[15.00292015,-23.3699894],[14.904999730000005,-23.43997383],[14.904999730000005,-23.579973219999996],[15.0616703,-23.79997635]]]}},{latlng:[35,105],flag:"https://restcountries.eu/data/chn.svg",code:"CN",name:"China",geoJSON:{type:"Polygon",coordinates:[[[27.771749500000013,91.69667816],[28.040609360000015,91.25888062],[28.064939500000012,90.7305069],[28.296440120000003,90.01586151],[28.042760850000015,89.47579193],[27.29932022,88.81426238999998],[28.086879730000003,88.7303009],[27.876550670000018,88.12045288],[27.97425078999999,86.95448302999999],[28.203580860000013,85.823349],[28.642770769999984,85.01164246],[28.83987999,84.23458862],[29.320230479999974,83.89895630000001],[29.463729860000015,83.33711243],[30.11527060999999,82.32749939000001],[30.42271042,81.52581787],[30.183490749999997,81.11122894],[30.882730479999992,79.72135162],[31.51589966,78.73889922999999],[32.61817931999999,78.45842743000001],[32.483779909999996,79.17611694],[32.99440001999999,79.20889282],[33.50619125,78.81108856],[34.32192993000001,78.91227722000002],[35.49401855000001,77.83746337999999],[35.898399350000005,76.19284058],[36.66680908000002,75.89691162],[37.13302994000001,75.15802002],[37.41999816999999,74.98000336],[37.990001680000006,74.83000183],[38.37884902999999,74.86483765],[38.60649871999998,74.25750732],[38.50582885999999,73.92886353],[39.43125153,73.67537689],[39.65999984999998,73.95999908],[39.89397049000001,73.82225037],[40.36642837999998,74.77684021],[40.56206894000002,75.46782683999999],[40.427951809999996,76.52635956],[41.06647873,76.90445709],[41.18531036,78.18720245],[41.58224105999998,78.54369354],[42.123950959999995,80.11943817000001],[42.34999847000001,80.26000213999998],[42.920070650000014,80.18012238],[43.18038176999999,80.86618042],[44.91754149999999,79.96611023000001],[45.317008970000025,81.94705963],[45.53963851999999,82.4589386],[47.330020899999994,83.18047333],[47.00096130000001,85.16428375],[47.45298003999998,85.72049713],[48.45576858999999,85.76822662],[48.54917145,86.59879303000001],[49.215000150000016,87.36000061],[49.29719925000003,87.75128937],[48.59947968,88.01381683],[48.06908035000001,88.85428619],[47.69355011,90.28085327],[46.88813019,90.97080230999998],[45.71971893,90.58576965],[45.286060330000005,90.94553374999998],[45.11508179,92.1339035],[44.9754715,93.48069763],[44.352329250000004,94.68895721],[44.24132156000001,95.3068924],[43.31945038000002,95.76249695],[42.72563171000002,96.34938812],[42.74887848,97.45175171],[42.524688720000015,99.51583862],[42.66381072999999,100.84584045],[42.51488113,101.83305359],[41.907478329999996,103.31230927000001],[41.908359529999984,104.52227782999998],[41.59741973999999,104.9650116],[42.134319309999995,106.12931824],[42.48152161000002,107.74476624],[42.519439699999985,109.24362946000001],[42.87123108000002,110.41211699999998],[43.40684128,111.12969208],[43.74312973,111.82962036],[44.07318115000001,111.66770172],[44.45746994000001,111.34838867],[45.10208130000002,111.87333679],[45.01165008999999,112.43609619000001],[44.80891037000001,113.46392059],[45.33983993999999,114.46035004],[45.727218629999996,115.98510742000002],[46.38819885000002,116.71787262000001],[46.672729489999995,117.42173767],[46.805408479999976,118.87431335],[46.69268036,119.66326141],[47.04806137,119.77281952],[47.74705124,118.86663055],[48.06673050000002,118.06414032],[47.69770812999999,117.29551697],[47.85340880999999,116.30893707],[47.726551060000006,115.74285889000001],[48.135379789999995,115.48532104],[49.13460158999999,116.19178008999998],[49.88856125,116.6787796],[49.511001590000006,117.87924194],[50.14287948999999,119.28842926000002],[50.58292006999999,119.27938843],[51.643550870000006,120.18208313],[51.96411133,120.73819733],[52.51623916999999,120.72576904],[52.75391006000001,120.17710113999999],[53.25139999000002,121.00306701999999],[53.43172835999999,122.24575806],[53.45880127000001,123.57147217],[53.16104888999998,125.06820679],[52.79280853000001,125.94638062],[51.78425979999999,126.56443024],[51.35388947000003,126.93914795000002],[50.73981093999997,127.2874527],[49.760269170000015,127.65740204],[49.44060135000001,129.39782715],[48.72969054999998,130.58229065],[47.79013062000001,130.98725891],[47.7889595,132.50668335],[48.18344115999999,133.37356567],[48.47822952000001,135.02632141],[47.57844925000001,134.50080872],[47.21247864000001,134.11235046],[46.11692047,133.76966858],[45.14408875000001,133.09712219],[45.321159359999996,131.88342285],[44.96796036000001,131.02519226],[44.11151122999998,131.28858948],[42.92998886000001,131.14471436],[42.90301132000001,130.63386536],[42.39500045999999,130.63999939],[42.98540115,129.99421692],[42.424991610000006,129.59663391],[41.994281769999986,128.05221558],[41.466770170000004,128.20846558],[41.503139499999996,127.34381866],[41.816558839999985,126.86907196000001],[41.107341770000005,126.18203735000002],[40.569808959999996,125.07996368],[39.928501129999994,124.26566314999998],[39.63779830999999,122.86753845],[39.17045975,122.13139343],[38.897460940000016,121.05451964999999],[39.36085892,121.58599854000002],[39.750270839999985,121.37674713],[40.42245101999997,122.16858673000002],[40.94639969,121.64037323],[40.593399049999995,120.76862335],[39.89805984000001,119.63960266],[39.252330779999994,119.02345276],[39.20426941,118.04271698],[38.737640380000016,117.53266907],[38.061481480000005,118.05972290000001],[37.89733123999999,118.87815094],[37.44847870000001,118.91166686999999],[37.156379699999995,119.70278931000001],[37.870429989999984,120.82344818],[37.48112106000001,121.71125031],[37.45449066000001,122.3579483],[36.93062972999998,122.51997375],[36.65132141000003,121.10420227000002],[36.11143874999999,120.63700866999999],[35.60979842999999,119.66458893000001],[34.9098587,119.15122223],[34.36034011999998,120.22752379999999],[33.37672043000002,120.62033844000001],[32.46031952000001,121.22904205],[31.69216918999999,121.90817261],[30.949350359999997,121.89189910999998],[30.676269530000003,121.26428986],[30.14291953999999,121.50348663000001],[29.83251952999999,122.09208678999998],[29.018020630000006,121.93843079],[28.225509639999995,121.68444061000001],[28.13566971000001,121.12563324],[27.053199769999974,120.39543915000002],[25.740789410000005,119.58547211000001],[24.547380449999988,118.65692902],[23.62450027,117.28160095],[22.78288077999999,115.89073944],[22.668090820000003,114.76383971999999],[22.223770140000003,114.15255737],[22.54833031000001,113.80677795],[22.05138016000002,113.2410965],[21.550489429999995,111.84359741000002],[21.397129060000008,110.78546143000001],[20.565410609999994,110.50935364],[20.34102057999999,110.44403076],[20.28244972,109.88986968999998],[21.008230209999994,109.62769318000001],[21.395059590000013,109.86448668999999],[21.7152195,108.52285004],[21.55237006999999,108.05020904999999],[21.811899189999984,107.04341125],[22.218200679999995,106.56728363],[22.794269560000014,106.72541809],[22.976890560000008,105.81121063],[23.352060319999996,105.32923889],[22.81915092,104.47685242],[22.70375061,103.50453949],[22.708799360000008,102.70697784],[22.46475028999999,102.17046356],[22.31818961999999,101.65200042999999],[21.17436981000001,101.80313873],[21.20165061999999,101.2700119],[21.436559680000006,101.17999268],[21.850000380000004,101.15000153],[21.55884933,100.41652679],[21.74294090000001,99.98348999],[22.11831093000001,99.24092865],[22.949029919999994,99.53199768],[23.142730710000023,98.89875793000002],[24.063289639999997,98.66029358],[23.897390369999993,97.60473633000001],[25.083650590000016,97.72460174999999],[25.91869926,98.67180634],[26.74353980999999,98.71208953999998],[27.508819580000004,98.68270111],[27.747230529999992,98.24622345],[28.335929869999998,97.91195679000002],[28.26157950999999,97.32714081],[28.411020280000006,96.24883270000001],[28.83097076000001,96.58659362999998],[29.452800749999987,96.11768341],[29.031719209999995,95.40480804],[29.277450560000013,94.56600189],[28.640659329999988,93.41332245],[27.89687919999999,92.50312042],[27.771749500000013,91.69667816]],[[18.197710040000008,109.47521973000002],[18.507690430000007,108.65519714000001],[19.367889399999996,108.62621307],[19.821029660000004,109.11907196],[20.101259230000004,110.21157837],[20.077520369999995,110.78655243],[19.695930479999998,111.01006316999998],[19.255889890000002,110.57064818999999],[18.678400039999996,110.33917999],[18.197710040000008,109.47521973000002]]]}},{latlng:[65,-18],flag:"https://restcountries.eu/data/isl.svg",code:"IS",name:"Iceland",geoJSON:{type:"Polygon",coordinates:[[[66.45587920999999,-14.50869465],[65.80873108,-14.73961258],[65.12667847000002,-13.609690670000003],[64.36408234,-14.909831999999998],[63.67876053000001,-17.79440689],[63.49639129999999,-18.65624046],[63.643630980000005,-19.97272491],[63.960189819999975,-22.76296043],[64.40212250000002,-21.778446199999998],[64.89112854000001,-23.95501328],[65.08496857,-22.18439484],[65.3786087,-22.22741318],[65.61116791,-24.32616425],[66.26251221000003,-23.65049553],[66.41045380000001,-22.13491631],[65.73211670000002,-20.57626724],[66.27660370000001,-19.05681801],[65.99385834,-17.79862976],[66.52680969000001,-16.1678009],[66.45587920999999,-14.50869465]]]}},{latlng:[21.5,-80],flag:"https://restcountries.eu/data/cub.svg",code:"CU",name:"Cuba",geoJSON:{type:"Polygon",coordinates:[[[23.18861961,-82.26810455],[23.117279050000015,-81.40436553999999],[23.105989460000004,-80.61865997],[22.765300749999984,-79.67948913999999],[22.399209979999984,-79.28137970000002],[22.51218033000001,-78.34737396],[22.277179719999992,-77.99326324],[21.657850269999983,-77.14642334],[21.206819530000008,-76.52376556],[21.220560070000005,-76.19454193000001],[21.016630169999996,-75.59818268],[20.735090259999996,-75.67098999],[20.693899150000004,-74.93379211],[20.284629819999992,-74.17803955],[20.050369259999986,-74.29662323],[19.923450470000002,-74.96160889],[19.873779299999985,-75.63462067000002],[19.952890400000012,-76.32357025000002],[19.85548019,-77.75538635],[20.413360600000004,-77.08505249],[20.67310904999999,-77.49256897],[20.739950179999994,-78.13724518],[21.02861977000001,-78.48273468],[21.598119739999998,-78.71981812],[21.559179310000005,-79.28495789],[21.827329640000006,-80.21746826000002],[22.03706932,-80.51750183],[22.192050929999997,-81.82089233],[22.387109760000005,-82.16996765],[22.63697052,-81.79496765],[22.688150409999988,-82.77585602],[22.168510440000002,-83.49443817000001],[22.154569629999994,-83.90881348],[21.91057014,-84.05208588000002],[21.80121993999999,-84.54696655],[21.89602089,-84.97480011],[22.204959870000007,-84.44699097],[22.565740590000015,-84.23034668],[22.78812027,-83.77816772],[22.983039860000005,-83.26748657000002],[23.078760149999994,-82.51042175],[23.18861961,-82.26810455]]]}},{latlng:[18.25,-77.5],flag:"https://restcountries.eu/data/jam.svg",code:"JM",name:"Jamaica",geoJSON:{type:"Polygon",coordinates:[[[18.49053001,-77.56954956],[18.400859830000005,-76.89660645],[18.16069031000001,-76.36535645000001],[17.88685988999999,-76.19963074],[17.86823082000002,-76.90248107999999],[17.701110840000005,-77.20624542],[17.86161041,-77.76597595],[18.225959780000004,-78.33770752],[18.454519269999988,-78.21768188000001],[18.52421950999999,-77.79736327999998],[18.49053001,-77.56954956]]]}},{latlng:[18.25,-66.5],flag:"https://restcountries.eu/data/pri.svg",code:"PR",name:"Puerto Rico",geoJSON:{type:"Polygon",coordinates:[[[18.51477051000001,-66.28237152],[18.42668915000001,-65.77129364],[18.228050230000004,-65.59100342],[17.975889209999984,-65.84715271],[17.981819150000014,-66.59989929],[17.946540830000004,-67.18411255],[18.374460220000003,-67.24242401],[18.52059936999999,-67.1006012],[18.51477051000001,-66.28237152]]]}},{latlng:[-23,-58],flag:"https://restcountries.eu/data/pry.svg",code:"PY",name:"Paraguay",geoJSON:{type:"Polygon",coordinates:[[[-22.249017719999998,-62.685005190000005],[-23.880714420000007,-60.84654617],[-24.032781599999986,-60.02896118000001],[-24.771448140000015,-58.80712891],[-25.162347789999995,-57.777214050000005],[-25.60366630999999,-57.633613589999996],[-27.123716349999995,-58.61815643],[-27.395868300000004,-57.60972214],[-27.548496249999992,-56.486679079999995],[-27.387825009999997,-55.695812229999994],[-26.621810909999994,-54.78878403],[-25.739246370000004,-54.6252594],[-25.16220093,-54.42895125999999],[-24.57079124000001,-54.29344558999999],[-24.021013260000007,-54.29291534],[-23.839599609999993,-54.65277481],[-24.00126265999999,-55.02787781],[-23.95693016,-55.40071105999999],[-23.571992870000006,-55.517639159999995],[-22.655588149999996,-55.61063385],[-22.35691642999999,-55.79792786000001],[-22.086286540000003,-56.47332382],[-22.28216170999999,-56.88150024],[-22.090179440000004,-57.93711853],[-20.73268318,-57.87065125000001],[-20.17670441,-58.16637421],[-19.868396759999996,-58.18347167999999],[-19.35686493,-59.11500167999999],[-19.34272575,-60.0435257],[-19.633705139999996,-61.78629303],[-20.51374626,-62.26596069],[-21.05163192999999,-62.29116821],[-22.249017719999998,-62.685005190000005]]]}},{latlng:[-2,-77.5],flag:"https://restcountries.eu/data/ecu.svg",code:"EC",name:"Ecuador",geoJSON:{type:"Polygon",coordinates:[[[-3.404859069999995,-80.30254364],[-2.657498599999992,-79.77024840999998],[-2.2207880000000007,-79.98657227],[-2.685159439999999,-80.36875915999998],[-2.2469465700000137,-80.96766663],[-1.9650495100000045,-80.76472473],[-1.0574486299999923,-80.93363952999998],[-0.9066591900000034,-80.58326721],[-0.28369998999999985,-80.39925385],[0.36032998999999005,-80.02085876000001],[0.7684299899999962,-80.0905304],[0.9829099800000058,-79.54268646],[1.380929949999992,-78.85517883],[0.8099100000000136,-77.85503387],[0.8259099699999878,-77.66854095],[0.39570000999998994,-77.42498779],[0.2569200100000008,-76.57633209],[0.4160400000000025,-76.2922821],[0.08478000000000266,-75.80144501],[-0.15201994999998927,-75.37322998],[-0.911399659999998,-75.23369598],[-1.5616195199999983,-75.54496765],[-2.608686690000001,-76.63535309],[-3.003009560000002,-77.83786011],[-3.8730695199999903,-78.45066833],[-4.547783369999991,-78.63989258],[-4.959146979999994,-79.20523071000001],[-4.454175950000002,-79.62490082000001],[-4.346074099999992,-80.02883148],[-4.425738810000012,-80.4421463],[-4.059298990000009,-80.46918488],[-3.8211495900000108,-80.18390656000001],[-3.404859069999995,-80.30254364]]]}},{latlng:[4,-53],flag:"https://restcountries.eu/data/guf.svg",code:"GF",name:"French Guiana",geoJSON:{type:"Polygon",coordinates:[[[5.756549840000016,-53.95803833000001],[5.646540160000004,-53.61843872],[5.409850119999999,-52.88214111],[4.565780159999993,-51.82331848],[4.15622996999999,-51.65776061999999],[3.241110090000005,-52.24932861],[2.5046999500000076,-52.5563736],[2.1248600499999877,-52.93962097],[2.053390030000004,-53.41840363],[2.3349099199999994,-53.55482864],[2.376699919999988,-53.77847672000001],[2.1055500500000073,-54.08801651],[2.311840059999988,-54.52473831],[2.732399940000001,-54.26966858],[3.189779999999988,-54.18167496],[3.620049949999999,-54.00692368000001],[4.212600229999999,-54.39948273000001],[4.896759989999993,-54.47858429],[5.756549840000016,-53.95803833000001]]]}},{latlng:[4,-56],flag:"https://restcountries.eu/data/sur.svg",code:"SR",name:"Suriname",geoJSON:{type:"Polygon",coordinates:[[[5.97314978,-57.14741135],[5.772870060000003,-55.9493103],[5.95313978,-55.84174346999999],[6.0252900100000035,-55.03322601],[5.756549840000016,-53.95803833000001],[4.896759989999993,-54.47858429],[4.212600229999999,-54.39948273000001],[3.620049949999999,-54.00692368000001],[3.189779999999988,-54.18167496],[2.732399940000001,-54.26966858],[2.311840059999988,-54.52473831],[2.52374005,-55.0975914],[2.4214999700000077,-55.56970596],[2.510359999999995,-55.973323820000005],[2.2207899099999926,-56.07331848],[2.0219900599999887,-55.90560913],[1.8176800000000006,-55.995693210000006],[1.8995300499999943,-56.53934479],[2.7689399700000035,-57.15007019],[3.3334798800000036,-57.28142548],[3.3346600499999863,-57.60155487],[4.06086016000001,-58.04466629000001],[4.576799869999993,-57.86019897],[4.812630180000005,-57.91426086],[5.073560240000008,-57.30720139],[5.97314978,-57.14741135]]]}},{latlng:[5,-59],flag:"https://restcountries.eu/data/guy.svg",code:"GY",name:"Guyana",geoJSON:{type:"Polygon",coordinates:[[[8.367019649999994,-59.75830078],[7.9991998699999955,-59.10168076],[7.347700120000003,-58.482933040000006],[6.832789899999999,-58.45484924],[6.80910015000001,-58.07809067],[6.321279999999999,-57.542202],[5.97314978,-57.14741135],[5.073560240000008,-57.30720139],[4.812630180000005,-57.91426086],[4.576799869999993,-57.86019897],[4.06086016000001,-58.04466629000001],[3.3346600499999863,-57.60155487],[3.3334798800000036,-57.28142548],[2.7689399700000035,-57.15007019],[1.8995300499999943,-56.53934479],[1.8637100499999983,-56.78271103],[1.9485299599999906,-57.33580017],[1.6825900100000042,-57.660980220000006],[1.507200000000005,-58.11341858],[1.4639400199999943,-58.42945861999999],[1.2681100399999965,-58.540008539999995],[1.3176900100000024,-59.030838010000004],[1.7868900299999926,-59.64600372000001],[2.2496199599999946,-59.71848296999999],[2.7552199400000053,-59.97450638],[3.6064898999999953,-59.815380100000006],[3.9588000800000045,-59.5379982],[4.423500059999996,-59.76737976],[4.574969769999998,-60.11097336],[5.014070030000003,-59.98090363],[5.244480130000004,-60.21362686],[5.2002701799999995,-60.73358154],[5.959060189999997,-61.41030884],[6.234310149999998,-61.139400480000006],[6.6960802100000025,-61.1593132],[6.856589789999992,-60.54396057],[7.04392003999999,-60.295639040000005],[7.414999960000006,-60.63792037999999],[7.779600139999998,-60.55055618],[8.367019649999994,-59.75830078]]]}},{latlng:[8,-66],flag:"https://restcountries.eu/data/ven.svg",code:"VE",name:"Venezuela",geoJSON:{type:"Polygon",coordinates:[[[11.776269909999998,-71.33149719],[11.539999960000003,-71.35997009],[11.42327023000001,-71.94699097],[10.969459530000002,-71.62082672],[10.44649029,-71.63303375],[9.865650180000003,-72.0741272],[9.072259900000002,-71.69559479],[9.137200359999989,-71.26450348],[9.859999660000012,-71.03995514],[10.21191978,-71.34998322],[10.968970299999997,-71.40052032],[11.375490189999997,-70.15525055],[11.846830369999992,-70.29380798],[12.162309650000001,-69.94322205],[11.459620479999998,-69.58428955],[11.443389890000002,-68.88288116],[10.885740280000002,-68.23316956],[10.554659840000005,-68.19405365],[10.545860290000007,-67.29616547],[10.648619649999995,-66.22783661],[10.200790410000007,-65.65519714],[10.07719994,-64.89043427],[10.389590260000013,-64.32946777],[10.64142035999999,-64.31797791],[10.701720240000004,-63.079299930000005],[10.715620040000008,-61.88090897000001],[10.420260429999999,-62.73009491],[9.948200230000005,-62.38846587999999],[9.873069759999986,-61.588771820000005],[9.38134956,-60.83054352],[8.580180169999998,-60.67121887],[8.60276031000001,-60.150028230000004],[8.367019649999994,-59.75830078],[7.779600139999998,-60.55055618],[7.414999960000006,-60.63792037999999],[7.04392003999999,-60.295639040000005],[6.856589789999992,-60.54396057],[6.6960802100000025,-61.1593132],[6.234310149999998,-61.139400480000006],[5.959060189999997,-61.41030884],[5.2002701799999995,-60.73358154],[4.918089869999997,-60.60116196],[4.536459919999986,-60.96688842999999],[4.162119869999987,-62.0854187],[4.0069699300000075,-62.804531100000005],[3.770570039999988,-63.09320068],[4.020520210000003,-63.88832091999999],[4.148489950000006,-64.62866211],[4.056459900000001,-64.81600189],[3.7972099800000145,-64.36844635],[3.126780030000009,-64.40880585],[2.4969899699999942,-64.26992035],[2.4110798799999986,-63.42282486],[2.2009100899999914,-63.36875916],[1.9163700300000022,-64.08303833],[1.4928599600000032,-64.19927216],[1.3287299900000027,-64.61102295],[1.0952700399999986,-65.35462952],[0.7892699800000011,-65.548172],[0.7244700199999987,-66.32572174],[1.2533600299999987,-66.87624359],[2.2506399199999905,-67.18125153],[2.60028004999999,-67.44706726],[2.8206601100000097,-67.80992126],[3.3184599899999943,-67.30314636],[3.5423400400000036,-67.33750153],[3.83948993999999,-67.62180328],[4.503940110000012,-67.82297516],[5.2211198799999945,-67.74468231],[5.556880000000015,-67.5214386],[6.095459939999996,-67.34140778],[6.267310139999993,-67.6950531],[6.153279780000006,-68.26496887],[6.206789970000003,-68.98526001],[6.099860190000009,-69.38945007],[6.960380079999997,-70.09321594],[7.087790010000001,-70.67415619],[6.991600039999993,-71.9601059],[7.340439800000002,-72.19824982],[7.423799990000002,-72.44441223],[7.632490159999999,-72.47966766],[8.002630229999996,-72.36090088],[8.40526962000001,-72.43978119],[8.625280379999987,-72.66042328],[9.085040090000003,-72.78866577],[9.15200043,-73.30490112],[9.736760139999994,-73.02757263],[10.450340270000003,-72.90527344],[10.821990010000002,-72.61458588],[11.108710290000008,-72.22750092],[11.608679769999982,-71.97383118],[11.776269909999998,-71.33149719]],[[11.043569559999998,-64.40207672],[11.06175612999999,-64.2249527],[11.01500034,-64.12989044],[11.066049579999996,-64.02922821],[11.170140269999996,-63.906799320000005],[11.012249950000006,-63.79912567],[10.878629679999992,-63.9011879],[10.862850189999996,-64.06246948],[10.939985280000002,-64.15620422],[10.957460399999992,-64.4281311],[11.043569559999998,-64.40207672]]]}},{latlng:[17.25,-88.75],flag:"https://restcountries.eu/data/blz.svg",code:"BZ",name:"Belize",geoJSON:{type:"Polygon",coordinates:[[[17.80830956,-89.14306641],[17.955459590000014,-89.15084839],[18.00152016000001,-89.02984619],[17.88319015999999,-88.84831238000001],[18.486829760000006,-88.49010467999999],[18.499990459999978,-88.29995728],[18.35327911000001,-88.2963028],[18.34868049999999,-88.10680389],[18.07666016,-88.12345885999999],[17.64413071000001,-88.28533173],[17.48946953000002,-88.19776917],[17.131689070000004,-88.30257415999999],[17.036069869999995,-88.23949432],[16.530759810000003,-88.35539246],[16.265470499999996,-88.55181122],[16.233650210000004,-88.73241425],[15.88728046000001,-88.93058777],[15.886949540000007,-89.22911835],[17.01556969,-89.15071106],[17.80830956,-89.14306641]]]}},{latlng:[15.5,-90.25],flag:"https://restcountries.eu/data/gtm.svg",code:"GT",name:"Guatemala",geoJSON:{type:"Polygon",coordinates:[[[13.735329629999997,-90.0954895],[13.90977001,-90.60853577],[13.927840229999987,-91.23231505999999],[14.126230240000003,-91.68964386],[14.538829800000007,-92.22768402000001],[14.830109600000004,-92.20314025999998],[15.06459044999999,-92.08710479999999],[15.251440050000012,-92.22924805000001],[16.066579820000012,-91.74788666],[16.06955909999999,-90.46447754],[16.410120009999996,-90.43881226],[16.47076988000001,-90.60082245],[16.68748092999998,-90.71176147],[16.91847038,-91.08165741],[17.25218963999999,-91.45391846],[17.254650119999997,-91.0022583],[17.817600249999995,-91.00141907],[17.81932068,-90.0679245],[17.80830956,-89.14306641],[17.01556969,-89.15071106],[15.886949540000007,-89.22911835],[15.88728046000001,-88.93058777],[15.706390380000006,-88.60450745],[15.855380060000014,-88.51837158],[15.727720259999995,-88.22493744],[15.346240039999996,-88.68064117],[15.066419599999993,-89.15476227],[14.874290470000012,-89.22521209999998],[14.678019519999998,-89.14548491999999],[14.424139980000014,-89.35332489],[14.362600329999989,-89.58734131000001],[14.24483013,-89.53412628],[14.134229659999997,-89.7219162],[13.881970410000005,-90.06460571],[13.735329629999997,-90.0954895]]]}},{latlng:[13.83333333,-88.91666666],flag:"https://restcountries.eu/data/slv.svg",code:"SV",name:"El Salvador",geoJSON:{type:"Polygon",coordinates:[[[13.384480480000011,-87.7930603],[13.149029730000006,-87.90400696],[13.163949970000006,-88.48325348000002],[13.259739879999993,-88.84316254],[13.458530429999993,-89.25669098],[13.520609860000016,-89.81235504],[13.735329629999997,-90.0954895],[13.881970410000005,-90.06460571],[14.134229659999997,-89.7219162],[14.24483013,-89.53412628],[14.362600329999989,-89.58734131000001],[14.424139980000014,-89.35332489],[14.340020179999982,-89.05844115999999],[14.140500069999991,-88.84297179999999],[13.980159759999992,-88.54116821],[13.845490460000006,-88.50394439999998],[13.964630130000003,-88.06528473000002],[13.89330959,-87.85947418],[13.785059930000003,-87.72351074],[13.384480480000011,-87.7930603]]]}},{latlng:[15,-86.5],flag:"https://restcountries.eu/data/hnd.svg",code:"HN",name:"Honduras",geoJSON:{type:"Polygon",coordinates:[[[12.984689710000003,-87.31665039],[13.297550200000002,-87.48935699],[13.384480480000011,-87.7930603],[13.785059930000003,-87.72351074],[13.89330959,-87.85947418],[13.964630130000003,-88.06528473000002],[13.845490460000006,-88.50394439999998],[13.980159759999992,-88.54116821],[14.140500069999991,-88.84297179999999],[14.340020179999982,-89.05844115999999],[14.424139980000014,-89.35332489],[14.678019519999998,-89.14548491999999],[14.874290470000012,-89.22521209999998],[15.066419599999993,-89.15476227],[15.346240039999996,-88.68064117],[15.727720259999995,-88.22493744],[15.688670160000003,-88.12104797],[15.864450449999984,-87.90177917000001],[15.878800390000002,-87.61565398999998],[15.797280310000007,-87.52286530000002],[15.84694958,-87.36771392999998],[15.756710049999992,-86.90319824],[15.782839779999996,-86.44089507999999],[15.893440250000001,-86.11917114],[16.00539970000001,-86.00184631],[15.95366000999999,-85.68325806],[15.88574982,-85.44394684],[15.90917015,-85.18242645],[15.995929719999994,-84.98368073],[15.8572197,-84.5268631],[15.835160259999993,-84.36817932],[15.648249629999988,-84.06304932],[15.424079899999985,-83.77398682],[15.270899770000009,-83.41028595],[14.995829580000002,-83.14720154],[15.016260149999987,-83.48987579],[14.880069730000017,-83.62850189],[14.749440190000012,-83.97568512],[14.748749730000009,-84.22831725999998],[14.621609689999998,-84.44934082],[14.666799550000006,-84.64948273],[14.819589610000005,-84.81997681],[14.790490149999997,-84.92438507],[14.551549910000004,-85.0526886],[14.560190199999994,-85.14873505],[14.35437012,-85.16532898000001],[14.079010010000001,-85.51439667],[13.960080150000005,-85.69866943],[13.83603954000001,-85.80124664000002],[14.038180350000001,-86.09625243999999],[13.771369930000018,-86.31212616],[13.778479579999983,-86.52068329],[13.754850389999998,-86.75504303],[13.26309012999999,-86.73381805],[13.254210470000015,-86.88053894],[13.025790209999988,-87.00571442],[12.984689710000003,-87.31665039]]]}},{latlng:[13,-85],flag:"https://restcountries.eu/data/nic.svg",code:"NI",name:"Nicaragua",geoJSON:{type:"Polygon",coordinates:[[[11.088439939999994,-85.71250916],[11.403440479999992,-86.05845642],[11.806889530000003,-86.52578735],[12.143969539999995,-86.74596405],[12.458259579999998,-87.16744995],[12.909919739999985,-87.66841125],[13.064559939999986,-87.55739594],[12.914010050000002,-87.39228058],[12.984689710000003,-87.31665039],[13.025790209999988,-87.00571442],[13.254210470000015,-86.88053894],[13.26309012999999,-86.73381805],[13.754850389999998,-86.75504303],[13.778479579999983,-86.52068329],[13.771369930000018,-86.31212616],[14.038180350000001,-86.09625243999999],[13.83603954000001,-85.80124664000002],[13.960080150000005,-85.69866943],[14.079010010000001,-85.51439667],[14.35437012,-85.16532898000001],[14.560190199999994,-85.14873505],[14.551549910000004,-85.0526886],[14.790490149999997,-84.92438507],[14.819589610000005,-84.81997681],[14.666799550000006,-84.64948273],[14.621609689999998,-84.44934082],[14.748749730000009,-84.22831725999998],[14.749440190000012,-83.97568512],[14.880069730000017,-83.62850189],[15.016260149999987,-83.48987579],[14.995829580000002,-83.14720154],[14.89986038000001,-83.23319244],[14.676619529999991,-83.28406525],[14.310700420000014,-83.18212891000002],[13.970069890000014,-83.41243744],[13.567709920000004,-83.51972197999999],[13.127050400000003,-83.55216979999999],[12.86929989,-83.49842834],[12.419099810000006,-83.47322082999999],[12.320850370000006,-83.626091],[11.893139840000005,-83.71958923],[11.629030230000001,-83.65077208999999],[11.373299599999983,-83.85546875],[11.103050230000001,-83.80886078000002],[10.938779830000005,-83.65554047],[10.726829530000012,-83.89498138],[10.793459889999989,-84.19017792],[10.999239920000004,-84.35585022],[11.082650180000012,-84.67298889],[10.952300070000017,-84.9029007],[11.21712017,-85.56180573],[11.088439939999994,-85.71250916]]]}},{latlng:[10,-84],flag:"https://restcountries.eu/data/cri.svg",code:"CR",name:"Costa Rica",geoJSON:{type:"Polygon",coordinates:[[[8.225040440000011,-82.96573639000002],[8.44692038999999,-83.50841522],[8.656829829999994,-83.71137238],[8.830439570000006,-83.59630584999998],[9.051380159999999,-83.63262177],[9.290789599999997,-83.9098053],[9.487350459999998,-84.30339813],[9.615539549999994,-84.64752959999998],[9.908060070000008,-84.71328735],[10.08670998,-84.97564697],[9.795999530000007,-84.91126251],[9.55702972,-85.11087036],[9.83454989999999,-85.33947754000002],[9.933340069999995,-85.66073608],[10.1348896,-85.79740143],[10.439330100000006,-85.79165649],[10.754320140000003,-85.65929413],[10.89527988000001,-85.9417038],[11.088439939999994,-85.71250916],[11.21712017,-85.56180573],[10.952300070000017,-84.9029007],[11.082650180000012,-84.67298889],[10.999239920000004,-84.35585022],[10.793459889999989,-84.19017792],[10.726829530000012,-83.89498138],[10.938779830000005,-83.65554047],[10.39544964,-83.4022522],[9.992970469999996,-83.01557159],[9.566149709999996,-82.54620361],[9.476819989999997,-82.93283081],[9.074330329999983,-82.92708588000002],[8.925709719999997,-82.71917725],[8.80725956000001,-82.86864470999998],[8.626299859999996,-82.82966614],[8.423529619999984,-82.91311645999998],[8.225040440000011,-82.96573639000002]]]}},{latlng:[9,-80],flag:"https://restcountries.eu/data/pan.svg",code:"PA",name:"Panama",geoJSON:{type:"Polygon",coordinates:[[[7.223780159999998,-77.88148498999999],[7.512259959999992,-78.2148819],[8.05204964000001,-78.4291153],[8.319169999999993,-78.18203735],[8.387709619999988,-78.43538666],[8.718130110000008,-78.62213135],[8.99610043,-79.1202774],[8.932359700000017,-79.55784607],[8.584520340000008,-79.76052856],[8.333319660000004,-80.16437530999998],[8.29839993,-80.38260651],[8.090310099999995,-80.48061371],[7.547530169999992,-80.00362396],[7.419750210000016,-80.27656555000002],[7.271580220000004,-80.42112732],[7.220550059999989,-80.88630676],[7.817910190000016,-81.05947876000002],[7.647920129999997,-81.18967438],[7.7066202200000085,-81.51941681],[8.108960149999998,-81.72130585],[8.17539023999999,-82.13137817],[8.292349820000004,-82.39093018],[8.290860180000003,-82.82006836],[8.073829649999993,-82.85094452],[8.225040440000011,-82.96573639000002],[8.423529619999984,-82.91311645999998],[8.626299859999996,-82.82966614],[8.80725956000001,-82.86864470999998],[8.925709719999997,-82.71917725],[9.074330329999983,-82.92708588000002],[9.476819989999997,-82.93283081],[9.566149709999996,-82.54620361],[9.207440380000007,-82.18713379],[8.995559689999988,-82.20758057],[8.95061015999999,-81.80848694],[9.031949999999986,-81.71407318000001],[8.786239620000003,-81.4392395],[8.858510019999997,-80.94722748],[9.111080169999987,-80.52181244],[9.312780379999984,-79.91461181999999],[9.611599920000009,-79.57330322],[9.552929879999986,-79.02117157000002],[9.454580310000004,-79.05838013],[9.420470239999988,-78.50081635000001],[9.247730260000006,-78.05587768999999],[8.946829800000017,-77.72946167],[8.670499800000004,-77.35329437],[8.524299619999983,-77.47462463],[7.935279850000006,-77.24254608],[7.638060089999986,-77.43106078999999],[7.709839820000001,-77.75330353],[7.223780159999998,-77.88148498999999]]]}},{latlng:[4,-72],flag:"https://restcountries.eu/data/col.svg",code:"CO",name:"Colombia",geoJSON:{type:"Polygon",coordinates:[[[-0.15201994999998927,-75.37322998],[0.08478000000000266,-75.80144501],[0.4160400000000025,-76.2922821],[0.2569200100000008,-76.57633209],[0.39570000999998994,-77.42498779],[0.8259099699999878,-77.66854095],[0.8099100000000136,-77.85503387],[1.380929949999992,-78.85517883],[1.6913800199999975,-78.99087524],[1.766399980000004,-78.61776733],[2.2673499599999993,-78.66210175],[2.6295499800000015,-78.4276123],[2.696599959999997,-77.93149567],[3.325010059999992,-77.51033020000001],[3.849649909999989,-77.12767792],[4.08760977000001,-77.49616241],[4.667980190000006,-77.30752563],[5.58280993,-77.53318787],[5.845359799999995,-77.31875610000002],[6.6911301599999975,-77.47657776],[7.223780159999998,-77.88148498999999],[7.709839820000001,-77.75330353],[7.638060089999986,-77.43106078999999],[7.935279850000006,-77.24254608],[8.524299619999983,-77.47462463],[8.670499800000004,-77.35329437],[8.63875008,-76.83666228999999],[9.336819649999995,-76.08634186],[9.443260190000002,-75.67452239999999],[9.7740097,-75.66465759],[10.618980409999999,-75.48038483],[11.083060259999987,-74.9068222],[11.1020298,-74.27671051],[11.310480119999985,-74.1971817],[11.227009769999992,-73.41471863],[11.731980319999996,-72.62776184],[11.9555397,-72.23813629],[12.437299730000003,-71.75397491],[12.376049999999985,-71.39972687],[12.112990380000003,-71.13743591],[11.776269909999998,-71.33149719],[11.608679769999982,-71.97383118],[11.108710290000008,-72.22750092],[10.821990010000002,-72.61458588],[10.450340270000003,-72.90527344],[9.736760139999994,-73.02757263],[9.15200043,-73.30490112],[9.085040090000003,-72.78866577],[8.625280379999987,-72.66042328],[8.40526962000001,-72.43978119],[8.002630229999996,-72.36090088],[7.632490159999999,-72.47966766],[7.423799990000002,-72.44441223],[7.340439800000002,-72.19824982],[6.991600039999993,-71.9601059],[7.087790010000001,-70.67415619],[6.960380079999997,-70.09321594],[6.099860190000009,-69.38945007],[6.206789970000003,-68.98526001],[6.153279780000006,-68.26496887],[6.267310139999993,-67.6950531],[6.095459939999996,-67.34140778],[5.556880000000015,-67.5214386],[5.2211198799999945,-67.74468231],[4.503940110000012,-67.82297516],[3.83948993999999,-67.62180328],[3.5423400400000036,-67.33750153],[3.3184599899999943,-67.30314636],[2.8206601100000097,-67.80992126],[2.60028004999999,-67.44706726],[2.2506399199999905,-67.18125153],[1.2533600299999987,-66.87624359],[1.1301300499999973,-67.06495667],[1.7200000299999916,-67.25989532],[2.037169930000005,-67.53775787],[1.6924400299999978,-67.86849213],[1.7148000000000059,-69.81694031],[1.0890699600000038,-69.80454254],[0.9856699699999958,-69.21862793],[0.602670010000006,-69.25244141],[0.7061300299999936,-69.45238495],[0.5414299999999974,-70.01544952],[-0.18513978999999187,-70.02060699],[-0.5499994200000062,-69.57698059],[-1.122619270000003,-69.42045593],[-1.5562893200000085,-69.4440918],[-4.298166280000004,-69.89360046],[-3.766568180000018,-70.39403534],[-3.7428486300000077,-70.69257355],[-2.7251794300000047,-70.04763794],[-2.256866689999989,-70.81336975],[-2.342809440000003,-71.41352081],[-2.1698086299999932,-71.77466583],[-2.4342095899999956,-72.32570648],[-2.308938030000005,-73.07035065],[-1.260499950000004,-73.65946198],[-1.0028400399999886,-74.1223526],[-0.5308097599999893,-74.44158173],[-0.05717997999998853,-75.10662842],[-0.15201994999998927,-75.37322998]]]}},{latlng:[-10,-76],flag:"https://restcountries.eu/data/per.svg",code:"PE",name:"Peru",geoJSON:{type:"Polygon",coordinates:[[[-17.580013280000006,-69.59036255],[-18.092674259999995,-69.85834503],[-18.34794235,-70.37255096],[-17.773765559999998,-71.37523651],[-17.363470079999992,-71.46202087],[-16.359369280000003,-73.44449615],[-15.265686990000004,-75.23781586],[-14.649248119999996,-76.00910187],[-13.823192600000006,-76.42346191],[-13.535054209999998,-76.25918579],[-12.222688669999997,-77.10620117],[-10.37768078000001,-78.0920639],[-8.386567119999988,-79.03690338],[-7.930808069999993,-79.44591522],[-7.194357870000009,-79.76052856],[-6.541635039999994,-80.53736115],[-6.136834140000002,-81.25],[-5.690533160000002,-80.92632294],[-4.736758230000021,-81.41083527],[-4.0363740899999945,-81.09955597],[-3.404859069999995,-80.30254364],[-3.8211495900000108,-80.18390656000001],[-4.059298990000009,-80.46918488],[-4.425738810000012,-80.4421463],[-4.346074099999992,-80.02883148],[-4.454175950000002,-79.62490082000001],[-4.959146979999994,-79.20523071000001],[-4.547783369999991,-78.63989258],[-3.8730695199999903,-78.45066833],[-3.003009560000002,-77.83786011],[-2.608686690000001,-76.63535309],[-1.5616195199999983,-75.54496765],[-0.911399659999998,-75.23369598],[-0.15201994999998927,-75.37322998],[-0.05717997999998853,-75.10662842],[-0.5308097599999893,-74.44158173],[-1.0028400399999886,-74.1223526],[-1.260499950000004,-73.65946198],[-2.308938030000005,-73.07035065],[-2.4342095899999956,-72.32570648],[-2.1698086299999932,-71.77466583],[-2.342809440000003,-71.41352081],[-2.256866689999989,-70.81336975],[-2.7251794300000047,-70.04763794],[-3.7428486300000077,-70.69257355],[-3.766568180000018,-70.39403534],[-4.298166280000004,-69.89360046],[-4.251239779999997,-70.79470062],[-4.401605129999998,-70.92881775],[-4.5940089199999985,-71.74841309],[-5.2745580699999985,-72.89189148],[-5.74126625,-72.96444702],[-6.08917999000001,-73.21961975],[-6.629945279999998,-73.11997223],[-6.918583389999994,-73.7244873],[-7.340986250000002,-73.72338104],[-7.5238051399999994,-73.98723602],[-8.424410820000004,-73.57103729],[-9.032828330000001,-73.01537323],[-9.462198259999989,-73.22666931],[-9.520210270000005,-72.56293488],[-10.05358791000001,-72.18486023],[-10.079434390000007,-71.30231476],[-9.490088459999997,-70.4818573],[-11.009150509999996,-70.54859161],[-11.123970030000002,-70.09374237],[-10.951702119999993,-69.52963257],[-12.561309809999996,-68.66498566],[-12.899718279999995,-68.88005829],[-13.602667809999994,-68.9291687],[-14.453637119999996,-68.94882202],[-14.953186990000011,-69.33942413],[-15.323938370000008,-69.16031647],[-15.660116200000003,-69.38977051],[-16.500661849999993,-68.95954132],[-17.580013280000006,-69.59036255]]]}},{latlng:[-17,-65],flag:"https://restcountries.eu/data/bol.svg",code:"BO",name:"Bolivia",geoJSON:{type:"Polygon",coordinates:[[[-22.034976959999998,-62.84645081],[-21.993633270000004,-63.98679351999999],[-22.798082349999998,-64.37700653],[-22.075832370000004,-64.9648056],[-21.832292560000003,-66.27329254],[-22.735902790000004,-67.10657501],[-22.87288857,-67.82807159],[-21.494337080000008,-68.21990967],[-20.37266159000001,-68.7571106],[-19.405069349999998,-68.44217682],[-18.98165703000001,-68.96677399],[-18.260103229999988,-69.10018158],[-17.580013280000006,-69.59036255],[-16.500661849999993,-68.95954132],[-15.660116200000003,-69.38977051],[-15.323938370000008,-69.16031647],[-14.953186990000011,-69.33942413],[-14.453637119999996,-68.94882202],[-13.602667809999994,-68.9291687],[-12.899718279999995,-68.88005829],[-12.561309809999996,-68.66498566],[-10.951702119999993,-69.52963257],[-11.036348339999998,-68.78610229],[-11.01449203,-68.27124023],[-10.712068560000013,-68.04812622],[-10.306806559999995,-67.17373657],[-9.93130016000001,-66.64691162],[-9.761956209999992,-65.33843994],[-10.511427880000005,-65.44480896],[-10.895836829999999,-65.32178497],[-11.566278460000007,-65.4021759],[-12.46199608,-64.31633759],[-12.627034190000007,-63.19644547],[-13.000657079999991,-62.80302811],[-13.198767660000009,-62.12701797],[-13.489198680000005,-61.713172910000004],[-13.479380609999987,-61.08409119000001],[-13.77597046,-60.50328064],[-14.353987690000002,-60.45919418],[-14.645956039999998,-60.26429367],[-15.077214240000005,-60.251110080000004],[-15.093915939999997,-60.54291534],[-16.258270260000014,-60.15838242],[-16.299560549999995,-58.24121094000001],[-16.8771019,-58.38806152],[-17.271675110000007,-58.28077316],[-17.552490230000007,-57.7345047],[-18.17416763,-57.498325349999995],[-18.961826320000007,-57.67599106],[-19.399988170000004,-57.94996262000001],[-19.970012659999995,-57.85379028],[-20.17670441,-58.16637421],[-19.868396759999996,-58.18347167999999],[-19.35686493,-59.11500167999999],[-19.34272575,-60.0435257],[-19.633705139999996,-61.78629303],[-20.51374626,-62.26596069],[-21.05163192999999,-62.29116821],[-22.249017719999998,-62.685005190000005],[-22.034976959999998,-62.84645081]]]}},{latlng:[-10,-55],flag:"https://restcountries.eu/data/bra.svg",code:"BR",name:"Brazil",geoJSON:{type:"Polygon",coordinates:[[[-30.21628761,-57.62506485],[-28.852745060000007,-56.29083633],[-27.881925579999997,-55.162242889999995],[-27.47472381999999,-54.49066544],[-26.923484799999997,-53.64868546000001],[-26.124876020000013,-53.62831116],[-25.547594070000006,-54.13003159000001],[-25.739246370000004,-54.6252594],[-25.16220093,-54.42895125999999],[-24.57079124000001,-54.29344558999999],[-24.021013260000007,-54.29291534],[-23.839599609999993,-54.65277481],[-24.00126265999999,-55.02787781],[-23.95693016,-55.40071105999999],[-23.571992870000006,-55.517639159999995],[-22.655588149999996,-55.61063385],[-22.35691642999999,-55.79792786000001],[-22.086286540000003,-56.47332382],[-22.28216170999999,-56.88150024],[-22.090179440000004,-57.93711853],[-20.73268318,-57.87065125000001],[-20.17670441,-58.16637421],[-19.970012659999995,-57.85379028],[-19.399988170000004,-57.94996262000001],[-18.961826320000007,-57.67599106],[-18.17416763,-57.498325349999995],[-17.552490230000007,-57.7345047],[-17.271675110000007,-58.28077316],[-16.8771019,-58.38806152],[-16.299560549999995,-58.24121094000001],[-16.258270260000014,-60.15838242],[-15.093915939999997,-60.54291534],[-15.077214240000005,-60.251110080000004],[-14.645956039999998,-60.26429367],[-14.353987690000002,-60.45919418],[-13.77597046,-60.50328064],[-13.479380609999987,-61.08409119000001],[-13.489198680000005,-61.713172910000004],[-13.198767660000009,-62.12701797],[-13.000657079999991,-62.80302811],[-12.627034190000007,-63.19644547],[-12.46199608,-64.31633759],[-11.566278460000007,-65.4021759],[-10.895836829999999,-65.32178497],[-10.511427880000005,-65.44480896],[-9.761956209999992,-65.33843994],[-9.93130016000001,-66.64691162],[-10.306806559999995,-67.17373657],[-10.712068560000013,-68.04812622],[-11.01449203,-68.27124023],[-11.036348339999998,-68.78610229],[-10.951702119999993,-69.52963257],[-11.123970030000002,-70.09374237],[-11.009150509999996,-70.54859161],[-9.490088459999997,-70.4818573],[-10.079434390000007,-71.30231476],[-10.05358791000001,-72.18486023],[-9.520210270000005,-72.56293488],[-9.462198259999989,-73.22666931],[-9.032828330000001,-73.01537323],[-8.424410820000004,-73.57103729],[-7.5238051399999994,-73.98723602],[-7.340986250000002,-73.72338104],[-6.918583389999994,-73.7244873],[-6.629945279999998,-73.11997223],[-6.08917999000001,-73.21961975],[-5.74126625,-72.96444702],[-5.2745580699999985,-72.89189148],[-4.5940089199999985,-71.74841309],[-4.401605129999998,-70.92881775],[-4.251239779999997,-70.79470062],[-4.298166280000004,-69.89360046],[-1.5562893200000085,-69.4440918],[-1.122619270000003,-69.42045593],[-0.5499994200000062,-69.57698059],[-0.18513978999999187,-70.02060699],[0.5414299999999974,-70.01544952],[0.7061300299999936,-69.45238495],[0.602670010000006,-69.25244141],[0.9856699699999958,-69.21862793],[1.0890699600000038,-69.80454254],[1.7148000000000059,-69.81694031],[1.6924400299999978,-67.86849213],[2.037169930000005,-67.53775787],[1.7200000299999916,-67.25989532],[1.1301300499999973,-67.06495667],[1.2533600299999987,-66.87624359],[0.7244700199999987,-66.32572174],[0.7892699800000011,-65.548172],[1.0952700399999986,-65.35462952],[1.3287299900000027,-64.61102295],[1.4928599600000032,-64.19927216],[1.9163700300000022,-64.08303833],[2.2009100899999914,-63.36875916],[2.4110798799999986,-63.42282486],[2.4969899699999942,-64.26992035],[3.126780030000009,-64.40880585],[3.7972099800000145,-64.36844635],[4.056459900000001,-64.81600189],[4.148489950000006,-64.62866211],[4.020520210000003,-63.88832091999999],[3.770570039999988,-63.09320068],[4.0069699300000075,-62.804531100000005],[4.162119869999987,-62.0854187],[4.536459919999986,-60.96688842999999],[4.918089869999997,-60.60116196],[5.2002701799999995,-60.73358154],[5.244480130000004,-60.21362686],[5.014070030000003,-59.98090363],[4.574969769999998,-60.11097336],[4.423500059999996,-59.76737976],[3.9588000800000045,-59.5379982],[3.6064898999999953,-59.815380100000006],[2.7552199400000053,-59.97450638],[2.2496199599999946,-59.71848296999999],[1.7868900299999926,-59.64600372000001],[1.3176900100000024,-59.030838010000004],[1.2681100399999965,-58.540008539999995],[1.4639400199999943,-58.42945861999999],[1.507200000000005,-58.11341858],[1.6825900100000042,-57.660980220000006],[1.9485299599999906,-57.33580017],[1.8637100499999983,-56.78271103],[1.8995300499999943,-56.53934479],[1.8176800000000006,-55.995693210000006],[2.0219900599999887,-55.90560913],[2.2207899099999926,-56.07331848],[2.510359999999995,-55.973323820000005],[2.4214999700000077,-55.56970596],[2.52374005,-55.0975914],[2.311840059999988,-54.52473831],[2.1055500500000073,-54.08801651],[2.376699919999988,-53.77847672000001],[2.3349099199999994,-53.55482864],[2.053390030000004,-53.41840363],[2.1248600499999877,-52.93962097],[2.5046999500000076,-52.5563736],[3.241110090000005,-52.24932861],[4.15622996999999,-51.65776061999999],[4.20349979,-51.31713867],[3.6503999199999977,-51.06975555],[1.901559950000008,-50.50887299],[1.7364900100000022,-49.97404861],[1.0461900199999987,-49.94705582000001],[0.22295999999999844,-50.699249269999996],[-0.0784398999999992,-50.38815689],[-0.23546987999998636,-48.62057114],[-1.237828370000006,-48.58444595000001],[-0.5816295100000024,-47.82495116999999],[-0.94102001,-46.56654739],[-1.5517393400000092,-44.90565109],[-2.1377475300000026,-44.41757583999999],[-2.691308019999994,-44.581546780000004],[-2.383110049999998,-43.4187355],[-2.911997560000001,-41.47265244],[-2.8730566499999957,-39.97865677],[-3.7006666699999995,-38.50035095],[-4.820918079999992,-37.22322083],[-5.109383109999996,-36.45293427],[-5.149527069999999,-35.59780884],[-5.464956279999987,-35.23532486],[-6.7381763499999945,-34.8960228],[-7.343225000000006,-34.72998047],[-8.996402740000011,-35.12820053],[-9.649299619999988,-35.63695526],[-11.040747640000006,-37.04650879],[-12.171192169999998,-37.68358612],[-13.038107870000008,-38.42383575],[-13.057656289999994,-38.67383575],[-13.793360710000004,-38.95327377],[-15.667036060000008,-38.88223648],[-17.2083683,-39.16104507],[-17.867765430000002,-39.26731873],[-18.262266159999992,-39.58347321],[-19.599111559999994,-39.76077652],[-20.90449142,-40.77470779],[-21.93727303,-40.94475555],[-22.370693210000002,-41.75413132],[-22.970075609999995,-41.98828125],[-22.96765327,-43.07470322],[-23.351959230000002,-44.64778137],[-23.796838760000004,-45.35209274],[-24.088989260000016,-46.47205353],[-24.885166169999998,-47.64894104],[-25.877038959999986,-48.49539566],[-26.62366486000001,-48.64097214],[-27.17591667,-48.47472382],[-28.186122889999996,-48.66147995],[-28.674095150000003,-48.88840485],[-29.224464420000015,-49.58730316],[-30.9844532,-50.69681548999999],[-31.77767944,-51.57617569000001],[-32.24536133000001,-52.25605774],[-33.19655608999999,-52.71204376],[-33.76832199,-53.37360382000001],[-33.20197296,-53.65048599],[-32.727611540000005,-53.20953750999999],[-32.04724121,-53.78791809],[-31.494514470000006,-54.57244873],[-30.85386276,-55.60149384000001],[-30.88305283,-55.97318268],[-30.109670640000008,-56.97595596],[-30.21628761,-57.62506485]]]}},{latlng:[-33,-56],flag:"https://restcountries.eu/data/ury.svg",code:"UY",name:"Uruguay",geoJSON:{type:"Polygon",coordinates:[[[-30.21628761,-57.62506485],[-30.109670640000008,-56.97595596],[-30.88305283,-55.97318268],[-30.85386276,-55.60149384000001],[-31.494514470000006,-54.57244873],[-32.04724121,-53.78791809],[-32.727611540000005,-53.20953750999999],[-33.20197296,-53.65048599],[-33.76832199,-53.37360382000001],[-34.39680862000001,-53.80642319],[-34.95266342,-54.935844419999995],[-34.75265121,-55.67404556],[-34.85981369000001,-56.21525191999999],[-34.43043899999999,-57.13965607],[-34.46250916,-57.817821499999994],[-33.909397129999995,-58.42704773],[-33.263137820000004,-58.349597929999995],[-33.04058838000001,-58.13261795],[-32.04447937,-58.14241028000001],[-31.01654053,-57.87488556],[-30.21628761,-57.62506485]]]}},{latlng:[19,-72.41666666],flag:"https://restcountries.eu/data/hti.svg",code:"HT",name:"Haiti",geoJSON:{type:"Polygon",coordinates:[[[19.91567993,-73.18972015],[19.871509550000013,-72.57964325],[19.71443938999999,-71.71231079],[19.169849399999997,-71.62487793],[18.78543091000001,-71.70127869],[18.616899490000023,-71.94503021],[18.31665039,-71.68763733],[18.045000079999994,-71.70831299],[18.214950560000002,-72.37239075],[18.14559937,-72.84442139],[18.217910770000003,-73.45449066],[18.030979160000005,-73.92240906],[18.34254074000001,-74.45797729],[18.664899829999985,-74.36982727],[18.526060099999984,-73.4495163],[18.445789339999997,-72.69483185],[18.66843033,-72.33478546],[19.10161972000001,-72.79159546],[19.483600619999997,-72.7840271],[19.6395607,-73.41492462],[19.91567993,-73.18972015]]]}},{latlng:[19,-70.66666666],flag:"https://restcountries.eu/data/dom.svg",code:"DO",name:"Dominican Republic",geoJSON:{type:"Polygon",coordinates:[[[19.71443938999999,-71.71231079],[19.884910579999996,-71.58725739],[19.880289080000004,-70.80670166],[19.622890469999994,-70.21434021],[19.648000720000002,-69.95079041],[19.29327011000002,-69.76921082],[19.313219070000002,-69.22209167],[19.01519011999999,-69.2543335],[18.979080199999988,-68.80935669],[18.61220932,-68.3179245],[18.205139159999995,-68.68933105],[18.42263985000001,-69.1648941],[18.380710599999997,-69.62392426],[18.428300860000007,-69.95283508],[18.245899199999997,-70.13323975],[18.184289930000016,-70.5170517],[18.426900860000007,-70.66920471],[18.283340449999987,-70.99993134],[17.598579410000003,-71.40019226],[17.75757979999999,-71.65765381],[18.045000079999994,-71.70831299],[18.31665039,-71.68763733],[18.616899490000023,-71.94503021],[18.78543091000001,-71.70127869],[19.169849399999997,-71.62487793],[19.71443938999999,-71.71231079]]]}},{latlng:[35,33],flag:"https://restcountries.eu/data/cyp.svg",code:"CY",name:"Cyprus",geoJSON:{type:"Polygon",coordinates:[[[34.97808838000001,34.00490952],[35.057350160000006,33.97407532],[35.057350160000006,33.46287918],[35.171924589999996,33.24000168],[35.06999969000002,32.81499863],[35.13824080999999,32.70884705],[35.10322189000001,32.25666046],[34.701641080000016,32.49029922],[34.5718689,32.97982025],[34.97808838000001,34.00490952]],[[35.386711119999994,32.94696045],[35.14548873999999,32.80244827],[35.13824080999999,32.70884705],[35.06999969000002,32.81499863],[35.171924589999996,33.24000168],[35.057350160000006,33.46287918],[35.057350160000006,33.97407532],[35.245769499999994,33.90077972],[35.67160034000001,34.57646179],[35.37321091000001,33.66719818],[35.386711119999994,32.94696045]]]}},{latlng:[-5,120],flag:"https://restcountries.eu/data/idn.svg",code:"ID",name:"Indonesia",geoJSON:{type:"Polygon",coordinates:[[[2.174599889999995,127.93237304999998],[1.6285400400000076,128.00415039],[1.540820000000004,128.59454346],[1.1324000399999836,128.68826294],[0.2584899999999927,128.63595581],[0.35644000999999226,128.12013245],[-0.252069890000009,127.96800995],[-0.779999489999993,128.38000488],[-0.899999259999993,128.1000061],[-0.2666098199999948,127.6964798],[1.011700030000002,127.39952087],[1.8107000599999898,127.60051727],[2.174599889999995,127.93237304999998]],[[-1.084848759999997,104.36997223],[-1.782389280000014,104.53946685999999],[-2.340419529999996,104.88793945],[-2.4288685299999897,105.62207794],[-3.061800000000006,106.10856628],[-4.3055491399999966,105.85745238999999],[-5.852365019999982,105.81768036],[-5.873310090000004,104.71038818],[-5.037300109999995,103.86824799],[-4.2202663399999985,102.58425903],[-3.6141571999999997,102.15614319],[-2.799766780000001,101.39909362999998],[-2.0502572099999887,100.90251159999998],[-0.6503391899999906,100.14196777],[0.1831200000000102,99.26373291],[1.0428700399999902,98.96997833],[1.8235199500000023,98.60134124999999],[2.453200099999992,97.69962310999999],[3.3087999800000087,97.17697144000002],[3.8688600100000046,96.42398834],[4.970779899999991,95.38091278],[5.47981977000001,95.29302216],[5.439509869999994,95.93685913000002],[5.246329779999998,97.48487091],[4.268370149999991,98.36917877],[3.5903499099999996,99.14254761],[3.1743400099999866,99.69403076],[2.0993900299999986,100.64141083],[2.0836999400000034,101.65801239],[1.3987000000000016,102.49825287000002],[0.5613599999999865,103.07682037],[0.1045699999999853,103.83840179],[-0.7119697300000006,103.43768310999998],[-1.0592096999999974,104.01080322],[-1.084848759999997,104.36997223]],[[-6.42200708,108.48686981],[-6.777678969999997,108.62345885999999],[-6.877336979999995,110.53919983],[-6.465197090000011,110.75955963],[-6.946016309999998,112.6147995],[-7.594187260000004,112.97879028],[-7.776537900000002,114.47897338999998],[-8.370818139999994,115.70555878000002],[-8.751806259999995,114.56452178999999],[-8.348940850000004,113.46472168],[-8.376195910000007,112.55967712],[-8.302118300000002,111.52204894999998],[-8.122598649999995,110.58612061],[-7.740650179999996,109.42765808],[-7.641608239999992,108.69364166],[-7.766670230000006,108.27778625],[-7.354887959999986,106.45413208],[-6.924874310000001,106.28063202],[-6.851415160000008,105.3655014],[-5.895919800000006,106.05162048],[-5.9549779899999935,107.2649765],[-6.345778940000008,108.07209777999998],[-6.42200708,108.48686981]],[[-8.362366679999989,118.26061248999999],[-8.280706409999985,118.87848662999998],[-8.705821990000004,119.12651825],[-8.90661240000001,117.97039795],[-9.040886879999993,117.27776337],[-9.032906530000012,116.74015045],[-8.457140920000006,117.08376312],[-8.449290280000005,117.63207245],[-8.095680240000009,117.89998627],[-8.362366679999989,118.26061248999999]],[[-8.536756520000004,121.34169006],[-8.460614200000002,122.00740814],[-8.094242100000008,122.90351868],[-8.649796489999998,122.75701140999999],[-8.933670040000004,121.25449371],[-8.810440060000003,119.92442322000001],[-8.444870000000003,119.92092133000001],[-8.236972809999997,120.71510315],[-8.536756520000004,121.34169006]],[[-10.258664130000003,120.29501343],[-9.557976720000003,118.96781158],[-9.361306190000002,119.90029906999999],[-9.665938380000005,120.42575835999999],[-9.969666479999994,120.77554321],[-10.23957634,120.71562195],[-10.258664130000003,120.29501343]],[[0.8751699900000124,122.92756653],[0.9170900000000138,124.07756042],[1.6432599999999895,125.06597137000001],[1.419839980000002,125.24049377],[0.4278700100000062,124.43702698],[0.23560998999999813,123.68554688],[0.4311599999999926,122.72309113],[0.38123000000000534,121.0567627],[0.23726000000000316,120.18305206000001],[-0.5196499800000065,120.04084777999998],[-1.4088985900000002,120.93592072000001],[-0.9559696300000029,121.47582244999998],[-0.6156594199999911,123.34056854000002],[-1.0762100199999995,123.25839996],[-0.9309292999999959,122.82267761],[-1.5168399800000036,122.38852692],[-1.9044799800000116,121.50830078000001],[-3.18603801999999,122.45461273],[-3.529498100000007,122.27188873000001],[-4.683670039999988,123.1709671],[-5.3405799899999815,123.16233063],[-5.634590149999984,122.62854767000002],[-5.282958030000003,122.23642731],[-4.464185240000011,122.71958923000001],[-4.851329800000013,121.73822784],[-4.574574470000008,121.48944855],[-4.188473219999997,121.61917114],[-3.6020879699999946,120.89820862],[-2.627648590000007,120.9723587],[-2.931619409999984,120.30544281],[-4.097548959999998,120.39006042],[-5.528214450000014,120.43068695],[-5.673388960000003,119.79653168],[-5.379859920000007,119.36686707],[-4.459423540000005,119.65364075000001],[-3.4944090799999987,119.4988327],[-3.487008089999991,119.07833862],[-2.8020091100000015,118.76779938],[-2.1471281100000037,119.18094635000001],[-1.353139760000004,119.32338715],[0.15428000999998795,119.82598114],[0.5664799800000007,120.03568268],[1.3092299700000067,120.88578033000002],[1.013929960000002,121.66678619],[0.8751699900000124,122.92756653]],[[-3.7909696100000025,126.87492371],[-3.6073670400000046,126.18380737],[-3.177258969999998,125.98906708],[-3.129338500000001,127.00067138999998],[-3.459066629999994,127.24916839999999],[-3.7909696100000025,126.87492371]],[[-2.8021476300000043,129.37101746],[-3.093749999999992,130.47137451],[-3.858489990000003,130.83479309],[-3.446310040000008,129.99055481],[-3.3626589799999977,129.15527344],[-3.428699019999988,128.59068298],[-3.393449540000011,127.89890289],[-2.8436386600000034,128.13587952],[-2.8021476300000043,129.37101746]],[[1.3381300000000034,109.83022307999998],[0.7731199900000042,110.51405334],[0.9764999699999959,111.15914154],[0.9044299699999958,111.79753113],[1.4101200100000126,112.38028717000002],[1.4977899799999954,112.85978699],[1.217550039999999,113.80586243000002],[1.430680039999996,114.62135315],[2.82149004999999,115.13404083000002],[3.1692299799999875,115.51905823],[4.30657005000001,115.86547088999998],[4.306109910000009,117.01522063999998],[4.137549879999991,117.88200378],[3.2344200599999926,117.31323242],[2.2876899200000027,118.04827881000001],[1.8276300400000103,117.87564087000001],[0.9022200099999892,118.99674225],[0.7842400100000069,117.81182098],[0.10246000000000086,117.47834778000001],[-0.8037199999999904,117.52166747999999],[-1.4876388299999874,116.56006622],[-2.483530040000004,116.53378296],[-4.012729170000006,116.14811707],[-3.6570172299999926,116.00086212000001],[-4.106953140000001,114.86480713],[-3.495697979999996,114.46865845],[-3.439149619999998,113.75566864],[-3.1187675000000086,113.25697327],[-3.478376629999987,112.06813811999999],[-2.994427199999999,111.70327759],[-3.049427989999984,111.04827881],[-2.934040069999992,110.22383881],[-1.5928785800000065,110.07092285],[-1.3148788200000059,109.57199097000002],[-0.4594996600000067,109.09191131999998],[0.41536999000000485,108.95262146],[1.3419400500000038,109.06910706],[2.0064699599999964,109.66326141],[1.3381300000000034,109.83022307999998]],[[-5.769993310000009,141.00419617],[-9.157068249999995,141.01057434],[-8.297160149999995,140.14341736],[-8.096048360000001,139.12773132],[-8.38092041000001,138.88146973],[-8.411664009999996,137.61448669],[-7.597887990000011,138.03910828],[-7.320245270000001,138.66862488],[-6.232848169999995,138.40791321],[-5.393360140000001,137.92784119],[-4.546556949999997,135.98924255],[-4.46295881000001,135.1645813],[-3.5388786799999954,133.66285706],[-4.024816989999998,133.36767578],[-4.112954140000002,132.98396301],[-3.746259450000003,132.75694275],[-3.311809059999994,132.7538147],[-2.820557120000017,131.98977661],[-2.460399150000009,133.06686401],[-2.479856729999996,133.7800293],[-2.2145371400000053,133.69621277],[-2.2125082000000043,132.23240662],[-1.617139580000009,131.83622742],[-1.4325398199999992,130.94285583],[-0.9376996200000053,130.51956177],[-0.6954496500000007,131.86749268],[-0.36953995000000395,132.38012695],[-0.7802291500000014,133.98554993],[-1.1518786000000005,134.1434021],[-2.769167659999988,134.42260742],[-3.367737530000001,135.45759583],[-2.307016610000011,136.29330444],[-1.703499559999985,137.44076538],[-1.7026592499999957,138.32972717],[-2.0513091100000027,139.18496704],[-2.4090280500000003,139.92666626],[-2.60015749999999,141.00021362],[-5.769993310000009,141.00419617]],[[-6.8952598599999995,134.21014404],[-6.214389800000005,134.72460938],[-5.737584110000006,134.727005],[-5.445054050000001,134.49960327],[-5.783074379999991,134.29029846],[-6.142459869999986,134.11279297],[-6.8952598599999995,134.21014404]],[[-8.892767910000007,124.96868895999998],[-9.089992519999992,125.06999969],[-9.39316082,125.08853912000001],[-10.183835980000003,124.39399719000001],[-10.392136570000003,123.66903687],[-9.650464060000006,123.68347930999998],[-9.21862602,124.20195007000001],[-8.892767910000007,124.96868895999998]]]}},{latlng:[27,30],flag:"https://restcountries.eu/data/egy.svg",code:"EG",name:"Egypt",geoJSON:{type:"Polygon",coordinates:[[[29.501329420000015,34.92259979],[29.09942055000001,34.64173889],[28.343990329999997,34.42655182],[27.823299410000004,34.1545105],[27.648700710000014,33.92136002],[27.97135924999999,33.58811188],[28.417650219999995,33.13676071],[29.85107994,32.42322922],[29.760429380000026,32.32046127],[28.705230709999995,32.73482132],[27.699890140000008,33.3487587],[26.14226913,34.10454941],[25.598560329999994,34.47386932],[25.03375052999999,34.79507065],[23.926710130000014,35.69240952],[23.75237083000001,35.49372101],[23.10243987999999,35.5259819],[22.204849240000005,36.69068909],[22.000000000000007,36.86623001],[22.000000000000007,32.90000153],[22.000000000000007,29.020000460000002],[22.000000000000007,24.999999999999996],[25.682500840000007,24.999999999999996],[29.238655090000016,24.999999999999996],[30.044189450000005,24.700069429999996],[30.661600109999984,24.95762062],[31.089290619999993,24.8028698],[31.569150919999988,25.16481972],[31.585680010000008,26.49533081],[31.321260449999997,27.45762062],[31.02577019000002,28.45047951],[30.87005043000001,28.913530350000002],[31.18685913,29.683420179999995],[31.473400120000022,30.09502983],[31.555860519999992,30.97693062],[31.42959976,31.68795967],[30.933599469999997,31.96040916],[31.260339739999996,32.19247055],[31.024070740000006,32.99391937],[30.967460629999987,33.77339935],[31.21936035,34.26544189],[29.501329420000015,34.92259979]]]}},{latlng:[25,45],flag:"https://restcountries.eu/data/sau.svg",code:"SA",name:"Saudi Arabia",geoJSON:{type:"Polygon",coordinates:[[[16.347900390000003,42.77933884000001],[16.66690063000001,43.21839142],[17.08843994,43.11579132],[17.57999039000001,43.38079833999999],[17.319990159999993,43.791519169999994],[17.410360340000008,44.06259918],[17.433330540000004,45.21667099],[17.33333015,45.40000153],[17.233329770000005,46.3666687],[17.28333092,46.75],[16.950000759999995,47],[17.11667061,47.46667099],[18.166669849999995,48.18333054],[18.616670610000007,49.1166687],[18.99999999999999,52],[20.000000000000004,55],[22.000000000000007,55.66666031],[22.708330149999995,55.20832825],[22.496948240000005,55.00683211999999],[23.001146319999993,52.00071716],[24.014225010000004,51.61772156],[24.42000007999999,51.57352066],[24.627380369999997,51.38959122000001],[24.556339260000005,51.11243057],[24.754749300000007,50.81011963],[24.999889369999998,50.66056824000001],[25.327819820000002,50.52737045],[25.60806084000001,50.23983002],[25.94397925999999,50.11330032],[26.277030940000017,50.21295166],[26.689659120000005,50.152431490000005],[27.109989170000013,49.47092819],[27.461229320000005,49.2995491],[27.68964005000001,48.80759811],[28.55203056,48.41611862],[28.526050570000013,47.708820339999995],[29.00251961000002,47.45980835],[29.09901999999999,46.56871033],[29.178880690000007,44.709499359999995],[31.190000529999992,41.88999939],[31.889999389999993,40.40000153],[32.160999299999986,39.19549941999999],[32.01020813000001,39.00485992],[31.508409500000006,37.00217819],[30.508499150000002,37.998828890000006],[30.338670729999997,37.66815186],[30.003770830000004,37.5036087],[29.865289689999987,36.7405014],[29.50525093000001,36.5012207],[29.19750977000001,36.06895828],[29.35656929,34.9560318],[28.95747948000001,34.8321991],[28.607429500000002,34.78778839],[28.05853081,34.63235092],[28.063360209999978,35.1301918],[27.37652969000001,35.64020157],[26.570129389999998,36.24913025],[25.82621955999999,36.63959885],[25.602949139999993,36.93159866],[25.084539410000012,37.20948029],[24.85847092000001,37.15481949],[24.28549004,37.48363876],[24.07868003999999,38.02383041],[23.688459400000006,38.49274826],[22.579639429999993,39.06632996],[21.986869809999995,39.02368164],[21.291900630000015,39.13940047999999],[20.33885001999999,39.80167007],[20.174629210000003,40.24766159],[19.486480710000002,40.93933105],[18.671600339999983,41.22140884000001],[17.833049770000006,41.75437927],[17.47472954,42.27087020999999],[17.07582092,42.34798813],[16.774620059999993,42.64955902],[16.347900390000003,42.77933884000001]]]}},{latlng:[25,17],flag:"https://restcountries.eu/data/lby.svg",code:"LY",name:"Libya",geoJSON:{type:"Polygon",coordinates:[[[22.862949369999992,14.851300239999999],[22.491279599999995,14.14385033],[23.04051017999999,13.58145046],[23.471660610000008,11.9995203],[24.097900390000003,11.5606699],[24.56251907000001,10.771369929999999],[24.379310609999997,10.30385971],[24.93696022,9.94824028],[25.365449909999995,9.91069031],[26.094310760000003,9.31941986],[26.512199400000014,9.716290470000002],[27.14094925,9.62903976],[27.688259120000005,9.7560997],[28.14418983,9.68387985],[28.95999908000001,9.85999966],[29.424629210000028,9.80566025],[30.30755042999998,9.4821701],[30.539319989999996,9.9700098],[30.961839679999997,10.05659962],[31.376060489999997,9.950209619999999],[31.76141929999999,10.63687992],[32.08179854999999,10.9448204],[32.368900300000014,11.43225956],[33.13700104,11.48880005],[32.792781829999996,12.66331005],[32.87881851000001,13.08325958],[32.71195984,13.918680190000002],[32.2650795,15.245630259999999],[31.376260760000008,15.71393967],[31.18218039999998,16.61161995],[30.763570790000003,18.02108955],[30.266389850000003,19.08641052],[30.52581978000001,19.574039459999998],[30.985759739999995,20.053350450000003],[31.751789090000013,19.82032967],[32.238201139999994,20.133970259999998],[32.70679855,20.8545208],[32.843200679999995,21.542980189999998],[32.638580319999996,22.89575958],[32.19149017000001,23.236799240000003],[32.18725967000001,23.609130860000004],[32.01667023000001,23.927499769999997],[31.899360659999996,24.92114067],[31.569150919999988,25.16481972],[31.089290619999993,24.8028698],[30.661600109999984,24.95762062],[30.044189450000005,24.700069429999996],[29.238655090000016,24.999999999999996],[25.682500840000007,24.999999999999996],[22.000000000000007,24.999999999999996],[20.003040310000003,24.999999999999996],[20.000000000000004,23.85000038],[19.580469129999994,23.83765984],[21.495090479999998,19.84926033],[23.40971946999998,15.86085033],[22.862949369999992,14.851300239999999]]]}},{latlng:[15,48],flag:"https://restcountries.eu/data/yem.svg",code:"YE",name:"Yemen",geoJSON:{type:"Polygon",coordinates:[[[16.651060099999984,53.10858154],[16.38241959,52.38518906000001],[15.938440319999998,52.19171143],[15.597419739999996,52.16815947999999],[15.175239559999996,51.17248916999999],[14.708760259999998,49.57455062999999],[14.003199580000008,48.67921066000001],[13.94808960000001,48.238948820000005],[14.007240300000015,47.93891906999999],[13.592220310000007,47.35446167],[13.399700159999995,46.71709061],[13.347769740000006,45.87760924999999],[13.290949819999984,45.62506866],[13.026920319999997,45.40642929],[12.95394039,45.14437103],[12.699600220000006,44.98950958],[12.721650119999994,44.49459839],[12.5859499,44.17509842],[12.636790279999998,43.48299026],[13.22095966000001,43.22288895],[13.767589569999995,43.25146103],[14.062640189999998,43.08795929],[14.802240369999993,42.89226151],[15.213319780000008,42.60485077],[15.261969570000007,42.80500031],[15.718870159999991,42.70246124],[15.91174984000001,42.82363891999999],[16.347900390000003,42.77933884000001],[16.66690063000001,43.21839142],[17.08843994,43.11579132],[17.57999039000001,43.38079833999999],[17.319990159999993,43.791519169999994],[17.410360340000008,44.06259918],[17.433330540000004,45.21667099],[17.33333015,45.40000153],[17.233329770000005,46.3666687],[17.28333092,46.75],[16.950000759999995,47],[17.11667061,47.46667099],[18.166669849999995,48.18333054],[18.616670610000007,49.1166687],[18.99999999999999,52],[17.349729540000006,52.78218079],[16.651060099999984,53.10858154]]]}},{latlng:[36,138],flag:"https://restcountries.eu/data/jpn.svg",code:"JP",name:"Japan",geoJSON:{type:"Polygon",coordinates:[[[33.46363831,132.37120056],[34.06031036000001,132.92437744],[33.94462966999998,133.4929657],[34.36492157000002,133.90408325],[34.14921950999999,134.63844299],[33.80633926,134.7664032],[33.201198579999996,134.20343018],[33.52199173,133.79295349],[33.28958130000001,133.2802887],[32.704570770000004,133.01486206],[32.98939133,132.36308289],[33.46363831,132.37120056]],[[43.96089935,144.61346436],[44.384761809999986,145.3208313],[43.26208878000001,145.5431366],[42.98834991000001,144.05963135],[41.99522018,143.18388367],[42.678791049999994,141.61149597],[41.58459091000002,141.06730652],[41.56954955999999,139.95507813],[42.56375122000001,139.81750488],[43.33325958000001,140.31214905],[43.388839719999986,141.38053894],[44.772121430000006,141.67195129],[45.55147934000001,141.96765137],[44.510379790000016,143.1428833],[44.17409133999999,143.91015625],[43.96089935,144.61346436]],[[39.180858609999994,141.8846283],[38.17401122999998,140.95953369],[37.14205932999998,140.97637939],[36.343971250000024,140.59977722],[35.84288025000002,140.77406311],[35.13813019000001,140.25325012],[34.66759109,138.97549438],[34.60628127999999,137.21760559],[33.464801789999996,135.79299927],[33.849079130000014,135.12098694],[34.59656143,135.07943726],[34.37593842,133.34028625],[33.90493011000002,132.15678406],[33.88576126,130.9861145],[33.150001530000004,132],[31.450349810000013,131.33282471],[31.02956963,130.68629456],[31.418239590000006,130.2024231],[32.31946182,130.44770813],[32.61032104000001,129.81469727],[33.296058649999985,129.40843201],[33.60414123999998,130.35391235],[34.23273848999999,130.87846375],[34.749721530000016,131.88423157],[35.43339919999998,132.61767578],[35.73160933999999,134.60830688],[35.52714157,135.67750549],[37.30498886,136.72383118],[36.827388760000005,137.39064026],[37.827480320000035,138.8576355],[38.21596908999998,139.42640686],[39.438800810000004,140.05477905],[40.563301090000024,139.88334656],[41.195018769999976,140.30578613],[41.37857056000002,141.36897278],[39.99161910999999,141.91426086],[39.180858609999994,141.8846283]]]}},{latlng:[15,39],flag:"https://restcountries.eu/data/eri.svg",code:"ER",name:"Eritrea",geoJSON:{type:"Polygon",coordinates:[[[12.542229649999992,42.35155869],[12.865819929999999,42.00975037],[13.452090260000013,41.59856033],[13.773329729999999,41.15520096],[14.118639950000004,40.89659882],[14.519590379999997,40.02624893],[14.531550409999994,39.3406105],[14.740639689999997,39.09939957],[14.505470279999994,38.51295089999999],[14.959429740000006,37.90607071],[14.213100429999988,37.59376907],[14.422109599999986,36.42950821],[14.822489739999991,36.3232193],[16.291860580000016,36.75389099],[16.956550599999986,36.85253143],[17.26313972,37.16746902],[17.427539830000004,37.90399933],[17.998300549999996,38.41007996],[16.840610500000004,38.9906311],[15.922730449999998,39.26612091],[15.435640340000003,39.81428146],[14.491069789999994,41.17927933],[13.921030040000005,41.73492813],[13.343979840000005,42.27684021],[13.000430109999993,42.58956146],[12.69964981,43.08123016],[12.455409999999993,42.779621119999995],[12.542229649999992,42.35155869]]]}},{latlng:[11.5,43],flag:"https://restcountries.eu/data/dji.svg",code:"DJ",name:"Djibouti",geoJSON:{type:"Polygon",coordinates:[[[12.69964981,43.08123016],[12.390150070000002,43.31785965],[11.974940300000004,43.28638077],[11.735650060000001,42.7158699],[11.46205044000001,43.14527893],[10.926870350000002,42.77682877],[11.105110169999998,42.55493164],[11.034199709999994,42.31414032],[11.050909999999998,41.755569460000004],[11.355110170000007,41.73958969000001],[11.631199839999997,41.66175842],[12.100000379999999,42],[12.542229649999992,42.35155869],[12.455409999999993,42.779621119999995],[12.69964981,43.08123016]]]}},{latlng:[49.75,15.5],flag:"https://restcountries.eu/data/cze.svg",code:"CZ",name:"Czech Republic",geoJSON:{type:"Polygon",coordinates:[[[48.596969599999994,16.96030045],[48.78580855999999,16.4993],[48.73389815999998,16.02964973],[49.03908157000001,15.25341034],[48.96438979999999,14.901439669999998],[48.555301670000006,14.33887959],[48.87717056,13.59593964],[49.307048799999976,13.03131008],[49.54740143000003,12.52105045],[49.96912003000001,12.415189740000002],[50.26631926999999,12.24009991],[50.484081269999976,12.96683979],[50.733219150000004,13.33810043],[50.9269104,14.056229590000001],[51.11727142,14.30700016],[51.00233840999998,14.570750240000002],[51.106681820000006,15.01696968],[50.78472899999999,15.49094963],[50.69773865,16.23863029],[50.42263031,16.17624092],[50.2157402,16.71949005],[50.473991389999995,16.86874008],[50.362129210000006,17.55456924],[50.04904175,17.64942932],[49.988651280000006,18.39289093],[49.496231079999994,18.85313988],[49.49499893000001,18.55500031],[49.31499863,18.39999962],[49.27149963000001,18.1704998],[49.04399871999998,18.10499954],[48.99649810999999,17.91349983],[48.90349959999999,17.8864994],[48.79999923999999,17.54500008],[48.81700133999999,17.10199928],[48.596969599999994,16.96030045]]]}},{latlng:[48.66666666,19.5],flag:"https://restcountries.eu/data/svk.svg",code:"SK",name:"Slovakia",geoJSON:{type:"Polygon",coordinates:[[[49.496231079999994,18.85313988],[49.435859679999986,18.90957069],[49.57157134999999,19.32069969],[49.21712875000002,19.82504082],[49.43146132999998,20.41583061],[49.32878876000001,20.88796043],[49.47008895999999,21.607799529999998],[49.08573914,22.558160780000005],[48.82542038,22.28082085],[48.42224884000001,22.08562088],[48.31996918000001,21.87223053],[48.62385177999998,20.80130005],[48.562850949999984,20.47356987],[48.32757186999998,20.239040369999998],[48.20267867999998,19.76944923],[48.26663971,19.661359790000002],[48.111389159999995,19.17436028],[48.08174896,18.77704048],[47.88096999999999,18.69651031],[47.75843048000003,17.85714912],[47.86748123000002,17.48848915],[48.123500820000004,16.9796505],[48.47000122,16.87999916],[48.596969599999994,16.96030045],[48.81700133999999,17.10199928],[48.79999923999999,17.54500008],[48.90349959999999,17.8864994],[48.99649810999999,17.91349983],[49.04399871999998,18.10499954],[49.27149963000001,18.1704998],[49.31499863,18.39999962],[49.49499893000001,18.55500031],[49.496231079999994,18.85313988]]]}},{latlng:[64,26],flag:"https://restcountries.eu/data/fin.svg",code:"FI",name:"Finland",geoJSON:{type:"Polygon",coordinates:[[[69.06478881999998,28.591939930000002],[68.36463165000002,28.44594955],[67.69828796,29.97743034],[66.94428253000002,29.05459976],[65.80597687,30.21764946],[64.94866943000001,29.544439320000002],[64.20445251000001,30.44470024],[63.552818300000006,30.035869599999998],[62.8676796,31.51610947],[62.357688900000014,31.14001083],[61.7800293,30.21110916],[60.503520970000025,28.069999690000003],[60.423961640000016,26.25519943],[60.05731964,24.4966507],[59.84635925000002,22.86971092],[60.39192963,22.290779110000003],[60.72018051,21.322229390000004],[61.70531844999998,21.54486084],[62.60739136,21.05919075],[63.18973922999998,21.53602028],[63.81782150000002,22.44275093],[64.90236664,24.730529790000002],[65.11144257,25.39809036],[65.5343399,25.29402924],[66.00691223,23.9033699],[66.39607239,23.56587029],[67.93601226999999,23.53948975],[68.61685181000003,21.978509899999995],[69.10624695000003,20.645589829999995],[69.37046050999999,21.2449398],[68.84174347,22.356229780000003],[68.89124298000003,23.66205978],[68.64956664999998,24.735679629999996],[69.09211730999999,25.689220430000002],[69.82527923999999,26.17959976],[70.16417693999999,27.73229027],[69.76648712,29.01556015],[69.06478881999998,28.591939930000002]]]}},{latlng:[46.11666666,14.81666666],flag:"https://restcountries.eu/data/svn.svg",code:"SI",name:"Slovenia",geoJSON:{type:"Polygon",coordinates:[[[46.50928879000001,13.80648041],[46.431819920000024,14.63249016],[46.65869903999997,15.1370697],[46.68360137999999,16.01166916],[46.85237885000001,16.20228004],[46.84130858999998,16.37047958],[46.50374984999998,16.56483078],[46.23814011000002,15.76871967],[45.83417130000002,15.6715498],[45.731800080000006,15.323949809999998],[45.45233917000002,15.32769012],[45.471710209999976,14.93523979],[45.63496016999999,14.59512043],[45.46617889000001,14.41197968],[45.50032042999999,13.71506023],[45.59103012,13.937640189999998],[46.01678848000001,13.698089599999998],[46.50928879000001,13.80648041]]]}},{latlng:[4.5,114.66666666],flag:"https://restcountries.eu/data/brn.svg",code:"BN",name:"Brunei Darussalam",geoJSON:{type:"Polygon",coordinates:[[[4.52585982999999,114.20401763999999],[4.900000099999998,114.59999847],[5.447720049999996,115.45072174],[4.955230240000003,115.40567780000002],[4.316649910000006,115.34745789],[4.348320010000002,114.86956023999998],[4.007639879999999,114.65956879],[4.52585982999999,114.20401763999999]]]}},{latlng:[2.5,112.5],flag:"https://restcountries.eu/data/mys.svg",code:"MY",name:"Malaysia",geoJSON:{type:"Polygon",coordinates:[[[2.0064699599999964,109.66326141],[1.6637699599999904,110.39614105],[1.850630040000001,111.16887665],[2.697299959999991,111.37010956],[2.885890010000001,111.79689789],[3.102400060000003,112.99564362000001],[3.8935101000000087,113.71292876999999],[4.52585982999999,114.20401763999999],[4.007639879999999,114.65956879],[4.348320010000002,114.86956023999998],[4.316649910000006,115.34745789],[4.955230240000003,115.40567780000002],[5.447720049999996,115.45072174],[6.143199919999998,116.22075653000002],[6.924779889999992,116.72508240000002],[6.9280500399999925,117.12963867000002],[6.422170160000017,117.64335632000001],[5.987500189999998,117.68907928],[5.708700179999994,118.34770202999998],[5.407839779999993,119.18186951],[5.016139979999995,119.11071014],[4.966519830000003,118.43977356],[4.47820997,118.61830901999998],[4.137549879999991,117.88200378],[4.306109910000009,117.01522063999998],[4.30657005000001,115.86547088999998],[3.1692299799999875,115.51905823],[2.82149004999999,115.13404083000002],[1.430680039999996,114.62135315],[1.217550039999999,113.80586243000002],[1.4977899799999954,112.85978699],[1.4101200100000126,112.38028717000002],[0.9044299699999958,111.79753113],[0.9764999699999959,111.15914154],[0.7731199900000042,110.51405334],[1.3381300000000034,109.83022307999998],[2.0064699599999964,109.66326141]],[[6.221630100000013,102.14118195],[6.128190039999998,102.37110901],[5.524489880000006,102.96172333000001],[4.855010030000002,103.38124084],[4.181590080000018,103.438591],[3.726700070000003,103.33213806000002],[3.3828599499999927,103.42942810000001],[2.7910099000000055,103.50247192],[2.5154499999999946,103.85466766],[1.6311500100000003,104.24796295],[1.2930400399999853,104.22882079999998],[1.2263300399999961,103.51966858],[1.9671200500000026,102.5736618],[2.760809899999993,101.39060974],[3.2702999100000127,101.27355957],[3.9391500900000103,100.6954422],[4.767280099999989,100.55741881999998],[5.3125,100.1967392],[6.0405597700000015,100.30628967],[6.464479920000001,100.08576202],[6.642829899999991,100.25959778000001],[6.204870220000001,101.0754776],[5.691380020000003,101.15421295],[5.8108000800000115,101.81430817],[6.221630100000013,102.14118195]]]}},{latlng:[13,122],flag:"https://restcountries.eu/data/phl.svg",code:"PH",name:"Philippines",geoJSON:{type:"Polygon",coordinates:[[[12.162699700000003,125.50257111],[11.046130179999997,125.78343201],[11.311470029999992,125.01188660000001],[10.975830079999987,125.03275299],[10.358730320000017,125.27751160000001],[10.134690280000006,124.80184937],[10.838009830000008,124.76013184000001],[10.889929770000007,124.45909119],[11.495380400000004,124.30249786],[11.415570259999994,124.89105225],[11.794190409999993,124.87803650000001],[12.557760239999979,124.26674651999998],[12.535730360000008,125.22714996],[12.162699700000003,125.50257111]],[[11.415849689999991,122.03835297],[11.891750340000007,121.88353729],[11.58220005,122.48383331000001],[11.583660129999993,123.12020874],[11.16592026000002,123.10083770999998],[10.741310119999996,122.63771057],[10.441020010000006,122.00260161999998],[10.90567970000002,121.96736145],[11.415849689999991,122.03835297]],[[18.224880220000006,122.33698273000002],[17.81027984999999,122.17430877999999],[17.09350967,122.51569366],[16.262449259999997,122.25228882],[15.931030270000013,121.66277313],[15.124810219999997,121.50504303],[14.328379629999999,121.72882843],[14.21821022,122.25894165000001],[14.336549759999995,122.70126343],[13.782130240000008,123.95025635],[13.237779619999989,123.85514068999998],[12.997529979999994,124.18126677999999],[12.536680219999996,124.07739258],[13.027529720000004,123.29805756],[13.552920340000002,122.92867279],[13.185830119999993,122.6713562],[13.784480090000002,122.03468323],[13.636699679999987,121.12641907000001],[13.857660289999998,120.62863922],[14.27099991000001,120.67939758],[14.525400159999995,120.99179077000001],[14.756679529999994,120.69333649],[14.396280290000005,120.56411743],[14.970879550000001,120.07045746000001],[15.406339649999996,119.92092133000001],[16.36368942,119.88374329000001],[16.03462981999999,120.28648376],[17.599079130000003,120.39006042],[18.505239490000005,120.71589661000002],[18.504060750000015,121.32128906],[18.21855927000001,121.93762207],[18.478950499999993,122.24604033999998],[18.224880220000006,122.33698273000002]],[[9.31637001000001,118.50457001],[8.367509839999986,117.17429351999999],[9.06688976,117.6644516],[9.684490199999985,118.38688660000001],[10.376290319999985,118.98735046000002],[11.369660380000012,119.5114975],[10.554300309999999,119.68968201],[10.003660199999992,119.02945708999998],[9.31637001000001,118.50457001]],[[8.414710040000013,126.37684631],[7.750349999999998,126.47855376999999],[7.189390179999997,126.53743744],[6.274290079999991,126.19676208],[7.293700220000014,125.83144379],[6.786479950000011,125.36385345000001],[6.049670220000008,125.68315887],[5.581009859999993,125.39650725999999],[6.1613497700000135,124.21977997],[6.885129930000009,123.93874359],[7.360610010000002,124.2436676],[7.8335399600000075,123.61019897],[7.418879989999988,123.2960968],[7.45737982000001,122.8254776],[6.899419780000002,122.08551025],[7.192110060000002,121.91992187999999],[8.034950259999992,122.31233978],[8.316229820000014,122.94242096],[8.693019870000008,123.48764801000002],[8.240309719999997,123.84117126],[8.51414967,124.60147094999999],[8.96039963,124.7645874],[8.986989969999998,125.4713974],[9.760330199999993,125.41210174999999],[9.286080360000003,126.22271729],[8.782480239999998,126.30660248],[8.414710040000013,126.37684631]],[[9.981040000000005,122.58609009],[10.261159899999994,122.83711243],[10.881859780000001,122.94741058],[10.940629959999999,123.49887847999999],[10.267379759999994,123.33776855],[11.232729910000003,124.07797241000002],[10.278779979999992,123.98245238999999],[9.950079919999995,123.62315369],[9.31826973,123.30991364],[9.022199630000014,122.99588013],[9.713350300000014,122.38007355],[9.981040000000005,122.58609009]],[[12.704509740000006,120.83393096999998],[13.46640015,120.32343291999999],[13.42969036,121.18010712],[13.06958961,121.5273819],[12.205570220000004,121.26222228999998],[12.704509740000006,120.83393096999998]]]}},{latlng:[60,100],flag:"https://restcountries.eu/data/rus.svg",code:"RU",name:"Россия",geoJSON:{type:"Polygon",coordinates:[[[53.704578399999995,142.9145813],[52.74077987999999,143.26087952],[51.75666046000002,143.23527527],[50.74763107000001,143.64802551],[48.97639083999999,144.65414429],[49.30654144,143.17396545],[47.86156082000001,142.55865479],[46.83671188,143.53349304],[46.13790130999999,143.50531006],[46.740760800000004,142.74768066],[45.966770169999975,142.09205627],[46.80593872000001,141.90692139],[47.78012085,142.01841736],[48.85916901,141.90446472],[49.615169529999996,142.13580322],[50.95233153999999,142.17999268],[51.93542862000002,141.59408569],[53.301959990000014,141.68255615],[53.76213837,142.60690308],[54.225460049999995,142.20973206],[54.36587905999998,142.65480042],[53.704578399999995,142.9145813]],[[73.74980927000001,53.50828934],[74.62747191999999,55.90245819],[75.08142090000004,55.63195038],[75.60939788999997,57.86862183],[76.25186157000002,61.170059200000004],[76.43904113999999,64.49838257],[76.80977631,66.21095276],[76.93969727000001,68.15705109],[76.54480742999999,68.85221863],[76.23364258,68.18054962],[75.73773956,64.63732147],[75.26087189000002,61.58351135],[74.30906677,58.47705078],[73.33303833,56.98680114999999],[72.37126922999998,55.41934967],[71.54060364000001,55.62282181],[70.72046661000002,57.53567885999999],[70.63275146000001,56.94501113999999],[70.76264191000001,53.67734908999999],[71.20668030000002,53.41201019],[71.47476958999998,51.60189056],[72.01489257999998,51.45576096],[72.22946929999999,52.47827911],[72.77474976000003,52.444149020000005],[73.62754059000001,54.42760849],[73.74980927000001,53.50828934]],[[54.426101679999974,19.66064072],[54.86616898,19.88850021],[55.19047927999999,21.26844025],[55.015308379999986,22.315710070000005],[54.8565712,22.75774956],[54.58274078,22.65102005],[54.32754898000002,22.73109055],[54.31253051999999,20.89224052],[54.426101679999974,19.66064072]],[[80.58984375000003,44.84695816],[80.55941009999998,47.07244109999999],[80.24726105,46.50284958],[80.01017760999999,47.58610915999999],[80.17546843999999,48.75492859],[80.33956909,48.894420620000005],[80.41542816000002,49.79365921],[80.54727173000002,51.13619995],[80.69972991999998,51.52294922],[80.91887665,50.03974915],[80.75399017000001,49.09720993],[80.51454926,48.52281952],[80.78401947,48.31848907],[80.77192688000001,46.79914093],[80.58984375000003,44.84695816]],[[81.02459716999999,93.77765656],[81.25039672999999,95.94089507999999],[80.74697875999998,97.88385009999999],[79.78013611,100.18665314],[78.88094330000004,99.93975830000001],[78.75620270000002,97.7579422],[79.04474640000002,94.97258759],[79.42649840999998,93.31288147],[80.14379120000002,92.54540253],[80.34146118,91.18106842],[81.02459716999999,93.77765656]],[[79.28128815000001,102.83781432999999],[78.71334076,105.37242889],[78.30689239999995,105.07546997],[77.92099762,99.43814087],[79.23399353000002,101.26490020999998],[79.34641266,102.08634948999999],[79.28128815000001,102.83781432999999]],[[76.1367569,138.83106995],[76.09288787999998,141.47161865],[75.56262207000003,145.08628845],[74.81999969000002,144.30000305],[74.84767913999998,140.61381531],[74.61148071,138.95544434],[75.26167296999999,136.97439575],[75.94917296999999,137.51176453],[76.1367569,138.83106995]],[[75.34584807999997,148.222229],[75.08406066999999,150.73167419],[74.68891907,149.57592773],[74.77835845999999,147.97746277],[75.17298126,146.1191864],[75.49681853999999,146.35848999],[75.34584807999997,148.222229]],[[71.55552673,180.97567748999998],[71.26947783999998,182.42205811],[71.13276672000002,182.33642578000004],[70.89302063,181.30621338],[70.78114319,178.90342712],[71.09880066,178.72529602],[71.55761718999999,180.12812804999996],[71.55552673,180.97567748999998]],[[73.36982727,139.8631134],[73.76506041999998,140.81170654],[73.85758209,142.06207275],[73.47525023999995,143.48283386],[73.21244049,143.60385132],[73.20543671000003,142.08763123],[73.31691742,140.03816223],[73.36982727,139.8631134]],[[66.7915802,41.12594986],[66.26618194999999,40.01583099],[65.99952697999998,38.38294983],[66.75961303999999,33.9187088],[66.63253021,33.18444061],[65.90014647999999,34.81476974],[64.41436768,34.94390869],[64.10945128999997,36.23128891],[63.849830629999985,37.01272964],[64.33470917,37.14197159],[64.78014374000001,36.51760101],[65.14321898999998,37.17604065],[64.5207901,39.59344864],[64.76445769999997,40.43560028],[65.49681853999998,39.76259995],[66.47622681,42.09309006],[66.41857909999999,43.0160408],[66.06907654,43.94974899],[66.75634002999999,44.53226089],[67.35244751,43.69839096],[67.95050811999998,44.187950130000004],[68.57079314999999,43.45281982],[68.25,46.25],[67.68997191999999,46.82133865],[67.56652069000002,45.55516815],[67.01004790999998,45.56201935],[66.6676712,46.34915161],[66.88455199999997,47.894161219999994],[67.52237701,48.13875961],[67.99867248999998,50.22766113],[68.85738372999997,53.71743011],[68.80815124999998,54.47171021],[68.20130919999998,53.48582076999999],[68.09702300999999,54.72628021],[68.43865966999998,55.44268036],[68.46627808,57.317020420000006],[68.88082122999998,58.80199814],[68.27844238,59.94142151],[68.94068909000002,61.077838899999996],[69.51999664,60.02999878],[69.84999847,60.54999924],[69.54739380000001,63.50400162],[69.23483276000002,64.88811493],[68.64403534000003,66.76215363],[68.09233093,68.51216125],[68.6156311,69.18067932],[69.14436340000002,68.16443634],[69.35649109,68.13522339],[69.45461273,66.9300766],[69.9287262,67.259758],[70.70889282000002,66.72492218],[71.02896880999998,66.69465637],[71.93450165,68.54006195],[72.84336090000001,69.19635773],[73.04000092000001,69.94000244],[72.77629088999997,72.58753967],[72.22006226000002,72.79602814],[71.40898132000001,71.84810638],[71.09018707000003,72.47010803],[70.3911438,72.79187775],[69.02085113999999,72.56469727],[68.40789795,73.66786957],[67.74040222,73.23870087],[66.31999969,71.27999878],[66.17266846000001,72.42301178],[66.53266907,72.82077026],[66.78945922999999,73.92098999],[67.28428650000001,74.18650818],[67.76046753,75.05200195],[68.32898712000001,74.46926117],[68.98918151999997,74.93583679],[69.07145690999998,73.84236145],[69.62763214,73.60186768],[70.63175201000001,74.39980316],[71.44716643999999,73.10109711],[72.12119293000002,74.89082336],[72.83226775999998,74.65926361],[72.85497284000003,75.15801239],[72.30056,75.68350983],[71.33556365999998,75.28897858],[71.15287017999998,76.35910797000001],[71.87400818,75.90312958],[72.26717377,77.57665253000002],[72.32010651000003,79.65202331999998],[71.75000000000001,81.49999999999999],[72.5828476,80.61071013999998],[73.64820099000002,80.51109314],[73.84999846999999,82.25],[73.80590820000002,84.65525818],[73.93688202000001,86.82230377],[74.45967101999999,86.00955963],[75.11643219,87.16681671],[75.14392853,88.31571198000002],[75.63999939000001,90.26000214],[75.77333069,92.90058136000002],[76.04720306,93.23420715],[76.13999938999999,95.86000061],[75.91548157000001,96.67820739999999],[76.44689177999997,98.92253875999998],[76.43028258999999,100.75966644],[76.86189269999998,101.03531647],[77.28753662000001,101.99083709999998],[77.69792174999998,104.35160064999998],[77.37389374000001,106.06664276],[77.12740326000001,104.70500183000001],[76.97418976,106.97013092],[76.48000336000003,107.23999786],[76.72335052000001,108.15380096],[76.70999907999999,111.07726288],[76.22223662999997,113.33151245],[75.84764099,114.13417053000002],[75.32778931000001,113.88539124],[75.03186034999999,112.77918243],[74.47673034999998,110.15125275000001],[74.18000031000001,109.40000153],[74.04000092000003,110.63999939],[73.78774261000002,112.11918639999999],[73.97692871,113.01953887999998],[73.33505249000001,113.52957915999998],[73.59487914999998,113.96881104000002],[73.75285338999997,115.56781769],[73.58772277999996,118.77632904],[73.12000275,119.01999664000002],[72.97122192,123.20066071],[73.73503113,123.25776672],[73.55999756,125.37999725],[73.56549072000001,126.97644043],[73.03871155000002,128.59126282],[72.39871979000002,129.05157471],[71.98000336000003,128.46000671],[71.19303894000001,129.71598816],[70.78698730000004,131.28857422],[71.83630370999998,132.25349426],[71.3864212,133.85766602],[71.65525055,135.56193542],[71.34763336,137.49754333],[71.62802886999998,138.23408508],[71.48783112000002,139.86982727],[72.4161911,139.14790344],[72.84941100999998,140.46817017],[72.19999695,149.5],[71.60643005,150.35118103],[70.84221649,152.96890259],[71.03141022,157.00688170999996],[70.86672211,158.99778748],[70.45323944,159.83030701],[69.72197723,159.70866394],[69.43727875000002,160.9405365],[69.64203644,162.27906799],[69.66822815,164.05247498000003],[69.47199248999999,165.94036865],[69.58268737999998,167.83566284],[68.69380187999998,169.57763672],[69.01363372999997,170.81687927],[69.65276336999999,170.00819397],[70.09703064000001,170.45344543],[69.81742859,173.64390564],[69.87725067,175.72402954000003],[69.40000153000001,178.6000061],[68.19999695,182.44999694999998],[67.20588683999999,185.07174683],[66.58435058999997,184.98574829],[66.33556365999999,185.66017151],[67.06218719,185.42817688],[66.91307830999999,188.14268494],[65.97724152,190.10041809],[65.54138947,189.1089325],[65.43791198999999,187.46975708],[64.46079254,187.44500732],[64.25269318,187.04466248],[64.28260040000002,186.1081543],[64.63124847,185.34608459],[64.92288208,184.01646423],[65.35666656000001,183.79284668],[65.52024078,182.77734375],[65.39051819,181.64007568],[65.74044037,181.09667968999997],[66.11210632,181.31388854999997],[65.87455749999997,180.1162262],[65.40411376999998,180.56732178],[64.97432708999999,179.99281311],[64.53492736999998,178.70719910000003],[64.60820769999997,177.4112854],[64.07592772999998,178.31300354],[63.25196838000001,178.9082489],[62.98262024000003,179.37034606999998],[62.568939209999996,179.48635864],[62.30410004000002,179.22825623],[62.52190017999999,177.36430359000002],[61.769149779999985,174.56929016],[61.65261078000002,173.68012999999996],[60.95000076,172.1499939],[60.33618163999999,170.69850159],[59.88177109,170.33085632],[60.57355118,168.90046692],[59.78855133,166.29498291000002],[60.15999985,165.83999634],[59.73160172000002,164.8767395],[59.868709560000006,163.53929138],[59.21100997999999,163.21711730999996],[58.24327849999999,162.01733397999996],[57.839118960000015,162.05296326],[57.61502838000001,163.19190979],[56.159240720000014,163.05793762],[56.12218857,162.12957764],[55.28567885999998,161.70146179],[54.855140689999985,162.11749268],[54.34432982999999,160.36877441],[53.202571869999986,160.02172851999998],[52.9586792,158.53094482000003],[51.942691799999984,158.23118591],[51.011051179999995,156.78979491999996],[51.700000759999995,156.41999817],[53.15895081,155.99182129],[55.381031040000025,155.43365479],[56.76792145000002,155.91441345],[57.36470031999999,156.75814819],[57.83203888,156.81034851],[58.0557518,158.36433411],[59.31476973999999,160.15063477],[60.3429985,161.87203978999997],[61.14089965999999,163.66969299],[62.55060959000001,164.47355652],[62.46627044999998,163.25842285],[61.642501830000015,162.65791321],[60.54423141,160.12147522],[61.773960109999976,159.30232239],[61.43442154000002,156.72067261],[59.75817871,154.21806334999997],[59.14495087000001,155.04374694999998],[58.88385009999998,152.81184387],[58.780891419999975,151.26573181],[59.50395966,151.33815001999997],[59.65573119999999,149.78370667],[59.16447829999998,148.54481506],[59.33636856,145.48721313],[59.03998184,142.19781494],[57.088050839999994,138.95848083],[54.72959137,135.12619019],[54.60354996,136.70170593],[53.97732162,137.19342041],[53.755008700000005,138.16470337],[54.25455092999998,138.80462646],[54.189678190000016,139.90150452],[53.08956908999998,141.3453064],[52.23876953000003,141.37922668],[51.23966979999999,140.59742737],[50.04552841,140.51307678],[48.44670867999999,140.06193542],[46.999649050000016,138.55471802],[46.307949070000014,138.2197113],[45.143501279999995,136.86231995],[43.98899841000001,135.51535034],[43.398208619999984,134.86938477],[42.81147003,133.53686523],[42.798488620000015,132.90626526],[43.28456116000002,132.27807617],[42.552738190000014,130.93586731],[42.220001219999986,130.77999878],[42.39500045999999,130.63999939],[42.90301132000001,130.63386536],[42.92998886000001,131.14471436],[44.11151122999998,131.28858948],[44.96796036000001,131.02519226],[45.321159359999996,131.88342285],[45.14408875000001,133.09712219],[46.11692047,133.76966858],[47.21247864000001,134.11235046],[47.57844925000001,134.50080872],[48.47822952000001,135.02632141],[48.18344115999999,133.37356567],[47.7889595,132.50668335],[47.79013062000001,130.98725891],[48.72969054999998,130.58229065],[49.44060135000001,129.39782715],[49.760269170000015,127.65740204],[50.73981093999997,127.2874527],[51.35388947000003,126.93914795000002],[51.78425979999999,126.56443024],[52.79280853000001,125.94638062],[53.16104888999998,125.06820679],[53.45880127000001,123.57147217],[53.43172835999999,122.24575806],[53.25139999000002,121.00306701999999],[52.75391006000001,120.17710113999999],[52.51623916999999,120.72576904],[51.96411133,120.73819733],[51.643550870000006,120.18208313],[50.58292006999999,119.27938843],[50.14287948999999,119.28842926000002],[49.511001590000006,117.87924194],[49.88856125,116.6787796],[49.80516815000001,115.48571014],[50.14027022999999,114.96209717],[50.24829865,114.36248779],[49.543571470000025,112.89772797],[49.37794875999999,111.58123779000002],[49.13014983999999,110.6619873],[49.29296112,109.40245056],[49.28255081,108.47518158],[49.79372025000001,107.86818695000001],[50.27428055000002,106.88883209],[50.40602112,105.88661194000001],[50.27531815000001,104.62158203],[50.089969639999985,103.67653656],[50.51055907999999,102.25588989],[51.25991057999999,102.06520844],[51.51684951999999,100.88950348],[51.634010310000015,99.98175812000001],[52.047378540000004,98.86145782],[51.01100922000001,97.82572937],[50.42238997999999,98.2317276],[49.72605132999997,97.259758],[49.97745895,95.81401825],[50.013420099999976,94.815979],[50.480529789999984,94.14756775],[50.49528884999999,93.1042099],[50.80218124000002,92.23468781],[50.331798549999995,90.71366119],[49.470539089999974,88.80554199000001],[49.29719925000003,87.75128937],[49.215000150000016,87.36000061],[49.82667923000001,86.82935333],[49.69285965000001,85.54128265],[50.11730957000001,85.11557007],[50.31142044000001,84.41638947],[50.88925170999998,83.935112],[51.069190979999995,83.38300323],[50.812210079999986,81.94596863],[51.38835907,80.56846619],[50.86476135000001,80.03556061],[53.40441132000001,77.80091095],[54.17702866,76.52520751999998],[54.49052047999999,76.89111328000001],[53.5468483,74.38481903],[53.48979949999999,73.4256897],[54.035610200000015,73.50853729],[54.37665176000002,72.22413635],[54.133300780000006,71.18015289],[55.16973877000001,70.86525726],[55.38526153999997,69.06816864],[54.97040176000003,68.16909027],[54.60124969,65.66687012],[54.35422897,65.17854309],[54.00624847,61.436599730000005],[53.665008539999995,60.978061679999996],[52.97999954,61.70000076],[52.72000121999999,60.74000167999999],[52.44754027999999,60.92723846],[51.960418699999984,59.96754073999999],[51.27265929999999,61.587978359999994],[50.79904937999998,61.33742141999999],[50.84220123,59.93281937],[50.5454483,59.64226913],[51.06364059000001,58.3633194],[51.043548579999985,56.7779808],[50.62171173000002,55.71694183],[51.02622985999998,54.53289032],[51.71866989,52.32875061],[51.692768099999995,50.76663971000001],[50.60512923999998,48.70235062],[49.87475967000002,48.57785034],[50.45468902999999,47.54949950999999],[49.355998989999996,46.75157166],[49.15206908999998,47.04364014],[48.39416884999999,46.46644974],[47.71585082999998,47.31523895],[47.74377060000002,48.05725098],[47.07564163000001,48.69474030000001],[46.561038970000006,48.593250270000006],[46.39933013999999,49.10115814],[45.80628967000001,48.64540863],[45.64149093999998,47.67591095000001],[44.60919951999999,46.68201065],[43.660160059999995,47.59093857],[42.98657990000002,47.49251938],[41.80887984999997,48.58436966],[41.40581894000003,47.987281800000005],[41.151409150000006,47.81565857],[41.219741819999996,47.37332916],[41.82712936000003,46.68606949],[41.86067962999998,46.40497971],[42.09244155999999,45.77640152],[42.50276947000002,45.47026061999999],[42.712001799999996,44.53763962],[42.554958339999985,43.93120956],[42.74082946999999,43.75598907],[43.220298770000014,42.39440155],[43.382148739999984,40.92219162],[43.55308913999999,40.07693863],[43.43500137000001,39.95500183],[44.27999878000001,38.68000031],[44.65721130000001,37.53911972],[45.244689940000015,36.67546082],[45.40451050000001,37.40317154],[46.240871429999984,38.2329483],[46.63656997999998,37.67372131],[47.04475020999997,39.14767075],[47.26335907,39.12120056],[47.102188109999986,38.22356033],[47.54640961,38.25511169],[47.82561874000002,38.77056885],[47.8989296,39.73828125000001],[48.232410430000016,39.89561844],[48.783821109999984,39.67464828],[49.30744171,40.08079147],[49.60105132999998,40.06903839000001],[49.92646027000001,38.59500884999999],[49.91566086000002,38.01063919],[50.38396835,37.39345932],[50.225589749999976,36.62614822],[50.57720183999997,35.35612869],[50.77394104000001,35.37791061],[51.2075882,35.02220917],[51.25600815000001,34.22481155],[51.566429140000004,34.14197922],[51.768871310000016,34.39175034],[52.33507918999999,33.75268173],[52.238449100000004,32.71575928],[52.28871155000001,32.41207123],[52.061248780000014,32.15943909],[52.101680759999994,31.78597069],[52.742080689999995,31.54000092],[53.074001309999986,31.30521011],[53.16743087999998,31.497640610000005],[53.13272858,32.30455017],[53.35145187,32.69366074],[53.618049619999994,32.40557861],[53.79402923999999,31.73127937],[53.97462845000002,31.791419980000004],[54.15703964,31.38448906],[54.811771390000004,30.75754929],[55.08155060000002,30.97184944],[55.55099869,30.873939509999996],[55.78945159999999,29.896310810000003],[55.67010117,29.37154007],[55.918369289999994,29.22953033],[56.16913986,28.17670059],[56.759311679999975,27.85528946],[57.244239810000025,27.770040509999998],[57.47452163999999,27.2881794],[57.791900629999994,27.7166996],[58.72457123,27.420150760000002],[59.30083083999999,28.13170052],[59.47536849999998,27.98111916],[60.028049469999985,29.11770058],[60.503520970000025,28.069999690000003],[61.7800293,30.21110916],[62.357688900000014,31.14001083],[62.8676796,31.51610947],[63.552818300000006,30.035869599999998],[64.20445251000001,30.44470024],[64.94866943000001,29.544439320000002],[65.80597687,30.21764946],[66.94428253000002,29.05459976],[67.69828796,29.97743034],[68.36463165000002,28.44594955],[69.06478881999998,28.591939930000002],[69.15692138999998,29.399549479999997],[69.55811310000001,31.101079939999998],[69.90595244999999,32.13272095],[69.30142211999997,33.77547073],[69.06342316,36.51396179],[67.93240356000001,40.292339319999996],[67.45713043,41.05987167],[66.7915802,41.12594986]]]}},{latlng:[42,43.5],flag:"https://restcountries.eu/data/geo.svg",code:"GE",name:"Georgia",geoJSON:{type:"Polygon",coordinates:[[[41.535648350000024,41.55408095999999],[41.96295165999998,41.703159330000005],[42.645130160000015,41.45346832],[43.01361846999998,40.87548828],[43.12863158999999,40.32138824],[43.43500137000001,39.95500183],[43.55308913999999,40.07693863],[43.382148739999984,40.92219162],[43.220298770000014,42.39440155],[42.74082946999999,43.75598907],[42.554958339999985,43.93120956],[42.712001799999996,44.53763962],[42.50276947000002,45.47026061999999],[42.09244155999999,45.77640152],[41.86067962999998,46.40497971],[41.72280121,46.145401],[41.18167114,46.63793945],[41.064441680000016,46.50164032],[41.12387848,45.96260071],[41.41144943,45.21744156],[41.24708938999999,44.963249209999994],[41.092140200000024,43.58274078],[41.58317947000001,42.61957932000001],[41.535648350000024,41.55408095999999]]]}},{latlng:[40.5,47.5],flag:"https://restcountries.eu/data/aze.svg",code:"AZ",name:"Azerbaijan",geoJSON:{type:"Polygon",coordinates:[[[38.741199489999985,46.14360809],[38.874130250000015,45.45774841],[39.335769649999996,44.95270157],[39.71701812999999,44.78858185],[39.74000168,45.00199889999999],[39.47174835,45.29816818],[39.473999020000015,45.74000168],[39.31972122,45.73535919],[38.741199489999985,46.14360809]],[[41.86067962999998,46.40497971],[41.82712936000003,46.68606949],[41.219741819999996,47.37332916],[41.151409150000006,47.81565857],[41.40581894000003,47.987281800000005],[41.80887984999997,48.58436966],[41.28227997,49.110271450000006],[40.57291030999999,49.61893082],[40.52618026999999,50.08486176],[40.256568910000006,50.39281082],[40.176109310000015,49.56917191],[39.39947891000001,49.39522934000001],[39.04920959000001,49.22323990000001],[38.81549072000001,48.85652924000001],[38.32025908999999,48.883270259999996],[38.270378109999996,48.63436127000001],[38.79402161000001,48.01073837],[39.28874969,48.35551071],[39.58224106000001,48.06008148000001],[39.50836182000002,47.68508148],[38.77059937000001,46.505729679999995],[39.46414948000001,46.48350906],[39.62802124000002,46.0345192],[39.90000152999999,45.61000061],[40.21847916000002,45.891910550000006],[40.56148911,45.35919189],[40.812290190000006,45.56032181],[40.98537064,45.17947006],[41.24613189999998,44.96343994],[41.24708938999999,44.963249209999994],[41.41144943,45.21744156],[41.12387848,45.96260071],[41.064441680000016,46.50164032],[41.18167114,46.63793945],[41.72280121,46.145401],[41.86067962999998,46.40497971]]]}},{latlng:[54,-2],flag:"https://restcountries.eu/data/gbr.svg",code:"GB",name:"United Kingdom",geoJSON:{type:"Polygon",coordinates:[[[58.55083847000001,-4.21149635],[58.634998319999994,-3.00499821],[57.553009029999984,-4.07383442],[57.68999862999999,-3.05499673],[57.684791559999994,-1.95928907],[56.86999893000001,-2.2199986],[55.973800659999995,-3.11900806],[55.90999985000001,-2.08499813],[54.624999999999986,-1.11499953],[54.46437836000002,-0.43049958],[53.325000759999995,0.185],[52.930000310000004,0.47000000000000003],[52.73952102999998,1.68151999],[52.09999847000002,1.55999994],[51.80678176999998,1.05058002],[51.28940964000001,1.44983995],[50.76573181000001,0.55035001],[50.77500153,-0.7874997899999999],[50.499999999999986,-2.48999953],[50.69688034,-2.95624852],[50.22834015000003,-3.6174476099999997],[50.34183121,-4.54250431],[49.95999908,-5.24499798],[50.159690860000005,-5.77657413],[51.20999908,-4.30999517],[51.42599869,-3.4148376],[51.59347152999998,-4.98435926],[51.991401670000016,-5.267304420000001],[52.30136871,-4.22232628],[52.840000150000016,-4.76999331],[53.494998930000015,-4.57999611],[53.40446854000001,-3.09204721],[53.985000609999986,-2.9449994599999996],[54.61500168000001,-3.62999821],[54.79098128999998,-4.844143390000001],[55.06159973000002,-5.0825243],[55.50846863,-4.71910715],[55.7840004,-5.04799318],[55.31116104000001,-5.58638],[56.27500152999999,-5.64499331],[56.784999849999984,-6.14999533],[57.81884003,-5.78682423],[58.630001069999985,-5.00999641],[58.55083847000001,-4.21149635]],[[55.131629939999996,-7.57214451],[54.595821380000004,-7.36600733],[54.05997086000001,-7.57214451],[54.073719020000006,-6.953725340000001],[53.867580410000016,-6.19789791],[54.55459976000001,-5.66193008],[55.17287063999999,-6.73384714],[55.131629939999996,-7.57214451]]]}},{latlng:[56,10],flag:"https://restcountries.eu/data/dnk.svg",code:"DK",name:"Denmark",geoJSON:{type:"Polygon",coordinates:[[[56.11138915999998,12.37088966],[55.610000609999986,12.689999579999999],[54.79999924,12.090000149999998],[55.36486816000002,11.04356003],[55.779968260000004,10.90390015],[56.11138915999998,12.37088966]],[[54.962730410000006,8.52620983],[55.51771926999998,8.12032032],[56.54000092000002,8.09000015],[56.80998993,8.25656033],[57.11000824000001,8.54343987],[57.172058109999995,9.42444038],[57.44794083,9.77556038],[57.72999954000001,10.57999992],[57.21575165000001,10.54609013],[56.889999390000014,10.25],[56.61000060999997,10.369999890000003],[56.45861052999997,10.91219044],[56.08139038000002,10.66781044],[56.18999862999998,10.369999890000003],[55.47000122,9.649999619999997],[54.98308945000001,9.9218998],[54.83087158000001,9.28203964],[54.962730410000006,8.52620983]]]}},{latlng:[46,2],flag:"https://restcountries.eu/data/fra.svg",code:"FR",name:"France",geoJSON:{type:"Polygon",coordinates:[[[42.62812042000002,8.7459898],[43.009998319999994,9.39000034],[42.15250015000001,9.56000042],[41.38000106999999,9.22976971],[41.58361052999998,8.77573967],[42.25651932,8.54421997],[42.62812042000002,8.7459898]],[[49.46382904000001,6.18628979],[49.201938629999994,6.65822983],[49.0177803,8.09928036],[48.33301162999999,7.593689920000001],[47.62057877000001,7.466770170000001],[47.44974898999998,7.19222021],[47.54182052999999,6.7365799],[47.28770065000001,6.768730159999999],[46.72576140999999,6.03739023],[46.27297973999998,6.02258015],[46.42966843,6.50008011],[45.991138459999995,6.8435998],[45.70861053000001,6.802340030000001],[45.33309173999998,7.09666014],[45.028549190000014,6.749969959999999],[44.25476074,7.007569789999999],[44.127910610000015,7.549580099999999],[43.69385147,7.435190200000001],[43.128910059999995,6.529240130000001],[43.39965057000001,4.55699015],[43.075191500000024,3.1003899599999993],[42.472999570000006,2.9859800299999995],[42.34337996999999,1.82676995],[42.79571915,0.70159],[42.57955170000001,0.33805001],[43.03401184000001,-1.50277996],[43.422798160000006,-1.90135002],[44.022609709999976,-1.38419831],[46.01491164999998,-1.19379997],[47.064380650000004,-2.22572803],[47.57033157000001,-2.96326661],[47.95495987,-4.49154329],[48.68416976999997,-4.59232426],[48.90169144,-3.2958075999999994],[48.644439699999985,-1.61649978],[49.77632904,-1.93347859],[49.34737015000001,-0.98945999],[50.12717819,1.33876002],[50.9466095,1.63898003],[51.14850997999999,2.5136001100000005],[50.796821590000015,2.65841007],[50.78036117999998,3.12326002],[50.37897873000002,3.58818007],[49.907520290000015,4.28602982],[49.985389709999986,4.79920006],[49.52947997999999,5.67404985],[49.442680359999976,5.897739890000001],[49.46382904000001,6.18628979]]]}},{latlng:[42.83333333,12.83333333],flag:"https://restcountries.eu/data/ita.svg",code:"IT",name:"Italy",geoJSON:{type:"Polygon",coordinates:[[[40.900001530000004,8.71000004],[41.20999907999999,9.21000004],[40.5,9.81000042],[39.17737961,9.66948986],[39.24047088999999,9.21481037],[38.906631470000015,8.80692005],[39.17184829999998,8.42831993],[40.37829970999998,8.38827991],[40.95000076,8.15999985],[40.900001530000004,8.71000004]],[[38.14387131000002,14.76126003],[38.231170649999996,15.520359990000001],[37.444049840000005,15.160220149999999],[37.13420868,15.309900279999999],[36.61999893000002,15.10000038],[36.99663162,14.33522987],[37.10454177999999,13.82672977],[37.61294936999999,12.43097973],[38.12638855,12.57094002],[38.03496170000001,13.741160389999997],[38.14387131000002,14.76126003]],[[46.89355087000002,10.44270992],[46.75135040000001,11.04856014],[46.941589359999995,11.16483974],[47.11539077999998,12.15307999],[46.76755905000001,12.376500130000002],[46.50928879000001,13.80648041],[46.01678848000001,13.698089599999998],[45.59103012,13.937640189999998],[45.73667907999999,13.14159012],[45.38175964,12.32857037],[44.88536835000001,12.38385963],[44.60047912999999,12.26144028],[44.091358179999986,12.58924007],[43.58771896,13.52690983],[42.76100159000002,14.02982044],[41.955139159999995,15.14256954],[41.961299900000014,15.926210399999999],[41.74028014999998,16.16991997],[41.54108810000001,15.889360429999998],[41.17961883999999,16.78499031],[40.877128600000006,17.5191803],[40.35564041000001,18.37669945],[40.16886901999999,18.48026085],[39.810779569999994,18.29338074],[40.277671810000015,17.73838043],[40.44223022,16.8696003],[39.79539870999999,16.44874954],[39.42470168999999,17.17152023],[38.90287018000003,17.05282974],[38.843559270000014,16.63505936],[37.985908510000016,16.10098076],[37.908840180000006,15.68410015],[38.21458817000003,15.68795967],[38.750938420000004,15.8920002],[38.96455001999998,16.10934067],[39.5440712,15.71881962],[40.04837036000001,15.413610460000001],[40.17296982,14.998519899999998],[40.60456084999999,14.70326996],[40.78633880999998,14.06068039],[41.18827820000001,13.62798977],[41.253101350000016,12.888099669999999],[41.70452880999999,12.106710430000001],[42.355419160000004,11.19192982],[42.931468960000004,10.51198006],[43.91999816999999,10.199999809999998],[44.03628158999998,9.702500340000002],[44.36632918999998,8.88893032],[44.23123169000002,8.42856026],[43.767158509999994,7.85075998],[43.69385147,7.435190200000001],[44.127910610000015,7.549580099999999],[44.25476074,7.007569789999999],[45.028549190000014,6.749969959999999],[45.33309173999998,7.09666014],[45.70861053000001,6.802340030000001],[45.991138459999995,6.8435998],[45.77693176000001,7.27384996],[45.82452011000003,7.75599003],[46.16366958999998,8.3166399],[46.005168910000016,8.48995018],[46.03694916,8.96630001],[46.44020843999999,9.18288994],[46.31491089000001,9.92284012],[46.48358153999999,10.36338997],[46.89355087000002,10.44270992]]]}},{latlng:[62,10],flag:"https://restcountries.eu/data/nor.svg",code:"NO",name:"Norway",geoJSON:{type:"Polygon",coordinates:[[[79.67430878,15.14282036],[80.01608275999999,15.52254963],[80.05085753999998,16.99085045],[79.70175170999998,18.25182915],[78.95610808999999,21.543830869999997],[78.56259918,19.027370450000003],[77.82669067,18.47171974],[77.63796234000002,17.59440994],[76.80941009999997,17.1182003],[76.77044677999999,15.91314983],[77.38034821000001,13.762590410000001],[77.73564910999998,14.669560430000002],[78.02493285999999,13.170599940000002],[78.86930084,11.222310070000002],[79.65238953,10.444529529999999],[80.0104599,13.17076969],[79.66039275999998,13.71852016],[79.67430878,15.14282036]],[[77.85385131999999,24.72411919],[77.44493103000003,22.49032021],[77.67704009999997,20.72600937],[77.93504332999998,21.41610909],[78.25463103999999,20.811899189999995],[78.45494079999997,22.88426018],[78.07953644,23.281339650000003],[77.85385131999999,24.72411919]],[[80.05641937000003,27.40752029],[79.51782989999998,25.92464066],[79.40003204,23.02446938],[79.56681824,20.07518005],[79.84236144999998,19.89727974],[79.85989380000001,18.46224976],[80.31889342999999,17.3680191],[80.59815215999996,20.45598984],[80.35767364999998,21.907960889999995],[80.65715790000003,22.919279100000004],[80.40734863,25.44761086],[80.05641937000003,27.40752029]],[[58.85617065000001,11.02737045],[59.46981049,10.35657024],[58.31328964000001,8.38201046],[58.07889938,7.04873991],[58.588138579999985,5.66582012],[59.66323853000001,5.30825996],[61.971000669999995,4.9920702],[62.61449051,5.91288996],[63.45399093999998,8.55338955],[64.4860611,10.527700419999999],[65.87972259999998,12.35836983],[67.81063842999998,14.76113987],[68.56321716,16.43589973],[69.81742859,19.18400955],[70.25517273,21.378419879999996],[70.20205687999999,23.02371979],[71.03050232,24.54656982],[70.98626709000001,26.37004089],[71.18547821,28.165559769999998],[70.45381165,31.29340935],[70.18624115,30.00542068],[69.55811310000001,31.101079939999998],[69.15692138999998,29.399549479999997],[69.06478881999998,28.591939930000002],[69.76648712,29.01556015],[70.16417693999999,27.73229027],[69.82527923999999,26.17959976],[69.09211730999999,25.689220430000002],[68.64956664999998,24.735679629999996],[68.89124298000003,23.66205978],[68.84174347,22.356229780000003],[69.37046050999999,21.2449398],[69.10624695000003,20.645589829999995],[69.06513976999999,20.02523994],[68.4072113,19.87857056],[68.56741333,17.99386978],[68.01055144999998,17.72916031],[68.01393127,16.76889038],[67.30242919999999,16.10869026],[66.19387054,15.108420370000001],[64.78703308000003,13.555700299999998],[64.44542694,13.91991043],[64.04911803999998,13.57192993],[64.06625366000002,12.57993984],[63.12831879000002,11.93056011],[61.80036926,11.99205971],[61.29359055000001,12.63115978],[60.11793899999999,12.30039024],[59.43239975000002,11.46823978],[58.85617065000001,11.02737045]]]}},{latlng:[23.5,121],flag:"https://restcountries.eu/data/twn.svg",code:"TW",name:"Taiwan",geoJSON:{type:"Polygon",coordinates:[[[24.39426993999999,121.77781677000002],[22.790859220000005,121.17563629],[21.97056961,120.74713134999999],[22.814859390000006,120.22006988999999],[23.556259159999993,120.10616302],[24.538450240000003,120.69464873999999],[25.29545020999999,121.49501038],[24.997579569999996,121.95127106],[24.39426993999999,121.77781677000002]]]}},{latlng:[7,81],flag:"https://restcountries.eu/data/lka.svg",code:"LK",name:"Sri Lanka",geoJSON:{type:"Polygon",coordinates:[[[7.523039819999994,81.78794861],[6.481790069999996,81.63732147000002],[6.197140219999983,81.21803284],[5.968359950000015,80.34834289999999],[6.763470170000004,79.87243651999998],[8.200830459999995,79.69516754],[9.82406998000001,80.14779663],[9.268420219999992,80.83885193],[8.564200399999997,81.30432129],[7.523039819999994,81.78794861]]]}},{latlng:[-27,133],flag:"https://restcountries.eu/data/aus.svg",code:"AU",name:"Australia",geoJSON:{type:"Polygon",coordinates:[[[-32.215957640000006,126.14868927],[-32.72875977000002,125.08860016],[-32.95945358000001,124.22165680000002],[-33.483821869999986,124.02897644],[-33.89016342,123.65965270999999],[-33.91440581999999,122.81104278999999],[-34.00336456000001,122.18302917],[-33.82102966000001,121.29917145],[-33.93012237999999,120.58027649],[-33.97603607,119.89366149999998],[-34.50932693000001,119.29892731000001],[-34.46409224999999,119.00734711],[-34.74677277,118.50572205],[-35.06471634,118.02494812],[-35.02542496,117.29547119],[-35.02507019,116.62509917999999],[-34.386405939999996,115.56437683],[-34.19644547,115.02683257999999],[-33.62338637999999,115.04866028000001],[-33.48723602,115.54514313],[-33.2595253,115.71466826999999],[-32.90034866000001,115.67942810000001],[-32.20504379,115.801651],[-31.61240387,115.68958282],[-30.601585389999997,115.16091156],[-30.030691149999996,114.99703979],[-29.46105002999999,115.04006958],[-28.810182569999988,114.64198303],[-28.51638603,114.61649323000002],[-28.11807631999999,114.17359161],[-27.33474541,114.04891205],[-26.54313278,113.47750092000001],[-26.116542819999992,113.33895874],[-26.549034119999998,113.77835846],[-25.621263499999994,113.44094848999998],[-25.91121864,113.93689728],[-26.298454280000005,114.23282623],[-25.78626059999998,114.21616364],[-24.998945239999998,113.72123718],[-24.683950420000006,113.62532806],[-24.38475037000001,113.39350128],[-23.806350710000007,113.50202179],[-23.560182569999995,113.70697021],[-23.059974670000003,113.84339142],[-22.47543715999999,113.73658752000001],[-21.75585938000001,114.14974976],[-22.517482760000007,114.22531891],[-21.829526900000005,114.64777374],[-21.495176320000002,115.46016692999999],[-21.068710330000005,115.94741058],[-20.701681140000005,116.71161652],[-20.62358093,117.1663208],[-20.746915819999995,117.44156647000001],[-20.37416267000001,118.22955322],[-20.263280870000003,118.83608246],[-20.044219969999997,118.98780822999998],[-19.952922820000005,119.25251006999999],[-19.976472849999993,119.80519104],[-19.683700560000005,120.85621643],[-19.23975181999999,121.39984894],[-18.70530319,121.65509795999999],[-18.197633740000008,122.24163055000001],[-17.798599239999994,122.28661346],[-17.25493813,122.31279755000001],[-16.40517426,123.01261139],[-17.268548969999998,123.43379211000001],[-17.06904220999999,123.85932159],[-16.596492770000005,123.50324249],[-16.11128615999999,123.81710052],[-16.327943799999993,124.25827026],[-15.567038539999997,124.37973784999998],[-15.075086590000005,124.92617034999999],[-14.680368420000013,125.16726685000002],[-14.510056500000008,125.67009734999999],[-14.230632780000004,125.68579101999998],[-14.347357750000002,126.12519073],[-14.095975879999992,126.14279174999999],[-13.952762600000003,126.58260345],[-13.817970279999997,127.06587982],[-14.276907920000006,127.80465698],[-14.869182589999994,128.35968018],[-14.875998499999994,128.98558044],[-14.969779970000008,129.62150574],[-14.420643810000007,129.40963745],[-13.61867619,129.88867188],[-13.357377050000006,130.33947754],[-13.1075325,130.18351746],[-12.536404610000009,130.61781311],[-12.18365002,131.22349548],[-12.302438739999996,131.73509216],[-12.114038470000002,132.57527161],[-11.602988239999998,132.55722046],[-11.273766519999995,131.82470703],[-11.128508569999989,132.35720825],[-11.376423839999996,133.01954651],[-11.786498069999988,133.55085754],[-12.04235649,134.39303589],[-11.94114876000001,134.6786499],[-12.248566630000003,135.29847717],[-11.962260250000007,135.88273621],[-12.049348829999998,136.25834656],[-11.857206340000007,136.49247742],[-12.351938249999995,136.95162964],[-12.887208939999988,136.68510437],[-13.29123877999999,136.30545044],[-13.32451247999999,135.96174622],[-13.724267010000009,136.07759094],[-14.223972319999994,135.78382874],[-14.715412140000003,135.42866516],[-14.997717859999991,135.50021362],[-15.55024433,136.29519653],[-15.870750429999994,137.06536865],[-16.215085980000005,137.58045959],[-16.80761528,138.30319214],[-16.806600570000004,138.58518982],[-17.06269645999999,139.10853577],[-17.37159538,139.26060486],[-17.71079063000001,140.21520996],[-17.369079590000002,140.87542725],[-16.832033160000012,141.07110596],[-16.388870239999996,141.27409363],[-15.840536120000001,141.39825439],[-15.044908520000002,141.70220947],[-14.56131458,141.56343079],[-14.2703867,141.63551331],[-13.698068619999995,141.51989746],[-12.944688799999993,141.65092468],[-12.741542819999998,141.84269714],[-12.407610889999992,141.68702698],[-11.877479550000006,141.92863464],[-11.328022000000011,142.11845398],[-11.04274463999999,142.14367676],[-10.668190000000005,142.51528931],[-11.157347679999994,142.79736328],[-11.784676549999997,142.86679077],[-11.90561390000001,143.11592102],[-12.32564067999999,143.15866089],[-12.834336280000002,143.52209473],[-13.400402069999993,143.59715271],[-13.763652800000004,143.56178284],[-14.548314090000002,143.9221344],[-14.17115593,144.56373596],[-14.594438550000001,144.89489746],[-14.984950070000004,145.3747406],[-15.428210260000006,145.27201843],[-16.285650250000014,145.48527527],[-16.78489304,145.63699341],[-16.90688133,145.88887024],[-17.76165581000001,146.16026306],[-18.28003883,146.06367493],[-18.958295820000004,146.38746643],[-19.480726239999992,147.47108459],[-19.955924990000003,148.17759705],[-20.391199110000006,148.84840393],[-20.63342667,148.71748352],[-21.260486600000014,149.28947449],[-22.342487340000005,149.67834473],[-22.12277412,150.07740784],[-22.556133270000007,150.48295593],[-22.402368550000006,150.7272644],[-23.462249759999995,150.89955139],[-24.07624626000001,151.60916138],[-24.457849499999988,152.07354735999996],[-25.26747322,152.85522461000002],[-26.071144099999998,153.13615417],[-26.64132308999999,153.1619873],[-27.2602787,153.09289551],[-28.11003304,153.56947327000003],[-28.995082859999997,153.5120697],[-29.458171840000006,153.33909607],[-30.35021019,153.06922912999997],[-30.92362976,153.08956909000003],[-31.640455250000002,152.89161682],[-32.54997635000001,152.44999695],[-33.04130173000001,151.70909119],[-33.81600952,151.34399414],[-34.31031799,151.01054381999998],[-35.17344284000001,150.7141571],[-35.67185974,150.32820129],[-36.420173649999995,150.07524109],[-37.10902786,149.94615173],[-37.42525482,149.99725342],[-37.77261733999999,149.42390442],[-37.809024810000004,148.30462646],[-38.21920395,147.38169861],[-38.60650253000001,146.9221344],[-39.03572083,146.31790161],[-38.59373855999999,145.48962402],[-38.417438510000004,144.87695313],[-37.896209719999995,145.03218079],[-38.08529282,144.48568726],[-38.8094368,143.60998535],[-38.53822708,142.74545288],[-38.38000107,142.1783905],[-38.30852509,141.60658264],[-38.01926422,140.63856506],[-37.40286635999999,139.99215698],[-36.64356232,139.80662537],[-36.13831329,139.5741272],[-35.73271560999999,139.08280945],[-35.61230087,138.12075806],[-35.12724686,138.44952393],[-34.38468932999999,138.20756531],[-35.07679367,137.71917725],[-35.26052855999999,136.82943726],[-34.70728302,137.35235596],[-34.13024902,137.50390625],[-33.64045333999999,137.89009094],[-32.89996718999999,137.81033325],[-33.752765659999994,136.99685669],[-34.094753270000005,136.37203979],[-34.890083309999994,135.98901367],[-34.47865676999999,135.20817566],[-33.947925569999995,135.23918152],[-33.22276688,134.61340332],[-32.848075869999995,134.0859375],[-32.61721420000001,134.27386475],[-32.01119994999999,132.99078369],[-31.982650759999995,132.28805542],[-31.495786670000005,131.32633972],[-31.590406420000004,129.53579712],[-31.948472980000002,128.24095154],[-32.28220367,127.10283661],[-32.215957640000006,126.14868927]],[[-40.80820465,147.68925476],[-40.87542343,148.28909302],[-42.06238556,148.35992432],[-42.40698624,148.01728821],[-43.21149444999999,147.91404724],[-42.93767548,147.56460571],[-43.63457489000001,146.87034607],[-43.58087158,146.66333008],[-43.549736020000005,146.04838562],[-42.69373322,145.43193054],[-42.033599849999995,145.29510498],[-41.16251373000001,144.71807861],[-40.70393752999999,144.74380493],[-40.79251479999999,145.39794922],[-41.13766098,146.36413574],[-41.000549320000005,146.90861511],[-40.80820465,147.68925476]]]}},{latlng:[-41,174],flag:"https://restcountries.eu/data/nzl.svg",code:"NZ",name:"New Zealand",geoJSON:{type:"Polygon",coordinates:[[[-43.555328370000005,169.66781616],[-43.03162384000001,170.52496338],[-42.51274108999999,171.12507628999998],[-41.7673912,171.56968689],[-41.51434707999999,171.94869995],[-40.956027979999995,172.09727477999996],[-40.49394608,172.7986145],[-40.91906357,173.02035522000003],[-41.33198166,173.24725342],[-40.92669295999998,173.9584198],[-41.34915160999999,174.24757385000004],[-41.769989009999996,174.24855042],[-42.23313904,173.87640381],[-42.97002411,173.22273254],[-43.37226867999999,172.71130371],[-43.85327530000001,173.08012389999996],[-43.86565398999999,172.30857849],[-44.242485050000006,171.45292663999996],[-44.89703750999999,171.18513489],[-45.908920290000005,170.61668396],[-46.35573578,169.83145142],[-46.64123154,169.33233643],[-46.61991882,168.41137694999998],[-46.29014206,167.76376343],[-46.219860080000004,166.67692566],[-45.85267258,166.50915527],[-45.11090469,167.04641724],[-44.12395477,168.30377197],[-43.935771939999995,168.94943237],[-43.555328370000005,169.66781616]],[[-40.06596756,176.88581848],[-40.60474395999999,176.50802612],[-41.28956223000001,176.01246643],[-41.68826675,175.23953247],[-41.42581557999999,175.06788635000004],[-41.281780239999996,174.65093994000003],[-40.45921707000001,175.22763062000004],[-39.90890121000001,174.900177],[-39.5088501,173.82411194000002],[-39.14657211000001,173.85229492],[-38.79761505,174.57479858],[-38.02779388,174.7434845],[-37.381095890000005,174.69700623],[-36.71109008999999,174.29199219],[-36.53482055999999,174.3190155],[-36.121955869999994,173.84100342],[-35.23711394999999,173.0541687],[-34.529106139999996,172.63601685],[-34.45059586,173.00700378],[-35.00614929,173.55126953],[-35.26546478,174.32940674],[-36.156314849999994,174.61198425],[-37.209102630000004,175.33665466],[-36.52616882,175.35757446],[-36.7989502,175.80888367000003],[-37.55537796,175.95854187],[-37.88125229,176.76321411],[-37.96123505,177.43884277],[-37.57982635,178.01037598],[-37.69531631,178.51708984],[-38.58273697,178.2747345],[-39.16635131999999,177.97042847],[-39.14572525,177.20701599],[-39.44968414000001,176.93997192000003],[-39.87990569999999,177.03292847000003],[-40.06596756,176.88581848]]]}},{latlng:[-8,159],flag:"https://restcountries.eu/data/slb.svg",code:"SB",name:"Solomon Islands",geoJSON:{type:"Polygon",coordinates:[[[-5.340000149999995,154.75999451],[-5.56678008999999,155.0629425],[-6.200653549999997,155.54771423],[-6.539994239999989,156.02000427000002],[-6.819999220000002,155.88000488000003],[-6.919996260000014,155.60000609999997],[-6.535936359999999,155.16699219],[-5.900803089999999,154.72921753000003],[-5.139103410000013,154.51411438],[-5.04240608000001,154.65248108],[-5.340000149999995,154.75999451]],[[-7.021634099999992,157.14002991],[-7.347825999999992,157.53846741],[-7.404757019999993,157.3394165],[-7.176867009999997,156.90202332],[-6.765917300000005,156.49133301],[-6.599318979999986,156.54284668],[-7.021634099999992,157.14002991]],[[-8.019992829999996,159.63999939],[-8.337290760000004,159.87504577999997],[-8.538278579999998,159.91738892],[-8.11415768,159.13369751000002],[-7.7548160599999925,158.58612061],[-7.4218463900000025,158.21113586000004],[-7.319999219999996,158.36000061],[-7.5599951699999925,158.82000732],[-8.019992829999996,159.63999939]],[[-9.872914309999993,160.85223389],[-9.895220760000004,160.46255493],[-9.79400826,159.84944153],[-9.63999844,159.63999939],[-9.242930410000005,159.70294189],[-9.400298119999995,160.36291504],[-9.610140800000002,160.68847656],[-9.872914309999993,160.85223389]],[[-9.59999657,161.67999268],[-9.784318920000011,161.52940368999998],[-8.917522430000004,160.78822327],[-8.319999690000003,160.58000183],[-8.319999690000003,160.91999817],[-9.119990349999997,161.27999878],[-9.59999657,161.67999268]],[[-10.482687950000003,162.11903381],[-10.82635021,162.39865112],[-10.81999969,161.69999695],[-10.204750059999999,161.31976318000002],[-10.446676249999992,161.91734314000004],[-10.482687950000003,162.11903381]]]}},{latlng:[-6,147],flag:"https://restcountries.eu/data/png.svg",code:"PG",name:"Papua New Guinea",geoJSON:{type:"Polygon",coordinates:[[[-5.840714450000007,151.30142212],[-6.083745960000015,150.75442505],[-6.317735199999998,150.2412262],[-6.316526409999991,149.7099762],[-6.026056289999995,148.89007568],[-5.747125150000001,148.31895447],[-5.437733170000009,148.40185547],[-5.58372736,149.29841614],[-5.505519870000001,149.84559631],[-5.026087279999995,149.99627686],[-5.001369,150.13975525],[-5.532217980000002,150.23692322],[-5.455829140000001,150.80747986],[-5.113707070000003,151.08966064],[-4.757080079999998,151.64788818],[-4.1677942300000055,151.53782653999997],[-4.148805140000006,152.13679504],[-4.3129734999999885,152.33876038],[-4.86766624000001,152.31871033],[-5.47808695000001,151.98278808999999],[-5.560254100000008,151.45910645],[-5.840714450000007,151.30142212]],[[-3.659999609999992,152.63999939000004],[-3.979999070000004,153.02000427],[-4.5,153.13999939],[-4.766435150000006,152.82733154],[-4.176114080000006,152.63865661999998],[-3.7897481899999903,152.40603638],[-3.462089059999998,151.95323181],[-3.035428050000014,151.38427734],[-2.7414576999999904,150.6620636],[-2.5000000000000098,150.94000244],[-2.7799975899999985,151.47999573],[-3.0000000000000044,151.82000732],[-3.2399995300000097,152.24000549],[-3.659999609999992,152.63999939000004]],[[-5.769993310000009,141.00419617],[-2.60015749999999,141.00021362],[-3.289177660000008,142.73524475],[-3.861397499999993,144.58395386],[-4.373716349999987,145.27316284],[-4.876480099999999,145.82977295],[-5.465629100000007,145.98190308],[-6.083647250000004,147.64813232],[-6.614015100000005,147.89111328],[-6.721653460000009,146.97088623],[-7.388019080000011,147.19189453],[-8.04410075999999,148.08460999],[-9.104660030000007,148.7341156],[-9.07139683,149.30683899],[-9.51438808,149.26663208],[-9.684316640000004,150.03874207],[-9.872945790000001,149.73880005],[-10.293707850000004,150.80163574],[-10.582710270000003,150.69059753],[-10.652462009999995,150.02842712],[-10.393254280000011,149.78234863],[-10.28093432999999,148.92314148],[-10.130439760000003,147.91300964],[-9.492448809999996,147.13543701],[-8.942566870000007,146.56788635],[-8.067396160000007,146.04849243],[-7.630124089999994,144.74415588],[-7.9153280299999995,143.89709473],[-8.245466230000012,143.28637695],[-8.983076100000012,143.41397095],[-9.326830860000005,142.62844849],[-9.159598349999996,142.06825256],[-9.157068249999995,141.01057434],[-5.769993310000009,141.00419617]]]}},{latlng:[-18,175],flag:"https://restcountries.eu/data/fji.svg",code:"FJ",name:"Fiji",geoJSON:{type:"Polygon",coordinates:[[[-17.504802699999995,178.12556458],[-17.339920039999996,178.37359619],[-17.62843703999999,178.71806334999997],[-18.15058708000002,178.55270386],[-18.287967680000005,177.93266296],[-18.164293290000003,177.38145447000002],[-17.724630359999992,177.28503418000003],[-17.38112831000001,177.67086792],[-17.504802699999995,178.12556458]],[[-16.075801849999998,179.94850159000003],[-16.759988779999997,179.95594788000002],[-16.801338200000004,179.32408141999997],[-17.012037280000005,178.68499756],[-16.639139180000008,178.55677795],[-16.433965680000007,179.05654907],[-16.37903213999999,179.3734436],[-16.075801849999998,179.94850159000003]]]}},{latlng:[-21.5,165.5],flag:"https://restcountries.eu/data/ncl.svg",code:"NC",name:"New Caledonia",geoJSON:{type:"Polygon",coordinates:[[[-21.079973219999992,165.77999878],[-21.699993129999992,166.6000061],[-22.15997695999999,167.11999512000003],[-22.399988169999997,166.74000549],[-22.129699709999997,166.18972778],[-21.679622649999992,165.47439575000004],[-21.149810790000007,164.82980347],[-20.444725040000012,164.16799927],[-20.10561179999999,164.02963256999996],[-20.11998940000001,164.46000671],[-20.459983830000002,165.02000427],[-20.799976350000005,165.46000671],[-21.079973219999992,165.77999878]]]}},{latlng:[-74.65,4.48],flag:"https://restcountries.eu/data/ata.svg",code:"AQ",name:"Antarctica",geoJSON:{type:"Polygon",coordinates:[[[-78.59559631,-163.71289063],[-78.22330474999998,-163.1056366],[-78.38008118,-161.24511719],[-78.69356537,-160.24621582],[-79.0463028,-159.48219298999996],[-79.49697876,-159.20806885],[-79.6341095,-161.12753296],[-79.2813797,-162.43980407999996],[-78.92876434,-163.02728271],[-78.86988068,-163.06645202999997],[-78.59559631,-163.71289063]],[[-73.46179199,-127.28314208999998],[-73.24619293,-126.55847168],[-73.48126984,-125.55957031],[-73.87317657,-124.03182983],[-73.83399963,-124.61942290999998],[-73.7360611,-125.91217041000002],[-73.46179199,-127.28314208999998]],[[-73.65766907,-122.62168121],[-73.32454681,-122.40625],[-73.50097656,-121.2114563],[-73.65769196000001,-119.9187851],[-73.48126984,-118.72410583000001],[-73.83399963,-119.29199982],[-74.08878326,-120.23213196],[-74.01042175,-121.62276459],[-73.65766907,-122.62168121]],[[-71.89414978,-102.33065796],[-71.71773529,-101.70388031],[-71.85498047000002,-100.43090819999999],[-71.93334198,-98.98146057],[-72.07045746,-97.88466644000002],[-71.95292664,-96.78787231],[-72.52114868,-96.20027161],[-72.44277954,-96.98365021],[-72.48195648,-98.19802856],[-72.44277954,-99.43199158],[-72.50155640000001,-100.78344727],[-72.30565643,-101.80187988],[-71.89414978,-102.33065796]],[[-71.34552002,-74.06821442],[-71.22786713,-73.38273621],[-71.2670517,-72.22717285],[-70.75760651,-71.93340302],[-70.38527679,-71.87463379],[-69.58197021,-71.89421844],[-69.11161041,-71.32620239],[-68.95488739,-70.40558624],[-69.32720947,-69.87688446],[-69.69941711,-69.64182281],[-70.15009308,-69.21091461],[-70.58129883,-68.87798309],[-71.03197479,-68.60372925],[-71.48265839,-68.48626709],[-71.87456511999999,-68.6625061],[-72.24688721,-68.93667603],[-72.38401794,-70.11182404],[-72.57991028,-71.22833252],[-72.56031799,-72.54047394],[-72.16841125,-72.05086517],[-72.30565643,-73.22595978],[-72.44277954,-74.342453],[-72.14881897,-75.10629272],[-71.73731994999999,-75.16500854],[-71.34552002,-74.06821442]],[[-80.06528473,-66.89974976],[-80.10449219,-64.64746094],[-80.20244598,-62.49300385],[-79.79094696,-61.74874878],[-79.43821716,-61.21990967],[-79.84971619,-60.18182755],[-80.35915375,-60.475593569999994],[-80.80983734,-60.76942824999999],[-80.67272186,-62.86512375],[-80.73148346,-65.0978775],[-80.39834595,-66.35144043],[-80.35915375,-66.35144043],[-80.06528473,-66.89974976]],[[-78.04699707,-49.194126129999994],[-78.04694366,-48.68492126],[-77.83146667,-47.19641113],[-78.04694366,-45.6882782],[-78.47808838,-44.45436096],[-79.08547974,-44.02349854],[-79.51657104,-43.90596008],[-80.02602386,-43.86681366],[-80.33956909,-45.41407776],[-80.59436035,-47.03967667],[-80.82943726,-48.91992568999999],[-81.02544403,-51.015640260000005],[-80.96656036,-53.38555908],[-80.63353729,-54.69781113],[-80.22203827,-54.52148818999999],[-79.94765472,-52.38668823],[-79.61452484,-51.524845119999995],[-79.18343353,-50.89810562000001],[-78.81111145,-50.44764328],[-78.45844269,-49.84051132],[-78.04699707,-49.194126129999994]],[[-77,166.6000061],[-77.25894165,168.36000061],[-77.3499527,169.44999695],[-77.5999527,169.55000305000002],[-77.79997253,168.25],[-77.89992523,166.8999939],[-77.5999527,166.1499939],[-77.25,166.1499939],[-77,166.6000061]],[[-85.05112877980659,180],[-85.05112877980659,-180],[-84.71335602,-180],[-84.72142792,-179.94250488],[-84.13928986,-179.05850219999996],[-84.45284271,-177.25665283],[-84.08053589,-176.02278137],[-84.41366577,-174.29908752],[-84.06093597,-172.88896179],[-83.88463593,-169.95111084],[-84.11782074,-169],[-84.23735809,-168.53010559],[-84.57038116,-167.02207947],[-84.82517242,-164.18212891],[-85.05112877980659,-161.92959595],[-85.05112877980659,-158.07121276999996],[-85.05112877980659,-155.19226073999997],[-85.05112877980659,-150.94192505000004],[-85.05112877980659,-148.53285217],[-85.05112877980659,-145.88891602],[-85.04077148,-143.10760498],[-84.57038116,-142.89215088],[-84.53121185,-146.82887268],[-84.29613495,-150.06060791],[-83.90422058,-150.90274048],[-83.68862152000001,-153.58616638],[-83.2379303,-153.40968323],[-82.82643127,-153.03767394999997],[-82.45411682,-152.66542053],[-82.0426178,-152.86137389999996],[-81.76836395,-154.52618408],[-81.41564178,-155.29014587],[-81.1020813,-156.83735657],[-81.16085052,-154.40858459],[-81.00414276,-152.09765625],[-81.33727264,-150.64808655],[-81.04331207,-148.86592102],[-80.67098999,-147.22065735],[-80.33785248,-146.41769409],[-79.92634583,-146.77023315],[-79.65209961,-148.06278992],[-79.35813141,-149.53181458],[-79.29936218,-151.58834839],[-79.16223145,-153.39021301],[-79.06417084,-155.32931519],[-78.69184875,-155.97550964],[-78.37830353,-157.26831055],[-78.02568817,-158.05174255],[-76.88910674999998,-158.36509705],[-76.98714447,-157.8752594],[-77.30069733,-156.97441101],[-77.2026825,-155.32931519],[-77.06550598,-153.74275208],[-77.49664307,-152.92007446000002],[-77.39864349,-151.33369446],[-77.1831665,-150.00195313],[-76.90879059,-148.74833679],[-76.57564545000001,-147.61236572],[-76.47770691,-146.1043396],[-76.1053772,-146.14334106],[-75.73305511,-146.49586487],[-75.38033294999998,-146.20222473],[-75.20401764,-144.9094696],[-75.53716278,-144.32199097],[-75.34114075,-142.79426575],[-75.08648682,-141.63858032],[-75.06678009,-140.20895386],[-74.96883392,-138.85751343],[-74.73374939,-137.50601196],[-74.51815033,-136.42875671],[-74.30266571,-135.21437073],[-74.36144257,-134.43112183],[-74.43978882,-133.74555969],[-74.30266571,-132.25700378],[-74.47896576,-130.92527771],[-74.4593811,-129.55410767],[-74.32225037,-128.24183655],[-74.42020416,-126.89051819000001],[-74.51815033,-125.40200806],[-74.47896576,-124.01145935],[-74.49856566999999,-122.56212615999999],[-74.51815033,-121.07349396],[-74.47896576,-119.70246887000002],[-74.18500519,-118.68414307000002],[-74.02828979,-117.46977234],[-74.24389648,-116.21619415000002],[-74.06746674,-115.02153014999999],[-73.71473694,-113.94432830999999],[-74.02828979,-113.29795837],[-74.38102722,-112.94541931],[-74.71416473,-112.29905700999998],[-74.42020416,-111.2610321],[-74.79252624999998,-110.0662384],[-74.91005706999998,-108.71479033999998],[-75.18443298,-107.55930328],[-75.12566376,-106.14907837],[-74.94924164,-104.87599182000001],[-74.98841858,-103.36789703],[-75.12566376,-102.01645660000001],[-75.30196381,-100.64548492],[-74.87088013,-100.11658478],[-74.53773499,-100.76295471],[-74.18500519,-101.25267029],[-74.10665131,-102.54523468],[-73.73432922,-103.11325073],[-73.36201477,-103.32872009],[-72.61745453,-103.68125916000001],[-72.75461578,-102.91748047],[-72.81337737999999,-101.60520935000001],[-72.75461578,-100.31246948],[-72.91132355,-99.13739014],[-73.20529175,-98.11889648],[-73.55802917,-97.68795013],[-73.61679077,-96.33649445],[-73.47966002999999,-95.04393768],[-73.28365326,-93.67290497],[-73.16611481,-92.4389267],[-73.40119171,-91.42050171],[-73.32282257,-90.08864594],[-72.55870055999999,-89.22692108000001],[-73.00939940999999,-88.42383575],[-73.18569946000001,-87.26828003],[-73.0877533,-86.01472473],[-73.47966002999999,-85.19216919000002],[-73.51883698,-83.8799057],[-73.63637542999999,-82.66564941],[-73.85198975,-81.47085571],[-73.47966002999999,-80.68741608],[-73.12693787,-80.29576110999999],[-73.51883698,-79.29685211000002],[-73.42089844,-77.92581177],[-73.63637542999999,-76.90732574],[-73.96952819999998,-76.22184753000002],[-73.8715744,-74.88999176],[-73.65597534,-73.85195923],[-73.40119171,-72.83346558],[-73.26406097,-71.61920166],[-73.14653015,-70.20893097],[-73.00939940999999,-68.93590546],[-72.79379272000001,-67.95658875],[-72.48023987,-67.36898041],[-72.04914855999999,-67.1340332],[-71.63764954,-67.25151062],[-71.24573517,-67.56493378],[-70.85394287,-67.91747284],[-70.46192169,-68.23082733],[-70.10930634,-68.48536682],[-69.71740723000002,-68.54418182],[-69.32549286,-68.44618225],[-68.95317078,-67.9761734],[-68.54166412,-67.5844574],[-68.14982605,-67.42774963],[-67.71874236999999,-67.62363434],[-67.326828,-67.74111176],[-66.87613678,-67.25151062],[-66.58217621,-66.70307922],[-66.20986176,-66.05671692],[-65.89631652999998,-65.37122345],[-65.60246277,-64.56820679],[-65.17137145999999,-64.17649078],[-64.8970108,-63.62812805000001],[-64.64222716999998,-63.00134658999999],[-64.58345031999998,-62.0416832],[-64.27001953000001,-61.41490555],[-64.07401276,-60.709827419999996],[-63.956462859999995,-59.88721466],[-63.70174407999999,-59.16255568999999],[-63.38818740999999,-58.594535830000005],[-63.270660400000004,-57.81110382000001],[-63.52538299999999,-57.22356415],[-63.858520510000005,-57.59568787],[-64.15235901,-58.61412048],[-64.36797333,-59.04501724],[-64.21124268000001,-59.78933334],[-64.30919647,-60.61193848],[-64.54427338,-61.2973671],[-64.79905701,-62.02209091],[-65.09290314,-62.51174927],[-65.48480988,-62.64880753],[-65.85712433,-62.59010696],[-66.19027709999999,-62.12003326000001],[-66.42546082,-62.80552292],[-66.50382996,-63.74565125],[-66.83695984,-64.29402161],[-67.15040587999998,-64.88162231],[-67.58148956,-65.50840759],[-67.95380402000002,-65.66500092],[-68.36524199999998,-65.31246185],[-68.6788559,-64.78368378],[-68.91399384000002,-63.961071010000005],[-69.22753906,-63.19724273999999],[-69.61933136,-62.78593063],[-69.99164581,-62.57052231],[-70.38356018,-62.27668762],[-70.71670532000002,-61.806671140000006],[-71.0890274,-61.51290894000001],[-72.00997162,-61.37578582999999],[-72.38230133,-61.08195114],[-72.77420044,-61.00365448],[-73.16611481,-60.69023132],[-73.69515228,-60.82735442999999],[-74.10665131,-61.37578582999999],[-74.43978882,-61.96332550000001],[-74.57691956,-63.29518127],[-74.92964172,-63.74565125],[-75.26279449,-64.3527298],[-75.63511658,-65.86094666],[-75.79183197,-67.19280243],[-76.00743103,-68.44618225],[-76.22292328,-69.79763031],[-76.6344223,-70.60070801],[-76.67359924,-72.2066803],[-76.6344223,-73.96943665],[-76.71289063,-75.55594634999999],[-76.71289063,-77.24034119],[-77.10468292,-76.9269104],[-77.28104401,-75.39929198999998],[-77.55541992,-74.28279114],[-77.90803528,-73.65601349],[-78.22158813,-74.77251434],[-78.12363434,-76.49608611999999],[-78.37830353,-77.92581177],[-78.78980255,-77.98458862],[-79.18171692,-78.02370453],[-79.5148468,-76.84862518],[-79.88717651,-76.63314819],[-80.25949097,-75.35999298],[-80.41620636,-73.24476624],[-80.69058228,-71.44290161],[-81.00414276,-70.01309204],[-81.31768799,-68.19165039],[-81.47440338,-65.70417786],[-81.7487793,-63.25599289],[-82.0426178,-61.55202484],[-82.37575531000002,-59.69138336],[-82.84603119,-58.71212386999999],[-83.21834564,-58.22246551999999],[-82.86562347,-57.00811386],[-82.57177734000001,-55.362857819999995],[-82.25823212,-53.6197319],[-82.00344086,-51.54362106],[-81.72918701,-49.76129532],[-81.70948029,-47.27391052],[-81.84671783,-44.82566833],[-82.08179474,-42.80834961000001],[-81.65070343,-42.16201401],[-81.35686493,-40.77136612],[-81.33727264,-38.24479294000001],[-81.12166595,-36.26660538],[-80.90618896,-34.38635635],[-80.76893616,-32.3102951],[-80.59263611000002,-30.097084050000003],[-80.33785248,-28.54979897],[-79.98511505,-29.25488663],[-79.63239288,-29.68578148],[-79.26018524,-29.68578148],[-79.29936218,-31.624794010000002],[-79.45608521,-33.68128967],[-79.45608521,-35.6398735],[-79.08376312,-35.91407776],[-78.3392334,-35.77700424],[-78.12363434,-35.32653427],[-77.88843536,-33.89675903],[-77.65343475,-32.21237183],[-77.35946654999998,-30.99804306],[-77.06550598,-29.783714290000002],[-76.67359924,-28.882762909999997],[-76.49729156,-27.51173782],[-76.36016846,-26.16031837],[-76.28168488,-25.47481537],[-76.24250793,-23.92752266],[-76.1053772,-22.458576200000003],[-75.90937041999999,-21.22468185],[-75.67429352,-20.01036072],[-75.43909454,-18.91353798],[-75.12566376,-17.52293777],[-74.79252624999998,-16.64158249],[-74.49856566999999,-15.70147419],[-74.10665131,-15.407673840000001],[-73.8715744,-16.46531296],[-73.46007538,-16.11275482],[-73.14653015,-15.44684219],[-72.95051575000001,-14.408796310000001],[-72.71543884,-13.31198788],[-72.40188599,-12.29351044],[-72.00997162,-11.51007652],[-71.539711,-11.02043819],[-71.26533508,-10.295767779999998],[-71.32410431,-9.10102654],[-71.65723419,-8.61136246],[-71.69642639,-7.41662979],[-71.32410431,-7.377466200000001],[-70.93231200999999,-6.868227959999999],[-71.03025818,-5.79099321],[-71.40257263,-5.53638697],[-71.46134186,-4.34165907],[-71.28491974,-3.0489866700000006],[-71.16738129,-1.7954886],[-71.22615051,-0.65948927],[-71.63764954,-0.22861986999999998],[-71.30451202,0.86821002],[-71.12821198,1.88668001],[-70.99108124000001,3.0226500000000005],[-70.85394287,4.13905001],[-70.61875916,5.15751982],[-70.46192169,6.27392006],[-70.24642944,7.13569021],[-69.89370728000002,7.74285984],[-70.14848327999998,8.48711967],[-70.01124572999998,9.525159840000002],[-70.48151398000002,10.24985981],[-70.83423615,10.81783009],[-70.63834381,11.95382977],[-70.24642944,12.40429974],[-69.97206116,13.422760009999998],[-70.03083038,14.73501015],[-70.40314484,15.12674046],[-70.03083038,15.949339869999998],[-69.91329956,17.02656937],[-69.87412262,18.20170975],[-69.89370728000002,19.2593708],[-70.01124572999998,20.37574959],[-70.07001495,21.45298004],[-70.40314484,21.92304993],[-70.69712067,22.56937981],[-70.52081299000001,23.666179659999997],[-70.48151398000002,24.84133911],[-70.48151398000002,25.97731972],[-70.46192169,27.09371948],[-70.32479858000002,28.09259033],[-70.20726013,29.150230409999995],[-69.93288422,30.03160095],[-69.75658417,30.971729279999998],[-69.65863036999998,31.990190509999998],[-69.38425446,32.75403976],[-68.83562469,33.30245972],[-68.50255585,33.87044144],[-68.65921021,34.90850067],[-69.01193237,35.30020142],[-69.24713135,36.16199875],[-69.16865540000002,37.20003891],[-69.52138519,37.905139919999996],[-69.77616882,38.6493988],[-69.54096985,39.66786957],[-69.10988617000001,40.02040863],[-68.93357849,40.92137146],[-68.60044098,41.95941162],[-68.46331787,42.93870926],[-68.26735687,44.11386108],[-68.05187988,44.89730835],[-67.81668091,45.71990967],[-67.60108185,46.5033493],[-67.71874236999999,47.44345856000001],[-67.36600494,48.34442139000001],[-67.09162903,48.99074936],[-67.11122131,49.930881500000005],[-66.87613678,50.75349045],[-66.52341461,50.94932938],[-66.2490387,51.79153061],[-66.05314636,52.61412811],[-65.89631652999998,53.61302948000001],[-65.81794739,54.53356933999999],[-65.87671661,55.41492843999999],[-65.97478485,56.3550415],[-66.2490387,57.15806961],[-66.68013,57.25600052],[-67.01326752,58.13734818],[-67.28765106,58.74451065000001],[-67.40518188,59.93930054],[-67.67955017,60.60519028],[-67.95380402000002,61.4277916],[-68.01258087,62.38748932000001],[-67.81668091,63.190498350000006],[-67.40518188,64.05233765],[-67.62072754,64.99243927],[-67.73832703,65.97174072],[-67.85586548000002,66.9118576],[-67.93421936,67.89115143],[-67.93421936,68.8900528],[-68.97275543000002,69.71263885],[-69.22753906,69.67344666],[-69.67822266,69.55593872],[-69.93288422,68.59622955],[-70.3052063,67.81276703],[-70.69712067,67.94988251],[-70.67753601,69.06629181],[-71.06943512,68.92917633],[-71.44175720000001,68.41999817],[-71.85325623000001,67.94988251],[-72.16680908000001,68.71375275],[-72.26474762000001,69.86929321],[-72.0883255,71.02488708],[-71.69642639,71.57327271],[-71.32410431,71.90627289],[-71.01066589,72.45465088],[-70.71670532000002,73.08141327],[-70.36397552,73.33602905],[-69.87412262,73.86486816],[-69.77616882,74.49156952],[-69.73699188,75.62757110999999],[-69.61933136,76.62647246999998],[-69.4626236,77.64489746],[-69.07070923000002,78.134552],[-68.69838714999999,78.42835999],[-68.32613373,79.11385345],[-68.07146454,80.09314728],[-67.87545013,80.93534088],[-67.54230499,81.48377991000001],[-67.36600494,82.05175018],[-67.20928955,82.77642059],[-67.30724335,83.77532196],[-67.20928955,84.67623138],[-67.09162903,85.65553283999999],[-67.15040587999998,86.75234985],[-66.87613678,87.47702789],[-66.20989227,87.98626709],[-66.48423767,88.35841369999999],[-66.95450592,88.82846069],[-67.15040587999998,89.67064667],[-67.22887421,90.63036346],[-67.11122131,91.59011841],[-67.18969727,92.60855103],[-67.20928955,93.54866028],[-67.11122131,94.17542267],[-67.16999054000001,95.01760863999999],[-67.3855896,95.78147888],[-67.24846649,96.68240356000001],[-67.24846649,97.75961304],[-67.11122131,98.68019104],[-67.24846649,99.71820831000001],[-66.91532898,100.3841629],[-66.58217621,100.89334869],[-66.30781555,101.57888794],[-65.5632782,102.83241272],[-65.70041656,103.47870636],[-65.97478485,104.2425766],[-66.32740021,104.90846252000001],[-66.93482971,106.18157959],[-66.95450592,107.16088104],[-66.95450592,108.08139038],[-66.83695984,109.15860748000001],[-66.69972992,110.23583220999998],[-66.42546082,111.05847930999998],[-66.13150023999998,111.74397278000001],[-66.0923233,112.86038208000001],[-65.87671661,113.6046524],[-66.07273865,114.38804625999998],[-66.38628387,114.89729309],[-66.69972992,115.60237885000001],[-66.66053772,116.69918823],[-66.91532898,117.38468932999999],[-67.16999054000001,118.57946014],[-67.26805115,119.83293152],[-67.18969727,120.87101746000002],[-66.87613678,121.65441132],[-66.56259154999998,122.32037354],[-66.48423767,123.22129059],[-66.62136078,124.12226105],[-66.71930695,125.16027832],[-66.56259154999998,126.10040283],[-66.56259154999998,127.0014267],[-66.66053772,127.88275146],[-66.75849152,128.80326843],[-66.58217621,129.70423889],[-66.42546082,130.78146362],[-66.38628387,131.79995728],[-66.38628387,132.93588257],[-66.28821564,133.85647583],[-66.20986176,134.75738525],[-65.72000122,135.03161621],[-65.3085022,135.07078552],[-65.58287811,135.69749451],[-66.03356171,135.87379456],[-66.4450531,136.20675659],[-66.77819824,136.61807251],[-66.95450592,137.46026611],[-66.89573669,138.59625244],[-66.87613678,139.90844727],[-66.81737518,140.80943298],[-66.81737518,142.12167358],[-66.79779053,143.06184387],[-66.83695984,144.37408447],[-66.91532898,145.49043274],[-67.22887421,146.1955719],[-67.60108185,145.99967957],[-67.89503479,146.64604187],[-68.13024139,147.72325134],[-68.38489532,148.83966064],[-68.56125641,150.13230896],[-68.71804047,151.48374939],[-68.87481689,152.50224303999997],[-68.89446258999999,153.63818359],[-68.56125641,154.2845459],[-68.83562469,155.16592407],[-69.14913177,155.92977905],[-69.38425446,156.81111145],[-69.48220825,158.02549744],[-69.5997467,159.18103027],[-69.99164581,159.67068481],[-70.22684479,160.80662537],[-70.57958221,161.57049561],[-70.73629761,162.68690491],[-70.71670532000002,163.84243774],[-70.77547455,164.91966248],[-70.75588226,166.11445618],[-70.83423615,167.30912781000004],[-70.97149658,168.42559814],[-71.20655823000001,169.46362305],[-71.40257263,170.50164794999998],[-71.69642639,171.20678711000002],[-72.0883255,171.08921814],[-72.44106293,170.5604248],[-72.89173889000001,170.10992432],[-73.24447632,169.75737],[-73.65597534,169.287323],[-73.81269073,167.9750824],[-74.16542052999999,167.38749695],[-74.38102722,166.0947876],[-74.77294159,165.64439392],[-75.14524841,164.95884705],[-75.45868683,164.23417664],[-75.87018585,163.82286072],[-76.24250793,163.5682373],[-76.6931839,163.4703064],[-77.06550598,163.48991394000004],[-77.45735168,164.05787659],[-77.82967377,164.27337646000004],[-78.18247223,164.74342346],[-78.31952667,166.60411072],[-78.75073242,166.99577332],[-78.90744781,165.19387817],[-79.12294006,163.66619873000002],[-79.16223145,161.76638794],[-79.73046112,160.9241333],[-80.20072937000002,160.74789429],[-80.57303619,160.31697083],[-80.94536591,159.78819275],[-81.27850342,161.11999512],[-81.69000244,161.62928771999998],[-82.06221008,162.49101257],[-82.39533997,163.70533752],[-82.70890808,165.09596252],[-83.02245331,166.60411072],[-83.33588409,168.89564513999997],[-83.8258667,169.40484619],[-84.04134369,172.28393555],[-84.41366577,173.22412109000004],[-84.15888214,175.98570251],[-84.31687163999999,177.13999939000004],[-84.472435,178.27726746000002],[-84.71335602,180],[-85.05112877980659,180]]]}},{latlng:[53,-8],flag:"https://restcountries.eu/data/irl.svg",code:"IE",name:"Ireland",geoJSON:{type:"Polygon",coordinates:[[[53.867580410000016,-6.19789791],[53.15317154000002,-6.032976149999999],[52.26012039,-6.788829799999999],[51.66931915000002,-8.5616045],[51.820449829999994,-9.97709274],[52.86463928000002,-9.16629028],[53.88137054,-9.68850422],[54.66452026000003,-8.32798576],[55.131629939999996,-7.57214451],[54.595821380000004,-7.36600733],[54.05997086000001,-7.57214451],[54.073719020000006,-6.953725340000001],[53.867580410000016,-6.19789791]]]}},{latlng:[40,-4],flag:"https://restcountries.eu/data/esp.svg",code:"ES",name:"Spain",geoJSON:{type:"Polygon",coordinates:[[[41.88056945999999,-9.03482628],[42.592769620000006,-8.98443699],[43.026641850000004,-9.39289665],[43.748329160000004,-7.9781799300000005],[43.56790923999999,-6.75449514],[43.574241640000004,-5.4118681],[43.40346146000003,-4.34783888],[43.45592117000001,-3.5175271000000006],[43.422798160000006,-1.90135002],[43.03401184000001,-1.50277996],[42.57955170000001,0.33805001],[42.79571915,0.70159],[42.34337996999999,1.82676995],[42.472999570000006,2.9859800299999995],[41.892131809999995,3.0395],[41.226081850000014,2.09183002],[41.01472855,0.81050003],[40.67831038999999,0.72136003],[40.12393951000001,0.10671],[39.309978489999985,-0.27870977],[38.73851013,0.11129],[38.29235840000001,-0.46712989000000005],[37.64234161,-0.68337929],[37.44306183,-1.4383986],[36.674140929999986,-2.14646816],[36.658889770000016,-3.41576004],[36.677829739999986,-4.36892414],[36.3246994,-4.99522018],[35.94684982000001,-5.37715816],[36.02981948999999,-5.86641407],[36.367668149999986,-6.23668337],[36.94292068000001,-6.52018499],[37.09780121000001,-7.45372534],[37.428909300000015,-7.5371089],[37.803901669999995,-7.1665182099999996],[38.07574843999998,-7.02927542],[38.37305069000002,-7.37407351],[39.03007126000001,-7.098004340000001],[39.62955855999999,-7.49864912],[39.71189879999998,-7.066588879999999],[40.18453978999999,-7.02642632],[40.330860140000006,-6.8640151000000005],[41.11109161000001,-6.851107120000001],[41.38180161,-6.38908005],[41.883380890000005,-6.66858339],[41.918350220000015,-7.25130701],[41.79206848000003,-7.42249346],[41.790870670000004,-8.01316643],[42.28046035999999,-8.26387024],[42.134681699999994,-8.6719265],[41.88056945999999,-9.03482628]]]}},{latlng:[39.5,-8],flag:"https://restcountries.eu/data/prt.svg",code:"PT",name:"Portugal",geoJSON:{type:"Polygon",coordinates:[[[41.88056945999999,-9.03482628],[42.134681699999994,-8.6719265],[42.28046035999999,-8.26387024],[41.790870670000004,-8.01316643],[41.79206848000003,-7.42249346],[41.918350220000015,-7.25130701],[41.883380890000005,-6.66858339],[41.38180161,-6.38908005],[41.11109161000001,-6.851107120000001],[40.330860140000006,-6.8640151000000005],[40.18453978999999,-7.02642632],[39.71189879999998,-7.066588879999999],[39.62955855999999,-7.49864912],[39.03007126000001,-7.098004340000001],[38.37305069000002,-7.37407351],[38.07574843999998,-7.02927542],[37.803901669999995,-7.1665182099999996],[37.428909300000015,-7.5371089],[37.09780121000001,-7.45372534],[36.83827971999999,-7.85560989],[36.97888184000001,-8.38279438],[36.86880112,-8.89884853],[37.65134811,-8.74608231],[38.266231540000014,-8.83998775],[38.35848999000002,-9.2874403],[38.7374382,-9.52656078],[39.39207077000001,-9.44697666],[39.755100250000005,-9.04828262],[40.159290310000024,-8.97735214],[40.76063919000002,-8.76869965],[41.18432999000001,-8.79085636],[41.54346848000001,-8.99076653],[41.88056945999999,-9.03482628]]]}},{latlng:[52.5,5.75],flag:"https://restcountries.eu/data/nld.svg",code:"NL",name:"Netherlands",geoJSON:{type:"Polygon",coordinates:[[[53.51039886,6.07421017],[53.48217009999998,6.90514994],[53.14405060000002,7.0920701],[52.228431699999994,6.8428602199999995],[51.85203171,6.5893898],[51.85160828000001,5.98865986],[50.80374145999999,6.15666008],[51.03731155,5.606959820000001],[51.47502136,4.97396994],[51.26726150999998,4.04709005],[51.34577179000002,3.3149499899999997],[51.62054824999999,3.83030009],[53.091800690000014,4.70597982],[53.51039886,6.07421017]]]}},{latlng:[50.83333333,4],flag:"https://restcountries.eu/data/bel.svg",code:"BE",name:"Belgium",geoJSON:{type:"Polygon",coordinates:[[[51.34577941999997,3.3149499899999997],[51.26726150999998,4.04709005],[51.47502136,4.97396994],[51.03731155,5.606959820000001],[50.803749079999996,6.15666008],[50.12805175999999,6.04305983],[50.090328219999996,5.78239012],[49.52947997999999,5.67404985],[49.985389709999986,4.79920006],[49.907520290000015,4.28602982],[50.37897873000002,3.58818007],[50.78036117999998,3.12326002],[50.796821590000015,2.65841007],[51.14850997999999,2.5136001100000005],[51.34577941999997,3.3149499899999997]]]}},{latlng:[49.75,6.16666666],flag:"https://restcountries.eu/data/lux.svg",code:"LU",name:"Luxembourg",geoJSON:{type:"Polygon",coordinates:[[[50.12805175999999,6.04305983],[49.90224075000001,6.242720130000001],[49.46382904000001,6.18628979],[49.442680359999976,5.897739890000001],[49.52947997999999,5.67404985],[50.090328219999996,5.78239012],[50.12805175999999,6.04305983]]]}},{latlng:[47,8],flag:"https://restcountries.eu/data/che.svg",code:"CH",name:"Switzerland",geoJSON:{type:"Polygon",coordinates:[[[47.52507019000002,9.59424019],[47.34759139999999,9.6329298],[47.10282135,9.47998047],[46.920730589999984,9.932479859999999],[46.89355087000002,10.44270992],[46.48358153999999,10.36338997],[46.31491089000001,9.92284012],[46.44020843999999,9.18288994],[46.03694916,8.96630001],[46.005168910000016,8.48995018],[46.16366958999998,8.3166399],[45.82452011000003,7.75599003],[45.77693176000001,7.27384996],[45.991138459999995,6.8435998],[46.42966843,6.50008011],[46.27297973999998,6.02258015],[46.72576140999999,6.03739023],[47.28770065000001,6.768730159999999],[47.54182052999999,6.7365799],[47.44974898999998,7.19222021],[47.62057877000001,7.466770170000001],[47.613590240000015,8.31729984],[47.83081818000001,8.52258015],[47.52507019000002,9.59424019]]]}},{latlng:[45.16666666,15.5],flag:"https://restcountries.eu/data/hrv.svg",code:"HR",name:"Croatia",geoJSON:{type:"Polygon",coordinates:[[[45.908878329999986,18.82982063],[45.521518709999995,19.07275963],[45.2365303,19.39045906],[44.860229489999995,19.00547981],[45.081581120000024,18.55323982],[45.067749020000015,17.86178017],[45.23376082999999,17.00213051],[45.21163177,16.53492928],[45.00410843000001,16.31814957],[45.23376082999999,15.9593401],[44.81872939999999,15.75004005],[44.35113144,16.23966026],[44.04124068999999,16.45643997],[43.667709349999996,16.91617012],[43.44636154,17.29739952],[43.028568269999994,17.67490005],[42.65000153,18.55999947],[42.479999539999994,18.45000076],[42.84999847,17.51000023],[43.20999907999999,16.93000031],[43.507228849999976,16.01540947],[44.243221279999986,15.17444992],[44.31792831000003,15.376279830000001],[44.738491059999994,14.920289990000002],[45.07604979999998,14.901599880000001],[45.23376082999999,14.25872993],[44.80213165,13.95224953],[45.13692092999999,13.656979560000002],[45.48416137999999,13.67940998],[45.50032042999999,13.71506023],[45.46617889000001,14.41197968],[45.63496016999999,14.59512043],[45.471710209999976,14.93523979],[45.45233917000002,15.32769012],[45.731800080000006,15.323949809999998],[45.83417130000002,15.6715498],[46.23814011000002,15.76871967],[46.50374984999998,16.56483078],[46.38063048999998,16.88253021],[45.951759339999995,17.63005066],[45.759471889999986,18.45606041],[45.908878329999986,18.82982063]]]}},{latlng:[44,18],flag:"https://restcountries.eu/data/bih.svg",code:"BA",name:"Bosnia and Herzegovina",geoJSON:{type:"Polygon",coordinates:[[[44.860229489999995,19.00547981],[44.862998960000006,19.36803055],[44.423069000000005,19.11761093],[44.03847121999998,19.59976006],[43.56809997999999,19.45400047],[43.52384186000001,19.218519209999997],[43.43252945000001,19.03165054],[43.20011138999999,18.70648003],[42.65000153,18.55999947],[43.028568269999994,17.67490005],[43.44636154,17.29739952],[43.667709349999996,16.91617012],[44.04124068999999,16.45643997],[44.35113144,16.23966026],[44.81872939999999,15.75004005],[45.23376082999999,15.9593401],[45.00410843000001,16.31814957],[45.21163177,16.53492928],[45.23376082999999,17.00213051],[45.067749020000015,17.86178017],[45.081581120000024,18.55323982],[44.860229489999995,19.00547981]]]}},{latlng:[41,20],flag:"https://restcountries.eu/data/alb.svg",code:"AL",name:"Albania",geoJSON:{type:"Polygon",coordinates:[[[41.85541153000001,20.590230940000005],[41.51509094,20.463150020000004],[41.086219790000015,20.60518074],[40.84273911000001,21.02005005],[40.580001830000015,21],[40.435001370000016,20.674999239999995],[40.11000060999998,20.61499977],[39.625,20.149999620000003],[39.69499969000001,19.97999954],[39.915000920000004,19.959999079999996],[40.25075912,19.40611076],[40.72724151999999,19.319049840000005],[41.40954971,19.403549190000003],[41.720001219999986,19.540000920000004],[41.87754822,19.37177086],[42.19573975,19.30448914],[42.688240049999976,19.73806],[42.50009154999999,19.80158997],[42.588630679999994,20.07069969],[42.32025146,20.283739090000005],[42.2178688,20.522949220000005],[41.85541153000001,20.590230940000005]]]}},{latlng:[39,35],flag:"https://restcountries.eu/data/tur.svg",code:"TR",name:"Turkey",geoJSON:{type:"Polygon",coordinates:[[[41.82688903999998,26.11705971],[42.14149094,27.13570976],[42.007370000000016,27.9967308],[41.6228714,28.11551094],[41.29993819999998,28.988470080000003],[41.05495071000003,28.80644035],[40.99982834,27.61903],[40.690559390000004,27.192380909999997],[40.152000429999994,26.357999799999998],[40.617748259999985,26.04335022],[40.82413101,26.05690956],[40.93624877999999,26.294620509999998],[41.56212997,26.60417938],[41.82688903999998,26.11705971]],[[39.46361160000003,26.17077065],[40.419998169999985,27.28000069],[40.45999908000001,28.819999690000003],[41.22000121999999,29.23999977],[41.087619780000004,31.14595032],[41.736278529999986,32.34796143],[42.018959050000014,33.51330185],[42.040218349999996,35.16772842],[41.335369109999974,36.91313934],[40.948589319999996,38.34769058],[41.10277175999998,39.51258849999999],[41.01367188,40.37342834],[41.535648350000024,41.55408095999999],[41.58317947000001,42.61957932000001],[41.092140200000024,43.58274078],[40.74020003999999,43.75265884],[40.25357056000002,43.65642166000001],[40.00500107,44.40000153],[39.71701812999999,44.78858185],[39.42815017999998,44.10924149],[38.28126907000001,44.421421050000006],[37.97159957999999,44.22573853],[37.17044830000001,44.77267075],[37.001499179999996,44.29346085],[37.25622939999999,43.94224930000001],[37.385269169999994,42.77909851],[37.22988129000001,42.34957123],[37.074359890000004,41.21212006],[37.09127045000001,40.67325974],[36.71604919000001,39.52256012],[36.71292876999998,38.699859620000005],[36.901210780000014,38.16773987],[36.62303162000001,37.06674957],[36.81752013999999,36.73949051],[36.25968933,36.6853981],[36.040618900000005,36.41757965],[35.82154845999999,36.1497612],[36.27499008,35.78207016],[36.65060042999999,36.16083145],[36.56544876000001,35.55091095],[36.79552078000002,34.71455002],[36.219970700000005,34.02690125],[36.107551570000005,32.50917053],[36.64427947999999,31.69961929],[36.677879329999996,30.621650699999996],[36.26298141000003,30.39108086],[36.14437103000001,29.69997025],[36.67683028999999,28.732919689999996],[36.65882111,27.64118004],[37.65335083000001,27.04875946],[38.20812987999999,26.31822014],[38.98575973999998,26.804710390000004],[39.46361160000003,26.17077065]]]}},{latlng:[39,22],flag:"https://restcountries.eu/data/grc.svg",code:"GR",name:"Greece",geoJSON:{type:"Polygon",coordinates:[[[40.84273911000001,21.02005005],[40.93127823000002,21.67412949],[41.14986037999999,22.05537033],[41.130489350000005,22.59732056],[41.304798129999995,22.76177025],[41.338008879999975,22.952390670000003],[41.30907822,23.692079539999998],[41.58390045,24.49263954],[41.234470370000004,25.19721031],[41.32889175,26.106130600000004],[41.82688903999998,26.11705971],[41.56212997,26.60417938],[40.93624877999999,26.294620509999998],[40.82413101,26.05690956],[40.85255051000002,25.44766045],[40.94707108,24.9258709],[40.68711852999999,23.7148304],[40.125,24.40800095],[39.96200179999999,23.899999619999996],[39.96099853999998,23.34300041],[40.47600174000001,22.81399918],[40.25654984,22.62627983],[39.65930939000001,22.84975052],[39.18999862999999,23.35000038],[38.97090149000002,22.97312927],[38.509998319999994,23.53000069],[38.22000122,24.02499962],[37.654998779999985,24.04000092],[37.919998169999985,23.11499977],[37.40999984999999,23.409999849999995],[37.30500030999998,22.774999619999996],[36.42250823999999,23.154230119999998],[36.409999850000005,22.48999977],[36.845001219999986,21.67000008],[37.64500046000001,21.29500008],[38.310310360000024,21.12001991],[38.77000045999999,20.72999954],[39.340240480000006,20.217739109999997],[39.625,20.149999620000003],[40.11000060999998,20.61499977],[40.435001370000016,20.674999239999995],[40.580001830000015,21],[40.84273911000001,21.02005005]],[[35.29999924000001,26.29000092],[35.005001070000006,26.16500092],[34.91999816999999,24.72500038],[35.08499908000001,24.73500061],[35.27999878000001,23.514999389999996],[35.705001829999986,23.700000759999998],[35.36801910000001,24.246669770000004],[35.424999240000005,25.024999620000003],[35.354011540000016,25.76923943],[35.18000030999999,25.745000840000003],[35.29999924000001,26.29000092]]]}},{latlng:[41.83333333,22],flag:"https://restcountries.eu/data/mkd.svg",code:"MK",name:"Macedonia",geoJSON:{type:"Polygon",coordinates:[[[41.85541153000001,20.590230940000005],[41.84711075000003,20.71730995],[42.05186080999999,20.76215935],[42.206798549999995,21.35269928],[42.30363846000001,21.91707993],[42.32025146,22.38054085],[41.999290470000005,22.88138008],[41.338008879999975,22.952390670000003],[41.304798129999995,22.76177025],[41.130489350000005,22.59732056],[41.14986037999999,22.05537033],[40.93127823000002,21.67412949],[40.84273911000001,21.02005005],[41.086219790000015,20.60518074],[41.51509094,20.463150020000004],[41.85541153000001,20.590230940000005]]]}},{latlng:[43,25],flag:"https://restcountries.eu/data/bgr.svg",code:"BG",name:"Bulgaria",geoJSON:{type:"Polygon",coordinates:[[[44.23492049999997,22.65711975],[43.82376862000001,22.94485092],[43.89701080000001,23.33229065],[43.741039279999995,24.10070992],[43.68843078999997,25.569290160000005],[43.94350051999999,26.06513977],[44.175991059999994,27.24237061],[43.81246947999999,27.97013092],[43.70748138,28.55809021],[43.293189999999996,28.03910065],[42.57789993,27.67387962],[42.007370000000016,27.9967308],[42.14149094,27.13570976],[41.82688903999998,26.11705971],[41.32889175,26.106130600000004],[41.234470370000004,25.19721031],[41.58390045,24.49263954],[41.30907822,23.692079539999998],[41.338008879999975,22.952390670000003],[41.999290470000005,22.88138008],[42.32025146,22.38054085],[42.461360930000026,22.54499054],[42.58032990000001,22.43659973],[42.89852141999999,22.604789730000004],[43.211181640000014,22.98603058],[43.642810819999994,22.50013924],[44.00804138000003,22.410440440000002],[44.23492049999997,22.65711975]]]}},{latlng:[44,21],flag:"https://restcountries.eu/data/srb.svg",code:"RS",name:"Serbia",geoJSON:{type:"Polygon",coordinates:[[[46.12746047999999,20.22019958],[46.17173004,19.59602928],[45.908878329999986,18.82982063],[45.521518709999995,19.07275963],[45.2365303,19.39045906],[44.860229489999995,19.00547981],[44.862998960000006,19.36803055],[44.423069000000005,19.11761093],[44.03847121999998,19.59976006],[43.56809997999999,19.45400047],[43.52384186000001,19.218519209999997],[43.35229111000002,19.48389053],[43.213779450000004,19.62999916],[43.106040949999986,19.95857048],[42.89852141999999,20.33979988],[42.76570892000001,20.23888969],[42.588630679999994,20.07069969],[42.32025146,20.283739090000005],[42.2178688,20.522949220000005],[41.85541153000001,20.590230940000005],[41.84711075000003,20.71730995],[42.05186080999999,20.76215935],[42.206798549999995,21.35269928],[42.30363846000001,21.91707993],[42.32025146,22.38054085],[42.461360930000026,22.54499054],[42.58032990000001,22.43659973],[42.89852141999999,22.604789730000004],[43.211181640000014,22.98603058],[43.642810819999994,22.50013924],[44.00804138000003,22.410440440000002],[44.23492049999997,22.65711975],[44.40922927999999,22.473979950000004],[44.57801056,22.705709460000005],[44.702518459999986,22.45903015],[44.47840881,22.14506912],[44.76892853,21.56200027],[45.181190490000006,21.48350906],[45.41637038999999,20.87429047],[45.73455810999998,20.76215935],[46.12746047999999,20.22019958]],[[42.588630679999994,20.07069969],[42.76570892000001,20.23888969],[42.89852141999999,20.33979988],[43.106040949999986,19.95857048],[43.213779450000004,19.62999916],[43.35229111000002,19.48389053],[43.52384186000001,19.218519209999997],[43.43252945000001,19.03165054],[43.20011138999999,18.70648003],[42.65000153,18.55999947],[42.479999539999994,18.45000076],[42.28150940000002,18.88213921],[41.955020899999994,19.16246033],[41.87754822,19.37177086],[42.19573975,19.30448914],[42.688240049999976,19.73806],[42.50009154999999,19.80158997],[42.588630679999994,20.07069969]]]}},{latlng:[51,9],flag:"https://restcountries.eu/data/deu.svg",code:"DE",name:"Germany",geoJSON:{type:"Polygon",coordinates:[[[54.98308945000001,9.9218998],[54.59664154000001,9.93959045],[54.36359024000002,10.950119970000001],[54.00870895000001,10.93947983],[54.19649124000001,11.95625019],[54.470371249999985,12.51842022],[54.07550811999998,13.64748955],[53.75701140999999,14.11966038],[53.24819183000001,14.353300089999998],[52.98128127999999,14.074489589999999],[52.62485122999998,14.437629699999999],[52.089958190000004,14.685000420000001],[51.745189669999995,14.60706997],[51.106681820000006,15.01696968],[51.00233840999998,14.570750240000002],[51.11727142,14.30700016],[50.9269104,14.056229590000001],[50.733219150000004,13.33810043],[50.484081269999976,12.96683979],[50.26631926999999,12.24009991],[49.96912003000001,12.415189740000002],[49.54740143000003,12.52105045],[49.307048799999976,13.03131008],[48.87717056,13.59593964],[48.41609955000003,13.24333],[48.289161680000014,12.88411045],[47.63758086999999,13.02585983],[47.46762848000001,12.932640079999999],[47.672389980000005,12.62077045],[47.70307159000001,12.14136028],[47.523780820000006,11.42644024],[47.56639099,10.54448986],[47.302471160000024,10.40207005],[47.58021164000003,9.89606953],[47.52507019000002,9.59424019],[47.83081818000001,8.52258015],[47.613590240000015,8.31729984],[47.62057877000001,7.466770170000001],[48.33301162999999,7.593689920000001],[49.0177803,8.09928036],[49.201938629999994,6.65822983],[49.46382904000001,6.18628979],[49.90224075000001,6.242720130000001],[50.12805175999999,6.04305983],[50.80374145999999,6.15666008],[50.80374145999999,6.15666008],[50.80374145999999,6.15666008],[50.803749079999996,6.15666008],[50.803749079999996,6.15666008],[51.85160828000001,5.98865986],[51.85203171,6.5893898],[52.228431699999994,6.8428602199999995],[53.14405060000002,7.0920701],[53.48217009999998,6.90514994],[53.69395065,7.100409979999999],[53.74832152999999,7.936240199999999],[53.52780913999997,8.12172031],[54.020778660000005,8.80070972],[54.39564132999997,8.57213974],[54.962730410000006,8.52620983],[54.83087158000001,9.28203964],[54.98308945000001,9.9218998]]]}},{latlng:[59,26],flag:"https://restcountries.eu/data/est.svg",code:"EE",name:"Estonia",geoJSON:{type:"Polygon",coordinates:[[[57.79344177000001,24.312839509999996],[58.38343048000001,24.428920749999996],[58.25738144000001,24.061210630000005],[58.61278152,23.42654991],[59.18722916000001,23.33982086],[59.465858459999986,24.60421944],[59.61109924,25.864189149999998],[59.44580078000002,26.94915009],[59.47536849999998,27.98111916],[59.30083083999999,28.13170052],[58.72457123,27.420150760000002],[57.791900629999994,27.7166996],[57.47452163999999,27.2881794],[57.47637939000002,26.4635601],[57.84754181000002,25.602790830000004],[57.970149989999996,25.164590840000002],[57.79344177000001,24.312839509999996]]]}},{latlng:[57,25],flag:"https://restcountries.eu/data/lva.svg",code:"LV",name:"Latvia",geoJSON:{type:"Polygon",coordinates:[[[56.031078340000015,21.05578995],[56.78385925000002,21.09041977],[57.41186905,21.58185005],[57.75337981999999,22.52436066],[57.00622940000001,23.31846046],[57.02568817,24.120759960000004],[57.79344177000001,24.312839509999996],[57.970149989999996,25.164590840000002],[57.84754181000002,25.602790830000004],[57.47637939000002,26.4635601],[57.47452163999999,27.2881794],[57.244239810000025,27.770040509999998],[56.759311679999975,27.85528946],[56.16913986,28.17670059],[55.78329849,27.10247993],[55.61510085999999,26.4943409],[56.10028839000001,25.53306007],[56.16455078000001,25.00094986],[56.37252045000001,24.86070061],[56.27365875000001,23.87824059],[56.33779907000002,22.20113945],[56.031078340000015,21.05578995]]]}},{latlng:[56,24],flag:"https://restcountries.eu/data/ltu.svg",code:"LT",name:"Lithuania",geoJSON:{type:"Polygon",coordinates:[[[54.32754898000002,22.73109055],[54.58274078,22.65102005],[54.8565712,22.75774956],[55.015308379999986,22.315710070000005],[55.19047927999999,21.26844025],[56.031078340000015,21.05578995],[56.33779907000002,22.20113945],[56.27365875000001,23.87824059],[56.37252045000001,24.86070061],[56.16455078000001,25.00094986],[56.10028839000001,25.53306007],[55.61510085999999,26.4943409],[55.167171480000015,26.5883007],[54.84695816,25.768430709999997],[54.28242874000001,25.53636932],[53.90568924000003,24.45067978],[53.91249846999999,23.48413086],[54.22058104999999,23.24401093],[54.32754898000002,22.73109055]]]}},{latlng:[46,25],flag:"https://restcountries.eu/data/rou.svg",code:"RO",name:"Romania",geoJSON:{type:"Polygon",coordinates:[[[47.88217926,22.710529330000004],[48.09632873999998,23.14222908],[47.98559189,23.76098061],[47.98186874000002,24.40203094],[47.73751830999998,24.86630058],[47.89105988000001,25.20775032],[47.98715973,25.945940020000002],[48.22087097,26.19743919],[48.22074126999999,26.619319920000002],[48.12327956999997,26.92416],[47.82677078,27.23386002],[47.40510940999999,27.55114937],[46.81045914,28.12805939],[46.37155914,28.15999985],[45.944580080000016,28.054420470000004],[45.48826981,28.233530040000005],[45.304031369999976,28.67977905],[45.46492004000002,29.1497097],[45.293319699999984,29.60326004],[45.03541182999999,29.62656021],[44.82022094999999,29.141609190000004],[44.91387939000002,28.837860109999998],[43.70748138,28.55809021],[43.81246947999999,27.97013092],[44.175991059999994,27.24237061],[43.94350051999999,26.06513977],[43.68843078999997,25.569290160000005],[43.741039279999995,24.10070992],[43.89701080000001,23.33229065],[43.82376862000001,22.94485092],[44.23492049999997,22.65711975],[44.40922927999999,22.473979950000004],[44.57801056,22.705709460000005],[44.702518459999986,22.45903015],[44.47840881,22.14506912],[44.76892853,21.56200027],[45.181190490000006,21.48350906],[45.41637038999999,20.87429047],[45.73455810999998,20.76215935],[46.12746047999999,20.22019958],[46.31607056000001,21.0219593],[46.994228359999994,21.62648964],[47.67243958000001,22.09976006],[47.88217926,22.710529330000004]]]}},{latlng:[47,29],flag:"https://restcountries.eu/data/mda.svg",code:"MD",name:"Republic of Moldova",geoJSON:{type:"Polygon",coordinates:[[[48.22074126999999,26.619319920000002],[48.36820984,26.85782051],[48.467128749999986,27.52252007],[48.15555954000002,28.259529109999995],[48.11816025000003,28.670890809999996],[47.84909820999999,29.12266922],[47.51020813000001,29.0508709],[47.34664154,29.41514015],[46.92858123999999,29.559680940000003],[46.67438125999998,29.908849719999996],[46.52534102999999,29.83823967],[46.42395020000001,30.02463913],[46.34999846999999,29.760000229999996],[46.37926102000001,29.17064095],[46.517681119999985,29.07209015],[46.43788147000001,28.863000870000004],[46.258850100000004,28.933729170000003],[45.939998630000005,28.659999849999995],[45.596908569999975,28.48526955],[45.48826981,28.233530040000005],[45.944580080000016,28.054420470000004],[46.37155914,28.15999985],[46.81045914,28.12805939],[47.40510940999999,27.55114937],[47.82677078,27.23386002],[48.12327956999997,26.92416],[48.22074126999999,26.619319920000002]]]}},{latlng:[47,20],flag:"https://restcountries.eu/data/hun.svg",code:"HU",name:"Hungary",geoJSON:{type:"Polygon",coordinates:[[[46.85237885000001,16.20228004],[47.49615860000001,16.53426933],[47.71289824999999,16.34057999],[47.71487045000002,16.90376091],[48.123500820000004,16.9796505],[47.86748123000002,17.48848915],[47.75843048000003,17.85714912],[47.88096999999999,18.69651031],[48.08174896,18.77704048],[48.111389159999995,19.17436028],[48.26663971,19.661359790000002],[48.20267867999998,19.76944923],[48.32757186999998,20.239040369999998],[48.562850949999984,20.47356987],[48.62385177999998,20.80130005],[48.31996918000001,21.87223053],[48.42224884000001,22.08562088],[48.15023041000001,22.640790939999995],[47.88217926,22.710529330000004],[47.67243958000001,22.09976006],[46.994228359999994,21.62648964],[46.31607056000001,21.0219593],[46.12746047999999,20.22019958],[46.17173004,19.59602928],[45.908878329999986,18.82982063],[45.759471889999986,18.45606041],[45.951759339999995,17.63005066],[46.38063048999998,16.88253021],[46.50374984999998,16.56483078],[46.84130858999998,16.37047958],[46.85237885000001,16.20228004]]]}},{latlng:[47.33333333,13.33333333],flag:"https://restcountries.eu/data/aut.svg",code:"AT",name:"Austria",geoJSON:{type:"Polygon",coordinates:[[[48.123500820000004,16.9796505],[47.71487045000002,16.90376091],[47.71289824999999,16.34057999],[47.49615860000001,16.53426933],[46.85237885000001,16.20228004],[46.68360137999999,16.01166916],[46.65869903999997,15.1370697],[46.431819920000024,14.63249016],[46.50928879000001,13.80648041],[46.76755905000001,12.376500130000002],[47.11539077999998,12.15307999],[46.941589359999995,11.16483974],[46.75135040000001,11.04856014],[46.89355087000002,10.44270992],[46.920730589999984,9.932479859999999],[47.10282135,9.47998047],[47.34759139999999,9.6329298],[47.52507019000002,9.59424019],[47.58021164000003,9.89606953],[47.302471160000024,10.40207005],[47.56639099,10.54448986],[47.523780820000006,11.42644024],[47.70307159000001,12.14136028],[47.672389980000005,12.62077045],[47.46762848000001,12.932640079999999],[47.63758086999999,13.02585983],[48.289161680000014,12.88411045],[48.41609955000003,13.24333],[48.87717056,13.59593964],[48.555301670000006,14.33887959],[48.96438979999999,14.901439669999998],[49.03908157000001,15.25341034],[48.73389815999998,16.02964973],[48.78580855999999,16.4993],[48.596969599999994,16.96030045],[48.47000122,16.87999916],[48.123500820000004,16.9796505]]]}},{latlng:[52,20],flag:"https://restcountries.eu/data/pol.svg",code:"PL",name:"Poland",geoJSON:{type:"Polygon",coordinates:[[[51.106681820000006,15.01696968],[51.745189669999995,14.60706997],[52.089958190000004,14.685000420000001],[52.62485122999998,14.437629699999999],[52.98128127999999,14.074489589999999],[53.24819183000001,14.353300089999998],[53.75701140999999,14.11966038],[54.05072021000001,14.80288982],[54.51316832999998,16.36347008],[54.85153961000001,17.62280083],[54.68260956,18.62084961],[54.43872069999998,18.69626999],[54.426101679999974,19.66064072],[54.31253051999999,20.89224052],[54.32754898000002,22.73109055],[54.22058104999999,23.24401093],[53.91249846999999,23.48413086],[53.470111849999995,23.527530670000004],[53.08974838,23.80492973],[52.691101069999995,23.79920959],[52.486968989999994,23.199499129999996],[52.02365112000002,23.50799942],[51.578468320000006,23.52706909],[50.70540999999999,24.02997971],[50.42488098000002,23.92275047],[50.30849837999999,23.42650032],[49.47677994,22.51841927],[49.027400969999995,22.776399610000002],[49.08573914,22.558160780000005],[49.47008895999999,21.607799529999998],[49.32878876000001,20.88796043],[49.43146132999998,20.41583061],[49.21712875000002,19.82504082],[49.57157134999999,19.32069969],[49.435859679999986,18.90957069],[49.496231079999994,18.85313988],[49.988651280000006,18.39289093],[50.04904175,17.64942932],[50.362129210000006,17.55456924],[50.473991389999995,16.86874008],[50.2157402,16.71949005],[50.42263031,16.17624092],[50.69773865,16.23863029],[50.78472899999999,15.49094963],[51.106681820000006,15.01696968]]]}},{pattern:_patterns_ua_png__WEBPACK_IMPORTED_MODULE_1___default.a,catImg:_cats_ua_png__WEBPACK_IMPORTED_MODULE_0___default.a,bonAppetit:"Смачного",latlng:[49,32],flag:"https://restcountries.eu/data/ukr.svg",code:"UA",name:"Украина",geoJSON:{type:"Polygon",coordinates:[[[52.101680759999994,31.78597069],[52.061248780000014,32.15943909],[52.28871155000001,32.41207123],[52.238449100000004,32.71575928],[52.33507918999999,33.75268173],[51.768871310000016,34.39175034],[51.566429140000004,34.14197922],[51.25600815000001,34.22481155],[51.2075882,35.02220917],[50.77394104000001,35.37791061],[50.57720183999997,35.35612869],[50.225589749999976,36.62614822],[50.38396835,37.39345932],[49.91566086000002,38.01063919],[49.92646027000001,38.59500884999999],[49.60105132999998,40.06903839000001],[49.30744171,40.08079147],[48.783821109999984,39.67464828],[48.232410430000016,39.89561844],[47.8989296,39.73828125000001],[47.82561874000002,38.77056885],[47.54640961,38.25511169],[47.102188109999986,38.22356033],[47.022220610000005,37.42515945],[46.69869995,36.75986862],[46.64596176000001,35.82366943],[46.273189540000004,34.96231079],[45.6512413,35.02080154],[45.409999850000005,35.50999832],[45.470001219999986,36.52999878],[45.11320876999998,36.33472824],[44.93999862999999,35.24000168],[44.361488339999994,33.88249969],[44.56486129999998,33.32643127],[45.03477097,33.54695129],[45.32746886999999,32.4541893],[45.51918030000002,32.63079834],[45.85155868999999,33.58813095],[46.08058929,33.29853821],[46.33335876000002,31.74416924],[46.70624924,31.675289150000005],[46.58311080999999,30.748739239999995],[46.03240967,30.37763977],[45.293319699999984,29.60326004],[45.46492004000002,29.1497097],[45.304031369999976,28.67977905],[45.48826981,28.233530040000005],[45.596908569999975,28.48526955],[45.939998630000005,28.659999849999995],[46.258850100000004,28.933729170000003],[46.43788147000001,28.863000870000004],[46.517681119999985,29.07209015],[46.37926102000001,29.17064095],[46.34999846999999,29.760000229999996],[46.42395020000001,30.02463913],[46.52534102999999,29.83823967],[46.67438125999998,29.908849719999996],[46.92858123999999,29.559680940000003],[47.34664154,29.41514015],[47.51020813000001,29.0508709],[47.84909820999999,29.12266922],[48.11816025000003,28.670890809999996],[48.15555954000002,28.259529109999995],[48.467128749999986,27.52252007],[48.36820984,26.85782051],[48.22074126999999,26.619319920000002],[48.22087097,26.19743919],[47.98715973,25.945940020000002],[47.89105988000001,25.20775032],[47.73751830999998,24.86630058],[47.98186874000002,24.40203094],[47.98559189,23.76098061],[48.09632873999998,23.14222908],[47.88217926,22.710529330000004],[48.15023041000001,22.640790939999995],[48.42224884000001,22.08562088],[48.82542038,22.28082085],[49.08573914,22.558160780000005],[49.027400969999995,22.776399610000002],[49.47677994,22.51841927],[50.30849837999999,23.42650032],[50.42488098000002,23.92275047],[50.70540999999999,24.02997971],[51.578468320000006,23.52706909],[51.617439270000006,24.00509071],[51.88848114,24.55311966],[51.910659790000025,25.32781982],[51.832271580000004,26.33797073],[51.592288970000006,27.45409012],[51.57223128999999,28.24163055],[51.42770004,28.61762047],[51.602050780000006,28.992839810000003],[51.36822891,29.25494003],[51.41613007000001,30.157369610000003],[51.31948853,30.55511093],[51.822811129999984,30.619480129999996],[52.04233932000002,30.92757988],[52.101680759999994,31.78597069]]]}},{latlng:[53,28],flag:"https://restcountries.eu/data/blr.svg",code:"BY",name:"Belarus",geoJSON:{type:"Polygon",coordinates:[[[53.91249846999999,23.48413086],[53.90568924000003,24.45067978],[54.28242874000001,25.53636932],[54.84695816,25.768430709999997],[55.167171480000015,26.5883007],[55.61510085999999,26.4943409],[55.78329849,27.10247993],[56.16913986,28.17670059],[55.918369289999994,29.22953033],[55.67010117,29.37154007],[55.78945159999999,29.896310810000003],[55.55099869,30.873939509999996],[55.08155060000002,30.97184944],[54.811771390000004,30.75754929],[54.15703964,31.38448906],[53.97462845000002,31.791419980000004],[53.79402923999999,31.73127937],[53.618049619999994,32.40557861],[53.35145187,32.69366074],[53.13272858,32.30455017],[53.16743087999998,31.497640610000005],[53.074001309999986,31.30521011],[52.742080689999995,31.54000092],[52.101680759999994,31.78597069],[52.04233932000002,30.92757988],[51.822811129999984,30.619480129999996],[51.31948853,30.55511093],[51.41613007000001,30.157369610000003],[51.36822891,29.25494003],[51.602050780000006,28.992839810000003],[51.42770004,28.61762047],[51.57223128999999,28.24163055],[51.592288970000006,27.45409012],[51.832271580000004,26.33797073],[51.910659790000025,25.32781982],[51.88848114,24.55311966],[51.617439270000006,24.00509071],[51.578468320000006,23.52706909],[52.02365112000002,23.50799942],[52.486968989999994,23.199499129999996],[52.691101069999995,23.79920959],[53.08974838,23.80492973],[53.470111849999995,23.527530670000004],[53.91249846999999,23.48413086]]]}},{latlng:[62,15],flag:"https://restcountries.eu/data/swe.svg",code:"SE",name:"Sweden",geoJSON:{type:"Polygon",coordinates:[[[65.72376251000001,22.18314934],[65.02600861000002,21.213489530000004],[64.41356659000002,21.36964035],[63.60955048000002,19.77885056],[62.74942017000002,17.84775925],[61.341148379999986,17.11956024],[60.63658141999999,17.83132935],[60.081901550000005,18.78770065],[58.95375061,17.86920929],[58.71981048999999,16.82917976],[57.04109955000002,16.44772911],[56.10430145000002,15.87981033],[56.20087813999998,14.666669850000002],[55.40779877000001,14.10074043],[55.36175156000003,12.94289017],[56.30707932000002,12.62510014],[57.44182968000002,11.78794003],[58.85617065000001,11.02737045],[59.43239975000002,11.46823978],[60.11793899999999,12.30039024],[61.29359055000001,12.63115978],[61.80036926,11.99205971],[63.12831879000002,11.93056011],[64.06625366000002,12.57993984],[64.04911803999998,13.57192993],[64.44542694,13.91991043],[64.78703308000003,13.555700299999998],[66.19387054,15.108420370000001],[67.30242919999999,16.10869026],[68.01393127,16.76889038],[68.01055144999998,17.72916031],[68.56741333,17.99386978],[68.4072113,19.87857056],[69.06513976999999,20.02523994],[69.10624695000003,20.645589829999995],[68.61685181000003,21.978509899999995],[67.93601226999999,23.53948975],[66.39607239,23.56587029],[66.00691223,23.9033699],[65.72376251000001,22.18314934]]]}},{latlng:[40,45],flag:"https://restcountries.eu/data/arm.svg",code:"AM",name:"Armenia",geoJSON:{type:"Polygon",coordinates:[[[41.092140200000024,43.58274078],[41.24708938999999,44.963249209999994],[41.24613189999998,44.96343994],[40.98537064,45.17947006],[40.812290190000006,45.56032181],[40.56148911,45.35919189],[40.21847916000002,45.891910550000006],[39.90000152999999,45.61000061],[39.62802124000002,46.0345192],[39.46414948000001,46.48350906],[38.77059937000001,46.505729679999995],[38.741199489999985,46.14360809],[39.31972122,45.73535919],[39.473999020000015,45.74000168],[39.47174835,45.29816818],[39.74000168,45.00199889999999],[39.71701812999999,44.78858185],[40.00500107,44.40000153],[40.25357056000002,43.65642166000001],[40.74020003999999,43.75265884],[41.092140200000024,43.58274078]]]}},{latlng:[35,38],flag:"https://restcountries.eu/data/syr.svg",code:"SY",name:"Syria",geoJSON:{type:"Polygon",coordinates:[[[33.378681179999994,38.79235076999999],[32.31293105999998,36.83406067],[32.70920181,35.71992874],[32.868110660000006,35.83641052],[33.277431490000005,35.82107162],[33.824901579999995,36.06645966],[34.201789859999984,36.61177826],[34.593940729999986,36.44818115],[34.64492034999999,35.99840927],[35.49742889000002,35.76314163],[35.82154845999999,36.1497612],[36.040618900000005,36.41757965],[36.25968933,36.6853981],[36.81752013999999,36.73949051],[36.62303162000001,37.06674957],[36.901210780000014,38.16773987],[36.71292876999998,38.699859620000005],[36.71604919000001,39.52256012],[37.09127045000001,40.67325974],[37.074359890000004,41.21212006],[37.22988129000001,42.34957123],[36.605861660000016,41.83707808999999],[36.358798979999996,41.289718629999996],[35.62833023000002,41.38399124],[34.41938019000001,41.00616836999999],[33.378681179999994,38.79235076999999]]]}},{latlng:[32,53],flag:"https://restcountries.eu/data/irn.svg",code:"IR",name:"Iran",geoJSON:{type:"Polygon",coordinates:[[[37.19892119999998,53.92156982],[37.39242935000002,54.80033112],[37.96411896,55.51160049],[37.93511962999999,56.18035889],[38.12139129999999,56.61938095000001],[38.02922820999999,57.330440519999996],[37.52230072000002,58.43613052],[37.412990570000005,59.23472977000001],[36.52738953,60.37765884],[36.491588590000006,61.12308121],[35.65008163000001,61.21080016999999],[34.404090880000005,60.80319977],[33.67644881999999,60.528411870000006],[33.52883911000001,60.96369170999999],[32.98126984,60.536079410000006],[32.18291091999998,60.86365128],[31.54808044000001,60.94197083],[31.379510879999994,61.69931030000001],[30.735839839999993,61.78123856],[29.829250340000012,60.87424850000001],[29.303270339999987,61.36928177],[28.699340820000003,61.77183914],[28.25963974000001,62.72782135],[27.378929139999993,62.755439759999994],[27.21703911,63.233909610000005],[26.75654029999999,63.31665039],[26.239969249999994,61.87416840000001],[25.078239439999997,61.49739075000001],[25.380159379999995,59.61614990000001],[25.609949110000006,58.52574921],[25.739910129999984,57.39725113],[26.966110229999995,56.97077942000001],[27.14332008,56.49211884],[26.964639660000007,55.72370148000001],[26.480649950000007,54.71508025999999],[26.812379840000016,53.493080140000004],[27.580850600000005,52.48360825],[27.865680690000005,51.52075958],[28.814519880000013,50.85292816],[30.147760390000002,50.11503983],[29.985710140000002,49.57685089],[30.317089079999995,48.94131088],[29.926780699999995,48.567981720000006],[30.452449799999986,48.0145607],[30.985139850000003,48.00468063],[30.984859470000014,47.68526077],[31.709190369999998,47.84918976],[32.46915054000001,47.33465958],[33.01728821000001,46.10932922],[33.967811579999996,45.41669845999999],[34.74813079999999,45.648448939999994],[35.09326172,46.15179824999999],[35.67737961000002,46.07633972],[35.977581019999995,45.420600889999996],[37.17044830000001,44.77267075],[37.97159957999999,44.22573853],[38.28126907000001,44.421421050000006],[39.42815017999998,44.10924149],[39.71701812999999,44.78858185],[39.335769649999996,44.95270157],[38.874130250000015,45.45774841],[38.741199489999985,46.14360809],[38.77059937000001,46.505729679999995],[39.50836182000002,47.68508148],[39.58224106000001,48.06008148000001],[39.28874969,48.35551071],[38.79402161000001,48.01073837],[38.270378109999996,48.63436127000001],[38.32025908999999,48.883270259999996],[37.582870480000004,49.19961166],[37.37458037999998,50.14775085000001],[36.87282181000001,50.84235001],[36.700431820000006,52.26401900999999],[36.96503067000001,53.82579041],[37.19892119999998,53.92156982]]]}},{latlng:[40,60],flag:"https://restcountries.eu/data/tkm.svg",code:"TM",name:"Turkmenistan",geoJSON:{type:"Polygon",coordinates:[[[35.65008163000001,61.21080016999999],[36.491588590000006,61.12308121],[36.52738953,60.37765884],[37.412990570000005,59.23472977000001],[37.52230072000002,58.43613052],[38.02922820999999,57.330440519999996],[38.12139129999999,56.61938095000001],[37.93511962999999,56.18035889],[37.96411896,55.51160049],[37.39242935000002,54.80033112],[37.19892119999998,53.92156982],[37.90613173999999,53.73550034],[38.95207977,53.88092041],[39.29058837999998,53.10100937],[39.975288389999996,53.35779953],[40.03364182000002,52.69396973],[40.876529689999984,52.91527939],[40.631031040000025,53.85811996],[40.951011660000006,54.736839290000006],[41.551208499999994,54.008289340000005],[42.12319945999999,53.72172164999999],[41.86811066000003,52.91675948999999],[41.13536835000001,52.81467819],[41.783321379999975,52.50246811],[42.116050720000004,52.94430161],[42.32410049000001,54.07942963000001],[42.043968199999995,54.75534821],[41.25986861999999,55.45521927],[41.30863952999999,55.96820068000001],[41.3223114,57.09642029],[41.826030730000014,56.932220459999996],[42.17053985999999,57.7865181],[42.75154114,58.62900161999999],[42.223079680000005,59.97642136000001],[41.42515182,60.08333969],[41.220340730000025,60.465961459999995],[41.266368870000015,61.54718017999999],[41.08485030999999,61.8827095],[40.05389023000002,62.37424850000001],[39.36325835999999,63.5180397],[38.89242172000003,64.17024231],[38.40269089000002,65.21601105],[37.974700930000004,66.54611969],[37.36277007999998,66.51862335],[37.393798830000016,66.21736908],[37.66117858999999,65.74565125],[37.30522919000001,65.58894348],[37.111808779999976,64.74611664],[36.31208037999999,64.54650116],[36.00794983,63.98287963999999],[35.857158659999996,63.19351959000001],[35.40404892000001,62.984680180000005],[35.27067184000001,62.23067093000001],[35.65008163000001,61.21080016999999]]]}},{latlng:[41,64],flag:"https://restcountries.eu/data/uzb.svg",code:"UZ",name:"Uzbekistan",geoJSON:{type:"Polygon",coordinates:[[[37.36277007999998,66.51862335],[37.35614014,67.07576752],[37.14500046000001,67.83000183],[38.157020569999965,68.39202118],[38.90156174,68.17601776],[39.14014816,67.44223022],[39.58047866999999,67.7014389],[39.53343963999998,68.53640747],[40.08615112000001,69.01161957],[40.72782898000001,69.32949829],[40.96020888999999,70.66661072],[40.49650954999998,70.45816803],[40.21852874999998,70.60140991],[40.24436187999997,71.01422119],[40.145851140000005,71.77487946],[40.86602020000001,73.05544281],[41.392898559999985,71.87010956],[41.14358139000002,71.1578598],[41.52000046,70.41999817],[42.167720790000004,71.25921631],[42.266151430000015,70.96231079],[42.08132172000001,70.38894653],[41.38425064,69.07000732],[40.66867064999998,68.63249207],[40.662330629999985,68.25990295],[41.13599013999998,67.98584747],[41.168430330000014,66.71405792],[41.987640380000016,66.51065826],[41.994640350000005,66.02336121],[42.99766159,66.09802246],[43.72806167999999,64.90081787],[43.650081629999995,63.18579102000001],[43.50448990000001,62.01327896],[44.40583037999999,61.05833054],[44.78404617000002,60.240001680000006],[44.159999850000005,59.77000046],[44.36930084000001,59.06285858],[44.997200010000014,59.345710749999995],[45.18999862999998,59.35929489],[45.375,58.96137999999999],[44.73558043999999,58.92142868],[44.212329860000025,58.49713898],[44.47394943,58.284999850000005],[44.89255142,58.284999850000005],[45.49999999999999,58.689998630000005],[45.58679962000001,58.503120419999995],[44.99584960999998,55.928939820000004],[41.30863952999999,55.96820068000001],[41.3223114,57.09642029],[41.826030730000014,56.932220459999996],[42.17053985999999,57.7865181],[42.75154114,58.62900161999999],[42.223079680000005,59.97642136000001],[41.42515182,60.08333969],[41.220340730000025,60.465961459999995],[41.266368870000015,61.54718017999999],[41.08485030999999,61.8827095],[40.05389023000002,62.37424850000001],[39.36325835999999,63.5180397],[38.89242172000003,64.17024231],[38.40269089000002,65.21601105],[37.974700930000004,66.54611969],[37.36277007999998,66.51862335]]]}},{latlng:[41,75],flag:"https://restcountries.eu/data/kgz.svg",code:"KG",name:"Kyrgyzstan",geoJSON:{type:"Polygon",coordinates:[[[42.266151430000015,70.96231079],[42.704288479999995,71.1862793],[42.845401760000016,71.84461212],[42.50090026999998,73.48973846],[43.09127044999999,73.64530182],[43.2983284,74.21286774],[42.87789154000001,75.63696288999999],[42.98801041,76.00032806],[42.96068954,77.65840912000002],[42.856090550000005,79.14219666000001],[42.49668121,79.64364624],[42.34999847000001,80.26000213999998],[42.123950959999995,80.11943817000001],[41.58224105999998,78.54369354],[41.18531036,78.18720245],[41.06647873,76.90445709],[40.427951809999996,76.52635956],[40.56206894000002,75.46782683999999],[40.36642837999998,74.77684021],[39.89397049000001,73.82225037],[39.65999984999998,73.95999908],[39.43125153,73.67537689],[39.279460910000026,71.78468323],[39.60420989999999,70.54914856],[39.52667998999999,69.46488953],[40.10321045000001,69.55960083],[39.9357605,70.6480484],[40.24436187999997,71.01422119],[40.145851140000005,71.77487946],[40.86602020000001,73.05544281],[41.392898559999985,71.87010956],[41.14358139000002,71.1578598],[41.52000046,70.41999817],[42.167720790000004,71.25921631],[42.266151430000015,70.96231079]]]}},{latlng:[39,71],flag:"https://restcountries.eu/data/tjk.svg",code:"TJ",name:"Tajikistan",geoJSON:{type:"Polygon",coordinates:[[[40.24436187999997,71.01422119],[39.9357605,70.6480484],[40.10321045000001,69.55960083],[39.52667998999999,69.46488953],[39.60420989999999,70.54914856],[39.279460910000026,71.78468323],[39.43125153,73.67537689],[38.50582885999999,73.92886353],[38.60649871999998,74.25750732],[38.37884902999999,74.86483765],[37.990001680000006,74.83000183],[37.41999816999999,74.98000336],[37.42155837999999,73.94867706],[37.49525069999999,73.26004028],[37.04755019999999,72.63690186],[36.94828033000001,72.19302368],[36.73815918000001,71.84461212],[37.06565094,71.44869995],[37.90578079,71.54192352],[37.95326996000001,71.23938751],[38.25888823999999,71.3481369],[38.486278529999986,70.80680847],[38.13838959,70.37628937],[37.735160830000005,70.27057648],[37.58821869,70.11656952],[37.60898972,69.51880646],[37.15114975,69.19628143],[37.34434891000001,68.85944366],[37.023109439999985,68.13556671],[37.14500046000001,67.83000183],[38.157020569999965,68.39202118],[38.90156174,68.17601776],[39.14014816,67.44223022],[39.58047866999999,67.7014389],[39.53343963999998,68.53640747],[40.08615112000001,69.01161957],[40.72782898000001,69.32949829],[40.96020888999999,70.66661072],[40.49650954999998,70.45816803],[40.21852874999998,70.60140991],[40.24436187999997,71.01422119]]]}},{latlng:[33,65],flag:"https://restcountries.eu/data/afg.svg",code:"AF",name:"Afghanistan",geoJSON:{type:"Polygon",coordinates:[[[35.65008163000001,61.21080016999999],[35.27067184000001,62.23067093000001],[35.40404892000001,62.984680180000005],[35.857158659999996,63.19351959000001],[36.00794983,63.98287963999999],[36.31208037999999,64.54650116],[37.111808779999976,64.74611664],[37.30522919000001,65.58894348],[37.66117858999999,65.74565125],[37.393798830000016,66.21736908],[37.36277007999998,66.51862335],[37.35614014,67.07576752],[37.14500046000001,67.83000183],[37.023109439999985,68.13556671],[37.34434891000001,68.85944366],[37.15114975,69.19628143],[37.60898972,69.51880646],[37.58821869,70.11656952],[37.735160830000005,70.27057648],[38.13838959,70.37628937],[38.486278529999986,70.80680847],[38.25888823999999,71.3481369],[37.95326996000001,71.23938751],[37.90578079,71.54192352],[37.06565094,71.44869995],[36.73815918000001,71.84461212],[36.94828033000001,72.19302368],[37.04755019999999,72.63690186],[37.49525069999999,73.26004028],[37.42155837999999,73.94867706],[37.41999816999999,74.98000336],[37.13302994000001,75.15802002],[37.02083969000001,74.57589722],[36.83617019999999,74.06757355],[36.72000121999999,72.91999817],[36.509948729999984,71.84628296],[36.07437897,71.26236725],[35.65055846999999,71.4987793],[35.15319824,71.61308289],[34.73310852000001,71.11501312],[34.348918909999995,71.1567688],[33.98884963999999,70.88181305],[34.020118709999984,69.93052673],[33.35852051000002,70.32357788],[33.10549927,69.68714142],[32.501930240000014,69.26251984],[31.90139960999999,69.31774902],[31.620180129999998,68.926651],[31.71331978,68.55692291],[31.582939149999984,67.79270935],[31.303140640000002,67.68338776],[31.304899220000006,66.93888855],[30.738910680000007,66.3814621],[29.887939450000008,66.34645081],[29.472190859999984,65.04686737],[29.56003952,64.35044098],[29.340810779999998,64.14801025],[29.468339920000016,63.55025100999999],[29.318569180000004,62.54985809],[29.829250340000012,60.87424850000001],[30.735839839999993,61.78123856],[31.379510879999994,61.69931030000001],[31.54808044000001,60.94197083],[32.18291091999998,60.86365128],[32.98126984,60.536079410000006],[33.52883911000001,60.96369170999999],[33.67644881999999,60.528411870000006],[34.404090880000005,60.80319977],[35.65008163000001,61.21080016999999]]]}},{latlng:[30,70],flag:"https://restcountries.eu/data/pak.svg",code:"PK",name:"Pakistan",geoJSON:{type:"Polygon",coordinates:[[[37.13302994000001,75.15802002],[36.66680908000002,75.89691162],[35.898399350000005,76.19284058],[35.49401855000001,77.83746337999999],[34.65354918999999,76.87174224999998],[34.50492096000001,75.75704956000001],[34.748878479999995,74.24019623],[34.31769180000001,73.74992371],[33.44145965999998,74.10430145],[32.76490021,74.4515686],[32.271110530000016,75.25863647],[31.692640299999987,74.40589905],[30.979820250000003,74.42137146],[29.976419449999995,73.45066833],[28.961580279999996,72.8237381],[27.91317940000001,71.77768707],[27.98920059,70.61647034],[26.94096947,69.51438904],[26.49188041999999,70.16893768],[25.722219470000002,70.28289795],[25.215099329999997,70.84468079],[24.35652924,71.0432663],[24.359140399999998,68.84259796],[23.69197083,68.176651],[23.944850919999986,67.44367218],[24.66360092,67.14543915],[25.42514037999999,66.37281036],[25.237039570000007,64.53041077],[25.21841049,62.90571976],[25.078239439999997,61.49739075000001],[26.239969249999994,61.87416840000001],[26.75654029999999,63.31665039],[27.21703911,63.233909610000005],[27.378929139999993,62.755439759999994],[28.25963974000001,62.72782135],[28.699340820000003,61.77183914],[29.303270339999987,61.36928177],[29.829250340000012,60.87424850000001],[29.318569180000004,62.54985809],[29.468339920000016,63.55025100999999],[29.340810779999998,64.14801025],[29.56003952,64.35044098],[29.472190859999984,65.04686737],[29.887939450000008,66.34645081],[30.738910680000007,66.3814621],[31.304899220000006,66.93888855],[31.303140640000002,67.68338776],[31.582939149999984,67.79270935],[31.71331978,68.55692291],[31.620180129999998,68.926651],[31.90139960999999,69.31774902],[32.501930240000014,69.26251984],[33.10549927,69.68714142],[33.35852051000002,70.32357788],[34.020118709999984,69.93052673],[33.98884963999999,70.88181305],[34.348918909999995,71.1567688],[34.73310852000001,71.11501312],[35.15319824,71.61308289],[35.65055846999999,71.4987793],[36.07437897,71.26236725],[36.509948729999984,71.84628296],[36.72000121999999,72.91999817],[36.83617019999999,74.06757355],[37.02083969000001,74.57589722],[37.13302994000001,75.15802002]]]}},{latlng:[28,84],flag:"https://restcountries.eu/data/npl.svg",code:"NP",name:"Nepal",geoJSON:{type:"Polygon",coordinates:[[[27.876550670000018,88.12045288],[27.445819849999985,88.04309845],[26.81041908,88.17482758],[26.41463089000001,88.0602417],[26.397899629999994,87.22750092000001],[26.630979539999995,86.0243988],[26.726190569999993,85.25176239000001],[27.234899519999995,84.67501831000001],[27.364509580000018,83.30422974],[27.92547988999999,82],[28.41610909,81.05719757],[28.794460299999987,80.08843994000001],[29.72985077,80.47673798],[30.183490749999997,81.11122894],[30.42271042,81.52581787],[30.11527060999999,82.32749939000001],[29.463729860000015,83.33711243],[29.320230479999974,83.89895630000001],[28.83987999,84.23458862],[28.642770769999984,85.01164246],[28.203580860000013,85.823349],[27.97425078999999,86.95448302999999],[27.876550670000018,88.12045288]]]}},{latlng:[27.5,90.5],flag:"https://restcountries.eu/data/btn.svg",code:"BT",name:"Bhutan",geoJSON:{type:"Polygon",coordinates:[[[27.771749500000013,91.69667816],[27.452610020000026,92.10370636],[26.838310239999995,92.03347015],[26.808649060000008,91.21752167],[26.875709529999984,90.37326813],[26.71940993999998,89.74455260999999],[27.098960879999996,88.83561707],[27.29932022,88.81426238999998],[28.042760850000015,89.47579193],[28.296440120000003,90.01586151],[28.064939500000012,90.7305069],[28.040609360000015,91.25888062],[27.771749500000013,91.69667816]]]}},{latlng:[24,90],flag:"https://restcountries.eu/data/bgd.svg",code:"BD",name:"Bangladesh",geoJSON:{type:"Polygon",coordinates:[[[22.041229249999997,92.67272185999998],[21.3240509,92.65225983],[21.475479129999993,92.30326843],[20.670869829999994,92.36853789999999],[21.19219017000001,92.08290863],[21.701559070000005,92.02522278],[22.182949070000003,91.83487701],[22.76501082999999,91.41708374],[22.80500983999998,90.49598694],[22.392799379999996,90.58692169],[21.83637046999999,90.27294159],[22.039150239999987,89.84745789],[21.857099530000006,89.70204163],[21.9661808,89.41883087000001],[22.0557003,89.03196716],[22.87914084999999,88.876297],[23.631139759999996,88.52976990000002],[24.233699799999986,88.69994353999999],[24.501659390000007,88.08441162],[24.86607933,88.30638123],[25.238689419999996,88.93153381],[25.768070220000013,88.20977783],[26.44651984999999,88.56305695],[26.014400480000003,89.3551178],[25.965080260000015,89.8325119],[25.2697506,89.92067719],[25.132600780000008,90.87220000999999],[25.14743042000001,91.79959106],[24.976699830000015,92.37621307000002],[24.130399700000012,91.91509247],[24.07265091,91.46772766000001],[23.503519060000002,91.15895844],[22.98526954999999,91.70648193],[23.62435913000001,91.86994170999999],[23.62748908999999,92.14605712999999],[22.041229249999997,92.67272185999998]]]}},{latlng:[20,77],flag:"https://restcountries.eu/data/ind.svg",code:"IN",name:"India",geoJSON:{type:"Polygon",coordinates:[[[35.49401855000001,77.83746337999999],[34.32192993000001,78.91227722000002],[33.50619125,78.81108856],[32.99440001999999,79.20889282],[32.483779909999996,79.17611694],[32.61817931999999,78.45842743000001],[31.51589966,78.73889922999999],[30.882730479999992,79.72135162],[30.183490749999997,81.11122894],[29.72985077,80.47673798],[28.794460299999987,80.08843994000001],[28.41610909,81.05719757],[27.92547988999999,82],[27.364509580000018,83.30422974],[27.234899519999995,84.67501831000001],[26.726190569999993,85.25176239000001],[26.630979539999995,86.0243988],[26.397899629999994,87.22750092000001],[26.41463089000001,88.0602417],[26.81041908,88.17482758],[27.445819849999985,88.04309845],[27.876550670000018,88.12045288],[28.086879730000003,88.7303009],[27.29932022,88.81426238999998],[27.098960879999996,88.83561707],[26.71940993999998,89.74455260999999],[26.875709529999984,90.37326813],[26.808649060000008,91.21752167],[26.838310239999995,92.03347015],[27.452610020000026,92.10370636],[27.771749500000013,91.69667816],[27.89687919999999,92.50312042],[28.640659329999988,93.41332245],[29.277450560000013,94.56600189],[29.031719209999995,95.40480804],[29.452800749999987,96.11768341],[28.83097076000001,96.58659362999998],[28.411020280000006,96.24883270000001],[28.26157950999999,97.32714081],[27.882520680000006,97.40260315],[27.69906044,97.05200195],[27.083759310000012,97.13398743],[27.264579769999997,96.41934204],[26.573570250000014,95.12474823],[26.001319890000023,95.15512085],[25.162509920000005,94.60324096999999],[24.675239559999977,94.55265045],[23.85073090000001,94.10677338],[24.078559879999997,93.32520294],[23.043649670000008,93.28636168999999],[22.703119279999996,93.06031799],[22.27845955,93.16609192],[22.041229249999997,92.67272185999998],[23.62748908999999,92.14605712999999],[23.62435913000001,91.86994170999999],[22.98526954999999,91.70648193],[23.503519060000002,91.15895844],[24.07265091,91.46772766000001],[24.130399700000012,91.91509247],[24.976699830000015,92.37621307000002],[25.14743042000001,91.79959106],[25.132600780000008,90.87220000999999],[25.2697506,89.92067719],[25.965080260000015,89.8325119],[26.014400480000003,89.3551178],[26.44651984999999,88.56305695],[25.768070220000013,88.20977783],[25.238689419999996,88.93153381],[24.86607933,88.30638123],[24.501659390000007,88.08441162],[24.233699799999986,88.69994353999999],[23.631139759999996,88.52976990000002],[22.87914084999999,88.876297],[22.0557003,89.03196716],[21.690580369999985,88.88873291],[21.703159330000013,88.20851135],[21.495559689999986,86.97567748999998],[20.74329948000001,87.03314972],[20.151649480000014,86.49938202000001],[19.478580469999997,85.06027985],[18.302009579999996,83.94100952],[17.671230320000006,83.18923187],[17.016620640000006,82.19280243],[16.556659699999994,82.19125366],[16.310209270000012,81.69271851],[15.951970099999988,80.79197693],[15.899169920000007,80.32489777],[15.136420249999999,80.02507019000001],[13.835769650000003,80.23327637],[13.006259920000005,80.28629303],[12.056220050000002,79.86253357],[10.357279780000002,79.85800171],[10.308859830000005,79.34049988000001],[9.546139720000005,78.88535308999998],[9.216529849999997,79.18969727],[8.933050159999995,78.27794647],[8.252949709999996,77.94116974],[7.96553993000001,77.53987122],[8.89927959000001,76.59300232],[10.299619670000004,76.13005065999998],[11.308259960000008,75.74645232999998],[11.781240459999996,75.39608765],[12.74193001,74.86479187],[13.992589950000008,74.61669922],[14.617230419999988,74.44389343],[15.990639689999995,73.53421021],[17.928579329999998,73.11990356],[19.20824051000001,72.82093048],[20.419509890000008,72.82447815],[21.35601997,72.63053894],[20.75744057,71.17527771],[20.87734032,70.47042847],[22.089290619999993,69.16413879],[22.450780869999992,69.64491272],[22.843179700000004,69.34960938],[23.69197083,68.176651],[24.359140399999998,68.84259796],[24.35652924,71.0432663],[25.215099329999997,70.84468079],[25.722219470000002,70.28289795],[26.49188041999999,70.16893768],[26.94096947,69.51438904],[27.98920059,70.61647034],[27.91317940000001,71.77768707],[28.961580279999996,72.8237381],[29.976419449999995,73.45066833],[30.979820250000003,74.42137146],[31.692640299999987,74.40589905],[32.271110530000016,75.25863647],[32.76490021,74.4515686],[33.44145965999998,74.10430145],[34.31769180000001,73.74992371],[34.748878479999995,74.24019623],[34.50492096000001,75.75704956000001],[34.65354918999999,76.87174224999998],[35.49401855000001,77.83746337999999]]]}},{latlng:[46,105],flag:"https://restcountries.eu/data/mng.svg",code:"MN",name:"Mongolia",geoJSON:{type:"Polygon",coordinates:[[[49.29719925000003,87.75128937],[49.470539089999974,88.80554199000001],[50.331798549999995,90.71366119],[50.80218124000002,92.23468781],[50.49528884999999,93.1042099],[50.480529789999984,94.14756775],[50.013420099999976,94.815979],[49.97745895,95.81401825],[49.72605132999997,97.259758],[50.42238997999999,98.2317276],[51.01100922000001,97.82572937],[52.047378540000004,98.86145782],[51.634010310000015,99.98175812000001],[51.51684951999999,100.88950348],[51.25991057999999,102.06520844],[50.51055907999999,102.25588989],[50.089969639999985,103.67653656],[50.27531815000001,104.62158203],[50.40602112,105.88661194000001],[50.27428055000002,106.88883209],[49.79372025000001,107.86818695000001],[49.28255081,108.47518158],[49.29296112,109.40245056],[49.13014983999999,110.6619873],[49.37794875999999,111.58123779000002],[49.543571470000025,112.89772797],[50.24829865,114.36248779],[50.14027022999999,114.96209717],[49.80516815000001,115.48571014],[49.88856125,116.6787796],[49.13460158999999,116.19178008999998],[48.135379789999995,115.48532104],[47.726551060000006,115.74285889000001],[47.85340880999999,116.30893707],[47.69770812999999,117.29551697],[48.06673050000002,118.06414032],[47.74705124,118.86663055],[47.04806137,119.77281952],[46.69268036,119.66326141],[46.805408479999976,118.87431335],[46.672729489999995,117.42173767],[46.38819885000002,116.71787262000001],[45.727218629999996,115.98510742000002],[45.33983993999999,114.46035004],[44.80891037000001,113.46392059],[45.01165008999999,112.43609619000001],[45.10208130000002,111.87333679],[44.45746994000001,111.34838867],[44.07318115000001,111.66770172],[43.74312973,111.82962036],[43.40684128,111.12969208],[42.87123108000002,110.41211699999998],[42.519439699999985,109.24362946000001],[42.48152161000002,107.74476624],[42.134319309999995,106.12931824],[41.59741973999999,104.9650116],[41.908359529999984,104.52227782999998],[41.907478329999996,103.31230927000001],[42.51488113,101.83305359],[42.66381072999999,100.84584045],[42.524688720000015,99.51583862],[42.74887848,97.45175171],[42.72563171000002,96.34938812],[43.31945038000002,95.76249695],[44.24132156000001,95.3068924],[44.352329250000004,94.68895721],[44.9754715,93.48069763],[45.11508179,92.1339035],[45.286060330000005,90.94553374999998],[45.71971893,90.58576965],[46.88813019,90.97080230999998],[47.69355011,90.28085327],[48.06908035000001,88.85428619],[48.59947968,88.01381683],[49.29719925000003,87.75128937]]]}},{latlng:[37,127.5],flag:"https://restcountries.eu/data/kor.svg",code:"KR",name:"Korea, Republic of",geoJSON:{type:"Polygon",coordinates:[[[38.61223984,128.34970093],[37.43238831,129.2129364],[36.78417969,129.46043396],[35.632141109999985,129.4683075],[35.08248901000002,129.09133911],[34.890369420000006,128.18585205],[34.475681300000005,127.38651276],[34.39007186999999,126.48571014],[34.934570310000005,126.37387085],[35.68452835,126.55921173],[36.72549057000001,126.11740875000001],[36.89393996999999,126.86013794],[37.74969864000001,126.17475128],[37.840381619999995,126.23732757999998],[37.80475997999999,126.68370819],[38.25611115,127.07328033],[38.304531099999984,127.78006744],[38.370391850000004,128.20571899],[38.61223984,128.34970093]]]}},{latlng:[40,127],flag:"https://restcountries.eu/data/prk.svg",code:"KP",name:"Korea, Democratic People's Republic of",geoJSON:{type:"Polygon",coordinates:[[[42.39500045999999,130.63999939],[42.220001219999986,130.77999878],[42.27999878,130.3999939],[41.9413681,129.96591187],[41.60110092,129.66734314],[40.88283157,129.70515442],[40.66181182999999,129.18811035],[40.48542022999999,129.01039124],[40.18983841,128.63337708],[40.025398249999995,127.96743011000001],[39.756839749999976,127.53341675],[39.32394027999998,127.50212860000002],[39.213481900000005,127.38546752999999],[39.05091095,127.78334807999998],[38.61223984,128.34970093],[38.370391850000004,128.20571899],[38.304531099999984,127.78006744],[38.25611115,127.07328033],[37.80475997999999,126.68370819],[37.840381619999995,126.23732757999998],[37.74969864000001,126.17475128],[37.940021509999994,125.68913269],[37.75207900999999,125.56845093],[37.66907882999998,125.27532959000001],[37.857208249999985,125.24009705000002],[37.948818210000006,124.98100280999999],[38.108341219999986,124.7121582],[38.54846953999999,124.98599243],[38.66585158999999,125.22197723],[38.84856033000001,125.13288879],[39.387958529999985,125.38659668],[39.55139923000002,125.32112122],[39.66033936000001,124.73748779000002],[39.928501129999994,124.26566314999998],[40.569808959999996,125.07996368],[41.107341770000005,126.18203735000002],[41.816558839999985,126.86907196000001],[41.503139499999996,127.34381866],[41.466770170000004,128.20846558],[41.994281769999986,128.05221558],[42.424991610000006,129.59663391],[42.98540115,129.99421692],[42.39500045999999,130.63999939]]]}},{latlng:[16.16666666,107.83333333],flag:"https://restcountries.eu/data/vnm.svg",code:"VN",name:"Vietnam",geoJSON:{type:"Polygon",coordinates:[[[21.55237006999999,108.05020904999999],[20.696859359999994,106.71504974000001],[19.752050399999998,105.88168335],[19.058170319999995,105.66201019],[18.004129410000015,106.42680359],[16.697450640000003,107.36197662],[16.079750060000002,108.26949310000002],[15.276679989999998,108.87711334000001],[13.426019670000015,109.33524323],[11.66685008999999,109.20014191000001],[11.008310319999982,108.36614227],[10.36450005000001,107.22091675],[9.530850409999994,106.4050827],[8.599760059999985,105.15827179],[9.241040229999992,104.79518127],[9.918499949999992,105.07621765],[10.48653984,104.33435822],[10.889300349999996,105.19992065],[10.961810109999991,106.24964142],[11.567620280000002,105.81051636],[12.3372097,107.4914093],[13.535539630000013,107.61453246999999],[14.202429769999993,107.38273621000002],[15.202170370000008,107.56452179000001],[15.908550260000009,107.31269836],[16.604290009999996,106.55599976],[17.485309599999994,105.92579651],[18.6669693,105.09455872],[19.265169139999994,103.89649962999998],[19.624670030000004,104.18338013],[19.886650089999996,104.82263183999999],[20.75872993000001,104.43502045],[20.766569140000016,103.20384978999999],[21.675140379999995,102.75488281],[22.46475028999999,102.17046356],[22.708799360000008,102.70697784],[22.70375061,103.50453949],[22.81915092,104.47685242],[23.352060319999996,105.32923889],[22.976890560000008,105.81121063],[22.794269560000014,106.72541809],[22.218200679999995,106.56728363],[21.811899189999984,107.04341125],[21.55237006999999,108.05020904999999]]]}},{latlng:[22,98],flag:"https://restcountries.eu/data/mmr.svg",code:"MM",name:"Burma",geoJSON:{type:"Polygon",coordinates:[[[20.186590190000008,99.54328156],[19.752979279999995,98.95967102],[19.708209989999997,98.25373077],[18.627090449999983,97.79776001000002],[18.445430759999997,97.37590026999999],[17.567949299999988,97.85913086],[16.837839129999995,98.49373627000001],[16.177829739999993,98.90335082999998],[15.308489800000002,98.53733826],[15.12370013999999,98.19207764],[14.622019769999985,98.43083191],[13.827509880000006,99.09780884],[13.269289969999996,99.21199799000001],[12.804759980000009,99.1963501],[11.89276981000001,99.5872879],[10.960539819999983,99.03810883],[9.93295956000001,98.55355072],[10.675250050000006,98.45717621],[11.441289900000003,98.76451874],[12.032979970000008,98.42835999],[13.122369770000013,98.509552],[13.64046001000001,98.10360718],[14.837300299999997,97.77770996],[16.10057068,97.59710693000001],[16.928739550000007,97.16452789],[16.427249909999997,96.5057373],[15.714380259999995,95.36933899],[15.80346012,94.80841826999999],[16.037950519999995,94.18881989],[17.277229310000006,94.53344727],[18.213510509999995,94.32478332999999],[19.366489410000014,93.54097748000001],[19.72697067000001,93.66325378],[19.855150220000006,93.07824707],[20.670869829999994,92.36853789999999],[21.475479129999993,92.30326843],[21.3240509,92.65225983],[22.041229249999997,92.67272185999998],[22.27845955,93.16609192],[22.703119279999996,93.06031799],[23.043649670000008,93.28636168999999],[24.078559879999997,93.32520294],[23.85073090000001,94.10677338],[24.675239559999977,94.55265045],[25.162509920000005,94.60324096999999],[26.001319890000023,95.15512085],[26.573570250000014,95.12474823],[27.264579769999997,96.41934204],[27.083759310000012,97.13398743],[27.69906044,97.05200195],[27.882520680000006,97.40260315],[28.26157950999999,97.32714081],[28.335929869999998,97.91195679000002],[27.747230529999992,98.24622345],[27.508819580000004,98.68270111],[26.74353980999999,98.71208953999998],[25.91869926,98.67180634],[25.083650590000016,97.72460174999999],[23.897390369999993,97.60473633000001],[24.063289639999997,98.66029358],[23.142730710000023,98.89875793000002],[22.949029919999994,99.53199768],[22.11831093000001,99.24092865],[21.74294090000001,99.98348999],[21.55884933,100.41652679],[21.850000380000004,101.15000153],[21.436559680000006,101.17999268],[20.78610992000001,100.32914734],[20.41785049000002,100.11595154],[20.186590190000008,99.54328156]]]}},{latlng:[18,105],flag:"https://restcountries.eu/data/lao.svg",code:"LA",name:"Lao People's Democratic Republic",geoJSON:{type:"Polygon",coordinates:[[[14.273220060000007,105.21877289],[14.723939899999996,105.54432678],[15.570320129999999,105.58901978],[16.44186020000002,104.77931976],[17.428859710000008,104.71691895],[18.240959169999996,103.95648956],[18.30964088,103.20018005],[17.96170044,102.99873352],[17.93277931,102.41304779],[18.10910034000001,102.11357117],[17.512500759999995,101.05954742],[18.40892982,101.03594971],[19.462579729999998,101.2820282],[19.50834084000001,100.60629272],[20.109230039999996,100.54888153000002],[20.41785049000002,100.11595154],[20.78610992000001,100.32914734],[21.436559680000006,101.17999268],[21.20165061999999,101.2700119],[21.17436981000001,101.80313873],[22.31818961999999,101.65200042999999],[22.46475028999999,102.17046356],[21.675140379999995,102.75488281],[20.766569140000016,103.20384978999999],[20.75872993000001,104.43502045],[19.886650089999996,104.82263183999999],[19.624670030000004,104.18338013],[19.265169139999994,103.89649962999998],[18.6669693,105.09455872],[17.485309599999994,105.92579651],[16.604290009999996,106.55599976],[15.908550260000009,107.31269836],[15.202170370000008,107.56452179000001],[14.202429769999993,107.38273621000002],[14.570569990000005,106.49635315000002],[13.881090160000003,106.04395294],[14.273220060000007,105.21877289]]]}},{latlng:[15,100],flag:"https://restcountries.eu/data/tha.svg",code:"TH",name:"Thailand",geoJSON:{type:"Polygon",coordinates:[[[12.18659019000001,102.58493804999999],[12.645750050000014,101.68711853],[12.627099990000005,100.83181],[13.412710189999997,100.97847747999998],[13.406860349999999,100.09779358],[12.306989670000014,100.01872253],[10.846380230000003,99.47894287000001],[9.963049889999997,99.15377808000001],[9.23925017999999,99.22241974],[9.207869529999995,99.87387085],[8.295160289999988,100.27964783],[7.4295601800000055,100.45926665999998],[6.856860159999998,101.01732635],[6.740630150000007,101.62306213],[6.221630100000013,102.14118195],[5.8108000800000115,101.81430817],[5.691380020000003,101.15421295],[6.204870220000001,101.0754776],[6.642829899999991,100.25959778000001],[6.464479920000001,100.08576202],[6.84820986,99.69069672],[7.343460080000002,99.51966858000002],[7.907999990000015,98.98825836],[8.38230038,98.50376892],[7.794519899999998,98.33966827],[8.350000379999992,98.15000153],[8.973930360000008,98.25917053],[9.93295956000001,98.55355072],[10.960539819999983,99.03810883],[11.89276981000001,99.5872879],[12.804759980000009,99.1963501],[13.269289969999996,99.21199799000001],[13.827509880000006,99.09780884],[14.622019769999985,98.43083191],[15.12370013999999,98.19207764],[15.308489800000002,98.53733826],[16.177829739999993,98.90335082999998],[16.837839129999995,98.49373627000001],[17.567949299999988,97.85913086],[18.445430759999997,97.37590026999999],[18.627090449999983,97.79776001000002],[19.708209989999997,98.25373077],[19.752979279999995,98.95967102],[20.186590190000008,99.54328156],[20.41785049000002,100.11595154],[20.109230039999996,100.54888153000002],[19.50834084000001,100.60629272],[19.462579729999998,101.2820282],[18.40892982,101.03594971],[17.512500759999995,101.05954742],[18.10910034000001,102.11357117],[17.93277931,102.41304779],[17.96170044,102.99873352],[18.30964088,103.20018005],[18.240959169999996,103.95648956],[17.428859710000008,104.71691895],[16.44186020000002,104.77931976],[15.570320129999999,105.58901978],[14.723939899999996,105.54432678],[14.273220060000007,105.21877289],[14.41672993,104.28141785000001],[14.225729940000011,102.98841858000002],[13.394249919999984,102.3480835],[12.18659019000001,102.58493804999999]]]}},{latlng:[13,105],flag:"https://restcountries.eu/data/khm.svg",code:"KH",name:"Cambodia",geoJSON:{type:"Polygon",coordinates:[[[10.632559779999998,103.49726105],[11.153659820000007,103.09069061],[12.18659019000001,102.58493804999999],[13.394249919999984,102.3480835],[14.225729940000011,102.98841858000002],[14.41672993,104.28141785000001],[14.273220060000007,105.21877289],[13.881090160000003,106.04395294],[14.570569990000005,106.49635315000002],[14.202429769999993,107.38273621000002],[13.535539630000013,107.61453246999999],[12.3372097,107.4914093],[11.567620280000002,105.81051636],[10.961810109999991,106.24964142],[10.889300349999996,105.19992065],[10.48653984,104.33435822],[10.632559779999998,103.49726105]]]}},{latlng:[-16,167],flag:"https://restcountries.eu/data/vut.svg",code:"VU",name:"Vanuatu",geoJSON:{type:"Polygon",coordinates:[[[-15.668780330000006,166.79316711],[-15.392700200000007,166.64987183],[-14.626516339999993,166.62913512999998],[-14.933934210000011,167.10772705],[-15.740006450000003,167.27005005000004],[-15.614582060000004,167.00120544],[-15.668780330000006,166.79316711]],[[-15.891846659999993,167.21681213],[-16.466306689999996,167.84483337000003],[-16.597848889999998,167.51516724],[-16.159976959999995,167.17999268],[-15.891846659999993,167.21681213]]]}},{latlng:[21,57],flag:"https://restcountries.eu/data/omn.svg",code:"OM",name:"Oman",geoJSON:{type:"Polygon",coordinates:[[[26.055459980000006,56.07083893],[26.395929339999995,56.36201859],[26.30911064,56.485668180000005],[25.89599991,56.391399379999996],[25.714609150000005,56.26103973],[26.055459980000006,56.07083893]],[[24.92473984,56.39685822],[24.241680150000004,56.84516143999999],[23.878589630000004,57.40343856999999],[23.747930530000005,58.13694],[23.56567001000001,58.72919846],[22.99238968000001,59.18046951000001],[22.660280229999994,59.45009995],[22.533620830000004,59.80809021],[22.310520170000007,59.80612946],[21.71455002,59.44218826],[21.433889389999994,59.28239821999999],[21.11404037,58.86116028000001],[20.42897034000001,58.48799133000001],[20.481439589999994,58.03432082999999],[20.24299049,57.82640076],[19.736009600000013,57.66574097],[19.06756973,57.78868865999999],[18.944709779999993,57.69438934],[18.947999949999996,57.23424149],[18.574260709999994,56.60964966],[18.087110519999996,56.51219177000001],[17.876070020000004,56.28348923],[17.884140009999985,55.66149139],[17.63229942,55.26992035000001],[17.228370670000004,55.27489090000001],[16.95068932,54.79098129],[17.044979100000013,54.23926163],[16.707660680000007,53.57049942],[16.651060099999984,53.10858154],[17.349729540000006,52.78218079],[18.99999999999999,52],[20.000000000000004,55],[22.000000000000007,55.66666031],[22.708330149999995,55.20832825],[23.110979079999986,55.23447037],[23.52487945999999,55.52582932000001],[23.93359947,55.528610230000005],[24.13055037999999,55.98123932],[24.269609450000015,55.80411911000001],[24.920829769999997,55.88623047],[24.92473984,56.39685822]]]}},{latlng:[33,44],flag:"https://restcountries.eu/data/irq.svg",code:"IQ",name:"Iraq",geoJSON:{type:"Polygon",coordinates:[[[35.977581019999995,45.420600889999996],[35.67737961000002,46.07633972],[35.09326172,46.15179824999999],[34.74813079999999,45.648448939999994],[33.967811579999996,45.41669845999999],[33.01728821000001,46.10932922],[32.46915054000001,47.33465958],[31.709190369999998,47.84918976],[30.984859470000014,47.68526077],[30.985139850000003,48.00468063],[30.452449799999986,48.0145607],[29.926780699999995,48.567981720000006],[29.975809099999985,47.97452927],[30.05907059000002,47.30261992999999],[29.09901999999999,46.56871033],[29.178880690000007,44.709499359999995],[31.190000529999992,41.88999939],[31.889999389999993,40.40000153],[32.160999299999986,39.19549941999999],[33.378681179999994,38.79235076999999],[34.41938019000001,41.00616836999999],[35.62833023000002,41.38399124],[36.358798979999996,41.289718629999996],[36.605861660000016,41.83707808999999],[37.22988129000001,42.34957123],[37.385269169999994,42.77909851],[37.25622939999999,43.94224930000001],[37.001499179999996,44.29346085],[37.17044830000001,44.77267075],[35.977581019999995,45.420600889999996]]]}},{latlng:[29.5,45.75],flag:"https://restcountries.eu/data/kwt.svg",code:"KW",name:"Kuwait",geoJSON:{type:"Polygon",coordinates:[[[29.975809099999985,47.97452927],[29.534490590000008,48.18317032],[29.30628966999999,48.09395981],[28.55203056,48.41611862],[28.526050570000013,47.708820339999995],[29.00251961000002,47.45980835],[29.09901999999999,46.56871033],[30.05907059000002,47.30261992999999],[29.975809099999985,47.97452927]]]}},{latlng:[25.5,51.25],flag:"https://restcountries.eu/data/qat.svg",code:"QA",name:"Qatar",geoJSON:{type:"Polygon",coordinates:[[[24.754749300000007,50.81011963],[25.482429499999995,50.74388885],[26.006980899999984,51.013370509999994],[26.11458969,51.286468510000006],[25.801120760000003,51.58906937],[25.215660099999997,51.60673141],[24.627380369999997,51.38959122000001],[24.556339260000005,51.11243057],[24.754749300000007,50.81011963]]]}},{latlng:[24,54],flag:"https://restcountries.eu/data/are.svg",code:"AE",name:"United Arab Emirates",geoJSON:{type:"Polygon",coordinates:[[[24.42000007999999,51.57352066],[24.294059749999995,51.75745009999999],[24.019819260000006,51.79439926],[24.177450179999997,52.57706833],[24.151309970000003,53.40399932999999],[24.12174988,54.00799179],[24.79788970999999,54.69300842],[25.439149860000015,55.43904114],[26.055459980000006,56.07083893],[25.714609150000005,56.26103973],[24.92473984,56.39685822],[24.920829769999997,55.88623047],[24.269609450000015,55.80411911000001],[24.13055037999999,55.98123932],[23.93359947,55.528610230000005],[23.52487945999999,55.52582932000001],[23.110979079999986,55.23447037],[22.708330149999995,55.20832825],[22.496948240000005,55.00683211999999],[23.001146319999993,52.00071716],[24.014225010000004,51.61772156],[24.42000007999999,51.57352066]]]}},{latlng:[31,36],flag:"https://restcountries.eu/data/jor.svg",code:"JO",name:"Jordan",geoJSON:{type:"Polygon",coordinates:[[[32.39398955999997,35.54563904],[32.70920181,35.71992874],[32.31293105999998,36.83406067],[33.378681179999994,38.79235076999999],[32.160999299999986,39.19549941999999],[32.01020813000001,39.00485992],[31.508409500000006,37.00217819],[30.508499150000002,37.998828890000006],[30.338670729999997,37.66815186],[30.003770830000004,37.5036087],[29.865289689999987,36.7405014],[29.50525093000001,36.5012207],[29.19750977000001,36.06895828],[29.35656929,34.9560318],[29.501329420000015,34.92259979],[31.100049969999983,35.42092896],[31.48908996999998,35.39757919],[31.78251076000001,35.54521942],[32.39398955999997,35.54563904]]]}},{latlng:[28,3],flag:"https://restcountries.eu/data/dza.svg",code:"DZ",name:"Algeria",geoJSON:{type:"Polygon",coordinates:[[[23.471660610000008,11.9995203],[21.565650940000005,8.57291031],[19.601209640000004,5.67757988],[19.155279159999992,4.26742983],[19.057369229999995,3.15812993],[19.69359016,3.14666009],[19.856229780000017,2.68356991],[20.14221954000001,2.06100988],[20.610799789999994,1.82323003],[22.79268074000001,-1.55003858],[24.974569320000008,-4.923314090000001],[27.395740509999985,-8.68439007],[27.589490890000018,-8.66510582],[28.841299060000004,-8.67411041],[29.579229349999988,-7.059218880000001],[29.731700899999993,-6.06062412],[30.000440600000015,-5.24212313],[30.501190189999985,-4.85963631],[30.896959299999992,-3.6904294500000003],[31.637310030000002,-3.64748907],[31.72448920999999,-3.06898761],[32.09434128000001,-2.61661816],[32.26287841999999,-1.30787885],[32.65153122000001,-1.12452972],[32.86402129999998,-1.38803923],[33.919708249999985,-1.7334590000000003],[34.52790833000002,-1.7929894900000003],[35.16841125,-2.16989803],[35.714839939999976,-1.20860004],[35.888648989999986,-0.12742992],[36.301280979999994,0.50388998],[36.605651859999995,1.4669300300000003],[36.783908839999995,3.16166997],[36.865028380000005,4.81575012],[36.71652985,5.320109840000001],[37.11066055000001,6.261819840000001],[37.118389130000004,7.3303899800000005],[36.885719300000005,7.73706007],[36.94641875999998,8.42096043],[36.43318175999998,8.21780968],[35.479881289999994,8.3763504],[34.65512848,8.14097023],[34.097370149999996,7.524479870000001],[33.344120030000006,7.61262989],[32.74832916,8.43045998],[32.506271360000014,8.43908978],[32.102691649999976,9.05560017],[30.30755042999998,9.4821701],[29.424629210000028,9.80566025],[28.95999908000001,9.85999966],[28.14418983,9.68387985],[27.688259120000005,9.7560997],[27.14094925,9.62903976],[26.512199400000014,9.716290470000002],[26.094310760000003,9.31941986],[25.365449909999995,9.91069031],[24.93696022,9.94824028],[24.379310609999997,10.30385971],[24.56251907000001,10.771369929999999],[24.097900390000003,11.5606699],[23.471660610000008,11.9995203]]]}},{latlng:[34,9],flag:"https://restcountries.eu/data/tun.svg",code:"TN",name:"Tunisia",geoJSON:{type:"Polygon",coordinates:[[[30.30755042999998,9.4821701],[32.102691649999976,9.05560017],[32.506271360000014,8.43908978],[32.74832916,8.43045998],[33.344120030000006,7.61262989],[34.097370149999996,7.524479870000001],[34.65512848,8.14097023],[35.479881289999994,8.3763504],[36.43318175999998,8.21780968],[36.94641875999998,8.42096043],[37.34999847000002,9.510000230000001],[37.22999953999999,10.21000004],[36.724029540000004,10.180640220000003],[37.092090610000035,11.028869629999999],[36.90000153,11.10000038],[36.409999850000005,10.60000038],[35.947441099999985,10.59331036],[35.698989869999984,10.93949986],[34.83349990999999,10.80782986],[34.330760960000006,10.14958],[33.785751339999976,10.339650149999999],[33.76874924,10.856849670000003],[33.29333878,11.10846996],[33.13700104,11.48880005],[32.368900300000014,11.43225956],[32.08179854999999,10.9448204],[31.76141929999999,10.63687992],[31.376060489999997,9.950209619999999],[30.961839679999997,10.05659962],[30.539319989999996,9.9700098],[30.30755042999998,9.4821701]]]}},{latlng:[13.46666666,-16.56666666],flag:"https://restcountries.eu/data/gmb.svg",code:"GM",name:"Gambia",geoJSON:{type:"Polygon",coordinates:[[[13.151379589999996,-16.84150314],[13.594960210000004,-16.7136879],[13.623579980000011,-15.62458611],[13.86036015000001,-15.39876652],[13.876489640000003,-15.081748010000002],[13.630359649999997,-14.68699265],[13.625690460000008,-14.3767128],[13.794070239999995,-14.04698849],[13.505049709999994,-13.844976430000001],[13.280590059999987,-14.27770996],[13.29819965,-14.71218777],[13.509499550000005,-15.1411581],[13.278579709999997,-15.5118103],[13.270359989999992,-15.69098854],[13.13027954,-15.93129444],[13.151379589999996,-16.84150314]]]}},{latlng:[-20,47],flag:"https://restcountries.eu/data/mdg.svg",code:"MG",name:"Madagascar",geoJSON:{type:"Polygon",coordinates:[[[-12.469796180000001,49.54352188],[-12.895252229999995,49.80900955],[-13.555746080000002,50.05653],[-14.75876236,50.21741104000001],[-15.226518630000001,50.47655869],[-15.706080439999994,50.3771286],[-16.000238420000002,50.20027161],[-15.414246559999999,49.86059189],[-15.710168839999993,49.672611239999995],[-16.451028820000012,49.863330839999996],[-16.875030520000003,49.77455138999999],[-17.106046679999988,49.49858856000001],[-17.953046799999996,49.43560028],[-19.118780140000005,49.04180908],[-20.49687386,48.548549650000005],[-22.39150047,47.93077087],[-23.781923290000016,47.54771042],[-24.941598889999995,47.09572983],[-25.178422929999996,46.282489780000006],[-25.601419450000012,45.40950011999999],[-25.346090320000005,44.83358002],[-24.988355640000012,44.03974915],[-24.460687640000003,43.76380157],[-23.574104310000003,43.69776917000001],[-22.77686119,43.345638279999996],[-22.05741692000001,43.25416946],[-21.336452479999988,43.43330002],[-21.163299560000006,43.89371109],[-20.830469129999994,43.89638138000001],[-20.072355269999996,44.374309540000006],[-19.43545151,44.46442032],[-18.961969380000006,44.23242188],[-18.331401819999996,44.04296875],[-17.409904479999987,43.96310043],[-16.85045815000001,44.31246185],[-16.216224670000003,44.44652176],[-16.179374689999996,44.94491959],[-15.974391940000006,45.50273895000001],[-15.793428419999996,45.87300873],[-15.780034070000006,46.31225967],[-15.210164070000008,46.882190699999995],[-14.594272610000012,47.7051506],[-14.091214179999985,48.00521851],[-13.663878440000001,47.86901855],[-13.784060479999994,48.2938118],[-13.089185709999988,48.84505844],[-12.4878788,48.86354065],[-12.04052448,49.19462967],[-12.469796180000001,49.54352188]]]}},{latlng:[33.83333333,35.83333333],flag:"https://restcountries.eu/data/lbn.svg",code:"LB",name:"Lebanon",geoJSON:{type:"Polygon",coordinates:[[[33.277431490000005,35.82107162],[33.26427078,35.55278015],[33.08903885000002,35.46068954],[33.09091187000001,35.12604904],[33.90544891,35.48218155],[34.64492034999999,35.99840927],[34.593940729999986,36.44818115],[34.201789859999984,36.61177826],[33.824901579999995,36.06645966],[33.277431490000005,35.82107162]]]}},{latlng:[31.5,34.75],flag:"https://restcountries.eu/data/isr.svg",code:"IL",name:"Israel",geoJSON:{type:"Polygon",coordinates:[[[32.70920181,35.71992874],[32.39398955999997,35.54563904],[32.53252029,35.18394852],[31.86657905999998,34.97467041],[31.754329679999998,35.22591019],[31.616790769999994,34.97052002],[31.353439329999997,34.9274292],[31.48908996999998,35.39757919],[31.100049969999983,35.42092896],[29.501329420000015,34.92259979],[31.21936035,34.26544189],[31.565000529999995,34.52999878],[32.07292175,34.75260162],[32.82736968999999,34.95539093],[33.09091187000001,35.12604904],[33.08903885000002,35.46068954],[33.26427078,35.55278015],[33.277431490000005,35.82107162],[32.868110660000006,35.83641052],[32.70920181,35.71992874]]]}},{latlng:[-3.5,30],flag:"https://restcountries.eu/data/bdi.svg",code:"BI",name:"Burundi",geoJSON:{type:"Polygon",coordinates:[[[-3.293889999999999,29.27636909],[-3.356607679999996,29.27967834],[-3.3568274999999947,29.305519099999998],[-3.554374460000011,29.337409970000003],[-4.024240020000003,29.430759429999995],[-4.451184269999987,29.660629269999998],[-4.452387330000004,29.75351906],[-4.0901169800000154,30.11631966],[-3.5685775300000024,30.50554085],[-3.3593065700000015,30.75223923],[-3.0343086699999895,30.743009569999998],[-2.8076181399999887,30.52766037],[-2.413829570000006,30.46966934],[-2.348498579999994,29.938329700000004],[-2.9178471599999862,29.63217926],[-2.8392472299999936,29.024900440000003],[-3.293889999999999,29.27636909]]]}},{latlng:[-2,30],flag:"https://restcountries.eu/data/rwa.svg",code:"RW",name:"Rwanda",geoJSON:{type:"Polygon",coordinates:[[[-1.1346485599999963,30.41909981],[-1.6989295500000114,30.81615067],[-2.287238120000005,30.758319850000003],[-2.413829570000006,30.46966934],[-2.348498579999994,29.938329700000004],[-2.9178471599999862,29.63217926],[-2.8392472299999936,29.024900440000003],[-2.2921872099999843,29.11749077],[-2.215116740000005,29.25481987],[-1.6200398200000001,29.291910169999998],[-1.3413000100000008,29.57946968],[-1.4433095500000057,29.821510309999997],[-1.1346485599999963,30.41909981]]]}},{latlng:[-12.5,18.5],flag:"https://restcountries.eu/data/ago.svg",code:"AO",name:"Angola",geoJSON:{type:"Polygon",coordinates:[[[-17.301889419999988,11.73423004],[-16.67315292000001,11.640080449999997],[-15.793780329999999,11.77855015],[-14.87832831999999,12.12357998],[-14.449150090000005,12.17564964],[-13.547672269999987,12.500100139999999],[-13.137887000000001,12.73845959],[-12.483598709999995,13.312899590000002],[-12.03863049,13.633729929999998],[-11.297832490000006,13.7387104],[-10.731078150000004,13.686380389999998],[-10.373592379999998,13.38733959],[-9.766878129999993,13.1209898],[-9.166942599999997,12.875379559999999],[-8.95906639000001,12.929039960000003],[-8.562608719999997,13.23643017],[-7.596518989999992,12.933030129999999],[-6.927120209999991,12.72828007],[-6.294447899999998,12.227330209999998],[-6.100108149999993,12.32244968],[-5.965709210000005,12.735150339999999],[-5.984359260000009,13.02484989],[-5.864250179999996,13.375610349999999],[-5.877479080000005,16.32650948],[-6.6226553900000065,16.57317924],[-7.2222952800000035,16.86017036],[-7.545700069999997,17.09000015],[-8.068555829999998,17.47295952],[-7.987695220000004,18.1342392],[-7.846987249999997,18.46417046],[-7.988238810000007,19.0167408],[-7.738158229999988,19.16661072],[-7.155404090000011,19.417520520000004],[-7.1163334799999935,20.03774071],[-6.943068979999984,20.09164047],[-6.939324380000015,20.601810460000003],[-7.299597260000003,20.51477051],[-7.29085827000001,21.7281208],[-7.9200635,21.74644089],[-8.305912019999987,21.949150089999996],[-8.908698079999994,21.80180931],[-9.523719790000005,21.87517929],[-9.894776339999998,22.20877075],[-11.084775920000007,22.155279159999996],[-10.993080140000009,22.40282059],[-11.017586710000003,22.837339400000005],[-10.86786842000001,23.45676994],[-10.92684841000001,23.91222],[-11.237294199999996,24.01787949],[-11.722258569999996,23.90415001],[-12.191298479999997,24.079889300000005],[-12.565848349999994,23.93091011],[-12.911026950000014,24.01612091],[-12.89844036,21.933910370000003],[-16.080284119999995,21.88784027],[-16.898445129999995,22.56249046],[-17.523124690000007,23.21504974],[-17.930646900000006,21.37717056],[-17.78907585,18.95620918],[-17.30994415000001,18.26332092],[-17.353116990000004,14.209710120000002],[-17.42336082,14.058529850000001],[-16.97120284999999,13.462349889999999],[-16.94130898,12.81406975],[-17.111646649999997,12.21547985],[-17.301889419999988,11.73423004]],[[-5.789939880000014,12.18233013],[-5.037965300000005,11.914939880000002],[-4.606207369999989,12.318599700000002],[-4.4380230900000015,12.62075996],[-4.781113150000004,12.99553013],[-4.9912533800000025,12.631620410000002],[-5.248346330000007,12.468000410000002],[-5.684298989999997,12.4366703],[-5.789939880000014,12.18233013]]]}},{latlng:[-26.5,31.5],flag:"https://restcountries.eu/data/swz.svg",code:"SZ",name:"Swaziland",geoJSON:{type:"Polygon",coordinates:[[[-26.73380089,32.07167053],[-27.177915570000003,31.86804008],[-27.285877229999993,31.282789230000002],[-26.74381064999999,30.68596077],[-26.398082730000006,30.67658997],[-26.022626880000004,30.949659349999997],[-25.731460570000003,31.044090269999998],[-25.66019439999999,31.33313942],[-25.84332657000001,31.83774948],[-26.29177666,31.98576927],[-26.73380089,32.07167053]]]}},{latlng:[-18.25,35],flag:"https://restcountries.eu/data/moz.svg",code:"MZ",name:"Mozambique",geoJSON:{type:"Polygon",coordinates:[[[-11.439140320000005,35.31240082],[-11.479566570000003,34.93619919],[-12.055808070000003,34.85963821],[-12.267426490000007,34.70645905],[-12.735880849999997,34.81444931],[-13.561661719999998,34.84838867],[-13.565429690000004,34.9071312],[-13.887840269999995,35.26795959],[-14.611010550000007,35.68682098],[-15.896830559999996,35.77191162],[-16.10744475999999,35.33908081],[-16.801300049999984,35.03380966],[-16.183546070000013,34.38129044],[-15.478630069999994,34.30728149],[-15.01371002000001,34.51766968],[-14.612977029999994,34.45962906],[-14.359939580000008,34.06483078],[-14.451830860000003,33.78969955],[-13.971876139999999,33.21401978],[-14.796088220000009,30.179510119999996],[-15.507794380000009,30.274250030000005],[-15.880858419999994,30.338979720000005],[-15.860948559999997,31.173070909999996],[-16.07198142999999,31.63651085],[-16.319425580000004,31.85201073],[-16.392047880000003,32.32825089],[-16.713377000000012,32.84764099],[-17.979028699999997,32.8498497],[-18.67208672,32.65488815],[-19.419355389999993,32.61201096],[-19.715583800000005,32.77270889],[-20.304281229999997,32.65974045],[-20.395309449999996,32.50870895],[-21.116500849999994,32.24502182],[-22.251501079999993,31.191429139999997],[-23.65895080999999,31.67037964],[-24.369421009999993,31.930580139999996],[-25.48424529999999,31.7524395],[-25.84332657000001,31.83774948],[-26.29177666,31.98576927],[-26.73380089,32.07167053],[-26.742174149999997,32.83013153],[-26.215871809999996,32.91596985],[-26.148550030000003,32.66038895],[-25.727289200000005,32.57463074],[-25.3575592,33.0132103],[-24.81629944,34.21583939],[-24.478336330000005,35.0407486],[-24.122577670000002,35.45875168],[-23.706516270000012,35.60744095],[-23.53533935999999,35.37179184],[-23.070770259999996,35.53392029],[-22.12302399,35.56158066],[-22.387317660000015,35.35665131],[-21.840831759999997,35.37340927],[-21.254358289999992,35.17613983],[-20.496997829999998,34.70188141],[-19.784004210000013,34.78638077],[-19.55279160000001,35.19837952],[-18.842260360000004,35.89649963],[-18.659656520000002,36.28128052],[-17.58637046999999,37.41114044],[-17.10099602,38.53833008],[-16.72089386,39.45256042],[-16.10072708,40.089279170000005],[-15.406296729999987,40.47727966],[-14.691780089999995,40.77548981],[-14.201986309999999,40.59960938],[-12.639176369999996,40.56079865],[-11.761696820000006,40.437278750000004],[-10.765454289999992,40.47838974],[-10.317086219999997,40.31658936],[-10.896866800000003,39.52099991],[-11.285188670000004,38.42757034],[-11.268776889999993,37.82764053],[-11.568752290000006,37.47129059],[-11.594536779999995,36.77513885],[-11.720918659999993,36.51406097],[-11.439140320000005,35.31240082]]]}},{latlng:[-13.5,34],flag:"https://restcountries.eu/data/mwi.svg",code:"MW",name:"Malawi",geoJSON:{type:"Polygon",coordinates:[[[-13.565429690000004,34.9071312],[-13.561661719999998,34.84838867],[-14.002298359999998,35.14873886],[-14.2819643,35.24840927],[-14.2545805,34.6974411],[-13.98999596,34.52596283],[-13.604768750000002,34.53623581],[-12.924410820000004,34.31562042],[-12.264098169999995,33.99679184],[-11.61219597,34.31233597],[-10.899988169999999,34.25],[-10.336126329999995,34.22251892],[-9.806232450000003,33.89450073],[-9.69367027,33.94083786],[-9.417140009999995,33.73971939],[-9.230602259999989,32.7593689],[-9.676698680000001,33.23139191],[-10.525562290000002,33.4856987],[-10.796538350000008,33.31529999],[-11.607206340000008,33.1142807],[-12.435766220000001,33.30638885],[-12.7838583,32.99174881],[-13.712840080000003,32.68817902],[-13.971876139999999,33.21401978],[-14.451830860000003,33.78969955],[-14.359939580000008,34.06483078],[-14.612977029999994,34.45962906],[-15.01371002000001,34.51766968],[-15.478630069999994,34.30728149],[-16.183546070000013,34.38129044],[-16.801300049999984,35.03380966],[-16.10744475999999,35.33908081],[-15.896830559999996,35.77191162],[-14.611010550000007,35.68682098],[-13.887840269999995,35.26795959],[-13.565429690000004,34.9071312]]]}},{latlng:[-15,30],flag:"https://restcountries.eu/data/zmb.svg",code:"ZM",name:"Zambia",geoJSON:{type:"Polygon",coordinates:[[[-9.230602259999989,32.7593689],[-8.930336950000003,32.19187164],[-8.76203823,31.55636978],[-8.594569210000003,31.157751080000004],[-8.747200009999995,31.17404938],[-8.700356480000002,30.88792992],[-8.479090689999987,30.45713997],[-8.291292190000014,30.55149269],[-8.23823071,30.346080780000005],[-8.407026290000006,29.002880100000002],[-8.526550290000012,28.73484993],[-9.16491413,28.449880599999997],[-9.60592842,28.673679350000004],[-10.789908409999994,28.49604034],[-11.793656349999988,28.37225914],[-11.971549990000009,28.642419819999997],[-12.360715870000007,29.341560360000003],[-12.178908350000006,29.6160202],[-13.257214549999992,29.699619289999998],[-13.248944280000005,28.934280399999995],[-12.698612209999997,28.52355003],[-12.27246666,28.1550808],[-12.132763859999994,27.388790129999997],[-11.608754160000004,27.164409640000002],[-11.924410820000002,26.55307007],[-11.784955980000007,25.7523098],[-11.330909729999997,25.41811943],[-11.238676069999995,24.78315926],[-11.262814520000012,24.314519880000002],[-10.951992030000005,24.25712967],[-10.92684841000001,23.91222],[-11.237294199999996,24.01787949],[-11.722258569999996,23.90415001],[-12.191298479999997,24.079889300000005],[-12.565848349999994,23.93091011],[-12.911026950000014,24.01612091],[-12.89844036,21.933910370000003],[-16.080284119999995,21.88784027],[-16.898445129999995,22.56249046],[-17.523124690000007,23.21504974],[-17.29586600999999,24.03384972],[-17.35341835,24.68234062],[-17.57878304,25.07695007],[-17.661787029999996,25.084440230000002],[-17.736513139999996,25.264240259999998],[-17.845996860000007,26.38191986],[-17.96123505,26.70677948],[-17.938049320000008,27.04443932],[-17.29080391,27.5982399],[-16.468387600000003,28.467920300000003],[-16.389739989999992,28.825859069999996],[-16.043039319999984,28.947479250000004],[-15.644698139999997,29.51683998],[-15.507794380000009,30.274250030000005],[-14.796088220000009,30.179510119999996],[-13.971876139999999,33.21401978],[-13.712840080000003,32.68817902],[-12.7838583,32.99174881],[-12.435766220000001,33.30638885],[-11.607206340000008,33.1142807],[-10.796538350000008,33.31529999],[-10.525562290000002,33.4856987],[-9.676698680000001,33.23139191],[-9.230602259999989,32.7593689]]]}},{latlng:[-1,11.75],flag:"https://restcountries.eu/data/gab.svg",code:"GA",name:"Gabon",geoJSON:{type:"Polygon",coordinates:[[[-3.978817699999996,11.09377956],[-2.9695081700000063,10.06614971],[-2.1443281199999955,9.4052496],[-1.1112790100000085,8.79800034],[-0.7790597699999953,8.83008957],[-0.4593397099999964,9.04841042],[0.26864000999999466,9.29137993],[1.0101100199999926,9.49287033],[1.0679199700000073,9.83028984],[1.0576499699999962,11.28509045],[2.261049990000009,11.27643013],[2.326750039999998,11.75168037],[2.192820069999985,12.3593502],[2.321599959999995,12.951339720000002],[2.267110110000014,13.075840000000001],[1.830909969999989,13.00312996],[1.3142100599999815,13.28262043],[1.3956799500000077,14.026639940000003],[1.196910020000012,14.276269909999998],[0.03874999999999123,13.84335041],[-0.5526298900000036,14.316430089999999],[-1.3333795100000052,14.425459860000002],[-1.9982590700000027,14.29924011],[-2.470787999999998,13.99238968],[-2.4287571900000113,13.1096096],[-1.948488350000012,12.5752697],[-2.3917067099999865,12.4957304],[-2.5141565800000025,11.82096004],[-2.7656276200000063,11.47805023],[-3.426879880000007,11.85509968],[-3.978817699999996,11.09377956]]]}},{latlng:[-1,15],flag:"https://restcountries.eu/data/cog.svg",code:"CG",name:"Congo",geoJSON:{type:"Polygon",coordinates:[[[-4.781113150000004,12.99553013],[-4.4380230900000015,12.62075996],[-4.606207369999989,12.318599700000002],[-5.037965300000005,11.914939880000002],[-3.978817699999996,11.09377956],[-3.426879880000007,11.85509968],[-2.7656276200000063,11.47805023],[-2.5141565800000025,11.82096004],[-2.3917067099999865,12.4957304],[-1.948488350000012,12.5752697],[-2.4287571900000113,13.1096096],[-2.470787999999998,13.99238968],[-1.9982590700000027,14.29924011],[-1.3333795100000052,14.425459860000002],[-0.5526298900000036,14.316430089999999],[0.03874999999999123,13.84335041],[1.196910020000012,14.276269909999998],[1.3956799500000077,14.026639940000003],[1.3142100599999815,13.28262043],[1.830909969999989,13.00312996],[2.267110110000014,13.075840000000001],[2.22787999999999,14.337809559999998],[1.963999990000013,15.146340370000003],[1.7276799699999967,15.94091034],[2.267630100000002,16.01287079],[3.1982500599999995,16.53704071],[3.728199959999987,17.13303947],[3.5601899600000038,17.80990982],[3.5043900000000034,18.45307922],[2.9004499899999887,18.39378929],[2.36573004999999,18.09428024],[1.7418400000000045,17.89882088],[0.8556600200000014,17.77420044],[0.2888999900000016,17.82653046],[-0.05809996999999296,17.66356087],[-0.4248499899999837,17.63862991],[-0.7438294299999935,17.52371025],[-1.2258192299999995,16.86531067],[-1.740938310000001,16.40708923],[-2.712369919999996,15.972829820000001],[-3.535160059999999,16.00632095],[-3.855146649999993,15.753529550000001],[-4.34349632,15.171019549999999],[-4.9702301,14.582599639999998],[-4.793097020000004,14.20903015],[-4.509996409999995,14.14494038],[-4.500103470000005,13.600210189999999],[-4.88297318999999,13.25823975],[-4.781113150000004,12.99553013]]]}},{latlng:[0,25],flag:"https://restcountries.eu/data/cod.svg",code:"CD",name:"Democratic Republic of the Congo",geoJSON:{type:"Polygon",coordinates:[[[3.5091700600000046,30.83385086],[4.173699859999992,29.9534893],[4.600790020000015,29.716009140000004],[4.38926983000001,29.159080509999995],[4.455090049999988,28.69668007],[4.287159919999996,28.42900085],[4.408410070000005,27.97999001],[5.233960150000012,27.37424088],[5.127850060000003,27.04406929],[5.150869850000006,26.40273094],[5.256090159999992,25.65047073],[5.17040013999999,25.27878952],[4.92724991,25.128860469999996],[4.897240159999982,24.80504036],[5.108789920000004,24.41053009],[4.609680180000006,23.29722977],[4.710120200000012,22.84147072],[4.633049959999999,22.704130170000003],[4.029170039999996,22.40512085],[4.224339959999998,21.65912056],[4.322790150000009,20.92760086],[4.691669939999995,20.290670390000002],[5.0315198900000055,19.46777916],[4.709499840000015,18.93232918],[4.201789859999995,18.54298973],[3.5043900000000034,18.45307922],[2.9004499899999887,18.39378929],[2.36573004999999,18.09428024],[1.7418400000000045,17.89882088],[0.8556600200000014,17.77420044],[0.2888999900000016,17.82653046],[-0.05809996999999296,17.66356087],[-0.4248499899999837,17.63862991],[-0.7438294299999935,17.52371025],[-1.2258192299999995,16.86531067],[-1.740938310000001,16.40708923],[-2.712369919999996,15.972829820000001],[-3.535160059999999,16.00632095],[-3.855146649999993,15.753529550000001],[-4.34349632,15.171019549999999],[-4.9702301,14.582599639999998],[-4.793097020000004,14.20903015],[-4.509996409999995,14.14494038],[-4.500103470000005,13.600210189999999],[-4.88297318999999,13.25823975],[-4.781113150000004,12.99553013],[-4.9912533800000025,12.631620410000002],[-5.248346330000007,12.468000410000002],[-5.684298989999997,12.4366703],[-5.789939880000014,12.18233013],[-6.100108149999993,12.32244968],[-5.965709210000005,12.735150339999999],[-5.984359260000009,13.02484989],[-5.864250179999996,13.375610349999999],[-5.877479080000005,16.32650948],[-6.6226553900000065,16.57317924],[-7.2222952800000035,16.86017036],[-7.545700069999997,17.09000015],[-8.068555829999998,17.47295952],[-7.987695220000004,18.1342392],[-7.846987249999997,18.46417046],[-7.988238810000007,19.0167408],[-7.738158229999988,19.16661072],[-7.155404090000011,19.417520520000004],[-7.1163334799999935,20.03774071],[-6.943068979999984,20.09164047],[-6.939324380000015,20.601810460000003],[-7.299597260000003,20.51477051],[-7.29085827000001,21.7281208],[-7.9200635,21.74644089],[-8.305912019999987,21.949150089999996],[-8.908698079999994,21.80180931],[-9.523719790000005,21.87517929],[-9.894776339999998,22.20877075],[-11.084775920000007,22.155279159999996],[-10.993080140000009,22.40282059],[-11.017586710000003,22.837339400000005],[-10.86786842000001,23.45676994],[-10.92684841000001,23.91222],[-10.951992030000005,24.25712967],[-11.262814520000012,24.314519880000002],[-11.238676069999995,24.78315926],[-11.330909729999997,25.41811943],[-11.784955980000007,25.7523098],[-11.924410820000002,26.55307007],[-11.608754160000004,27.164409640000002],[-12.132763859999994,27.388790129999997],[-12.27246666,28.1550808],[-12.698612209999997,28.52355003],[-13.248944280000005,28.934280399999995],[-13.257214549999992,29.699619289999998],[-12.178908350000006,29.6160202],[-12.360715870000007,29.341560360000003],[-11.971549990000009,28.642419819999997],[-11.793656349999988,28.37225914],[-10.789908409999994,28.49604034],[-9.60592842,28.673679350000004],[-9.16491413,28.449880599999997],[-8.526550290000012,28.73484993],[-8.407026290000006,29.002880100000002],[-8.23823071,30.346080780000005],[-8.291292190000014,30.55149269],[-8.281441689999996,30.55644035],[-7.979918960000006,30.503129960000003],[-7.477848530000006,30.29486465],[-7.137038229999999,29.96590042],[-6.684785369999988,29.47587013],[-6.07740545,29.21648979],[-5.6035861999999845,29.39859009],[-5.228117940000013,29.148990630000004],[-4.587523939999994,29.132974619999995],[-4.215859410000004,29.24436569],[-4.030867099999995,29.08992004],[-3.355649949999996,29.16625023],[-3.356607679999996,29.27967834],[-3.293889999999999,29.27636909],[-2.8392472299999936,29.024900440000003],[-2.2921872099999843,29.11749077],[-2.215116740000005,29.25481987],[-1.6200398200000001,29.291910169999998],[-1.3413000100000008,29.57946968],[-0.5873798700000032,29.58783913],[-0.2052999400000094,29.819499969999995],[0.5974000100000074,29.87578011],[1.0623199900000035,30.0861702],[1.5838099699999957,30.46850014],[1.8494000400000103,30.852680210000003],[2.204459909999989,31.17416954],[2.339889999999992,30.773319240000003],[3.5091700600000046,30.83385086]]]}},{latlng:[7,21],flag:"https://restcountries.eu/data/caf.svg",code:"CF",name:"Central African Republic",geoJSON:{type:"Polygon",coordinates:[[[7.421909810000003,15.279470439999999],[7.49707985,16.1062603],[7.754310130000003,16.29055023],[7.734759809999994,16.45615959],[7.508329870000009,16.70598984],[7.890920160000008,17.96492004],[8.281310079999992,18.38957024],[8.630900380000009,18.91102982],[8.982910159999998,18.81197929],[9.07485962,19.093990329999997],[9.012700079999997,20.059659959999998],[9.475979799999994,21.00086021],[10.567070009999991,21.72382927],[10.971879960000004,22.231109619999998],[11.14239978999999,22.86417007],[10.714469910000009,22.97756004],[10.089249609999998,23.554290770000005],[9.68122005000001,23.55722046],[9.265060419999998,23.3947506],[8.954290389999992,23.459030149999997],[8.66631031000001,23.805820470000004],[8.22918034000001,24.567350390000005],[7.825089930000008,25.11491966],[7.500080109999995,25.12414932],[6.979300020000006,25.79664993],[6.546599859999989,26.2134304],[5.946710109999998,26.46594048],[5.550960059999997,27.213390349999997],[5.233960150000012,27.37424088],[5.127850060000003,27.04406929],[5.150869850000006,26.40273094],[5.256090159999992,25.65047073],[5.17040013999999,25.27878952],[4.92724991,25.128860469999996],[4.897240159999982,24.80504036],[5.108789920000004,24.41053009],[4.609680180000006,23.29722977],[4.710120200000012,22.84147072],[4.633049959999999,22.704130170000003],[4.029170039999996,22.40512085],[4.224339959999998,21.65912056],[4.322790150000009,20.92760086],[4.691669939999995,20.290670390000002],[5.0315198900000055,19.46777916],[4.709499840000015,18.93232918],[4.201789859999995,18.54298973],[3.5043900000000034,18.45307922],[3.5601899600000038,17.80990982],[3.728199959999987,17.13303947],[3.1982500599999995,16.53704071],[2.267630100000002,16.01287079],[2.557389970000007,15.90736008],[3.0135400300000033,15.86271954],[3.3352999700000026,15.405369760000001],[3.851360080000019,15.03625011],[4.210390090000011,14.950940130000001],[4.732600210000002,14.47836018],[5.030590059999991,14.558959959999997],[5.451769830000007,14.45940971],[6.226950169999994,14.536560060000001],[6.4085102099999975,14.77655983],[7.421909810000003,15.279470439999999]]]}},{latlng:[15,19],flag:"https://restcountries.eu/data/tcd.svg",code:"TD",name:"Chad",geoJSON:{type:"Polygon",coordinates:[[[12.8593998,14.495779989999999],[13.33043002999999,14.5958004],[13.353449819999993,13.95446014],[13.996689800000002,13.956720350000001],[14.367119790000006,13.54039001],[15.684370039999997,13.972169879999997],[16.62729073,15.24775028],[17.92794991,15.30045033],[19.957189560000007,15.685729980000001],[20.38760947999999,15.903269769999998],[20.73041915999999,15.4871397],[21.04845047000001,15.471059799999999],[21.30850983,15.09689045],[22.862949369999992,14.851300239999999],[23.40971946999998,15.86085033],[21.495090479999998,19.84926033],[19.580469129999994,23.83765984],[15.610839840000006,23.886890409999996],[15.68072032999999,23.02458954],[14.944290159999994,22.5679493],[14.326820370000014,22.30351067],[14.093179699999999,22.512020110000005],[13.786479949999995,22.183290480000004],[13.372320180000003,22.29657936],[12.95545959000001,22.03759003],[12.58817959,21.93680954],[12.64605045000001,22.288009640000002],[12.260239600000004,22.497619630000003],[11.679360389999996,22.50868988],[11.384610179999996,22.8762207],[11.14239978999999,22.86417007],[10.971879960000004,22.231109619999998],[10.567070009999991,21.72382927],[9.475979799999994,21.00086021],[9.012700079999997,20.059659959999998],[9.07485962,19.093990329999997],[8.982910159999998,18.81197929],[8.630900380000009,18.91102982],[8.281310079999992,18.38957024],[7.890920160000008,17.96492004],[7.508329870000009,16.70598984],[7.734759809999994,16.45615959],[7.754310130000003,16.29055023],[7.49707985,16.1062603],[7.421909810000003,15.279470439999999],[7.6928000499999944,15.43609047],[8.382149699999998,15.120880129999998],[8.79611015000001,14.98001957],[8.965869899999996,14.54444981],[9.549480439999991,13.95421982],[10.021369929999997,14.17146015],[9.92092037,14.62720966],[9.992119789999997,14.90937042],[9.982330320000013,15.46788025],[10.891340259999993,14.923589709999998],[11.55556964999999,14.960180280000001],[12.21905041,14.893360139999999],[12.8593998,14.495779989999999]]]}},{latlng:[13,-2],flag:"https://restcountries.eu/data/bfa.svg",code:"BF",name:"Burkina Faso",geoJSON:{type:"Polygon",coordinates:[[[9.642459869999998,-2.82748961],[9.900329589999991,-3.51188707],[9.86235999999999,-3.98043656],[9.610850330000005,-4.33024979],[9.82199001,-4.77989912],[10.15272045,-4.95463896],[10.370750430000006,-5.404337879999999],[10.9512701,-5.47056913],[11.375140189999987,-5.197835450000001],[11.713859559999998,-5.2209444000000005],[12.542650220000002,-4.42715693],[13.228429790000002,-4.28040409],[13.472479820000006,-4.00639439],[13.33765983999999,-3.52280998],[13.54125977,-3.10371947],[13.798150060000001,-2.9676799799999998],[14.246410370000001,-2.19182944],[14.559020040000007,-2.00102997],[14.973830219999988,-1.06637907],[15.116160390000005,-0.51583916],[14.924309729999997,-0.26625982],[14.928919790000002,0.37489],[14.44423962,0.29563999],[13.98873043,0.42990999999999996],[13.335749630000004,0.99304998],[12.851829529999995,1.02410996],[12.625020030000004,2.17710996],[11.940139769999996,2.15445995],[11.64116000999999,1.9359799599999998],[11.54771041999999,1.4471499900000002],[11.110509870000008,1.24346006],[10.997329709999994,0.89955997],[11.018679619999997,0.023810000000000005],[11.098340029999994,-0.43868989],[10.936929699999999,-0.76156998],[11.009810450000005,-1.2033391],[10.962679859999989,-2.94039845],[10.395350459999998,-2.96389914],[9.642459869999998,-2.82748961]]]}},{latlng:[8.5,-11.5],flag:"https://restcountries.eu/data/sle.svg",code:"SL",name:"Sierra Leone",geoJSON:{type:"Polygon",coordinates:[[[6.785910130000003,-11.438768389999998],[6.860089779999995,-11.70819664],[7.262949939999998,-12.42810631],[7.798649790000001,-12.94903088],[8.163949970000013,-13.12401676],[8.90305042,-13.24653816],[9.342709539999998,-12.71193886],[9.620189669999997,-12.5967207],[9.835829730000002,-12.42592239],[9.858579640000006,-12.15030861],[10.046970369999997,-11.917258260000002],[10.04588032,-11.11748028],[9.688240050000006,-10.83914852],[9.267910000000002,-10.62239647],[8.977190019999986,-10.65477467],[8.715530400000006,-10.49431229],[8.348890299999995,-10.505476000000002],[8.406200409999997,-10.230110169999998],[7.93944979,-10.69557953],[7.396709920000008,-11.14670086],[7.105850219999991,-11.19976616],[6.785910130000003,-11.438768389999998]]]}},{latlng:[6.5,-9.5],flag:"https://restcountries.eu/data/lbr.svg",code:"LR",name:"Liberia",geoJSON:{type:"Polygon",coordinates:[[[4.364560129999994,-7.7121563],[4.355750080000006,-7.9740834199999995],[4.8324198699999865,-9.00477219],[5.593560219999999,-9.91342831],[6.140699860000005,-10.76536655],[6.785910130000003,-11.438768389999998],[7.105850219999991,-11.19976616],[7.396709920000008,-11.14670086],[7.93944979,-10.69557953],[8.406200409999997,-10.230110169999998],[8.42850018,-10.01654625],[8.541060450000012,-9.755352020000002],[7.92853021999999,-9.337286],[7.526909829999999,-9.40333652],[7.313910009999988,-9.20877647],[7.309040069999987,-8.92605209],[7.71165991,-8.72212982],[7.686049940000004,-8.43927574],[7.395219800000007,-8.48543644],[6.911799910000005,-8.38543892],[6.467579839999999,-8.60286999],[6.193039890000001,-8.31134033],[6.126180170000009,-7.993709090000001],[5.707349780000008,-7.57013416],[5.313340190000015,-7.53973007],[5.1881499299999945,-7.635354040000001],[4.364560129999994,-7.7121563]]]}},{latlng:[12,-15],flag:"https://restcountries.eu/data/gnb.svg",code:"GW",name:"Guinea-Bissau",geoJSON:{type:"Polygon",coordinates:[[[11.040410039999985,-15.130290029999998],[11.458479880000008,-15.66417885],[11.524600030000014,-16.08519936],[11.806509969999999,-16.31474686],[11.958709720000003,-16.30895996],[12.170909879999991,-16.61383057],[12.384860040000016,-16.67741776],[12.547760010000001,-16.1477108],[12.515580180000008,-15.81655788],[12.628179549999992,-15.54848003],[12.586190220000002,-13.700474739999999],[12.247190479999997,-13.71872902],[12.142640110000007,-13.82828045],[11.811280250000008,-13.743158340000003],[11.678730009999997,-13.900790210000002],[11.677129749999992,-14.121397970000002],[11.509260180000004,-14.38218403],[11.527810099999998,-14.68567276],[11.040410039999985,-15.130290029999998]]]}},{latlng:[11,-10],flag:"https://restcountries.eu/data/gin.svg",code:"GN",name:"Guinea",geoJSON:{type:"Polygon",coordinates:[[[7.686049940000004,-8.43927574],[7.71165991,-8.72212982],[7.309040069999987,-8.92605209],[7.313910009999988,-9.20877647],[7.526909829999999,-9.40333652],[7.92853021999999,-9.337286],[8.541060450000012,-9.755352020000002],[8.42850018,-10.01654625],[8.406200409999997,-10.230110169999998],[8.348890299999995,-10.505476000000002],[8.715530400000006,-10.49431229],[8.977190019999986,-10.65477467],[9.267910000000002,-10.62239647],[9.688240050000006,-10.83914852],[10.04588032,-11.11748028],[10.046970369999997,-11.917258260000002],[9.858579640000006,-12.15030861],[9.835829730000002,-12.42592239],[9.620189669999997,-12.5967207],[9.342709539999998,-12.71193886],[8.90305042,-13.24653816],[9.494739530000004,-13.68515015],[9.886159899999992,-14.074036600000001],[10.015709880000008,-14.33007622],[10.214480399999998,-14.57969284],[10.65629959,-14.693198200000001],[10.87656974999999,-14.839548109999999],[11.040410039999985,-15.130290029999998],[11.527810099999998,-14.68567276],[11.509260180000004,-14.38218403],[11.677129749999992,-14.121397970000002],[11.678730009999997,-13.900790210000002],[11.811280250000008,-13.743158340000003],[12.142640110000007,-13.82828045],[12.247190479999997,-13.71872902],[12.586190220000002,-13.700474739999999],[12.575880049999986,-13.21779251],[12.332090379999993,-12.49901676],[12.354439740000005,-12.278558729999999],[12.465640070000001,-12.20353413],[12.386589999999995,-11.65828896],[12.44297980999999,-11.51391697],[12.076820370000014,-11.45613766],[12.077960010000007,-11.29756832],[12.211259839999995,-11.03653431],[12.177889820000003,-10.87082386],[11.923990250000005,-10.5932169],[11.84409046,-10.16520405],[12.06048011999999,-9.89097214],[12.194230079999997,-9.56788826],[12.334289549999998,-9.32759762],[12.308070179999993,-9.12747955],[12.088359829999991,-8.90526676],[11.81256962000001,-8.78608418],[11.393639559999986,-8.3762989],[11.13624953999999,-8.58127689],[10.810899730000013,-8.62031078],[10.909270289999997,-8.40729046],[10.792599679999995,-8.28234768],[10.49481964000001,-8.33536625],[10.206529619999992,-8.02993584],[10.129019739999997,-8.22931385],[9.789529800000006,-8.30961227],[9.376230239999993,-8.07911396],[8.575719829999999,-7.832068920000001],[8.45545959000001,-8.20350266],[8.316439630000003,-8.29902267],[8.12333965,-8.22178841],[7.687190060000007,-8.28070641],[7.686049940000004,-8.43927574]]]}},{latlng:[8,-5],flag:"https://restcountries.eu/data/civ.svg",code:"CI",name:"Cote d'Ivoire",geoJSON:{type:"Polygon",coordinates:[[[4.994460110000002,-2.8561182000000005],[4.98429012,-3.3110780700000007],[5.179810050000007,-4.0088191],[5.168250080000019,-4.64991522],[4.9936900099999875,-5.834504129999999],[4.7051000600000075,-6.52876329],[4.338290209999994,-7.5189271],[4.364560129999994,-7.7121563],[5.1881499299999945,-7.635354040000001],[5.313340190000015,-7.53973007],[5.707349780000008,-7.57013416],[6.126180170000009,-7.993709090000001],[6.193039890000001,-8.31134033],[6.467579839999999,-8.60286999],[6.911799910000005,-8.38543892],[7.395219800000007,-8.48543644],[7.686049940000004,-8.43927574],[7.687190060000007,-8.28070641],[8.12333965,-8.22178841],[8.316439630000003,-8.29902267],[8.45545959000001,-8.20350266],[8.575719829999999,-7.832068920000001],[9.376230239999993,-8.07911396],[9.789529800000006,-8.30961227],[10.129019739999997,-8.22931385],[10.206529619999992,-8.02993584],[10.297389980000016,-7.899594310000001],[10.147239689999994,-7.62274885],[10.138990400000012,-6.8505091700000005],[10.430809969999988,-6.66645622],[10.411310199999999,-6.49395514],[10.52406025,-6.20520544],[10.096369740000004,-6.05043602],[10.222550390000004,-5.816933159999999],[10.370750430000006,-5.404337879999999],[10.15272045,-4.95463896],[9.82199001,-4.77989912],[9.610850330000005,-4.33024979],[9.86235999999999,-3.98043656],[9.900329589999991,-3.51188707],[9.642459869999998,-2.82748961],[8.219619749999989,-2.5621571500000004],[7.379700180000002,-2.98357916],[6.25046014999999,-3.2443380399999997],[5.3890500100000125,-2.81069899],[4.994460110000002,-2.8561182000000005]]]}},{latlng:[8,-2],flag:"https://restcountries.eu/data/gha.svg",code:"GH",name:"Ghana",geoJSON:{type:"Polygon",coordinates:[[[5.928830149999989,1.06009996],[5.343470100000015,-0.50762975],[5.00054978999999,-1.06360829],[4.710460190000013,-1.96468854],[4.994460110000002,-2.8561182000000005],[5.3890500100000125,-2.81069899],[6.25046014999999,-3.2443380399999997],[7.379700180000002,-2.98357916],[8.219619749999989,-2.5621571500000004],[9.642459869999998,-2.82748961],[10.395350459999998,-2.96389914],[10.962679859999989,-2.94039845],[11.009810450000005,-1.2033391],[10.936929699999999,-0.76156998],[11.098340029999994,-0.43868989],[11.018679619999997,0.023810000000000005],[10.706919670000001,-0.04978998999999999],[10.191220279999996,0.3675800000000001],[9.464989659999997,0.36590999],[8.677229879999995,0.4612],[8.31247044000001,0.71201998],[7.41175985,0.4909800000000001],[6.914360050000003,0.5704],[6.279980179999995,0.8369499999999999],[5.928830149999989,1.06009996]]]}},{latlng:[8,1.16666666],flag:"https://restcountries.eu/data/tgo.svg",code:"TG",name:"Togo",geoJSON:{type:"Polygon",coordinates:[[[6.142149930000014,1.8652100599999997],[5.928830149999989,1.06009996],[6.279980179999995,0.8369499999999999],[6.914360050000003,0.5704],[7.41175985,0.4909800000000001],[8.31247044000001,0.71201998],[8.677229879999995,0.4612],[9.464989659999997,0.36590999],[10.191220279999996,0.3675800000000001],[10.706919670000001,-0.04978998999999999],[11.018679619999997,0.023810000000000005],[10.997329709999994,0.89955997],[10.470800399999996,0.77235001],[10.175620079999995,1.07781994],[9.825400349999995,1.42506003],[9.334609989999995,1.46306002],[9.128589629999981,1.66448998],[6.832029820000001,1.6189399999999998],[6.142149930000014,1.8652100599999997]]]}},{latlng:[6,12],flag:"https://restcountries.eu/data/cmr.svg",code:"CM",name:"Cameroon",geoJSON:{type:"Polygon",coordinates:[[[2.267110110000014,13.075840000000001],[2.321599959999995,12.951339720000002],[2.192820069999985,12.3593502],[2.326750039999998,11.75168037],[2.261049990000009,11.27643013],[2.2838599699999844,9.649180410000001],[3.073390010000002,9.79518986],[3.7345299699999988,9.40435028],[3.9041299799999916,8.9480896],[4.352220060000002,8.7449398],[4.4956102400000075,8.48880959],[4.7719798099999995,8.50026035],[5.479670049999994,8.75751019],[6.444489960000008,9.23318958],[6.453489779999991,9.52268982],[7.038770199999999,10.118289950000001],[7.055349829999992,10.49736977],[6.644430159999996,11.05877018],[6.981389999999998,11.74578953],[7.397039889999993,11.83932018],[7.799809929999997,12.06394005],[8.305830000000004,12.2188797],[8.71774960000001,12.75368977],[9.417770390000008,12.95547962],[9.64062023,13.16761017],[10.160369869999984,13.308650019999998],[10.798580169999997,13.57295036],[11.572380070000003,14.41539001],[11.904749870000007,14.46815968],[12.085359569999984,14.57717991],[12.483659740000016,14.181329729999998],[12.802029610000007,14.21350956],[12.8593998,14.495779989999999],[12.21905041,14.893360139999999],[11.55556964999999,14.960180280000001],[10.891340259999993,14.923589709999998],[9.982330320000013,15.46788025],[9.992119789999997,14.90937042],[9.92092037,14.62720966],[10.021369929999997,14.17146015],[9.549480439999991,13.95421982],[8.965869899999996,14.54444981],[8.79611015000001,14.98001957],[8.382149699999998,15.120880129999998],[7.6928000499999944,15.43609047],[7.421909810000003,15.279470439999999],[6.4085102099999975,14.77655983],[6.226950169999994,14.536560060000001],[5.451769830000007,14.45940971],[5.030590059999991,14.558959959999997],[4.732600210000002,14.47836018],[4.210390090000011,14.950940130000001],[3.851360080000019,15.03625011],[3.3352999700000026,15.405369760000001],[3.0135400300000033,15.86271954],[2.557389970000007,15.90736008],[2.267630100000002,16.01287079],[1.7276799699999967,15.94091034],[1.963999990000013,15.146340370000003],[2.22787999999999,14.337809559999998],[2.267110110000014,13.075840000000001]]]}},{latlng:[10,8],flag:"https://restcountries.eu/data/nga.svg",code:"NG",name:"Nigeria",geoJSON:{type:"Polygon",coordinates:[[[4.7719798099999995,8.50026035],[4.4120998400000095,7.46214008],[4.4646902100000005,7.08257008],[4.240590100000006,6.69809008],[4.262460230000002,5.89816999],[4.887969969999992,5.36281013],[5.611800190000001,5.033569810000001],[6.270649910000001,4.32560015],[6.258299830000001,3.57419991],[6.258810039999998,2.69169998],[7.8707399399999876,2.7490499],[8.506850240000006,2.7237999400000006],[9.137610440000001,2.91230989],[9.44416046000002,3.2203500300000005],[10.063209529999988,3.70541],[10.332189560000007,3.60005999],[10.734749790000008,3.7971000699999995],[11.327930449999993,3.57221007],[11.660180090000003,3.6111900799999996],[12.55290031,3.6806199599999996],[12.95611954,3.96727991],[13.531200409999997,4.10793018],[13.747489930000008,4.36836004],[13.865920070000016,5.44303989],[13.492779730000004,6.44540977],[13.115099910000009,6.8204298],[13.098039630000002,7.33073997],[13.34354019,7.80468988],[12.826660160000007,9.01494026],[12.851090430000013,9.52493954],[13.277259829999995,10.11480999],[13.246919630000018,10.701049800000002],[13.387330060000002,10.98960972],[13.328980450000001,11.52779007],[13.037179949999986,12.302060129999997],[13.59615039999999,13.08401012],[13.556349749999997,13.31871033],[12.461549759999997,13.995340349999998],[12.483659740000016,14.181329729999998],[12.085359569999984,14.57717991],[11.904749870000007,14.46815968],[11.572380070000003,14.41539001],[10.798580169999997,13.57295036],[10.160369869999984,13.308650019999998],[9.64062023,13.16761017],[9.417770390000008,12.95547962],[8.71774960000001,12.75368977],[8.305830000000004,12.2188797],[7.799809929999997,12.06394005],[7.397039889999993,11.83932018],[6.981389999999998,11.74578953],[6.644430159999996,11.05877018],[7.055349829999992,10.49736977],[7.038770199999999,10.118289950000001],[6.453489779999991,9.52268982],[6.444489960000008,9.23318958],[5.479670049999994,8.75751019],[4.7719798099999995,8.50026035]]]}},{latlng:[16,8],flag:"https://restcountries.eu/data/ner.svg",code:"NE",name:"Niger",geoJSON:{type:"Polygon",coordinates:[[[11.940139769999996,2.15445995],[12.625020030000004,2.17710996],[12.851829529999995,1.02410996],[13.335749630000004,0.99304998],[13.98873043,0.42990999999999996],[14.44423962,0.29563999],[14.928919790000002,0.37489],[14.968170169999999,1.01578999],[15.323570250000003,1.38552999],[15.409520150000002,2.75001001],[15.568119999999995,3.63825011],[16.184280400000016,3.72344995],[16.85222054,4.27020979],[19.155279159999992,4.26742983],[19.601209640000004,5.67757988],[21.565650940000005,8.57291031],[23.471660610000008,11.9995203],[23.04051017999999,13.58145046],[22.491279599999995,14.14385033],[22.862949369999992,14.851300239999999],[21.30850983,15.09689045],[21.04845047000001,15.471059799999999],[20.73041915999999,15.4871397],[20.38760947999999,15.903269769999998],[19.957189560000007,15.685729980000001],[17.92794991,15.30045033],[16.62729073,15.24775028],[15.684370039999997,13.972169879999997],[14.367119790000006,13.54039001],[13.996689800000002,13.956720350000001],[13.353449819999993,13.95446014],[13.33043002999999,14.5958004],[12.8593998,14.495779989999999],[12.802029610000007,14.21350956],[12.483659740000016,14.181329729999998],[12.461549759999997,13.995340349999998],[13.556349749999997,13.31871033],[13.59615039999999,13.08401012],[13.037179949999986,12.302060129999997],[13.328980450000001,11.52779007],[13.387330060000002,10.98960972],[13.246919630000018,10.701049800000002],[13.277259829999995,10.11480999],[12.851090430000013,9.52493954],[12.826660160000007,9.01494026],[13.34354019,7.80468988],[13.098039630000002,7.33073997],[13.115099910000009,6.8204298],[13.492779730000004,6.44540977],[13.865920070000016,5.44303989],[13.747489930000008,4.36836004],[13.531200409999997,4.10793018],[12.95611954,3.96727991],[12.55290031,3.6806199599999996],[11.660180090000003,3.6111900799999996],[12.235650059999996,2.84867001],[12.233059880000003,2.49018002],[11.940139769999996,2.15445995]]]}},{latlng:[9.5,2.25],flag:"https://restcountries.eu/data/ben.svg",code:"BJ",name:"Benin",geoJSON:{type:"Polygon",coordinates:[[[6.258810039999998,2.69169998],[6.142149930000014,1.8652100599999997],[6.832029820000001,1.6189399999999998],[9.128589629999981,1.66448998],[9.334609989999995,1.46306002],[9.825400349999995,1.42506003],[10.175620079999995,1.07781994],[10.470800399999996,0.77235001],[10.997329709999994,0.89955997],[11.110509870000008,1.24346006],[11.54771041999999,1.4471499900000002],[11.64116000999999,1.9359799599999998],[11.940139769999996,2.15445995],[12.233059880000003,2.49018002],[12.235650059999996,2.84867001],[11.660180090000003,3.6111900799999996],[11.327930449999993,3.57221007],[10.734749790000008,3.7971000699999995],[10.332189560000007,3.60005999],[10.063209529999988,3.70541],[9.44416046000002,3.2203500300000005],[9.137610440000001,2.91230989],[8.506850240000006,2.7237999400000006],[7.8707399399999876,2.7490499],[6.258810039999998,2.69169998]]]}},{latlng:[32,-5],flag:"https://restcountries.eu/data/mar.svg",code:"MA",name:"Morocco",geoJSON:{type:"Polygon",coordinates:[[[27.640150070000008,-13.13994694],[28.03816986,-12.61883068],[28.148639680000013,-11.68889236],[28.832139969999993,-10.90093994],[29.09857940999999,-10.399558069999998],[29.933580399999997,-9.564818380000002],[31.177719119999995,-9.8146944],[32.038089750000005,-9.434798239999997],[32.56468963999999,-9.30069447],[33.24023055999999,-8.6574564],[33.69704819,-7.65416431],[34.11048126,-6.91254616],[35.145851139999984,-6.24433804],[35.75999831999999,-5.92999315],[35.755168910000016,-5.19386339],[35.330711360000016,-4.59100437],[35.399841310000006,-3.64006996],[35.17910004000001,-2.60431719],[35.16841125,-2.16989803],[34.52790833000002,-1.7929894900000003],[33.919708249999985,-1.7334590000000003],[32.86402129999998,-1.38803923],[32.65153122000001,-1.12452972],[32.26287841999999,-1.30787885],[32.09434128000001,-2.61661816],[31.72448920999999,-3.06898761],[31.637310030000002,-3.64748907],[30.896959299999992,-3.6904294500000003],[30.501190189999985,-4.85963631],[30.000440600000015,-5.24212313],[29.731700899999993,-6.06062412],[29.579229349999988,-7.059218880000001],[28.841299060000004,-8.67411041],[27.589490890000018,-8.66510582],[27.640150070000008,-13.13994694]]]}},{latlng:[24.5,-13],flag:"https://restcountries.eu/data/esh.svg",code:"EH",name:"Western Sahara",geoJSON:{type:"Polygon",coordinates:[[[20.999750139999996,-17.06339073],[21.88573073999999,-16.97324181],[22.158239359999993,-16.58912277],[22.67933082999999,-16.26192474],[23.017770770000002,-16.32640266],[23.72337913999999,-15.98259449],[24.359130859999997,-15.426010130000002],[24.520250320000006,-15.08932018],[25.10351943999998,-14.82464218],[25.636249540000005,-14.80089092],[26.25441932999999,-14.439927099999998],[26.61887932,-13.773797040000002],[27.640150070000008,-13.13994694],[27.589490890000018,-8.66510582],[27.395740509999985,-8.68439007],[25.881069180000004,-8.68728828],[25.933359150000012,-11.96942806],[23.374610899999986,-11.937220570000001],[23.28482056,-12.874234199999998],[22.771230699999997,-13.11873817],[21.327079769999997,-12.92910004],[21.333309170000014,-16.8451786],[20.999750139999996,-17.06339073]]]}},{latlng:[20,-12],flag:"https://restcountries.eu/data/mrt.svg",code:"MR",name:"Mauritania",geoJSON:{type:"Polygon",coordinates:[[[14.616829869999997,-12.170736310000002],[15.303700450000004,-12.8306303],[16.039369579999992,-13.43574047],[16.304309840000005,-14.09951591],[16.598249440000004,-14.57734394],[16.587289809999994,-15.135718350000001],[16.36935043,-15.6236496],[16.45566940000001,-16.12066269],[16.135049820000013,-16.46308708],[16.673889159999995,-16.54969597],[17.166969300000005,-16.27056694],[18.108489990000006,-16.14634323],[19.096719739999987,-16.2568531],[19.593820569999984,-16.37763023],[20.09251976,-16.27781296],[20.567869190000003,-16.53630257],[20.999750139999996,-17.06339073],[21.333309170000014,-16.8451786],[21.327079769999997,-12.92910004],[22.771230699999997,-13.11873817],[23.28482056,-12.874234199999998],[23.374610899999986,-11.937220570000001],[25.933359150000012,-11.96942806],[25.881069180000004,-8.68728828],[27.395740509999985,-8.68439007],[24.974569320000008,-4.923314090000001],[24.95659064999999,-6.45375633],[20.640840530000002,-5.97113609],[16.32509041,-5.48852825],[16.20185089000001,-5.31527424],[15.501700399999999,-5.53774309],[15.48651028,-9.55020809],[15.264109610000013,-9.70027828],[15.33047962,-10.08684063],[15.13274002000001,-10.65077972],[15.411250109999994,-11.34910202],[15.388219829999995,-11.66607857],[14.799099920000003,-11.83420086],[14.616829869999997,-12.170736310000002]]]}},{latlng:[17,-4],flag:"https://restcountries.eu/data/mli.svg",code:"ML",name:"Mali",geoJSON:{type:"Polygon",coordinates:[[[14.616829869999997,-12.170736310000002],[14.799099920000003,-11.83420086],[15.388219829999995,-11.66607857],[15.411250109999994,-11.34910202],[15.13274002000001,-10.65077972],[15.33047962,-10.08684063],[15.264109610000013,-9.70027828],[15.48651028,-9.55020809],[15.501700399999999,-5.53774309],[16.20185089000001,-5.31527424],[16.32509041,-5.48852825],[20.640840530000002,-5.97113609],[24.95659064999999,-6.45375633],[24.974569320000008,-4.923314090000001],[22.79268074000001,-1.55003858],[20.610799789999994,1.82323003],[20.14221954000001,2.06100988],[19.856229780000017,2.68356991],[19.69359016,3.14666009],[19.057369229999995,3.15812993],[19.155279159999992,4.26742983],[16.85222054,4.27020979],[16.184280400000016,3.72344995],[15.568119999999995,3.63825011],[15.409520150000002,2.75001001],[15.323570250000003,1.38552999],[14.968170169999999,1.01578999],[14.928919790000002,0.37489],[14.924309729999997,-0.26625982],[15.116160390000005,-0.51583916],[14.973830219999988,-1.06637907],[14.559020040000007,-2.00102997],[14.246410370000001,-2.19182944],[13.798150060000001,-2.9676799799999998],[13.54125977,-3.10371947],[13.33765983999999,-3.52280998],[13.472479820000006,-4.00639439],[13.228429790000002,-4.28040409],[12.542650220000002,-4.42715693],[11.713859559999998,-5.2209444000000005],[11.375140189999987,-5.197835450000001],[10.9512701,-5.47056913],[10.370750430000006,-5.404337879999999],[10.222550390000004,-5.816933159999999],[10.096369740000004,-6.05043602],[10.52406025,-6.20520544],[10.411310199999999,-6.49395514],[10.430809969999988,-6.66645622],[10.138990400000012,-6.8505091700000005],[10.147239689999994,-7.62274885],[10.297389980000016,-7.899594310000001],[10.206529619999992,-8.02993584],[10.49481964000001,-8.33536625],[10.792599679999995,-8.28234768],[10.909270289999997,-8.40729046],[10.810899730000013,-8.62031078],[11.13624953999999,-8.58127689],[11.393639559999986,-8.3762989],[11.81256962000001,-8.78608418],[12.088359829999991,-8.90526676],[12.308070179999993,-9.12747955],[12.334289549999998,-9.32759762],[12.194230079999997,-9.56788826],[12.06048011999999,-9.89097214],[11.84409046,-10.16520405],[11.923990250000005,-10.5932169],[12.177889820000003,-10.87082386],[12.211259839999995,-11.03653431],[12.077960010000007,-11.29756832],[12.076820370000014,-11.45613766],[12.44297980999999,-11.51391697],[12.754529950000009,-11.46789646],[13.141220090000003,-11.553396219999998],[13.422089580000005,-11.92772388],[13.994720459999993,-12.12488079],[14.616829869999997,-12.170736310000002]]]}},{latlng:[14,-14],flag:"https://restcountries.eu/data/sen.svg",code:"SN",name:"Senegal",geoJSON:{type:"Polygon",coordinates:[[[13.594960210000004,-16.7136879],[14.373510360000008,-17.12605667],[14.729539869999993,-17.62502098],[14.919469830000006,-17.18514061],[15.621520040000005,-16.70069695],[16.135049820000013,-16.46308708],[16.45566940000001,-16.12066269],[16.36935043,-15.6236496],[16.587289809999994,-15.135718350000001],[16.598249440000004,-14.57734394],[16.304309840000005,-14.09951591],[16.039369579999992,-13.43574047],[15.303700450000004,-12.8306303],[14.616829869999997,-12.170736310000002],[13.994720459999993,-12.12488079],[13.422089580000005,-11.92772388],[13.141220090000003,-11.553396219999998],[12.754529950000009,-11.46789646],[12.44297980999999,-11.51391697],[12.386589999999995,-11.65828896],[12.465640070000001,-12.20353413],[12.354439740000005,-12.278558729999999],[12.332090379999993,-12.49901676],[12.575880049999986,-13.21779251],[12.586190220000002,-13.700474739999999],[12.628179549999992,-15.54848003],[12.515580180000008,-15.81655788],[12.547760010000001,-16.1477108],[12.384860040000016,-16.67741776],[13.151379589999996,-16.84150314],[13.13027954,-15.93129444],[13.270359989999992,-15.69098854],[13.278579709999997,-15.5118103],[13.509499550000005,-15.1411581],[13.29819965,-14.71218777],[13.280590059999987,-14.27770996],[13.505049709999994,-13.844976430000001],[13.794070239999995,-14.04698849],[13.625690460000008,-14.3767128],[13.630359649999997,-14.68699265],[13.876489640000003,-15.081748010000002],[13.86036015000001,-15.39876652],[13.623579980000011,-15.62458611],[13.594960210000004,-16.7136879]]]}},{latlng:[-22,17],flag:"https://restcountries.eu/data/nam.svg",code:"NA",name:"Namibia",geoJSON:{type:"Polygon",coordinates:[[[-28.576671599999994,16.34494972],[-27.821235660000003,15.601810460000001],[-27.090955729999997,15.2104702],[-26.117330549999995,14.98974037],[-25.39292908,14.74322987],[-23.852983469999998,14.40812016],[-22.65663338,14.385729790000001],[-22.111181260000002,14.257710460000002],[-21.699010849999997,13.86865044],[-20.872816090000004,13.35251999],[-19.67316437,12.826820369999998],[-19.04535866000001,12.60857964],[-18.069135670000012,11.79489994],[-17.301889419999988,11.73423004],[-17.111646649999997,12.21547985],[-16.94130898,12.81406975],[-16.97120284999999,13.462349889999999],[-17.42336082,14.058529850000001],[-17.353116990000004,14.209710120000002],[-17.30994415000001,18.26332092],[-17.78907585,18.95620918],[-17.930646900000006,21.37717056],[-17.523124690000007,23.21504974],[-17.29586600999999,24.03384972],[-17.35341835,24.68234062],[-17.57878304,25.07695007],[-17.661787029999996,25.084440230000002],[-17.887142179999998,24.52071953],[-17.88933563000001,24.21738052],[-18.281280519999996,23.579019550000005],[-17.869037630000015,23.196859359999998],[-18.21913338000001,21.65501976],[-18.25220489999999,20.910659789999997],[-21.814300540000005,20.881109240000004],[-21.84913254,19.89546013],[-24.767763139999996,19.89575958],[-28.461120609999995,19.89473915],[-28.97241402000001,19.00214005],[-29.045461650000004,18.46489906],[-28.85636711,17.83614922],[-28.783517840000005,17.38748932],[-28.35593414,17.21895027],[-28.082126619999997,16.82398987],[-28.576671599999994,16.34494972]]]}},{latlng:[-22,24],flag:"https://restcountries.eu/data/bwa.svg",code:"BW",name:"Botswana",geoJSON:{type:"Polygon",coordinates:[[[-18.53602218999999,25.64917946],[-18.714391710000008,25.85040092],[-19.293081279999996,26.16481018],[-20.39150047,27.29648972],[-20.499057770000007,27.724729540000002],[-20.851762769999993,27.72726059],[-21.485975269999997,28.021379470000003],[-21.63945006999999,28.79466057],[-22.091339110000007,29.432189939999997],[-22.82774734,28.01724052],[-23.57428931999999,27.119440079999997],[-24.24067307000001,26.78639984],[-24.616325380000006,26.4857502],[-24.696350100000007,25.94166946],[-25.174850460000002,25.765850069999995],[-25.486791609999994,25.66468048],[-25.719680789999998,25.02516937],[-25.670213700000005,24.21126938],[-25.390113830000004,23.733539580000002],[-25.268672939999995,23.312110899999997],[-25.500434880000007,22.824270250000005],[-25.97942161999999,22.579519270000002],[-26.280246729999995,22.10597038],[-26.72650337,21.60588074],[-26.82852364,20.88958931],[-26.477403639999995,20.66643906],[-25.86810684,20.758590700000003],[-24.91794777,20.16572952],[-24.767763139999996,19.89575958],[-21.84913254,19.89546013],[-21.814300540000005,20.881109240000004],[-18.25220489999999,20.910659789999997],[-18.21913338000001,21.65501976],[-17.869037630000015,23.196859359999998],[-18.281280519999996,23.579019550000005],[-17.88933563000001,24.21738052],[-17.887142179999998,24.52071953],[-17.661787029999996,25.084440230000002],[-17.736513139999996,25.264240259999998],[-18.53602218999999,25.64917946]]]}},{latlng:[-20,30],flag:"https://restcountries.eu/data/zwe.svg",code:"ZW",name:"Zimbabwe",geoJSON:{type:"Polygon",coordinates:[[[-22.251501079999993,31.191429139999997],[-22.15157127000001,30.65983963],[-22.271581650000005,30.32287979],[-22.102176670000002,29.83905029],[-22.091339110000007,29.432189939999997],[-21.63945006999999,28.79466057],[-21.485975269999997,28.021379470000003],[-20.851762769999993,27.72726059],[-20.499057770000007,27.724729540000002],[-20.39150047,27.29648972],[-19.293081279999996,26.16481018],[-18.714391710000008,25.85040092],[-18.53602218999999,25.64917946],[-17.736513139999996,25.264240259999998],[-17.845996860000007,26.38191986],[-17.96123505,26.70677948],[-17.938049320000008,27.04443932],[-17.29080391,27.5982399],[-16.468387600000003,28.467920300000003],[-16.389739989999992,28.825859069999996],[-16.043039319999984,28.947479250000004],[-15.644698139999997,29.51683998],[-15.507794380000009,30.274250030000005],[-15.880858419999994,30.338979720000005],[-15.860948559999997,31.173070909999996],[-16.07198142999999,31.63651085],[-16.319425580000004,31.85201073],[-16.392047880000003,32.32825089],[-16.713377000000012,32.84764099],[-17.979028699999997,32.8498497],[-18.67208672,32.65488815],[-19.419355389999993,32.61201096],[-19.715583800000005,32.77270889],[-20.304281229999997,32.65974045],[-20.395309449999996,32.50870895],[-21.116500849999994,32.24502182],[-22.251501079999993,31.191429139999997]]]}},{latlng:[-29,24],flag:"https://restcountries.eu/data/zaf.svg",code:"ZA",name:"South Africa",geoJSON:{type:"Polygon",coordinates:[[[-29.257381440000007,31.520980829999996],[-29.40197563,31.3255806],[-29.909914020000002,30.901779170000005],[-30.42374420000001,30.62280083],[-31.140256879999995,30.055709840000002],[-32.1720047,28.92554092],[-32.77192306999999,28.21973991],[-33.22694015999999,27.464620589999996],[-33.61491775999999,26.4194603],[-33.66700363,25.90963936],[-33.94459152000001,25.78063965],[-33.79682921999999,25.17288017],[-33.987163540000005,24.677839279999997],[-33.79441833,23.594030380000003],[-33.91640472,22.98819923],[-33.86407089000001,22.57415009],[-34.2588501,21.542829510000004],[-34.4171524,20.689060210000005],[-34.79513168,20.07127953],[-34.81917572,19.61642075],[-34.46257019,19.193300250000004],[-34.44425964,18.855329509999997],[-33.99781799,18.42466927],[-34.13650130999999,18.37741089],[-33.867733,18.24448013],[-33.28142548,18.25009918],[-32.61125565,17.92519951],[-32.429096220000005,18.24793053],[-31.661602020000004,18.22172928],[-30.725715640000004,17.56691933],[-29.878633500000003,17.06443024],[-29.87593079,17.06291962],[-28.576671599999994,16.34494972],[-28.082126619999997,16.82398987],[-28.35593414,17.21895027],[-28.783517840000005,17.38748932],[-28.85636711,17.83614922],[-29.045461650000004,18.46489906],[-28.97241402000001,19.00214005],[-28.461120609999995,19.89473915],[-24.767763139999996,19.89575958],[-24.91794777,20.16572952],[-25.86810684,20.758590700000003],[-26.477403639999995,20.66643906],[-26.82852364,20.88958931],[-26.72650337,21.60588074],[-26.280246729999995,22.10597038],[-25.97942161999999,22.579519270000002],[-25.500434880000007,22.824270250000005],[-25.268672939999995,23.312110899999997],[-25.390113830000004,23.733539580000002],[-25.670213700000005,24.21126938],[-25.719680789999998,25.02516937],[-25.486791609999994,25.66468048],[-25.174850460000002,25.765850069999995],[-24.696350100000007,25.94166946],[-24.616325380000006,26.4857502],[-24.24067307000001,26.78639984],[-23.57428931999999,27.119440079999997],[-22.82774734,28.01724052],[-22.091339110000007,29.432189939999997],[-22.102176670000002,29.83905029],[-22.271581650000005,30.32287979],[-22.15157127000001,30.65983963],[-22.251501079999993,31.191429139999997],[-23.65895080999999,31.67037964],[-24.369421009999993,31.930580139999996],[-25.48424529999999,31.7524395],[-25.84332657000001,31.83774948],[-25.66019439999999,31.33313942],[-25.731460570000003,31.044090269999998],[-26.022626880000004,30.949659349999997],[-26.398082730000006,30.67658997],[-26.74381064999999,30.68596077],[-27.285877229999993,31.282789230000002],[-27.177915570000003,31.86804008],[-26.73380089,32.07167053],[-26.742174149999997,32.83013153],[-27.47014809,32.58026123],[-28.300970079999995,32.46213913],[-28.75240135,32.20339966],[-29.257381440000007,31.520980829999996]]]}},{latlng:[-29.5,28.5],flag:"https://restcountries.eu/data/lso.svg",code:"LS",name:"Lesotho",geoJSON:{type:"Polygon",coordinates:[[[-28.955562589999992,28.97826004],[-29.257381440000007,29.32514954],[-29.74373816999999,29.01840019],[-30.07003593,28.848390580000004],[-30.22621346,28.291059489999995],[-30.54571152,28.107210160000005],[-30.64512253,27.74941063],[-29.87593079,26.99928093],[-29.242662429999992,27.53249931],[-28.85145187000001,28.074340819999996],[-28.6475029,28.54170036],[-28.955562589999992,28.97826004]]]}},{latlng:[-8.83333333,125.91666666],flag:"https://restcountries.eu/data/tls.svg",code:"TL",name:"Timor-Leste",geoJSON:{type:"Polygon",coordinates:[[[-8.892767910000007,124.96868895999998],[-9.089992519999992,125.06999969],[-9.39316082,125.08853912000001],[-9.073736189999998,125.94862366],[-8.801657680000007,126.63134766],[-8.397286419999999,127.33596039],[-8.273346900000012,126.95723723999998],[-8.484395980000007,125.69611359000001],[-8.640552520000009,125.14170837],[-8.892767910000007,124.96868895999998]]]}},{latlng:[48,68],flag:"https://restcountries.eu/data/kaz.svg",code:"KZ",name:"Kazakhstan",geoJSON:{type:"Polygon",coordinates:[[[42.266151430000015,70.96231079],[42.704288479999995,71.1862793],[42.845401760000016,71.84461212],[42.50090026999998,73.48973846],[43.09127044999999,73.64530182],[43.2983284,74.21286774],[42.87789154000001,75.63696288999999],[42.98801041,76.00032806],[42.96068954,77.65840912000002],[42.856090550000005,79.14219666000001],[42.49668121,79.64364624],[42.34999847000001,80.26000213999998],[42.920070650000014,80.18012238],[43.18038176999999,80.86618042],[44.91754149999999,79.96611023000001],[45.317008970000025,81.94705963],[45.53963851999999,82.4589386],[47.330020899999994,83.18047333],[47.00096130000001,85.16428375],[47.45298003999998,85.72049713],[48.45576858999999,85.76822662],[48.54917145,86.59879303000001],[49.215000150000016,87.36000061],[49.82667923000001,86.82935333],[49.69285965000001,85.54128265],[50.11730957000001,85.11557007],[50.31142044000001,84.41638947],[50.88925170999998,83.935112],[51.069190979999995,83.38300323],[50.812210079999986,81.94596863],[51.38835907,80.56846619],[50.86476135000001,80.03556061],[53.40441132000001,77.80091095],[54.17702866,76.52520751999998],[54.49052047999999,76.89111328000001],[53.5468483,74.38481903],[53.48979949999999,73.4256897],[54.035610200000015,73.50853729],[54.37665176000002,72.22413635],[54.133300780000006,71.18015289],[55.16973877000001,70.86525726],[55.38526153999997,69.06816864],[54.97040176000003,68.16909027],[54.60124969,65.66687012],[54.35422897,65.17854309],[54.00624847,61.436599730000005],[53.665008539999995,60.978061679999996],[52.97999954,61.70000076],[52.72000121999999,60.74000167999999],[52.44754027999999,60.92723846],[51.960418699999984,59.96754073999999],[51.27265929999999,61.587978359999994],[50.79904937999998,61.33742141999999],[50.84220123,59.93281937],[50.5454483,59.64226913],[51.06364059000001,58.3633194],[51.043548579999985,56.7779808],[50.62171173000002,55.71694183],[51.02622985999998,54.53289032],[51.71866989,52.32875061],[51.692768099999995,50.76663971000001],[50.60512923999998,48.70235062],[49.87475967000002,48.57785034],[50.45468902999999,47.54949950999999],[49.355998989999996,46.75157166],[49.15206908999998,47.04364014],[48.39416884999999,46.46644974],[47.71585082999998,47.31523895],[47.74377060000002,48.05725098],[47.07564163000001,48.69474030000001],[46.561038970000006,48.593250270000006],[46.39933013999999,49.10115814],[46.60900878999998,50.03408051],[47.04872130999999,51.19195938],[46.944480900000016,51.72220993],[46.804630280000005,52.042030329999996],[46.85301971000002,53.04275131],[46.23463057999999,53.22085189999999],[45.25902939000001,53.0408783],[45.40840149000001,52.1674118],[45.24599838000002,51.31692123],[44.514839170000016,51.27851104999999],[44.60982895000001,50.3056488],[44.28401184000001,50.33911896],[44.03104019,50.89131927],[43.13298035000001,51.34239959999999],[42.79228973,52.50143051],[42.44390106,52.69210052],[42.027149200000004,52.44631958],[41.783321379999975,52.50246811],[42.116050720000004,52.94430161],[42.32410049000001,54.07942963000001],[42.043968199999995,54.75534821],[41.25986861999999,55.45521927],[41.30863952999999,55.96820068000001],[44.99584960999998,55.928939820000004],[45.58679962000001,58.503120419999995],[45.49999999999999,58.689998630000005],[45.886730190000016,58.77999878000001],[45.70500183,59.53499985],[46.30532836999998,59.55784987999999],[46.09603118999999,60.12356949],[45.572780609999995,60.12356949],[44.78404617000002,60.240001680000006],[44.40583037999999,61.05833054],[43.50448990000001,62.01327896],[43.650081629999995,63.18579102000001],[43.72806167999999,64.90081787],[42.99766159,66.09802246],[41.994640350000005,66.02336121],[41.987640380000016,66.51065826],[41.168430330000014,66.71405792],[41.13599013999998,67.98584747],[40.662330629999985,68.25990295],[40.66867064999998,68.63249207],[41.38425064,69.07000732],[42.08132172000001,70.38894653],[42.266151430000015,70.96231079]]]}},{latlng:[-21.15,55.5],flag:"https://restcountries.eu/data/reu.svg",code:"RE",name:"Reunion",geoJSON:{type:"Polygon",coordinates:[[[-21.013797759999996,55.18000031],[-20.849981310000004,55.458198550000006],[-20.920917509999992,55.744388580000006],[-21.206039430000004,55.85361862],[-21.404996870000012,55.67193985],[-21.203720090000008,55.2530899],[-21.013797759999996,55.18000031]]]}}]);
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/ua-3a92d79b4d7df4e8b43aafd5ea939699.png";
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAACsCAYAAADbhnGXAAAABmJLR0QA/wD/AP+gvaeTAAAFN0lEQVR42u3awZEbQQgF0I3FN+cfkgORU9gp9TQfeId/M7IWmKcqpJ/P5/MjIlIRTRARAIkIgEREACQiABIRAZCIAEhE5BxA//78/YiIVARAIgIgEQGQiAiARARAIiIAEhEAiYicA8iPoUTEL6FFBEAiIgASEQA9PSpNq3/an2/ru/fX/HfP/2m9BllAAJk/gCwggMwfQBpkAQFk/jkAadjZo9v2/pm//gHIAqo3fwBZQACYP4A00AKqN/8agBzR7h4pp/fH/D0fTwIgCwgg8weQBQSQ+QNIgy0ggMy/DiANV69e/S2QAaRevXoAqVevHkAAUq9efR1AfnjlCOsDyfxPzf/1b8EsoAU0f/MHkAUEkPkDyAJaQPM3/18DdPoFLaQHygMLHACpB5B6ABkggAAEIACpB5D6/gCdfoPTBgqs3Q/0dnCevh6ALCCAzB9AFhBA5g8gAFlAAJl/DkDVf4AjYdbCpb+++l7PK4DUA0g9gCwAgPQfQACygAAy/zqAbv8B0xZy2vt7+0uJ7f3tBs7peQIIQAACEIAABCAAAQhAHhAAAegeQOkL6kg4a2H1v/eR+fS8AaQeQOYHIAsMIP0HEIDUA8j8cgC6vWDdF7rbwm1//e3zr54XgAAEIAABCEAAAhCAAAQgAAEoB6D0o+b2I2P6lwa3j5qOzL2eJw0DEIAABCAAAQhAANIwAAEIQPcAmv4ApIMwbWG3f6B0OzJXfwAACEAAAhCAAAQgAAEIQAACEIDqALrdoOoBTAOj20J36093cNL6CSAAAQhAAAIQgAAEIAABCEAAygFo+tH09N/jqD/7aPr2/Kcf9QEEIAABCEAAAhCAAAQgAAEIQHUApQ84fWG3A/3tv5/2gE3/QDn99wAIQAACEIAABCAAAQhAAAIQgOoAqn6A0/6/tCNydT+rX8/8Z/UTQBYQQOYPIAsIIPMHkIZZQACZfx1AjtCO0I7QjtC+BQMQgAAEIAABCEAAAhCAAGR+8wDqNuD0hU0/YqYfKas/UKrnPx1oAAEIQAACEIAABCAAAQhAAAJQLkC3H5DbCz39SJkORLf+dPsATu8ngAAEIAABCEAAAhCAAAQgAAGoDiBH09ojZvej/rSjafr8ux/1AQQgAAEIQAACEIAABCAAAQhA9wCa9gB0B2HaB0D6A7D9SF39PGkYgAAEIAABCEAAApCGAQhAAMoB6PYb7g5Ot4Xc/vrb5189LwABCEAAAhCAAAQgAAEIQAACUA5AaUfN7UfG7kdO/e8N0ul5A0g9gMwPQBYYQPoPIACpB5D53QMobUG7D3za+6teUPPP/kD59v0ACEAAAhCAAAQgAAEIQB4QAAGoDqC0o5cjY9ZCpr+++l7PK4DUA0g9gCwAgPQfQACygAAy/xyATh8dpw98+0Jvf+CB9Oz1AGQBAWT+ALKAADJ/AAHIAgLI/HMBAg5QgOVIfSoAUg8g9QCyAADSfwABSD2A1N8D6O3/0AO7eyHNH0gAsoAAMn8AWUAAmT+AAGQBAWT+mQBZOPXq1d/6QAKQevXqAaRevXoAAUi9evV1AAEHyI6w5n+rPwCygAAyfwBZQACZP4A02AICyPzvAaShZxuqf+Zv/r/vnwZaQPXmDyALCADzB5AGWkD15p8DkIY968/2hTR/ID2p1yALCCDzB5AFBJD5A0iDLCCAzD8HIBGRt6IJIgIgEQGQiMg9gJ4ekURETgVAIgIgEQGQiAiARARAIiIAEhEAiYicA8iPoUTEL6FFBEAiIgASEQCJiABIRAAkIgIgEWmf/wqq90aVnufgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJ0RVh0RVhJRjpPcmllbnRhdGlvbgAxhFjs7wAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Preview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Preview(_ref) {
+  var value = _ref.value;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, value);
+}
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _templates_recipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(92);
+/* harmony import */ var _components_CmsPreviewContainer_CmsPreviewContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(100);
+
+
+
+
+var RecipePreview = function RecipePreview(_ref) {
+  var entry = _ref.entry,
+      widgetFor = _ref.widgetFor;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CmsPreviewContainer_CmsPreviewContainer__WEBPACK_IMPORTED_MODULE_2__["PreviewContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_templates_recipe__WEBPACK_IMPORTED_MODULE_1__["Recipe"], {
+    country: entry.getIn(["data", "country"]),
+    name: entry.getIn(["data", "name"]),
+    image: entry.getIn(["data", "image"]),
+    category: entry.getIn(["data", "category"]),
+    ingredients: entry.getIn(["data", "ingredients"]),
+    content: widgetFor("body"),
+    steps: entry.getIn(["data", "steps"]).toJS()
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RecipePreview);
+
+/***/ }),
+/* 92 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Recipe", function() { return Recipe; });
+/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
+/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(88);
+/* harmony import */ var _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(89);
+/* harmony import */ var _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_data_countries__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(87);
+/* harmony import */ var _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(93);
+/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(95);
+/* harmony import */ var _components_Icons_Soup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(96);
+/* harmony import */ var _components_NoSemantic_Row__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(98);
+/* harmony import */ var _styles_recipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(99);
+
+
+
+
+
+
+
+
+
+
+
+var Recipe = function Recipe(_ref) {
+  var countryName = _ref.country,
+      name = _ref.name,
+      image = _ref.image,
+      category = _ref.category,
+      ingredients = _ref.ingredients,
+      content = _ref.content,
+      steps = _ref.steps;
+  var Body = Object(_utils_dom__WEBPACK_IMPORTED_MODULE_7__["isReactElement"])(content) ? _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["Content"] : _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["HTMLContent"];
+  var country = _assets_data_countries__WEBPACK_IMPORTED_MODULE_5__["default"].find(function (item) {
+    return item.name === countryName;
+  });
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_NoSemantic_Row__WEBPACK_IMPORTED_MODULE_9__["Row"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Header"], {
+    image: image
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Country"], null, country && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Flag"], {
+    src: country.flag,
+    alt: "flag"
+  }), country && country.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["HeaderContent"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Title"], null, name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Category"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icons_Soup__WEBPACK_IMPORTED_MODULE_8__["Soup"], null), " ", category))), ingredients && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Ingredients"], null, ingredients.map(function (ingredient, index) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Ingredient"], {
+      key: ingredient + "-" + (index + 1)
+    }, ingredient);
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Body, {
+    content: content
+  }), steps && steps.map(function (_ref2, index) {
+    var title = _ref2.title,
+        step = _ref2.step;
+    var StepContent = Object(_utils_dom__WEBPACK_IMPORTED_MODULE_7__["isReactElement"])(step) ? _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["Content"] : _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["HTMLContent"];
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["FigureStep"], {
+      key: title + "-" + (index + 1)
+    }, title && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Step"], {
+      "aria-label": "\u0428\u0430\u0433 " + (index + 1)
+    }, title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StepContent, {
+      content: step
+    }));
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Footer"], {
+    image: country && country.pattern || _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4___default.a
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["CatImg"], {
+    src: country && country.catImg || _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+    alt: "cat"
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("em", null, (country && country.bonAppetit || "Смачного") + "!")));
+};
+
+/***/ }),
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Content", function() { return Content; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HTMLContent", function() { return HTMLContent; });
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(74);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var showdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(94);
+/* harmony import */ var showdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(showdown__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var converter = new showdown__WEBPACK_IMPORTED_MODULE_3___default.a.Converter();
+var Content = function Content(_ref) {
+  var Element = _ref.Element,
+      content = _ref.content,
+      props = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default()(_ref, ["Element", "content"]);
+
+  return Element ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Element, props, content) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", props, content);
+};
+var HTMLContent = function HTMLContent(_ref2) {
+  var Element = _ref2.Element,
+      content = _ref2.content,
+      props = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default()(_ref2, ["Element", "content"]);
+
+  return Element ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Element, Object.assign({
+    dangerouslySetInnerHTML: {
+      __html: converter.makeHtml(content)
+    }
+  }, props)) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", Object.assign({
+    dangerouslySetInnerHTML: {
+      __html: converter.makeHtml(content)
+    }
+  }, props));
+};
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown v 1.9.0 - 10-11-2018 */
+(function(){
+/**
+ * Created by Tivie on 13-07-2015.
+ */
+
+function getDefaultOpts (simple) {
+  'use strict';
+
+  var defaultOptions = {
+    omitExtraWLInCodeBlocks: {
+      defaultValue: false,
+      describe: 'Omit the default extra whiteline added to code blocks',
+      type: 'boolean'
+    },
+    noHeaderId: {
+      defaultValue: false,
+      describe: 'Turn on/off generated header id',
+      type: 'boolean'
+    },
+    prefixHeaderId: {
+      defaultValue: false,
+      describe: 'Add a prefix to the generated header ids. Passing a string will prefix that string to the header id. Setting to true will add a generic \'section-\' prefix',
+      type: 'string'
+    },
+    rawPrefixHeaderId: {
+      defaultValue: false,
+      describe: 'Setting this option to true will prevent showdown from modifying the prefix. This might result in malformed IDs (if, for instance, the " char is used in the prefix)',
+      type: 'boolean'
+    },
+    ghCompatibleHeaderId: {
+      defaultValue: false,
+      describe: 'Generate header ids compatible with github style (spaces are replaced with dashes, a bunch of non alphanumeric chars are removed)',
+      type: 'boolean'
+    },
+    rawHeaderId: {
+      defaultValue: false,
+      describe: 'Remove only spaces, \' and " from generated header ids (including prefixes), replacing them with dashes (-). WARNING: This might result in malformed ids',
+      type: 'boolean'
+    },
+    headerLevelStart: {
+      defaultValue: false,
+      describe: 'The header blocks level start',
+      type: 'integer'
+    },
+    parseImgDimensions: {
+      defaultValue: false,
+      describe: 'Turn on/off image dimension parsing',
+      type: 'boolean'
+    },
+    simplifiedAutoLink: {
+      defaultValue: false,
+      describe: 'Turn on/off GFM autolink style',
+      type: 'boolean'
+    },
+    excludeTrailingPunctuationFromURLs: {
+      defaultValue: false,
+      describe: 'Excludes trailing punctuation from links generated with autoLinking',
+      type: 'boolean'
+    },
+    literalMidWordUnderscores: {
+      defaultValue: false,
+      describe: 'Parse midword underscores as literal underscores',
+      type: 'boolean'
+    },
+    literalMidWordAsterisks: {
+      defaultValue: false,
+      describe: 'Parse midword asterisks as literal asterisks',
+      type: 'boolean'
+    },
+    strikethrough: {
+      defaultValue: false,
+      describe: 'Turn on/off strikethrough support',
+      type: 'boolean'
+    },
+    tables: {
+      defaultValue: false,
+      describe: 'Turn on/off tables support',
+      type: 'boolean'
+    },
+    tablesHeaderId: {
+      defaultValue: false,
+      describe: 'Add an id to table headers',
+      type: 'boolean'
+    },
+    ghCodeBlocks: {
+      defaultValue: true,
+      describe: 'Turn on/off GFM fenced code blocks support',
+      type: 'boolean'
+    },
+    tasklists: {
+      defaultValue: false,
+      describe: 'Turn on/off GFM tasklist support',
+      type: 'boolean'
+    },
+    smoothLivePreview: {
+      defaultValue: false,
+      describe: 'Prevents weird effects in live previews due to incomplete input',
+      type: 'boolean'
+    },
+    smartIndentationFix: {
+      defaultValue: false,
+      description: 'Tries to smartly fix indentation in es6 strings',
+      type: 'boolean'
+    },
+    disableForced4SpacesIndentedSublists: {
+      defaultValue: false,
+      description: 'Disables the requirement of indenting nested sublists by 4 spaces',
+      type: 'boolean'
+    },
+    simpleLineBreaks: {
+      defaultValue: false,
+      description: 'Parses simple line breaks as <br> (GFM Style)',
+      type: 'boolean'
+    },
+    requireSpaceBeforeHeadingText: {
+      defaultValue: false,
+      description: 'Makes adding a space between `#` and the header text mandatory (GFM Style)',
+      type: 'boolean'
+    },
+    ghMentions: {
+      defaultValue: false,
+      description: 'Enables github @mentions',
+      type: 'boolean'
+    },
+    ghMentionsLink: {
+      defaultValue: 'https://github.com/{u}',
+      description: 'Changes the link generated by @mentions. Only applies if ghMentions option is enabled.',
+      type: 'string'
+    },
+    encodeEmails: {
+      defaultValue: true,
+      description: 'Encode e-mail addresses through the use of Character Entities, transforming ASCII e-mail addresses into its equivalent decimal entities',
+      type: 'boolean'
+    },
+    openLinksInNewWindow: {
+      defaultValue: false,
+      description: 'Open all links in new windows',
+      type: 'boolean'
+    },
+    backslashEscapesHTMLTags: {
+      defaultValue: false,
+      description: 'Support for HTML Tag escaping. ex: \<div>foo\</div>',
+      type: 'boolean'
+    },
+    emoji: {
+      defaultValue: false,
+      description: 'Enable emoji support. Ex: `this is a :smile: emoji`',
+      type: 'boolean'
+    },
+    underline: {
+      defaultValue: false,
+      description: 'Enable support for underline. Syntax is double or triple underscores: `__underline word__`. With this option enabled, underscores no longer parses into `<em>` and `<strong>`',
+      type: 'boolean'
+    },
+    completeHTMLDocument: {
+      defaultValue: false,
+      description: 'Outputs a complete html document, including `<html>`, `<head>` and `<body>` tags',
+      type: 'boolean'
+    },
+    metadata: {
+      defaultValue: false,
+      description: 'Enable support for document metadata (defined at the top of the document between `«««` and `»»»` or between `---` and `---`).',
+      type: 'boolean'
+    },
+    splitAdjacentBlockquotes: {
+      defaultValue: false,
+      description: 'Split adjacent blockquote blocks',
+      type: 'boolean'
+    }
+  };
+  if (simple === false) {
+    return JSON.parse(JSON.stringify(defaultOptions));
+  }
+  var ret = {};
+  for (var opt in defaultOptions) {
+    if (defaultOptions.hasOwnProperty(opt)) {
+      ret[opt] = defaultOptions[opt].defaultValue;
+    }
+  }
+  return ret;
+}
+
+function allOptionsOn () {
+  'use strict';
+  var options = getDefaultOpts(true),
+      ret = {};
+  for (var opt in options) {
+    if (options.hasOwnProperty(opt)) {
+      ret[opt] = true;
+    }
+  }
+  return ret;
+}
+
+/**
+ * Created by Tivie on 06-01-2015.
+ */
+
+// Private properties
+var showdown = {},
+    parsers = {},
+    extensions = {},
+    globalOptions = getDefaultOpts(true),
+    setFlavor = 'vanilla',
+    flavor = {
+      github: {
+        omitExtraWLInCodeBlocks:              true,
+        simplifiedAutoLink:                   true,
+        excludeTrailingPunctuationFromURLs:   true,
+        literalMidWordUnderscores:            true,
+        strikethrough:                        true,
+        tables:                               true,
+        tablesHeaderId:                       true,
+        ghCodeBlocks:                         true,
+        tasklists:                            true,
+        disableForced4SpacesIndentedSublists: true,
+        simpleLineBreaks:                     true,
+        requireSpaceBeforeHeadingText:        true,
+        ghCompatibleHeaderId:                 true,
+        ghMentions:                           true,
+        backslashEscapesHTMLTags:             true,
+        emoji:                                true,
+        splitAdjacentBlockquotes:             true
+      },
+      original: {
+        noHeaderId:                           true,
+        ghCodeBlocks:                         false
+      },
+      ghost: {
+        omitExtraWLInCodeBlocks:              true,
+        parseImgDimensions:                   true,
+        simplifiedAutoLink:                   true,
+        excludeTrailingPunctuationFromURLs:   true,
+        literalMidWordUnderscores:            true,
+        strikethrough:                        true,
+        tables:                               true,
+        tablesHeaderId:                       true,
+        ghCodeBlocks:                         true,
+        tasklists:                            true,
+        smoothLivePreview:                    true,
+        simpleLineBreaks:                     true,
+        requireSpaceBeforeHeadingText:        true,
+        ghMentions:                           false,
+        encodeEmails:                         true
+      },
+      vanilla: getDefaultOpts(true),
+      allOn: allOptionsOn()
+    };
+
+/**
+ * helper namespace
+ * @type {{}}
+ */
+showdown.helper = {};
+
+/**
+ * TODO LEGACY SUPPORT CODE
+ * @type {{}}
+ */
+showdown.extensions = {};
+
+/**
+ * Set a global option
+ * @static
+ * @param {string} key
+ * @param {*} value
+ * @returns {showdown}
+ */
+showdown.setOption = function (key, value) {
+  'use strict';
+  globalOptions[key] = value;
+  return this;
+};
+
+/**
+ * Get a global option
+ * @static
+ * @param {string} key
+ * @returns {*}
+ */
+showdown.getOption = function (key) {
+  'use strict';
+  return globalOptions[key];
+};
+
+/**
+ * Get the global options
+ * @static
+ * @returns {{}}
+ */
+showdown.getOptions = function () {
+  'use strict';
+  return globalOptions;
+};
+
+/**
+ * Reset global options to the default values
+ * @static
+ */
+showdown.resetOptions = function () {
+  'use strict';
+  globalOptions = getDefaultOpts(true);
+};
+
+/**
+ * Set the flavor showdown should use as default
+ * @param {string} name
+ */
+showdown.setFlavor = function (name) {
+  'use strict';
+  if (!flavor.hasOwnProperty(name)) {
+    throw Error(name + ' flavor was not found');
+  }
+  showdown.resetOptions();
+  var preset = flavor[name];
+  setFlavor = name;
+  for (var option in preset) {
+    if (preset.hasOwnProperty(option)) {
+      globalOptions[option] = preset[option];
+    }
+  }
+};
+
+/**
+ * Get the currently set flavor
+ * @returns {string}
+ */
+showdown.getFlavor = function () {
+  'use strict';
+  return setFlavor;
+};
+
+/**
+ * Get the options of a specified flavor. Returns undefined if the flavor was not found
+ * @param {string} name Name of the flavor
+ * @returns {{}|undefined}
+ */
+showdown.getFlavorOptions = function (name) {
+  'use strict';
+  if (flavor.hasOwnProperty(name)) {
+    return flavor[name];
+  }
+};
+
+/**
+ * Get the default options
+ * @static
+ * @param {boolean} [simple=true]
+ * @returns {{}}
+ */
+showdown.getDefaultOptions = function (simple) {
+  'use strict';
+  return getDefaultOpts(simple);
+};
+
+/**
+ * Get or set a subParser
+ *
+ * subParser(name)       - Get a registered subParser
+ * subParser(name, func) - Register a subParser
+ * @static
+ * @param {string} name
+ * @param {function} [func]
+ * @returns {*}
+ */
+showdown.subParser = function (name, func) {
+  'use strict';
+  if (showdown.helper.isString(name)) {
+    if (typeof func !== 'undefined') {
+      parsers[name] = func;
+    } else {
+      if (parsers.hasOwnProperty(name)) {
+        return parsers[name];
+      } else {
+        throw Error('SubParser named ' + name + ' not registered!');
+      }
+    }
+  }
+};
+
+/**
+ * Gets or registers an extension
+ * @static
+ * @param {string} name
+ * @param {object|function=} ext
+ * @returns {*}
+ */
+showdown.extension = function (name, ext) {
+  'use strict';
+
+  if (!showdown.helper.isString(name)) {
+    throw Error('Extension \'name\' must be a string');
+  }
+
+  name = showdown.helper.stdExtName(name);
+
+  // Getter
+  if (showdown.helper.isUndefined(ext)) {
+    if (!extensions.hasOwnProperty(name)) {
+      throw Error('Extension named ' + name + ' is not registered!');
+    }
+    return extensions[name];
+
+    // Setter
+  } else {
+    // Expand extension if it's wrapped in a function
+    if (typeof ext === 'function') {
+      ext = ext();
+    }
+
+    // Ensure extension is an array
+    if (!showdown.helper.isArray(ext)) {
+      ext = [ext];
+    }
+
+    var validExtension = validate(ext, name);
+
+    if (validExtension.valid) {
+      extensions[name] = ext;
+    } else {
+      throw Error(validExtension.error);
+    }
+  }
+};
+
+/**
+ * Gets all extensions registered
+ * @returns {{}}
+ */
+showdown.getAllExtensions = function () {
+  'use strict';
+  return extensions;
+};
+
+/**
+ * Remove an extension
+ * @param {string} name
+ */
+showdown.removeExtension = function (name) {
+  'use strict';
+  delete extensions[name];
+};
+
+/**
+ * Removes all extensions
+ */
+showdown.resetExtensions = function () {
+  'use strict';
+  extensions = {};
+};
+
+/**
+ * Validate extension
+ * @param {array} extension
+ * @param {string} name
+ * @returns {{valid: boolean, error: string}}
+ */
+function validate (extension, name) {
+  'use strict';
+
+  var errMsg = (name) ? 'Error in ' + name + ' extension->' : 'Error in unnamed extension',
+      ret = {
+        valid: true,
+        error: ''
+      };
+
+  if (!showdown.helper.isArray(extension)) {
+    extension = [extension];
+  }
+
+  for (var i = 0; i < extension.length; ++i) {
+    var baseMsg = errMsg + ' sub-extension ' + i + ': ',
+        ext = extension[i];
+    if (typeof ext !== 'object') {
+      ret.valid = false;
+      ret.error = baseMsg + 'must be an object, but ' + typeof ext + ' given';
+      return ret;
+    }
+
+    if (!showdown.helper.isString(ext.type)) {
+      ret.valid = false;
+      ret.error = baseMsg + 'property "type" must be a string, but ' + typeof ext.type + ' given';
+      return ret;
+    }
+
+    var type = ext.type = ext.type.toLowerCase();
+
+    // normalize extension type
+    if (type === 'language') {
+      type = ext.type = 'lang';
+    }
+
+    if (type === 'html') {
+      type = ext.type = 'output';
+    }
+
+    if (type !== 'lang' && type !== 'output' && type !== 'listener') {
+      ret.valid = false;
+      ret.error = baseMsg + 'type ' + type + ' is not recognized. Valid values: "lang/language", "output/html" or "listener"';
+      return ret;
+    }
+
+    if (type === 'listener') {
+      if (showdown.helper.isUndefined(ext.listeners)) {
+        ret.valid = false;
+        ret.error = baseMsg + '. Extensions of type "listener" must have a property called "listeners"';
+        return ret;
+      }
+    } else {
+      if (showdown.helper.isUndefined(ext.filter) && showdown.helper.isUndefined(ext.regex)) {
+        ret.valid = false;
+        ret.error = baseMsg + type + ' extensions must define either a "regex" property or a "filter" method';
+        return ret;
+      }
+    }
+
+    if (ext.listeners) {
+      if (typeof ext.listeners !== 'object') {
+        ret.valid = false;
+        ret.error = baseMsg + '"listeners" property must be an object but ' + typeof ext.listeners + ' given';
+        return ret;
+      }
+      for (var ln in ext.listeners) {
+        if (ext.listeners.hasOwnProperty(ln)) {
+          if (typeof ext.listeners[ln] !== 'function') {
+            ret.valid = false;
+            ret.error = baseMsg + '"listeners" property must be an hash of [event name]: [callback]. listeners.' + ln +
+              ' must be a function but ' + typeof ext.listeners[ln] + ' given';
+            return ret;
+          }
+        }
+      }
+    }
+
+    if (ext.filter) {
+      if (typeof ext.filter !== 'function') {
+        ret.valid = false;
+        ret.error = baseMsg + '"filter" must be a function, but ' + typeof ext.filter + ' given';
+        return ret;
+      }
+    } else if (ext.regex) {
+      if (showdown.helper.isString(ext.regex)) {
+        ext.regex = new RegExp(ext.regex, 'g');
+      }
+      if (!(ext.regex instanceof RegExp)) {
+        ret.valid = false;
+        ret.error = baseMsg + '"regex" property must either be a string or a RegExp object, but ' + typeof ext.regex + ' given';
+        return ret;
+      }
+      if (showdown.helper.isUndefined(ext.replace)) {
+        ret.valid = false;
+        ret.error = baseMsg + '"regex" extensions must implement a replace string or function';
+        return ret;
+      }
+    }
+  }
+  return ret;
+}
+
+/**
+ * Validate extension
+ * @param {object} ext
+ * @returns {boolean}
+ */
+showdown.validateExtension = function (ext) {
+  'use strict';
+
+  var validateExtension = validate(ext, null);
+  if (!validateExtension.valid) {
+    console.warn(validateExtension.error);
+    return false;
+  }
+  return true;
+};
+
+/**
+ * showdownjs helper functions
+ */
+
+if (!showdown.hasOwnProperty('helper')) {
+  showdown.helper = {};
+}
+
+/**
+ * Check if var is string
+ * @static
+ * @param {string} a
+ * @returns {boolean}
+ */
+showdown.helper.isString = function (a) {
+  'use strict';
+  return (typeof a === 'string' || a instanceof String);
+};
+
+/**
+ * Check if var is a function
+ * @static
+ * @param {*} a
+ * @returns {boolean}
+ */
+showdown.helper.isFunction = function (a) {
+  'use strict';
+  var getType = {};
+  return a && getType.toString.call(a) === '[object Function]';
+};
+
+/**
+ * isArray helper function
+ * @static
+ * @param {*} a
+ * @returns {boolean}
+ */
+showdown.helper.isArray = function (a) {
+  'use strict';
+  return Array.isArray(a);
+};
+
+/**
+ * Check if value is undefined
+ * @static
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
+ */
+showdown.helper.isUndefined = function (value) {
+  'use strict';
+  return typeof value === 'undefined';
+};
+
+/**
+ * ForEach helper function
+ * Iterates over Arrays and Objects (own properties only)
+ * @static
+ * @param {*} obj
+ * @param {function} callback Accepts 3 params: 1. value, 2. key, 3. the original array/object
+ */
+showdown.helper.forEach = function (obj, callback) {
+  'use strict';
+  // check if obj is defined
+  if (showdown.helper.isUndefined(obj)) {
+    throw new Error('obj param is required');
+  }
+
+  if (showdown.helper.isUndefined(callback)) {
+    throw new Error('callback param is required');
+  }
+
+  if (!showdown.helper.isFunction(callback)) {
+    throw new Error('callback param must be a function/closure');
+  }
+
+  if (typeof obj.forEach === 'function') {
+    obj.forEach(callback);
+  } else if (showdown.helper.isArray(obj)) {
+    for (var i = 0; i < obj.length; i++) {
+      callback(obj[i], i, obj);
+    }
+  } else if (typeof (obj) === 'object') {
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        callback(obj[prop], prop, obj);
+      }
+    }
+  } else {
+    throw new Error('obj does not seem to be an array or an iterable object');
+  }
+};
+
+/**
+ * Standardidize extension name
+ * @static
+ * @param {string} s extension name
+ * @returns {string}
+ */
+showdown.helper.stdExtName = function (s) {
+  'use strict';
+  return s.replace(/[_?*+\/\\.^-]/g, '').replace(/\s/g, '').toLowerCase();
+};
+
+function escapeCharactersCallback (wholeMatch, m1) {
+  'use strict';
+  var charCodeToEscape = m1.charCodeAt(0);
+  return '¨E' + charCodeToEscape + 'E';
+}
+
+/**
+ * Callback used to escape characters when passing through String.replace
+ * @static
+ * @param {string} wholeMatch
+ * @param {string} m1
+ * @returns {string}
+ */
+showdown.helper.escapeCharactersCallback = escapeCharactersCallback;
+
+/**
+ * Escape characters in a string
+ * @static
+ * @param {string} text
+ * @param {string} charsToEscape
+ * @param {boolean} afterBackslash
+ * @returns {XML|string|void|*}
+ */
+showdown.helper.escapeCharacters = function (text, charsToEscape, afterBackslash) {
+  'use strict';
+  // First we have to escape the escape characters so that
+  // we can build a character class out of them
+  var regexString = '([' + charsToEscape.replace(/([\[\]\\])/g, '\\$1') + '])';
+
+  if (afterBackslash) {
+    regexString = '\\\\' + regexString;
+  }
+
+  var regex = new RegExp(regexString, 'g');
+  text = text.replace(regex, escapeCharactersCallback);
+
+  return text;
+};
+
+/**
+ * Unescape HTML entities
+ * @param txt
+ * @returns {string}
+ */
+showdown.helper.unescapeHTMLEntities = function (txt) {
+  'use strict';
+
+  return txt
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+};
+
+var rgxFindMatchPos = function (str, left, right, flags) {
+  'use strict';
+  var f = flags || '',
+      g = f.indexOf('g') > -1,
+      x = new RegExp(left + '|' + right, 'g' + f.replace(/g/g, '')),
+      l = new RegExp(left, f.replace(/g/g, '')),
+      pos = [],
+      t, s, m, start, end;
+
+  do {
+    t = 0;
+    while ((m = x.exec(str))) {
+      if (l.test(m[0])) {
+        if (!(t++)) {
+          s = x.lastIndex;
+          start = s - m[0].length;
+        }
+      } else if (t) {
+        if (!--t) {
+          end = m.index + m[0].length;
+          var obj = {
+            left: {start: start, end: s},
+            match: {start: s, end: m.index},
+            right: {start: m.index, end: end},
+            wholeMatch: {start: start, end: end}
+          };
+          pos.push(obj);
+          if (!g) {
+            return pos;
+          }
+        }
+      }
+    }
+  } while (t && (x.lastIndex = s));
+
+  return pos;
+};
+
+/**
+ * matchRecursiveRegExp
+ *
+ * (c) 2007 Steven Levithan <stevenlevithan.com>
+ * MIT License
+ *
+ * Accepts a string to search, a left and right format delimiter
+ * as regex patterns, and optional regex flags. Returns an array
+ * of matches, allowing nested instances of left/right delimiters.
+ * Use the "g" flag to return all matches, otherwise only the
+ * first is returned. Be careful to ensure that the left and
+ * right format delimiters produce mutually exclusive matches.
+ * Backreferences are not supported within the right delimiter
+ * due to how it is internally combined with the left delimiter.
+ * When matching strings whose format delimiters are unbalanced
+ * to the left or right, the output is intentionally as a
+ * conventional regex library with recursion support would
+ * produce, e.g. "<<x>" and "<x>>" both produce ["x"] when using
+ * "<" and ">" as the delimiters (both strings contain a single,
+ * balanced instance of "<x>").
+ *
+ * examples:
+ * matchRecursiveRegExp("test", "\\(", "\\)")
+ * returns: []
+ * matchRecursiveRegExp("<t<<e>><s>>t<>", "<", ">", "g")
+ * returns: ["t<<e>><s>", ""]
+ * matchRecursiveRegExp("<div id=\"x\">test</div>", "<div\\b[^>]*>", "</div>", "gi")
+ * returns: ["test"]
+ */
+showdown.helper.matchRecursiveRegExp = function (str, left, right, flags) {
+  'use strict';
+
+  var matchPos = rgxFindMatchPos (str, left, right, flags),
+      results = [];
+
+  for (var i = 0; i < matchPos.length; ++i) {
+    results.push([
+      str.slice(matchPos[i].wholeMatch.start, matchPos[i].wholeMatch.end),
+      str.slice(matchPos[i].match.start, matchPos[i].match.end),
+      str.slice(matchPos[i].left.start, matchPos[i].left.end),
+      str.slice(matchPos[i].right.start, matchPos[i].right.end)
+    ]);
+  }
+  return results;
+};
+
+/**
+ *
+ * @param {string} str
+ * @param {string|function} replacement
+ * @param {string} left
+ * @param {string} right
+ * @param {string} flags
+ * @returns {string}
+ */
+showdown.helper.replaceRecursiveRegExp = function (str, replacement, left, right, flags) {
+  'use strict';
+
+  if (!showdown.helper.isFunction(replacement)) {
+    var repStr = replacement;
+    replacement = function () {
+      return repStr;
+    };
+  }
+
+  var matchPos = rgxFindMatchPos(str, left, right, flags),
+      finalStr = str,
+      lng = matchPos.length;
+
+  if (lng > 0) {
+    var bits = [];
+    if (matchPos[0].wholeMatch.start !== 0) {
+      bits.push(str.slice(0, matchPos[0].wholeMatch.start));
+    }
+    for (var i = 0; i < lng; ++i) {
+      bits.push(
+        replacement(
+          str.slice(matchPos[i].wholeMatch.start, matchPos[i].wholeMatch.end),
+          str.slice(matchPos[i].match.start, matchPos[i].match.end),
+          str.slice(matchPos[i].left.start, matchPos[i].left.end),
+          str.slice(matchPos[i].right.start, matchPos[i].right.end)
+        )
+      );
+      if (i < lng - 1) {
+        bits.push(str.slice(matchPos[i].wholeMatch.end, matchPos[i + 1].wholeMatch.start));
+      }
+    }
+    if (matchPos[lng - 1].wholeMatch.end < str.length) {
+      bits.push(str.slice(matchPos[lng - 1].wholeMatch.end));
+    }
+    finalStr = bits.join('');
+  }
+  return finalStr;
+};
+
+/**
+ * Returns the index within the passed String object of the first occurrence of the specified regex,
+ * starting the search at fromIndex. Returns -1 if the value is not found.
+ *
+ * @param {string} str string to search
+ * @param {RegExp} regex Regular expression to search
+ * @param {int} [fromIndex = 0] Index to start the search
+ * @returns {Number}
+ * @throws InvalidArgumentError
+ */
+showdown.helper.regexIndexOf = function (str, regex, fromIndex) {
+  'use strict';
+  if (!showdown.helper.isString(str)) {
+    throw 'InvalidArgumentError: first parameter of showdown.helper.regexIndexOf function must be a string';
+  }
+  if (regex instanceof RegExp === false) {
+    throw 'InvalidArgumentError: second parameter of showdown.helper.regexIndexOf function must be an instance of RegExp';
+  }
+  var indexOf = str.substring(fromIndex || 0).search(regex);
+  return (indexOf >= 0) ? (indexOf + (fromIndex || 0)) : indexOf;
+};
+
+/**
+ * Splits the passed string object at the defined index, and returns an array composed of the two substrings
+ * @param {string} str string to split
+ * @param {int} index index to split string at
+ * @returns {[string,string]}
+ * @throws InvalidArgumentError
+ */
+showdown.helper.splitAtIndex = function (str, index) {
+  'use strict';
+  if (!showdown.helper.isString(str)) {
+    throw 'InvalidArgumentError: first parameter of showdown.helper.regexIndexOf function must be a string';
+  }
+  return [str.substring(0, index), str.substring(index)];
+};
+
+/**
+ * Obfuscate an e-mail address through the use of Character Entities,
+ * transforming ASCII characters into their equivalent decimal or hex entities.
+ *
+ * Since it has a random component, subsequent calls to this function produce different results
+ *
+ * @param {string} mail
+ * @returns {string}
+ */
+showdown.helper.encodeEmailAddress = function (mail) {
+  'use strict';
+  var encode = [
+    function (ch) {
+      return '&#' + ch.charCodeAt(0) + ';';
+    },
+    function (ch) {
+      return '&#x' + ch.charCodeAt(0).toString(16) + ';';
+    },
+    function (ch) {
+      return ch;
+    }
+  ];
+
+  mail = mail.replace(/./g, function (ch) {
+    if (ch === '@') {
+      // this *must* be encoded. I insist.
+      ch = encode[Math.floor(Math.random() * 2)](ch);
+    } else {
+      var r = Math.random();
+      // roughly 10% raw, 45% hex, 45% dec
+      ch = (
+        r > 0.9 ? encode[2](ch) : r > 0.45 ? encode[1](ch) : encode[0](ch)
+      );
+    }
+    return ch;
+  });
+
+  return mail;
+};
+
+/**
+ *
+ * @param str
+ * @param targetLength
+ * @param padString
+ * @returns {string}
+ */
+showdown.helper.padEnd = function padEnd (str, targetLength, padString) {
+  'use strict';
+  /*jshint bitwise: false*/
+  // eslint-disable-next-line space-infix-ops
+  targetLength = targetLength>>0; //floor if number or convert non-number to 0;
+  /*jshint bitwise: true*/
+  padString = String(padString || ' ');
+  if (str.length > targetLength) {
+    return String(str);
+  } else {
+    targetLength = targetLength - str.length;
+    if (targetLength > padString.length) {
+      padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+    }
+    return String(str) + padString.slice(0,targetLength);
+  }
+};
+
+/**
+ * POLYFILLS
+ */
+// use this instead of builtin is undefined for IE8 compatibility
+if (typeof(console) === 'undefined') {
+  console = {
+    warn: function (msg) {
+      'use strict';
+      alert(msg);
+    },
+    log: function (msg) {
+      'use strict';
+      alert(msg);
+    },
+    error: function (msg) {
+      'use strict';
+      throw msg;
+    }
+  };
+}
+
+/**
+ * Common regexes.
+ * We declare some common regexes to improve performance
+ */
+showdown.helper.regexes = {
+  asteriskDashAndColon: /([*_:~])/g
+};
+
+/**
+ * EMOJIS LIST
+ */
+showdown.helper.emojis = {
+  '+1':'\ud83d\udc4d',
+  '-1':'\ud83d\udc4e',
+  '100':'\ud83d\udcaf',
+  '1234':'\ud83d\udd22',
+  '1st_place_medal':'\ud83e\udd47',
+  '2nd_place_medal':'\ud83e\udd48',
+  '3rd_place_medal':'\ud83e\udd49',
+  '8ball':'\ud83c\udfb1',
+  'a':'\ud83c\udd70\ufe0f',
+  'ab':'\ud83c\udd8e',
+  'abc':'\ud83d\udd24',
+  'abcd':'\ud83d\udd21',
+  'accept':'\ud83c\ude51',
+  'aerial_tramway':'\ud83d\udea1',
+  'airplane':'\u2708\ufe0f',
+  'alarm_clock':'\u23f0',
+  'alembic':'\u2697\ufe0f',
+  'alien':'\ud83d\udc7d',
+  'ambulance':'\ud83d\ude91',
+  'amphora':'\ud83c\udffa',
+  'anchor':'\u2693\ufe0f',
+  'angel':'\ud83d\udc7c',
+  'anger':'\ud83d\udca2',
+  'angry':'\ud83d\ude20',
+  'anguished':'\ud83d\ude27',
+  'ant':'\ud83d\udc1c',
+  'apple':'\ud83c\udf4e',
+  'aquarius':'\u2652\ufe0f',
+  'aries':'\u2648\ufe0f',
+  'arrow_backward':'\u25c0\ufe0f',
+  'arrow_double_down':'\u23ec',
+  'arrow_double_up':'\u23eb',
+  'arrow_down':'\u2b07\ufe0f',
+  'arrow_down_small':'\ud83d\udd3d',
+  'arrow_forward':'\u25b6\ufe0f',
+  'arrow_heading_down':'\u2935\ufe0f',
+  'arrow_heading_up':'\u2934\ufe0f',
+  'arrow_left':'\u2b05\ufe0f',
+  'arrow_lower_left':'\u2199\ufe0f',
+  'arrow_lower_right':'\u2198\ufe0f',
+  'arrow_right':'\u27a1\ufe0f',
+  'arrow_right_hook':'\u21aa\ufe0f',
+  'arrow_up':'\u2b06\ufe0f',
+  'arrow_up_down':'\u2195\ufe0f',
+  'arrow_up_small':'\ud83d\udd3c',
+  'arrow_upper_left':'\u2196\ufe0f',
+  'arrow_upper_right':'\u2197\ufe0f',
+  'arrows_clockwise':'\ud83d\udd03',
+  'arrows_counterclockwise':'\ud83d\udd04',
+  'art':'\ud83c\udfa8',
+  'articulated_lorry':'\ud83d\ude9b',
+  'artificial_satellite':'\ud83d\udef0',
+  'astonished':'\ud83d\ude32',
+  'athletic_shoe':'\ud83d\udc5f',
+  'atm':'\ud83c\udfe7',
+  'atom_symbol':'\u269b\ufe0f',
+  'avocado':'\ud83e\udd51',
+  'b':'\ud83c\udd71\ufe0f',
+  'baby':'\ud83d\udc76',
+  'baby_bottle':'\ud83c\udf7c',
+  'baby_chick':'\ud83d\udc24',
+  'baby_symbol':'\ud83d\udebc',
+  'back':'\ud83d\udd19',
+  'bacon':'\ud83e\udd53',
+  'badminton':'\ud83c\udff8',
+  'baggage_claim':'\ud83d\udec4',
+  'baguette_bread':'\ud83e\udd56',
+  'balance_scale':'\u2696\ufe0f',
+  'balloon':'\ud83c\udf88',
+  'ballot_box':'\ud83d\uddf3',
+  'ballot_box_with_check':'\u2611\ufe0f',
+  'bamboo':'\ud83c\udf8d',
+  'banana':'\ud83c\udf4c',
+  'bangbang':'\u203c\ufe0f',
+  'bank':'\ud83c\udfe6',
+  'bar_chart':'\ud83d\udcca',
+  'barber':'\ud83d\udc88',
+  'baseball':'\u26be\ufe0f',
+  'basketball':'\ud83c\udfc0',
+  'basketball_man':'\u26f9\ufe0f',
+  'basketball_woman':'\u26f9\ufe0f&zwj;\u2640\ufe0f',
+  'bat':'\ud83e\udd87',
+  'bath':'\ud83d\udec0',
+  'bathtub':'\ud83d\udec1',
+  'battery':'\ud83d\udd0b',
+  'beach_umbrella':'\ud83c\udfd6',
+  'bear':'\ud83d\udc3b',
+  'bed':'\ud83d\udecf',
+  'bee':'\ud83d\udc1d',
+  'beer':'\ud83c\udf7a',
+  'beers':'\ud83c\udf7b',
+  'beetle':'\ud83d\udc1e',
+  'beginner':'\ud83d\udd30',
+  'bell':'\ud83d\udd14',
+  'bellhop_bell':'\ud83d\udece',
+  'bento':'\ud83c\udf71',
+  'biking_man':'\ud83d\udeb4',
+  'bike':'\ud83d\udeb2',
+  'biking_woman':'\ud83d\udeb4&zwj;\u2640\ufe0f',
+  'bikini':'\ud83d\udc59',
+  'biohazard':'\u2623\ufe0f',
+  'bird':'\ud83d\udc26',
+  'birthday':'\ud83c\udf82',
+  'black_circle':'\u26ab\ufe0f',
+  'black_flag':'\ud83c\udff4',
+  'black_heart':'\ud83d\udda4',
+  'black_joker':'\ud83c\udccf',
+  'black_large_square':'\u2b1b\ufe0f',
+  'black_medium_small_square':'\u25fe\ufe0f',
+  'black_medium_square':'\u25fc\ufe0f',
+  'black_nib':'\u2712\ufe0f',
+  'black_small_square':'\u25aa\ufe0f',
+  'black_square_button':'\ud83d\udd32',
+  'blonde_man':'\ud83d\udc71',
+  'blonde_woman':'\ud83d\udc71&zwj;\u2640\ufe0f',
+  'blossom':'\ud83c\udf3c',
+  'blowfish':'\ud83d\udc21',
+  'blue_book':'\ud83d\udcd8',
+  'blue_car':'\ud83d\ude99',
+  'blue_heart':'\ud83d\udc99',
+  'blush':'\ud83d\ude0a',
+  'boar':'\ud83d\udc17',
+  'boat':'\u26f5\ufe0f',
+  'bomb':'\ud83d\udca3',
+  'book':'\ud83d\udcd6',
+  'bookmark':'\ud83d\udd16',
+  'bookmark_tabs':'\ud83d\udcd1',
+  'books':'\ud83d\udcda',
+  'boom':'\ud83d\udca5',
+  'boot':'\ud83d\udc62',
+  'bouquet':'\ud83d\udc90',
+  'bowing_man':'\ud83d\ude47',
+  'bow_and_arrow':'\ud83c\udff9',
+  'bowing_woman':'\ud83d\ude47&zwj;\u2640\ufe0f',
+  'bowling':'\ud83c\udfb3',
+  'boxing_glove':'\ud83e\udd4a',
+  'boy':'\ud83d\udc66',
+  'bread':'\ud83c\udf5e',
+  'bride_with_veil':'\ud83d\udc70',
+  'bridge_at_night':'\ud83c\udf09',
+  'briefcase':'\ud83d\udcbc',
+  'broken_heart':'\ud83d\udc94',
+  'bug':'\ud83d\udc1b',
+  'building_construction':'\ud83c\udfd7',
+  'bulb':'\ud83d\udca1',
+  'bullettrain_front':'\ud83d\ude85',
+  'bullettrain_side':'\ud83d\ude84',
+  'burrito':'\ud83c\udf2f',
+  'bus':'\ud83d\ude8c',
+  'business_suit_levitating':'\ud83d\udd74',
+  'busstop':'\ud83d\ude8f',
+  'bust_in_silhouette':'\ud83d\udc64',
+  'busts_in_silhouette':'\ud83d\udc65',
+  'butterfly':'\ud83e\udd8b',
+  'cactus':'\ud83c\udf35',
+  'cake':'\ud83c\udf70',
+  'calendar':'\ud83d\udcc6',
+  'call_me_hand':'\ud83e\udd19',
+  'calling':'\ud83d\udcf2',
+  'camel':'\ud83d\udc2b',
+  'camera':'\ud83d\udcf7',
+  'camera_flash':'\ud83d\udcf8',
+  'camping':'\ud83c\udfd5',
+  'cancer':'\u264b\ufe0f',
+  'candle':'\ud83d\udd6f',
+  'candy':'\ud83c\udf6c',
+  'canoe':'\ud83d\udef6',
+  'capital_abcd':'\ud83d\udd20',
+  'capricorn':'\u2651\ufe0f',
+  'car':'\ud83d\ude97',
+  'card_file_box':'\ud83d\uddc3',
+  'card_index':'\ud83d\udcc7',
+  'card_index_dividers':'\ud83d\uddc2',
+  'carousel_horse':'\ud83c\udfa0',
+  'carrot':'\ud83e\udd55',
+  'cat':'\ud83d\udc31',
+  'cat2':'\ud83d\udc08',
+  'cd':'\ud83d\udcbf',
+  'chains':'\u26d3',
+  'champagne':'\ud83c\udf7e',
+  'chart':'\ud83d\udcb9',
+  'chart_with_downwards_trend':'\ud83d\udcc9',
+  'chart_with_upwards_trend':'\ud83d\udcc8',
+  'checkered_flag':'\ud83c\udfc1',
+  'cheese':'\ud83e\uddc0',
+  'cherries':'\ud83c\udf52',
+  'cherry_blossom':'\ud83c\udf38',
+  'chestnut':'\ud83c\udf30',
+  'chicken':'\ud83d\udc14',
+  'children_crossing':'\ud83d\udeb8',
+  'chipmunk':'\ud83d\udc3f',
+  'chocolate_bar':'\ud83c\udf6b',
+  'christmas_tree':'\ud83c\udf84',
+  'church':'\u26ea\ufe0f',
+  'cinema':'\ud83c\udfa6',
+  'circus_tent':'\ud83c\udfaa',
+  'city_sunrise':'\ud83c\udf07',
+  'city_sunset':'\ud83c\udf06',
+  'cityscape':'\ud83c\udfd9',
+  'cl':'\ud83c\udd91',
+  'clamp':'\ud83d\udddc',
+  'clap':'\ud83d\udc4f',
+  'clapper':'\ud83c\udfac',
+  'classical_building':'\ud83c\udfdb',
+  'clinking_glasses':'\ud83e\udd42',
+  'clipboard':'\ud83d\udccb',
+  'clock1':'\ud83d\udd50',
+  'clock10':'\ud83d\udd59',
+  'clock1030':'\ud83d\udd65',
+  'clock11':'\ud83d\udd5a',
+  'clock1130':'\ud83d\udd66',
+  'clock12':'\ud83d\udd5b',
+  'clock1230':'\ud83d\udd67',
+  'clock130':'\ud83d\udd5c',
+  'clock2':'\ud83d\udd51',
+  'clock230':'\ud83d\udd5d',
+  'clock3':'\ud83d\udd52',
+  'clock330':'\ud83d\udd5e',
+  'clock4':'\ud83d\udd53',
+  'clock430':'\ud83d\udd5f',
+  'clock5':'\ud83d\udd54',
+  'clock530':'\ud83d\udd60',
+  'clock6':'\ud83d\udd55',
+  'clock630':'\ud83d\udd61',
+  'clock7':'\ud83d\udd56',
+  'clock730':'\ud83d\udd62',
+  'clock8':'\ud83d\udd57',
+  'clock830':'\ud83d\udd63',
+  'clock9':'\ud83d\udd58',
+  'clock930':'\ud83d\udd64',
+  'closed_book':'\ud83d\udcd5',
+  'closed_lock_with_key':'\ud83d\udd10',
+  'closed_umbrella':'\ud83c\udf02',
+  'cloud':'\u2601\ufe0f',
+  'cloud_with_lightning':'\ud83c\udf29',
+  'cloud_with_lightning_and_rain':'\u26c8',
+  'cloud_with_rain':'\ud83c\udf27',
+  'cloud_with_snow':'\ud83c\udf28',
+  'clown_face':'\ud83e\udd21',
+  'clubs':'\u2663\ufe0f',
+  'cocktail':'\ud83c\udf78',
+  'coffee':'\u2615\ufe0f',
+  'coffin':'\u26b0\ufe0f',
+  'cold_sweat':'\ud83d\ude30',
+  'comet':'\u2604\ufe0f',
+  'computer':'\ud83d\udcbb',
+  'computer_mouse':'\ud83d\uddb1',
+  'confetti_ball':'\ud83c\udf8a',
+  'confounded':'\ud83d\ude16',
+  'confused':'\ud83d\ude15',
+  'congratulations':'\u3297\ufe0f',
+  'construction':'\ud83d\udea7',
+  'construction_worker_man':'\ud83d\udc77',
+  'construction_worker_woman':'\ud83d\udc77&zwj;\u2640\ufe0f',
+  'control_knobs':'\ud83c\udf9b',
+  'convenience_store':'\ud83c\udfea',
+  'cookie':'\ud83c\udf6a',
+  'cool':'\ud83c\udd92',
+  'policeman':'\ud83d\udc6e',
+  'copyright':'\u00a9\ufe0f',
+  'corn':'\ud83c\udf3d',
+  'couch_and_lamp':'\ud83d\udecb',
+  'couple':'\ud83d\udc6b',
+  'couple_with_heart_woman_man':'\ud83d\udc91',
+  'couple_with_heart_man_man':'\ud83d\udc68&zwj;\u2764\ufe0f&zwj;\ud83d\udc68',
+  'couple_with_heart_woman_woman':'\ud83d\udc69&zwj;\u2764\ufe0f&zwj;\ud83d\udc69',
+  'couplekiss_man_man':'\ud83d\udc68&zwj;\u2764\ufe0f&zwj;\ud83d\udc8b&zwj;\ud83d\udc68',
+  'couplekiss_man_woman':'\ud83d\udc8f',
+  'couplekiss_woman_woman':'\ud83d\udc69&zwj;\u2764\ufe0f&zwj;\ud83d\udc8b&zwj;\ud83d\udc69',
+  'cow':'\ud83d\udc2e',
+  'cow2':'\ud83d\udc04',
+  'cowboy_hat_face':'\ud83e\udd20',
+  'crab':'\ud83e\udd80',
+  'crayon':'\ud83d\udd8d',
+  'credit_card':'\ud83d\udcb3',
+  'crescent_moon':'\ud83c\udf19',
+  'cricket':'\ud83c\udfcf',
+  'crocodile':'\ud83d\udc0a',
+  'croissant':'\ud83e\udd50',
+  'crossed_fingers':'\ud83e\udd1e',
+  'crossed_flags':'\ud83c\udf8c',
+  'crossed_swords':'\u2694\ufe0f',
+  'crown':'\ud83d\udc51',
+  'cry':'\ud83d\ude22',
+  'crying_cat_face':'\ud83d\ude3f',
+  'crystal_ball':'\ud83d\udd2e',
+  'cucumber':'\ud83e\udd52',
+  'cupid':'\ud83d\udc98',
+  'curly_loop':'\u27b0',
+  'currency_exchange':'\ud83d\udcb1',
+  'curry':'\ud83c\udf5b',
+  'custard':'\ud83c\udf6e',
+  'customs':'\ud83d\udec3',
+  'cyclone':'\ud83c\udf00',
+  'dagger':'\ud83d\udde1',
+  'dancer':'\ud83d\udc83',
+  'dancing_women':'\ud83d\udc6f',
+  'dancing_men':'\ud83d\udc6f&zwj;\u2642\ufe0f',
+  'dango':'\ud83c\udf61',
+  'dark_sunglasses':'\ud83d\udd76',
+  'dart':'\ud83c\udfaf',
+  'dash':'\ud83d\udca8',
+  'date':'\ud83d\udcc5',
+  'deciduous_tree':'\ud83c\udf33',
+  'deer':'\ud83e\udd8c',
+  'department_store':'\ud83c\udfec',
+  'derelict_house':'\ud83c\udfda',
+  'desert':'\ud83c\udfdc',
+  'desert_island':'\ud83c\udfdd',
+  'desktop_computer':'\ud83d\udda5',
+  'male_detective':'\ud83d\udd75\ufe0f',
+  'diamond_shape_with_a_dot_inside':'\ud83d\udca0',
+  'diamonds':'\u2666\ufe0f',
+  'disappointed':'\ud83d\ude1e',
+  'disappointed_relieved':'\ud83d\ude25',
+  'dizzy':'\ud83d\udcab',
+  'dizzy_face':'\ud83d\ude35',
+  'do_not_litter':'\ud83d\udeaf',
+  'dog':'\ud83d\udc36',
+  'dog2':'\ud83d\udc15',
+  'dollar':'\ud83d\udcb5',
+  'dolls':'\ud83c\udf8e',
+  'dolphin':'\ud83d\udc2c',
+  'door':'\ud83d\udeaa',
+  'doughnut':'\ud83c\udf69',
+  'dove':'\ud83d\udd4a',
+  'dragon':'\ud83d\udc09',
+  'dragon_face':'\ud83d\udc32',
+  'dress':'\ud83d\udc57',
+  'dromedary_camel':'\ud83d\udc2a',
+  'drooling_face':'\ud83e\udd24',
+  'droplet':'\ud83d\udca7',
+  'drum':'\ud83e\udd41',
+  'duck':'\ud83e\udd86',
+  'dvd':'\ud83d\udcc0',
+  'e-mail':'\ud83d\udce7',
+  'eagle':'\ud83e\udd85',
+  'ear':'\ud83d\udc42',
+  'ear_of_rice':'\ud83c\udf3e',
+  'earth_africa':'\ud83c\udf0d',
+  'earth_americas':'\ud83c\udf0e',
+  'earth_asia':'\ud83c\udf0f',
+  'egg':'\ud83e\udd5a',
+  'eggplant':'\ud83c\udf46',
+  'eight_pointed_black_star':'\u2734\ufe0f',
+  'eight_spoked_asterisk':'\u2733\ufe0f',
+  'electric_plug':'\ud83d\udd0c',
+  'elephant':'\ud83d\udc18',
+  'email':'\u2709\ufe0f',
+  'end':'\ud83d\udd1a',
+  'envelope_with_arrow':'\ud83d\udce9',
+  'euro':'\ud83d\udcb6',
+  'european_castle':'\ud83c\udff0',
+  'european_post_office':'\ud83c\udfe4',
+  'evergreen_tree':'\ud83c\udf32',
+  'exclamation':'\u2757\ufe0f',
+  'expressionless':'\ud83d\ude11',
+  'eye':'\ud83d\udc41',
+  'eye_speech_bubble':'\ud83d\udc41&zwj;\ud83d\udde8',
+  'eyeglasses':'\ud83d\udc53',
+  'eyes':'\ud83d\udc40',
+  'face_with_head_bandage':'\ud83e\udd15',
+  'face_with_thermometer':'\ud83e\udd12',
+  'fist_oncoming':'\ud83d\udc4a',
+  'factory':'\ud83c\udfed',
+  'fallen_leaf':'\ud83c\udf42',
+  'family_man_woman_boy':'\ud83d\udc6a',
+  'family_man_boy':'\ud83d\udc68&zwj;\ud83d\udc66',
+  'family_man_boy_boy':'\ud83d\udc68&zwj;\ud83d\udc66&zwj;\ud83d\udc66',
+  'family_man_girl':'\ud83d\udc68&zwj;\ud83d\udc67',
+  'family_man_girl_boy':'\ud83d\udc68&zwj;\ud83d\udc67&zwj;\ud83d\udc66',
+  'family_man_girl_girl':'\ud83d\udc68&zwj;\ud83d\udc67&zwj;\ud83d\udc67',
+  'family_man_man_boy':'\ud83d\udc68&zwj;\ud83d\udc68&zwj;\ud83d\udc66',
+  'family_man_man_boy_boy':'\ud83d\udc68&zwj;\ud83d\udc68&zwj;\ud83d\udc66&zwj;\ud83d\udc66',
+  'family_man_man_girl':'\ud83d\udc68&zwj;\ud83d\udc68&zwj;\ud83d\udc67',
+  'family_man_man_girl_boy':'\ud83d\udc68&zwj;\ud83d\udc68&zwj;\ud83d\udc67&zwj;\ud83d\udc66',
+  'family_man_man_girl_girl':'\ud83d\udc68&zwj;\ud83d\udc68&zwj;\ud83d\udc67&zwj;\ud83d\udc67',
+  'family_man_woman_boy_boy':'\ud83d\udc68&zwj;\ud83d\udc69&zwj;\ud83d\udc66&zwj;\ud83d\udc66',
+  'family_man_woman_girl':'\ud83d\udc68&zwj;\ud83d\udc69&zwj;\ud83d\udc67',
+  'family_man_woman_girl_boy':'\ud83d\udc68&zwj;\ud83d\udc69&zwj;\ud83d\udc67&zwj;\ud83d\udc66',
+  'family_man_woman_girl_girl':'\ud83d\udc68&zwj;\ud83d\udc69&zwj;\ud83d\udc67&zwj;\ud83d\udc67',
+  'family_woman_boy':'\ud83d\udc69&zwj;\ud83d\udc66',
+  'family_woman_boy_boy':'\ud83d\udc69&zwj;\ud83d\udc66&zwj;\ud83d\udc66',
+  'family_woman_girl':'\ud83d\udc69&zwj;\ud83d\udc67',
+  'family_woman_girl_boy':'\ud83d\udc69&zwj;\ud83d\udc67&zwj;\ud83d\udc66',
+  'family_woman_girl_girl':'\ud83d\udc69&zwj;\ud83d\udc67&zwj;\ud83d\udc67',
+  'family_woman_woman_boy':'\ud83d\udc69&zwj;\ud83d\udc69&zwj;\ud83d\udc66',
+  'family_woman_woman_boy_boy':'\ud83d\udc69&zwj;\ud83d\udc69&zwj;\ud83d\udc66&zwj;\ud83d\udc66',
+  'family_woman_woman_girl':'\ud83d\udc69&zwj;\ud83d\udc69&zwj;\ud83d\udc67',
+  'family_woman_woman_girl_boy':'\ud83d\udc69&zwj;\ud83d\udc69&zwj;\ud83d\udc67&zwj;\ud83d\udc66',
+  'family_woman_woman_girl_girl':'\ud83d\udc69&zwj;\ud83d\udc69&zwj;\ud83d\udc67&zwj;\ud83d\udc67',
+  'fast_forward':'\u23e9',
+  'fax':'\ud83d\udce0',
+  'fearful':'\ud83d\ude28',
+  'feet':'\ud83d\udc3e',
+  'female_detective':'\ud83d\udd75\ufe0f&zwj;\u2640\ufe0f',
+  'ferris_wheel':'\ud83c\udfa1',
+  'ferry':'\u26f4',
+  'field_hockey':'\ud83c\udfd1',
+  'file_cabinet':'\ud83d\uddc4',
+  'file_folder':'\ud83d\udcc1',
+  'film_projector':'\ud83d\udcfd',
+  'film_strip':'\ud83c\udf9e',
+  'fire':'\ud83d\udd25',
+  'fire_engine':'\ud83d\ude92',
+  'fireworks':'\ud83c\udf86',
+  'first_quarter_moon':'\ud83c\udf13',
+  'first_quarter_moon_with_face':'\ud83c\udf1b',
+  'fish':'\ud83d\udc1f',
+  'fish_cake':'\ud83c\udf65',
+  'fishing_pole_and_fish':'\ud83c\udfa3',
+  'fist_raised':'\u270a',
+  'fist_left':'\ud83e\udd1b',
+  'fist_right':'\ud83e\udd1c',
+  'flags':'\ud83c\udf8f',
+  'flashlight':'\ud83d\udd26',
+  'fleur_de_lis':'\u269c\ufe0f',
+  'flight_arrival':'\ud83d\udeec',
+  'flight_departure':'\ud83d\udeeb',
+  'floppy_disk':'\ud83d\udcbe',
+  'flower_playing_cards':'\ud83c\udfb4',
+  'flushed':'\ud83d\ude33',
+  'fog':'\ud83c\udf2b',
+  'foggy':'\ud83c\udf01',
+  'football':'\ud83c\udfc8',
+  'footprints':'\ud83d\udc63',
+  'fork_and_knife':'\ud83c\udf74',
+  'fountain':'\u26f2\ufe0f',
+  'fountain_pen':'\ud83d\udd8b',
+  'four_leaf_clover':'\ud83c\udf40',
+  'fox_face':'\ud83e\udd8a',
+  'framed_picture':'\ud83d\uddbc',
+  'free':'\ud83c\udd93',
+  'fried_egg':'\ud83c\udf73',
+  'fried_shrimp':'\ud83c\udf64',
+  'fries':'\ud83c\udf5f',
+  'frog':'\ud83d\udc38',
+  'frowning':'\ud83d\ude26',
+  'frowning_face':'\u2639\ufe0f',
+  'frowning_man':'\ud83d\ude4d&zwj;\u2642\ufe0f',
+  'frowning_woman':'\ud83d\ude4d',
+  'middle_finger':'\ud83d\udd95',
+  'fuelpump':'\u26fd\ufe0f',
+  'full_moon':'\ud83c\udf15',
+  'full_moon_with_face':'\ud83c\udf1d',
+  'funeral_urn':'\u26b1\ufe0f',
+  'game_die':'\ud83c\udfb2',
+  'gear':'\u2699\ufe0f',
+  'gem':'\ud83d\udc8e',
+  'gemini':'\u264a\ufe0f',
+  'ghost':'\ud83d\udc7b',
+  'gift':'\ud83c\udf81',
+  'gift_heart':'\ud83d\udc9d',
+  'girl':'\ud83d\udc67',
+  'globe_with_meridians':'\ud83c\udf10',
+  'goal_net':'\ud83e\udd45',
+  'goat':'\ud83d\udc10',
+  'golf':'\u26f3\ufe0f',
+  'golfing_man':'\ud83c\udfcc\ufe0f',
+  'golfing_woman':'\ud83c\udfcc\ufe0f&zwj;\u2640\ufe0f',
+  'gorilla':'\ud83e\udd8d',
+  'grapes':'\ud83c\udf47',
+  'green_apple':'\ud83c\udf4f',
+  'green_book':'\ud83d\udcd7',
+  'green_heart':'\ud83d\udc9a',
+  'green_salad':'\ud83e\udd57',
+  'grey_exclamation':'\u2755',
+  'grey_question':'\u2754',
+  'grimacing':'\ud83d\ude2c',
+  'grin':'\ud83d\ude01',
+  'grinning':'\ud83d\ude00',
+  'guardsman':'\ud83d\udc82',
+  'guardswoman':'\ud83d\udc82&zwj;\u2640\ufe0f',
+  'guitar':'\ud83c\udfb8',
+  'gun':'\ud83d\udd2b',
+  'haircut_woman':'\ud83d\udc87',
+  'haircut_man':'\ud83d\udc87&zwj;\u2642\ufe0f',
+  'hamburger':'\ud83c\udf54',
+  'hammer':'\ud83d\udd28',
+  'hammer_and_pick':'\u2692',
+  'hammer_and_wrench':'\ud83d\udee0',
+  'hamster':'\ud83d\udc39',
+  'hand':'\u270b',
+  'handbag':'\ud83d\udc5c',
+  'handshake':'\ud83e\udd1d',
+  'hankey':'\ud83d\udca9',
+  'hatched_chick':'\ud83d\udc25',
+  'hatching_chick':'\ud83d\udc23',
+  'headphones':'\ud83c\udfa7',
+  'hear_no_evil':'\ud83d\ude49',
+  'heart':'\u2764\ufe0f',
+  'heart_decoration':'\ud83d\udc9f',
+  'heart_eyes':'\ud83d\ude0d',
+  'heart_eyes_cat':'\ud83d\ude3b',
+  'heartbeat':'\ud83d\udc93',
+  'heartpulse':'\ud83d\udc97',
+  'hearts':'\u2665\ufe0f',
+  'heavy_check_mark':'\u2714\ufe0f',
+  'heavy_division_sign':'\u2797',
+  'heavy_dollar_sign':'\ud83d\udcb2',
+  'heavy_heart_exclamation':'\u2763\ufe0f',
+  'heavy_minus_sign':'\u2796',
+  'heavy_multiplication_x':'\u2716\ufe0f',
+  'heavy_plus_sign':'\u2795',
+  'helicopter':'\ud83d\ude81',
+  'herb':'\ud83c\udf3f',
+  'hibiscus':'\ud83c\udf3a',
+  'high_brightness':'\ud83d\udd06',
+  'high_heel':'\ud83d\udc60',
+  'hocho':'\ud83d\udd2a',
+  'hole':'\ud83d\udd73',
+  'honey_pot':'\ud83c\udf6f',
+  'horse':'\ud83d\udc34',
+  'horse_racing':'\ud83c\udfc7',
+  'hospital':'\ud83c\udfe5',
+  'hot_pepper':'\ud83c\udf36',
+  'hotdog':'\ud83c\udf2d',
+  'hotel':'\ud83c\udfe8',
+  'hotsprings':'\u2668\ufe0f',
+  'hourglass':'\u231b\ufe0f',
+  'hourglass_flowing_sand':'\u23f3',
+  'house':'\ud83c\udfe0',
+  'house_with_garden':'\ud83c\udfe1',
+  'houses':'\ud83c\udfd8',
+  'hugs':'\ud83e\udd17',
+  'hushed':'\ud83d\ude2f',
+  'ice_cream':'\ud83c\udf68',
+  'ice_hockey':'\ud83c\udfd2',
+  'ice_skate':'\u26f8',
+  'icecream':'\ud83c\udf66',
+  'id':'\ud83c\udd94',
+  'ideograph_advantage':'\ud83c\ude50',
+  'imp':'\ud83d\udc7f',
+  'inbox_tray':'\ud83d\udce5',
+  'incoming_envelope':'\ud83d\udce8',
+  'tipping_hand_woman':'\ud83d\udc81',
+  'information_source':'\u2139\ufe0f',
+  'innocent':'\ud83d\ude07',
+  'interrobang':'\u2049\ufe0f',
+  'iphone':'\ud83d\udcf1',
+  'izakaya_lantern':'\ud83c\udfee',
+  'jack_o_lantern':'\ud83c\udf83',
+  'japan':'\ud83d\uddfe',
+  'japanese_castle':'\ud83c\udfef',
+  'japanese_goblin':'\ud83d\udc7a',
+  'japanese_ogre':'\ud83d\udc79',
+  'jeans':'\ud83d\udc56',
+  'joy':'\ud83d\ude02',
+  'joy_cat':'\ud83d\ude39',
+  'joystick':'\ud83d\udd79',
+  'kaaba':'\ud83d\udd4b',
+  'key':'\ud83d\udd11',
+  'keyboard':'\u2328\ufe0f',
+  'keycap_ten':'\ud83d\udd1f',
+  'kick_scooter':'\ud83d\udef4',
+  'kimono':'\ud83d\udc58',
+  'kiss':'\ud83d\udc8b',
+  'kissing':'\ud83d\ude17',
+  'kissing_cat':'\ud83d\ude3d',
+  'kissing_closed_eyes':'\ud83d\ude1a',
+  'kissing_heart':'\ud83d\ude18',
+  'kissing_smiling_eyes':'\ud83d\ude19',
+  'kiwi_fruit':'\ud83e\udd5d',
+  'koala':'\ud83d\udc28',
+  'koko':'\ud83c\ude01',
+  'label':'\ud83c\udff7',
+  'large_blue_circle':'\ud83d\udd35',
+  'large_blue_diamond':'\ud83d\udd37',
+  'large_orange_diamond':'\ud83d\udd36',
+  'last_quarter_moon':'\ud83c\udf17',
+  'last_quarter_moon_with_face':'\ud83c\udf1c',
+  'latin_cross':'\u271d\ufe0f',
+  'laughing':'\ud83d\ude06',
+  'leaves':'\ud83c\udf43',
+  'ledger':'\ud83d\udcd2',
+  'left_luggage':'\ud83d\udec5',
+  'left_right_arrow':'\u2194\ufe0f',
+  'leftwards_arrow_with_hook':'\u21a9\ufe0f',
+  'lemon':'\ud83c\udf4b',
+  'leo':'\u264c\ufe0f',
+  'leopard':'\ud83d\udc06',
+  'level_slider':'\ud83c\udf9a',
+  'libra':'\u264e\ufe0f',
+  'light_rail':'\ud83d\ude88',
+  'link':'\ud83d\udd17',
+  'lion':'\ud83e\udd81',
+  'lips':'\ud83d\udc44',
+  'lipstick':'\ud83d\udc84',
+  'lizard':'\ud83e\udd8e',
+  'lock':'\ud83d\udd12',
+  'lock_with_ink_pen':'\ud83d\udd0f',
+  'lollipop':'\ud83c\udf6d',
+  'loop':'\u27bf',
+  'loud_sound':'\ud83d\udd0a',
+  'loudspeaker':'\ud83d\udce2',
+  'love_hotel':'\ud83c\udfe9',
+  'love_letter':'\ud83d\udc8c',
+  'low_brightness':'\ud83d\udd05',
+  'lying_face':'\ud83e\udd25',
+  'm':'\u24c2\ufe0f',
+  'mag':'\ud83d\udd0d',
+  'mag_right':'\ud83d\udd0e',
+  'mahjong':'\ud83c\udc04\ufe0f',
+  'mailbox':'\ud83d\udceb',
+  'mailbox_closed':'\ud83d\udcea',
+  'mailbox_with_mail':'\ud83d\udcec',
+  'mailbox_with_no_mail':'\ud83d\udced',
+  'man':'\ud83d\udc68',
+  'man_artist':'\ud83d\udc68&zwj;\ud83c\udfa8',
+  'man_astronaut':'\ud83d\udc68&zwj;\ud83d\ude80',
+  'man_cartwheeling':'\ud83e\udd38&zwj;\u2642\ufe0f',
+  'man_cook':'\ud83d\udc68&zwj;\ud83c\udf73',
+  'man_dancing':'\ud83d\udd7a',
+  'man_facepalming':'\ud83e\udd26&zwj;\u2642\ufe0f',
+  'man_factory_worker':'\ud83d\udc68&zwj;\ud83c\udfed',
+  'man_farmer':'\ud83d\udc68&zwj;\ud83c\udf3e',
+  'man_firefighter':'\ud83d\udc68&zwj;\ud83d\ude92',
+  'man_health_worker':'\ud83d\udc68&zwj;\u2695\ufe0f',
+  'man_in_tuxedo':'\ud83e\udd35',
+  'man_judge':'\ud83d\udc68&zwj;\u2696\ufe0f',
+  'man_juggling':'\ud83e\udd39&zwj;\u2642\ufe0f',
+  'man_mechanic':'\ud83d\udc68&zwj;\ud83d\udd27',
+  'man_office_worker':'\ud83d\udc68&zwj;\ud83d\udcbc',
+  'man_pilot':'\ud83d\udc68&zwj;\u2708\ufe0f',
+  'man_playing_handball':'\ud83e\udd3e&zwj;\u2642\ufe0f',
+  'man_playing_water_polo':'\ud83e\udd3d&zwj;\u2642\ufe0f',
+  'man_scientist':'\ud83d\udc68&zwj;\ud83d\udd2c',
+  'man_shrugging':'\ud83e\udd37&zwj;\u2642\ufe0f',
+  'man_singer':'\ud83d\udc68&zwj;\ud83c\udfa4',
+  'man_student':'\ud83d\udc68&zwj;\ud83c\udf93',
+  'man_teacher':'\ud83d\udc68&zwj;\ud83c\udfeb',
+  'man_technologist':'\ud83d\udc68&zwj;\ud83d\udcbb',
+  'man_with_gua_pi_mao':'\ud83d\udc72',
+  'man_with_turban':'\ud83d\udc73',
+  'tangerine':'\ud83c\udf4a',
+  'mans_shoe':'\ud83d\udc5e',
+  'mantelpiece_clock':'\ud83d\udd70',
+  'maple_leaf':'\ud83c\udf41',
+  'martial_arts_uniform':'\ud83e\udd4b',
+  'mask':'\ud83d\ude37',
+  'massage_woman':'\ud83d\udc86',
+  'massage_man':'\ud83d\udc86&zwj;\u2642\ufe0f',
+  'meat_on_bone':'\ud83c\udf56',
+  'medal_military':'\ud83c\udf96',
+  'medal_sports':'\ud83c\udfc5',
+  'mega':'\ud83d\udce3',
+  'melon':'\ud83c\udf48',
+  'memo':'\ud83d\udcdd',
+  'men_wrestling':'\ud83e\udd3c&zwj;\u2642\ufe0f',
+  'menorah':'\ud83d\udd4e',
+  'mens':'\ud83d\udeb9',
+  'metal':'\ud83e\udd18',
+  'metro':'\ud83d\ude87',
+  'microphone':'\ud83c\udfa4',
+  'microscope':'\ud83d\udd2c',
+  'milk_glass':'\ud83e\udd5b',
+  'milky_way':'\ud83c\udf0c',
+  'minibus':'\ud83d\ude90',
+  'minidisc':'\ud83d\udcbd',
+  'mobile_phone_off':'\ud83d\udcf4',
+  'money_mouth_face':'\ud83e\udd11',
+  'money_with_wings':'\ud83d\udcb8',
+  'moneybag':'\ud83d\udcb0',
+  'monkey':'\ud83d\udc12',
+  'monkey_face':'\ud83d\udc35',
+  'monorail':'\ud83d\ude9d',
+  'moon':'\ud83c\udf14',
+  'mortar_board':'\ud83c\udf93',
+  'mosque':'\ud83d\udd4c',
+  'motor_boat':'\ud83d\udee5',
+  'motor_scooter':'\ud83d\udef5',
+  'motorcycle':'\ud83c\udfcd',
+  'motorway':'\ud83d\udee3',
+  'mount_fuji':'\ud83d\uddfb',
+  'mountain':'\u26f0',
+  'mountain_biking_man':'\ud83d\udeb5',
+  'mountain_biking_woman':'\ud83d\udeb5&zwj;\u2640\ufe0f',
+  'mountain_cableway':'\ud83d\udea0',
+  'mountain_railway':'\ud83d\ude9e',
+  'mountain_snow':'\ud83c\udfd4',
+  'mouse':'\ud83d\udc2d',
+  'mouse2':'\ud83d\udc01',
+  'movie_camera':'\ud83c\udfa5',
+  'moyai':'\ud83d\uddff',
+  'mrs_claus':'\ud83e\udd36',
+  'muscle':'\ud83d\udcaa',
+  'mushroom':'\ud83c\udf44',
+  'musical_keyboard':'\ud83c\udfb9',
+  'musical_note':'\ud83c\udfb5',
+  'musical_score':'\ud83c\udfbc',
+  'mute':'\ud83d\udd07',
+  'nail_care':'\ud83d\udc85',
+  'name_badge':'\ud83d\udcdb',
+  'national_park':'\ud83c\udfde',
+  'nauseated_face':'\ud83e\udd22',
+  'necktie':'\ud83d\udc54',
+  'negative_squared_cross_mark':'\u274e',
+  'nerd_face':'\ud83e\udd13',
+  'neutral_face':'\ud83d\ude10',
+  'new':'\ud83c\udd95',
+  'new_moon':'\ud83c\udf11',
+  'new_moon_with_face':'\ud83c\udf1a',
+  'newspaper':'\ud83d\udcf0',
+  'newspaper_roll':'\ud83d\uddde',
+  'next_track_button':'\u23ed',
+  'ng':'\ud83c\udd96',
+  'no_good_man':'\ud83d\ude45&zwj;\u2642\ufe0f',
+  'no_good_woman':'\ud83d\ude45',
+  'night_with_stars':'\ud83c\udf03',
+  'no_bell':'\ud83d\udd15',
+  'no_bicycles':'\ud83d\udeb3',
+  'no_entry':'\u26d4\ufe0f',
+  'no_entry_sign':'\ud83d\udeab',
+  'no_mobile_phones':'\ud83d\udcf5',
+  'no_mouth':'\ud83d\ude36',
+  'no_pedestrians':'\ud83d\udeb7',
+  'no_smoking':'\ud83d\udead',
+  'non-potable_water':'\ud83d\udeb1',
+  'nose':'\ud83d\udc43',
+  'notebook':'\ud83d\udcd3',
+  'notebook_with_decorative_cover':'\ud83d\udcd4',
+  'notes':'\ud83c\udfb6',
+  'nut_and_bolt':'\ud83d\udd29',
+  'o':'\u2b55\ufe0f',
+  'o2':'\ud83c\udd7e\ufe0f',
+  'ocean':'\ud83c\udf0a',
+  'octopus':'\ud83d\udc19',
+  'oden':'\ud83c\udf62',
+  'office':'\ud83c\udfe2',
+  'oil_drum':'\ud83d\udee2',
+  'ok':'\ud83c\udd97',
+  'ok_hand':'\ud83d\udc4c',
+  'ok_man':'\ud83d\ude46&zwj;\u2642\ufe0f',
+  'ok_woman':'\ud83d\ude46',
+  'old_key':'\ud83d\udddd',
+  'older_man':'\ud83d\udc74',
+  'older_woman':'\ud83d\udc75',
+  'om':'\ud83d\udd49',
+  'on':'\ud83d\udd1b',
+  'oncoming_automobile':'\ud83d\ude98',
+  'oncoming_bus':'\ud83d\ude8d',
+  'oncoming_police_car':'\ud83d\ude94',
+  'oncoming_taxi':'\ud83d\ude96',
+  'open_file_folder':'\ud83d\udcc2',
+  'open_hands':'\ud83d\udc50',
+  'open_mouth':'\ud83d\ude2e',
+  'open_umbrella':'\u2602\ufe0f',
+  'ophiuchus':'\u26ce',
+  'orange_book':'\ud83d\udcd9',
+  'orthodox_cross':'\u2626\ufe0f',
+  'outbox_tray':'\ud83d\udce4',
+  'owl':'\ud83e\udd89',
+  'ox':'\ud83d\udc02',
+  'package':'\ud83d\udce6',
+  'page_facing_up':'\ud83d\udcc4',
+  'page_with_curl':'\ud83d\udcc3',
+  'pager':'\ud83d\udcdf',
+  'paintbrush':'\ud83d\udd8c',
+  'palm_tree':'\ud83c\udf34',
+  'pancakes':'\ud83e\udd5e',
+  'panda_face':'\ud83d\udc3c',
+  'paperclip':'\ud83d\udcce',
+  'paperclips':'\ud83d\udd87',
+  'parasol_on_ground':'\u26f1',
+  'parking':'\ud83c\udd7f\ufe0f',
+  'part_alternation_mark':'\u303d\ufe0f',
+  'partly_sunny':'\u26c5\ufe0f',
+  'passenger_ship':'\ud83d\udef3',
+  'passport_control':'\ud83d\udec2',
+  'pause_button':'\u23f8',
+  'peace_symbol':'\u262e\ufe0f',
+  'peach':'\ud83c\udf51',
+  'peanuts':'\ud83e\udd5c',
+  'pear':'\ud83c\udf50',
+  'pen':'\ud83d\udd8a',
+  'pencil2':'\u270f\ufe0f',
+  'penguin':'\ud83d\udc27',
+  'pensive':'\ud83d\ude14',
+  'performing_arts':'\ud83c\udfad',
+  'persevere':'\ud83d\ude23',
+  'person_fencing':'\ud83e\udd3a',
+  'pouting_woman':'\ud83d\ude4e',
+  'phone':'\u260e\ufe0f',
+  'pick':'\u26cf',
+  'pig':'\ud83d\udc37',
+  'pig2':'\ud83d\udc16',
+  'pig_nose':'\ud83d\udc3d',
+  'pill':'\ud83d\udc8a',
+  'pineapple':'\ud83c\udf4d',
+  'ping_pong':'\ud83c\udfd3',
+  'pisces':'\u2653\ufe0f',
+  'pizza':'\ud83c\udf55',
+  'place_of_worship':'\ud83d\uded0',
+  'plate_with_cutlery':'\ud83c\udf7d',
+  'play_or_pause_button':'\u23ef',
+  'point_down':'\ud83d\udc47',
+  'point_left':'\ud83d\udc48',
+  'point_right':'\ud83d\udc49',
+  'point_up':'\u261d\ufe0f',
+  'point_up_2':'\ud83d\udc46',
+  'police_car':'\ud83d\ude93',
+  'policewoman':'\ud83d\udc6e&zwj;\u2640\ufe0f',
+  'poodle':'\ud83d\udc29',
+  'popcorn':'\ud83c\udf7f',
+  'post_office':'\ud83c\udfe3',
+  'postal_horn':'\ud83d\udcef',
+  'postbox':'\ud83d\udcee',
+  'potable_water':'\ud83d\udeb0',
+  'potato':'\ud83e\udd54',
+  'pouch':'\ud83d\udc5d',
+  'poultry_leg':'\ud83c\udf57',
+  'pound':'\ud83d\udcb7',
+  'rage':'\ud83d\ude21',
+  'pouting_cat':'\ud83d\ude3e',
+  'pouting_man':'\ud83d\ude4e&zwj;\u2642\ufe0f',
+  'pray':'\ud83d\ude4f',
+  'prayer_beads':'\ud83d\udcff',
+  'pregnant_woman':'\ud83e\udd30',
+  'previous_track_button':'\u23ee',
+  'prince':'\ud83e\udd34',
+  'princess':'\ud83d\udc78',
+  'printer':'\ud83d\udda8',
+  'purple_heart':'\ud83d\udc9c',
+  'purse':'\ud83d\udc5b',
+  'pushpin':'\ud83d\udccc',
+  'put_litter_in_its_place':'\ud83d\udeae',
+  'question':'\u2753',
+  'rabbit':'\ud83d\udc30',
+  'rabbit2':'\ud83d\udc07',
+  'racehorse':'\ud83d\udc0e',
+  'racing_car':'\ud83c\udfce',
+  'radio':'\ud83d\udcfb',
+  'radio_button':'\ud83d\udd18',
+  'radioactive':'\u2622\ufe0f',
+  'railway_car':'\ud83d\ude83',
+  'railway_track':'\ud83d\udee4',
+  'rainbow':'\ud83c\udf08',
+  'rainbow_flag':'\ud83c\udff3\ufe0f&zwj;\ud83c\udf08',
+  'raised_back_of_hand':'\ud83e\udd1a',
+  'raised_hand_with_fingers_splayed':'\ud83d\udd90',
+  'raised_hands':'\ud83d\ude4c',
+  'raising_hand_woman':'\ud83d\ude4b',
+  'raising_hand_man':'\ud83d\ude4b&zwj;\u2642\ufe0f',
+  'ram':'\ud83d\udc0f',
+  'ramen':'\ud83c\udf5c',
+  'rat':'\ud83d\udc00',
+  'record_button':'\u23fa',
+  'recycle':'\u267b\ufe0f',
+  'red_circle':'\ud83d\udd34',
+  'registered':'\u00ae\ufe0f',
+  'relaxed':'\u263a\ufe0f',
+  'relieved':'\ud83d\ude0c',
+  'reminder_ribbon':'\ud83c\udf97',
+  'repeat':'\ud83d\udd01',
+  'repeat_one':'\ud83d\udd02',
+  'rescue_worker_helmet':'\u26d1',
+  'restroom':'\ud83d\udebb',
+  'revolving_hearts':'\ud83d\udc9e',
+  'rewind':'\u23ea',
+  'rhinoceros':'\ud83e\udd8f',
+  'ribbon':'\ud83c\udf80',
+  'rice':'\ud83c\udf5a',
+  'rice_ball':'\ud83c\udf59',
+  'rice_cracker':'\ud83c\udf58',
+  'rice_scene':'\ud83c\udf91',
+  'right_anger_bubble':'\ud83d\uddef',
+  'ring':'\ud83d\udc8d',
+  'robot':'\ud83e\udd16',
+  'rocket':'\ud83d\ude80',
+  'rofl':'\ud83e\udd23',
+  'roll_eyes':'\ud83d\ude44',
+  'roller_coaster':'\ud83c\udfa2',
+  'rooster':'\ud83d\udc13',
+  'rose':'\ud83c\udf39',
+  'rosette':'\ud83c\udff5',
+  'rotating_light':'\ud83d\udea8',
+  'round_pushpin':'\ud83d\udccd',
+  'rowing_man':'\ud83d\udea3',
+  'rowing_woman':'\ud83d\udea3&zwj;\u2640\ufe0f',
+  'rugby_football':'\ud83c\udfc9',
+  'running_man':'\ud83c\udfc3',
+  'running_shirt_with_sash':'\ud83c\udfbd',
+  'running_woman':'\ud83c\udfc3&zwj;\u2640\ufe0f',
+  'sa':'\ud83c\ude02\ufe0f',
+  'sagittarius':'\u2650\ufe0f',
+  'sake':'\ud83c\udf76',
+  'sandal':'\ud83d\udc61',
+  'santa':'\ud83c\udf85',
+  'satellite':'\ud83d\udce1',
+  'saxophone':'\ud83c\udfb7',
+  'school':'\ud83c\udfeb',
+  'school_satchel':'\ud83c\udf92',
+  'scissors':'\u2702\ufe0f',
+  'scorpion':'\ud83e\udd82',
+  'scorpius':'\u264f\ufe0f',
+  'scream':'\ud83d\ude31',
+  'scream_cat':'\ud83d\ude40',
+  'scroll':'\ud83d\udcdc',
+  'seat':'\ud83d\udcba',
+  'secret':'\u3299\ufe0f',
+  'see_no_evil':'\ud83d\ude48',
+  'seedling':'\ud83c\udf31',
+  'selfie':'\ud83e\udd33',
+  'shallow_pan_of_food':'\ud83e\udd58',
+  'shamrock':'\u2618\ufe0f',
+  'shark':'\ud83e\udd88',
+  'shaved_ice':'\ud83c\udf67',
+  'sheep':'\ud83d\udc11',
+  'shell':'\ud83d\udc1a',
+  'shield':'\ud83d\udee1',
+  'shinto_shrine':'\u26e9',
+  'ship':'\ud83d\udea2',
+  'shirt':'\ud83d\udc55',
+  'shopping':'\ud83d\udecd',
+  'shopping_cart':'\ud83d\uded2',
+  'shower':'\ud83d\udebf',
+  'shrimp':'\ud83e\udd90',
+  'signal_strength':'\ud83d\udcf6',
+  'six_pointed_star':'\ud83d\udd2f',
+  'ski':'\ud83c\udfbf',
+  'skier':'\u26f7',
+  'skull':'\ud83d\udc80',
+  'skull_and_crossbones':'\u2620\ufe0f',
+  'sleeping':'\ud83d\ude34',
+  'sleeping_bed':'\ud83d\udecc',
+  'sleepy':'\ud83d\ude2a',
+  'slightly_frowning_face':'\ud83d\ude41',
+  'slightly_smiling_face':'\ud83d\ude42',
+  'slot_machine':'\ud83c\udfb0',
+  'small_airplane':'\ud83d\udee9',
+  'small_blue_diamond':'\ud83d\udd39',
+  'small_orange_diamond':'\ud83d\udd38',
+  'small_red_triangle':'\ud83d\udd3a',
+  'small_red_triangle_down':'\ud83d\udd3b',
+  'smile':'\ud83d\ude04',
+  'smile_cat':'\ud83d\ude38',
+  'smiley':'\ud83d\ude03',
+  'smiley_cat':'\ud83d\ude3a',
+  'smiling_imp':'\ud83d\ude08',
+  'smirk':'\ud83d\ude0f',
+  'smirk_cat':'\ud83d\ude3c',
+  'smoking':'\ud83d\udeac',
+  'snail':'\ud83d\udc0c',
+  'snake':'\ud83d\udc0d',
+  'sneezing_face':'\ud83e\udd27',
+  'snowboarder':'\ud83c\udfc2',
+  'snowflake':'\u2744\ufe0f',
+  'snowman':'\u26c4\ufe0f',
+  'snowman_with_snow':'\u2603\ufe0f',
+  'sob':'\ud83d\ude2d',
+  'soccer':'\u26bd\ufe0f',
+  'soon':'\ud83d\udd1c',
+  'sos':'\ud83c\udd98',
+  'sound':'\ud83d\udd09',
+  'space_invader':'\ud83d\udc7e',
+  'spades':'\u2660\ufe0f',
+  'spaghetti':'\ud83c\udf5d',
+  'sparkle':'\u2747\ufe0f',
+  'sparkler':'\ud83c\udf87',
+  'sparkles':'\u2728',
+  'sparkling_heart':'\ud83d\udc96',
+  'speak_no_evil':'\ud83d\ude4a',
+  'speaker':'\ud83d\udd08',
+  'speaking_head':'\ud83d\udde3',
+  'speech_balloon':'\ud83d\udcac',
+  'speedboat':'\ud83d\udea4',
+  'spider':'\ud83d\udd77',
+  'spider_web':'\ud83d\udd78',
+  'spiral_calendar':'\ud83d\uddd3',
+  'spiral_notepad':'\ud83d\uddd2',
+  'spoon':'\ud83e\udd44',
+  'squid':'\ud83e\udd91',
+  'stadium':'\ud83c\udfdf',
+  'star':'\u2b50\ufe0f',
+  'star2':'\ud83c\udf1f',
+  'star_and_crescent':'\u262a\ufe0f',
+  'star_of_david':'\u2721\ufe0f',
+  'stars':'\ud83c\udf20',
+  'station':'\ud83d\ude89',
+  'statue_of_liberty':'\ud83d\uddfd',
+  'steam_locomotive':'\ud83d\ude82',
+  'stew':'\ud83c\udf72',
+  'stop_button':'\u23f9',
+  'stop_sign':'\ud83d\uded1',
+  'stopwatch':'\u23f1',
+  'straight_ruler':'\ud83d\udccf',
+  'strawberry':'\ud83c\udf53',
+  'stuck_out_tongue':'\ud83d\ude1b',
+  'stuck_out_tongue_closed_eyes':'\ud83d\ude1d',
+  'stuck_out_tongue_winking_eye':'\ud83d\ude1c',
+  'studio_microphone':'\ud83c\udf99',
+  'stuffed_flatbread':'\ud83e\udd59',
+  'sun_behind_large_cloud':'\ud83c\udf25',
+  'sun_behind_rain_cloud':'\ud83c\udf26',
+  'sun_behind_small_cloud':'\ud83c\udf24',
+  'sun_with_face':'\ud83c\udf1e',
+  'sunflower':'\ud83c\udf3b',
+  'sunglasses':'\ud83d\ude0e',
+  'sunny':'\u2600\ufe0f',
+  'sunrise':'\ud83c\udf05',
+  'sunrise_over_mountains':'\ud83c\udf04',
+  'surfing_man':'\ud83c\udfc4',
+  'surfing_woman':'\ud83c\udfc4&zwj;\u2640\ufe0f',
+  'sushi':'\ud83c\udf63',
+  'suspension_railway':'\ud83d\ude9f',
+  'sweat':'\ud83d\ude13',
+  'sweat_drops':'\ud83d\udca6',
+  'sweat_smile':'\ud83d\ude05',
+  'sweet_potato':'\ud83c\udf60',
+  'swimming_man':'\ud83c\udfca',
+  'swimming_woman':'\ud83c\udfca&zwj;\u2640\ufe0f',
+  'symbols':'\ud83d\udd23',
+  'synagogue':'\ud83d\udd4d',
+  'syringe':'\ud83d\udc89',
+  'taco':'\ud83c\udf2e',
+  'tada':'\ud83c\udf89',
+  'tanabata_tree':'\ud83c\udf8b',
+  'taurus':'\u2649\ufe0f',
+  'taxi':'\ud83d\ude95',
+  'tea':'\ud83c\udf75',
+  'telephone_receiver':'\ud83d\udcde',
+  'telescope':'\ud83d\udd2d',
+  'tennis':'\ud83c\udfbe',
+  'tent':'\u26fa\ufe0f',
+  'thermometer':'\ud83c\udf21',
+  'thinking':'\ud83e\udd14',
+  'thought_balloon':'\ud83d\udcad',
+  'ticket':'\ud83c\udfab',
+  'tickets':'\ud83c\udf9f',
+  'tiger':'\ud83d\udc2f',
+  'tiger2':'\ud83d\udc05',
+  'timer_clock':'\u23f2',
+  'tipping_hand_man':'\ud83d\udc81&zwj;\u2642\ufe0f',
+  'tired_face':'\ud83d\ude2b',
+  'tm':'\u2122\ufe0f',
+  'toilet':'\ud83d\udebd',
+  'tokyo_tower':'\ud83d\uddfc',
+  'tomato':'\ud83c\udf45',
+  'tongue':'\ud83d\udc45',
+  'top':'\ud83d\udd1d',
+  'tophat':'\ud83c\udfa9',
+  'tornado':'\ud83c\udf2a',
+  'trackball':'\ud83d\uddb2',
+  'tractor':'\ud83d\ude9c',
+  'traffic_light':'\ud83d\udea5',
+  'train':'\ud83d\ude8b',
+  'train2':'\ud83d\ude86',
+  'tram':'\ud83d\ude8a',
+  'triangular_flag_on_post':'\ud83d\udea9',
+  'triangular_ruler':'\ud83d\udcd0',
+  'trident':'\ud83d\udd31',
+  'triumph':'\ud83d\ude24',
+  'trolleybus':'\ud83d\ude8e',
+  'trophy':'\ud83c\udfc6',
+  'tropical_drink':'\ud83c\udf79',
+  'tropical_fish':'\ud83d\udc20',
+  'truck':'\ud83d\ude9a',
+  'trumpet':'\ud83c\udfba',
+  'tulip':'\ud83c\udf37',
+  'tumbler_glass':'\ud83e\udd43',
+  'turkey':'\ud83e\udd83',
+  'turtle':'\ud83d\udc22',
+  'tv':'\ud83d\udcfa',
+  'twisted_rightwards_arrows':'\ud83d\udd00',
+  'two_hearts':'\ud83d\udc95',
+  'two_men_holding_hands':'\ud83d\udc6c',
+  'two_women_holding_hands':'\ud83d\udc6d',
+  'u5272':'\ud83c\ude39',
+  'u5408':'\ud83c\ude34',
+  'u55b6':'\ud83c\ude3a',
+  'u6307':'\ud83c\ude2f\ufe0f',
+  'u6708':'\ud83c\ude37\ufe0f',
+  'u6709':'\ud83c\ude36',
+  'u6e80':'\ud83c\ude35',
+  'u7121':'\ud83c\ude1a\ufe0f',
+  'u7533':'\ud83c\ude38',
+  'u7981':'\ud83c\ude32',
+  'u7a7a':'\ud83c\ude33',
+  'umbrella':'\u2614\ufe0f',
+  'unamused':'\ud83d\ude12',
+  'underage':'\ud83d\udd1e',
+  'unicorn':'\ud83e\udd84',
+  'unlock':'\ud83d\udd13',
+  'up':'\ud83c\udd99',
+  'upside_down_face':'\ud83d\ude43',
+  'v':'\u270c\ufe0f',
+  'vertical_traffic_light':'\ud83d\udea6',
+  'vhs':'\ud83d\udcfc',
+  'vibration_mode':'\ud83d\udcf3',
+  'video_camera':'\ud83d\udcf9',
+  'video_game':'\ud83c\udfae',
+  'violin':'\ud83c\udfbb',
+  'virgo':'\u264d\ufe0f',
+  'volcano':'\ud83c\udf0b',
+  'volleyball':'\ud83c\udfd0',
+  'vs':'\ud83c\udd9a',
+  'vulcan_salute':'\ud83d\udd96',
+  'walking_man':'\ud83d\udeb6',
+  'walking_woman':'\ud83d\udeb6&zwj;\u2640\ufe0f',
+  'waning_crescent_moon':'\ud83c\udf18',
+  'waning_gibbous_moon':'\ud83c\udf16',
+  'warning':'\u26a0\ufe0f',
+  'wastebasket':'\ud83d\uddd1',
+  'watch':'\u231a\ufe0f',
+  'water_buffalo':'\ud83d\udc03',
+  'watermelon':'\ud83c\udf49',
+  'wave':'\ud83d\udc4b',
+  'wavy_dash':'\u3030\ufe0f',
+  'waxing_crescent_moon':'\ud83c\udf12',
+  'wc':'\ud83d\udebe',
+  'weary':'\ud83d\ude29',
+  'wedding':'\ud83d\udc92',
+  'weight_lifting_man':'\ud83c\udfcb\ufe0f',
+  'weight_lifting_woman':'\ud83c\udfcb\ufe0f&zwj;\u2640\ufe0f',
+  'whale':'\ud83d\udc33',
+  'whale2':'\ud83d\udc0b',
+  'wheel_of_dharma':'\u2638\ufe0f',
+  'wheelchair':'\u267f\ufe0f',
+  'white_check_mark':'\u2705',
+  'white_circle':'\u26aa\ufe0f',
+  'white_flag':'\ud83c\udff3\ufe0f',
+  'white_flower':'\ud83d\udcae',
+  'white_large_square':'\u2b1c\ufe0f',
+  'white_medium_small_square':'\u25fd\ufe0f',
+  'white_medium_square':'\u25fb\ufe0f',
+  'white_small_square':'\u25ab\ufe0f',
+  'white_square_button':'\ud83d\udd33',
+  'wilted_flower':'\ud83e\udd40',
+  'wind_chime':'\ud83c\udf90',
+  'wind_face':'\ud83c\udf2c',
+  'wine_glass':'\ud83c\udf77',
+  'wink':'\ud83d\ude09',
+  'wolf':'\ud83d\udc3a',
+  'woman':'\ud83d\udc69',
+  'woman_artist':'\ud83d\udc69&zwj;\ud83c\udfa8',
+  'woman_astronaut':'\ud83d\udc69&zwj;\ud83d\ude80',
+  'woman_cartwheeling':'\ud83e\udd38&zwj;\u2640\ufe0f',
+  'woman_cook':'\ud83d\udc69&zwj;\ud83c\udf73',
+  'woman_facepalming':'\ud83e\udd26&zwj;\u2640\ufe0f',
+  'woman_factory_worker':'\ud83d\udc69&zwj;\ud83c\udfed',
+  'woman_farmer':'\ud83d\udc69&zwj;\ud83c\udf3e',
+  'woman_firefighter':'\ud83d\udc69&zwj;\ud83d\ude92',
+  'woman_health_worker':'\ud83d\udc69&zwj;\u2695\ufe0f',
+  'woman_judge':'\ud83d\udc69&zwj;\u2696\ufe0f',
+  'woman_juggling':'\ud83e\udd39&zwj;\u2640\ufe0f',
+  'woman_mechanic':'\ud83d\udc69&zwj;\ud83d\udd27',
+  'woman_office_worker':'\ud83d\udc69&zwj;\ud83d\udcbc',
+  'woman_pilot':'\ud83d\udc69&zwj;\u2708\ufe0f',
+  'woman_playing_handball':'\ud83e\udd3e&zwj;\u2640\ufe0f',
+  'woman_playing_water_polo':'\ud83e\udd3d&zwj;\u2640\ufe0f',
+  'woman_scientist':'\ud83d\udc69&zwj;\ud83d\udd2c',
+  'woman_shrugging':'\ud83e\udd37&zwj;\u2640\ufe0f',
+  'woman_singer':'\ud83d\udc69&zwj;\ud83c\udfa4',
+  'woman_student':'\ud83d\udc69&zwj;\ud83c\udf93',
+  'woman_teacher':'\ud83d\udc69&zwj;\ud83c\udfeb',
+  'woman_technologist':'\ud83d\udc69&zwj;\ud83d\udcbb',
+  'woman_with_turban':'\ud83d\udc73&zwj;\u2640\ufe0f',
+  'womans_clothes':'\ud83d\udc5a',
+  'womans_hat':'\ud83d\udc52',
+  'women_wrestling':'\ud83e\udd3c&zwj;\u2640\ufe0f',
+  'womens':'\ud83d\udeba',
+  'world_map':'\ud83d\uddfa',
+  'worried':'\ud83d\ude1f',
+  'wrench':'\ud83d\udd27',
+  'writing_hand':'\u270d\ufe0f',
+  'x':'\u274c',
+  'yellow_heart':'\ud83d\udc9b',
+  'yen':'\ud83d\udcb4',
+  'yin_yang':'\u262f\ufe0f',
+  'yum':'\ud83d\ude0b',
+  'zap':'\u26a1\ufe0f',
+  'zipper_mouth_face':'\ud83e\udd10',
+  'zzz':'\ud83d\udca4',
+
+  /* special emojis :P */
+  'octocat':  '<img alt=":octocat:" height="20" width="20" align="absmiddle" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png">',
+  'showdown': '<span style="font-family: \'Anonymous Pro\', monospace; text-decoration: underline; text-decoration-style: dashed; text-decoration-color: #3e8b8a;text-underline-position: under;">S</span>'
+};
+
+/**
+ * Created by Estevao on 31-05-2015.
+ */
+
+/**
+ * Showdown Converter class
+ * @class
+ * @param {object} [converterOptions]
+ * @returns {Converter}
+ */
+showdown.Converter = function (converterOptions) {
+  'use strict';
+
+  var
+      /**
+       * Options used by this converter
+       * @private
+       * @type {{}}
+       */
+      options = {},
+
+      /**
+       * Language extensions used by this converter
+       * @private
+       * @type {Array}
+       */
+      langExtensions = [],
+
+      /**
+       * Output modifiers extensions used by this converter
+       * @private
+       * @type {Array}
+       */
+      outputModifiers = [],
+
+      /**
+       * Event listeners
+       * @private
+       * @type {{}}
+       */
+      listeners = {},
+
+      /**
+       * The flavor set in this converter
+       */
+      setConvFlavor = setFlavor,
+
+    /**
+     * Metadata of the document
+     * @type {{parsed: {}, raw: string, format: string}}
+     */
+      metadata = {
+        parsed: {},
+        raw: '',
+        format: ''
+      };
+
+  _constructor();
+
+  /**
+   * Converter constructor
+   * @private
+   */
+  function _constructor () {
+    converterOptions = converterOptions || {};
+
+    for (var gOpt in globalOptions) {
+      if (globalOptions.hasOwnProperty(gOpt)) {
+        options[gOpt] = globalOptions[gOpt];
+      }
+    }
+
+    // Merge options
+    if (typeof converterOptions === 'object') {
+      for (var opt in converterOptions) {
+        if (converterOptions.hasOwnProperty(opt)) {
+          options[opt] = converterOptions[opt];
+        }
+      }
+    } else {
+      throw Error('Converter expects the passed parameter to be an object, but ' + typeof converterOptions +
+      ' was passed instead.');
+    }
+
+    if (options.extensions) {
+      showdown.helper.forEach(options.extensions, _parseExtension);
+    }
+  }
+
+  /**
+   * Parse extension
+   * @param {*} ext
+   * @param {string} [name='']
+   * @private
+   */
+  function _parseExtension (ext, name) {
+
+    name = name || null;
+    // If it's a string, the extension was previously loaded
+    if (showdown.helper.isString(ext)) {
+      ext = showdown.helper.stdExtName(ext);
+      name = ext;
+
+      // LEGACY_SUPPORT CODE
+      if (showdown.extensions[ext]) {
+        console.warn('DEPRECATION WARNING: ' + ext + ' is an old extension that uses a deprecated loading method.' +
+          'Please inform the developer that the extension should be updated!');
+        legacyExtensionLoading(showdown.extensions[ext], ext);
+        return;
+      // END LEGACY SUPPORT CODE
+
+      } else if (!showdown.helper.isUndefined(extensions[ext])) {
+        ext = extensions[ext];
+
+      } else {
+        throw Error('Extension "' + ext + '" could not be loaded. It was either not found or is not a valid extension.');
+      }
+    }
+
+    if (typeof ext === 'function') {
+      ext = ext();
+    }
+
+    if (!showdown.helper.isArray(ext)) {
+      ext = [ext];
+    }
+
+    var validExt = validate(ext, name);
+    if (!validExt.valid) {
+      throw Error(validExt.error);
+    }
+
+    for (var i = 0; i < ext.length; ++i) {
+      switch (ext[i].type) {
+
+        case 'lang':
+          langExtensions.push(ext[i]);
+          break;
+
+        case 'output':
+          outputModifiers.push(ext[i]);
+          break;
+      }
+      if (ext[i].hasOwnProperty('listeners')) {
+        for (var ln in ext[i].listeners) {
+          if (ext[i].listeners.hasOwnProperty(ln)) {
+            listen(ln, ext[i].listeners[ln]);
+          }
+        }
+      }
+    }
+
+  }
+
+  /**
+   * LEGACY_SUPPORT
+   * @param {*} ext
+   * @param {string} name
+   */
+  function legacyExtensionLoading (ext, name) {
+    if (typeof ext === 'function') {
+      ext = ext(new showdown.Converter());
+    }
+    if (!showdown.helper.isArray(ext)) {
+      ext = [ext];
+    }
+    var valid = validate(ext, name);
+
+    if (!valid.valid) {
+      throw Error(valid.error);
+    }
+
+    for (var i = 0; i < ext.length; ++i) {
+      switch (ext[i].type) {
+        case 'lang':
+          langExtensions.push(ext[i]);
+          break;
+        case 'output':
+          outputModifiers.push(ext[i]);
+          break;
+        default:// should never reach here
+          throw Error('Extension loader error: Type unrecognized!!!');
+      }
+    }
+  }
+
+  /**
+   * Listen to an event
+   * @param {string} name
+   * @param {function} callback
+   */
+  function listen (name, callback) {
+    if (!showdown.helper.isString(name)) {
+      throw Error('Invalid argument in converter.listen() method: name must be a string, but ' + typeof name + ' given');
+    }
+
+    if (typeof callback !== 'function') {
+      throw Error('Invalid argument in converter.listen() method: callback must be a function, but ' + typeof callback + ' given');
+    }
+
+    if (!listeners.hasOwnProperty(name)) {
+      listeners[name] = [];
+    }
+    listeners[name].push(callback);
+  }
+
+  function rTrimInputText (text) {
+    var rsp = text.match(/^\s*/)[0].length,
+        rgx = new RegExp('^\\s{0,' + rsp + '}', 'gm');
+    return text.replace(rgx, '');
+  }
+
+  /**
+   * Dispatch an event
+   * @private
+   * @param {string} evtName Event name
+   * @param {string} text Text
+   * @param {{}} options Converter Options
+   * @param {{}} globals
+   * @returns {string}
+   */
+  this._dispatch = function dispatch (evtName, text, options, globals) {
+    if (listeners.hasOwnProperty(evtName)) {
+      for (var ei = 0; ei < listeners[evtName].length; ++ei) {
+        var nText = listeners[evtName][ei](evtName, text, this, options, globals);
+        if (nText && typeof nText !== 'undefined') {
+          text = nText;
+        }
+      }
+    }
+    return text;
+  };
+
+  /**
+   * Listen to an event
+   * @param {string} name
+   * @param {function} callback
+   * @returns {showdown.Converter}
+   */
+  this.listen = function (name, callback) {
+    listen(name, callback);
+    return this;
+  };
+
+  /**
+   * Converts a markdown string into HTML
+   * @param {string} text
+   * @returns {*}
+   */
+  this.makeHtml = function (text) {
+    //check if text is not falsy
+    if (!text) {
+      return text;
+    }
+
+    var globals = {
+      gHtmlBlocks:     [],
+      gHtmlMdBlocks:   [],
+      gHtmlSpans:      [],
+      gUrls:           {},
+      gTitles:         {},
+      gDimensions:     {},
+      gListLevel:      0,
+      hashLinkCounts:  {},
+      langExtensions:  langExtensions,
+      outputModifiers: outputModifiers,
+      converter:       this,
+      ghCodeBlocks:    [],
+      metadata: {
+        parsed: {},
+        raw: '',
+        format: ''
+      }
+    };
+
+    // This lets us use ¨ trema as an escape char to avoid md5 hashes
+    // The choice of character is arbitrary; anything that isn't
+    // magic in Markdown will work.
+    text = text.replace(/¨/g, '¨T');
+
+    // Replace $ with ¨D
+    // RegExp interprets $ as a special character
+    // when it's in a replacement string
+    text = text.replace(/\$/g, '¨D');
+
+    // Standardize line endings
+    text = text.replace(/\r\n/g, '\n'); // DOS to Unix
+    text = text.replace(/\r/g, '\n'); // Mac to Unix
+
+    // Stardardize line spaces
+    text = text.replace(/\u00A0/g, '&nbsp;');
+
+    if (options.smartIndentationFix) {
+      text = rTrimInputText(text);
+    }
+
+    // Make sure text begins and ends with a couple of newlines:
+    text = '\n\n' + text + '\n\n';
+
+    // detab
+    text = showdown.subParser('detab')(text, options, globals);
+
+    /**
+     * Strip any lines consisting only of spaces and tabs.
+     * This makes subsequent regexs easier to write, because we can
+     * match consecutive blank lines with /\n+/ instead of something
+     * contorted like /[ \t]*\n+/
+     */
+    text = text.replace(/^[ \t]+$/mg, '');
+
+    //run languageExtensions
+    showdown.helper.forEach(langExtensions, function (ext) {
+      text = showdown.subParser('runExtension')(ext, text, options, globals);
+    });
+
+    // run the sub parsers
+    text = showdown.subParser('metadata')(text, options, globals);
+    text = showdown.subParser('hashPreCodeTags')(text, options, globals);
+    text = showdown.subParser('githubCodeBlocks')(text, options, globals);
+    text = showdown.subParser('hashHTMLBlocks')(text, options, globals);
+    text = showdown.subParser('hashCodeTags')(text, options, globals);
+    text = showdown.subParser('stripLinkDefinitions')(text, options, globals);
+    text = showdown.subParser('blockGamut')(text, options, globals);
+    text = showdown.subParser('unhashHTMLSpans')(text, options, globals);
+    text = showdown.subParser('unescapeSpecialChars')(text, options, globals);
+
+    // attacklab: Restore dollar signs
+    text = text.replace(/¨D/g, '$$');
+
+    // attacklab: Restore tremas
+    text = text.replace(/¨T/g, '¨');
+
+    // render a complete html document instead of a partial if the option is enabled
+    text = showdown.subParser('completeHTMLDocument')(text, options, globals);
+
+    // Run output modifiers
+    showdown.helper.forEach(outputModifiers, function (ext) {
+      text = showdown.subParser('runExtension')(ext, text, options, globals);
+    });
+
+    // update metadata
+    metadata = globals.metadata;
+    return text;
+  };
+
+  /**
+   * Converts an HTML string into a markdown string
+   * @param src
+   * @param [HTMLParser] A WHATWG DOM and HTML parser, such as JSDOM. If none is supplied, window.document will be used.
+   * @returns {string}
+   */
+  this.makeMarkdown = this.makeMd = function (src, HTMLParser) {
+
+    // replace \r\n with \n
+    src = src.replace(/\r\n/g, '\n');
+    src = src.replace(/\r/g, '\n'); // old macs
+
+    // due to an edge case, we need to find this: > <
+    // to prevent removing of non silent white spaces
+    // ex: <em>this is</em> <strong>sparta</strong>
+    src = src.replace(/>[ \t]+</, '>¨NBSP;<');
+
+    if (!HTMLParser) {
+      if (window && window.document) {
+        HTMLParser = window.document;
+      } else {
+        throw new Error('HTMLParser is undefined. If in a webworker or nodejs environment, you need to provide a WHATWG DOM and HTML such as JSDOM');
+      }
+    }
+
+    var doc = HTMLParser.createElement('div');
+    doc.innerHTML = src;
+
+    var globals = {
+      preList: substitutePreCodeTags(doc)
+    };
+
+    // remove all newlines and collapse spaces
+    clean(doc);
+
+    // some stuff, like accidental reference links must now be escaped
+    // TODO
+    // doc.innerHTML = doc.innerHTML.replace(/\[[\S\t ]]/);
+
+    var nodes = doc.childNodes,
+        mdDoc = '';
+
+    for (var i = 0; i < nodes.length; i++) {
+      mdDoc += showdown.subParser('makeMarkdown.node')(nodes[i], globals);
+    }
+
+    function clean (node) {
+      for (var n = 0; n < node.childNodes.length; ++n) {
+        var child = node.childNodes[n];
+        if (child.nodeType === 3) {
+          if (!/\S/.test(child.nodeValue)) {
+            node.removeChild(child);
+            --n;
+          } else {
+            child.nodeValue = child.nodeValue.split('\n').join(' ');
+            child.nodeValue = child.nodeValue.replace(/(\s)+/g, '$1');
+          }
+        } else if (child.nodeType === 1) {
+          clean(child);
+        }
+      }
+    }
+
+    // find all pre tags and replace contents with placeholder
+    // we need this so that we can remove all indentation from html
+    // to ease up parsing
+    function substitutePreCodeTags (doc) {
+
+      var pres = doc.querySelectorAll('pre'),
+          presPH = [];
+
+      for (var i = 0; i < pres.length; ++i) {
+
+        if (pres[i].childElementCount === 1 && pres[i].firstChild.tagName.toLowerCase() === 'code') {
+          var content = pres[i].firstChild.innerHTML.trim(),
+              language = pres[i].firstChild.getAttribute('data-language') || '';
+
+          // if data-language attribute is not defined, then we look for class language-*
+          if (language === '') {
+            var classes = pres[i].firstChild.className.split(' ');
+            for (var c = 0; c < classes.length; ++c) {
+              var matches = classes[c].match(/^language-(.+)$/);
+              if (matches !== null) {
+                language = matches[1];
+                break;
+              }
+            }
+          }
+
+          // unescape html entities in content
+          content = showdown.helper.unescapeHTMLEntities(content);
+
+          presPH.push(content);
+          pres[i].outerHTML = '<precode language="' + language + '" precodenum="' + i.toString() + '"></precode>';
+        } else {
+          presPH.push(pres[i].innerHTML);
+          pres[i].innerHTML = '';
+          pres[i].setAttribute('prenum', i.toString());
+        }
+      }
+      return presPH;
+    }
+
+    return mdDoc;
+  };
+
+  /**
+   * Set an option of this Converter instance
+   * @param {string} key
+   * @param {*} value
+   */
+  this.setOption = function (key, value) {
+    options[key] = value;
+  };
+
+  /**
+   * Get the option of this Converter instance
+   * @param {string} key
+   * @returns {*}
+   */
+  this.getOption = function (key) {
+    return options[key];
+  };
+
+  /**
+   * Get the options of this Converter instance
+   * @returns {{}}
+   */
+  this.getOptions = function () {
+    return options;
+  };
+
+  /**
+   * Add extension to THIS converter
+   * @param {{}} extension
+   * @param {string} [name=null]
+   */
+  this.addExtension = function (extension, name) {
+    name = name || null;
+    _parseExtension(extension, name);
+  };
+
+  /**
+   * Use a global registered extension with THIS converter
+   * @param {string} extensionName Name of the previously registered extension
+   */
+  this.useExtension = function (extensionName) {
+    _parseExtension(extensionName);
+  };
+
+  /**
+   * Set the flavor THIS converter should use
+   * @param {string} name
+   */
+  this.setFlavor = function (name) {
+    if (!flavor.hasOwnProperty(name)) {
+      throw Error(name + ' flavor was not found');
+    }
+    var preset = flavor[name];
+    setConvFlavor = name;
+    for (var option in preset) {
+      if (preset.hasOwnProperty(option)) {
+        options[option] = preset[option];
+      }
+    }
+  };
+
+  /**
+   * Get the currently set flavor of this converter
+   * @returns {string}
+   */
+  this.getFlavor = function () {
+    return setConvFlavor;
+  };
+
+  /**
+   * Remove an extension from THIS converter.
+   * Note: This is a costly operation. It's better to initialize a new converter
+   * and specify the extensions you wish to use
+   * @param {Array} extension
+   */
+  this.removeExtension = function (extension) {
+    if (!showdown.helper.isArray(extension)) {
+      extension = [extension];
+    }
+    for (var a = 0; a < extension.length; ++a) {
+      var ext = extension[a];
+      for (var i = 0; i < langExtensions.length; ++i) {
+        if (langExtensions[i] === ext) {
+          langExtensions[i].splice(i, 1);
+        }
+      }
+      for (var ii = 0; ii < outputModifiers.length; ++i) {
+        if (outputModifiers[ii] === ext) {
+          outputModifiers[ii].splice(i, 1);
+        }
+      }
+    }
+  };
+
+  /**
+   * Get all extension of THIS converter
+   * @returns {{language: Array, output: Array}}
+   */
+  this.getAllExtensions = function () {
+    return {
+      language: langExtensions,
+      output: outputModifiers
+    };
+  };
+
+  /**
+   * Get the metadata of the previously parsed document
+   * @param raw
+   * @returns {string|{}}
+   */
+  this.getMetadata = function (raw) {
+    if (raw) {
+      return metadata.raw;
+    } else {
+      return metadata.parsed;
+    }
+  };
+
+  /**
+   * Get the metadata format of the previously parsed document
+   * @returns {string}
+   */
+  this.getMetadataFormat = function () {
+    return metadata.format;
+  };
+
+  /**
+   * Private: set a single key, value metadata pair
+   * @param {string} key
+   * @param {string} value
+   */
+  this._setMetadataPair = function (key, value) {
+    metadata.parsed[key] = value;
+  };
+
+  /**
+   * Private: set metadata format
+   * @param {string} format
+   */
+  this._setMetadataFormat = function (format) {
+    metadata.format = format;
+  };
+
+  /**
+   * Private: set metadata raw text
+   * @param {string} raw
+   */
+  this._setMetadataRaw = function (raw) {
+    metadata.raw = raw;
+  };
+};
+
+/**
+ * Turn Markdown link shortcuts into XHTML <a> tags.
+ */
+showdown.subParser('anchors', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('anchors.before', text, options, globals);
+
+  var writeAnchorTag = function (wholeMatch, linkText, linkId, url, m5, m6, title) {
+    if (showdown.helper.isUndefined(title)) {
+      title = '';
+    }
+    linkId = linkId.toLowerCase();
+
+    // Special case for explicit empty url
+    if (wholeMatch.search(/\(<?\s*>? ?(['"].*['"])?\)$/m) > -1) {
+      url = '';
+    } else if (!url) {
+      if (!linkId) {
+        // lower-case and turn embedded newlines into spaces
+        linkId = linkText.toLowerCase().replace(/ ?\n/g, ' ');
+      }
+      url = '#' + linkId;
+
+      if (!showdown.helper.isUndefined(globals.gUrls[linkId])) {
+        url = globals.gUrls[linkId];
+        if (!showdown.helper.isUndefined(globals.gTitles[linkId])) {
+          title = globals.gTitles[linkId];
+        }
+      } else {
+        return wholeMatch;
+      }
+    }
+
+    //url = showdown.helper.escapeCharacters(url, '*_', false); // replaced line to improve performance
+    url = url.replace(showdown.helper.regexes.asteriskDashAndColon, showdown.helper.escapeCharactersCallback);
+
+    var result = '<a href="' + url + '"';
+
+    if (title !== '' && title !== null) {
+      title = title.replace(/"/g, '&quot;');
+      //title = showdown.helper.escapeCharacters(title, '*_', false); // replaced line to improve performance
+      title = title.replace(showdown.helper.regexes.asteriskDashAndColon, showdown.helper.escapeCharactersCallback);
+      result += ' title="' + title + '"';
+    }
+
+    // optionLinksInNewWindow only applies
+    // to external links. Hash links (#) open in same page
+    if (options.openLinksInNewWindow && !/^#/.test(url)) {
+      // escaped _
+      result += ' target="¨E95Eblank"';
+    }
+
+    result += '>' + linkText + '</a>';
+
+    return result;
+  };
+
+  // First, handle reference-style links: [link text] [id]
+  text = text.replace(/\[((?:\[[^\]]*]|[^\[\]])*)] ?(?:\n *)?\[(.*?)]()()()()/g, writeAnchorTag);
+
+  // Next, inline-style links: [link text](url "optional title")
+  // cases with crazy urls like ./image/cat1).png
+  text = text.replace(/\[((?:\[[^\]]*]|[^\[\]])*)]()[ \t]*\([ \t]?<([^>]*)>(?:[ \t]*((["'])([^"]*?)\5))?[ \t]?\)/g,
+    writeAnchorTag);
+
+  // normal cases
+  text = text.replace(/\[((?:\[[^\]]*]|[^\[\]])*)]()[ \t]*\([ \t]?<?([\S]+?(?:\([\S]*?\)[\S]*?)?)>?(?:[ \t]*((["'])([^"]*?)\5))?[ \t]?\)/g,
+                      writeAnchorTag);
+
+  // handle reference-style shortcuts: [link text]
+  // These must come last in case you've also got [link test][1]
+  // or [link test](/foo)
+  text = text.replace(/\[([^\[\]]+)]()()()()()/g, writeAnchorTag);
+
+  // Lastly handle GithubMentions if option is enabled
+  if (options.ghMentions) {
+    text = text.replace(/(^|\s)(\\)?(@([a-z\d]+(?:[a-z\d.-]+?[a-z\d]+)*))/gmi, function (wm, st, escape, mentions, username) {
+      if (escape === '\\') {
+        return st + mentions;
+      }
+
+      //check if options.ghMentionsLink is a string
+      if (!showdown.helper.isString(options.ghMentionsLink)) {
+        throw new Error('ghMentionsLink option must be a string');
+      }
+      var lnk = options.ghMentionsLink.replace(/\{u}/g, username),
+          target = '';
+      if (options.openLinksInNewWindow) {
+        target = ' target="¨E95Eblank"';
+      }
+      return st + '<a href="' + lnk + '"' + target + '>' + mentions + '</a>';
+    });
+  }
+
+  text = globals.converter._dispatch('anchors.after', text, options, globals);
+  return text;
+});
+
+// url allowed chars [a-z\d_.~:/?#[]@!$&'()*+,;=-]
+
+var simpleURLRegex  = /([*~_]+|\b)(((https?|ftp|dict):\/\/|www\.)[^'">\s]+?\.[^'">\s]+?)()(\1)?(?=\s|$)(?!["<>])/gi,
+    simpleURLRegex2 = /([*~_]+|\b)(((https?|ftp|dict):\/\/|www\.)[^'">\s]+\.[^'">\s]+?)([.!?,()\[\]])?(\1)?(?=\s|$)(?!["<>])/gi,
+    delimUrlRegex   = /()<(((https?|ftp|dict):\/\/|www\.)[^'">\s]+)()>()/gi,
+    simpleMailRegex = /(^|\s)(?:mailto:)?([A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)(?=$|\s)/gmi,
+    delimMailRegex  = /<()(?:mailto:)?([-.\w]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)>/gi,
+
+    replaceLink = function (options) {
+      'use strict';
+      return function (wm, leadingMagicChars, link, m2, m3, trailingPunctuation, trailingMagicChars) {
+        link = link.replace(showdown.helper.regexes.asteriskDashAndColon, showdown.helper.escapeCharactersCallback);
+        var lnkTxt = link,
+            append = '',
+            target = '',
+            lmc    = leadingMagicChars || '',
+            tmc    = trailingMagicChars || '';
+        if (/^www\./i.test(link)) {
+          link = link.replace(/^www\./i, 'http://www.');
+        }
+        if (options.excludeTrailingPunctuationFromURLs && trailingPunctuation) {
+          append = trailingPunctuation;
+        }
+        if (options.openLinksInNewWindow) {
+          target = ' target="¨E95Eblank"';
+        }
+        return lmc + '<a href="' + link + '"' + target + '>' + lnkTxt + '</a>' + append + tmc;
+      };
+    },
+
+    replaceMail = function (options, globals) {
+      'use strict';
+      return function (wholeMatch, b, mail) {
+        var href = 'mailto:';
+        b = b || '';
+        mail = showdown.subParser('unescapeSpecialChars')(mail, options, globals);
+        if (options.encodeEmails) {
+          href = showdown.helper.encodeEmailAddress(href + mail);
+          mail = showdown.helper.encodeEmailAddress(mail);
+        } else {
+          href = href + mail;
+        }
+        return b + '<a href="' + href + '">' + mail + '</a>';
+      };
+    };
+
+showdown.subParser('autoLinks', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('autoLinks.before', text, options, globals);
+
+  text = text.replace(delimUrlRegex, replaceLink(options));
+  text = text.replace(delimMailRegex, replaceMail(options, globals));
+
+  text = globals.converter._dispatch('autoLinks.after', text, options, globals);
+
+  return text;
+});
+
+showdown.subParser('simplifiedAutoLinks', function (text, options, globals) {
+  'use strict';
+
+  if (!options.simplifiedAutoLink) {
+    return text;
+  }
+
+  text = globals.converter._dispatch('simplifiedAutoLinks.before', text, options, globals);
+
+  if (options.excludeTrailingPunctuationFromURLs) {
+    text = text.replace(simpleURLRegex2, replaceLink(options));
+  } else {
+    text = text.replace(simpleURLRegex, replaceLink(options));
+  }
+  text = text.replace(simpleMailRegex, replaceMail(options, globals));
+
+  text = globals.converter._dispatch('simplifiedAutoLinks.after', text, options, globals);
+
+  return text;
+});
+
+/**
+ * These are all the transformations that form block-level
+ * tags like paragraphs, headers, and list items.
+ */
+showdown.subParser('blockGamut', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('blockGamut.before', text, options, globals);
+
+  // we parse blockquotes first so that we can have headings and hrs
+  // inside blockquotes
+  text = showdown.subParser('blockQuotes')(text, options, globals);
+  text = showdown.subParser('headers')(text, options, globals);
+
+  // Do Horizontal Rules:
+  text = showdown.subParser('horizontalRule')(text, options, globals);
+
+  text = showdown.subParser('lists')(text, options, globals);
+  text = showdown.subParser('codeBlocks')(text, options, globals);
+  text = showdown.subParser('tables')(text, options, globals);
+
+  // We already ran _HashHTMLBlocks() before, in Markdown(), but that
+  // was to escape raw HTML in the original Markdown source. This time,
+  // we're escaping the markup we've just created, so that we don't wrap
+  // <p> tags around block-level tags.
+  text = showdown.subParser('hashHTMLBlocks')(text, options, globals);
+  text = showdown.subParser('paragraphs')(text, options, globals);
+
+  text = globals.converter._dispatch('blockGamut.after', text, options, globals);
+
+  return text;
+});
+
+showdown.subParser('blockQuotes', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('blockQuotes.before', text, options, globals);
+
+  // add a couple extra lines after the text and endtext mark
+  text = text + '\n\n';
+
+  var rgx = /(^ {0,3}>[ \t]?.+\n(.+\n)*\n*)+/gm;
+
+  if (options.splitAdjacentBlockquotes) {
+    rgx = /^ {0,3}>[\s\S]*?(?:\n\n)/gm;
+  }
+
+  text = text.replace(rgx, function (bq) {
+    // attacklab: hack around Konqueror 3.5.4 bug:
+    // "----------bug".replace(/^-/g,"") == "bug"
+    bq = bq.replace(/^[ \t]*>[ \t]?/gm, ''); // trim one level of quoting
+
+    // attacklab: clean up hack
+    bq = bq.replace(/¨0/g, '');
+
+    bq = bq.replace(/^[ \t]+$/gm, ''); // trim whitespace-only lines
+    bq = showdown.subParser('githubCodeBlocks')(bq, options, globals);
+    bq = showdown.subParser('blockGamut')(bq, options, globals); // recurse
+
+    bq = bq.replace(/(^|\n)/g, '$1  ');
+    // These leading spaces screw with <pre> content, so we need to fix that:
+    bq = bq.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm, function (wholeMatch, m1) {
+      var pre = m1;
+      // attacklab: hack around Konqueror 3.5.4 bug:
+      pre = pre.replace(/^  /mg, '¨0');
+      pre = pre.replace(/¨0/g, '');
+      return pre;
+    });
+
+    return showdown.subParser('hashBlock')('<blockquote>\n' + bq + '\n</blockquote>', options, globals);
+  });
+
+  text = globals.converter._dispatch('blockQuotes.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Process Markdown `<pre><code>` blocks.
+ */
+showdown.subParser('codeBlocks', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('codeBlocks.before', text, options, globals);
+
+  // sentinel workarounds for lack of \A and \Z, safari\khtml bug
+  text += '¨0';
+
+  var pattern = /(?:\n\n|^)((?:(?:[ ]{4}|\t).*\n+)+)(\n*[ ]{0,3}[^ \t\n]|(?=¨0))/g;
+  text = text.replace(pattern, function (wholeMatch, m1, m2) {
+    var codeblock = m1,
+        nextChar = m2,
+        end = '\n';
+
+    codeblock = showdown.subParser('outdent')(codeblock, options, globals);
+    codeblock = showdown.subParser('encodeCode')(codeblock, options, globals);
+    codeblock = showdown.subParser('detab')(codeblock, options, globals);
+    codeblock = codeblock.replace(/^\n+/g, ''); // trim leading newlines
+    codeblock = codeblock.replace(/\n+$/g, ''); // trim trailing newlines
+
+    if (options.omitExtraWLInCodeBlocks) {
+      end = '';
+    }
+
+    codeblock = '<pre><code>' + codeblock + end + '</code></pre>';
+
+    return showdown.subParser('hashBlock')(codeblock, options, globals) + nextChar;
+  });
+
+  // strip sentinel
+  text = text.replace(/¨0/, '');
+
+  text = globals.converter._dispatch('codeBlocks.after', text, options, globals);
+  return text;
+});
+
+/**
+ *
+ *   *  Backtick quotes are used for <code></code> spans.
+ *
+ *   *  You can use multiple backticks as the delimiters if you want to
+ *     include literal backticks in the code span. So, this input:
+ *
+ *         Just type ``foo `bar` baz`` at the prompt.
+ *
+ *       Will translate to:
+ *
+ *         <p>Just type <code>foo `bar` baz</code> at the prompt.</p>
+ *
+ *    There's no arbitrary limit to the number of backticks you
+ *    can use as delimters. If you need three consecutive backticks
+ *    in your code, use four for delimiters, etc.
+ *
+ *  *  You can use spaces to get literal backticks at the edges:
+ *
+ *         ... type `` `bar` `` ...
+ *
+ *       Turns to:
+ *
+ *         ... type <code>`bar`</code> ...
+ */
+showdown.subParser('codeSpans', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('codeSpans.before', text, options, globals);
+
+  if (typeof(text) === 'undefined') {
+    text = '';
+  }
+  text = text.replace(/(^|[^\\])(`+)([^\r]*?[^`])\2(?!`)/gm,
+    function (wholeMatch, m1, m2, m3) {
+      var c = m3;
+      c = c.replace(/^([ \t]*)/g, '');	// leading whitespace
+      c = c.replace(/[ \t]*$/g, '');	// trailing whitespace
+      c = showdown.subParser('encodeCode')(c, options, globals);
+      c = m1 + '<code>' + c + '</code>';
+      c = showdown.subParser('hashHTMLSpans')(c, options, globals);
+      return c;
+    }
+  );
+
+  text = globals.converter._dispatch('codeSpans.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Create a full HTML document from the processed markdown
+ */
+showdown.subParser('completeHTMLDocument', function (text, options, globals) {
+  'use strict';
+
+  if (!options.completeHTMLDocument) {
+    return text;
+  }
+
+  text = globals.converter._dispatch('completeHTMLDocument.before', text, options, globals);
+
+  var doctype = 'html',
+      doctypeParsed = '<!DOCTYPE HTML>\n',
+      title = '',
+      charset = '<meta charset="utf-8">\n',
+      lang = '',
+      metadata = '';
+
+  if (typeof globals.metadata.parsed.doctype !== 'undefined') {
+    doctypeParsed = '<!DOCTYPE ' +  globals.metadata.parsed.doctype + '>\n';
+    doctype = globals.metadata.parsed.doctype.toString().toLowerCase();
+    if (doctype === 'html' || doctype === 'html5') {
+      charset = '<meta charset="utf-8">';
+    }
+  }
+
+  for (var meta in globals.metadata.parsed) {
+    if (globals.metadata.parsed.hasOwnProperty(meta)) {
+      switch (meta.toLowerCase()) {
+        case 'doctype':
+          break;
+
+        case 'title':
+          title = '<title>' +  globals.metadata.parsed.title + '</title>\n';
+          break;
+
+        case 'charset':
+          if (doctype === 'html' || doctype === 'html5') {
+            charset = '<meta charset="' + globals.metadata.parsed.charset + '">\n';
+          } else {
+            charset = '<meta name="charset" content="' + globals.metadata.parsed.charset + '">\n';
+          }
+          break;
+
+        case 'language':
+        case 'lang':
+          lang = ' lang="' + globals.metadata.parsed[meta] + '"';
+          metadata += '<meta name="' + meta + '" content="' + globals.metadata.parsed[meta] + '">\n';
+          break;
+
+        default:
+          metadata += '<meta name="' + meta + '" content="' + globals.metadata.parsed[meta] + '">\n';
+      }
+    }
+  }
+
+  text = doctypeParsed + '<html' + lang + '>\n<head>\n' + title + charset + metadata + '</head>\n<body>\n' + text.trim() + '\n</body>\n</html>';
+
+  text = globals.converter._dispatch('completeHTMLDocument.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Convert all tabs to spaces
+ */
+showdown.subParser('detab', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('detab.before', text, options, globals);
+
+  // expand first n-1 tabs
+  text = text.replace(/\t(?=\t)/g, '    '); // g_tab_width
+
+  // replace the nth with two sentinels
+  text = text.replace(/\t/g, '¨A¨B');
+
+  // use the sentinel to anchor our regex so it doesn't explode
+  text = text.replace(/¨B(.+?)¨A/g, function (wholeMatch, m1) {
+    var leadingText = m1,
+        numSpaces = 4 - leadingText.length % 4;  // g_tab_width
+
+    // there *must* be a better way to do this:
+    for (var i = 0; i < numSpaces; i++) {
+      leadingText += ' ';
+    }
+
+    return leadingText;
+  });
+
+  // clean up sentinels
+  text = text.replace(/¨A/g, '    ');  // g_tab_width
+  text = text.replace(/¨B/g, '');
+
+  text = globals.converter._dispatch('detab.after', text, options, globals);
+  return text;
+});
+
+showdown.subParser('ellipsis', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('ellipsis.before', text, options, globals);
+
+  text = text.replace(/\.\.\./g, '…');
+
+  text = globals.converter._dispatch('ellipsis.after', text, options, globals);
+
+  return text;
+});
+
+/**
+ * Turn emoji codes into emojis
+ *
+ * List of supported emojis: https://github.com/showdownjs/showdown/wiki/Emojis
+ */
+showdown.subParser('emoji', function (text, options, globals) {
+  'use strict';
+
+  if (!options.emoji) {
+    return text;
+  }
+
+  text = globals.converter._dispatch('emoji.before', text, options, globals);
+
+  var emojiRgx = /:([\S]+?):/g;
+
+  text = text.replace(emojiRgx, function (wm, emojiCode) {
+    if (showdown.helper.emojis.hasOwnProperty(emojiCode)) {
+      return showdown.helper.emojis[emojiCode];
+    }
+    return wm;
+  });
+
+  text = globals.converter._dispatch('emoji.after', text, options, globals);
+
+  return text;
+});
+
+/**
+ * Smart processing for ampersands and angle brackets that need to be encoded.
+ */
+showdown.subParser('encodeAmpsAndAngles', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('encodeAmpsAndAngles.before', text, options, globals);
+
+  // Ampersand-encoding based entirely on Nat Irons's Amputator MT plugin:
+  // http://bumppo.net/projects/amputator/
+  text = text.replace(/&(?!#?[xX]?(?:[0-9a-fA-F]+|\w+);)/g, '&amp;');
+
+  // Encode naked <'s
+  text = text.replace(/<(?![a-z\/?$!])/gi, '&lt;');
+
+  // Encode <
+  text = text.replace(/</g, '&lt;');
+
+  // Encode >
+  text = text.replace(/>/g, '&gt;');
+
+  text = globals.converter._dispatch('encodeAmpsAndAngles.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Returns the string, with after processing the following backslash escape sequences.
+ *
+ * attacklab: The polite way to do this is with the new escapeCharacters() function:
+ *
+ *    text = escapeCharacters(text,"\\",true);
+ *    text = escapeCharacters(text,"`*_{}[]()>#+-.!",true);
+ *
+ * ...but we're sidestepping its use of the (slow) RegExp constructor
+ * as an optimization for Firefox.  This function gets called a LOT.
+ */
+showdown.subParser('encodeBackslashEscapes', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('encodeBackslashEscapes.before', text, options, globals);
+
+  text = text.replace(/\\(\\)/g, showdown.helper.escapeCharactersCallback);
+  text = text.replace(/\\([`*_{}\[\]()>#+.!~=|-])/g, showdown.helper.escapeCharactersCallback);
+
+  text = globals.converter._dispatch('encodeBackslashEscapes.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Encode/escape certain characters inside Markdown code runs.
+ * The point is that in code, these characters are literals,
+ * and lose their special Markdown meanings.
+ */
+showdown.subParser('encodeCode', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('encodeCode.before', text, options, globals);
+
+  // Encode all ampersands; HTML entities are not
+  // entities within a Markdown code span.
+  text = text
+    .replace(/&/g, '&amp;')
+  // Do the angle bracket song and dance:
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  // Now, escape characters that are magic in Markdown:
+    .replace(/([*_{}\[\]\\=~-])/g, showdown.helper.escapeCharactersCallback);
+
+  text = globals.converter._dispatch('encodeCode.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Within tags -- meaning between < and > -- encode [\ ` * _ ~ =] so they
+ * don't conflict with their use in Markdown for code, italics and strong.
+ */
+showdown.subParser('escapeSpecialCharsWithinTagAttributes', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('escapeSpecialCharsWithinTagAttributes.before', text, options, globals);
+
+  // Build a regex to find HTML tags.
+  var tags     = /<\/?[a-z\d_:-]+(?:[\s]+[\s\S]+?)?>/gi,
+      comments = /<!(--(?:(?:[^>-]|-[^>])(?:[^-]|-[^-])*)--)>/gi;
+
+  text = text.replace(tags, function (wholeMatch) {
+    return wholeMatch
+      .replace(/(.)<\/?code>(?=.)/g, '$1`')
+      .replace(/([\\`*_~=|])/g, showdown.helper.escapeCharactersCallback);
+  });
+
+  text = text.replace(comments, function (wholeMatch) {
+    return wholeMatch
+      .replace(/([\\`*_~=|])/g, showdown.helper.escapeCharactersCallback);
+  });
+
+  text = globals.converter._dispatch('escapeSpecialCharsWithinTagAttributes.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Handle github codeblocks prior to running HashHTML so that
+ * HTML contained within the codeblock gets escaped properly
+ * Example:
+ * ```ruby
+ *     def hello_world(x)
+ *       puts "Hello, #{x}"
+ *     end
+ * ```
+ */
+showdown.subParser('githubCodeBlocks', function (text, options, globals) {
+  'use strict';
+
+  // early exit if option is not enabled
+  if (!options.ghCodeBlocks) {
+    return text;
+  }
+
+  text = globals.converter._dispatch('githubCodeBlocks.before', text, options, globals);
+
+  text += '¨0';
+
+  text = text.replace(/(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\s`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g, function (wholeMatch, delim, language, codeblock) {
+    var end = (options.omitExtraWLInCodeBlocks) ? '' : '\n';
+
+    // First parse the github code block
+    codeblock = showdown.subParser('encodeCode')(codeblock, options, globals);
+    codeblock = showdown.subParser('detab')(codeblock, options, globals);
+    codeblock = codeblock.replace(/^\n+/g, ''); // trim leading newlines
+    codeblock = codeblock.replace(/\n+$/g, ''); // trim trailing whitespace
+
+    codeblock = '<pre><code' + (language ? ' class="' + language + ' language-' + language + '"' : '') + '>' + codeblock + end + '</code></pre>';
+
+    codeblock = showdown.subParser('hashBlock')(codeblock, options, globals);
+
+    // Since GHCodeblocks can be false positives, we need to
+    // store the primitive text and the parsed text in a global var,
+    // and then return a token
+    return '\n\n¨G' + (globals.ghCodeBlocks.push({text: wholeMatch, codeblock: codeblock}) - 1) + 'G\n\n';
+  });
+
+  // attacklab: strip sentinel
+  text = text.replace(/¨0/, '');
+
+  return globals.converter._dispatch('githubCodeBlocks.after', text, options, globals);
+});
+
+showdown.subParser('hashBlock', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('hashBlock.before', text, options, globals);
+  text = text.replace(/(^\n+|\n+$)/g, '');
+  text = '\n\n¨K' + (globals.gHtmlBlocks.push(text) - 1) + 'K\n\n';
+  text = globals.converter._dispatch('hashBlock.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Hash and escape <code> elements that should not be parsed as markdown
+ */
+showdown.subParser('hashCodeTags', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('hashCodeTags.before', text, options, globals);
+
+  var repFunc = function (wholeMatch, match, left, right) {
+    var codeblock = left + showdown.subParser('encodeCode')(match, options, globals) + right;
+    return '¨C' + (globals.gHtmlSpans.push(codeblock) - 1) + 'C';
+  };
+
+  // Hash naked <code>
+  text = showdown.helper.replaceRecursiveRegExp(text, repFunc, '<code\\b[^>]*>', '</code>', 'gim');
+
+  text = globals.converter._dispatch('hashCodeTags.after', text, options, globals);
+  return text;
+});
+
+showdown.subParser('hashElement', function (text, options, globals) {
+  'use strict';
+
+  return function (wholeMatch, m1) {
+    var blockText = m1;
+
+    // Undo double lines
+    blockText = blockText.replace(/\n\n/g, '\n');
+    blockText = blockText.replace(/^\n/, '');
+
+    // strip trailing blank lines
+    blockText = blockText.replace(/\n+$/g, '');
+
+    // Replace the element text with a marker ("¨KxK" where x is its key)
+    blockText = '\n\n¨K' + (globals.gHtmlBlocks.push(blockText) - 1) + 'K\n\n';
+
+    return blockText;
+  };
+});
+
+showdown.subParser('hashHTMLBlocks', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('hashHTMLBlocks.before', text, options, globals);
+
+  var blockTags = [
+        'pre',
+        'div',
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'blockquote',
+        'table',
+        'dl',
+        'ol',
+        'ul',
+        'script',
+        'noscript',
+        'form',
+        'fieldset',
+        'iframe',
+        'math',
+        'style',
+        'section',
+        'header',
+        'footer',
+        'nav',
+        'article',
+        'aside',
+        'address',
+        'audio',
+        'canvas',
+        'figure',
+        'hgroup',
+        'output',
+        'video',
+        'p'
+      ],
+      repFunc = function (wholeMatch, match, left, right) {
+        var txt = wholeMatch;
+        // check if this html element is marked as markdown
+        // if so, it's contents should be parsed as markdown
+        if (left.search(/\bmarkdown\b/) !== -1) {
+          txt = left + globals.converter.makeHtml(match) + right;
+        }
+        return '\n\n¨K' + (globals.gHtmlBlocks.push(txt) - 1) + 'K\n\n';
+      };
+
+  if (options.backslashEscapesHTMLTags) {
+    // encode backslash escaped HTML tags
+    text = text.replace(/\\<(\/?[^>]+?)>/g, function (wm, inside) {
+      return '&lt;' + inside + '&gt;';
+    });
+  }
+
+  // hash HTML Blocks
+  for (var i = 0; i < blockTags.length; ++i) {
+
+    var opTagPos,
+        rgx1     = new RegExp('^ {0,3}(<' + blockTags[i] + '\\b[^>]*>)', 'im'),
+        patLeft  = '<' + blockTags[i] + '\\b[^>]*>',
+        patRight = '</' + blockTags[i] + '>';
+    // 1. Look for the first position of the first opening HTML tag in the text
+    while ((opTagPos = showdown.helper.regexIndexOf(text, rgx1)) !== -1) {
+
+      // if the HTML tag is \ escaped, we need to escape it and break
+
+
+      //2. Split the text in that position
+      var subTexts = showdown.helper.splitAtIndex(text, opTagPos),
+      //3. Match recursively
+          newSubText1 = showdown.helper.replaceRecursiveRegExp(subTexts[1], repFunc, patLeft, patRight, 'im');
+
+      // prevent an infinite loop
+      if (newSubText1 === subTexts[1]) {
+        break;
+      }
+      text = subTexts[0].concat(newSubText1);
+    }
+  }
+  // HR SPECIAL CASE
+  text = text.replace(/(\n {0,3}(<(hr)\b([^<>])*?\/?>)[ \t]*(?=\n{2,}))/g,
+    showdown.subParser('hashElement')(text, options, globals));
+
+  // Special case for standalone HTML comments
+  text = showdown.helper.replaceRecursiveRegExp(text, function (txt) {
+    return '\n\n¨K' + (globals.gHtmlBlocks.push(txt) - 1) + 'K\n\n';
+  }, '^ {0,3}<!--', '-->', 'gm');
+
+  // PHP and ASP-style processor instructions (<?...?> and <%...%>)
+  text = text.replace(/(?:\n\n)( {0,3}(?:<([?%])[^\r]*?\2>)[ \t]*(?=\n{2,}))/g,
+    showdown.subParser('hashElement')(text, options, globals));
+
+  text = globals.converter._dispatch('hashHTMLBlocks.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Hash span elements that should not be parsed as markdown
+ */
+showdown.subParser('hashHTMLSpans', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('hashHTMLSpans.before', text, options, globals);
+
+  function hashHTMLSpan (html) {
+    return '¨C' + (globals.gHtmlSpans.push(html) - 1) + 'C';
+  }
+
+  // Hash Self Closing tags
+  text = text.replace(/<[^>]+?\/>/gi, function (wm) {
+    return hashHTMLSpan(wm);
+  });
+
+  // Hash tags without properties
+  text = text.replace(/<([^>]+?)>[\s\S]*?<\/\1>/g, function (wm) {
+    return hashHTMLSpan(wm);
+  });
+
+  // Hash tags with properties
+  text = text.replace(/<([^>]+?)\s[^>]+?>[\s\S]*?<\/\1>/g, function (wm) {
+    return hashHTMLSpan(wm);
+  });
+
+  // Hash self closing tags without />
+  text = text.replace(/<[^>]+?>/gi, function (wm) {
+    return hashHTMLSpan(wm);
+  });
+
+  /*showdown.helper.matchRecursiveRegExp(text, '<code\\b[^>]*>', '</code>', 'gi');*/
+
+  text = globals.converter._dispatch('hashHTMLSpans.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Unhash HTML spans
+ */
+showdown.subParser('unhashHTMLSpans', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('unhashHTMLSpans.before', text, options, globals);
+
+  for (var i = 0; i < globals.gHtmlSpans.length; ++i) {
+    var repText = globals.gHtmlSpans[i],
+        // limiter to prevent infinite loop (assume 10 as limit for recurse)
+        limit = 0;
+
+    while (/¨C(\d+)C/.test(repText)) {
+      var num = RegExp.$1;
+      repText = repText.replace('¨C' + num + 'C', globals.gHtmlSpans[num]);
+      if (limit === 10) {
+        console.error('maximum nesting of 10 spans reached!!!');
+        break;
+      }
+      ++limit;
+    }
+    text = text.replace('¨C' + i + 'C', repText);
+  }
+
+  text = globals.converter._dispatch('unhashHTMLSpans.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Hash and escape <pre><code> elements that should not be parsed as markdown
+ */
+showdown.subParser('hashPreCodeTags', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('hashPreCodeTags.before', text, options, globals);
+
+  var repFunc = function (wholeMatch, match, left, right) {
+    // encode html entities
+    var codeblock = left + showdown.subParser('encodeCode')(match, options, globals) + right;
+    return '\n\n¨G' + (globals.ghCodeBlocks.push({text: wholeMatch, codeblock: codeblock}) - 1) + 'G\n\n';
+  };
+
+  // Hash <pre><code>
+  text = showdown.helper.replaceRecursiveRegExp(text, repFunc, '^ {0,3}<pre\\b[^>]*>\\s*<code\\b[^>]*>', '^ {0,3}</code>\\s*</pre>', 'gim');
+
+  text = globals.converter._dispatch('hashPreCodeTags.after', text, options, globals);
+  return text;
+});
+
+showdown.subParser('headers', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('headers.before', text, options, globals);
+
+  var headerLevelStart = (isNaN(parseInt(options.headerLevelStart))) ? 1 : parseInt(options.headerLevelStart),
+
+  // Set text-style headers:
+  //	Header 1
+  //	========
+  //
+  //	Header 2
+  //	--------
+  //
+      setextRegexH1 = (options.smoothLivePreview) ? /^(.+)[ \t]*\n={2,}[ \t]*\n+/gm : /^(.+)[ \t]*\n=+[ \t]*\n+/gm,
+      setextRegexH2 = (options.smoothLivePreview) ? /^(.+)[ \t]*\n-{2,}[ \t]*\n+/gm : /^(.+)[ \t]*\n-+[ \t]*\n+/gm;
+
+  text = text.replace(setextRegexH1, function (wholeMatch, m1) {
+
+    var spanGamut = showdown.subParser('spanGamut')(m1, options, globals),
+        hID = (options.noHeaderId) ? '' : ' id="' + headerId(m1) + '"',
+        hLevel = headerLevelStart,
+        hashBlock = '<h' + hLevel + hID + '>' + spanGamut + '</h' + hLevel + '>';
+    return showdown.subParser('hashBlock')(hashBlock, options, globals);
+  });
+
+  text = text.replace(setextRegexH2, function (matchFound, m1) {
+    var spanGamut = showdown.subParser('spanGamut')(m1, options, globals),
+        hID = (options.noHeaderId) ? '' : ' id="' + headerId(m1) + '"',
+        hLevel = headerLevelStart + 1,
+        hashBlock = '<h' + hLevel + hID + '>' + spanGamut + '</h' + hLevel + '>';
+    return showdown.subParser('hashBlock')(hashBlock, options, globals);
+  });
+
+  // atx-style headers:
+  //  # Header 1
+  //  ## Header 2
+  //  ## Header 2 with closing hashes ##
+  //  ...
+  //  ###### Header 6
+  //
+  var atxStyle = (options.requireSpaceBeforeHeadingText) ? /^(#{1,6})[ \t]+(.+?)[ \t]*#*\n+/gm : /^(#{1,6})[ \t]*(.+?)[ \t]*#*\n+/gm;
+
+  text = text.replace(atxStyle, function (wholeMatch, m1, m2) {
+    var hText = m2;
+    if (options.customizedHeaderId) {
+      hText = m2.replace(/\s?\{([^{]+?)}\s*$/, '');
+    }
+
+    var span = showdown.subParser('spanGamut')(hText, options, globals),
+        hID = (options.noHeaderId) ? '' : ' id="' + headerId(m2) + '"',
+        hLevel = headerLevelStart - 1 + m1.length,
+        header = '<h' + hLevel + hID + '>' + span + '</h' + hLevel + '>';
+
+    return showdown.subParser('hashBlock')(header, options, globals);
+  });
+
+  function headerId (m) {
+    var title,
+        prefix;
+
+    // It is separate from other options to allow combining prefix and customized
+    if (options.customizedHeaderId) {
+      var match = m.match(/\{([^{]+?)}\s*$/);
+      if (match && match[1]) {
+        m = match[1];
+      }
+    }
+
+    title = m;
+
+    // Prefix id to prevent causing inadvertent pre-existing style matches.
+    if (showdown.helper.isString(options.prefixHeaderId)) {
+      prefix = options.prefixHeaderId;
+    } else if (options.prefixHeaderId === true) {
+      prefix = 'section-';
+    } else {
+      prefix = '';
+    }
+
+    if (!options.rawPrefixHeaderId) {
+      title = prefix + title;
+    }
+
+    if (options.ghCompatibleHeaderId) {
+      title = title
+        .replace(/ /g, '-')
+        // replace previously escaped chars (&, ¨ and $)
+        .replace(/&amp;/g, '')
+        .replace(/¨T/g, '')
+        .replace(/¨D/g, '')
+        // replace rest of the chars (&~$ are repeated as they might have been escaped)
+        // borrowed from github's redcarpet (some they should produce similar results)
+        .replace(/[&+$,\/:;=?@"#{}|^¨~\[\]`\\*)(%.!'<>]/g, '')
+        .toLowerCase();
+    } else if (options.rawHeaderId) {
+      title = title
+        .replace(/ /g, '-')
+        // replace previously escaped chars (&, ¨ and $)
+        .replace(/&amp;/g, '&')
+        .replace(/¨T/g, '¨')
+        .replace(/¨D/g, '$')
+        // replace " and '
+        .replace(/["']/g, '-')
+        .toLowerCase();
+    } else {
+      title = title
+        .replace(/[^\w]/g, '')
+        .toLowerCase();
+    }
+
+    if (options.rawPrefixHeaderId) {
+      title = prefix + title;
+    }
+
+    if (globals.hashLinkCounts[title]) {
+      title = title + '-' + (globals.hashLinkCounts[title]++);
+    } else {
+      globals.hashLinkCounts[title] = 1;
+    }
+    return title;
+  }
+
+  text = globals.converter._dispatch('headers.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Turn Markdown link shortcuts into XHTML <a> tags.
+ */
+showdown.subParser('horizontalRule', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('horizontalRule.before', text, options, globals);
+
+  var key = showdown.subParser('hashBlock')('<hr />', options, globals);
+  text = text.replace(/^ {0,2}( ?-){3,}[ \t]*$/gm, key);
+  text = text.replace(/^ {0,2}( ?\*){3,}[ \t]*$/gm, key);
+  text = text.replace(/^ {0,2}( ?_){3,}[ \t]*$/gm, key);
+
+  text = globals.converter._dispatch('horizontalRule.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Turn Markdown image shortcuts into <img> tags.
+ */
+showdown.subParser('images', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('images.before', text, options, globals);
+
+  var inlineRegExp      = /!\[([^\]]*?)][ \t]*()\([ \t]?<?([\S]+?(?:\([\S]*?\)[\S]*?)?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*(?:(["'])([^"]*?)\6)?[ \t]?\)/g,
+      crazyRegExp       = /!\[([^\]]*?)][ \t]*()\([ \t]?<([^>]*)>(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*(?:(?:(["'])([^"]*?)\6))?[ \t]?\)/g,
+      base64RegExp      = /!\[([^\]]*?)][ \t]*()\([ \t]?<?(data:.+?\/.+?;base64,[A-Za-z0-9+/=\n]+?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*(?:(["'])([^"]*?)\6)?[ \t]?\)/g,
+      referenceRegExp   = /!\[([^\]]*?)] ?(?:\n *)?\[([\s\S]*?)]()()()()()/g,
+      refShortcutRegExp = /!\[([^\[\]]+)]()()()()()/g;
+
+  function writeImageTagBase64 (wholeMatch, altText, linkId, url, width, height, m5, title) {
+    url = url.replace(/\s/g, '');
+    return writeImageTag (wholeMatch, altText, linkId, url, width, height, m5, title);
+  }
+
+  function writeImageTag (wholeMatch, altText, linkId, url, width, height, m5, title) {
+
+    var gUrls   = globals.gUrls,
+        gTitles = globals.gTitles,
+        gDims   = globals.gDimensions;
+
+    linkId = linkId.toLowerCase();
+
+    if (!title) {
+      title = '';
+    }
+    // Special case for explicit empty url
+    if (wholeMatch.search(/\(<?\s*>? ?(['"].*['"])?\)$/m) > -1) {
+      url = '';
+
+    } else if (url === '' || url === null) {
+      if (linkId === '' || linkId === null) {
+        // lower-case and turn embedded newlines into spaces
+        linkId = altText.toLowerCase().replace(/ ?\n/g, ' ');
+      }
+      url = '#' + linkId;
+
+      if (!showdown.helper.isUndefined(gUrls[linkId])) {
+        url = gUrls[linkId];
+        if (!showdown.helper.isUndefined(gTitles[linkId])) {
+          title = gTitles[linkId];
+        }
+        if (!showdown.helper.isUndefined(gDims[linkId])) {
+          width = gDims[linkId].width;
+          height = gDims[linkId].height;
+        }
+      } else {
+        return wholeMatch;
+      }
+    }
+
+    altText = altText
+      .replace(/"/g, '&quot;')
+    //altText = showdown.helper.escapeCharacters(altText, '*_', false);
+      .replace(showdown.helper.regexes.asteriskDashAndColon, showdown.helper.escapeCharactersCallback);
+    //url = showdown.helper.escapeCharacters(url, '*_', false);
+    url = url.replace(showdown.helper.regexes.asteriskDashAndColon, showdown.helper.escapeCharactersCallback);
+    var result = '<img src="' + url + '" alt="' + altText + '"';
+
+    if (title && showdown.helper.isString(title)) {
+      title = title
+        .replace(/"/g, '&quot;')
+      //title = showdown.helper.escapeCharacters(title, '*_', false);
+        .replace(showdown.helper.regexes.asteriskDashAndColon, showdown.helper.escapeCharactersCallback);
+      result += ' title="' + title + '"';
+    }
+
+    if (width && height) {
+      width  = (width === '*') ? 'auto' : width;
+      height = (height === '*') ? 'auto' : height;
+
+      result += ' width="' + width + '"';
+      result += ' height="' + height + '"';
+    }
+
+    result += ' />';
+
+    return result;
+  }
+
+  // First, handle reference-style labeled images: ![alt text][id]
+  text = text.replace(referenceRegExp, writeImageTag);
+
+  // Next, handle inline images:  ![alt text](url =<width>x<height> "optional title")
+
+  // base64 encoded images
+  text = text.replace(base64RegExp, writeImageTagBase64);
+
+  // cases with crazy urls like ./image/cat1).png
+  text = text.replace(crazyRegExp, writeImageTag);
+
+  // normal cases
+  text = text.replace(inlineRegExp, writeImageTag);
+
+  // handle reference-style shortcuts: ![img text]
+  text = text.replace(refShortcutRegExp, writeImageTag);
+
+  text = globals.converter._dispatch('images.after', text, options, globals);
+  return text;
+});
+
+showdown.subParser('italicsAndBold', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('italicsAndBold.before', text, options, globals);
+
+  // it's faster to have 3 separate regexes for each case than have just one
+  // because of backtracing, in some cases, it could lead to an exponential effect
+  // called "catastrophic backtrace". Ominous!
+
+  function parseInside (txt, left, right) {
+    /*
+    if (options.simplifiedAutoLink) {
+      txt = showdown.subParser('simplifiedAutoLinks')(txt, options, globals);
+    }
+    */
+    return left + txt + right;
+  }
+
+  // Parse underscores
+  if (options.literalMidWordUnderscores) {
+    text = text.replace(/\b___(\S[\s\S]*?)___\b/g, function (wm, txt) {
+      return parseInside (txt, '<strong><em>', '</em></strong>');
+    });
+    text = text.replace(/\b__(\S[\s\S]*?)__\b/g, function (wm, txt) {
+      return parseInside (txt, '<strong>', '</strong>');
+    });
+    text = text.replace(/\b_(\S[\s\S]*?)_\b/g, function (wm, txt) {
+      return parseInside (txt, '<em>', '</em>');
+    });
+  } else {
+    text = text.replace(/___(\S[\s\S]*?)___/g, function (wm, m) {
+      return (/\S$/.test(m)) ? parseInside (m, '<strong><em>', '</em></strong>') : wm;
+    });
+    text = text.replace(/__(\S[\s\S]*?)__/g, function (wm, m) {
+      return (/\S$/.test(m)) ? parseInside (m, '<strong>', '</strong>') : wm;
+    });
+    text = text.replace(/_([^\s_][\s\S]*?)_/g, function (wm, m) {
+      // !/^_[^_]/.test(m) - test if it doesn't start with __ (since it seems redundant, we removed it)
+      return (/\S$/.test(m)) ? parseInside (m, '<em>', '</em>') : wm;
+    });
+  }
+
+  // Now parse asterisks
+  if (options.literalMidWordAsterisks) {
+    text = text.replace(/([^*]|^)\B\*\*\*(\S[\s\S]*?)\*\*\*\B(?!\*)/g, function (wm, lead, txt) {
+      return parseInside (txt, lead + '<strong><em>', '</em></strong>');
+    });
+    text = text.replace(/([^*]|^)\B\*\*(\S[\s\S]*?)\*\*\B(?!\*)/g, function (wm, lead, txt) {
+      return parseInside (txt, lead + '<strong>', '</strong>');
+    });
+    text = text.replace(/([^*]|^)\B\*(\S[\s\S]*?)\*\B(?!\*)/g, function (wm, lead, txt) {
+      return parseInside (txt, lead + '<em>', '</em>');
+    });
+  } else {
+    text = text.replace(/\*\*\*(\S[\s\S]*?)\*\*\*/g, function (wm, m) {
+      return (/\S$/.test(m)) ? parseInside (m, '<strong><em>', '</em></strong>') : wm;
+    });
+    text = text.replace(/\*\*(\S[\s\S]*?)\*\*/g, function (wm, m) {
+      return (/\S$/.test(m)) ? parseInside (m, '<strong>', '</strong>') : wm;
+    });
+    text = text.replace(/\*([^\s*][\s\S]*?)\*/g, function (wm, m) {
+      // !/^\*[^*]/.test(m) - test if it doesn't start with ** (since it seems redundant, we removed it)
+      return (/\S$/.test(m)) ? parseInside (m, '<em>', '</em>') : wm;
+    });
+  }
+
+
+  text = globals.converter._dispatch('italicsAndBold.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Form HTML ordered (numbered) and unordered (bulleted) lists.
+ */
+showdown.subParser('lists', function (text, options, globals) {
+  'use strict';
+
+  /**
+   * Process the contents of a single ordered or unordered list, splitting it
+   * into individual list items.
+   * @param {string} listStr
+   * @param {boolean} trimTrailing
+   * @returns {string}
+   */
+  function processListItems (listStr, trimTrailing) {
+    // The $g_list_level global keeps track of when we're inside a list.
+    // Each time we enter a list, we increment it; when we leave a list,
+    // we decrement. If it's zero, we're not in a list anymore.
+    //
+    // We do this because when we're not inside a list, we want to treat
+    // something like this:
+    //
+    //    I recommend upgrading to version
+    //    8. Oops, now this line is treated
+    //    as a sub-list.
+    //
+    // As a single paragraph, despite the fact that the second line starts
+    // with a digit-period-space sequence.
+    //
+    // Whereas when we're inside a list (or sub-list), that line will be
+    // treated as the start of a sub-list. What a kludge, huh? This is
+    // an aspect of Markdown's syntax that's hard to parse perfectly
+    // without resorting to mind-reading. Perhaps the solution is to
+    // change the syntax rules such that sub-lists must start with a
+    // starting cardinal number; e.g. "1." or "a.".
+    globals.gListLevel++;
+
+    // trim trailing blank lines:
+    listStr = listStr.replace(/\n{2,}$/, '\n');
+
+    // attacklab: add sentinel to emulate \z
+    listStr += '¨0';
+
+    var rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(¨0| {0,3}([*+-]|\d+[.])[ \t]+))/gm,
+        isParagraphed = (/\n[ \t]*\n(?!¨0)/.test(listStr));
+
+    // Since version 1.5, nesting sublists requires 4 spaces (or 1 tab) indentation,
+    // which is a syntax breaking change
+    // activating this option reverts to old behavior
+    if (options.disableForced4SpacesIndentedSublists) {
+      rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(¨0|\2([*+-]|\d+[.])[ \t]+))/gm;
+    }
+
+    listStr = listStr.replace(rgx, function (wholeMatch, m1, m2, m3, m4, taskbtn, checked) {
+      checked = (checked && checked.trim() !== '');
+
+      var item = showdown.subParser('outdent')(m4, options, globals),
+          bulletStyle = '';
+
+      // Support for github tasklists
+      if (taskbtn && options.tasklists) {
+        bulletStyle = ' class="task-list-item" style="list-style-type: none;"';
+        item = item.replace(/^[ \t]*\[(x|X| )?]/m, function () {
+          var otp = '<input type="checkbox" disabled style="margin: 0px 0.35em 0.25em -1.6em; vertical-align: middle;"';
+          if (checked) {
+            otp += ' checked';
+          }
+          otp += '>';
+          return otp;
+        });
+      }
+
+      // ISSUE #312
+      // This input: - - - a
+      // causes trouble to the parser, since it interprets it as:
+      // <ul><li><li><li>a</li></li></li></ul>
+      // instead of:
+      // <ul><li>- - a</li></ul>
+      // So, to prevent it, we will put a marker (¨A)in the beginning of the line
+      // Kind of hackish/monkey patching, but seems more effective than overcomplicating the list parser
+      item = item.replace(/^([-*+]|\d\.)[ \t]+[\S\n ]*/g, function (wm2) {
+        return '¨A' + wm2;
+      });
+
+      // m1 - Leading line or
+      // Has a double return (multi paragraph) or
+      // Has sublist
+      if (m1 || (item.search(/\n{2,}/) > -1)) {
+        item = showdown.subParser('githubCodeBlocks')(item, options, globals);
+        item = showdown.subParser('blockGamut')(item, options, globals);
+      } else {
+        // Recursion for sub-lists:
+        item = showdown.subParser('lists')(item, options, globals);
+        item = item.replace(/\n$/, ''); // chomp(item)
+        item = showdown.subParser('hashHTMLBlocks')(item, options, globals);
+
+        // Colapse double linebreaks
+        item = item.replace(/\n\n+/g, '\n\n');
+        if (isParagraphed) {
+          item = showdown.subParser('paragraphs')(item, options, globals);
+        } else {
+          item = showdown.subParser('spanGamut')(item, options, globals);
+        }
+      }
+
+      // now we need to remove the marker (¨A)
+      item = item.replace('¨A', '');
+      // we can finally wrap the line in list item tags
+      item =  '<li' + bulletStyle + '>' + item + '</li>\n';
+
+      return item;
+    });
+
+    // attacklab: strip sentinel
+    listStr = listStr.replace(/¨0/g, '');
+
+    globals.gListLevel--;
+
+    if (trimTrailing) {
+      listStr = listStr.replace(/\s+$/, '');
+    }
+
+    return listStr;
+  }
+
+  function styleStartNumber (list, listType) {
+    // check if ol and starts by a number different than 1
+    if (listType === 'ol') {
+      var res = list.match(/^ *(\d+)\./);
+      if (res && res[1] !== '1') {
+        return ' start="' + res[1] + '"';
+      }
+    }
+    return '';
+  }
+
+  /**
+   * Check and parse consecutive lists (better fix for issue #142)
+   * @param {string} list
+   * @param {string} listType
+   * @param {boolean} trimTrailing
+   * @returns {string}
+   */
+  function parseConsecutiveLists (list, listType, trimTrailing) {
+    // check if we caught 2 or more consecutive lists by mistake
+    // we use the counterRgx, meaning if listType is UL we look for OL and vice versa
+    var olRgx = (options.disableForced4SpacesIndentedSublists) ? /^ ?\d+\.[ \t]/gm : /^ {0,3}\d+\.[ \t]/gm,
+        ulRgx = (options.disableForced4SpacesIndentedSublists) ? /^ ?[*+-][ \t]/gm : /^ {0,3}[*+-][ \t]/gm,
+        counterRxg = (listType === 'ul') ? olRgx : ulRgx,
+        result = '';
+
+    if (list.search(counterRxg) !== -1) {
+      (function parseCL (txt) {
+        var pos = txt.search(counterRxg),
+            style = styleStartNumber(list, listType);
+        if (pos !== -1) {
+          // slice
+          result += '\n\n<' + listType + style + '>\n' + processListItems(txt.slice(0, pos), !!trimTrailing) + '</' + listType + '>\n';
+
+          // invert counterType and listType
+          listType = (listType === 'ul') ? 'ol' : 'ul';
+          counterRxg = (listType === 'ul') ? olRgx : ulRgx;
+
+          //recurse
+          parseCL(txt.slice(pos));
+        } else {
+          result += '\n\n<' + listType + style + '>\n' + processListItems(txt, !!trimTrailing) + '</' + listType + '>\n';
+        }
+      })(list);
+    } else {
+      var style = styleStartNumber(list, listType);
+      result = '\n\n<' + listType + style + '>\n' + processListItems(list, !!trimTrailing) + '</' + listType + '>\n';
+    }
+
+    return result;
+  }
+
+  /** Start of list parsing **/
+  text = globals.converter._dispatch('lists.before', text, options, globals);
+  // add sentinel to hack around khtml/safari bug:
+  // http://bugs.webkit.org/show_bug.cgi?id=11231
+  text += '¨0';
+
+  if (globals.gListLevel) {
+    text = text.replace(/^(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(¨0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
+      function (wholeMatch, list, m2) {
+        var listType = (m2.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
+        return parseConsecutiveLists(list, listType, true);
+      }
+    );
+  } else {
+    text = text.replace(/(\n\n|^\n?)(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(¨0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
+      function (wholeMatch, m1, list, m3) {
+        var listType = (m3.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
+        return parseConsecutiveLists(list, listType, false);
+      }
+    );
+  }
+
+  // strip sentinel
+  text = text.replace(/¨0/, '');
+  text = globals.converter._dispatch('lists.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Parse metadata at the top of the document
+ */
+showdown.subParser('metadata', function (text, options, globals) {
+  'use strict';
+
+  if (!options.metadata) {
+    return text;
+  }
+
+  text = globals.converter._dispatch('metadata.before', text, options, globals);
+
+  function parseMetadataContents (content) {
+    // raw is raw so it's not changed in any way
+    globals.metadata.raw = content;
+
+    // escape chars forbidden in html attributes
+    // double quotes
+    content = content
+      // ampersand first
+      .replace(/&/g, '&amp;')
+      // double quotes
+      .replace(/"/g, '&quot;');
+
+    content = content.replace(/\n {4}/g, ' ');
+    content.replace(/^([\S ]+): +([\s\S]+?)$/gm, function (wm, key, value) {
+      globals.metadata.parsed[key] = value;
+      return '';
+    });
+  }
+
+  text = text.replace(/^\s*«««+(\S*?)\n([\s\S]+?)\n»»»+\n/, function (wholematch, format, content) {
+    parseMetadataContents(content);
+    return '¨M';
+  });
+
+  text = text.replace(/^\s*---+(\S*?)\n([\s\S]+?)\n---+\n/, function (wholematch, format, content) {
+    if (format) {
+      globals.metadata.format = format;
+    }
+    parseMetadataContents(content);
+    return '¨M';
+  });
+
+  text = text.replace(/¨M/g, '');
+
+  text = globals.converter._dispatch('metadata.after', text, options, globals);
+  return text;
+});
+
+/**
+ * Remove one level of line-leading tabs or spaces
+ */
+showdown.subParser('outdent', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('outdent.before', text, options, globals);
+
+  // attacklab: hack around Konqueror 3.5.4 bug:
+  // "----------bug".replace(/^-/g,"") == "bug"
+  text = text.replace(/^(\t|[ ]{1,4})/gm, '¨0'); // attacklab: g_tab_width
+
+  // attacklab: clean up hack
+  text = text.replace(/¨0/g, '');
+
+  text = globals.converter._dispatch('outdent.after', text, options, globals);
+  return text;
+});
+
+/**
+ *
+ */
+showdown.subParser('paragraphs', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('paragraphs.before', text, options, globals);
+  // Strip leading and trailing lines:
+  text = text.replace(/^\n+/g, '');
+  text = text.replace(/\n+$/g, '');
+
+  var grafs = text.split(/\n{2,}/g),
+      grafsOut = [],
+      end = grafs.length; // Wrap <p> tags
+
+  for (var i = 0; i < end; i++) {
+    var str = grafs[i];
+    // if this is an HTML marker, copy it
+    if (str.search(/¨(K|G)(\d+)\1/g) >= 0) {
+      grafsOut.push(str);
+
+    // test for presence of characters to prevent empty lines being parsed
+    // as paragraphs (resulting in undesired extra empty paragraphs)
+    } else if (str.search(/\S/) >= 0) {
+      str = showdown.subParser('spanGamut')(str, options, globals);
+      str = str.replace(/^([ \t]*)/g, '<p>');
+      str += '</p>';
+      grafsOut.push(str);
+    }
+  }
+
+  /** Unhashify HTML blocks */
+  end = grafsOut.length;
+  for (i = 0; i < end; i++) {
+    var blockText = '',
+        grafsOutIt = grafsOut[i],
+        codeFlag = false;
+    // if this is a marker for an html block...
+    // use RegExp.test instead of string.search because of QML bug
+    while (/¨(K|G)(\d+)\1/.test(grafsOutIt)) {
+      var delim = RegExp.$1,
+          num   = RegExp.$2;
+
+      if (delim === 'K') {
+        blockText = globals.gHtmlBlocks[num];
+      } else {
+        // we need to check if ghBlock is a false positive
+        if (codeFlag) {
+          // use encoded version of all text
+          blockText = showdown.subParser('encodeCode')(globals.ghCodeBlocks[num].text, options, globals);
+        } else {
+          blockText = globals.ghCodeBlocks[num].codeblock;
+        }
+      }
+      blockText = blockText.replace(/\$/g, '$$$$'); // Escape any dollar signs
+
+      grafsOutIt = grafsOutIt.replace(/(\n\n)?¨(K|G)\d+\2(\n\n)?/, blockText);
+      // Check if grafsOutIt is a pre->code
+      if (/^<pre\b[^>]*>\s*<code\b[^>]*>/.test(grafsOutIt)) {
+        codeFlag = true;
+      }
+    }
+    grafsOut[i] = grafsOutIt;
+  }
+  text = grafsOut.join('\n');
+  // Strip leading and trailing lines:
+  text = text.replace(/^\n+/g, '');
+  text = text.replace(/\n+$/g, '');
+  return globals.converter._dispatch('paragraphs.after', text, options, globals);
+});
+
+/**
+ * Run extension
+ */
+showdown.subParser('runExtension', function (ext, text, options, globals) {
+  'use strict';
+
+  if (ext.filter) {
+    text = ext.filter(text, globals.converter, options);
+
+  } else if (ext.regex) {
+    // TODO remove this when old extension loading mechanism is deprecated
+    var re = ext.regex;
+    if (!(re instanceof RegExp)) {
+      re = new RegExp(re, 'g');
+    }
+    text = text.replace(re, ext.replace);
+  }
+
+  return text;
+});
+
+/**
+ * These are all the transformations that occur *within* block-level
+ * tags like paragraphs, headers, and list items.
+ */
+showdown.subParser('spanGamut', function (text, options, globals) {
+  'use strict';
+
+  text = globals.converter._dispatch('spanGamut.before', text, options, globals);
+  text = showdown.subParser('codeSpans')(text, options, globals);
+  text = showdown.subParser('escapeSpecialCharsWithinTagAttributes')(text, options, globals);
+  text = showdown.subParser('encodeBackslashEscapes')(text, options, globals);
+
+  // Process anchor and image tags. Images must come first,
+  // because ![foo][f] looks like an anchor.
+  text = showdown.subParser('images')(text, options, globals);
+  text = showdown.subParser('anchors')(text, options, globals);
+
+  // Make links out of things like `<http://example.com/>`
+  // Must come after anchors, because you can use < and >
+  // delimiters in inline links like [this](<url>).
+  text = showdown.subParser('autoLinks')(text, options, globals);
+  text = showdown.subParser('simplifiedAutoLinks')(text, options, globals);
+  text = showdown.subParser('emoji')(text, options, globals);
+  text = showdown.subParser('underline')(text, options, globals);
+  text = showdown.subParser('italicsAndBold')(text, options, globals);
+  text = showdown.subParser('strikethrough')(text, options, globals);
+  text = showdown.subParser('ellipsis')(text, options, globals);
+
+  // we need to hash HTML tags inside spans
+  text = showdown.subParser('hashHTMLSpans')(text, options, globals);
+
+  // now we encode amps and angles
+  text = showdown.subParser('encodeAmpsAndAngles')(text, options, globals);
+
+  // Do hard breaks
+  if (options.simpleLineBreaks) {
+    // GFM style hard breaks
+    // only add line breaks if the text does not contain a block (special case for lists)
+    if (!/\n\n¨K/.test(text)) {
+      text = text.replace(/\n+/g, '<br />\n');
+    }
+  } else {
+    // Vanilla hard breaks
+    text = text.replace(/  +\n/g, '<br />\n');
+  }
+
+  text = globals.converter._dispatch('spanGamut.after', text, options, globals);
+  return text;
+});
+
+showdown.subParser('strikethrough', function (text, options, globals) {
+  'use strict';
+
+  function parseInside (txt) {
+    if (options.simplifiedAutoLink) {
+      txt = showdown.subParser('simplifiedAutoLinks')(txt, options, globals);
+    }
+    return '<del>' + txt + '</del>';
+  }
+
+  if (options.strikethrough) {
+    text = globals.converter._dispatch('strikethrough.before', text, options, globals);
+    text = text.replace(/(?:~){2}([\s\S]+?)(?:~){2}/g, function (wm, txt) { return parseInside(txt); });
+    text = globals.converter._dispatch('strikethrough.after', text, options, globals);
+  }
+
+  return text;
+});
+
+/**
+ * Strips link definitions from text, stores the URLs and titles in
+ * hash references.
+ * Link defs are in the form: ^[id]: url "optional title"
+ */
+showdown.subParser('stripLinkDefinitions', function (text, options, globals) {
+  'use strict';
+
+  var regex       = /^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?([^>\s]+)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n+|(?=¨0))/gm,
+      base64Regex = /^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?(data:.+?\/.+?;base64,[A-Za-z0-9+/=\n]+?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n\n|(?=¨0)|(?=\n\[))/gm;
+
+  // attacklab: sentinel workarounds for lack of \A and \Z, safari\khtml bug
+  text += '¨0';
+
+  var replaceFunc = function (wholeMatch, linkId, url, width, height, blankLines, title) {
+    linkId = linkId.toLowerCase();
+    if (url.match(/^data:.+?\/.+?;base64,/)) {
+      // remove newlines
+      globals.gUrls[linkId] = url.replace(/\s/g, '');
+    } else {
+      globals.gUrls[linkId] = showdown.subParser('encodeAmpsAndAngles')(url, options, globals);  // Link IDs are case-insensitive
+    }
+
+    if (blankLines) {
+      // Oops, found blank lines, so it's not a title.
+      // Put back the parenthetical statement we stole.
+      return blankLines + title;
+
+    } else {
+      if (title) {
+        globals.gTitles[linkId] = title.replace(/"|'/g, '&quot;');
+      }
+      if (options.parseImgDimensions && width && height) {
+        globals.gDimensions[linkId] = {
+          width:  width,
+          height: height
+        };
+      }
+    }
+    // Completely remove the definition from the text
+    return '';
+  };
+
+  // first we try to find base64 link references
+  text = text.replace(base64Regex, replaceFunc);
+
+  text = text.replace(regex, replaceFunc);
+
+  // attacklab: strip sentinel
+  text = text.replace(/¨0/, '');
+
+  return text;
+});
+
+showdown.subParser('tables', function (text, options, globals) {
+  'use strict';
+
+  if (!options.tables) {
+    return text;
+  }
+
+  var tableRgx       = /^ {0,3}\|?.+\|.+\n {0,3}\|?[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*:?[ \t]*(?:[-=]){2,}[\s\S]+?(?:\n\n|¨0)/gm,
+    //singeColTblRgx = /^ {0,3}\|.+\|\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*\n(?: {0,3}\|.+\|\n)+(?:\n\n|¨0)/gm;
+      singeColTblRgx = /^ {0,3}\|.+\|[ \t]*\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*\n( {0,3}\|.+\|[ \t]*\n)*(?:\n|¨0)/gm;
+
+  function parseStyles (sLine) {
+    if (/^:[ \t]*--*$/.test(sLine)) {
+      return ' style="text-align:left;"';
+    } else if (/^--*[ \t]*:[ \t]*$/.test(sLine)) {
+      return ' style="text-align:right;"';
+    } else if (/^:[ \t]*--*[ \t]*:$/.test(sLine)) {
+      return ' style="text-align:center;"';
+    } else {
+      return '';
+    }
+  }
+
+  function parseHeaders (header, style) {
+    var id = '';
+    header = header.trim();
+    // support both tablesHeaderId and tableHeaderId due to error in documentation so we don't break backwards compatibility
+    if (options.tablesHeaderId || options.tableHeaderId) {
+      id = ' id="' + header.replace(/ /g, '_').toLowerCase() + '"';
+    }
+    header = showdown.subParser('spanGamut')(header, options, globals);
+
+    return '<th' + id + style + '>' + header + '</th>\n';
+  }
+
+  function parseCells (cell, style) {
+    var subText = showdown.subParser('spanGamut')(cell, options, globals);
+    return '<td' + style + '>' + subText + '</td>\n';
+  }
+
+  function buildTable (headers, cells) {
+    var tb = '<table>\n<thead>\n<tr>\n',
+        tblLgn = headers.length;
+
+    for (var i = 0; i < tblLgn; ++i) {
+      tb += headers[i];
+    }
+    tb += '</tr>\n</thead>\n<tbody>\n';
+
+    for (i = 0; i < cells.length; ++i) {
+      tb += '<tr>\n';
+      for (var ii = 0; ii < tblLgn; ++ii) {
+        tb += cells[i][ii];
+      }
+      tb += '</tr>\n';
+    }
+    tb += '</tbody>\n</table>\n';
+    return tb;
+  }
+
+  function parseTable (rawTable) {
+    var i, tableLines = rawTable.split('\n');
+
+    for (i = 0; i < tableLines.length; ++i) {
+      // strip wrong first and last column if wrapped tables are used
+      if (/^ {0,3}\|/.test(tableLines[i])) {
+        tableLines[i] = tableLines[i].replace(/^ {0,3}\|/, '');
+      }
+      if (/\|[ \t]*$/.test(tableLines[i])) {
+        tableLines[i] = tableLines[i].replace(/\|[ \t]*$/, '');
+      }
+      // parse code spans first, but we only support one line code spans
+      tableLines[i] = showdown.subParser('codeSpans')(tableLines[i], options, globals);
+    }
+
+    var rawHeaders = tableLines[0].split('|').map(function (s) { return s.trim();}),
+        rawStyles = tableLines[1].split('|').map(function (s) { return s.trim();}),
+        rawCells = [],
+        headers = [],
+        styles = [],
+        cells = [];
+
+    tableLines.shift();
+    tableLines.shift();
+
+    for (i = 0; i < tableLines.length; ++i) {
+      if (tableLines[i].trim() === '') {
+        continue;
+      }
+      rawCells.push(
+        tableLines[i]
+          .split('|')
+          .map(function (s) {
+            return s.trim();
+          })
+      );
+    }
+
+    if (rawHeaders.length < rawStyles.length) {
+      return rawTable;
+    }
+
+    for (i = 0; i < rawStyles.length; ++i) {
+      styles.push(parseStyles(rawStyles[i]));
+    }
+
+    for (i = 0; i < rawHeaders.length; ++i) {
+      if (showdown.helper.isUndefined(styles[i])) {
+        styles[i] = '';
+      }
+      headers.push(parseHeaders(rawHeaders[i], styles[i]));
+    }
+
+    for (i = 0; i < rawCells.length; ++i) {
+      var row = [];
+      for (var ii = 0; ii < headers.length; ++ii) {
+        if (showdown.helper.isUndefined(rawCells[i][ii])) {
+
+        }
+        row.push(parseCells(rawCells[i][ii], styles[ii]));
+      }
+      cells.push(row);
+    }
+
+    return buildTable(headers, cells);
+  }
+
+  text = globals.converter._dispatch('tables.before', text, options, globals);
+
+  // find escaped pipe characters
+  text = text.replace(/\\(\|)/g, showdown.helper.escapeCharactersCallback);
+
+  // parse multi column tables
+  text = text.replace(tableRgx, parseTable);
+
+  // parse one column tables
+  text = text.replace(singeColTblRgx, parseTable);
+
+  text = globals.converter._dispatch('tables.after', text, options, globals);
+
+  return text;
+});
+
+showdown.subParser('underline', function (text, options, globals) {
+  'use strict';
+
+  if (!options.underline) {
+    return text;
+  }
+
+  text = globals.converter._dispatch('underline.before', text, options, globals);
+
+  if (options.literalMidWordUnderscores) {
+    text = text.replace(/\b___(\S[\s\S]*?)___\b/g, function (wm, txt) {
+      return '<u>' + txt + '</u>';
+    });
+    text = text.replace(/\b__(\S[\s\S]*?)__\b/g, function (wm, txt) {
+      return '<u>' + txt + '</u>';
+    });
+  } else {
+    text = text.replace(/___(\S[\s\S]*?)___/g, function (wm, m) {
+      return (/\S$/.test(m)) ? '<u>' + m + '</u>' : wm;
+    });
+    text = text.replace(/__(\S[\s\S]*?)__/g, function (wm, m) {
+      return (/\S$/.test(m)) ? '<u>' + m + '</u>' : wm;
+    });
+  }
+
+  // escape remaining underscores to prevent them being parsed by italic and bold
+  text = text.replace(/(_)/g, showdown.helper.escapeCharactersCallback);
+
+  text = globals.converter._dispatch('underline.after', text, options, globals);
+
+  return text;
+});
+
+/**
+ * Swap back in all the special characters we've hidden.
+ */
+showdown.subParser('unescapeSpecialChars', function (text, options, globals) {
+  'use strict';
+  text = globals.converter._dispatch('unescapeSpecialChars.before', text, options, globals);
+
+  text = text.replace(/¨E(\d+)E/g, function (wholeMatch, m1) {
+    var charCodeToReplace = parseInt(m1);
+    return String.fromCharCode(charCodeToReplace);
+  });
+
+  text = globals.converter._dispatch('unescapeSpecialChars.after', text, options, globals);
+  return text;
+});
+
+showdown.subParser('makeMarkdown.blockquote', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasChildNodes()) {
+    var children = node.childNodes,
+        childrenLength = children.length;
+
+    for (var i = 0; i < childrenLength; ++i) {
+      var innerTxt = showdown.subParser('makeMarkdown.node')(children[i], globals);
+
+      if (innerTxt === '') {
+        continue;
+      }
+      txt += innerTxt;
+    }
+  }
+  // cleanup
+  txt = txt.trim();
+  txt = '> ' + txt.split('\n').join('\n> ');
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.codeBlock', function (node, globals) {
+  'use strict';
+
+  var lang = node.getAttribute('language'),
+      num  = node.getAttribute('precodenum');
+  return '```' + lang + '\n' + globals.preList[num] + '\n```';
+});
+
+showdown.subParser('makeMarkdown.codeSpan', function (node) {
+  'use strict';
+
+  return '`' + node.innerHTML + '`';
+});
+
+showdown.subParser('makeMarkdown.emphasis', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasChildNodes()) {
+    txt += '*';
+    var children = node.childNodes,
+        childrenLength = children.length;
+    for (var i = 0; i < childrenLength; ++i) {
+      txt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+    }
+    txt += '*';
+  }
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.header', function (node, globals, headerLevel) {
+  'use strict';
+
+  var headerMark = new Array(headerLevel + 1).join('#'),
+      txt = '';
+
+  if (node.hasChildNodes()) {
+    txt = headerMark + ' ';
+    var children = node.childNodes,
+        childrenLength = children.length;
+
+    for (var i = 0; i < childrenLength; ++i) {
+      txt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+    }
+  }
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.hr', function () {
+  'use strict';
+
+  return '---';
+});
+
+showdown.subParser('makeMarkdown.image', function (node) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasAttribute('src')) {
+    txt += '![' + node.getAttribute('alt') + '](';
+    txt += '<' + node.getAttribute('src') + '>';
+    if (node.hasAttribute('width') && node.hasAttribute('height')) {
+      txt += ' =' + node.getAttribute('width') + 'x' + node.getAttribute('height');
+    }
+
+    if (node.hasAttribute('title')) {
+      txt += ' "' + node.getAttribute('title') + '"';
+    }
+    txt += ')';
+  }
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.links', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasChildNodes() && node.hasAttribute('href')) {
+    var children = node.childNodes,
+        childrenLength = children.length;
+    txt = '[';
+    for (var i = 0; i < childrenLength; ++i) {
+      txt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+    }
+    txt += '](';
+    txt += '<' + node.getAttribute('href') + '>';
+    if (node.hasAttribute('title')) {
+      txt += ' "' + node.getAttribute('title') + '"';
+    }
+    txt += ')';
+  }
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.list', function (node, globals, type) {
+  'use strict';
+
+  var txt = '';
+  if (!node.hasChildNodes()) {
+    return '';
+  }
+  var listItems       = node.childNodes,
+      listItemsLenght = listItems.length,
+      listNum = node.getAttribute('start') || 1;
+
+  for (var i = 0; i < listItemsLenght; ++i) {
+    if (typeof listItems[i].tagName === 'undefined' || listItems[i].tagName.toLowerCase() !== 'li') {
+      continue;
+    }
+
+    // define the bullet to use in list
+    var bullet = '';
+    if (type === 'ol') {
+      bullet = listNum.toString() + '. ';
+    } else {
+      bullet = '- ';
+    }
+
+    // parse list item
+    txt += bullet + showdown.subParser('makeMarkdown.listItem')(listItems[i], globals);
+    ++listNum;
+  }
+
+  // add comment at the end to prevent consecutive lists to be parsed as one
+  txt += '\n<!-- -->\n';
+  return txt.trim();
+});
+
+showdown.subParser('makeMarkdown.listItem', function (node, globals) {
+  'use strict';
+
+  var listItemTxt = '';
+
+  var children = node.childNodes,
+      childrenLenght = children.length;
+
+  for (var i = 0; i < childrenLenght; ++i) {
+    listItemTxt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+  }
+  // if it's only one liner, we need to add a newline at the end
+  if (!/\n$/.test(listItemTxt)) {
+    listItemTxt += '\n';
+  } else {
+    // it's multiparagraph, so we need to indent
+    listItemTxt = listItemTxt
+      .split('\n')
+      .join('\n    ')
+      .replace(/^ {4}$/gm, '')
+      .replace(/\n\n+/g, '\n\n');
+  }
+
+  return listItemTxt;
+});
+
+
+
+showdown.subParser('makeMarkdown.node', function (node, globals, spansOnly) {
+  'use strict';
+
+  spansOnly = spansOnly || false;
+
+  var txt = '';
+
+  // edge case of text without wrapper paragraph
+  if (node.nodeType === 3) {
+    return showdown.subParser('makeMarkdown.txt')(node, globals);
+  }
+
+  // HTML comment
+  if (node.nodeType === 8) {
+    return '<!--' + node.data + '-->\n\n';
+  }
+
+  // process only node elements
+  if (node.nodeType !== 1) {
+    return '';
+  }
+
+  var tagName = node.tagName.toLowerCase();
+
+  switch (tagName) {
+
+    //
+    // BLOCKS
+    //
+    case 'h1':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 1) + '\n\n'; }
+      break;
+    case 'h2':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 2) + '\n\n'; }
+      break;
+    case 'h3':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 3) + '\n\n'; }
+      break;
+    case 'h4':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 4) + '\n\n'; }
+      break;
+    case 'h5':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 5) + '\n\n'; }
+      break;
+    case 'h6':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 6) + '\n\n'; }
+      break;
+
+    case 'p':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.paragraph')(node, globals) + '\n\n'; }
+      break;
+
+    case 'blockquote':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.blockquote')(node, globals) + '\n\n'; }
+      break;
+
+    case 'hr':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.hr')(node, globals) + '\n\n'; }
+      break;
+
+    case 'ol':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.list')(node, globals, 'ol') + '\n\n'; }
+      break;
+
+    case 'ul':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.list')(node, globals, 'ul') + '\n\n'; }
+      break;
+
+    case 'precode':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.codeBlock')(node, globals) + '\n\n'; }
+      break;
+
+    case 'pre':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.pre')(node, globals) + '\n\n'; }
+      break;
+
+    case 'table':
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.table')(node, globals) + '\n\n'; }
+      break;
+
+    //
+    // SPANS
+    //
+    case 'code':
+      txt = showdown.subParser('makeMarkdown.codeSpan')(node, globals);
+      break;
+
+    case 'em':
+    case 'i':
+      txt = showdown.subParser('makeMarkdown.emphasis')(node, globals);
+      break;
+
+    case 'strong':
+    case 'b':
+      txt = showdown.subParser('makeMarkdown.strong')(node, globals);
+      break;
+
+    case 'del':
+      txt = showdown.subParser('makeMarkdown.strikethrough')(node, globals);
+      break;
+
+    case 'a':
+      txt = showdown.subParser('makeMarkdown.links')(node, globals);
+      break;
+
+    case 'img':
+      txt = showdown.subParser('makeMarkdown.image')(node, globals);
+      break;
+
+    default:
+      txt = node.outerHTML + '\n\n';
+  }
+
+  // common normalization
+  // TODO eventually
+
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.paragraph', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasChildNodes()) {
+    var children = node.childNodes,
+        childrenLength = children.length;
+    for (var i = 0; i < childrenLength; ++i) {
+      txt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+    }
+  }
+
+  // some text normalization
+  txt = txt.trim();
+
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.pre', function (node, globals) {
+  'use strict';
+
+  var num  = node.getAttribute('prenum');
+  return '<pre>' + globals.preList[num] + '</pre>';
+});
+
+showdown.subParser('makeMarkdown.strikethrough', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasChildNodes()) {
+    txt += '~~';
+    var children = node.childNodes,
+        childrenLength = children.length;
+    for (var i = 0; i < childrenLength; ++i) {
+      txt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+    }
+    txt += '~~';
+  }
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.strong', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (node.hasChildNodes()) {
+    txt += '**';
+    var children = node.childNodes,
+        childrenLength = children.length;
+    for (var i = 0; i < childrenLength; ++i) {
+      txt += showdown.subParser('makeMarkdown.node')(children[i], globals);
+    }
+    txt += '**';
+  }
+  return txt;
+});
+
+showdown.subParser('makeMarkdown.table', function (node, globals) {
+  'use strict';
+
+  var txt = '',
+      tableArray = [[], []],
+      headings   = node.querySelectorAll('thead>tr>th'),
+      rows       = node.querySelectorAll('tbody>tr'),
+      i, ii;
+  for (i = 0; i < headings.length; ++i) {
+    var headContent = showdown.subParser('makeMarkdown.tableCell')(headings[i], globals),
+        allign = '---';
+
+    if (headings[i].hasAttribute('style')) {
+      var style = headings[i].getAttribute('style').toLowerCase().replace(/\s/g, '');
+      switch (style) {
+        case 'text-align:left;':
+          allign = ':---';
+          break;
+        case 'text-align:right;':
+          allign = '---:';
+          break;
+        case 'text-align:center;':
+          allign = ':---:';
+          break;
+      }
+    }
+    tableArray[0][i] = headContent.trim();
+    tableArray[1][i] = allign;
+  }
+
+  for (i = 0; i < rows.length; ++i) {
+    var r = tableArray.push([]) - 1,
+        cols = rows[i].getElementsByTagName('td');
+
+    for (ii = 0; ii < headings.length; ++ii) {
+      var cellContent = ' ';
+      if (typeof cols[ii] !== 'undefined') {
+        cellContent = showdown.subParser('makeMarkdown.tableCell')(cols[ii], globals);
+      }
+      tableArray[r].push(cellContent);
+    }
+  }
+
+  var cellSpacesCount = 3;
+  for (i = 0; i < tableArray.length; ++i) {
+    for (ii = 0; ii < tableArray[i].length; ++ii) {
+      var strLen = tableArray[i][ii].length;
+      if (strLen > cellSpacesCount) {
+        cellSpacesCount = strLen;
+      }
+    }
+  }
+
+  for (i = 0; i < tableArray.length; ++i) {
+    for (ii = 0; ii < tableArray[i].length; ++ii) {
+      if (i === 1) {
+        if (tableArray[i][ii].slice(-1) === ':') {
+          tableArray[i][ii] = showdown.helper.padEnd(tableArray[i][ii].slice(-1), cellSpacesCount - 1, '-') + ':';
+        } else {
+          tableArray[i][ii] = showdown.helper.padEnd(tableArray[i][ii], cellSpacesCount, '-');
+        }
+      } else {
+        tableArray[i][ii] = showdown.helper.padEnd(tableArray[i][ii], cellSpacesCount);
+      }
+    }
+    txt += '| ' + tableArray[i].join(' | ') + ' |\n';
+  }
+
+  return txt.trim();
+});
+
+showdown.subParser('makeMarkdown.tableCell', function (node, globals) {
+  'use strict';
+
+  var txt = '';
+  if (!node.hasChildNodes()) {
+    return '';
+  }
+  var children = node.childNodes,
+      childrenLength = children.length;
+
+  for (var i = 0; i < childrenLength; ++i) {
+    txt += showdown.subParser('makeMarkdown.node')(children[i], globals, true);
+  }
+  return txt.trim();
+});
+
+showdown.subParser('makeMarkdown.txt', function (node) {
+  'use strict';
+
+  var txt = node.nodeValue;
+
+  // multiple spaces are collapsed
+  txt = txt.replace(/ +/g, ' ');
+
+  // replace the custom ¨NBSP; with a space
+  txt = txt.replace(/¨NBSP;/g, ' ');
+
+  // ", <, > and & should replace escaped html entities
+  txt = showdown.helper.unescapeHTMLEntities(txt);
+
+  // escape markdown magic characters
+  // emphasis, strong and strikethrough - can appear everywhere
+  // we also escape pipe (|) because of tables
+  // and escape ` because of code blocks and spans
+  txt = txt.replace(/([*_~|`])/g, '\\$1');
+
+  // escape > because of blockquotes
+  txt = txt.replace(/^(\s*)>/g, '\\$1>');
+
+  // hash character, only troublesome at the beginning of a line because of headers
+  txt = txt.replace(/^#/gm, '\\#');
+
+  // horizontal rules
+  txt = txt.replace(/^(\s*)([-=]{3,})(\s*)$/, '$1\\$2$3');
+
+  // dot, because of ordered lists, only troublesome at the beginning of a line when preceded by an integer
+  txt = txt.replace(/^( {0,3}\d+)\./gm, '$1\\.');
+
+  // +, * and -, at the beginning of a line becomes a list, so we need to escape them also (asterisk was already escaped)
+  txt = txt.replace(/^( {0,3})([+-])/gm, '$1\\$2');
+
+  // images and links, ] followed by ( is problematic, so we escape it
+  txt = txt.replace(/]([\s]*)\(/g, '\\]$1\\(');
+
+  // reference URIs must also be escaped
+  txt = txt.replace(/^ {0,3}\[([\S \t]*?)]:/gm, '\\[$1]:');
+
+  return txt;
+});
+
+var root = this;
+
+// AMD Loader
+if (true) {
+  !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+    'use strict';
+    return showdown;
+  }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+// CommonJS/nodeJS Loader
+} else {}
+}).call(this);
+
+//# sourceMappingURL=showdown.js.map
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getElementWidthAndHeight", function() { return getElementWidthAndHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isReactElement", function() { return isReactElement; });
+// cross-browser
+var getElementWidthAndHeight = function getElementWidthAndHeight(element) {
+  if (!element) {
+    return {
+      width: 0,
+      height: 0
+    };
+  }
+
+  var box = element.getBoundingClientRect();
+  var width = box.right - box.left;
+  var height = box.bottom - box.top;
+  return {
+    width: width,
+    height: height
+  };
+};
+var isReactElement = function isReactElement(Element) {
+  return typeof Element === "object" && Element !== null && !!Element.$$typeof;
+};
+
+/***/ }),
+/* 96 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Soup", function() { return Soup; });
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_SvgIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(97);
+
+
+
+var Soup = function Soup(props) {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_SvgIcon__WEBPACK_IMPORTED_MODULE_2__["SvgIcon"], Object.assign({
+    viewBox: "0 0 35.235 35.235"
+  }, props), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    d: "M26.776,12.687H19.25c0.68,0,1.233-0.553,1.233-1.234s-0.554-1.23-1.233-1.23h-3.078c-0.68,0-1.232,0.549-1.232,1.23 s0.553,1.234,1.232,1.234H8.645c-2.094,0-3.828,1.877-4.165,3.875h26.464C30.605,14.563,28.871,12.687,26.776,12.687z"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    d: "M31.005,18.677v-0.352H4.479H4.417H0v1.762h4.417v10.918c0,2.338,1.894,4.229,4.228,4.229h18.132 c2.336,0,4.229-1.891,4.229-4.229V20.439h4.229v-1.762H31.005z"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    d: "M11.24,4.235c0.123,0.162,0.254,0.318,0.391,0.465l0.341,0.342c0.216,0.217,0.417,0.434,0.577,0.629 c0.08,0.098,0.146,0.191,0.195,0.268c0.047,0.076,0.09,0.135,0.1,0.223c0.012,0.094-0.037,0.221-0.133,0.348 c-0.096,0.125-0.23,0.246-0.387,0.367c0.186,0.072,0.389,0.096,0.605,0.07c0.215-0.025,0.451-0.121,0.648-0.326 c0.195-0.205,0.304-0.508,0.321-0.775c0.019-0.27-0.022-0.514-0.083-0.734c-0.123-0.438-0.327-0.793-0.545-1.119 c-0.109-0.16-0.244-0.322-0.34-0.447c-0.096-0.113-0.185-0.229-0.266-0.344c-0.33-0.459-0.561-0.873-0.647-1.359 c-0.09-0.492,0.01-1.121,0.307-1.842c-0.771,0.162-1.457,0.807-1.681,1.709c-0.111,0.445-0.087,0.934,0.032,1.363 C10.793,3.511,11.002,3.897,11.24,4.235z"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    d: "M15.809,4.235C15.932,4.397,16.064,4.553,16.2,4.7l0.34,0.342c0.216,0.217,0.416,0.434,0.58,0.629 c0.077,0.098,0.143,0.191,0.193,0.268c0.049,0.076,0.09,0.135,0.098,0.223c0.013,0.094-0.035,0.221-0.131,0.348 c-0.095,0.125-0.23,0.246-0.389,0.367c0.188,0.072,0.392,0.096,0.607,0.07c0.214-0.025,0.453-0.121,0.648-0.326 c0.197-0.205,0.304-0.508,0.322-0.775c0.019-0.27-0.021-0.514-0.082-0.734c-0.125-0.438-0.33-0.793-0.548-1.119 c-0.107-0.16-0.243-0.322-0.339-0.447c-0.094-0.113-0.185-0.229-0.264-0.344c-0.331-0.459-0.563-0.873-0.649-1.359 c-0.09-0.49,0.008-1.119,0.304-1.84c-0.77,0.162-1.455,0.807-1.678,1.709c-0.111,0.445-0.088,0.934,0.031,1.363 C15.363,3.511,15.568,3.897,15.809,4.235z"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    d: "M19.972,4.235c0.122,0.162,0.253,0.318,0.39,0.465l0.341,0.342c0.216,0.217,0.415,0.434,0.577,0.629 c0.08,0.098,0.146,0.191,0.195,0.268c0.047,0.076,0.088,0.135,0.1,0.223c0.013,0.094-0.037,0.221-0.133,0.348 c-0.095,0.125-0.23,0.246-0.389,0.367c0.188,0.072,0.392,0.096,0.605,0.07c0.215-0.025,0.453-0.121,0.65-0.326 c0.195-0.205,0.303-0.508,0.32-0.775c0.02-0.27-0.021-0.514-0.082-0.734c-0.123-0.438-0.326-0.793-0.545-1.119 c-0.109-0.16-0.244-0.322-0.34-0.447c-0.096-0.113-0.186-0.229-0.266-0.344c-0.33-0.459-0.561-0.873-0.646-1.359 c-0.091-0.492,0.009-1.121,0.304-1.842c-0.77,0.162-1.457,0.807-1.679,1.709c-0.11,0.445-0.087,0.934,0.032,1.363 C19.524,3.511,19.731,3.897,19.972,4.235z"
+  }));
+};
+
+/***/ }),
+/* 97 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SvgIcon", function() { return SvgIcon; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+
+var SvgIcon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].svg.withConfig({
+  componentId: "r9xrpo-0"
+})(["fill:currentColor;width:24px;height:24px;display:inline-block;font-size:24px;transition:fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;user-select:none;flex-shrink:0;"]);
+
+/***/ }),
+/* 98 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Row", function() { return Row; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+
+var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "sc-1xbe3rm-0"
+})(["width:100%;max-width:900px;margin:0 auto;padding:0 15px;"]);
+
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderContent", function() { return HeaderContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Country", function() { return Country; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Flag", function() { return Flag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Category", function() { return Category; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ingredients", function() { return Ingredients; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ingredient", function() { return Ingredient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FigureStep", function() { return FigureStep; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Step", function() { return Step; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CatImg", function() { return CatImg; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.attrs(function (_ref) {
+  var image = _ref.image;
+  return {
+    style: {
+      backgroundImage: "url(" + image + ")"
+    }
+  };
+}).withConfig({
+  componentId: "f1ec2q-0"
+})(["margin:0 -15px;position:relative;display:flex;justify-content:center;flex-direction:column;height:400px;background-size:cover;background-repeat:no-repeat;background-position:center;color:#fff;padding:0 84px;margin-bottom:25px;&:after{content:\"\";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-color:rgba(38,44,55,0.44);}"]);
+var HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "f1ec2q-1"
+})(["position:relative;z-index:1;"]);
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h1.withConfig({
+  componentId: "f1ec2q-2"
+})(["font-size:48px;margin:15px 0 10px 0;"]);
+var Country = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "f1ec2q-3"
+})(["z-index:1;position:absolute;right:4px;top:4px;padding:4px 6px;border-radius:2px;display:inline-flex;align-items:center;justify-content:flex-start;font-weight:600;color:rgba(255,255,255,0.64);line-height:0;background-color:rgba(0,0,0,0.1);"]);
+var Flag = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  componentId: "f1ec2q-4"
+})(["width:auto;height:20px;box-shadow:0 6px 6px 0 rgba(255,255,255,0.2);margin-right:6px;"]);
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "f1ec2q-5"
+})(["font-weight:600;font-size:16px;color:rgba(255,255,255,0.64);&:first-child{margin-right:4px;}"]);
+var Ingredients = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "f1ec2q-6"
+})(["display:flex;flex-wrap:wrap;"]);
+var Ingredient = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "f1ec2q-7"
+})(["border-radius:1px;font-weight:600;padding:4px 8px;color:#fff;margin:0 10px 10px 0;&:last-of-type{margin-right:0;}&:nth-of-type(10n - 9){background-color:#c255d6;}&:nth-of-type(10n - 8){background-color:#4b39c3;}&:nth-of-type(10n - 7){background-color:#95da49;}&:nth-of-type(10n - 6){background-color:#eeaf47;}&:nth-of-type(10n - 5){background-color:#61dafb;}&:nth-of-type(10n - 4){background-color:#1b64b9;}&:nth-of-type(10n - 3){background-color:#4794a4;}&:nth-of-type(10n - 2){background-color:#ffcf4f;}&:nth-of-type(10n - 1){background-color:#387b4f;}&:nth-of-type(10n){background-color:#ff7c48;}"]);
+var FigureStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].figure.withConfig({
+  componentId: "f1ec2q-8"
+})(["margin:0;"]);
+var Step = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h1.withConfig({
+  componentId: "f1ec2q-9"
+})(["margin-top:2.8em;position:relative;&:before{position:absolute;left:-2px;bottom:20%;display:block;content:attr(aria-label);font-size:2em;color:rgba(38,44,55,0.14);}"]);
+var Footer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].footer.attrs(function (_ref2) {
+  var image = _ref2.image;
+  return {
+    style: {
+      backgroundImage: "url(" + image + "), url(" + image + ")"
+    }
+  };
+}).withConfig({
+  componentId: "f1ec2q-10"
+})(["font-weight:600;margin-top:84px;display:flex;align-items:center;justify-content:center;padding:44px 0;background-color:rgba(38,44,55,0.14);width:100%;text-align:center;color:rgba(0,0,0,0.64);background-size:40px;background-repeat:repeat-x;background-position:top,bottom;"]);
+var CatImg = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  componentId: "f1ec2q-11"
+})(["border-radius:4px;width:auto;height:80px;margin-right:14px;opacity:0.6;"]);
+
+/***/ }),
+/* 100 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreviewContainer", function() { return PreviewContainer; });
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(74);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_normalize__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(101);
+/* harmony import */ var styled_normalize__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_normalize__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _cms_common_StyleSheetManager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(102);
+/* harmony import */ var _styles_cms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(103);
+/* harmony import */ var _styles_global__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(104);
+
+
+
+
+
+
+
+
+var PreviewContainer =
+/*#__PURE__*/
+function (_Component) {
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2___default()(PreviewContainer, _Component);
+
+  function PreviewContainer() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+    _this.state = {
+      width: 0,
+      height: 0
+    };
+
+    _this.updateSize = function () {
+      var _this$state = _this.state,
+          width = _this$state.width,
+          height = _this$state.height;
+
+      if (_this.container) {
+        var _this$container$getBo = _this.container.getBoundingClientRect(),
+            w = _this$container$getBo.width,
+            h = _this$container$getBo.height;
+
+        if (width !== w || height !== h) {
+          _this.setState({
+            width: Math.round(w),
+            height: Math.round(h)
+          });
+        }
+      }
+    };
+
+    _this.onRef = function (ref) {
+      if (ref) {
+        _this.container = ref;
+      }
+    };
+
+    return _this;
+  }
+
+  var _proto = PreviewContainer.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    var _this2 = this;
+
+    this.updateSize();
+    this.interval = setInterval(function () {
+      return _this2.updateSize();
+    }, 444);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    clearInterval(this.interval);
+  };
+
+  _proto.render = function render() {
+    var _this$state2 = this.state,
+        width = _this$state2.width,
+        height = _this$state2.height;
+
+    var _this$props = this.props,
+        children = _this$props.children,
+        props = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default()(_this$props, ["children"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_cms_common_StyleSheetManager__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(styled_normalize__WEBPACK_IMPORTED_MODULE_4__["Normalize"], null), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_global__WEBPACK_IMPORTED_MODULE_7__["GlobalStyle"], null), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_cms__WEBPACK_IMPORTED_MODULE_6__["Viewport"], null, width, "x", height), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_cms__WEBPACK_IMPORTED_MODULE_6__["Container"], Object.assign({
+      ref: this.onRef
+    }, props), children)));
+  };
+
+  return PreviewContainer;
+}(react__WEBPACK_IMPORTED_MODULE_3__["Component"]);
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.Normalize = exports.normalize = void 0;
+
+var _styledComponents = __webpack_require__(76);
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var normalize = (0, _styledComponents.css)(["html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}main{display:block;}h1{font-size:2em;margin:0.67em 0;}hr{box-sizing:content-box;height:0;overflow:visible;}pre{font-family:monospace,monospace;font-size:1em;}a{background-color:transparent;}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted;}b,strong{font-weight:bolder;}code,kbd,samp{font-family:monospace,monospace;font-size:1em;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button,[type=\"button\"],[type=\"reset\"],[type=\"submit\"]{-webkit-appearance:button;}button::-moz-focus-inner,[type=\"button\"]::-moz-focus-inner,[type=\"reset\"]::-moz-focus-inner,[type=\"submit\"]::-moz-focus-inner{border-style:none;padding:0;}button:-moz-focusring,[type=\"button\"]:-moz-focusring,[type=\"reset\"]:-moz-focusring,[type=\"submit\"]:-moz-focusring{outline:1px dotted ButtonText;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}[type=\"checkbox\"],[type=\"radio\"]{box-sizing:border-box;padding:0;}[type=\"number\"]::-webkit-inner-spin-button,[type=\"number\"]::-webkit-outer-spin-button{height:auto;}[type=\"search\"]{-webkit-appearance:textfield;outline-offset:-2px;}[type=\"search\"]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:list-item;}template{display:none;}[hidden]{display:none;}"]);
+exports.normalize = normalize;
+var Normalize = (0, _styledComponents.createGlobalStyle)(_templateObject(), normalize);
+exports.Normalize = Normalize;
+var _default = normalize;
+exports.default = _default;
+
+/***/ }),
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StyledSheets; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(76);
+
+
+function StyledSheets(_ref) {
+  var children = _ref.children;
+  var iframe = document.getElementsByTagName("iframe")[0];
+  var iframeHeadElem = iframe && iframe.contentDocument.head;
+
+  if (!iframeHeadElem) {
+    return null;
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_1__["StyleSheetManager"], {
+    target: iframeHeadElem
+  }, children);
+}
+
+/***/ }),
+/* 103 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Viewport", function() { return Viewport; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+
+var Viewport = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "sc-18ox6hj-0"
+})(["background-color:#fff;position:fixed;top:0;left:0;z-index:4;border-radius:0 0 4px 0;padding:0 4px;font-size:12px;"]);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  componentId: "sc-18ox6hj-1"
+})(["width:100%;"]);
+
+/***/ }),
+/* 104 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyle", function() { return GlobalStyle; });
+/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(105);
+/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(76);
+/* harmony import */ var _styles_colors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(106);
+/* harmony import */ var _styles_typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(107);
+/* harmony import */ var _styles_leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(108);
+
+
+function _templateObject() {
+  var data = _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  html,\n  body {\n    margin: 0;\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n    font-size: 14px;\n    font-family: \"Open Sans\", Tahoma, sans-serif;\n    color: ", ";\n    text-rendering: optimizeLegibility;\n    -webkit-font-smoothing: antialiased;\n    letter-spacing: 0;\n    width: 100%;\n    height: ", ";\n    ", ";\n  }\n  img {\n    outline: none;\n    max-width: 100%;\n    height: auto;\n  }\n  * {\n    box-sizing: border-box;\n  }\n  ", "\n  ", "\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+var fullHeightCss = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["#___gatsby{height:100%;> div:first-of-type{height:100%;}}"]);
+var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), _styles_colors__WEBPACK_IMPORTED_MODULE_2__["default"].dark, function (_ref) {
+  var fullHeight = _ref.fullHeight;
+  return fullHeight ? "100%" : "auto";
+}, function (_ref2) {
+  var fullHeight = _ref2.fullHeight;
+  return fullHeight && fullHeightCss;
+}, _styles_typography__WEBPACK_IMPORTED_MODULE_3__["default"], _styles_leaflet__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports) {
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  strings.raw = raw;
+  return strings;
+}
+
+module.exports = _taggedTemplateLiteralLoose;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  dark: "#262c37",
+  green: "#90c53d"
+});
+
+/***/ }),
+/* 107 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+/* harmony import */ var _colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(106);
+
+
+var typography = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["h1,h2{}h1{}h2{}ul{li{font-size:18px;margin-bottom:1em;}}em{font-size:18px;}p{line-height:1.6;font-size:18px;margin:30px 0;}hr{border:none;text-align:left;width:160px;height:8px;margin:0;background:", ";}"], _colors__WEBPACK_IMPORTED_MODULE_1__["default"].green);
+/* harmony default export */ __webpack_exports__["default"] = (typography);
+
+/***/ }),
+/* 108 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(76);
+
+var leaflet = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])([".leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane > svg,.leaflet-pane > canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0;}.leaflet-container{overflow:hidden;}.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none;}.leaflet-safari .leaflet-tile{image-rendering:-webkit-optimize-contrast;}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0;}.leaflet-marker-icon,.leaflet-marker-shadow{display:block;}.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-tile{max-width:none !important;max-height:none !important;}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y;}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom;}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none;}.leaflet-container{-webkit-tap-highlight-color:transparent;}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,0.4);}.leaflet-tile{filter:inherit;visibility:hidden;}.leaflet-tile-loaded{visibility:inherit;}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800;}.leaflet-overlay-pane svg{-moz-user-select:none;}.leaflet-pane{z-index:400;}.leaflet-tile-pane{z-index:200;}.leaflet-overlay-pane{z-index:400;}.leaflet-shadow-pane{z-index:500;}.leaflet-marker-pane{z-index:600;}.leaflet-tooltip-pane{z-index:650;}.leaflet-popup-pane{z-index:700;}.leaflet-map-pane canvas{z-index:100;}.leaflet-map-pane svg{z-index:200;}.leaflet-vml-shape{width:1px;height:1px;}.lvml{behavior:url(#default#VML);display:inline-block;position:absolute;}.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto;}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none;}.leaflet-top{top:0;}.leaflet-right{right:0;}.leaflet-bottom{bottom:0;}.leaflet-left{left:0;}.leaflet-control{float:left;clear:both;}.leaflet-right .leaflet-control{float:right;}.leaflet-top .leaflet-control{margin-top:10px;}.leaflet-bottom .leaflet-control{margin-bottom:10px;}.leaflet-left .leaflet-control{margin-left:10px;}.leaflet-right .leaflet-control{margin-right:10px;}.leaflet-fade-anim .leaflet-tile{will-change:opacity;}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity 0.2s linear;-moz-transition:opacity 0.2s linear;transition:opacity 0.2s linear;}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1;}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform;}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform 0.25s cubic-bezier(0,0,0.25,1);-moz-transition:-moz-transform 0.25s cubic-bezier(0,0,0.25,1);transition:transform 0.25s cubic-bezier(0,0,0.25,1);}.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none;}.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden;}.leaflet-interactive{cursor:pointer;}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab;}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair;}.leaflet-popup-pane,.leaflet-control{cursor:auto;}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing;}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane > svg path,.leaflet-tile-container{pointer-events:none;}.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane > svg path.leaflet-interactive{pointer-events:visiblePainted;pointer-events:auto;}.leaflet-container{background:#ddd;outline:0;}.leaflet-container a{color:#0078a8;}.leaflet-container a.leaflet-active{outline:2px solid orange;}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,0.5);}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,0.65);border-radius:4px;}.leaflet-bar a,.leaflet-bar a:hover{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:black;}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block;}.leaflet-bar a:hover{background-color:#f4f4f4;}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px;}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none;}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb;}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px;}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px;}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px;}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px \"Lucida Console\",Monaco,monospace;text-indent:1px;}.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px;}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,0.4);background:#fff;border-radius:5px;}.leaflet-control-layers-toggle{background-image:url(images/layers.png);width:36px;height:36px;}.leaflet-retina .leaflet-control-layers-toggle{background-image:url(images/layers-2x.png);background-size:26px 26px;}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px;}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none;}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative;}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff;}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px;}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px;}.leaflet-control-layers label{display:block;}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px;}.leaflet-default-icon-path{background-image:url(images/marker-icon.png);}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,0.7);margin:0;}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;}.leaflet-control-attribution a{text-decoration:none;}.leaflet-control-attribution a:hover{text-decoration:underline;}.leaflet-container .leaflet-control-attribution,.leaflet-container .leaflet-control-scale{font-size:11px;}.leaflet-left .leaflet-control-scale{margin-left:5px;}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px;}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;font-size:11px;white-space:nowrap;overflow:hidden;-moz-box-sizing:border-box;box-sizing:border-box;background:#fff;background:rgba(255,255,255,0.5);}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px;}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777;}.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers,.leaflet-touch .leaflet-bar{box-shadow:none;}.leaflet-touch .leaflet-control-layers,.leaflet-touch .leaflet-bar{border:2px solid rgba(0,0,0,0.2);background-clip:padding-box;}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px;}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px;}.leaflet-popup-content{margin:13px 19px;line-height:1.4;}.leaflet-popup-content p{margin:18px 0;}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none;}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:white;color:#333;box-shadow:0 3px 14px rgba(0,0,0,0.4);}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;padding:4px 4px 0 0;border:none;text-align:center;width:18px;height:14px;color:#c3c3c3;text-decoration:none;font-weight:bold;background:transparent;}.leaflet-container a.leaflet-popup-close-button:hover{color:#999;}.leaflet-popup-scrolled{overflow:auto;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}.leaflet-oldie .leaflet-popup-content-wrapper{zoom:1;}.leaflet-oldie .leaflet-popup-tip{width:24px;margin:0 auto;-ms-filter:\"progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)\";filter:progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678,M12=0.70710678,M21=-0.70710678,M22=0.70710678);}.leaflet-oldie .leaflet-popup-tip-container{margin-top:-1px;}.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999;}.leaflet-div-icon{background:#fff;border:1px solid #666;}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:2px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,0.4);}.leaflet-tooltip.leaflet-clickable{cursor:pointer;pointer-events:auto;}.leaflet-tooltip-top:before,.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{position:absolute;pointer-events:none;border:6px solid transparent;background:transparent;content:\"\";}.leaflet-tooltip-bottom{margin-top:6px;}.leaflet-tooltip-top{margin-top:-6px;}.leaflet-tooltip-bottom:before,.leaflet-tooltip-top:before{left:50%;margin-left:-6px;}.leaflet-tooltip-top:before{bottom:0;margin-bottom:-12px;border-top-color:#fff;}.leaflet-tooltip-bottom:before{top:0;margin-top:-12px;margin-left:-6px;border-bottom-color:#fff;}.leaflet-tooltip-left{margin-left:-6px;}.leaflet-tooltip-right{margin-left:6px;}.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px;}.leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff;}.leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff;}"]);
+/* harmony default export */ __webpack_exports__["default"] = (leaflet);
 
 /***/ })
 /******/ ]);

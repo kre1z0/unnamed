@@ -10,15 +10,22 @@
 /sw.js
   Cache-Control: no-cache
 /unnamed/404/
-  Link: </unnamed/webpack-runtime-ef6a5560ebcdc17ebde2.js>; rel=preload; as=script
-  Link: </unnamed/app-f2f5e61e9d0003fa17ea.js>; rel=preload; as=script
-  Link: </unnamed/component---src-pages-404-js-de2715d57ef644238d5e.js>; rel=preload; as=script
+  Link: </unnamed/webpack-runtime-85c191a1ede91fbeaca6.js>; rel=preload; as=script
+  Link: </unnamed/app-7e321b836e64767c333f.js>; rel=preload; as=script
+  Link: </unnamed/component---src-pages-404-js-9639b29f728bcdac796c.js>; rel=preload; as=script
 /unnamed/
-  Link: </unnamed/webpack-runtime-ef6a5560ebcdc17ebde2.js>; rel=preload; as=script
-  Link: </unnamed/app-f2f5e61e9d0003fa17ea.js>; rel=preload; as=script
-  Link: </unnamed/5-244d28d8a640f81e007a.js>; rel=preload; as=script
-  Link: </unnamed/component---src-pages-index-js-bb4a7279eb6f355adb9b.js>; rel=preload; as=script
+  Link: </unnamed/webpack-runtime-85c191a1ede91fbeaca6.js>; rel=preload; as=script
+  Link: </unnamed/app-7e321b836e64767c333f.js>; rel=preload; as=script
+  Link: </unnamed/7-b955fc79c81cd8220009.js>; rel=preload; as=script
+  Link: </unnamed/0-8147a572af5ad3094cd2.js>; rel=preload; as=script
+  Link: </unnamed/component---src-pages-index-js-4894e150f0cb68e744f2.js>; rel=preload; as=script
+/unnamed/recipe/borscht/
+  Link: </unnamed/webpack-runtime-85c191a1ede91fbeaca6.js>; rel=preload; as=script
+  Link: </unnamed/app-7e321b836e64767c333f.js>; rel=preload; as=script
+  Link: </unnamed/9-7d1da431fa4ee109c0c9.js>; rel=preload; as=script
+  Link: </unnamed/0-8147a572af5ad3094cd2.js>; rel=preload; as=script
+  Link: </unnamed/component---src-pages-recipe-borscht-js-237dacdceedc19d34226.js>; rel=preload; as=script
 /unnamed/404.html
-  Link: </unnamed/webpack-runtime-ef6a5560ebcdc17ebde2.js>; rel=preload; as=script
-  Link: </unnamed/app-f2f5e61e9d0003fa17ea.js>; rel=preload; as=script
-  Link: </unnamed/component---src-pages-404-js-de2715d57ef644238d5e.js>; rel=preload; as=script
+  Link: </unnamed/webpack-runtime-85c191a1ede91fbeaca6.js>; rel=preload; as=script
+  Link: </unnamed/app-7e321b836e64767c333f.js>; rel=preload; as=script
+  Link: </unnamed/component---src-pages-404-js-9639b29f728bcdac796c.js>; rel=preload; as=script
