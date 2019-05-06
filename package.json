@@ -8,7 +8,7 @@
     "@babel/polyfill": "^7.2.5",
     "@hot-loader/react-dom": "^16.8.4",
     "axios": "^0.18.0",
-    "gatsby": "2.3.5",
+    "gatsby": "^2.1.34",
     "leaflet": "^1.4.0",
     "lodash": "^4.17.11",
     "netlify-cms": "^2.6.1",
