@@ -6992,7 +6992,7 @@ function Preview(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _templates_recipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(92);
+/* harmony import */ var _templates_recipes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(92);
 /* harmony import */ var _components_CmsPreviewContainer_CmsPreviewContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(100);
 
 
@@ -7001,7 +7001,7 @@ __webpack_require__.r(__webpack_exports__);
 var RecipePreview = function RecipePreview(_ref) {
   var entry = _ref.entry,
       widgetFor = _ref.widgetFor;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CmsPreviewContainer_CmsPreviewContainer__WEBPACK_IMPORTED_MODULE_2__["PreviewContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_templates_recipe__WEBPACK_IMPORTED_MODULE_1__["Recipe"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CmsPreviewContainer_CmsPreviewContainer__WEBPACK_IMPORTED_MODULE_2__["PreviewContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_templates_recipes__WEBPACK_IMPORTED_MODULE_1__["default"], {
     country: entry.getIn(["data", "country"]),
     name: entry.getIn(["data", "name"]),
     image: entry.getIn(["data", "image"]),
@@ -7020,23 +7020,24 @@ var RecipePreview = function RecipePreview(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Recipe", function() { return Recipe; });
-/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
-/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
-/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(88);
-/* harmony import */ var _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(89);
-/* harmony import */ var _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _assets_data_countries__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(87);
-/* harmony import */ var _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(93);
-/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(95);
-/* harmony import */ var _components_Icons_Soup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(96);
-/* harmony import */ var _components_NoSemantic_Row__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(98);
-/* harmony import */ var _styles_recipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(99);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(53);
+/* harmony import */ var core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_find__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(51);
+/* harmony import */ var core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_function_name__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(88);
+/* harmony import */ var _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(89);
+/* harmony import */ var _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_data_countries__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(87);
+/* harmony import */ var _cms_common_Content__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(93);
+/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(95);
+/* harmony import */ var _components_Icons_Soup__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(96);
+/* harmony import */ var _components_NoSemantic_Row__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(98);
+/* harmony import */ var _styles_recipe__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(99);
 
 
 
@@ -7048,47 +7049,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Recipe = function Recipe(_ref) {
+
+
+var Recipes = function Recipes(_ref) {
   var countryName = _ref.country,
       name = _ref.name,
       image = _ref.image,
       category = _ref.category,
-      ingredients = _ref.ingredients,
       content = _ref.content,
+      ingredients = _ref.ingredients,
       steps = _ref.steps;
-  var Body = Object(_utils_dom__WEBPACK_IMPORTED_MODULE_7__["isReactElement"])(content) ? _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["Content"] : _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["HTMLContent"];
-  var country = _assets_data_countries__WEBPACK_IMPORTED_MODULE_5__["default"].find(function (item) {
+  var Body = Object(_utils_dom__WEBPACK_IMPORTED_MODULE_8__["isReactElement"])(content) ? _cms_common_Content__WEBPACK_IMPORTED_MODULE_7__["Content"] : _cms_common_Content__WEBPACK_IMPORTED_MODULE_7__["HTMLContent"];
+  var country = _assets_data_countries__WEBPACK_IMPORTED_MODULE_6__["default"].find(function (item) {
     return item.name === countryName;
   });
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_NoSemantic_Row__WEBPACK_IMPORTED_MODULE_9__["Row"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Header"], {
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_NoSemantic_Row__WEBPACK_IMPORTED_MODULE_10__["Row"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Header"], {
     image: image
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Country"], null, country && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Flag"], {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Country"], null, country && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Flag"], {
     src: country.flag,
     alt: "flag"
-  }), country && country.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["HeaderContent"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Title"], null, name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Category"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icons_Soup__WEBPACK_IMPORTED_MODULE_8__["Soup"], null), " ", category))), ingredients && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Ingredients"], null, ingredients.map(function (ingredient, index) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Ingredient"], {
+  }), country && country.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["HeaderContent"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Title"], null, name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Category"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_Icons_Soup__WEBPACK_IMPORTED_MODULE_9__["Soup"], null), " ", category))), ingredients && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Ingredients"], null, ingredients.map(function (ingredient, index) {
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Ingredient"], {
       key: ingredient + "-" + (index + 1)
     }, ingredient);
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Body, {
+  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Body, {
     content: content
   }), steps && steps.map(function (_ref2, index) {
     var title = _ref2.title,
         step = _ref2.step;
-    var StepContent = Object(_utils_dom__WEBPACK_IMPORTED_MODULE_7__["isReactElement"])(step) ? _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["Content"] : _cms_common_Content__WEBPACK_IMPORTED_MODULE_6__["HTMLContent"];
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["FigureStep"], {
+    var StepContent = Object(_utils_dom__WEBPACK_IMPORTED_MODULE_8__["isReactElement"])(step) ? _cms_common_Content__WEBPACK_IMPORTED_MODULE_7__["Content"] : _cms_common_Content__WEBPACK_IMPORTED_MODULE_7__["HTMLContent"];
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["FigureStep"], {
       key: title + "-" + (index + 1)
-    }, title && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Step"], {
+    }, title && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Step"], {
       "aria-label": "\u0428\u0430\u0433 " + (index + 1)
-    }, title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StepContent, {
+    }, title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(StepContent, {
       content: step
     }));
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["Footer"], {
-    image: country && country.pattern || _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_4___default.a
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_10__["CatImg"], {
-    src: country && country.catImg || _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["Footer"], {
+    image: country && country.pattern || _assets_patterns_ua_png__WEBPACK_IMPORTED_MODULE_5___default.a
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_styles_recipe__WEBPACK_IMPORTED_MODULE_11__["CatImg"], {
+    src: country && country.catImg || _assets_cats_ua_png__WEBPACK_IMPORTED_MODULE_4___default.a,
     alt: "cat"
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("em", null, (country && country.bonAppetit || "Смачного") + "!")));
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("em", null, (country && country.bonAppetit || "Смачного") + "!")));
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref3) {
+  var pageContext = _ref3.pageContext;
+
+  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    props[_key - 1] = arguments[_key];
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Recipes, Object.assign({}, props, pageContext));
+});
 
 /***/ }),
 /* 93 */
