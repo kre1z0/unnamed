@@ -1,6 +1,6 @@
 import React from "react";
 
-import Recipes from "../../templates/recipes";
+import { Recipes } from "../../templates/recipes";
 import { PreviewContainer } from "../../components/CmsPreviewContainer/CmsPreviewContainer";
 
 const RecipePreview = ({ entry, widgetFor }) => (

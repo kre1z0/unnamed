@@ -22,7 +22,7 @@ import {
   CatImg,
 } from "../styles/recipe";
 
-const Recipes = ({ country: countryName, name, image, category, content, ingredients, steps }) => {
+export const Recipes = ({ country: countryName, name, image, category, content, ingredients, steps }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
   const country = countries.find(item => item.name === countryName);
 
