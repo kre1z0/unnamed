@@ -22,15 +22,7 @@ import {
   CatImg,
 } from "../styles/recipe";
 
-export const Recipe = ({
-  country: countryName,
-  name,
-  image,
-  category,
-  ingredients,
-  content,
-  steps,
-}) => {
+const Recipes = ({ country: countryName, name, image, category, content, ingredients, steps }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
   const country = countries.find(item => item.name === countryName);
 
@@ -77,3 +69,5 @@ export const Recipe = ({
     </>
   );
 };
+
+export default ({ pageContext }, ...props) => <Recipes {...props} {...pageContext} />;

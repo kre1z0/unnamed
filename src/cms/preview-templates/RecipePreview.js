@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Recipe } from "../../templates/recipe";
+import Recipes from "../../templates/recipes";
 import { PreviewContainer } from "../../components/CmsPreviewContainer/CmsPreviewContainer";
 
 const RecipePreview = ({ entry, widgetFor }) => (
   <PreviewContainer>
-    <Recipe
+    <Recipes
       country={entry.getIn(["data", "country"])}
       name={entry.getIn(["data", "name"])}
       image={entry.getIn(["data", "image"])}
