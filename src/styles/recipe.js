@@ -5,7 +5,6 @@ export const Header = styled.header.attrs(({ image }) => ({
     backgroundImage: `url(${image})`,
   },
 }))`
-  margin: 0 -15px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -26,6 +25,9 @@ export const Header = styled.header.attrs(({ image }) => ({
     top: 0;
     left: 0;
     background-color: rgba(38, 44, 55, 0.44);
+  }
+  @media (max-width: 930px) {
+    margin: 0 -15px;
   }
 `;
 
@@ -117,35 +119,14 @@ export const Ingredient = styled.div`
   }
 `;
 
-export const FigureStep = styled.figure`
-  margin: 0;
-`;
-
-export const Step = styled.h1`
-  margin-top: 2.8em;
+export const Footer = styled.footer`
   position: relative;
-  &:before {
-    position: absolute;
-    left: -2px;
-    bottom: 20%;
-    display: block;
-    content: attr(aria-label);
-    font-size: 2em;
-    color: rgba(38, 44, 55, 0.14);
-  }
-`;
-
-export const Footer = styled.footer.attrs(({ image }) => ({
-  style: {
-    backgroundImage: `url(${image}), url(${image})`,
-  },
-}))`
   font-weight: 600;
   margin-top: 84px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 44px 0;
+  padding: 24px 0;
   background-color: rgba(38, 44, 55, 0.14);
   width: 100%;
   text-align: center;
@@ -153,6 +134,14 @@ export const Footer = styled.footer.attrs(({ image }) => ({
   background-size: 40px;
   background-repeat: repeat-x;
   background-position: top, bottom;
+`;
+
+export const BonAppetit = styled.div`
+  display: flex;
+  flex-direction: column;
+  em {
+    margin-bottom: 10px;
+  }
 `;
 
 export const CatImg = styled.img`

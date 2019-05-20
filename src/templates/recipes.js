@@ -1,12 +1,13 @@
 import React from "react";
 
 import catUA from "../assets/cats/ua.png";
-import patternUA from "../assets/patterns/ua.png";
 import countries from "../assets/data/countries";
 import { Content, HTMLContent } from "../cms/common/Content";
 import { isReactElement } from "../utils/dom";
 import { Soup } from "../components/Icons/Soup";
 import { Row } from "../components/NoSemantic/Row";
+import { Share } from "../components/Share";
+import { RecipeStep } from "../components/RecipeStep";
 import {
   Header,
   HeaderContent,
@@ -16,13 +17,23 @@ import {
   Country,
   Category,
   Flag,
-  FigureStep,
-  Step,
   Footer,
   CatImg,
+  BonAppetit,
 } from "../styles/recipe";
 
-export const Recipes = ({ country: countryName, name, image, category, content, ingredients, steps }) => {
+export const Recipes = ({
+  country: countryName,
+  name,
+  image,
+  category,
+  content,
+  ingredients,
+  steps,
+  twitterHandle,
+  url,
+  link,
+}) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
   const country = countries.find(item => item.name === countryName);
 
@@ -51,20 +62,21 @@ export const Recipes = ({ country: countryName, name, image, category, content, 
         )}
         <Body content={content} />
         {steps &&
-          steps.map(({ title, step }, index) => {
-            const StepContent = isReactElement(step) ? Content : HTMLContent;
-
-            return (
-              <FigureStep key={`${title}-${index + 1}`}>
-                {title && <Step aria-label={`Шаг ${index + 1}`}>{title}</Step>}
-                <StepContent content={step} />
-              </FigureStep>
-            );
-          })}
+          steps.map(({ title, step }, index) => (
+            <RecipeStep
+              key={`${title}-${index + 1}`}
+              title={title}
+              content={step}
+              stepNumber={index + 1}
+            />
+          ))}
       </Row>
-      <Footer image={(country && country.pattern) || patternUA}>
-        <CatImg src={(country && country.catImg) || catUA} alt="cat" />
-        <em>{`${(country && country.bonAppetit) || "Смачного"}!`}</em>
+      <Footer>
+        <Share twitterHandle={twitterHandle} url={`${url}${link}`} title={name} />
+        <BonAppetit>
+          <em>{`${(country && country.bonAppetit) || "Смачного"}!`}</em>
+          <CatImg src={(country && country.catImg) || catUA} alt="cat" />
+        </BonAppetit>
       </Footer>
     </>
   );

@@ -30,6 +30,12 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      site {
+        siteMetadata {
+          url
+          twitterHandle
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -38,6 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const recipes = result.data.recipes.edges;
+    const siteMetadata = result.data.site.siteMetadata;
 
     recipes.forEach(edge => {
       const data = {
@@ -55,6 +62,7 @@ exports.createPages = ({ actions, graphql }) => {
           ...data,
           content: edge.node.html,
           link: slug,
+          ...siteMetadata,
         },
       });
     });

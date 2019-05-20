@@ -1,5 +1,4 @@
 import catUA from "../cats/ua.png";
-import patternUA from "../patterns/ua.png";
 
 export default [
   {
@@ -9142,7 +9141,6 @@ export default [
     },
   },
   {
-    pattern: patternUA,
     catImg: catUA,
     bonAppetit: "Смачного",
     latlng: [49, 32],

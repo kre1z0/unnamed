@@ -3,12 +3,26 @@ import showdown from "showdown";
 
 const converter = new showdown.Converter();
 
-export const Content = ({ Element, content, ...props }) =>
-  Element ? <Element {...props}>{content}</Element> : <div {...props}>{content}</div>;
-
-export const HTMLContent = ({ Element, content, ...props }) =>
+export const Content = React.forwardRef(({ Element, content, ...props }, ref) =>
   Element ? (
-    <Element dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }} {...props} />
+    <Element ref={ref} {...props}>
+      {content}
+    </Element>
   ) : (
-    <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }} {...props} />
-  );
+    <div ref={ref} {...props}>
+      {content}
+    </div>
+  ),
+);
+
+export const HTMLContent = React.forwardRef(({ Element, content, ...props }, ref) =>
+  Element ? (
+    <Element
+      ref={ref}
+      dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }}
+      {...props}
+    />
+  ) : (
+    <div ref={ref} dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }} {...props} />
+  ),
+);

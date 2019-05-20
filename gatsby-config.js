@@ -2,6 +2,8 @@ module.exports = {
   pathPrefix: "/unnamed",
   siteMetadata: {
     title: "Unknown",
+    twitterHandle: "@swashata",
+    url: "https://kre1z0.github.io/unnamed",
   },
   plugins: [
     "gatsby-plugin-styled-components",
