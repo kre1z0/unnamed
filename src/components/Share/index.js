@@ -65,7 +65,7 @@ export const Share = ({ url, twitterHandle }) => {
           url={url}
           title={name}
           quote={quote}
-          via={name === "twitter" ? twitterHandle.split("@").join("") : null}
+          via={name === "twitter" && twitterHandle ? twitterHandle.split("@").join("") : null}
         >
           <Icon size={32} />
         </Button>

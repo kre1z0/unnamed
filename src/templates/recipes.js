@@ -36,7 +36,7 @@ export const Recipes = ({
 }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
   const country = countries.find(item => item.name === countryName);
-
+  console.info("--> steps ggwp 4444", steps);
   return (
     <>
       <Row>
@@ -62,14 +62,18 @@ export const Recipes = ({
         )}
         <Body content={content} />
         {steps &&
-          steps.map(({ title, step }, index) => (
-            <RecipeStep
-              key={`${title}-${index + 1}`}
-              title={title}
-              content={step}
-              stepNumber={index + 1}
-            />
-          ))}
+          steps.map(
+            ({ title, step }, index) =>
+              title ||
+              (step && (
+                <RecipeStep
+                  key={`${title}-${index + 1}`}
+                  title={title}
+                  content={step}
+                  stepNumber={index + 1}
+                />
+              )),
+          )}
       </Row>
       <Footer>
         <Share twitterHandle={twitterHandle} url={`${url}${link}`} title={name} />
