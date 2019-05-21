@@ -29,7 +29,8 @@ export const Header = styled.h1`
 export const Content = styled.div`
   overflow: hidden;
   transition: 200ms height ease;
-  height: ${({ h }) => `${h}px`};
+  height: ${({ h, isPreview }) => (isPreview ? "auto" : `${h}px`)};
+  max-height: ${({ isOpen, isPreview }) => (!isOpen && isPreview ? 0 : "auto")};
 `;
 
 export const ArrowIcon = styled(Arrow)`

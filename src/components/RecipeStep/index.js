@@ -47,16 +47,20 @@ export class RecipeStep extends PureComponent {
 
   render() {
     const { isOpen, height } = this.state;
-    const { content, title, stepNumber } = this.props;
+    const { content, title, stepNumber, isPreview } = this.props;
     const StepContent = isReactElement(content) ? Content : HTMLContent;
 
     return (
       <Container>
-        <Header isOpen={isOpen} aria-label={`Шаг ${stepNumber}`} onClick={() => this.setState({ isOpen: !isOpen })}>
+        <Header
+          isOpen={isOpen}
+          aria-label={`Шаг ${stepNumber}`}
+          onClick={() => this.setState({ isOpen: !isOpen })}
+        >
           {title}
           <ArrowIcon isOpen={isOpen} />
         </Header>
-        <Content isOpen={isOpen} h={height}>
+        <Content isOpen={isOpen} h={height} isPreview={isPreview}>
           <StepContent ref={this.onRef} content={content} />
         </Content>
       </Container>

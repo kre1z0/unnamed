@@ -33,10 +33,11 @@ export const Recipes = ({
   twitterHandle,
   url,
   link,
+  isPreview,
 }) => {
   const Body = isReactElement(content) ? Content : HTMLContent;
   const country = countries.find(item => item.name === countryName);
-  console.info("--> steps ggwp 4444", steps);
+
   return (
     <>
       <Row>
@@ -64,15 +65,15 @@ export const Recipes = ({
         {steps &&
           steps.map(
             ({ title, step }, index) =>
-              title ||
-              (step && (
+              (title || step) && (
                 <RecipeStep
                   key={`${title}-${index + 1}`}
+                  isPreview={isPreview}
                   title={title}
                   content={step}
                   stepNumber={index + 1}
                 />
-              )),
+              ),
           )}
       </Row>
       <Footer>

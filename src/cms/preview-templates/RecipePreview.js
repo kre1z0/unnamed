@@ -6,6 +6,7 @@ import { PreviewContainer } from "../../components/CmsPreviewContainer/CmsPrevie
 const RecipePreview = ({ entry, widgetFor }) => (
   <PreviewContainer>
     <Recipes
+      isPreview
       country={entry.getIn(["data", "country"])}
       name={entry.getIn(["data", "name"])}
       image={entry.getIn(["data", "image"])}
