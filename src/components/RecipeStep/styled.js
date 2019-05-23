@@ -24,6 +24,14 @@ export const Header = styled.h1`
     font-size: 2em;
     color: rgba(38, 44, 55, 0.14);
   }
+  @media (max-width: 812px) and (orientation: landscape),
+    (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.8em;
+    margin-top: 1.8em;
+    &:before {
+      font-size: 1.8em;
+    }
+  }
 `;
 
 export const Content = styled.div`

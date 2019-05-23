@@ -1,1 +1,1 @@
-export default [{ name: "test1" }, { name: "test2" }];
+export default [{ name: "E-добавки" }, { name: "test2" }];

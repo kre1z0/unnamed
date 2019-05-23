@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import { Close } from "../../components/Icons/Close";
 import { IconButton } from "../../components/Buttons/IconButton";
+import { Link as GatsbyLink } from "../../components/Semantic/Link";
 import { Row } from "../../components/NoSemantic/Row";
 
 export const navbarHeight = "64px";
@@ -30,6 +31,7 @@ export const Nav = styled.nav`
 
 export const Container = styled(Row)`
   display: flex;
+  padding: 0 15px;
 `;
 
 export const GoBackBtn = styled(IconButton)`
@@ -72,4 +74,8 @@ export const Li = styled.li`
   &:last-of-type {
     padding-right: 0;
   }
+`;
+
+export const DefaultLink = styled(GatsbyLink)`
+  color: #fff;
 `;

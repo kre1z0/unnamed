@@ -27,7 +27,12 @@ export const Header = styled.header.attrs(({ image }) => ({
     background-color: rgba(38, 44, 55, 0.44);
   }
   @media (max-width: 930px) {
-    margin: 0 -15px;
+    padding: 0 44px;
+    margin: 0 -15px 25px -15px;
+  }
+  @media (max-width: 812px) and (orientation: landscape),
+    (max-width: 767px) and (orientation: portrait) {
+    padding: 0 15px;
   }
 `;
 
@@ -126,6 +131,7 @@ export const Footer = styled.footer`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 24px 0;
   background-color: rgba(38, 44, 55, 0.14);
   width: 100%;
@@ -141,6 +147,9 @@ export const BonAppetit = styled.div`
   flex-direction: column;
   em {
     margin-bottom: 10px;
+  }
+  @media (max-width: 767px) and (orientation: portrait) {
+    margin-top: 10px;
   }
 `;
 

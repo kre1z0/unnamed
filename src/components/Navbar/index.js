@@ -2,10 +2,10 @@ import React, { PureComponent } from "react";
 
 import color from "../../styles/colors";
 import menu from "../../routes";
-import { Link } from "../../components/Semantic/Link";
-import { Nav, Container, GoBackBtn, CloseIcon, Home, Ul, Li } from "./styled";
+import withRouter from "../../hoc/withRouter";
+import { Nav, Container, GoBackBtn, CloseIcon, Home, Ul, Li, DefaultLink } from "./styled";
 
-export class Navbar extends PureComponent {
+class NavbarBase extends PureComponent {
   state = {
     sticky: false,
   };
@@ -41,9 +41,9 @@ export class Navbar extends PureComponent {
               <Ul>
                 {menu.map(({ name }) => (
                   <Li key={name}>
-                    <Link to={`/${name}`} activeStyle={{ color: color.green }}>
+                    <DefaultLink to={`/${name}`} activeStyle={{ color: color.green }}>
                       {name}
-                    </Link>
+                    </DefaultLink>
                   </Li>
                 ))}
               </Ul>
@@ -54,3 +54,5 @@ export class Navbar extends PureComponent {
     );
   }
 }
+
+export const Navbar = withRouter(NavbarBase);

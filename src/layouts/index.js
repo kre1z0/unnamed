@@ -1,29 +1,25 @@
 import React, { Component } from "react";
 import { Normalize } from "styled-normalize";
 
-import { isLongread } from "../routes/isLongread";
+import withRouter from "../hoc/withRouter";
 import { GlobalStyle } from "../styles/global";
-// import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/Navbar";
 import { Main } from "../components/Semantic/Main";
 
 class Layout extends Component {
   render() {
-    const {
-      children,
-      location,
-      // navigate
-    } = this.props;
-    const fullHeight = !isLongread(location.pathname);
+    const { children, location, navigate, isHomePage } = this.props;
+    const isLongread = !isHomePage();
 
     return (
       <>
         <Normalize />
-        <GlobalStyle fullHeight={fullHeight} />
-        {/*<Navbar isLongread={isLongread(location.pathname)} navigate={navigate} />*/}
-        <Main fullHeight={fullHeight}>{children}</Main>
+        <GlobalStyle fullHeight={!isLongread} />
+        <Navbar isLongread={isLongread} navigate={navigate} location={location} />
+        <Main fullHeight={!isLongread}>{children}</Main>
       </>
     );
   }
 }
 
-export default Layout;
+export default withRouter(Layout);
