@@ -6,7 +6,7 @@ export const Header = styled.header`
   background-color: #000;
   background-image: ${({ background }) => `url(${background})`};
   width: 100%;
-  height: calc(100vw * 0.54);
+  height: calc(100vw * 0.55);
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
@@ -25,7 +25,7 @@ export const Li = styled.li`
 export const SchemeItem = styled.div`
   position: absolute;
   left: 15px;
-  max-width: 400px;
+  max-width: 40vw;
   padding-top: 5px;
   &:before {
     display: block;

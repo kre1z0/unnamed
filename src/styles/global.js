@@ -4,6 +4,33 @@ import color from "../styles/colors";
 import typography from "../styles/typography";
 import leaflet from "../styles/leaflet";
 
+const scroll = css`
+  * {
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.12);
+      border: 4px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.36);
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: rgba(0, 0, 0, 0.36);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+`;
+
 const fullHeightCss = css`
   #___gatsby {
     height: 100%;
@@ -38,4 +65,5 @@ export const GlobalStyle = createGlobalStyle`
   }
   ${typography}
   ${leaflet}
+  ${scroll}
 `;
