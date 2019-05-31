@@ -1,32 +1,25 @@
 import React from "react";
 import groupBy from "lodash/groupBy";
 
-import { Cell, Td, FullName, TitleCell, Tr, TbodyRow, Badge } from "./styled";
+import { Row } from "./Row";
+import { FullName, TitleCell, TitleRow, Badge } from "./styled";
 
-export const Body = React.memo(({ data, cell, head }) => {
+export const Body = React.memo(({ data, cell, head, scrollTop, scrollLeft }) => {
   const grouped = groupBy(data, "group");
 
   return (
     <tbody>
       {Object.keys(grouped).map(key => (
         <React.Fragment key={`group-${key}`}>
-          <Tr>
+          <TitleRow scrollTop={scrollTop} scrollLeft={scrollLeft}>
             <FullName colSpan={head.length}>
               <TitleCell>
                 {key} <Badge>{grouped[key].length}</Badge>
               </TitleCell>
             </FullName>
-          </Tr>
+          </TitleRow>
           {grouped[key].map((item, index) => (
-            <TbodyRow key={`row-${index}`}>
-              {Object.keys(item).map((key, i) =>
-                key !== "group" ? (
-                  <Td key={`${key}-${i}`}>
-                    <Cell cellWidth={cell[i]}>{item[key]}</Cell>
-                  </Td>
-                ) : null,
-              )}
-            </TbodyRow>
+            <Row ggwp={index === 0} key={`row-${index}`} cell={cell} data={item} />
           ))}
         </React.Fragment>
       ))}

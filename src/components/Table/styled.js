@@ -5,6 +5,7 @@ export const TableContainer = styled.header.attrs(({ vh }) => ({
     height: `${vh}px`,
   },
 }))`
+  position: relative;
   width: 100%;
   overflow: auto;
 `;
@@ -33,6 +34,7 @@ export const TableHeader = styled(Th)`
 `;
 
 export const FullName = styled(Th)`
+  width: 100%;
   background-color: #48a8e4;
   color: #fff;
   border-top: 2px solid #fff;
@@ -46,15 +48,25 @@ export const TbodyRow = styled.tr`
   }
 `;
 
+export const TitleRow = styled.tr.attrs(({ scrollTop, scrollLeft, ggwp }) => ({
+  style: {
+    transform: `translate(${scrollLeft}px, ${scrollTop}px)`,
+    backgroundColor: ggwp,
+  },
+}))`
+  will-change: transform;
+`;
+
 export const Td = styled.td`
   vertical-align: top;
 `;
 
 export const Cell = styled.div.attrs(({ cellWidth }) => ({
   style: {
-    width: cellWidth ? `${cellWidth}px` : 0,
+    width: cellWidth ? `${cellWidth}px` : "100%",
   },
 }))`
+  line-height: 1.44;
   padding: 10px 15px;
 `;
 
@@ -68,6 +80,7 @@ export const Badge = styled.span`
   text-align: center;
   width: 28px;
   height: 28px;
+  line-height: 15px;
   font-size: 14px;
   display: inline-block;
   background-color: #fff;

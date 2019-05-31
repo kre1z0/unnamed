@@ -29,7 +29,7 @@ export class Table extends Component {
   };
 
   render() {
-    const { vh, scrollTop } = this.state;
+    const { vh, scrollTop, scrollLeft } = this.state;
     const { data, head, cell, className } = this.props;
 
     return (
@@ -46,7 +46,7 @@ export class Table extends Component {
               </Tr>
             </Thead>
           )}
-          <Body data={data} cell={cell} head={head} />
+          <Body data={data} cell={cell} head={head} scrollTop={scrollTop} scrollLeft={scrollLeft} />
         </TableUI>
       </TableContainer>
     );
