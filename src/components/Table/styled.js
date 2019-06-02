@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import { rateLimit } from "../../utils/number";
 
-export const TableContainer = styled.header.attrs(({ vh }) => ({
+export const MainContainer = styled.div``;
+
+export const TableContainer = styled.div.attrs(({ vh }) => ({
   style: {
     height: `${vh}px`,
   },
@@ -10,15 +12,22 @@ export const TableContainer = styled.header.attrs(({ vh }) => ({
   position: relative;
   width: 100%;
   overflow: auto;
+  overflow: overlay;
 `;
 
 export const TableUI = styled.table`
+  width: 100%;
   border-spacing: 0;
 `;
 
-export const Thead = styled.thead.attrs(({ scrollTop }) => ({
+export const TitleContainer = styled.div`
+  width: calc(100% - 12px);
+  overflow: hidden;
+`;
+
+export const Thead = styled.thead.attrs(({ scrollLeft }) => ({
   style: {
-    transform: `translateY(${scrollTop}px)`,
+    transform: `translateX(-${scrollLeft}px)`,
   },
 }))`
   will-change: transform;
@@ -72,7 +81,11 @@ export const Cell = styled.div.attrs(({ cellWidth }) => ({
   padding: 10px 15px;
 `;
 
-export const HeaderCell = styled(Cell)``;
+export const HeaderCell = styled(Cell).attrs(({ cellWidth }) => ({
+  style: {
+    width: cellWidth ? `${cellWidth}px` : "100%",
+  },
+}))``;
 
 export const TitleCell = styled(Cell)`
   font-size: 18px;

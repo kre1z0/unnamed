@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 
 import { Body } from "./Body";
-import { TableContainer, TableUI, Thead, TableHeader, Tr, HeaderCell } from "./styled";
+import {
+  MainContainer,
+  TableContainer,
+  TableUI,
+  TitleContainer,
+  Thead,
+  TableHeader,
+  Tr,
+  HeaderCell,
+} from "./styled";
 
 export class Table extends Component {
   state = {
@@ -21,7 +30,7 @@ export class Table extends Component {
 
   onOrientationChange = () => {
     const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    this.setState({ vh: vh - 64 - 20 });
+    this.setState({ vh: vh - 120 });
   };
 
   onScroll = e => {
@@ -33,22 +42,34 @@ export class Table extends Component {
     const { data, head, cell, className } = this.props;
 
     return (
-      <TableContainer vh={vh} onScroll={this.onScroll} className={className}>
-        <TableUI>
-          {head && (
-            <Thead scrollTop={scrollTop}>
-              <Tr>
-                {head.map((title, index) => (
-                  <TableHeader key={`th-${index}`}>
-                    <HeaderCell>{title}</HeaderCell>
-                  </TableHeader>
-                ))}
-              </Tr>
-            </Thead>
-          )}
-          <Body data={data} cell={cell} head={head} scrollTop={scrollTop} scrollLeft={scrollLeft} />
-        </TableUI>
-      </TableContainer>
+      <MainContainer className={className}>
+        <TitleContainer>
+          <TableUI>
+            {head && (
+              <Thead scrollLeft={scrollLeft}>
+                <Tr>
+                  {head.map((title, index) => (
+                    <TableHeader key={`th-${index}`}>
+                      <HeaderCell cellWidth={cell[index] - 12 / cell.length}>{title}</HeaderCell>
+                    </TableHeader>
+                  ))}
+                </Tr>
+              </Thead>
+            )}
+          </TableUI>
+        </TitleContainer>
+        <TableContainer vh={vh} onScroll={this.onScroll}>
+          <TableUI>
+            <Body
+              data={data}
+              cell={cell}
+              head={head}
+              scrollTop={scrollTop}
+              scrollLeft={scrollLeft}
+            />
+          </TableUI>
+        </TableContainer>
+      </MainContainer>
     );
   }
 }
