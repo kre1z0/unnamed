@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { rateLimit } from "../../utils/number";
+
 export const TableContainer = styled.header.attrs(({ vh }) => ({
   style: {
     height: `${vh}px`,
@@ -48,9 +50,9 @@ export const TbodyRow = styled.tr`
   }
 `;
 
-export const TitleRow = styled.tr.attrs(({ scrollTop, scrollLeft, ggwp }) => ({
+export const TitleRow = styled.tr.attrs(({ scrollTop, scrollLeft, ggwp, max }) => ({
   style: {
-    transform: `translate(${scrollLeft}px, ${scrollTop}px)`,
+    transform: `translate(${scrollLeft}px, ${rateLimit(scrollTop, 0, max)}px)`,
     backgroundColor: ggwp,
   },
 }))`

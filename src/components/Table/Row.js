@@ -2,10 +2,10 @@ import React from "react";
 
 import { TbodyRow, Td, Cell } from "./styled";
 
-export const Row = React.memo(({ data, cell, ggwp }) => {
-  console.info("--> row up ggwp ");
+export const Row = React.memo(({ data, cell, ggwp, groupIndex, onRefRows }) => {
+  console.info("--> ggwp up");
   return (
-    <TbodyRow style={{ background: ggwp ? "green" : "" }}>
+    <TbodyRow ref={ref => onRefRows(ref, groupIndex)} style={{ background: ggwp ? "green" : "" }}>
       {Object.keys(data).map((key, i) =>
         key !== "group" ? (
           <Td key={`${key}-${i}`}>
