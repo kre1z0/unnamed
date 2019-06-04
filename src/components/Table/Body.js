@@ -35,54 +35,43 @@ export class Body extends Component {
     }
   };
 
-  getMax(index) {
-    const { groupHeights } = this.state;
-    const { scrollTop } = this.props;
-
-    const sum = groupHeights.reduce((prev, curr, i) => {
-      if (i === index) {
-        return prev;
-      }
-      return prev + curr;
-    }, 0);
-
-    console.info("--> ggwp 4444", sum);
-    return groupHeights[index] - 48 || 0;
-  }
-
   render() {
     const { groupHeights } = this.state;
     const { data, cell, head, scrollTop, scrollLeft } = this.props;
     const grouped = groupBy(data, "group");
-    console.info("--> groupHeights ggwp 4444", groupHeights);
+
     return (
       <tbody>
-        {Object.keys(grouped).map((key, groupIndex) => (
-          <React.Fragment key={`group-${key}`}>
-            <TitleRow
-              scrollTop={scrollTop}
-              scrollLeft={scrollLeft}
-              max={this.getMax(groupIndex)}
-              ref={ref => this.onRefRows(ref, groupIndex)}
-            >
-              <FullName colSpan={head.length}>
-                <TitleCell>
-                  {key} <Badge>{grouped[key].length}</Badge>
-                </TitleCell>
-              </FullName>
-            </TitleRow>
-            {grouped[key].map((item, index) => (
-              <Row
-                ggwp={index === 0}
-                groupIndex={groupIndex}
-                onRefRows={this.onRefRows}
-                key={`row-${index}`}
-                cell={cell}
-                data={item}
-              />
-            ))}
-          </React.Fragment>
-        ))}
+        {Object.keys(grouped).map((key, groupIndex) => {
+          const sum = groupHeights.slice(0, groupIndex).reduce((prev, curr) => prev + curr, 0);
+
+          return (
+            <React.Fragment key={`group-${key}`}>
+              <TitleRow
+                scrollTop={sum - scrollTop <= 0 ? Math.abs(sum - scrollTop) : 0}
+                scrollLeft={scrollLeft}
+                max={groupHeights[groupIndex] - 48 || 0}
+                ref={ref => this.onRefRows(ref, groupIndex)}
+              >
+                <FullName colSpan={head.length}>
+                  <TitleCell>
+                    {key} <Badge>{grouped[key].length}</Badge>
+                  </TitleCell>
+                </FullName>
+              </TitleRow>
+              {grouped[key].map((item, index) => (
+                <Row
+                  ggwp={index === 0}
+                  groupIndex={groupIndex}
+                  onRefRows={this.onRefRows}
+                  key={`row-${index}`}
+                  cell={cell}
+                  data={item}
+                />
+              ))}
+            </React.Fragment>
+          );
+        })}
       </tbody>
     );
   }

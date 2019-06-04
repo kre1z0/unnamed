@@ -12,7 +12,6 @@ export const TableContainer = styled.div.attrs(({ vh }) => ({
   position: relative;
   width: 100%;
   overflow: auto;
-  overflow: overlay;
 `;
 
 export const TableUI = styled.table`
@@ -55,7 +54,10 @@ export const Tr = styled.tr``;
 
 export const TbodyRow = styled.tr`
   &:nth-of-type(odd) {
-    background-color: #f5f5f5;
+    td {
+      background-color: #f5f5f5;
+      border-right: 2px solid #fff;
+    }
   }
 `;
 
