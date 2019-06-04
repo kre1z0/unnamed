@@ -12,7 +12,6 @@ export const TableContainer = styled.div.attrs(({ vh }) => ({
   position: relative;
   width: 100%;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
 `;
 
 export const TableUI = styled.table`
@@ -30,7 +29,9 @@ export const Thead = styled.thead.attrs(({ scrollLeft }) => ({
   style: {
     transform: `translateX(-${scrollLeft}px)`,
   },
-}))``;
+}))`
+  will-change: transform;
+`;
 
 export const Th = styled.th`
   white-space: nowrap;
@@ -67,7 +68,9 @@ export const TitleRow = styled.tr.attrs(({ scrollTop, scrollLeft, max }) => ({
   style: {
     transform: `translate(${scrollLeft}px, ${rateLimit(scrollTop, 0, max)}px)`,
   },
-}))``;
+}))`
+  will-change: transform;
+`;
 
 export const Td = styled.td`
   vertical-align: top;
