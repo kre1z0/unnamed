@@ -12,11 +12,13 @@ export const TableContainer = styled.div.attrs(({ vh }) => ({
   position: relative;
   width: 100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 `;
 
 export const TableUI = styled.table`
   width: 100%;
   border-spacing: 0;
+  overflow: hidden;
 `;
 
 export const TitleContainer = styled.div`
@@ -28,9 +30,7 @@ export const Thead = styled.thead.attrs(({ scrollLeft }) => ({
   style: {
     transform: `translateX(-${scrollLeft}px)`,
   },
-}))`
-  will-change: transform;
-`;
+}))``;
 
 export const Th = styled.th`
   white-space: nowrap;
@@ -41,10 +41,12 @@ export const TableHeader = styled(Th)`
   background-color: #48a8e4;
   border-right: 2px solid #fff;
   color: #fff;
+  &:last-of-type {
+    border-right: none;
+  }
 `;
 
 export const FullName = styled(Th)`
-  width: 100%;
   background-color: #48a8e4;
   color: #fff;
   border-top: 2px solid #fff;
@@ -61,14 +63,11 @@ export const TbodyRow = styled.tr`
   }
 `;
 
-export const TitleRow = styled.tr.attrs(({ scrollTop, scrollLeft, ggwp, max }) => ({
+export const TitleRow = styled.tr.attrs(({ scrollTop, scrollLeft, max }) => ({
   style: {
     transform: `translate(${scrollLeft}px, ${rateLimit(scrollTop, 0, max)}px)`,
-    backgroundColor: ggwp,
   },
-}))`
-  will-change: transform;
-`;
+}))``;
 
 export const Td = styled.td`
   vertical-align: top;
@@ -76,7 +75,7 @@ export const Td = styled.td`
 
 export const Cell = styled.div.attrs(({ cellWidth }) => ({
   style: {
-    width: cellWidth ? `${cellWidth}px` : "100%",
+    width: cellWidth ? `${cellWidth}px` : "auto",
   },
 }))`
   line-height: 1.44;

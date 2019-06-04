@@ -61,7 +61,6 @@ export class Body extends Component {
               </TitleRow>
               {grouped[key].map((item, index) => (
                 <Row
-                  ggwp={index === 0}
                   groupIndex={groupIndex}
                   onRefRows={this.onRefRows}
                   key={`row-${index}`}

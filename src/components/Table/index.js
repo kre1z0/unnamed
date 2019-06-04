@@ -50,7 +50,7 @@ export class Table extends Component {
                 <Tr>
                   {head.map((title, index) => (
                     <TableHeader key={`th-${index}`}>
-                      <HeaderCell cellWidth={cell[index] - 12 / cell.length}>{title}</HeaderCell>
+                      <HeaderCell cellWidth={cell[index]}>{title}</HeaderCell>
                     </TableHeader>
                   ))}
                 </Tr>
