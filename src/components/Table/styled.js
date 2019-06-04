@@ -22,7 +22,7 @@ export const TableUI = styled.table`
 `;
 
 export const TitleContainer = styled.div`
-  width: calc(100% - 12px);
+  width: 100%;
   overflow: hidden;
 `;
 

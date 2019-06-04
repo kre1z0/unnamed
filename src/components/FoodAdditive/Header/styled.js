@@ -12,6 +12,14 @@ export const Header = styled.header`
   background-size: contain;
 `;
 
+export const RightSide = styled.header`
+  width: 40vw;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+`;
+
 export const Ul = styled.ul`
   margin: 0;
   padding-top: 20px;
@@ -86,4 +94,13 @@ export const E = styled.span`
   border-radius: 2px;
   font-weight: 600;
   margin: 0 0 5px 0;
+`;
+
+export const SubTitle = styled.h3`
+  color: #f98900;
+  margin-bottom: 0;
+`;
+
+export const RightSideParagraph = styled.p`
+  margin: 10px 0;
 `;

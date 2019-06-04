@@ -2,6 +2,7 @@ import React from "react";
 
 import {
   Header,
+  RightSide,
   E,
   Ul,
   Li,
@@ -11,6 +12,8 @@ import {
   Liver,
   Digestion,
   Intestines,
+  SubTitle,
+  RightSideParagraph,
 } from "./styled";
 
 export const FoodAdditiveHeader = ({ background }) => {
@@ -46,6 +49,23 @@ export const FoodAdditiveHeader = ({ background }) => {
       <Intestines>
         Расстройство кишечника <E>E220</E> — <E>E224</E>
       </Intestines>
+      <RightSide>
+        <h2>Список особо опасных пищевых Е-добавок</h2>
+        <SubTitle>Рост злокачественных опухолей:</SubTitle>
+        <RightSideParagraph>
+          Е103, Е105, Е121, Е123, Е125, Е126, Е130, Е131, Е143, Е152, Е210, Е211, Е213, Е214, Е215,
+          Е216, Е217, Е240, Е330, Е447
+        </RightSideParagraph>
+        <SubTitle>Заболевания желудочно-кишечного тракта:</SubTitle>
+        <RightSideParagraph>
+          Е221, Е222, Е223, Е224, Е225, Е226, Е320, Е321, Е322, Е338, Е339, Е340, Е341, Е407, Е450,
+          Е461, Е462, Е463, Е464, Е465, Е466
+        </RightSideParagraph>
+        <SubTitle>Аллергены:</SubTitle>
+        <RightSideParagraph>Е230, Е231, Е232, Е239, Е311, Е312, Е313</RightSideParagraph>
+        <SubTitle>Болезни печени и почек:</SubTitle>
+        <RightSideParagraph>Е171, Е173, Е320, Е321, Е322</RightSideParagraph>
+      </RightSide>
     </Header>
   );
 };
